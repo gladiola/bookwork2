@@ -15,8 +15,8 @@
 
   \indexspace
 
-  \item FreeBSD, 1, 3, 11, 23
-  \item FreeBSD Handbook, 8, 9, 28
+  \item FreeBSD, 1, 3, 11, 29
+  \item FreeBSD Handbook, 8, 9, 34
   \item FreeBSD Mastery:  ZFS, 4
 
   \indexspace
@@ -64,8 +64,9 @@
   \item ssh-keygen, 7, 9
   \item su, 7
   \item sudo, 7
-  \item swapinfo, 17
-  \item swapon, 9, 17--19
+  \item swapinfo, 17--19
+  \item swapoff, 18
+  \item swapon, 10, 17--19
 
   \indexspace
 

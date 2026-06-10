@@ -109,6 +109,16 @@ bindingoffset=0.12in]{geometry}
 \maketitle
 \frontmatter
 \tableofcontents
+
+%----------------------------------------------------------------------------------------
+%	Author
+%----------------------------------------------------------------------------------------
+\chapter*{Author}
+\addcontentsline{toc}{chapter}{Author}
+
+Your author bio goes here...
+
+
 %----------------------------------------------------------------------------------------
 %	Foreword
 %----------------------------------------------------------------------------------------
@@ -166,15 +176,15 @@ We're starting with a Dell T610 Server.  Made in 2011, this machine is about ten
 
 Most of the time servers from these auctions will have minimal RAM.  Usually the drives and any good accessories will be stripped out.  Anytime we get a hard drive, from any source, one of the first actions we take is to erase the drives to NIST 800-88 Purge\index{NIST 800-88!Purge} with dedicated devices.  That kind of erasing can be done with dd in Kali or \index{FreeBSD}FreeBSD; but, the drive erasers usually have a verification feature that's helpful.  
 \subsection{Hardware Configuration}
-This is my favorite computer.  I've named her "Blondie" after Debbie Harry's New Wave band.
+This is my favorite computer.  I've named her "Blondie" after Debbie Harry's New Wave band.\footnote{“Blondie | the Official Website of Blondie, Featuring Tour Dates, Presale Ticketing, News, the Official Store and More.” \url{Blondie.net}, 2026, blondie.net/. Accessed 10 June 2026.}
 
 Now, she's configured with:
 \begin{itemize}
 	\item A DVD RW drive
-    	\item A LTO III tape backup unit
+    	\item A LTO III\footnote{“LTO Ultrium 3: Product Views | Fujifilm [United States].” Fujifilm.com, 2026, \url{www.fujifilm.com/us/en/business/data-storage/data-storage-media/lto-ultrium-3/product-views}. Accessed 10 June 2026.} tape backup unit
     	\item In her 8 drive bay, we have:
 	\begin{itemize}
-		\item Two Velociraptor 80GB 10000 rpm drives.
+		\item Two Velociraptor\footnote{''WD VelociRaptor ® SATA Hard Drives'' \url{https://theretroweb.com/storage/documentation/wd6000-velociraptor-68407cb5c0c96653507203.pdf}} 80GB 10000 rpm drives.
 		\begin{itemize}
 			\item We'll use these in a mirror configuration to hold the main OS.
 		\end{itemize}
@@ -190,7 +200,7 @@ Now, she's configured with:
 			\item We have some SATA drives.
 		\end{itemize}
 		\end{itemize}
-		\item We replaced the one CPU with two Xeon 5550 quad cores and added a cooling tower.
+		\item We replaced the one CPU with two Xeon 5550\footnote{Intel® Xeon® Processor 5500 Series an Intelligent Approach to IT Challenges. \url{www.intel.com/content/dam/doc/product-brief/xeon-5500-server-brief.pdf.}} quad cores and added a cooling tower.
 		\item We added more RAM.  Currently, we're at 196GB.
 		\item We added some more NICs.
 		\begin{itemize}
@@ -262,29 +272,29 @@ We need to be able to detect the drives and partitions that we want to work with
   \centering
   \caption{ZFS Concepts and Commands}
   \label{tab:zfsconcepts}
-  \begin{tabular}{@{}p{0.18\linewidth} p{0.30\linewidth} p{0.48\linewidth}@{}}
+  \begin{tabular}{@{}p{0.30\linewidth} p{0.30\linewidth} p{0.40\linewidth}@{}}
     \toprule
     Topic & Concept & Command phrase example \\
     \midrule
-    Disk labels & Use the label to associate the logical with the physical &
-      \texttt{[Host]-[PositionNumber 0-7]-[Serial\_Number]} \\
-    ZFS Compression & Faster performance: less space &
-      \texttt{zfs set compress=gzip-6 [DIRECTORY]} \\
-    ZFS zpool comment & Make a note on the pool &
-      \texttt{zfs set comment="-"} \\
-    quota & Limit growth & --- \\
-    reservation & Set aside space for directory and its children & --- \\
-    refreservation & Set aside space but don't count snapshots and child datasets & --- \\
-    canmount & Control mounting & \texttt{zfs set canmount=off [DIRECTORY]} \\
-    mountpoint & Specify where to mount & \texttt{zfs set mountpoint=/SOME [DIRECTORY]} \\
-    readonly & Control readonly & \texttt{zfs set readonly=off [DIRECTORY]} \\
-    exec & Control if it can execute & \texttt{zfs set exec=off [DIRECTORY]} \\
-    copies & Make more than one copy & \texttt{zfs set copies=2 [DIRECTORY]} \\
+    Disk labels & Use the label to associate the logical with the physical\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.} &
+      \texttt{[Host]-[PositionNumber 0-7]-[Serial\_Number]}\footnote{This pattern of coordinating host computer, bay position, and drive serial number was recommended by Lucas and Jude.  Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.}\\
+    ZFS Compression & Faster performance: less space\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.} &
+      \texttt{zfs set compress=gzip-6 [DIRECTORY]}\footnote{zfs set shown in:  “Zfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zfs&apropos=0&sektion=0&manpath=FreeBSD+14.0-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}  \\
+    ZFS zpool comment& Make a note on the pool\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.} &
+      \texttt{zfs set comment="-"}\footnote{zfs set shown in:  “Zfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zfs&apropos=0&sektion=0&manpath=FreeBSD+14.0-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}  \\
+    quota\footnote{“Chapter 6 Managing ZFS File Systems (Solaris ZFS Administration Guide).” \url{Docs.oracle.com, docs.oracle.com/cd/E19120-01/open.solaris/817-2271/6mhupg6m3/index.html}.}& Limit growth\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.} & --- \\
+    reservation\footnote{“Chapter 6 Managing ZFS File Systems (Solaris ZFS Administration Guide).” \url{Docs.oracle.com, docs.oracle.com/cd/E19120-01/open.solaris/817-2271/6mhupg6m3/index.html}.} & Set aside space for directory and its children\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.} & --- \\
+    refreservation\footnote{“Chapter 6 Managing ZFS File Systems (Solaris ZFS Administration Guide).” \url{Docs.oracle.com, docs.oracle.com/cd/E19120-01/open.solaris/817-2271/6mhupg6m3/index.html}.} & Set aside space but don't count snapshots and child datasets\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.} & --- \\
+    canmount\footnote{“Chapter 6 Managing ZFS File Systems (Solaris ZFS Administration Guide).” \url{Docs.oracle.com, docs.oracle.com/cd/E19120-01/open.solaris/817-2271/6mhupg6m3/index.html}.}& Control mounting\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.} & \texttt{zfs set canmount=off [DIRECTORY]}\footnote{zfs set shown in:  “Zfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zfs&apropos=0&sektion=0&manpath=FreeBSD+14.0-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}  \\
+    mountpoint\footnote{“Chapter 6 Managing ZFS File Systems (Solaris ZFS Administration Guide).” \url{Docs.oracle.com, docs.oracle.com/cd/E19120-01/open.solaris/817-2271/6mhupg6m3/index.html}.}& Specify where to mount\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.} & \texttt{zfs set mountpoint=/SOME [DIRECTORY]}\footnote{zfs set shown in:  “Zfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zfs&apropos=0&sektion=0&manpath=FreeBSD+14.0-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}  \\
+    readonly\footnote{“Chapter 6 Managing ZFS File Systems (Solaris ZFS Administration Guide).” \url{Docs.oracle.com, docs.oracle.com/cd/E19120-01/open.solaris/817-2271/6mhupg6m3/index.html}.} & Control readonly\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.} & \texttt{zfs set readonly=off [DIRECTORY]}\footnote{zfs set shown in:  “Zfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zfs&apropos=0&sektion=0&manpath=FreeBSD+14.0-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}  \\
+    exec\footnote{“Chapter 6 Managing ZFS File Systems (Solaris ZFS Administration Guide).” \url{Docs.oracle.com, docs.oracle.com/cd/E19120-01/open.solaris/817-2271/6mhupg6m3/index.html}.} & Control if it can execute\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.} & \texttt{zfs set exec=off [DIRECTORY]}\footnote{zfs set shown in:  “Zfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zfs&apropos=0&sektion=0&manpath=FreeBSD+14.0-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}  \\
+    copies\footnote{“Chapter 6 Managing ZFS File Systems (Solaris ZFS Administration Guide).” \url{Docs.oracle.com, docs.oracle.com/cd/E19120-01/open.solaris/817-2271/6mhupg6m3/index.html}.} & Make more than one copy\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.} & \texttt{zfs set copies=2 [DIRECTORY]}\footnote{zfs set shown in:  “Zfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zfs&apropos=0&sektion=0&manpath=FreeBSD+14.0-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}  \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-After reading over \index{FreeBSD Mastery:  ZFS}FreeBSD Mastery:  ZFS by Alan Jude and Michael Lucas, we came to a few conclusions.  We chose to use \index{RAIDZ-2}RAIDZ-2 with Log drives because of the number of drives we have.  Some of the topics covered in that book that we'll want to apply include ideas in Table \ref{tab:zfsconcepts}.  In our first iterations we decided to install the OS on the hard drives in a pattern that looks like a conventional installation.  Once the drive partitioning and utilitization commands were worked out, we then started over and undertook the \index{amensiac}amnesiac version with the OS on a live disc that runs with attached drives.  
+After reading over \index{FreeBSD Mastery:  ZFS}FreeBSD Mastery:  ZFS by Alan Jude and Michael Lucas\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.}, we came to a few conclusions.  We chose to use \index{RAIDZ-2}RAIDZ-2 with Log drives because of the number of drives we have\footnote{Lucas and Jude provide a detailed breakdown of different RAID and RAID-Z combinations with differing numbers of drives.  Their analysis and provided charts were our cheif reason for settling in on RAIDZ2.  Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.}.  Some of the topics covered in that book that we'll want to apply include ideas in Table \ref{tab:zfsconcepts}.  In our first iterations we decided to install the OS on the hard drives in a pattern that looks like a conventional installation.  Once the drive partitioning and utilitization commands were worked out, we then started over and undertook the \index{amensiac}amnesiac version with the OS on a live disc that runs with attached drives.  
 
 
 Our goal for the system will be to split up the drives into three main groups, as described in Tables \ref{tab:zfsmainuseosharddisk}, \ref{tab:zfsjailuseosharddisk}, and \ref{tab:zfsslogusedisk}.  On each drive, we'll also allow:
@@ -410,18 +420,18 @@ Mount the USB to the /tmp Directory:\\\\
 
 \subsection{Be Able to Write to the USB}
 We could now write a simple text file onto /tmp/someDir, unmount the drive, and then re-mount it to check our work.  That would go like:\\\\
-\texttt{\index{cd}cd /tmp}\\
-\texttt{\index{umount}umount /tmp/someDir}\\
-\texttt{\index{rm} rm -r /tmp/someDir}\\\\
+\texttt{\index{cd}cd /tmp}\footnote{“cd.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=cd&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
+\texttt{\index{umount}umount /tmp/someDir}\footnote{“umount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=umount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
+\texttt{\index{rm}rm -r /tmp/someDir}\footnote{“rm.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=rm&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
 Unplug the drive.  Plug it in another slot.  Use camcontrol devlist to find it again.  It'll probably get the same address, like "da0".\\\\
 \texttt{\index{mkdir}mkdir /tmp/otherDir}\footnote{“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 \texttt{\index{mount}mount /dev/da0p1 /tmp/otherDir}\footnote{“Mount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
-\texttt{\index{ls} ls /tmp/otherDir}\\
+\texttt{\index{ls}ls /tmp/otherDir}\footnote{“ls.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=ls&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
 \subsection{Be Able to Put Some Key Pairs on the USB}
 Using these same principles, we can mount our USB thumbdrive, generate ssh keys, and save them there for later.\\\\
 \texttt{\index{mkdir} mkdir /tmp/otherDir/keys}\footnote{“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
-\texttt{\index{ssh-keygen} ssh-keygen -b 1024 -t rsa}\\
+\texttt{\index{ssh-keygen} ssh-keygen -b 1024 -t rsa}\footnote{“ssh-Keygen.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=ssh-keygen&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
 During the ssh-keygen dialog, simply direct the program to save the keys to \texttt{/tmp/otherDir/keys}.  Be sure to record your passphrase somewhere.  
 
@@ -429,7 +439,7 @@ During the ssh-keygen dialog, simply direct the program to save the keys to \tex
 We'd like to show a quick overview of some of the drive-related commands.  These will be applied soon.
 
 To list what devices are detected by the OS, we can use:\\\\
-\texttt{ \index{gpart}gpart show}\\\\
+\texttt{ \index{gpart}gpart show}\footnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
 We will want to note the serial number of each drive, by position.
 We then note which drives we want to use for the main body of the \index{RAIDZ-2}RAIDZ-2 kit.  All of this will become one pool of ZFS VDEVs.  Then we'll add in the log mirrors.  So, in the sequence of 0-7, numbering the drives, we should expect to skip those two for now.
 
@@ -438,35 +448,35 @@ Make the notes if you haven't already because we're going to list all of the dri
 We're going to choose to put a swap partition on the SSDs.  We can add one onto the other disks, but a maximum of 4 swap partitions is recommended in the \index{FreeBSD Handbook}FreeBSD Handbook.  Later on, we will be able to select swap partitions by mounting them and using commands like \texttt{\index{swapon}swapon swapoff}.\\
 
 To put the ZFS partition on the remaining disks:\\\\
-\texttt{ \index{gpart!create}gpart create -s SCHEME DISK\_DEVICE}\\\\
-\texttt{ \index{gpart!create}gpart create -s gpt da4}
+\texttt{ \index{gpart!create}gpart create -s SCHEME DISK\_DEVICE}\footnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
+\texttt{ \index{gpart!create}gpart create -s gpt da4}\footnote{Ibid.}
 \\
 
 To add the main ZFS partition:\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -l ZFS\_NUMBER -t freebsd-zfs DISK\_DEVICE}\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -l ZFS-BLONDIE-4-WD123465789 -t freebsd-zfs  da4}
+\texttt{ \index{gpart!add}gpart add -a 1m -l ZFS\_NUMBER -t freebsd-zfs DISK\_DEVICE}\footnote{Ibid.}\\\\
+\texttt{ \index{gpart!add}gpart add -a 1m -l ZFS-BLONDIE-4-WD123465789 -t freebsd-zfs  da4}\footnote{Ibid.}
 \\
 
 To add the partition's swap:\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -slg -l SWAP\_NUMBER -t freebsd-swap DISK\_DEVICE}\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -slg -l SWAP-BLONDIE-4-WD123465789 -t freebsd-swap da4}
+\texttt{ \index{gpart!add}gpart add -a 1m -slg -l SWAP\_NUMBER -t freebsd-swap DISK\_DEVICE}\footnote{Ibid.}\\\\
+\texttt{ \index{gpart!add}gpart add -a 1m -slg -l SWAP-BLONDIE-4-WD123465789 -t freebsd-swap da4}\footnote{Ibid.}
 \\
 
 To add a logging partition on the SLOG SSDs:\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -l ZLOG\_NUMBER -t freebsd-zfs DISK\_DEVICE}\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -l ZLOG-BLONDIE-2-WD123465789 -t freebsd-zfs  da2}\\\\
+\texttt{ \index{gpart!add}gpart add -a 1m -l ZLOG\_NUMBER -t freebsd-zfs DISK\_DEVICE}\footnote{Ibid.}\\\\
+\texttt{ \index{gpart!add}gpart add -a 1m -l ZLOG-BLONDIE-2-WD123465789 -t freebsd-zfs  da2}\footnote{Ibid.}\\\\
 
 With each disk partitioned, we can add them to the pool for our RAIDZ-2 kit.\\\\
-\texttt{\index{zpool!create}zpool create RAID POOL\_NAME DISK\_LABEL/ZFS\_PARTITION\_LABEL ...next disk/partition...}\\\\
+\texttt{\index{zpool!create}zpool create RAID POOL\_NAME DISK\_LABEL/ZFS\_PARTITION\_LABEL ...next disk/partition...}\footnote{“zpool.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zpool&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
 
-\noindent\texttt{\index{zpool!create}zpool create BLONDIE-MAIN \index{RAIDZ-2}raidz2 \textbackslash }\\
+\noindent\texttt{\index{zpool!create}zpool create BLONDIE-MAIN \index{RAIDZ-2}raidz2 \textbackslash }\footnote{Ibid.}\\
 \texttt{BLONDIE-4-WD12345/ZFS-BLONDIE-4-WD12345 \textbackslash }\\
 \texttt{BLONDIE-5-WD12345/ZFS-BLONDIE-5-WD12345 \textbackslash }\\
 \texttt{BLONDIE-6-WD12345/ZFS-BLONDIE-6-WD12345 \textbackslash }\\
 \texttt{BLONDIE-7-WD12345/ZFS-BLONDIE-7-WD12345 }\\
 
 We can add on the mirrors for logging:\\\\
-\texttt{\index{zpool!add}zpool add BLONDIE-MAIN log mirror \textbackslash}\\
+\texttt{\index{zpool!add}zpool add BLONDIE-MAIN log mirror \textbackslash}\footnote{Ibid.}\\
 \texttt{BLONDIE-2-WD12345/ZLOG-BLONDIE-2-WD12345 \textbackslash}\\
 \texttt{BLONDIE-3-WD12345/ZLOG-BLONDIE-3-WD12345}\\
 
@@ -523,39 +533,39 @@ For this run, we’ll begin by using the boot-only disk.  We won’t plan to eve
 
 \subsection{Mount the USB to Save the Metadata Backup File}
 \texttt{\index{mkdir}mkdir /tmp/usb3}\footnote{“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
-\texttt{\index{mount}mount /dev/da0p1 /tmp/usb3}
+\texttt{\index{mount}mount /dev/da0p1 /tmp/usb3}\footnote{“mount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}
 
 \subsection{Create Swap Disk in Bay 0}
-\texttt{ \index{gpart!create}gpart create -s GPT mfid0}\\\\
-\texttt{ \index{gpart!add}gpart add -a 5K -s 395G -t freebsd-swap -l ZFS-BLONDIE-0-SWAP-WCC2ERZ56512 mfid0}
+\texttt{\index{gpart!create}gpart create -s GPT mfid0}\footnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 395G -t freebsd-swap -l ZFS-BLONDIE-0-SWAP-WCC2ERZ56512 mfid0}\footnote{Ibid.}
 
 \subsection{Create ZFS Cache in Bay 1}
-\texttt{ \index{gpart!create}gpart create -s GPT mfid1}\\\\
-\texttt{ \index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-1-CACHE-WXL1E40C1352 mfid1}
+\texttt{\index{gpart!create}gpart create -s GPT mfid1}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-1-CACHE-WXL1E40C1352 mfid1}\footnote{Ibid.}
 
 \subsection{Create ZFS SLOG in Bays 2 and 3}
-\texttt{ \index{gpart!create}gpart create -s GPT mfid2}\\\\
-\texttt{ \index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-2-SLOG-WXL1E4067503 mfid2}\\\\
-\texttt{ \index{gpart!create}gpart create -s GPT mfid3}\\\\
-\texttt{ \index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-3-SLOG-WXC0CA9V8431 mfid3}\\\\
+\texttt{\index{gpart!create}gpart create -s GPT mfid2}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-2-SLOG-WXL1E4067503 mfid2}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!create}gpart create -s GPT mfid3}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-3-SLOG-WXC0CA9V8431 mfid3}\footnote{Ibid.}\\\\
 
 \subsection{Create ZFS Work Disks for Jails}
 \subsection{Bay 4}
-\texttt{ \index{gpart!create}gpart create -s GPT mfid4}\\\\
-\texttt{ \index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\\\\
-\texttt{ \index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-4-FILES-WCC2EE134983 mfid4}
+\texttt{\index{gpart!create}gpart create -s GPT mfid4}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-4-FILES-WCC2EE134983 mfid4}\footnote{Ibid.}
 \subsection{Bay 5}
-\texttt{ \index{gpart!create}gpart create -s GPT mfid5}\\\\
-\texttt{ \index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-5-SWAP-WMC2E3914420 mfid5}\\\\
-\texttt{ \index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-5-FILES-WMC2E3914420 mfid5}
+\texttt{\index{gpart!create}gpart create -s GPT mfid5}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-5-SWAP-WMC2E3914420 mfid5}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-5-FILES-WMC2E3914420 mfid5}\footnote{Ibid.}
 \subsection{Bay 6}
-\texttt{ \index{gpart!create}gpart create -s GPT mfid6}\\\\
-\texttt{ \index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-6-SWAP-WCC2ETT39577 mfid6}\\\\
-\texttt{ \index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-6-FILES-WCC2ETT39577 mfid6}
+\texttt{\index{gpart!create}gpart create -s GPT mfid6}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-6-SWAP-WCC2ETT39577 mfid6}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-6-FILES-WCC2ETT39577 mfid6}\footnote{Ibid.}
 \subsection{Bay 7}
-\texttt{ \index{gpart!create}gpart create -s GPT mfid7}\\\\
-\texttt{ \index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-7-SWAP-WCAYU2878968 mfid7}\\\\
-\texttt{ \index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-7-FILES-WCAYU2878968 mfid7}\\
+\texttt{\index{gpart!create}gpart create -s GPT mfid7}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-7-SWAP-WCAYU2878968 mfid7}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-7-FILES-WCAYU2878968 mfid7}\footnote{Ibid.}\\
 
 We should note that “Bay 7” is an observation of the physical hardware.  The device (“mfid7”) could have whatever number assigned at the end that the machine gave it.  If the hardware raid had a problem with recognizing a device, the number might not correlate to what bay it is in.  When powering up, check your geometry.  
 
@@ -597,27 +607,27 @@ Let us reiterate:  preserving these backups at the time of disk creation is esse
 
 Each metadata backup file was probably created with a name that does not look like the drive’s label.  Instead, the machine assigns a backup file name based on geometry.  Since we can have a hardware configuration change that could mess up that pattern, we will want to save our backup files with names that look more like the disk labels.  That way, if the drives move, then we can better discover which metadata file goes with it.\\
 
-\noindent\texttt{\index{cp}cp /var/backups/mfid0p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-0-SWAP-WCC2ERZ56512.eli}\\\\
-\texttt{\index{cp}cp /var/backups/mfid1p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-1-CACHE-WXL1E40C1352.eli}\\\\
-\texttt{\index{cp}cp /var/backups/mfid2p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-2-SLOG-WXL1E4067503.eli}\\\\
-\texttt{\index{cp}cp /var/backups/mfid3p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-3-SLOG-WXC0CA9V8431.eli}\\\\
-\texttt{\index{cp}cp /var/backups/mfid4p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-4-SWAP-WCC2EE134983.eli}\\\\
-\texttt{\index{cp}cp /var/backups/mfid4p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-4-FILES-WCC2EE134983.eli}\\\\
-\texttt{\index{cp}cp /var/backups/mfid5p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-5-SWAP-WMC2E3914420.eli}\\\\
-\texttt{\index{cp}cp /var/backups/mfid5p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-5-FILES-WMC2E3914420.eli}\\\\
-\texttt{\index{cp}cp /var/backups/mfid6p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-6-SWAP-WCC2ETT39577.eli}\\\\
-\texttt{\index{cp}cp /var/backups/mfid6p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-6-FILES-WCC2ETT39577.eli}\\\\
-\texttt{\index{cp}cp /var/backups/mfid7p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-7-SWAP-WCAYU2878968.eli}\\\\
-\texttt{\index{cp}cp /var/backups/mfid7p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-7-FILES-WCAYU2878968.eli}
+\noindent\texttt{\index{cp}cp /var/backups/mfid0p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-0-SWAP-WCC2ERZ56512.eli}\footnote{“cp.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=cp&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid1p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-1-CACHE-WXL1E40C1352.eli}\footnote{Ibid.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid2p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-2-SLOG-WXL1E4067503.eli}\footnote{Ibid.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid3p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-3-SLOG-WXC0CA9V8431.eli}\footnote{Ibid.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid4p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-4-SWAP-WCC2EE134983.eli}\footnote{Ibid.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid4p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-4-FILES-WCC2EE134983.eli}\footnote{Ibid.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid5p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-5-SWAP-WMC2E3914420.eli}\footnote{Ibid.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid5p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-5-FILES-WMC2E3914420.eli}\footnote{Ibid.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid6p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-6-SWAP-WCC2ETT39577.eli}\footnote{Ibid.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid6p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-6-FILES-WCC2ETT39577.eli}\footnote{Ibid.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid7p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-7-SWAP-WCAYU2878968.eli}\footnote{Ibid.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid7p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-7-FILES-WCAYU2878968.eli}\footnote{Ibid.}
 
 \subsection{File Name Check:  Editing Labels}
 We got through all that, and found that we had named a file incorrectly.  During experimentation, we had a typo; BAY 4 should be
-\texttt{WCC2EE134983} but that's not what we saw when we checked our work.  Not the end of the world.  We can move the .eli metadata file, and we can use  \index{gpart!modify}gpart modify to change the label.\\
+\texttt{WCC2EE134983} but that's not what we saw when we checked our work.  Not the end of the world.  We can move the .eli metadata file, and we can use  \index{gpart!modify}gpart\footnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.} modify to change the label.\\
 
-\noindent\texttt{ \index{gpart!modify}gpart modify -i 1 -l \\ZFS-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\\\\
-\texttt{ \index{gpart!modify}gpart modify -i 2 -l \\ZFS-BLONDIE-4-FILES-WCC2EE134983 mfid4}\\
+\noindent\texttt{ \index{gpart!modify}gpart modify -i 1 -l \\ZFS-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\footnote{Ibid.}\\\\
+\texttt{ \index{gpart!modify}gpart modify -i 2 -l \\ZFS-BLONDIE-4-FILES-WCC2EE134983 mfid4}\footnote{Ibid.}\\
 
-\texttt{ \index{gpart!show}gpart show} and \texttt{\index{geli!status}geli status} should show our drives as we expect them to be.
+\texttt{ \index{gpart!show}gpart show}\footnote{Ibid.} and \texttt{\index{geli!status}geli status}\footnote{“geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.} should show our drives as we expect them to be.
 
 At this point, all of the drives should be partitioned and decrypted and attached.  We can build a zpool for our ZFS file system. We can attach that swap drive for the benefit of our operating system right now.
 
@@ -625,49 +635,49 @@ At this point, all of the drives should be partitioned and decrypted and attache
 \subsection{To Use the Swap Disk}
 REF:  https://www.cyberciti.biz/faq/create-a-freebsd-swap-file/ \\
 
-\noindent\texttt{\index{swapon}swapon mfid0p1.eli}
-\texttt{\index{swapinfo}swapinfo -k}\\
+\noindent\texttt{\index{swapon}swapon mfid0p1.eli}\footnote{“swapon.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=swapon&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}
+\texttt{\index{swapinfo}swapinfo -k}\footnote{Ibid.}\\
 
 64G turned out to be the maximum capacity.  We will need to fix up the swap better.  We can fit 6 x 64G (384G) of swap partitions in our planned space.  So, let’s modify and add.\\
 
-\texttt{ \index{gpart!resize}gpart resize -i 1 -s 64G mfid0}\\
+\texttt{ \index{gpart!resize}gpart resize -i 1 -s 64G mfid0}\footnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
 We would need to add, to init and to attach five more swap partitions.
 We also have to restore mfid0 because there’s a problem with reading the metadata.  \\
 
-\noindent\texttt{ \index{gpart!recover}gpart recover mfid0}\\
-\texttt{ \index{gpart!status}gpart status mfid0}\\
-\texttt{\index{geli!attach}geli attach mfid0p1}\\\\
-\texttt{ \index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-B-WCC2ERZ56512 mfid0}\\\\
-\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-C-WCC2ERZ56512 mfid0}\\\\
-\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-D-WCC2ERZ56512 mfid0}\\\\
-\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-E-WCC2ERZ56512 mfid0}\\\\
-\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-F-WCC2ERZ56512 mfid0}\\\\
+\noindent\texttt{\index{gpart!recover}gpart recover mfid0}\footnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
+\texttt{ \index{gpart!status}gpart status mfid0}\footnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
+\texttt{\index{geli!attach}geli attach mfid0p1}\footnote{“geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}\\\\
+\texttt{ \index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-B-WCC2ERZ56512 mfid0}\footnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
+\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-C-WCC2ERZ56512 mfid0}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-D-WCC2ERZ56512 mfid0}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-E-WCC2ERZ56512 mfid0}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-F-WCC2ERZ56512 mfid0}\footnote{Ibid.}\\\\
 
 
 Then we need to establish encryption for all of those.\\
 
-\noindent\texttt{\index{geli!init}geli init -l 256 mfid0p2}\\
-\texttt{\index{geli!attach}geli attach mfid0p2}\\
-\texttt{\index{geli!init}geli init -l 256 mfid0p3}\\
-\texttt{\index{geli!attach}geli attach mfid0p3}\\
-\texttt{\index{geli!init}geli init -l 256 mfid0p4}\\
-\texttt{\index{geli!attach}geli attach mfid0p4}\\
-\texttt{\index{geli!init}geli init -l 256 mfid0p5}\\
-\texttt{\index{geli!attach}geli attach mfid0p5}\\
-\texttt{\index{geli!init}geli init -l 256 mfid0p6}\\
-\texttt{\index{geli!attach}geli attach mfid0p6}\\
+\noindent\texttt{\index{geli!init}geli init -l 256 mfid0p2}\footnote{“geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}\\
+\texttt{\index{geli!attach}geli attach mfid0p2}\footnote{Ibid.}\\
+\texttt{\index{geli!init}geli init -l 256 mfid0p3}\footnote{Ibid.}\\
+\texttt{\index{geli!attach}geli attach mfid0p3}\footnote{Ibid.}\\
+\texttt{\index{geli!init}geli init -l 256 mfid0p4}\footnote{Ibid.}\\
+\texttt{\index{geli!attach}geli attach mfid0p4}\footnote{Ibid.}\\
+\texttt{\index{geli!init}geli init -l 256 mfid0p5}\footnote{Ibid.}\\
+\texttt{\index{geli!attach}geli attach mfid0p5}\footnote{Ibid.}\\
+\texttt{\index{geli!init}geli init -l 256 mfid0p6}\footnote{Ibid.}\\
+\texttt{\index{geli!attach}geli attach mfid0p6}\footnote{Ibid.}\\
 
-using \texttt{swapinfo}, \texttt{\index{swapon}swapon} and \texttt{swapoff}, we were able to remove some of the other swap partitions and add on these.  Did see a kernel limit on swap.  Total configured swap exceeded kern.maxswzone (98087976 pages).  We could tune the kernel, or we could reduce swap.  For now, we reduce swap from 384GB to 324GB.
+using \texttt{\index{swapinfo}swapinfo}\footnote{“swapon.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=swapon&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}, \texttt{\index{swapon}swapon}\footnote{Ibid.} and \texttt{\index{swapoff}swapoff}\footnote{Ibid.}, we were able to remove some of the other swap partitions and add on these.  Did see a kernel limit on swap.  Total configured swap exceeded kern.maxswzone (98087976 pages).  We could tune the kernel, or we could reduce swap.  For now, we reduce swap from 384GB to 324GB.
 
 Simliarly, we could add on the other swap partitions, although in our current use, we probably won’t need them.  They would serve us better in cases where we were doing more intensive work, or working on another machine.  We can mount them now, anyway, to see that it can be done.
 
 To add on all the other swap partitions:\\\\
-\noindent\texttt{\index{swapon}swapon /dev/mfid4p1.eli}\\
-\texttt{\index{swapon}swapon /dev/mfid5p1.eli}\\
-\texttt{\index{swapon}swapon /dev/mfid6p1.eli}\\
-\texttt{\index{swapon}swapon /dev/mfid7p1.eli}\\
-\texttt{swapinfo -h}\\
+\noindent\texttt{\index{swapon}swapon /dev/mfid4p1.eli}\footnote{“swapon.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=swapon&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
+\texttt{\index{swapon}swapon /dev/mfid5p1.eli}\footnote{Ibid.}\\
+\texttt{\index{swapon}swapon /dev/mfid6p1.eli}\footnote{Ibid.}\\
+\texttt{\index{swapon}swapon /dev/mfid7p1.eli}\footnote{Ibid.}\\
+\texttt{\index{swapinfo}swapinfo -h}\footnote{Ibid.}\\
 
 \subsection{Create the zpool for BLONDIE}
 We’ll now create a mountpoint on the tmpfs, create the zpool, and then add in the cache and SLOG mirrored disks.
@@ -675,45 +685,47 @@ We’ll now create a mountpoint on the tmpfs, create the zpool, and then add in 
 \subsection{Create a mountpoint}
 Create a mountpoint so that we will be able to mount the zpool without errors as we create it.\\
 
-\noindent\texttt{mkdir /tmp/BLONDIE}\\
+\noindent\texttt{mkdir /tmp/BLONDIE}\footnote{“mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
 \section{Chapter References}
+\subsection{Books}
 \subsection{MAN Pages}
  “bsdinstall.'' Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=bsdinstall&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
-“Camcontrol.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=camcontrol&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+“camcontrol.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=camcontrol&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
-“Cd.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=cd&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+“cd.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=cd&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
-“Cp.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=cp&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+“cp.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=cp&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
-“Geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.
+“geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.
 
-“Gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
-“Ls.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=ls&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+“ls.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=ls&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
-“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+“mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
-“Mount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+“mount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
-“Mt.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mt&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+“mt.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mt&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
-“Newfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=newfs&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+“newfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=newfs&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
-“Rm.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=rm&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+“rm.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=rm&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
-“Ssh-Keygen.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=ssh-keygen&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+“ssh-Keygen.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=ssh-keygen&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
-“Su.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=su&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+“su.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=su&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
-“Swapon.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=swapon&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+“swapon.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=swapon&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
-“Umount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=umount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+“umount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=umount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
-“Zfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zfs&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+“zfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zfs&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
-“Zpool.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zpool&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+“zpool.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zpool&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+\subsection{Websites}
 
 \printchapterendnotes
 

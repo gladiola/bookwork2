@@ -41,7 +41,7 @@
 \indexentry{gpart}{9}
 \indexentry{RAIDZ-2}{9}
 \indexentry{FreeBSD Handbook}{9}
-\indexentry{swapon}{9}
+\indexentry{swapon}{10}
 \indexentry{gpart!create}{10}
 \indexentry{gpart!create}{10}
 \indexentry{gpart!add}{10}
@@ -144,11 +144,14 @@
 \indexentry{geli!attach}{18}
 \indexentry{geli!init}{18}
 \indexentry{geli!attach}{18}
+\indexentry{swapinfo}{18}
 \indexentry{swapon}{18}
+\indexentry{swapoff}{18}
 \indexentry{swapon}{19}
 \indexentry{swapon}{19}
 \indexentry{swapon}{19}
 \indexentry{swapon}{19}
-\indexentry{FreeBSD}{23}
-\indexentry{FreeBSD}{23}
-\indexentry{FreeBSD Handbook}{28}
+\indexentry{swapinfo}{19}
+\indexentry{FreeBSD}{29}
+\indexentry{FreeBSD}{29}
+\indexentry{FreeBSD Handbook}{34}
