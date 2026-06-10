@@ -1,0 +1,59 @@
+\contentsline {chapter}{\numberline {1}Amnesiac System Planning, Experimentation,\\ and Implementation in FreeBSD}{1}{}%
+\contentsline {section}{\numberline {1.1}Introduction}{1}{}%
+\contentsline {subsection}{\numberline {1.1.1}Hardware Configuration}{1}{}%
+\contentsline {subsection}{\numberline {1.1.2}Intentions: Paving the Road to Jails}{2}{}%
+\contentsline {section}{\numberline {1.2}Methodologies}{3}{}%
+\contentsline {subsection}{\numberline {1.2.1}Preparing the Baseboard}{3}{}%
+\contentsline {subsection}{\numberline {1.2.2}Incremental Advancement to Amnesiac System}{3}{}%
+\contentsline {subsection}{\numberline {1.2.3}Identifying and Allocating ZFS Drive Qualities}{3}{}%
+\contentsline {subsection}{\numberline {1.2.4}What are we going to want the ZFS kit to do? How are we going to use the drives? How can we wrestle with this new type of configuration?}{4}{}%
+\contentsline {subsection}{\numberline {1.2.5}What We Can Learn From Installing an OS}{6}{}%
+\contentsline {subsection}{\numberline {1.2.6}Basic Operating System Installation Goals}{6}{}%
+\contentsline {subsection}{\numberline {1.2.7}Main Steps for FreeBSD Installation from \texttt {bsdinstall}}{6}{}%
+\contentsline {subsection}{\numberline {1.2.8}No Root Password}{7}{}%
+\contentsline {subsection}{\numberline {1.2.9}Be Able to Build the Keys}{7}{}%
+\contentsline {subsection}{\numberline {1.2.10}Partition, Mount, and Use a Thumbdrive from Live Disc's Shell}{8}{}%
+\contentsline {subsection}{\numberline {1.2.11}Start the Box and the Live Disk's Shell}{8}{}%
+\contentsline {subsection}{\numberline {1.2.12}Be Able to Plug in the USB Thumbdrive and Find Its Logical Address}{8}{}%
+\contentsline {subsection}{\numberline {1.2.13}Be Able to Partition the USB}{8}{}%
+\contentsline {subsection}{\numberline {1.2.14}Be Able to Write to the USB}{9}{}%
+\contentsline {subsection}{\numberline {1.2.15}Be Able to Put Some Key Pairs on the USB}{9}{}%
+\contentsline {subsection}{\numberline {1.2.16}Be Able to Use Commands to Build Out the Drives}{9}{}%
+\contentsline {subsection}{\numberline {1.2.17}Goals for Amnesiac Systems}{11}{}%
+\contentsline {section}{\numberline {1.3}Results}{11}{}%
+\contentsline {subsection}{\numberline {1.3.1}Configure for SWAP Disk, ZFS Cache, ZFS SLOG Mirror, and ZFS RAIDz2}{12}{}%
+\contentsline {subsection}{\numberline {1.3.2}Startup with \texttt {boontonly.iso}}{12}{}%
+\contentsline {subsection}{\numberline {1.3.3}Mount the USB to Save the Metadata Backup File}{13}{}%
+\contentsline {subsection}{\numberline {1.3.4}Create Swap Disk in Bay 0}{13}{}%
+\contentsline {subsection}{\numberline {1.3.5}Create ZFS Cache in Bay 1}{13}{}%
+\contentsline {subsection}{\numberline {1.3.6}Create ZFS SLOG in Bays 2 and 3}{13}{}%
+\contentsline {subsection}{\numberline {1.3.7}Create ZFS Work Disks for Jails}{14}{}%
+\contentsline {subsection}{\numberline {1.3.8}Bay 4}{14}{}%
+\contentsline {subsection}{\numberline {1.3.9}Bay 5}{14}{}%
+\contentsline {subsection}{\numberline {1.3.10}Bay 6}{14}{}%
+\contentsline {subsection}{\numberline {1.3.11}Bay 7}{14}{}%
+\contentsline {subsection}{\numberline {1.3.12}Encrypt those partitions}{15}{}%
+\contentsline {subsection}{\numberline {1.3.13}Commands to Encrypt the Partitions}{15}{}%
+\contentsline {subsection}{\numberline {1.3.14}To Preserve the Metadata Backup Files}{16}{}%
+\contentsline {subsection}{\numberline {1.3.15}File Name Check: Editing Labels}{17}{}%
+\contentsline {subsection}{\numberline {1.3.16}To Use the Swap Disk}{17}{}%
+\contentsline {subsection}{\numberline {1.3.17}Create the zpool for BLONDIE}{19}{}%
+\contentsline {subsection}{\numberline {1.3.18}Create a mountpoint}{19}{}%
+\contentsline {chapter}{Endnotes}{21}{}%
+\contentsline {chapter}{\numberline {2}FreeBSD Tape Operations}{23}{}%
+\contentsline {section}{\numberline {2.1}Introduction}{23}{}%
+\contentsline {section}{\numberline {2.2}Methodology}{23}{}%
+\contentsline {section}{\numberline {2.3}Results}{23}{}%
+\contentsline {subsection}{\numberline {2.3.1}Code Notes}{23}{}%
+\contentsline {subsection}{\numberline {2.3.2}Sample Files: test.txt }{24}{}%
+\contentsline {subsection}{\numberline {2.3.3}Sample Files: test2.txt}{24}{}%
+\contentsline {subsection}{\numberline {2.3.4}Sample Files: test3.txt}{24}{}%
+\contentsline {subsection}{\numberline {2.3.5}Sample Files: test4.txt}{24}{}%
+\contentsline {subsection}{\numberline {2.3.6}Sample Files: test5.txt}{24}{}%
+\contentsline {subsection}{\numberline {2.3.7}Sample Script: scriptedDemo.sh}{24}{}%
+\contentsline {section}{\numberline {2.4}Analysis}{27}{}%
+\contentsline {subsection}{\numberline {2.4.1}Quality}{27}{}%
+\contentsline {subsection}{\numberline {2.4.2}Tests}{27}{}%
+\contentsline {section}{\numberline {2.5}Discussion}{27}{}%
+\contentsline {section}{\numberline {2.6}References}{28}{}%
+\contentsline {chapter}{Endnotes}{29}{}%

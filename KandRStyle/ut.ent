@@ -1,0 +1,8 @@
+\@doanenote {1}
+macro:->First
+note.
+\@endanenote 
+\@doanenote {2}
+macro:->Second
+note.
+\@endanenote 
