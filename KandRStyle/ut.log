@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  10 JUN 2026 11:33
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  10 JUN 2026 11:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -191,6 +191,29 @@ Package fontspec Info: Font family 'EurostileW01(0)' created for font
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 
+Package fontspec Info: Could not resolve font "Eurostile Extd/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Eurostile Extd/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Eurostile Extd/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'EurostileExtd(0)' created for font
+(fontspec)             'Eurostile Extd' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Eurostile
+(fontspec)             Extd/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
 (c:/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
 
@@ -355,28 +378,28 @@ Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 ) (./ut.aux)
 \openout1 = `ut.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 97.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 9
-6.
+7.
 
 (c:/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -419,71 +442,71 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 96.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 96.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 96.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 96.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 96.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 96.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 96.
-LaTeX Font Info:    Redeclaring math accent \check on input line 96.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 96.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 96.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 96.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 96.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 96.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 96.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 96.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 96.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 96.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 96.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 96.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 96.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 96.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 96.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 96.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 96.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 96.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 97.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 97.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 97.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 97.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 97.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 97.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 97.
+LaTeX Font Info:    Redeclaring math accent \check on input line 97.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 97.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 97.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 97.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 97.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 96.
+(Font)              `operators' in the math version `normal' on input line 97.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/InfoOTDisp(0)/m/n on input line 96.
+(Font)                  OT1/cmr/m/n --> TU/InfoOTDisp(0)/m/n on input line 97.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 96.
+(Font)              `operators' in the math version `bold' on input line 97.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/InfoOTDisp(0)/m/n on input line 96.
+(Font)                  OT1/cmr/bx/n --> TU/InfoOTDisp(0)/m/n on input line 97.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/InfoOTDisp(0)/m/n --> TU/InfoOTDisp(0)/m/n on input 
-line 96.
+line 97.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/InfoOTDisp(0)/m/it on input line 96
+(Font)                  OT1/cmr/m/it --> TU/InfoOTDisp(0)/m/it on input line 97
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/InfoOTDisp(0)/b/n on input line 96.
+(Font)                  OT1/cmr/bx/n --> TU/InfoOTDisp(0)/b/n on input line 97.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 96.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 97.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/IBMPlexMono(0)/m/n on input line 96
+(Font)                  OT1/cmtt/m/n --> TU/IBMPlexMono(0)/m/n on input line 97
 .
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/InfoOTDisp(0)/m/n --> TU/InfoOTDisp(0)/b/n on input 
-line 96.
+line 97.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/InfoOTDisp(0)/b/it on input line 9
-6.
+7.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 96.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 97.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/IBMPlexMono(0)/b/n on input line 96
+(Font)                  OT1/cmtt/m/n --> TU/IBMPlexMono(0)/b/n on input line 97
 .
-LaTeX Info: Redefining \microtypecontext on input line 96.
-Package microtype Info: Applying patch `item' on input line 96.
-Package microtype Info: Applying patch `toc' on input line 96.
-Package microtype Info: Applying patch `eqnum' on input line 96.
-Package microtype Info: Applying patch `footnote' on input line 96.
-Package microtype Info: Applying patch `verbatim' on input line 96.
+LaTeX Info: Redefining \microtypecontext on input line 97.
+Package microtype Info: Applying patch `item' on input line 97.
+Package microtype Info: Applying patch `toc' on input line 97.
+Package microtype Info: Applying patch `eqnum' on input line 97.
+Package microtype Info: Applying patch `footnote' on input line 97.
+Package microtype Info: Applying patch `verbatim' on input line 97.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -783,11 +806,11 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count294
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 97.
+(Font)              <12> on input line 98.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 97.
+(Font)              <8> on input line 98.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 97.
+(Font)              <6> on input line 98.
 (c:/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
@@ -797,16 +820,16 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 ]
 
 LaTeX Font Warning: Font shape `TU/InfoOTDisp(0)/m/it' undefined
-(Font)              using `TU/InfoOTDisp(0)/m/n' instead on input line 98.
+(Font)              using `TU/InfoOTDisp(0)/m/n' instead on input line 99.
 
 [2
 
 ]
-
-LaTeX Font Warning: Font shape `TU/InfoOTDisp(0)/m/sc' undefined
-(Font)              using `TU/InfoOTDisp(0)/m/n' instead on input line 99.
-
-(./ut.toc
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `EurostileExtd' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ (./ut.toc
 
 LaTeX Font Warning: Font shape `TU/InfoOTDisp(0)/b/n' undefined
 (Font)              using `TU/InfoOTDisp(0)/m/n' instead on input line 1.
@@ -833,77 +856,111 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 LaTeX Font Warning: Font shape `TU/EurostileW01(0)/b/n' undefined
-(Font)              using `TU/EurostileW01(0)/m/n' instead on input line 129.
+(Font)              using `TU/EurostileW01(0)/m/n' instead on input line 127.
 
 [1
 
 
 ]
-Overfull \hbox (7.4107pt too wide) in paragraph at lines 169--170
+Overfull \hbox (7.4107pt too wide) in paragraph at lines 167--168
 []\TU/InfoOTDisp(0)/b/n/10 There’s a web interface that let’s us know about mot
 herboard-related
  []
 
-[2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 236--237
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
+
+[2]
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
 []|\TU/IBMPlexMono(0)/m/n/10 [Host]-[PositionNumber
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--237
+Underfull \hbox (badness 10000) in paragraph at lines 235--235
 []|\TU/InfoOTDisp(0)/b/n/10 ZFS Compres-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 []|\TU/IBMPlexMono(0)/m/n/10 zfs set compress=gzip-6
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--243
+Underfull \hbox (badness 10000) in paragraph at lines 241--241
 \TU/InfoOTDisp(0)/b/n/10 count snapshots and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
 []|\TU/IBMPlexMono(0)/m/n/10 zfs set canmount=off
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
 []|\TU/IBMPlexMono(0)/m/n/10 zfs set mountpoint=/SOME
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--247
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
 []|\TU/IBMPlexMono(0)/m/n/10 zfs set readonly=off
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
 []|\TU/IBMPlexMono(0)/m/n/10 zfs set exec=off
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 []|\TU/InfoOTDisp(0)/b/n/10 Make more than one
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
 []|\TU/IBMPlexMono(0)/m/n/10 zfs set copies=2
  []
 
 
-Overfull \hbox (11.48013pt too wide) in paragraph at lines 231--251
+Overfull \hbox (11.48013pt too wide) in paragraph at lines 229--249
  [][] 
  []
+
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
 
 [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5]
-Overfull \hbox (0.77376pt too wide) in paragraph at lines 313--313
+
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
+
+[5]
+Overfull \hbox (0.77376pt too wide) in paragraph at lines 311--311
 |[]\TU/EurostileW01(0)/b/n/12 Main Steps for FreeBSD Installation from \TU/IBMP
 lexMono(0)/b/n/12 bsdinstall| 
  []
@@ -911,18 +968,27 @@ lexMono(0)/b/n/12 bsdinstall|
 
 Underfull \vbox (badness 1331) has occurred while \output is active []
 
- [6]
-Underfull \hbox (badness 10000) in paragraph at lines 350--352
+
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 348--350
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--352
+Underfull \hbox (badness 10000) in paragraph at lines 348--350
 
  []
 
 
-Overfull \hbox (5.22276pt too wide) in paragraph at lines 355--355
+Overfull \hbox (5.22276pt too wide) in paragraph at lines 353--353
 |[]\TU/EurostileW01(0)/b/n/12 Partition, Mount, and Use a Thumbdrive from Live 
 Disc's
  []
@@ -930,592 +996,697 @@ Disc's
 
 Underfull \vbox (badness 1178) has occurred while \output is active []
 
- [7]
-Underfull \hbox (badness 10000) in paragraph at lines 362--363
+
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--376
+Underfull \hbox (badness 10000) in paragraph at lines 367--374
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--376
+Underfull \hbox (badness 10000) in paragraph at lines 367--374
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--376
+Underfull \hbox (badness 10000) in paragraph at lines 367--374
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--376
+Underfull \hbox (badness 10000) in paragraph at lines 367--374
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--386
+Underfull \hbox (badness 10000) in paragraph at lines 376--384
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--386
+Underfull \hbox (badness 10000) in paragraph at lines 376--384
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--386
+Underfull \hbox (badness 10000) in paragraph at lines 376--384
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--386
+Underfull \hbox (badness 10000) in paragraph at lines 376--384
 
  []
+
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 388--391
+Underfull \hbox (badness 10000) in paragraph at lines 386--389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 388--391
+Underfull \hbox (badness 10000) in paragraph at lines 386--389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--401
+Underfull \hbox (badness 10000) in paragraph at lines 395--399
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--401
+Underfull \hbox (badness 10000) in paragraph at lines 395--399
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--405
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
 
  []
+
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 406--410
+Underfull \hbox (badness 10000) in paragraph at lines 404--408
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--410
+Underfull \hbox (badness 10000) in paragraph at lines 404--408
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--410
+Underfull \hbox (badness 10000) in paragraph at lines 404--408
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--415
+Underfull \hbox (badness 10000) in paragraph at lines 409--413
 
  []
 
 
-Overfull \hbox (23.07074pt too wide) in paragraph at lines 411--415
+Overfull \hbox (23.07074pt too wide) in paragraph at lines 409--413
 \TU/IBMPlexMono(0)/m/n/10 gpart add -a 1m -l ZFS_NUMBER -t freebsd-zfs DISK_DEV
 ICE 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--415
+Underfull \hbox (badness 10000) in paragraph at lines 409--413
 
  []
 
 
-Overfull \hbox (41.07074pt too wide) in paragraph at lines 411--415
+Overfull \hbox (41.07074pt too wide) in paragraph at lines 409--413
 \TU/IBMPlexMono(0)/m/n/10 gpart add -a 1m -l ZFS-BLONDIE-4-WD123465789 -t freeb
 sd-zfs
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--415
+Underfull \hbox (badness 10000) in paragraph at lines 409--413
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--420
+Underfull \hbox (badness 10000) in paragraph at lines 414--418
 
  []
 
 
-Overfull \hbox (65.07074pt too wide) in paragraph at lines 416--420
+Overfull \hbox (65.07074pt too wide) in paragraph at lines 414--418
 \TU/IBMPlexMono(0)/m/n/10 gpart add -a 1m -slg -l SWAP_NUMBER -t freebsd-swap D
 ISK_DEVICE 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--420
+Underfull \hbox (badness 10000) in paragraph at lines 414--418
 
  []
 
 
-Overfull \hbox (5.07074pt too wide) in paragraph at lines 416--420
+Overfull \hbox (5.07074pt too wide) in paragraph at lines 414--418
 \TU/IBMPlexMono(0)/m/n/10 gpart add -a 1m -slg -l SWAP-BLONDIE-4-WD123465789 -t
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--420
+Underfull \hbox (badness 10000) in paragraph at lines 414--418
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--424
+Underfull \hbox (badness 10000) in paragraph at lines 419--422
 
  []
 
 
-Overfull \hbox (29.07074pt too wide) in paragraph at lines 421--424
+Overfull \hbox (29.07074pt too wide) in paragraph at lines 419--422
 \TU/IBMPlexMono(0)/m/n/10 gpart add -a 1m -l ZLOG_NUMBER -t freebsd-zfs DISK_DE
 VICE 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--424
+Underfull \hbox (badness 10000) in paragraph at lines 419--422
 
  []
 
 
-Overfull \hbox (47.07074pt too wide) in paragraph at lines 421--424
+Overfull \hbox (47.07074pt too wide) in paragraph at lines 419--422
 \TU/IBMPlexMono(0)/m/n/10 gpart add -a 1m -l ZLOG-BLONDIE-2-WD123465789 -t free
 bsd-zfs
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--424
+Underfull \hbox (badness 10000) in paragraph at lines 419--422
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--424
+Underfull \hbox (badness 10000) in paragraph at lines 419--422
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--427
+Underfull \hbox (badness 10000) in paragraph at lines 423--425
 
  []
 
 
-Overfull \hbox (34.77074pt too wide) in paragraph at lines 425--427
+Overfull \hbox (34.77074pt too wide) in paragraph at lines 423--425
 \TU/IBMPlexMono(0)/m/n/10 zpool create RAID POOL_NAME DISK_LABEL/ZFS_PARTITION_
 LABEL
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--427
+Underfull \hbox (badness 10000) in paragraph at lines 423--425
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--427
+Underfull \hbox (badness 10000) in paragraph at lines 423--425
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--433
+Underfull \hbox (badness 10000) in paragraph at lines 426--431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--438
+Underfull \hbox (badness 10000) in paragraph at lines 432--436
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--438
+Underfull \hbox (badness 10000) in paragraph at lines 432--436
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
-[11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 495--497
+
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
+
+[10]
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
+
+[11]
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 493--495
 
  []
 
 
-Overfull \hbox (131.07074pt too wide) in paragraph at lines 495--497
+Overfull \hbox (131.07074pt too wide) in paragraph at lines 493--495
 \TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 395G -t freebsd-swap -l ZFS-BLONDI
 E-0-SWAP-WCC2ERZ56512
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--501
+Underfull \hbox (badness 10000) in paragraph at lines 497--499
 
  []
 
 
-Overfull \hbox (125.07074pt too wide) in paragraph at lines 499--501
+Overfull \hbox (125.07074pt too wide) in paragraph at lines 497--499
 \TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-
 1-CACHE-WXL1E40C1352
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--507
+Underfull \hbox (badness 10000) in paragraph at lines 501--505
 
  []
 
 
-Overfull \hbox (119.07074pt too wide) in paragraph at lines 503--507
+Overfull \hbox (119.07074pt too wide) in paragraph at lines 501--505
 \TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-
 2-SLOG-WXL1E4067503
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--507
+Underfull \hbox (badness 10000) in paragraph at lines 501--505
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--507
+Underfull \hbox (badness 10000) in paragraph at lines 501--505
 
  []
 
 
-Overfull \hbox (118.77074pt too wide) in paragraph at lines 503--507
+Overfull \hbox (118.77074pt too wide) in paragraph at lines 501--505
 \TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-
 3-SLOG-WXC0CA9V8431
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--507
+Underfull \hbox (badness 10000) in paragraph at lines 501--505
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--507
+Underfull \hbox (badness 10000) in paragraph at lines 501--505
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 510--513
+Underfull \hbox (badness 10000) in paragraph at lines 508--511
 
  []
 
 
-Overfull \hbox (125.07074pt too wide) in paragraph at lines 510--513
+Overfull \hbox (125.07074pt too wide) in paragraph at lines 508--511
 \TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE
 -4-SWAP-WCC2EE134983
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 510--513
+Underfull \hbox (badness 10000) in paragraph at lines 508--511
 
  []
 
 
-Overfull \hbox (95.07074pt too wide) in paragraph at lines 510--513
+Overfull \hbox (95.07074pt too wide) in paragraph at lines 508--511
 \TU/IBMPlexMono(0)/m/n/10 gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-4-FIL
 ES-WCC2EE134983
  []
 
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
+
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 514--517
+Underfull \hbox (badness 10000) in paragraph at lines 512--515
 
  []
 
 
-Overfull \hbox (125.07074pt too wide) in paragraph at lines 514--517
+Overfull \hbox (125.07074pt too wide) in paragraph at lines 512--515
 \TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE
 -5-SWAP-WMC2E3914420
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 514--517
+Underfull \hbox (badness 10000) in paragraph at lines 512--515
 
  []
 
 
-Overfull \hbox (95.07074pt too wide) in paragraph at lines 514--517
+Overfull \hbox (95.07074pt too wide) in paragraph at lines 512--515
 \TU/IBMPlexMono(0)/m/n/10 gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-5-FIL
 ES-WMC2E3914420
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 518--521
+Underfull \hbox (badness 10000) in paragraph at lines 516--519
 
  []
 
 
-Overfull \hbox (124.77074pt too wide) in paragraph at lines 518--521
+Overfull \hbox (124.77074pt too wide) in paragraph at lines 516--519
 \TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE
 -6-SWAP-WCC2ETT39577
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 518--521
+Underfull \hbox (badness 10000) in paragraph at lines 516--519
 
  []
 
 
-Overfull \hbox (94.77074pt too wide) in paragraph at lines 518--521
+Overfull \hbox (94.77074pt too wide) in paragraph at lines 516--519
 \TU/IBMPlexMono(0)/m/n/10 gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-6-FIL
 ES-WCC2ETT39577
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 522--525
+Underfull \hbox (badness 10000) in paragraph at lines 520--523
 
  []
 
 
-Overfull \hbox (125.07074pt too wide) in paragraph at lines 522--525
+Overfull \hbox (125.07074pt too wide) in paragraph at lines 520--523
 \TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE
 -7-SWAP-WCAYU2878968
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 522--525
+Underfull \hbox (badness 10000) in paragraph at lines 520--523
 
  []
 
 
-Overfull \hbox (95.07074pt too wide) in paragraph at lines 522--525
+Overfull \hbox (95.07074pt too wide) in paragraph at lines 520--523
 \TU/IBMPlexMono(0)/m/n/10 gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-7-FIL
 ES-WCAYU2878968
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 522--525
+Underfull \hbox (badness 10000) in paragraph at lines 520--523
 
  []
+
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
 
 [14]
 \openout3 = `ut.ent'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--560
+Underfull \hbox (badness 10000) in paragraph at lines 534--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--560
+Underfull \hbox (badness 10000) in paragraph at lines 534--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--560
+Underfull \hbox (badness 10000) in paragraph at lines 534--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--560
+Underfull \hbox (badness 10000) in paragraph at lines 534--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--560
+Underfull \hbox (badness 10000) in paragraph at lines 534--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--560
+Underfull \hbox (badness 10000) in paragraph at lines 534--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--560
+Underfull \hbox (badness 10000) in paragraph at lines 534--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--560
+Underfull \hbox (badness 10000) in paragraph at lines 534--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--560
+Underfull \hbox (badness 10000) in paragraph at lines 534--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--560
+Underfull \hbox (badness 10000) in paragraph at lines 534--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--560
+Underfull \hbox (badness 10000) in paragraph at lines 534--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--560
+Underfull \hbox (badness 10000) in paragraph at lines 534--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--560
+Underfull \hbox (badness 10000) in paragraph at lines 534--558
 
  []
+
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 564--565
+Underfull \hbox (badness 10000) in paragraph at lines 562--563
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--578
+Underfull \hbox (badness 10000) in paragraph at lines 564--576
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--578
+Underfull \hbox (badness 10000) in paragraph at lines 564--576
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--578
+Underfull \hbox (badness 10000) in paragraph at lines 564--576
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--578
+Underfull \hbox (badness 10000) in paragraph at lines 564--576
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--578
+Underfull \hbox (badness 10000) in paragraph at lines 564--576
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--578
+Underfull \hbox (badness 10000) in paragraph at lines 564--576
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--578
+Underfull \hbox (badness 10000) in paragraph at lines 564--576
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--578
+Underfull \hbox (badness 10000) in paragraph at lines 564--576
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--578
+Underfull \hbox (badness 10000) in paragraph at lines 564--576
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--578
+Underfull \hbox (badness 10000) in paragraph at lines 564--576
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--578
+Underfull \hbox (badness 10000) in paragraph at lines 564--576
 
  []
+
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 580--582
+Underfull \hbox (badness 10000) in paragraph at lines 578--580
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 583--585
+Underfull \hbox (badness 10000) in paragraph at lines 581--583
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 583--585
+Underfull \hbox (badness 10000) in paragraph at lines 581--583
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--593
+Underfull \hbox (badness 10000) in paragraph at lines 590--591
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 594--596
+Underfull \hbox (badness 10000) in paragraph at lines 592--594
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 595--596
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
+
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 597--598
 
  []
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 599--600
+
+Underfull \hbox (badness 10000) in paragraph at lines 599--601
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 601--603
+Underfull \hbox (badness 10000) in paragraph at lines 602--610
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 604--612
+Underfull \hbox (badness 10000) in paragraph at lines 602--610
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 604--612
+Underfull \hbox (badness 10000) in paragraph at lines 602--610
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 604--612
+Underfull \hbox (badness 10000) in paragraph at lines 602--610
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 604--612
+Underfull \hbox (badness 10000) in paragraph at lines 602--610
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 604--612
+Underfull \hbox (badness 10000) in paragraph at lines 602--610
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 604--612
+Underfull \hbox (badness 10000) in paragraph at lines 602--610
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 604--612
+Underfull \hbox (badness 10000) in paragraph at lines 612--613
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 614--615
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 616--626
+Underfull \hbox (badness 10000) in paragraph at lines 614--624
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
-Underfull \hbox (badness 10000) in paragraph at lines 631--637
+
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 629--635
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 631--637
+Underfull \hbox (badness 10000) in paragraph at lines 629--635
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 640--641
 
  []
 
@@ -1525,11 +1696,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 642--643
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 644--645
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
- []
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
 
-[19] [20
+[19]
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
+
+[20
 
 ] (./ut.ent
 Overfull \hbox (0.68352pt too wide) in paragraph at lines 2--11
@@ -1540,24 +1723,33 @@ Overfull \hbox (0.68352pt too wide) in paragraph at lines 2--11
 
 ) [21
 
-] [22
+]
+
+Package fancyhdr Warning: \headheight is too small (21.0pt): 
+(fancyhdr)                Make it at least 31.72903pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.72903pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.72903pt}.
+
+[22
 
 ]
 Chapter 2.
 [23]
-Overfull \hbox (17.07074pt too wide) in paragraph at lines 807--808
+Overfull \hbox (17.07074pt too wide) in paragraph at lines 809--810
 \TU/IBMPlexMono(0)/m/n/10 echo "Back up to 0 and go forward space count 2 files
 ." 
  []
 
 
-Overfull \hbox (17.07074pt too wide) in paragraph at lines 807--808
+Overfull \hbox (17.07074pt too wide) in paragraph at lines 809--810
 \TU/IBMPlexMono(0)/m/n/10 echo "Back up to 0 and go forward space count 3 files
 ." 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 807--808
+Underfull \hbox (badness 10000) in paragraph at lines 809--810
 
  []
 
@@ -1565,14 +1757,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 807--808
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25]
-Underfull \hbox (badness 10000) in paragraph at lines 811--812
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [26]
 Underfull \hbox (badness 10000) in paragraph at lines 813--814
 
  []
@@ -1580,8 +1764,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 813--814
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [26]
+Underfull \hbox (badness 10000) in paragraph at lines 815--816
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [27]
-Overfull \hbox (20.08772pt too wide) in paragraph at lines 841--843
+Overfull \hbox (20.08772pt too wide) in paragraph at lines 843--845
 []\TU/InfoOTDisp(0)/b/n/10 C. URLs – FreeBSD man pages for above. \TU/IBMPlexMo
 no(0)/m/n/10 man.freebsd.org/cgi/man.cgi?
  []
@@ -1602,11 +1794,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 9926 strings out of 475846
- 211460 string characters out of 5781395
- 1926879 words of memory out of 5000000
- 30910 multiletter control sequences out of 15000+600000
- 561085 words of font info for 80 fonts, out of 8000000 for 9000
+ 9951 strings out of 475846
+ 212148 string characters out of 5781395
+ 1925879 words of memory out of 5000000
+ 30924 multiletter control sequences out of 15000+600000
+ 561133 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  79i,13n,93p,1367b,424s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
