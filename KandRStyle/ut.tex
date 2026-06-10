@@ -370,11 +370,11 @@ We won't set a root password because we will expect to always ssh into the root 
 
 Another risk is that we will require the ability to ssh in as root.  Later, as we establish software firewalls on the host, we will want to limit what addresses can be used to access this root with ssh.  It's a little dangerous, but it's also a little different.  
 
-We have some risk controls that will be in place.  First, we often store our keys in a special collection of USB drives.  Next, we will have 2FA on the ssh that will require a TOTP (Time-based One Time Password).  Finally, we will limit what's done in this drive.  Since most of our programs and work will be done in the jails, there is a limited amount of influence that this part of the system will have.  It's there to start the box and spin up the jails.  If we ever have to totally destroy this installation and hook up our jails to another system, that is possible.
+We have some risk controls that will be in place.  First, we often store our keys in a special collection of \index{USB!drive}USB drives.  Next, we will have \index{2FA}2FA on the ssh that will require a \index{TOTP}TOTP (Time-based One Time Password).  Finally, we will limit what's done in this drive.  Since most of our programs and work will be done in the jails, there is a limited amount of influence that this part of the system will have.  It's there to start the box and spin up the \index{jails}jails.  If we ever have to totally destroy this installation and hook up our \index{jails}jails to another system, that is possible.
 
 What do we gain from no root password?  An extra measure of security.  If there is no password, then password enumeration attempts should all fail.  This not only goes for root, but it goes for other users.  Many of the automated login attacks we've seen have been simple dictionary attacks; these brute force exercises rarely attempt to account for the types of login procedures that we expect to put in place.  
 
-Not having a root password may also truncate or stop our ability to use commands like \texttt{su} or \texttt{sudo}.  As we're trying to stop privilege escalation, we'll also be stopping legitimate means of priv-esc.  It could be inconvenient, but we've used this technique before.
+Not having a root password may also truncate or stop our ability to use commands like \texttt{\index{su}su} or \texttt{\index{sudo}sudo}.  As we're trying to stop privilege escalation, we'll also be stopping legitimate means of priv-esc.  It could be inconvenient, but we've used this technique before.
 
 Also, there is another risk:  leaving the needed key lying around.  For example, if we give the key to a user account operator, like ourselves, and then we import copies of the key to the box for easy use:  well, then those keys could be used and re-used locally.  This would be the equivalent for storing a plain-text password on the box.  They keys are ultimately simple text files with decorated, long, strings of hashes.  It's the software that goes with the keys, combined with the configuration of the programs for logging in to a service, that makes them special.  Switching from passwords to keys is not a perfect answer; but, it's the answer we'll use this time.
 
@@ -382,7 +382,7 @@ If someone wishes to put a root password in place, then that's a procedure that 
 
 \subsection{Be Able to Build the Keys}
 We can build our keys using the live disc's shell. and a thumbdrive.  The main command to build the keys is:\\\\
-\texttt{ssh-keygen -b 1024 -t rsa}\\
+\texttt{\index{ssh-keygen}ssh-keygen -b 1024 -t rsa}\\
 
 Copy the files output to a thumbdrive and keep them handy for mounting.
 
@@ -393,7 +393,7 @@ With the hardware booted to the LiveCD (installation disc), we select "Shell" fr
 Our main set of directions for this is in the \index{FreeBSD Handbook}FreeBSD Handbook.  We look carefully at the sections for USB storage and "Adding Disks"
 \subsection{Be Able to Plug in the USB Thumbdrive and Find Its Logical Address}
 
-\texttt{camcontrol devlist}\\
+\texttt{\index{camcontrol!devlist}camcontrol devlist}\\
 
 This should show the USB drive.  If the list is long, we can pipe it to more and slowly advance through the list.  In our case, the USB was at da0.  
 
@@ -401,27 +401,27 @@ The listing should also show any other storage device that's plugged in to the m
 
 \subsection{Be Able to Partition the USB}
 Since our USB has not been prepared for use with anything, we have to partition it.  We can pretty much use the default commands fro 17.2 "Adding Disks" to set up the drive.  Here, we create a simple UFS file system and mount it to a directory that we'll put in /tmp. If our USB is already partitioned, we would want to skip this part.  \\\\
-\texttt{\#  \index{gpart}gpart create -s GPT da0}\\
-\texttt{\#  \index{gpart}gpart add -t freebsd-ufs -a 1M da0}\\
-\texttt{\# newfs -U /dev/da0p1}\\\\
+\texttt{\#  \index{gpart!create}gpart create -s GPT da0}\\
+\texttt{\#  \index{gpart!add}gpart add -t freebsd-ufs -a 1M da0}\\
+\texttt{\# \index{newfs}newfs -U /dev/da0p1}\\\\
 Mount the USB to the /tmp Directory:\\\\
-\texttt{\# mkdir /tmp/someDir}\\
-\texttt{\# mount /dev/da0p1 /tmp/someDir}\\
+\texttt{\# \index{mkdir}mkdir /tmp/someDir}\footnote{“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
+\texttt{\# \index{mount}mount /dev/da0p1 /tmp/someDir}\footnote{“Mount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
 \subsection{Be Able to Write to the USB}
 We could now write a simple text file onto /tmp/someDir, unmount the drive, and then re-mount it to check our work.  That would go like:\\\\
-\texttt{\# cd /tmp}\\
-\texttt{\# umount /tmp/someDir}\\
-\texttt{\# rm -r /tmp/someDir}\\\\
+\texttt{\index{cd}cd /tmp}\\
+\texttt{\index{umount}umount /tmp/someDir}\\
+\texttt{\index{rm} rm -r /tmp/someDir}\\\\
 Unplug the drive.  Plug it in another slot.  Use camcontrol devlist to find it again.  It'll probably get the same address, like "da0".\\\\
-\texttt{\# mkdir /tmp/otherDir}\\
-\texttt{\# mount /dev/da0p1 /tmp/otherDir}\\
-\texttt{\# ls /tmp/otherDir}\\
+\texttt{\index{mkdir}mkdir /tmp/otherDir}\footnote{“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
+\texttt{\index{mount}mount /dev/da0p1 /tmp/otherDir}\footnote{“Mount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
+\texttt{\index{ls} ls /tmp/otherDir}\\
 
 \subsection{Be Able to Put Some Key Pairs on the USB}
 Using these same principles, we can mount our USB thumbdrive, generate ssh keys, and save them there for later.\\\\
-\texttt{\# mkdir /tmp/otherDir/keys}\\
-\texttt{\# ssh-keygen -b 1024 -t rsa}\\
+\texttt{\index{mkdir} mkdir /tmp/otherDir/keys}\footnote{“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
+\texttt{\index{ssh-keygen} ssh-keygen -b 1024 -t rsa}\\
 
 During the ssh-keygen dialog, simply direct the program to save the keys to \texttt{/tmp/otherDir/keys}.  Be sure to record your passphrase somewhere.  
 
@@ -435,38 +435,38 @@ We then note which drives we want to use for the main body of the \index{RAIDZ-2
 
 Make the notes if you haven't already because we're going to list all of the drives for the main pool in one pop.  This task may have been done before we set up the physical VDEVs for the hardware RAID.
 
-We're going to choose to put a swap partition on the SSDs.  We can add one onto the other disks, but a maximum of 4 swap partitions is recommended in the \index{FreeBSD Handbook}FreeBSD Handbook.  Later on, we will be able to select swap partitions by mounting them and using commands like \texttt{swapon swapoff}.\\
+We're going to choose to put a swap partition on the SSDs.  We can add one onto the other disks, but a maximum of 4 swap partitions is recommended in the \index{FreeBSD Handbook}FreeBSD Handbook.  Later on, we will be able to select swap partitions by mounting them and using commands like \texttt{\index{swapon}swapon swapoff}.\\
 
 To put the ZFS partition on the remaining disks:\\\\
-\texttt{ \index{gpart}gpart create -s SCHEME DISK\_DEVICE}\\\\
-\texttt{ \index{gpart}gpart create -s gpt da4}
+\texttt{ \index{gpart!create}gpart create -s SCHEME DISK\_DEVICE}\\\\
+\texttt{ \index{gpart!create}gpart create -s gpt da4}
 \\
 
 To add the main ZFS partition:\\\\
-\texttt{ \index{gpart}gpart add -a 1m -l ZFS\_NUMBER -t freebsd-zfs DISK\_DEVICE}\\\\
-\texttt{ \index{gpart}gpart add -a 1m -l ZFS-BLONDIE-4-WD123465789 -t freebsd-zfs  da4}
+\texttt{ \index{gpart!add}gpart add -a 1m -l ZFS\_NUMBER -t freebsd-zfs DISK\_DEVICE}\\\\
+\texttt{ \index{gpart!add}gpart add -a 1m -l ZFS-BLONDIE-4-WD123465789 -t freebsd-zfs  da4}
 \\
 
 To add the partition's swap:\\\\
-\texttt{ \index{gpart}gpart add -a 1m -slg -l SWAP\_NUMBER -t freebsd-swap DISK\_DEVICE}\\\\
-\texttt{ \index{gpart}gpart add -a 1m -slg -l SWAP-BLONDIE-4-WD123465789 -t freebsd-swap da4}
+\texttt{ \index{gpart!add}gpart add -a 1m -slg -l SWAP\_NUMBER -t freebsd-swap DISK\_DEVICE}\\\\
+\texttt{ \index{gpart!add}gpart add -a 1m -slg -l SWAP-BLONDIE-4-WD123465789 -t freebsd-swap da4}
 \\
 
 To add a logging partition on the SLOG SSDs:\\\\
-\texttt{ \index{gpart}gpart add -a 1m -l ZLOG\_NUMBER -t freebsd-zfs DISK\_DEVICE}\\\\
-\texttt{ \index{gpart}gpart add -a 1m -l ZLOG-BLONDIE-2-WD123465789 -t freebsd-zfs  da2}\\\\
+\texttt{ \index{gpart!add}gpart add -a 1m -l ZLOG\_NUMBER -t freebsd-zfs DISK\_DEVICE}\\\\
+\texttt{ \index{gpart!add}gpart add -a 1m -l ZLOG-BLONDIE-2-WD123465789 -t freebsd-zfs  da2}\\\\
 
 With each disk partitioned, we can add them to the pool for our RAIDZ-2 kit.\\\\
-\texttt{zpool create RAID POOL\_NAME DISK\_LABEL/ZFS\_PARTITION\_LABEL ...next disk/partition...}\\\\
+\texttt{\index{zpool!create}zpool create RAID POOL\_NAME DISK\_LABEL/ZFS\_PARTITION\_LABEL ...next disk/partition...}\\\\
 
-\noindent\texttt{zpool create BLONDIE-MAIN \index{RAIDZ-2}raidz2 \textbackslash }\\
+\noindent\texttt{\index{zpool!create}zpool create BLONDIE-MAIN \index{RAIDZ-2}raidz2 \textbackslash }\\
 \texttt{BLONDIE-4-WD12345/ZFS-BLONDIE-4-WD12345 \textbackslash }\\
 \texttt{BLONDIE-5-WD12345/ZFS-BLONDIE-5-WD12345 \textbackslash }\\
 \texttt{BLONDIE-6-WD12345/ZFS-BLONDIE-6-WD12345 \textbackslash }\\
 \texttt{BLONDIE-7-WD12345/ZFS-BLONDIE-7-WD12345 }\\
 
 We can add on the mirrors for logging:\\\\
-\texttt{zpool add BLONDIE-MAIN log mirror \textbackslash}\\
+\texttt{\index{zpool!add}zpool add BLONDIE-MAIN log mirror \textbackslash}\\
 \texttt{BLONDIE-2-WD12345/ZLOG-BLONDIE-2-WD12345 \textbackslash}\\
 \texttt{BLONDIE-3-WD12345/ZLOG-BLONDIE-3-WD12345}\\
 
@@ -522,8 +522,8 @@ We used  \index{gpart}gpart delete to delete each partition.  Then we used  \ind
 For this run, we’ll begin by using the boot-only disk.  We won’t plan to ever boot from these hard drives.  We’ll just use the shell on the CD.  As with the others, we’ll mount a USB to store metadata information.  We’ll partition and encrypt the disks.  In the following examples, we provide the actual serial numbers for the hard drives that were used.  This example was derived from notes we maintained during experimentation; serial numbers in other instances will vary, of course.
 
 \subsection{Mount the USB to Save the Metadata Backup File}
-\texttt{mkdir /tmp/usb3}\\
-\texttt{mount /dev/da0p1 /tmp/usb3}
+\texttt{\index{mkdir}mkdir /tmp/usb3}\footnote{“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
+\texttt{\index{mount}mount /dev/da0p1 /tmp/usb3}
 
 \subsection{Create Swap Disk in Bay 0}
 \texttt{ \index{gpart!create}gpart create -s GPT mfid0}\\\\
@@ -568,47 +568,47 @@ When we give the subcommand to “init,” the machine will ask us to give the n
 
 \subsection{Commands to Encrypt the Partitions}
 \texttt{\index{geli!init}geli init -l 256 mfid0p1}\footnote{“Geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}\\
-\texttt{\index{geli!attach}geli attach mfid0p1}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid1p1}\\
-\texttt{\index{geli!attach}geli attach mfid1p1}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid2p1}\\
-\texttt{\index{geli!attach}geli attach mfid2p1}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid3p1}\\
-\texttt{\index{geli!attach}geli attach mfid3p1}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid4p1}\\
-\texttt{\index{geli!attach}geli attach mfid4p1}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid4p2}\\
-\texttt{\index{geli!attach}geli attach mfid4p2}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid5p1}\\
-\texttt{\index{geli!attach}geli attach mfid5p1}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid5p2}\\
-\texttt{\index{geli!attach}geli attach mfid5p2}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid6p1}\\
-\texttt{\index{geli!attach}geli attach mfid6p1}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid6p2}\\
-\texttt{\index{geli!attach}geli attach mfid6p2}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid7p1}\\
-\texttt{\index{geli!attach}geli attach mfid7p1}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid7p2}\\
-\texttt{\index{geli!attach}geli attach mfid7p2}\\\\
+\texttt{\index{geli!attach}geli attach mfid0p1}\footnote{Ibid.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid1p1}\footnote{Ibid.}\\
+\texttt{\index{geli!attach}geli attach mfid1p1}\footnote{Ibid.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid2p1}\footnote{Ibid.}\\
+\texttt{\index{geli!attach}geli attach mfid2p1}\footnote{Ibid.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid3p1}\footnote{Ibid.}\\
+\texttt{\index{geli!attach}geli attach mfid3p1}\footnote{Ibid.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid4p1}\footnote{Ibid.}\\
+\texttt{\index{geli!attach}geli attach mfid4p1}\footnote{Ibid.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid4p2}\footnote{Ibid.}\\
+\texttt{\index{geli!attach}geli attach mfid4p2}\footnote{Ibid.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid5p1}\footnote{Ibid.}\\
+\texttt{\index{geli!attach}geli attach mfid5p1}\footnote{Ibid.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid5p2}\footnote{Ibid.}\\
+\texttt{\index{geli!attach}geli attach mfid5p2}\footnote{Ibid.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid6p1}\footnote{Ibid.}\\
+\texttt{\index{geli!attach}geli attach mfid6p1}\footnote{Ibid.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid6p2}\footnote{Ibid.}\\
+\texttt{\index{geli!attach}geli attach mfid6p2}\footnote{Ibid.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid7p1}\footnote{Ibid.}\\
+\texttt{\index{geli!attach}geli attach mfid7p1}\footnote{Ibid.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid7p2}\footnote{Ibid.}\\
+\texttt{\index{geli!attach}geli attach mfid7p2}\footnote{Ibid.}\\\\
 
 \subsection{To Preserve the Metadata Backup Files}
 Let us reiterate:  preserving these backups at the time of disk creation is essential for later recoveries.  If these files are not saved, then a powerdown of the system will cause them to be lost.  They're automatically stored in an ephemeral directory.  Conserve the ability to recover a disk later by recording these metadata backup files to a safe location.
 
 Each metadata backup file was probably created with a name that does not look like the drive’s label.  Instead, the machine assigns a backup file name based on geometry.  Since we can have a hardware configuration change that could mess up that pattern, we will want to save our backup files with names that look more like the disk labels.  That way, if the drives move, then we can better discover which metadata file goes with it.\\
 
-\noindent\texttt{cp /var/backups/mfid0p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-0-SWAP-WCC2ERZ56512.eli}\\\\
-\texttt{cp /var/backups/mfid1p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-1-CACHE-WXL1E40C1352.eli}\\\\
-\texttt{cp /var/backups/mfid2p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-2-SLOG-WXL1E4067503.eli}\\\\
-\texttt{cp /var/backups/mfid3p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-3-SLOG-WXC0CA9V8431.eli}\\\\
-\texttt{cp /var/backups/mfid4p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-4-SWAP-WCC2EE134983.eli}\\\\
-\texttt{cp /var/backups/mfid4p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-4-FILES-WCC2EE134983.eli}\\\\
-\texttt{cp /var/backups/mfid5p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-5-SWAP-WMC2E3914420.eli}\\\\
-\texttt{cp /var/backups/mfid5p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-5-FILES-WMC2E3914420.eli}\\\\
-\texttt{cp /var/backups/mfid6p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-6-SWAP-WCC2ETT39577.eli}\\\\
-\texttt{cp /var/backups/mfid6p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-6-FILES-WCC2ETT39577.eli}\\\\
-\texttt{cp /var/backups/mfid7p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-7-SWAP-WCAYU2878968.eli}\\\\
-\texttt{cp /var/backups/mfid7p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-7-FILES-WCAYU2878968.eli}
+\noindent\texttt{\index{cp}cp /var/backups/mfid0p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-0-SWAP-WCC2ERZ56512.eli}\\\\
+\texttt{\index{cp}cp /var/backups/mfid1p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-1-CACHE-WXL1E40C1352.eli}\\\\
+\texttt{\index{cp}cp /var/backups/mfid2p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-2-SLOG-WXL1E4067503.eli}\\\\
+\texttt{\index{cp}cp /var/backups/mfid3p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-3-SLOG-WXC0CA9V8431.eli}\\\\
+\texttt{\index{cp}cp /var/backups/mfid4p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-4-SWAP-WCC2EE134983.eli}\\\\
+\texttt{\index{cp}cp /var/backups/mfid4p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-4-FILES-WCC2EE134983.eli}\\\\
+\texttt{\index{cp}cp /var/backups/mfid5p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-5-SWAP-WMC2E3914420.eli}\\\\
+\texttt{\index{cp}cp /var/backups/mfid5p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-5-FILES-WMC2E3914420.eli}\\\\
+\texttt{\index{cp}cp /var/backups/mfid6p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-6-SWAP-WCC2ETT39577.eli}\\\\
+\texttt{\index{cp}cp /var/backups/mfid6p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-6-FILES-WCC2ETT39577.eli}\\\\
+\texttt{\index{cp}cp /var/backups/mfid7p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-7-SWAP-WCAYU2878968.eli}\\\\
+\texttt{\index{cp}cp /var/backups/mfid7p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-7-FILES-WCAYU2878968.eli}
 
 \subsection{File Name Check:  Editing Labels}
 We got through all that, and found that we had named a file incorrectly.  During experimentation, we had a typo; BAY 4 should be
@@ -617,7 +617,7 @@ We got through all that, and found that we had named a file incorrectly.  During
 \noindent\texttt{ \index{gpart!modify}gpart modify -i 1 -l \\ZFS-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\\\\
 \texttt{ \index{gpart!modify}gpart modify -i 2 -l \\ZFS-BLONDIE-4-FILES-WCC2EE134983 mfid4}\\
 
-\texttt{ \index{gpart!show}gpart show} and \texttt{geli status} should show our drives as we expect them to be.
+\texttt{ \index{gpart!show}gpart show} and \texttt{\index{geli!status}geli status} should show our drives as we expect them to be.
 
 At this point, all of the drives should be partitioned and decrypted and attached.  We can build a zpool for our ZFS file system. We can attach that swap drive for the benefit of our operating system right now.
 
@@ -625,8 +625,8 @@ At this point, all of the drives should be partitioned and decrypted and attache
 \subsection{To Use the Swap Disk}
 REF:  https://www.cyberciti.biz/faq/create-a-freebsd-swap-file/ \\
 
-\noindent\texttt{swapon mfid0p1.eli}
-\texttt{swapinfo -k}\\
+\noindent\texttt{\index{swapon}swapon mfid0p1.eli}
+\texttt{\index{swapinfo}swapinfo -k}\\
 
 64G turned out to be the maximum capacity.  We will need to fix up the swap better.  We can fit 6 x 64G (384G) of swap partitions in our planned space.  So, let’s modify and add.\\
 
@@ -658,15 +658,15 @@ Then we need to establish encryption for all of those.\\
 \texttt{\index{geli!init}geli init -l 256 mfid0p6}\\
 \texttt{\index{geli!attach}geli attach mfid0p6}\\
 
-using \texttt{swapinfo}, \texttt{swapon} and \texttt{swapoff}, we were able to remove some of the other swap partitions and add on these.  Did see a kernel limit on swap.  Total configured swap exceeded kern.maxswzone (98087976 pages).  We could tune the kernel, or we could reduce swap.  For now, we reduce swap from 384GB to 324GB.
+using \texttt{swapinfo}, \texttt{\index{swapon}swapon} and \texttt{swapoff}, we were able to remove some of the other swap partitions and add on these.  Did see a kernel limit on swap.  Total configured swap exceeded kern.maxswzone (98087976 pages).  We could tune the kernel, or we could reduce swap.  For now, we reduce swap from 384GB to 324GB.
 
 Simliarly, we could add on the other swap partitions, although in our current use, we probably won’t need them.  They would serve us better in cases where we were doing more intensive work, or working on another machine.  We can mount them now, anyway, to see that it can be done.
 
 To add on all the other swap partitions:\\\\
-\noindent\texttt{swapon /dev/mfid4p1.eli}\\
-\texttt{swapon /dev/mfid5p1.eli}\\
-\texttt{swapon /dev/mfid6p1.eli}\\
-\texttt{swapon /dev/mfid7p1.eli}\\
+\noindent\texttt{\index{swapon}swapon /dev/mfid4p1.eli}\\
+\texttt{\index{swapon}swapon /dev/mfid5p1.eli}\\
+\texttt{\index{swapon}swapon /dev/mfid6p1.eli}\\
+\texttt{\index{swapon}swapon /dev/mfid7p1.eli}\\
 \texttt{swapinfo -h}\\
 
 \subsection{Create the zpool for BLONDIE}
@@ -677,6 +677,43 @@ Create a mountpoint so that we will be able to mount the zpool without errors as
 
 \noindent\texttt{mkdir /tmp/BLONDIE}\\
 
+\section{Chapter References}
+\subsection{MAN Pages}
+ “bsdinstall.'' Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=bsdinstall&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+
+“Camcontrol.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=camcontrol&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+
+“Cd.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=cd&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+
+“Cp.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=cp&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+
+“Geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.
+
+“Gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+
+“Ls.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=ls&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+
+“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+
+“Mount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+
+“Mt.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mt&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+
+“Newfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=newfs&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+
+“Rm.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=rm&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+
+“Ssh-Keygen.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=ssh-keygen&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+
+“Su.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=su&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+
+“Swapon.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=swapon&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+
+“Umount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=umount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+
+“Zfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zfs&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
+
+“Zpool.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zpool&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
 \printchapterendnotes
 

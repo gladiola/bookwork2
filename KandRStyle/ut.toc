@@ -42,6 +42,8 @@
 \contentsline {subsection}{\numberline {1.3.16}To Use the Swap Disk}{17}{}%
 \contentsline {subsection}{\numberline {1.3.17}Create the zpool for BLONDIE}{19}{}%
 \contentsline {subsection}{\numberline {1.3.18}Create a mountpoint}{19}{}%
+\contentsline {section}{\numberline {1.4}Chapter References}{19}{}%
+\contentsline {subsection}{\numberline {1.4.1}MAN Pages}{19}{}%
 \contentsline {chapter}{Endnotes}{21}{}%
 \contentsline {chapter}{\numberline {2}FreeBSD Tape Operations}{23}{}%
 \contentsline {section}{\numberline {2.1}Introduction}{23}{}%

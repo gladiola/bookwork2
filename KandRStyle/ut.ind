@@ -1,6 +1,17 @@
 \begin{theindex}
 
+  \item 2FA, 7
+
+  \indexspace
+
   \item amensiac, 1, 4, 5
+
+  \indexspace
+
+  \item camcontrol
+    \subitem devlist, 8
+  \item cd, 9
+  \item cp, 16, 17
 
   \indexspace
 
@@ -13,9 +24,10 @@
   \item geli, 2, 15
     \subitem attach, 15, 16, 18
     \subitem init, 15, 16, 18
-  \item gpart, 3, 5, 8--10, 12
-    \subitem add, 13, 14, 18
-    \subitem create, 13, 14
+    \subitem status, 17
+  \item gpart, 3, 5, 9, 12
+    \subitem add, 8, 10, 13, 14, 18
+    \subitem create, 8, 10, 13, 14
     \subitem modify, 17
     \subitem recover, 18
     \subitem resize, 18
@@ -24,15 +36,51 @@
 
   \indexspace
 
-  \item live CD, 1
+  \item jails, 7
 
   \indexspace
 
+  \item live CD, 1
+  \item ls, 9
+
+  \indexspace
+
+  \item mkdir, 8, 9, 13
+  \item mount, 8, 9, 13
+
+  \indexspace
+
+  \item newfs, 8
   \item NIST 800-88
     \subitem Purge, 1
 
   \indexspace
 
   \item RAIDZ-2, 1, 2, 4, 5, 9, 10
+  \item rm, 9
+
+  \indexspace
+
+  \item ssh-keygen, 7, 9
+  \item su, 7
+  \item sudo, 7
+  \item swapinfo, 17
+  \item swapon, 9, 17--19
+
+  \indexspace
+
+  \item TOTP, 7
+
+  \indexspace
+
+  \item umount, 9
+  \item USB
+    \subitem drive, 7
+
+  \indexspace
+
+  \item zpool
+    \subitem add, 10
+    \subitem create, 10
 
 \end{theindex}
