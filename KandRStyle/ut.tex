@@ -185,7 +185,7 @@ Now, she's configured with:
 		\end{itemize}
 		\item Four 500GB hard drives
 		\begin{itemize}
-			\item We'll use this as a RAIDZ-2 array to hold the jails.
+			\item We'll use this as a \index{RAIDZ-2}RAIDZ-2 array to hold the jails.
 			\item We have some smaller SAS drives.
 			\item We have some SATA drives.
 		\end{itemize}
@@ -201,7 +201,7 @@ Now, she's configured with:
 				\item iDRAC is a proprietary baseboard controller.  
 				\item We could use it to power cycle the machine.
 				\item There's a web interface that let's us know about motherboard-related facts.
-				\item We cannot give a GELI password through the console in our current setup.
+				\item We cannot give a \index{geli}GELI password through the console in our current setup.
 			\end{itemize}	
 	\end{itemize}
 	\item The server has two 500W power supplies.
@@ -225,7 +225,7 @@ There will be three main groups of drives:
 \begin{itemize}
 	\item an OS mirror pair
 	\item a ZFS log mirror pair
-	\item a ZFS RAIDZ-2 kit of four drives.
+	\item a ZFS \index{RAIDZ-2}RAIDZ-2 kit of four drives.
 \end{itemize}
 
 The OS pair will hold ideas like:
@@ -255,7 +255,7 @@ With the baseboard prepared, and the BIOS set to allow us to boot from disc, we'
 With all of the manual coding and configuration needed to set up an amnesiac system like the one we desired, it was a big change from the normal BSD installs we had done for several years.  Our first pass at building an amnesiac system decayed into manually scripting a regular operating system installation that had most of the features we desired in the amnesiac system.  Both the on-disc OS system and the amnesiac system are detailed below.  
 
 \subsection{Identifying and Allocating ZFS Drive Qualities}
-We need to be able to detect the drives and partitions that we want to work with using geom, gpart, and zfs commands.  If, for some reason, you can't find those drives, then you need to address that.  While working with this particular computer, I've found that the leading cause of failing to detect a drive goes back to the VDEV assignment in the hardware RAID.  If the drive were pulled, this particular RAID card will need to have those configuration changes addressed.  Often, this means rebooting the machine.  It could be done through the iDRAC baseboard controller in some models; but the one we have here is not configured to do those tasks.
+We need to be able to detect the drives and partitions that we want to work with using geom, \index{gpart}gpart, and zfs commands.  If, for some reason, you can't find those drives, then you need to address that.  While working with this particular computer, I've found that the leading cause of failing to detect a drive goes back to the VDEV assignment in the hardware RAID.  If the drive were pulled, this particular RAID card will need to have those configuration changes addressed.  Often, this means rebooting the machine.  It could be done through the iDRAC baseboard controller in some models; but the one we have here is not configured to do those tasks.
 
 \subsection{What are we going to want the ZFS kit to do?  How are we going to use the drives?  How can we wrestle with this new type of configuration?}
 \begin{table}
@@ -284,7 +284,7 @@ We need to be able to detect the drives and partitions that we want to work with
   \end{tabular}
 \end{table}
 
-After reading over \index{FreeBSD Mastery:  ZFS}FreeBSD Mastery:  ZFS by Alan Jude and Michael Lucas, we came to a few conclusions.  We chose to use RAIDZ-2 with Log drives because of the number of drives we have.  Some of the topics covered in that book that we'll want to apply include ideas in Table \ref{tab:zfsconcepts}.  In our first iterations we decided to install the OS on the hard drives in a pattern that looks like a conventional installation.  Once the drive partitioning and utilitization commands were worked out, we then started over and undertook the \index{amensiac}amnesiac version with the OS on a live disc that runs with attached drives.  
+After reading over \index{FreeBSD Mastery:  ZFS}FreeBSD Mastery:  ZFS by Alan Jude and Michael Lucas, we came to a few conclusions.  We chose to use \index{RAIDZ-2}RAIDZ-2 with Log drives because of the number of drives we have.  Some of the topics covered in that book that we'll want to apply include ideas in Table \ref{tab:zfsconcepts}.  In our first iterations we decided to install the OS on the hard drives in a pattern that looks like a conventional installation.  Once the drive partitioning and utilitization commands were worked out, we then started over and undertook the \index{amensiac}amnesiac version with the OS on a live disc that runs with attached drives.  
 
 
 Our goal for the system will be to split up the drives into three main groups, as described in Tables \ref{tab:zfsmainuseosharddisk}, \ref{tab:zfsjailuseosharddisk}, and \ref{tab:zfsslogusedisk}.  On each drive, we'll also allow:
@@ -298,7 +298,7 @@ We decided we would want those qualities in an \index{amensiac}amnesiac system, 
 For the OS-On-Disk system, this should bring us:
 \begin{itemize}
 \item Enough room for the main OS
-\item A 4 disk RAIDZ-2 array of almost 1.49 TB of actual storage
+\item A 4 disk \index{RAIDZ-2}RAIDZ-2 array of almost 1.49 TB of actual storage
 \item Fast swap and copy-on-write
 \item With each disk capable of expansion or change.
 \end{itemize}
@@ -331,7 +331,7 @@ The unused space on the drives (a blank partition of 15\%) may look like we're g
 
 
 \subsection{What We Can Learn From Installing an OS}
-Later on, we'll install the other drives wtih gpart and zfs commands.  This first pair, through, we could do with bsdinstall.  If we choose that, though, then we must commit the whole disk to the process.  That would be how we would normally stand up a disk drive.  In this case, we'll conduct a manual process that mimics the main steps of bsdinstall to show that the installation can be done manually.  Part of these same kinds of steps are critical tasks when administrating and installing jails.
+Later on, we'll install the other drives wtih \index{gpart}gpart and zfs commands.  This first pair, through, we could do with bsdinstall.  If we choose that, though, then we must commit the whole disk to the process.  That would be how we would normally stand up a disk drive.  In this case, we'll conduct a manual process that mimics the main steps of bsdinstall to show that the installation can be done manually.  Part of these same kinds of steps are critical tasks when administrating and installing jails.
   
 \subsection{Basic Operating System Installation Goals}
 We're going to do an early phase, basic installation of the OS.  At this point, we'll really only set up a pair of users and some plain vanilla settings for the OS.  We want to be able to:
@@ -401,8 +401,8 @@ The listing should also show any other storage device that's plugged in to the m
 
 \subsection{Be Able to Partition the USB}
 Since our USB has not been prepared for use with anything, we have to partition it.  We can pretty much use the default commands fro 17.2 "Adding Disks" to set up the drive.  Here, we create a simple UFS file system and mount it to a directory that we'll put in /tmp. If our USB is already partitioned, we would want to skip this part.  \\\\
-\texttt{\# gpart create -s GPT da0}\\
-\texttt{\# gpart add -t freebsd-ufs -a 1M da0}\\
+\texttt{\#  \index{gpart}gpart create -s GPT da0}\\
+\texttt{\#  \index{gpart}gpart add -t freebsd-ufs -a 1M da0}\\
 \texttt{\# newfs -U /dev/da0p1}\\\\
 Mount the USB to the /tmp Directory:\\\\
 \texttt{\# mkdir /tmp/someDir}\\
@@ -429,37 +429,37 @@ During the ssh-keygen dialog, simply direct the program to save the keys to \tex
 We'd like to show a quick overview of some of the drive-related commands.  These will be applied soon.
 
 To list what devices are detected by the OS, we can use:\\\\
-\texttt{gpart show}\\\\
+\texttt{ \index{gpart}gpart show}\\\\
 We will want to note the serial number of each drive, by position.
-We then note which drives we want to use for the main body of the RAIDZ-2 kit.  All of this will become one pool of ZFS VDEVs.  Then we'll add in the log mirrors.  So, in the sequence of 0-7, numbering the drives, we should expect to skip those two for now.
+We then note which drives we want to use for the main body of the \index{RAIDZ-2}RAIDZ-2 kit.  All of this will become one pool of ZFS VDEVs.  Then we'll add in the log mirrors.  So, in the sequence of 0-7, numbering the drives, we should expect to skip those two for now.
 
 Make the notes if you haven't already because we're going to list all of the drives for the main pool in one pop.  This task may have been done before we set up the physical VDEVs for the hardware RAID.
 
 We're going to choose to put a swap partition on the SSDs.  We can add one onto the other disks, but a maximum of 4 swap partitions is recommended in the \index{FreeBSD Handbook}FreeBSD Handbook.  Later on, we will be able to select swap partitions by mounting them and using commands like \texttt{swapon swapoff}.\\
 
 To put the ZFS partition on the remaining disks:\\\\
-\texttt{gpart create -s SCHEME DISK\_DEVICE}\\\\
-\texttt{gpart create -s gpt da4}
+\texttt{ \index{gpart}gpart create -s SCHEME DISK\_DEVICE}\\\\
+\texttt{ \index{gpart}gpart create -s gpt da4}
 \\
 
 To add the main ZFS partition:\\\\
-\texttt{gpart add -a 1m -l ZFS\_NUMBER -t freebsd-zfs DISK\_DEVICE}\\\\
-\texttt{gpart add -a 1m -l ZFS-BLONDIE-4-WD123465789 -t freebsd-zfs  da4}
+\texttt{ \index{gpart}gpart add -a 1m -l ZFS\_NUMBER -t freebsd-zfs DISK\_DEVICE}\\\\
+\texttt{ \index{gpart}gpart add -a 1m -l ZFS-BLONDIE-4-WD123465789 -t freebsd-zfs  da4}
 \\
 
 To add the partition's swap:\\\\
-\texttt{gpart add -a 1m -slg -l SWAP\_NUMBER -t freebsd-swap DISK\_DEVICE}\\\\
-\texttt{gpart add -a 1m -slg -l SWAP-BLONDIE-4-WD123465789 -t freebsd-swap da4}
+\texttt{ \index{gpart}gpart add -a 1m -slg -l SWAP\_NUMBER -t freebsd-swap DISK\_DEVICE}\\\\
+\texttt{ \index{gpart}gpart add -a 1m -slg -l SWAP-BLONDIE-4-WD123465789 -t freebsd-swap da4}
 \\
 
 To add a logging partition on the SLOG SSDs:\\\\
-\texttt{gpart add -a 1m -l ZLOG\_NUMBER -t freebsd-zfs DISK\_DEVICE}\\\\
-\texttt{gpart add -a 1m -l ZLOG-BLONDIE-2-WD123465789 -t freebsd-zfs  da2}\\\\
+\texttt{ \index{gpart}gpart add -a 1m -l ZLOG\_NUMBER -t freebsd-zfs DISK\_DEVICE}\\\\
+\texttt{ \index{gpart}gpart add -a 1m -l ZLOG-BLONDIE-2-WD123465789 -t freebsd-zfs  da2}\\\\
 
 With each disk partitioned, we can add them to the pool for our RAIDZ-2 kit.\\\\
 \texttt{zpool create RAID POOL\_NAME DISK\_LABEL/ZFS\_PARTITION\_LABEL ...next disk/partition...}\\\\
 
-\noindent\texttt{zpool create BLONDIE-MAIN raidz2 \textbackslash }\\
+\noindent\texttt{zpool create BLONDIE-MAIN \index{RAIDZ-2}raidz2 \textbackslash }\\
 \texttt{BLONDIE-4-WD12345/ZFS-BLONDIE-4-WD12345 \textbackslash }\\
 \texttt{BLONDIE-5-WD12345/ZFS-BLONDIE-5-WD12345 \textbackslash }\\
 \texttt{BLONDIE-6-WD12345/ZFS-BLONDIE-6-WD12345 \textbackslash }\\
@@ -516,7 +516,7 @@ Changed config to keep the RAIDZ2 for main work.  I was having trouble with the 
 
 We had some mis-aligned partitions with RAIDZ2 work for Blondie.  We were using the full 500GB on the label as our actual amount of media to work with.  Since less is available, we will have to set those up again.
 
-We used gpart delete to delete each partition.  Then we used gpart destroy to delete the partition table for the whole disk.  In the end, gpart showed us only the CD.
+We used  \index{gpart}gpart delete to delete each partition.  Then we used  \index{gpart}gpart destroy to delete the partition table for the whole disk.  In the end,  \index{gpart}gpart showed us only the CD.
 
 \subsection{Startup with \texttt{boontonly.iso}}
 For this run, we’ll begin by using the boot-only disk.  We won’t plan to ever boot from these hard drives.  We’ll just use the shell on the CD.  As with the others, we’ll mount a USB to store metadata information.  We’ll partition and encrypt the disks.  In the following examples, we provide the actual serial numbers for the hard drives that were used.  This example was derived from notes we maintained during experimentation; serial numbers in other instances will vary, of course.
@@ -526,71 +526,71 @@ For this run, we’ll begin by using the boot-only disk.  We won’t plan to eve
 \texttt{mount /dev/da0p1 /tmp/usb3}
 
 \subsection{Create Swap Disk in Bay 0}
-\texttt{gpart create -s GPT mfid0}\\\\
-\texttt{gpart add -a 5K -s 395G -t freebsd-swap -l ZFS-BLONDIE-0-SWAP-WCC2ERZ56512 mfid0}
+\texttt{ \index{gpart!create}gpart create -s GPT mfid0}\\\\
+\texttt{ \index{gpart!add}gpart add -a 5K -s 395G -t freebsd-swap -l ZFS-BLONDIE-0-SWAP-WCC2ERZ56512 mfid0}
 
 \subsection{Create ZFS Cache in Bay 1}
-\texttt{gpart create -s GPT mfid1}\\\\
-\texttt{gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-1-CACHE-WXL1E40C1352 mfid1}
+\texttt{ \index{gpart!create}gpart create -s GPT mfid1}\\\\
+\texttt{ \index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-1-CACHE-WXL1E40C1352 mfid1}
 
 \subsection{Create ZFS SLOG in Bays 2 and 3}
-\texttt{gpart create -s GPT mfid2}\\\\
-\texttt{gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-2-SLOG-WXL1E4067503 mfid2}\\\\
-\texttt{gpart create -s GPT mfid3}\\\\
-\texttt{gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-3-SLOG-WXC0CA9V8431 mfid3}\\\\
+\texttt{ \index{gpart!create}gpart create -s GPT mfid2}\\\\
+\texttt{ \index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-2-SLOG-WXL1E4067503 mfid2}\\\\
+\texttt{ \index{gpart!create}gpart create -s GPT mfid3}\\\\
+\texttt{ \index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-3-SLOG-WXC0CA9V8431 mfid3}\\\\
 
 \subsection{Create ZFS Work Disks for Jails}
 \subsection{Bay 4}
-\texttt{gpart create -s GPT mfid4}\\\\
-\texttt{gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\\\\
-\texttt{gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-4-FILES-WCC2EE134983 mfid4}
+\texttt{ \index{gpart!create}gpart create -s GPT mfid4}\\\\
+\texttt{ \index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\\\\
+\texttt{ \index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-4-FILES-WCC2EE134983 mfid4}
 \subsection{Bay 5}
-\texttt{gpart create -s GPT mfid5}\\\\
-\texttt{gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-5-SWAP-WMC2E3914420 mfid5}\\\\
-\texttt{gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-5-FILES-WMC2E3914420 mfid5}
+\texttt{ \index{gpart!create}gpart create -s GPT mfid5}\\\\
+\texttt{ \index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-5-SWAP-WMC2E3914420 mfid5}\\\\
+\texttt{ \index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-5-FILES-WMC2E3914420 mfid5}
 \subsection{Bay 6}
-\texttt{gpart create -s GPT mfid6}\\\\
-\texttt{gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-6-SWAP-WCC2ETT39577 mfid6}\\\\
-\texttt{gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-6-FILES-WCC2ETT39577 mfid6}
+\texttt{ \index{gpart!create}gpart create -s GPT mfid6}\\\\
+\texttt{ \index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-6-SWAP-WCC2ETT39577 mfid6}\\\\
+\texttt{ \index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-6-FILES-WCC2ETT39577 mfid6}
 \subsection{Bay 7}
-\texttt{gpart create -s GPT mfid7}\\\\
-\texttt{gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-7-SWAP-WCAYU2878968 mfid7}\\\\
-\texttt{gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-7-FILES-WCAYU2878968 mfid7}\\
+\texttt{ \index{gpart!create}gpart create -s GPT mfid7}\\\\
+\texttt{ \index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-7-SWAP-WCAYU2878968 mfid7}\\\\
+\texttt{ \index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-7-FILES-WCAYU2878968 mfid7}\\
 
 We should note that “Bay 7” is an observation of the physical hardware.  The device (“mfid7”) could have whatever number assigned at the end that the machine gave it.  If the hardware raid had a problem with recognizing a device, the number might not correlate to what bay it is in.  When powering up, check your geometry.  
 
 \subsection{Encrypt those partitions}
 During this phase, we’ll encrypt the partitions.  That means that we should have some recordkeeping materials on hand.  Use a password manager or a notebook to carefully record the password that is about to be typed in.  With each one completed, the machine will tell us that it has saved a file of backup metadata.  We will want to copy that metadata file to the thumbdrive.  If the encryption gets jammed up, or if there is some type of problem, then the metadata file will be used as part of the recovery process.  Without a metadata file, recovering an encrypted partition can be difficult or impossible.  
 
-If you lose the metadata file, but still have routine access to the geli encryption because you know the password and the machine is functioning alright, then you can export another copy of the metadata.  This means that anyone with root access to the machine, who can use geli commands, would also be able to export such a file.  Keep this in mind if you need to secure your machine.
+If you lose the metadata file, but still have routine access to the \index{geli}geli encryption because you know the password and the machine is functioning alright, then you can export another copy of the metadata.  This means that anyone with root access to the machine, who can use \index{geli}geli commands, would also be able to export such a file.  Keep this in mind if you need to secure your machine.
 
 When we give the subcommand to “init,” the machine will ask us to give the new password twice.  This is part of the password setting process.  When we give the subcommand to “attach,” the machine will ask us to give the password as part of the normal attachment process. Type carefully, and look at the records carefully, because this is the main chance to make sure the password notes are right.  
 
 \subsection{Commands to Encrypt the Partitions}
-\texttt{geli init -l 256 mfid0p1}\footnote{“Geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}\\
-\texttt{geli attach mfid0p1}\\\\
-\texttt{geli init -l 256 mfid1p1}\\
-\texttt{geli attach mfid1p1}\\\\
-\texttt{geli init -l 256 mfid2p1}\\
-\texttt{geli attach mfid2p1}\\\\
-\texttt{geli init -l 256 mfid3p1}\\
-\texttt{geli attach mfid3p1}\\\\
-\texttt{geli init -l 256 mfid4p1}\\
-\texttt{geli attach mfid4p1}\\\\
-\texttt{geli init -l 256 mfid4p2}\\
-\texttt{geli attach mfid4p2}\\\\
-\texttt{geli init -l 256 mfid5p1}\\
-\texttt{geli attach mfid5p1}\\\\
-\texttt{geli init -l 256 mfid5p2}\\
-\texttt{geli attach mfid5p2}\\\\
-\texttt{geli init -l 256 mfid6p1}\\
-\texttt{geli attach mfid6p1}\\\\
-\texttt{geli init -l 256 mfid6p2}\\
-\texttt{geli attach mfid6p2}\\\\
-\texttt{geli init -l 256 mfid7p1}\\
-\texttt{geli attach mfid7p1}\\\\
-\texttt{geli init -l 256 mfid7p2}\\
-\texttt{geli attach mfid7p2}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid0p1}\footnote{“Geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}\\
+\texttt{\index{geli!attach}geli attach mfid0p1}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid1p1}\\
+\texttt{\index{geli!attach}geli attach mfid1p1}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid2p1}\\
+\texttt{\index{geli!attach}geli attach mfid2p1}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid3p1}\\
+\texttt{\index{geli!attach}geli attach mfid3p1}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid4p1}\\
+\texttt{\index{geli!attach}geli attach mfid4p1}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid4p2}\\
+\texttt{\index{geli!attach}geli attach mfid4p2}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid5p1}\\
+\texttt{\index{geli!attach}geli attach mfid5p1}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid5p2}\\
+\texttt{\index{geli!attach}geli attach mfid5p2}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid6p1}\\
+\texttt{\index{geli!attach}geli attach mfid6p1}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid6p2}\\
+\texttt{\index{geli!attach}geli attach mfid6p2}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid7p1}\\
+\texttt{\index{geli!attach}geli attach mfid7p1}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid7p2}\\
+\texttt{\index{geli!attach}geli attach mfid7p2}\\\\
 
 \subsection{To Preserve the Metadata Backup Files}
 Let us reiterate:  preserving these backups at the time of disk creation is essential for later recoveries.  If these files are not saved, then a powerdown of the system will cause them to be lost.  They're automatically stored in an ephemeral directory.  Conserve the ability to recover a disk later by recording these metadata backup files to a safe location.
@@ -612,12 +612,12 @@ Each metadata backup file was probably created with a name that does not look li
 
 \subsection{File Name Check:  Editing Labels}
 We got through all that, and found that we had named a file incorrectly.  During experimentation, we had a typo; BAY 4 should be
-\texttt{WCC2EE134983} but that's not what we saw when we checked our work.  Not the end of the world.  We can move the .eli metadata file, and we can use gpart modify to change the label.\\
+\texttt{WCC2EE134983} but that's not what we saw when we checked our work.  Not the end of the world.  We can move the .eli metadata file, and we can use  \index{gpart!modify}gpart modify to change the label.\\
 
-\noindent\texttt{gpart modify -i 1 -l \\ZFS-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\\\\
-\texttt{gpart modify -i 2 -l \\ZFS-BLONDIE-4-FILES-WCC2EE134983 mfid4}\\
+\noindent\texttt{ \index{gpart!modify}gpart modify -i 1 -l \\ZFS-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\\\\
+\texttt{ \index{gpart!modify}gpart modify -i 2 -l \\ZFS-BLONDIE-4-FILES-WCC2EE134983 mfid4}\\
 
-\texttt{gpart show} and \texttt{geli status} should show our drives as we expect them to be.
+\texttt{ \index{gpart!show}gpart show} and \texttt{geli status} should show our drives as we expect them to be.
 
 At this point, all of the drives should be partitioned and decrypted and attached.  We can build a zpool for our ZFS file system. We can attach that swap drive for the benefit of our operating system right now.
 
@@ -630,33 +630,33 @@ REF:  https://www.cyberciti.biz/faq/create-a-freebsd-swap-file/ \\
 
 64G turned out to be the maximum capacity.  We will need to fix up the swap better.  We can fit 6 x 64G (384G) of swap partitions in our planned space.  So, let’s modify and add.\\
 
-\texttt{gpart resize -i 1 -s 64G mfid0}\\
+\texttt{ \index{gpart!resize}gpart resize -i 1 -s 64G mfid0}\\
 
 We would need to add, to init and to attach five more swap partitions.
 We also have to restore mfid0 because there’s a problem with reading the metadata.  \\
 
-\noindent\texttt{gpart recover mfid0}\\
-\texttt{gpart status mfid0}\\
-\texttt{geli attach mfid0p1}\\\\
-\texttt{gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-B-WCC2ERZ56512 mfid0}\\\\
-\texttt{gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-C-WCC2ERZ56512 mfid0}\\\\
-\texttt{gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-D-WCC2ERZ56512 mfid0}\\\\
-\texttt{gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-E-WCC2ERZ56512 mfid0}\\\\
-\texttt{gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-F-WCC2ERZ56512 mfid0}\\\\
+\noindent\texttt{ \index{gpart!recover}gpart recover mfid0}\\
+\texttt{ \index{gpart!status}gpart status mfid0}\\
+\texttt{\index{geli!attach}geli attach mfid0p1}\\\\
+\texttt{ \index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-B-WCC2ERZ56512 mfid0}\\\\
+\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-C-WCC2ERZ56512 mfid0}\\\\
+\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-D-WCC2ERZ56512 mfid0}\\\\
+\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-E-WCC2ERZ56512 mfid0}\\\\
+\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-F-WCC2ERZ56512 mfid0}\\\\
 
 
 Then we need to establish encryption for all of those.\\
 
-\noindent\texttt{geli init -l 256 mfid0p2}\\
-\texttt{geli attach mfid0p2}\\
-\texttt{geli init -l 256 mfid0p3}\\
-\texttt{geli attach mfid0p3}\\
-\texttt{geli init -l 256 mfid0p4}\\
-\texttt{geli attach mfid0p4}\\
-\texttt{geli init -l 256 mfid0p5}\\
-\texttt{geli attach mfid0p5}\\
-\texttt{geli init -l 256 mfid0p6}\\
-\texttt{geli attach mfid0p6}\\
+\noindent\texttt{\index{geli!init}geli init -l 256 mfid0p2}\\
+\texttt{\index{geli!attach}geli attach mfid0p2}\\
+\texttt{\index{geli!init}geli init -l 256 mfid0p3}\\
+\texttt{\index{geli!attach}geli attach mfid0p3}\\
+\texttt{\index{geli!init}geli init -l 256 mfid0p4}\\
+\texttt{\index{geli!attach}geli attach mfid0p4}\\
+\texttt{\index{geli!init}geli init -l 256 mfid0p5}\\
+\texttt{\index{geli!attach}geli attach mfid0p5}\\
+\texttt{\index{geli!init}geli init -l 256 mfid0p6}\\
+\texttt{\index{geli!attach}geli attach mfid0p6}\\
 
 using \texttt{swapinfo}, \texttt{swapon} and \texttt{swapoff}, we were able to remove some of the other swap partitions and add on these.  Did see a kernel limit on swap.  Total configured swap exceeded kern.maxswzone (98087976 pages).  We could tune the kernel, or we could reduce swap.  For now, we reduce swap from 384GB to 324GB.
 

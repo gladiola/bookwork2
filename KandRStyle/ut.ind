@@ -10,11 +10,29 @@
 
   \indexspace
 
+  \item geli, 2, 15
+    \subitem attach, 15, 16, 18
+    \subitem init, 15, 16, 18
+  \item gpart, 3, 5, 8--10, 12
+    \subitem add, 13, 14, 18
+    \subitem create, 13, 14
+    \subitem modify, 17
+    \subitem recover, 18
+    \subitem resize, 18
+    \subitem show, 17
+    \subitem status, 18
+
+  \indexspace
+
   \item live CD, 1
 
   \indexspace
 
   \item NIST 800-88
     \subitem Purge, 1
+
+  \indexspace
+
+  \item RAIDZ-2, 1, 2, 4, 5, 9, 10
 
 \end{theindex}
