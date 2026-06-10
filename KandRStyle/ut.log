@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  10 JUN 2026 18:00
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  10 JUN 2026 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -967,75 +967,75 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 LaTeX Font Warning: Font shape `TU/EurostileW01(0)/b/n' undefined
-(Font)              using `TU/EurostileW01(0)/m/n' instead on input line 173.
+(Font)              using `TU/EurostileW01(0)/m/n' instead on input line 177.
 
 \openout4 = `ut.ent'.
 
 [1
 
 ]
-Overfull \hbox (7.4107pt too wide) in paragraph at lines 213--214
+Overfull \hbox (7.4107pt too wide) in paragraph at lines 217--218
 []\TU/InfoOTDisp(0)/b/n/10 There’s a web interface that let’s us know about mot
 herboard-related
  []
 
 [2]
-Overfull \hbox (6.53021pt too wide) in paragraph at lines 280--281
+Overfull \hbox (6.53021pt too wide) in paragraph at lines 284--285
 []|\TU/IBMPlexMono(0)/m/n/10 [Host]-[PositionNumber
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
 []|\TU/IBMPlexMono(0)/m/n/10 zfs set
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
 \TU/IBMPlexMono(0)/m/n/10 compress=gzip-6
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
+Underfull \hbox (badness 10000) in paragraph at lines 291--291
 \TU/InfoOTDisp(0)/b/n/10 count snapshots and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--289
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
 []|\TU/IBMPlexMono(0)/m/n/10 zfs set canmount=off
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 293--294
 []|\TU/IBMPlexMono(0)/m/n/10 zfs set
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 293--294
 \TU/IBMPlexMono(0)/m/n/10 mountpoint=/SOME
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
 []|\TU/IBMPlexMono(0)/m/n/10 zfs set readonly=off
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--292
+Underfull \hbox (badness 10000) in paragraph at lines 295--296
 []|\TU/IBMPlexMono(0)/m/n/10 zfs set exec=off
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
+Underfull \hbox (badness 10000) in paragraph at lines 296--296
 []|\TU/InfoOTDisp(0)/b/n/10 Make more than one
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
 []|\TU/IBMPlexMono(0)/m/n/10 zfs set copies=2
  []
 
 
-Overfull \hbox (23.99998pt too wide) in paragraph at lines 275--295
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 279--299
  [][] 
  []
 
@@ -1044,23 +1044,23 @@ Underfull \vbox (badness 6380) has occurred while \output is active []
 
  [4]
 [5]
-Overfull \hbox (0.77376pt too wide) in paragraph at lines 357--357
+Overfull \hbox (0.77376pt too wide) in paragraph at lines 361--361
 |[]\TU/EurostileW01(0)/b/n/12 Main Steps for FreeBSD Installation from \TU/IBMP
 lexMono(0)/b/n/12 bsdinstall| 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 394--396
+Underfull \hbox (badness 10000) in paragraph at lines 398--400
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--396
+Underfull \hbox (badness 10000) in paragraph at lines 398--400
 
  []
 
 
-Overfull \hbox (5.22276pt too wide) in paragraph at lines 399--399
+Overfull \hbox (5.22276pt too wide) in paragraph at lines 403--403
 |[]\TU/EurostileW01(0)/b/n/12 Partition, Mount, and Use a Thumbdrive from Live 
 Disc's
  []
@@ -1069,209 +1069,209 @@ Disc's
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-Underfull \hbox (badness 10000) in paragraph at lines 406--407
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--420
+Underfull \hbox (badness 10000) in paragraph at lines 417--424
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--420
+Underfull \hbox (badness 10000) in paragraph at lines 417--424
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--420
+Underfull \hbox (badness 10000) in paragraph at lines 417--424
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--420
+Underfull \hbox (badness 10000) in paragraph at lines 417--424
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 422--430
+Underfull \hbox (badness 10000) in paragraph at lines 426--434
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 422--430
+Underfull \hbox (badness 10000) in paragraph at lines 426--434
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 422--430
+Underfull \hbox (badness 10000) in paragraph at lines 426--434
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 422--430
+Underfull \hbox (badness 10000) in paragraph at lines 426--434
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 432--435
+Underfull \hbox (badness 10000) in paragraph at lines 436--439
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 432--435
+Underfull \hbox (badness 10000) in paragraph at lines 436--439
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--445
+Underfull \hbox (badness 10000) in paragraph at lines 445--449
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--445
+Underfull \hbox (badness 10000) in paragraph at lines 445--449
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--449
+Underfull \hbox (badness 10000) in paragraph at lines 452--453
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 450--454
+Underfull \hbox (badness 10000) in paragraph at lines 454--458
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--454
+Underfull \hbox (badness 10000) in paragraph at lines 454--458
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--454
+Underfull \hbox (badness 10000) in paragraph at lines 454--458
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--459
+Underfull \hbox (badness 10000) in paragraph at lines 459--463
 
  []
 
 
-Overfull \hbox (29.40874pt too wide) in paragraph at lines 455--459
+Overfull \hbox (30.09474pt too wide) in paragraph at lines 459--463
 []\TU/IBMPlexMono(0)/m/n/10 gpart add -a 1m -l ZFS_NUMBER -t freebsd-zfs DISK_D
 EVICE[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--459
+Underfull \hbox (badness 10000) in paragraph at lines 459--463
 
  []
 
 
-Overfull \hbox (41.07074pt too wide) in paragraph at lines 455--459
+Overfull \hbox (41.07074pt too wide) in paragraph at lines 459--463
 []\TU/IBMPlexMono(0)/m/n/10 gpart add -a 1m -l ZFS-BLONDIE-4-WD123465789 -t fre
 ebsd-zfs
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--459
+Underfull \hbox (badness 10000) in paragraph at lines 459--463
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--464
+Underfull \hbox (badness 10000) in paragraph at lines 464--468
 
  []
 
 
-Overfull \hbox (71.77974pt too wide) in paragraph at lines 460--464
+Overfull \hbox (72.19273pt too wide) in paragraph at lines 464--468
 []\TU/IBMPlexMono(0)/m/n/10 gpart add -a 1m -slg -l SWAP_NUMBER -t freebsd-swap
  DISK_DEVICE[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--464
+Underfull \hbox (badness 10000) in paragraph at lines 464--468
 
  []
 
 
-Overfull \hbox (5.07074pt too wide) in paragraph at lines 460--464
+Overfull \hbox (5.07074pt too wide) in paragraph at lines 464--468
 []\TU/IBMPlexMono(0)/m/n/10 gpart add -a 1m -slg -l SWAP-BLONDIE-4-WD123465789 
 -t
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--464
+Underfull \hbox (badness 10000) in paragraph at lines 464--468
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 465--468
+Underfull \hbox (badness 10000) in paragraph at lines 469--472
 
  []
 
 
-Overfull \hbox (34.84174pt too wide) in paragraph at lines 465--468
+Overfull \hbox (35.79375pt too wide) in paragraph at lines 469--472
 []\TU/IBMPlexMono(0)/m/n/10 gpart add -a 1m -l ZLOG_NUMBER -t freebsd-zfs DISK_
 DEVICE[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 465--468
+Underfull \hbox (badness 10000) in paragraph at lines 469--472
 
  []
 
 
-Overfull \hbox (47.07074pt too wide) in paragraph at lines 465--468
+Overfull \hbox (47.07074pt too wide) in paragraph at lines 469--472
 []\TU/IBMPlexMono(0)/m/n/10 gpart add -a 1m -l ZLOG-BLONDIE-2-WD123465789 -t fr
 eebsd-zfs
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 465--468
+Underfull \hbox (badness 10000) in paragraph at lines 469--472
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 465--468
+Underfull \hbox (badness 10000) in paragraph at lines 469--472
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 469--471
+Underfull \hbox (badness 10000) in paragraph at lines 473--475
 
  []
 
 
-Overfull \hbox (34.77074pt too wide) in paragraph at lines 469--471
+Overfull \hbox (34.77074pt too wide) in paragraph at lines 473--475
 []\TU/IBMPlexMono(0)/m/n/10 zpool create RAID POOL_NAME DISK_LABEL/ZFS_PARTITIO
 N_LABEL
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 469--471
+Underfull \hbox (badness 10000) in paragraph at lines 473--475
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 469--471
+Underfull \hbox (badness 10000) in paragraph at lines 473--475
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--477
+Underfull \hbox (badness 10000) in paragraph at lines 476--481
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 478--482
+Underfull \hbox (badness 10000) in paragraph at lines 482--486
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 478--482
+Underfull \hbox (badness 10000) in paragraph at lines 482--486
 
  []
 
@@ -1280,82 +1280,60 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
 [11] [12]
-Overfull \hbox (131.07074pt too wide) in paragraph at lines 539--541
+Overfull \hbox (131.07074pt too wide) in paragraph at lines 543--545
 []\TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 395G -t freebsd-swap -l ZFS-BLON
 DIE-0-SWAP-WCC2ERZ56512
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 543--545
+Underfull \hbox (badness 10000) in paragraph at lines 547--549
 
  []
 
 
-Overfull \hbox (125.07074pt too wide) in paragraph at lines 543--545
+Overfull \hbox (125.07074pt too wide) in paragraph at lines 547--549
 []\TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDI
 E-1-CACHE-WXL1E40C1352
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--551
+Underfull \hbox (badness 10000) in paragraph at lines 551--555
 
  []
 
 
-Overfull \hbox (119.07074pt too wide) in paragraph at lines 547--551
+Overfull \hbox (119.07074pt too wide) in paragraph at lines 551--555
 []\TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDI
 E-2-SLOG-WXL1E4067503
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--551
+Underfull \hbox (badness 10000) in paragraph at lines 551--555
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--551
+Underfull \hbox (badness 10000) in paragraph at lines 551--555
 
  []
 
 
-Overfull \hbox (118.77074pt too wide) in paragraph at lines 547--551
+Overfull \hbox (118.77074pt too wide) in paragraph at lines 551--555
 []\TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDI
 E-3-SLOG-WXC0CA9V8431
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--551
+Underfull \hbox (badness 10000) in paragraph at lines 551--555
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--551
+Underfull \hbox (badness 10000) in paragraph at lines 551--555
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 554--557
-
- []
-
-
-Overfull \hbox (125.07074pt too wide) in paragraph at lines 554--557
-[]\TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLOND
-IE-4-SWAP-WCC2EE134983
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 554--557
-
- []
-
-
-Overfull \hbox (95.07074pt too wide) in paragraph at lines 554--557
-[]\TU/IBMPlexMono(0)/m/n/10 gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-4-F
-ILES-WCC2EE134983
- []
-
-[13]
 Underfull \hbox (badness 10000) in paragraph at lines 558--561
 
  []
@@ -1363,7 +1341,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 558--561
 
 Overfull \hbox (125.07074pt too wide) in paragraph at lines 558--561
 []\TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLOND
-IE-5-SWAP-WMC2E3914420
+IE-4-SWAP-WCC2EE134983
  []
 
 
@@ -1373,266 +1351,288 @@ Underfull \hbox (badness 10000) in paragraph at lines 558--561
 
 
 Overfull \hbox (95.07074pt too wide) in paragraph at lines 558--561
+[]\TU/IBMPlexMono(0)/m/n/10 gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-4-F
+ILES-WCC2EE134983
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 562--565
+
+ []
+
+
+Overfull \hbox (125.07074pt too wide) in paragraph at lines 562--565
+[]\TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLOND
+IE-5-SWAP-WMC2E3914420
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 562--565
+
+ []
+
+
+Overfull \hbox (95.07074pt too wide) in paragraph at lines 562--565
 []\TU/IBMPlexMono(0)/m/n/10 gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-5-F
 ILES-WMC2E3914420
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 562--565
+Underfull \hbox (badness 10000) in paragraph at lines 566--569
 
  []
 
 
-Overfull \hbox (124.77074pt too wide) in paragraph at lines 562--565
+Overfull \hbox (124.77074pt too wide) in paragraph at lines 566--569
 []\TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLOND
 IE-6-SWAP-WCC2ETT39577
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 562--565
+Underfull \hbox (badness 10000) in paragraph at lines 566--569
 
  []
 
 
-Overfull \hbox (94.77074pt too wide) in paragraph at lines 562--565
+Overfull \hbox (94.77074pt too wide) in paragraph at lines 566--569
 []\TU/IBMPlexMono(0)/m/n/10 gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-6-F
 ILES-WCC2ETT39577
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--569
+Underfull \hbox (badness 10000) in paragraph at lines 570--573
 
  []
 
 
-Overfull \hbox (125.07074pt too wide) in paragraph at lines 566--569
+Overfull \hbox (125.07074pt too wide) in paragraph at lines 570--573
 []\TU/IBMPlexMono(0)/m/n/10 gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLOND
 IE-7-SWAP-WCAYU2878968
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--569
+Underfull \hbox (badness 10000) in paragraph at lines 570--573
 
  []
 
 
-Overfull \hbox (95.07074pt too wide) in paragraph at lines 566--569
+Overfull \hbox (95.07074pt too wide) in paragraph at lines 570--573
 []\TU/IBMPlexMono(0)/m/n/10 gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-7-F
 ILES-WCAYU2878968
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--569
+Underfull \hbox (badness 10000) in paragraph at lines 570--573
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 580--604
+Underfull \hbox (badness 10000) in paragraph at lines 584--608
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--604
+Underfull \hbox (badness 10000) in paragraph at lines 584--608
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--604
+Underfull \hbox (badness 10000) in paragraph at lines 584--608
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--604
+Underfull \hbox (badness 10000) in paragraph at lines 584--608
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--604
+Underfull \hbox (badness 10000) in paragraph at lines 584--608
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--604
+Underfull \hbox (badness 10000) in paragraph at lines 584--608
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--604
+Underfull \hbox (badness 10000) in paragraph at lines 584--608
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--604
+Underfull \hbox (badness 10000) in paragraph at lines 584--608
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--604
+Underfull \hbox (badness 10000) in paragraph at lines 584--608
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--604
+Underfull \hbox (badness 10000) in paragraph at lines 584--608
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--604
+Underfull \hbox (badness 10000) in paragraph at lines 584--608
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--604
+Underfull \hbox (badness 10000) in paragraph at lines 584--608
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--604
+Underfull \hbox (badness 10000) in paragraph at lines 584--608
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 608--609
+Underfull \hbox (badness 10000) in paragraph at lines 612--613
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--622
+Underfull \hbox (badness 10000) in paragraph at lines 614--626
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--622
+Underfull \hbox (badness 10000) in paragraph at lines 614--626
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--622
+Underfull \hbox (badness 10000) in paragraph at lines 614--626
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--622
+Underfull \hbox (badness 10000) in paragraph at lines 614--626
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--622
+Underfull \hbox (badness 10000) in paragraph at lines 614--626
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--622
+Underfull \hbox (badness 10000) in paragraph at lines 614--626
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--622
+Underfull \hbox (badness 10000) in paragraph at lines 614--626
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--622
+Underfull \hbox (badness 10000) in paragraph at lines 614--626
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--622
+Underfull \hbox (badness 10000) in paragraph at lines 614--626
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--622
+Underfull \hbox (badness 10000) in paragraph at lines 614--626
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--622
+Underfull \hbox (badness 10000) in paragraph at lines 614--626
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 624--626
+Underfull \hbox (badness 10000) in paragraph at lines 628--630
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 627--629
+Underfull \hbox (badness 10000) in paragraph at lines 631--633
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 627--629
+Underfull \hbox (badness 10000) in paragraph at lines 631--633
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--637
+Underfull \hbox (badness 10000) in paragraph at lines 640--641
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 638--640
+Underfull \hbox (badness 10000) in paragraph at lines 642--644
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 641--642
+Underfull \hbox (badness 10000) in paragraph at lines 645--646
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 643--644
+Underfull \hbox (badness 10000) in paragraph at lines 647--648
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 645--647
+Underfull \hbox (badness 10000) in paragraph at lines 649--651
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 648--656
+Underfull \hbox (badness 10000) in paragraph at lines 652--660
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 648--656
+Underfull \hbox (badness 10000) in paragraph at lines 652--660
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 648--656
+Underfull \hbox (badness 10000) in paragraph at lines 652--660
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 648--656
+Underfull \hbox (badness 10000) in paragraph at lines 652--660
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 648--656
+Underfull \hbox (badness 10000) in paragraph at lines 652--660
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 648--656
+Underfull \hbox (badness 10000) in paragraph at lines 652--660
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 648--656
+Underfull \hbox (badness 10000) in paragraph at lines 652--660
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 658--659
+Underfull \hbox (badness 10000) in paragraph at lines 662--663
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 660--670
+Underfull \hbox (badness 10000) in paragraph at lines 664--674
 
  []
 
@@ -1640,83 +1640,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 660--670
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18]
-Underfull \hbox (badness 10000) in paragraph at lines 675--681
+Underfull \hbox (badness 10000) in paragraph at lines 679--685
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 675--681
+Underfull \hbox (badness 10000) in paragraph at lines 679--685
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--687
+Underfull \hbox (badness 10000) in paragraph at lines 690--691
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 688--689
+Underfull \hbox (badness 10000) in paragraph at lines 692--693
 
  []
 
 
-Overfull \hbox (10.93652pt too wide) in paragraph at lines 693--694
+Overfull \hbox (10.93652pt too wide) in paragraph at lines 697--698
 \TU/InfoOTDisp(0)/b/n/10 “bsdinstall.” Freebsd.org, 2025, $[][][] [] [][][][][]
 [][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
  []
 
 
-Overfull \hbox (47.57074pt too wide) in paragraph at lines 693--694
+Overfull \hbox (47.57074pt too wide) in paragraph at lines 697--698
 [][][][][][][][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][
 ][][][] [] [][][][][][][] [] [][] [] [][][][][][][][][][] []
  []
 
 
-Overfull \hbox (3.57074pt too wide) in paragraph at lines 695--696
+Overfull \hbox (3.57074pt too wide) in paragraph at lines 699--700
 [][][][][] [] [][][][][][][][][][] [] [][][][][][][] [] [] [] [][][][][][][] []
  [] [] [][][][][][][] [] [][][][][][][] []
  []
 
 
-Overfull \hbox (29.57074pt too wide) in paragraph at lines 697--698
+Overfull \hbox (29.57074pt too wide) in paragraph at lines 701--702
 [][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][
 ][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] []
  []
 
 
-Overfull \hbox (29.57074pt too wide) in paragraph at lines 699--700
+Overfull \hbox (29.57074pt too wide) in paragraph at lines 703--704
 [][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][
 ][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] []
  []
 
 [19]
-Overfull \hbox (15.06651pt too wide) in paragraph at lines 701--702
+Overfull \hbox (15.06651pt too wide) in paragraph at lines 705--706
 []\TU/InfoOTDisp(0)/b/n/10 “geli(8).” Freebsd.org, 2025, $[][][] [] [][][][][][
 ][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
  []
 
 
-Overfull \hbox (21.24652pt too wide) in paragraph at lines 703--704
+Overfull \hbox (21.24652pt too wide) in paragraph at lines 707--708
 []\TU/InfoOTDisp(0)/b/n/10 “gpart(8).” Freebsd.org, 2026, $[][][] [] [][][][][]
 [][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
- []
-
-
-Overfull \hbox (17.57074pt too wide) in paragraph at lines 703--704
-[][][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] []
- [][][][][][][] [] [][] [] [][][][][][][][][][] []
- []
-
-
-Overfull \hbox (29.57074pt too wide) in paragraph at lines 705--706
-[][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][
-][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] []
- []
-
-
-Overfull \hbox (11.62653pt too wide) in paragraph at lines 707--708
-[]\TU/InfoOTDisp(0)/b/n/10 “mkdir.” Freebsd.org, 2025, $[][][] [] [][][][][][][
-] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
  []
 
 
@@ -1726,32 +1708,26 @@ Overfull \hbox (17.57074pt too wide) in paragraph at lines 707--708
  []
 
 
-Overfull \hbox (15.09651pt too wide) in paragraph at lines 709--710
-[]\TU/InfoOTDisp(0)/b/n/10 “mount.” Freebsd.org, 2025, $[][][] [] [][][][][][][
-] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
- []
-
-
-Overfull \hbox (17.57074pt too wide) in paragraph at lines 709--710
-[][][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] []
- [][][][][][][] [] [][] [] [][][][][][][][][][] []
- []
-
-
-Overfull \hbox (0.47652pt too wide) in paragraph at lines 711--712
-[]\TU/InfoOTDisp(0)/b/n/10 “mt.” Freebsd.org, 2025, $[][][] [] [][][][][][][] [
-] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
- []
-
-
-Overfull \hbox (29.57074pt too wide) in paragraph at lines 711--712
+Overfull \hbox (29.57074pt too wide) in paragraph at lines 709--710
 [][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][
 ][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] []
  []
 
 
-Overfull \hbox (13.09651pt too wide) in paragraph at lines 713--714
-[]\TU/InfoOTDisp(0)/b/n/10 “newfs.” Freebsd.org, 2025, $[][][] [] [][][][][][][
+Overfull \hbox (11.62653pt too wide) in paragraph at lines 711--712
+[]\TU/InfoOTDisp(0)/b/n/10 “mkdir.” Freebsd.org, 2025, $[][][] [] [][][][][][][
+] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
+ []
+
+
+Overfull \hbox (17.57074pt too wide) in paragraph at lines 711--712
+[][][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] []
+ [][][][][][][] [] [][] [] [][][][][][][][][][] []
+ []
+
+
+Overfull \hbox (15.09651pt too wide) in paragraph at lines 713--714
+[]\TU/InfoOTDisp(0)/b/n/10 “mount.” Freebsd.org, 2025, $[][][] [] [][][][][][][
 ] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
  []
 
@@ -1762,8 +1738,8 @@ Overfull \hbox (17.57074pt too wide) in paragraph at lines 713--714
  []
 
 
-Overfull \hbox (0.92651pt too wide) in paragraph at lines 715--716
-[]\TU/InfoOTDisp(0)/b/n/10 “rm.” Freebsd.org, 2025, $[][][] [] [][][][][][][] [
+Overfull \hbox (0.47652pt too wide) in paragraph at lines 715--716
+[]\TU/InfoOTDisp(0)/b/n/10 “mt.” Freebsd.org, 2025, $[][][] [] [][][][][][][] [
 ] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
  []
 
@@ -1774,9 +1750,21 @@ Overfull \hbox (29.57074pt too wide) in paragraph at lines 715--716
  []
 
 
-Overfull \hbox (4.07074pt too wide) in paragraph at lines 717--718
-[][][][][] [] [][][][][][][][][][][] [] [][][][][][][] [] [] [] [][][][][][][] 
-[] [] [] [][][][][][][] [] [][][][][][][] []
+Overfull \hbox (13.09651pt too wide) in paragraph at lines 717--718
+[]\TU/InfoOTDisp(0)/b/n/10 “newfs.” Freebsd.org, 2025, $[][][] [] [][][][][][][
+] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
+ []
+
+
+Overfull \hbox (17.57074pt too wide) in paragraph at lines 717--718
+[][][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] []
+ [][][][][][][] [] [][] [] [][][][][][][][][][] []
+ []
+
+
+Overfull \hbox (0.92651pt too wide) in paragraph at lines 719--720
+[]\TU/InfoOTDisp(0)/b/n/10 “rm.” Freebsd.org, 2025, $[][][] [] [][][][][][][] [
+] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
  []
 
 
@@ -1786,49 +1774,61 @@ Overfull \hbox (29.57074pt too wide) in paragraph at lines 719--720
  []
 
 
-Overfull \hbox (20.06651pt too wide) in paragraph at lines 721--722
+Overfull \hbox (4.07074pt too wide) in paragraph at lines 721--722
+[][][][][] [] [][][][][][][][][][][] [] [][][][][][][] [] [] [] [][][][][][][] 
+[] [] [] [][][][][][][] [] [][][][][][][] []
+ []
+
+
+Overfull \hbox (29.57074pt too wide) in paragraph at lines 723--724
+[][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][
+][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] []
+ []
+
+
+Overfull \hbox (20.06651pt too wide) in paragraph at lines 725--726
 []\TU/InfoOTDisp(0)/b/n/10 “swapon.” Freebsd.org, 2025, $[][][] [] [][][][][][]
 [] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
  []
 
 
-Overfull \hbox (23.57074pt too wide) in paragraph at lines 721--722
+Overfull \hbox (23.57074pt too wide) in paragraph at lines 725--726
 [][][][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] 
 [] [][][][][][][] [] [][] [] [][][][][][][][][][] []
  []
 
 
-Overfull \hbox (20.07652pt too wide) in paragraph at lines 723--724
+Overfull \hbox (20.07652pt too wide) in paragraph at lines 727--728
 []\TU/InfoOTDisp(0)/b/n/10 “umount.” Freebsd.org, 2025, $[][][] [] [][][][][][]
 [] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
  []
 
 
-Overfull \hbox (23.57074pt too wide) in paragraph at lines 723--724
+Overfull \hbox (23.57074pt too wide) in paragraph at lines 727--728
 [][][][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] 
 [] [][][][][][][] [] [][] [] [][][][][][][][][][] []
  []
 
 
-Overfull \hbox (0.88652pt too wide) in paragraph at lines 725--726
+Overfull \hbox (0.88652pt too wide) in paragraph at lines 729--730
 []\TU/InfoOTDisp(0)/b/n/10 “zfs.” Freebsd.org, 2025, $[][][] [] [][][][][][][] 
 [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
  []
 
 
-Overfull \hbox (5.57074pt too wide) in paragraph at lines 725--726
+Overfull \hbox (5.57074pt too wide) in paragraph at lines 729--730
 [][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][
 ][][][][][] [] [][] [] [][][][][][][][][][] []
  []
 
 
-Overfull \hbox (11.19652pt too wide) in paragraph at lines 727--728
+Overfull \hbox (11.19652pt too wide) in paragraph at lines 731--732
 []\TU/InfoOTDisp(0)/b/n/10 “zpool.” Freebsd.org, 2025, $[][][] [] [][][][][][][
 ] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
  []
 
 
-Overfull \hbox (17.57074pt too wide) in paragraph at lines 727--728
+Overfull \hbox (17.57074pt too wide) in paragraph at lines 731--732
 [][][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] []
  [][][][][][][] [] [][] [] [][][][][][][][][][] []
  []
@@ -1956,22 +1956,22 @@ Overfull \hbox (4.37094pt too wide) in paragraph at lines 506--519
  []
 
 
-Overfull \hbox (16.45155pt too wide) in paragraph at lines 587--596
+Overfull \hbox (20.46353pt too wide) in paragraph at lines 587--596
+[][]\TU/InfoOTDisp(0)/m/n/8 “ssh-Keygen.” Freebsd.org, 2025, $[][][] [] [][][][
+][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][][][]
+[][][][] []
+ []
+
+
+Overfull \hbox (18.77095pt too wide) in paragraph at lines 587--596
+[][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][
+] [] [][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][]
+ []
+ []
+
+
+Overfull \hbox (16.45155pt too wide) in paragraph at lines 598--607
 [][]\TU/InfoOTDisp(0)/m/n/8 “Mkdir.” Freebsd.org, 2025, $[][][] [] [][][][][][]
-[] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [][][
-][][][][] []
- []
-
-
-Overfull \hbox (0.15494pt too wide) in paragraph at lines 587--596
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
-nfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (19.18755pt too wide) in paragraph at lines 598--607
-[][]\TU/InfoOTDisp(0)/m/n/8 “Mount.” Freebsd.org, 2025, $[][][] [] [][][][][][]
 [] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [][][
 ][][][][] []
  []
@@ -1984,31 +1984,38 @@ nfoOTDisp(0)/m/n/8 .
  []
 
 
-Overfull \hbox (1.29955pt too wide) in paragraph at lines 609--618
+Overfull \hbox (19.18755pt too wide) in paragraph at lines 609--618
+[][]\TU/InfoOTDisp(0)/m/n/8 “Mount.” Freebsd.org, 2025, $[][][] [] [][][][][][]
+[] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [][][
+][][][][] []
+ []
+
+
+Overfull \hbox (0.15494pt too wide) in paragraph at lines 609--618
+[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
+][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
+nfoOTDisp(0)/m/n/8 .
+ []
+
+
+Overfull \hbox (1.29955pt too wide) in paragraph at lines 620--629
 [][]\TU/InfoOTDisp(0)/m/n/8 “cd.” Freebsd.org, 2025, $[][][] [] [][][][][][][] 
 [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][] [] [][][][][][][]
  [] [] []
  []
 
 
-Overfull \hbox (3.04648pt too wide) in paragraph at lines 609--618
+Overfull \hbox (3.04648pt too wide) in paragraph at lines 620--629
 [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][][][][
 ][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/InfoOTD
 isp(0)/m/n/8 . Ac-
  []
 
 
-Overfull \hbox (27.87555pt too wide) in paragraph at lines 620--629
+Overfull \hbox (27.87555pt too wide) in paragraph at lines 631--640
 [][]\TU/InfoOTDisp(0)/m/n/8 “umount.” Freebsd.org, 2025, $[][][] [] [][][][][][
 ][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][][] [] []
 [][][][][][] []
- []
-
-
-Overfull \hbox (0.15494pt too wide) in paragraph at lines 620--629
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
-nfoOTDisp(0)/m/n/8 .
  []
 
 
@@ -2019,13 +2026,6 @@ nfoOTDisp(0)/m/n/8 .
  []
 
 
-Overfull \hbox (16.45155pt too wide) in paragraph at lines 642--651
-[][]\TU/InfoOTDisp(0)/m/n/8 “Mkdir.” Freebsd.org, 2025, $[][][] [] [][][][][][]
-[] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [][][
-][][][][] []
- []
-
-
 Overfull \hbox (0.15494pt too wide) in paragraph at lines 642--651
 [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
 ][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
@@ -2033,8 +2033,8 @@ nfoOTDisp(0)/m/n/8 .
  []
 
 
-Overfull \hbox (19.18755pt too wide) in paragraph at lines 653--662
-[][]\TU/InfoOTDisp(0)/m/n/8 “Mount.” Freebsd.org, 2025, $[][][] [] [][][][][][]
+Overfull \hbox (16.45155pt too wide) in paragraph at lines 653--662
+[][]\TU/InfoOTDisp(0)/m/n/8 “Mkdir.” Freebsd.org, 2025, $[][][] [] [][][][][][]
 [] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [][][
 ][][][][] []
  []
@@ -2047,52 +2047,52 @@ nfoOTDisp(0)/m/n/8 .
  []
 
 
-Overfull \hbox (3.04648pt too wide) in paragraph at lines 664--673
+Overfull \hbox (19.18755pt too wide) in paragraph at lines 664--673
+[][]\TU/InfoOTDisp(0)/m/n/8 “Mount.” Freebsd.org, 2025, $[][][] [] [][][][][][]
+[] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [][][
+][][][][] []
+ []
+
+
+Overfull \hbox (0.15494pt too wide) in paragraph at lines 664--673
+[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
+][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
+nfoOTDisp(0)/m/n/8 .
+ []
+
+
+Overfull \hbox (3.04648pt too wide) in paragraph at lines 675--684
 [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][][][][
 ][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/InfoOTD
 isp(0)/m/n/8 . Ac-
  []
 
 
-Overfull \hbox (16.45155pt too wide) in paragraph at lines 675--684
+Overfull \hbox (16.45155pt too wide) in paragraph at lines 686--695
 [][]\TU/InfoOTDisp(0)/m/n/8 “Mkdir.” Freebsd.org, 2025, $[][][] [] [][][][][][]
 [] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [][][
 ][][][][] []
  []
 
 
-Overfull \hbox (0.15494pt too wide) in paragraph at lines 675--684
+Overfull \hbox (0.15494pt too wide) in paragraph at lines 686--695
 [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
 ][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
 nfoOTDisp(0)/m/n/8 .
  []
 
 
-Overfull \hbox (20.46353pt too wide) in paragraph at lines 686--695
+Overfull \hbox (20.46353pt too wide) in paragraph at lines 697--706
 [][]\TU/InfoOTDisp(0)/m/n/8 “ssh-Keygen.” Freebsd.org, 2025, $[][][] [] [][][][
 ][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][][][]
 [][][][] []
  []
 
 
-Overfull \hbox (18.77095pt too wide) in paragraph at lines 686--695
+Overfull \hbox (18.77095pt too wide) in paragraph at lines 697--706
 [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][
 ] [] [][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][]
  []
- []
-
-
-Overfull \hbox (24.01154pt too wide) in paragraph at lines 697--706
-[][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, $[][][] [] [][][][][
-][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] []
-[][][][][][] []
- []
-
-
-Overfull \hbox (0.15494pt too wide) in paragraph at lines 697--706
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
-nfoOTDisp(0)/m/n/8 .
  []
 
 
@@ -2110,39 +2110,39 @@ nfoOTDisp(0)/m/n/8 .
  []
 
 
+Overfull \hbox (24.01154pt too wide) in paragraph at lines 719--728
+[][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, $[][][] [] [][][][][
+][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] []
+[][][][][][] []
+ []
+
+
+Overfull \hbox (0.15494pt too wide) in paragraph at lines 719--728
+[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
+][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
+nfoOTDisp(0)/m/n/8 .
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24]
-Overfull \hbox (15.97154pt too wide) in paragraph at lines 740--749
+Overfull \hbox (15.97154pt too wide) in paragraph at lines 751--760
 [][]\TU/InfoOTDisp(0)/m/n/8 “zpool.” Freebsd.org, 2025, $[][][] [] [][][][][][]
 [] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [][][
 ][][][][] []
  []
 
 
-Overfull \hbox (0.15494pt too wide) in paragraph at lines 740--749
+Overfull \hbox (0.15494pt too wide) in paragraph at lines 751--760
 [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
 ][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
 nfoOTDisp(0)/m/n/8 .
  []
 
 
-Overfull \hbox (16.45155pt too wide) in paragraph at lines 757--766
+Overfull \hbox (16.45155pt too wide) in paragraph at lines 768--777
 [][]\TU/InfoOTDisp(0)/m/n/8 “Mkdir.” Freebsd.org, 2025, $[][][] [] [][][][][][]
-[] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [][][
-][][][][] []
- []
-
-
-Overfull \hbox (0.15494pt too wide) in paragraph at lines 757--766
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
-nfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (19.09155pt too wide) in paragraph at lines 768--777
-[][]\TU/InfoOTDisp(0)/m/n/8 “mount.” Freebsd.org, 2025, $[][][] [] [][][][][][]
 [] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [][][
 ][][][][] []
  []
@@ -2155,10 +2155,10 @@ nfoOTDisp(0)/m/n/8 .
  []
 
 
-Overfull \hbox (24.01154pt too wide) in paragraph at lines 779--788
-[][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, $[][][] [] [][][][][
-][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] []
-[][][][][][] []
+Overfull \hbox (19.09155pt too wide) in paragraph at lines 779--788
+[][]\TU/InfoOTDisp(0)/m/n/8 “mount.” Freebsd.org, 2025, $[][][] [] [][][][][][]
+[] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [][][
+][][][][] []
  []
 
 
@@ -2169,7 +2169,21 @@ nfoOTDisp(0)/m/n/8 .
  []
 
 
-Overfull \hbox (15.08354pt too wide) in paragraph at lines 847--856
+Overfull \hbox (24.01154pt too wide) in paragraph at lines 790--799
+[][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, $[][][] [] [][][][][
+][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] []
+[][][][][][] []
+ []
+
+
+Overfull \hbox (0.15494pt too wide) in paragraph at lines 790--799
+[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
+][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
+nfoOTDisp(0)/m/n/8 .
+ []
+
+
+Overfull \hbox (15.08354pt too wide) in paragraph at lines 858--867
 [][]\TU/InfoOTDisp(0)/m/n/8 “Geli(8).” Freebsd.org, 2025, $[][][] [] [][][][][]
 [][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][] [] [][][
 ][][][][] []
@@ -2179,63 +2193,49 @@ Overfull \hbox (15.08354pt too wide) in paragraph at lines 847--856
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25]
-Overfull \hbox (1.29955pt too wide) in paragraph at lines 927--936
+Overfull \hbox (1.29955pt too wide) in paragraph at lines 938--947
 [][]\TU/InfoOTDisp(0)/m/n/8 “cp.” Freebsd.org, 2025, $[][][] [] [][][][][][][] 
 [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][] [] [][][][][][][]
  [] [] []
  []
 
 
-Overfull \hbox (3.04648pt too wide) in paragraph at lines 927--936
+Overfull \hbox (3.04648pt too wide) in paragraph at lines 938--947
 [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][][][][
 ][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/InfoOTD
 isp(0)/m/n/8 . Ac-
  []
 
 
-Overfull \hbox (24.01154pt too wide) in paragraph at lines 971--980
+Overfull \hbox (24.01154pt too wide) in paragraph at lines 982--991
 [][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, $[][][] [] [][][][][
 ][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] []
 [][][][][][] []
  []
 
 
-Overfull \hbox (0.15494pt too wide) in paragraph at lines 971--980
+Overfull \hbox (0.15494pt too wide) in paragraph at lines 982--991
 [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
 ][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
 nfoOTDisp(0)/m/n/8 .
  []
 
 
-Overfull \hbox (14.26755pt too wide) in paragraph at lines 991--1000
+Overfull \hbox (14.26755pt too wide) in paragraph at lines 1002--1011
 [][]\TU/InfoOTDisp(0)/m/n/8 “geli(8).” Freebsd.org, 2025, $[][][] [] [][][][][]
 [][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][] [] [][][
 ][][][][] []
  []
 
 
-Overfull \hbox (27.86755pt too wide) in paragraph at lines 1002--1011
+Overfull \hbox (27.86755pt too wide) in paragraph at lines 1013--1022
 [][]\TU/InfoOTDisp(0)/m/n/8 “swapon.” Freebsd.org, 2025, $[][][] [] [][][][][][
 ][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][][] [] []
 [][][][][][] []
  []
 
 
-Overfull \hbox (0.15494pt too wide) in paragraph at lines 1002--1011
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
-nfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (24.01154pt too wide) in paragraph at lines 1016--1025
-[][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, $[][][] [] [][][][][
-][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] []
-[][][][][][] []
- []
-
-
-Overfull \hbox (0.15494pt too wide) in paragraph at lines 1016--1025
+Overfull \hbox (0.15494pt too wide) in paragraph at lines 1013--1022
 [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
 ][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
 nfoOTDisp(0)/m/n/8 .
@@ -2270,28 +2270,42 @@ nfoOTDisp(0)/m/n/8 .
  []
 
 
-Overfull \hbox (14.26755pt too wide) in paragraph at lines 1049--1058
-[][]\TU/InfoOTDisp(0)/m/n/8 “geli(8).” Freebsd.org, 2025, $[][][] [] [][][][][]
-[][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][] [] [][][
-][][][][] []
- []
-
-
-Overfull \hbox (24.01154pt too wide) in paragraph at lines 1060--1069
+Overfull \hbox (24.01154pt too wide) in paragraph at lines 1049--1058
 [][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, $[][][] [] [][][][][
 ][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] []
 [][][][][][] []
  []
 
 
-Overfull \hbox (0.15494pt too wide) in paragraph at lines 1060--1069
+Overfull \hbox (0.15494pt too wide) in paragraph at lines 1049--1058
 [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
 ][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
 nfoOTDisp(0)/m/n/8 .
  []
 
 
-Overfull \hbox (14.26755pt too wide) in paragraph at lines 1083--1092
+Overfull \hbox (14.26755pt too wide) in paragraph at lines 1060--1069
+[][]\TU/InfoOTDisp(0)/m/n/8 “geli(8).” Freebsd.org, 2025, $[][][] [] [][][][][]
+[][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][] [] [][][
+][][][][] []
+ []
+
+
+Overfull \hbox (24.01154pt too wide) in paragraph at lines 1071--1080
+[][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, $[][][] [] [][][][][
+][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] []
+[][][][][][] []
+ []
+
+
+Overfull \hbox (0.15494pt too wide) in paragraph at lines 1071--1080
+[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
+][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
+nfoOTDisp(0)/m/n/8 .
+ []
+
+
+Overfull \hbox (14.26755pt too wide) in paragraph at lines 1094--1103
 [][]\TU/InfoOTDisp(0)/m/n/8 “geli(8).” Freebsd.org, 2025, $[][][] [] [][][][][]
 [][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][] [] [][][
 ][][][][] []
@@ -2301,42 +2315,42 @@ Overfull \hbox (14.26755pt too wide) in paragraph at lines 1083--1092
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [26]
-Overfull \hbox (27.86755pt too wide) in paragraph at lines 1121--1130
+Overfull \hbox (27.86755pt too wide) in paragraph at lines 1132--1141
 [][]\TU/InfoOTDisp(0)/m/n/8 “swapon.” Freebsd.org, 2025, $[][][] [] [][][][][][
 ][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][][] [] []
 [][][][][][] []
  []
 
 
-Overfull \hbox (0.15494pt too wide) in paragraph at lines 1121--1130
+Overfull \hbox (0.15494pt too wide) in paragraph at lines 1132--1141
 [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
 ][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
 nfoOTDisp(0)/m/n/8 .
  []
 
 
-Overfull \hbox (27.86755pt too wide) in paragraph at lines 1138--1147
+Overfull \hbox (27.86755pt too wide) in paragraph at lines 1149--1158
 [][]\TU/InfoOTDisp(0)/m/n/8 “swapon.” Freebsd.org, 2025, $[][][] [] [][][][][][
 ][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][][] [] []
 [][][][][][] []
  []
 
 
-Overfull \hbox (0.15494pt too wide) in paragraph at lines 1138--1147
+Overfull \hbox (0.15494pt too wide) in paragraph at lines 1149--1158
 [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
 ][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
 nfoOTDisp(0)/m/n/8 .
  []
 
 
-Overfull \hbox (16.31555pt too wide) in paragraph at lines 1161--1170
+Overfull \hbox (16.31555pt too wide) in paragraph at lines 1172--1181
 [][]\TU/InfoOTDisp(0)/m/n/8 “mkdir.” Freebsd.org, 2025, $[][][] [] [][][][][][]
 [] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [][][
 ][][][][] []
  []
 
 
-Overfull \hbox (0.15494pt too wide) in paragraph at lines 1161--1170
+Overfull \hbox (0.15494pt too wide) in paragraph at lines 1172--1181
 [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
 ][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$\TU/I
 nfoOTDisp(0)/m/n/8 .
@@ -2347,19 +2361,19 @@ nfoOTDisp(0)/m/n/8 .
 ]
 Chapter 2.
 [29]
-Overfull \hbox (17.07074pt too wide) in paragraph at lines 894--895
+Overfull \hbox (17.07074pt too wide) in paragraph at lines 898--899
 \TU/IBMPlexMono(0)/m/n/10 echo "Back up to 0 and go forward space count 2 files
 ." 
  []
 
 
-Overfull \hbox (17.07074pt too wide) in paragraph at lines 894--895
+Overfull \hbox (17.07074pt too wide) in paragraph at lines 898--899
 \TU/IBMPlexMono(0)/m/n/10 echo "Back up to 0 and go forward space count 3 files
 ." 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 894--895
+Underfull \hbox (badness 10000) in paragraph at lines 898--899
 
  []
 
@@ -2367,7 +2381,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 894--895
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [31]
-Underfull \hbox (badness 10000) in paragraph at lines 898--899
+Underfull \hbox (badness 10000) in paragraph at lines 902--903
 
  []
 
@@ -2375,7 +2389,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 898--899
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [32]
-Underfull \hbox (badness 10000) in paragraph at lines 900--901
+Underfull \hbox (badness 10000) in paragraph at lines 904--905
 
  []
 
@@ -2383,7 +2397,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 900--901
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [33]
-Overfull \hbox (20.08772pt too wide) in paragraph at lines 928--930
+Overfull \hbox (20.08772pt too wide) in paragraph at lines 932--934
 []\TU/InfoOTDisp(0)/b/n/10 C. URLs – FreeBSD man pages for above. \TU/IBMPlexMo
 no(0)/m/n/10 man.freebsd.org/cgi/man.cgi?
  []
@@ -2414,7 +2428,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  10514 strings out of 475846
  221740 string characters out of 5781395
- 1956879 words of memory out of 5000000
+ 1958879 words of memory out of 5000000
  31461 multiletter control sequences out of 15000+600000
  561141 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

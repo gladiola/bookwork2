@@ -135,6 +135,10 @@ Your foreword text goes here...
 
 Your acknowledgements text goes here...
 
+With our chosen style of citations, we tried to provide references that would withstand common lab use and academic rigor.  We provided in-chapter sections for convenient references to books, man pages, and websites.  We also continued with inline footnoting for chapter endnotes; we especially noted various computer commands and technologies since they are fundamentally derivative works upon which we depend.  This made for a lot of references and some duplicity.  
+
+Unfortunately, we've seen indications that political activitists will attempt to subject manuscripts to unduly harsh automated scrutiny.  Arguably, Harvard President Claudine Gay's time in academic leadership came to a harsh and unfair end when her past work was subjected to such an analysis.  Near that time, several professional academics aligned with Harvard were targeted with similar unfair examinations.  These instances of harsh scrutiny seemed to go beyond the regular pursuit of academic rigor and its associated quest for truth.  It all seemed politically motivated; it must have come as an unfair surprise so many years after the original research and publication.  These days, no one can know if they'll be subject to such a harsh and unfair manipulation of the academic process.  Since my past education includes a graduation from Harvard, I would be loathe to bring shame onto the institution unfairly.  We have cited generously.
+
 %----------------------------------------------------------------------------------------
 %	Introduction
 %----------------------------------------------------------------------------------------
@@ -392,7 +396,7 @@ If someone wishes to put a root password in place, then that's a procedure that 
 
 \subsection{Be Able to Build the Keys}
 We can build our keys using the live disc's shell. and a thumbdrive.  The main command to build the keys is:\\\\
-\texttt{\index{ssh-keygen}ssh-keygen -b 1024 -t rsa}\\
+\texttt{\index{ssh-keygen}ssh-keygen -b 1024 -t rsa}\footnote{“ssh-Keygen.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=ssh-keygen&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
 Copy the files output to a thumbdrive and keep them handy for mounting.
 
@@ -411,12 +415,12 @@ The listing should also show any other storage device that's plugged in to the m
 
 \subsection{Be Able to Partition the USB}
 Since our USB has not been prepared for use with anything, we have to partition it.  We can pretty much use the default commands fro 17.2 "Adding Disks" to set up the drive.  Here, we create a simple UFS file system and mount it to a directory that we'll put in /tmp. If our USB is already partitioned, we would want to skip this part.  \\\\
-\texttt{\#  \index{gpart!create}gpart create -s GPT da0}\\
-\texttt{\#  \index{gpart!add}gpart add -t freebsd-ufs -a 1M da0}\\
-\texttt{\# \index{newfs}newfs -U /dev/da0p1}\\\\
+\texttt{\index{gpart!create}gpart create -s GPT da0}\\
+\texttt{\index{gpart!add}gpart add -t freebsd-ufs -a 1M da0}\\
+\texttt{\index{newfs}newfs -U /dev/da0p1}\\\\
 Mount the USB to the /tmp Directory:\\\\
-\texttt{\# \index{mkdir}mkdir /tmp/someDir}\footnote{“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
-\texttt{\# \index{mount}mount /dev/da0p1 /tmp/someDir}\footnote{“Mount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
+\texttt{\index{mkdir}mkdir /tmp/someDir}\footnote{“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
+\texttt{\index{mount}mount /dev/da0p1 /tmp/someDir}\footnote{“Mount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
 \subsection{Be Able to Write to the USB}
 We could now write a simple text file onto /tmp/someDir, unmount the drive, and then re-mount it to check our work.  That would go like:\\\\
