@@ -1,0 +1,9 @@
+
+@font-face {
+    font-family: 'EurostileExt-Reg';
+    src: url('EurostileExt-Reg.otf');
+    src: url('EurostileExt-Reg.woff') format('woff'),
+    src: url('EurostileExt-Reg.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+}

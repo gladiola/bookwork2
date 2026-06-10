@@ -1,0 +1,848 @@
+\documentclass[10pt,twoside]{book}
+\usepackage[paperwidth=6in,paperheight=9in,
+inner=0.95in,outer=0.6in,top=0.75in,bottom=0.85in,
+bindingoffset=0.12in]{geometry}
+\pdfpagewidth=6in
+\pdfpageheight=9in
+
+% Use system fonts (XeLaTeX/LuaLaTeX)
+\usepackage{fontspec}
+\usepackage{titlesec}
+
+\setmainfont{InfoOTDisp}
+\setmonofont{IBM Plex Mono}
+\newfontfamily\headingfont{Eurostile W01}
+
+
+\titleformat{\section}
+  {\headingfont\Large\bfseries}
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\headingfont\large\bfseries}
+  {\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+  {\headingfont\normalsize\bfseries}
+  {\thesubsubsection}{1em}{}
+
+% Microtypography for tighter, book-like setting
+\usepackage{microtype}
+\linespread{0.98}
+
+\usepackage{seqsplit}
+
+% Compact chapter headings (smallcaps-ish)
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\normalfont\large\scshape}{\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{-10pt}{10pt}
+
+% Simple headers/footers
+\usepackage{fancyhdr}
+\setlength{\headheight}{21pt} % at least 20.68404pt; 21pt is safe
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE,LO]{\small\itshape \leftmark}
+
+\usepackage{endnotes}
+\let\footnote=\endnote
+\renewcommand\enoteheading{} % suppress package heading
+
+\newcommand{\printchapterendnotes}{%
+\cleardoublepage
+\begingroup
+\chapter*{Endnotes}%
+\addcontentsline{toc}{chapter}{Endnotes}%
+\renewcommand\enoteheading{}% no extra heading from package
+\theendnotes
+\setcounter{endnote}{0}%
+\endgroup
+}
+\usepackage{url}
+% Paragraph and list compactness
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+\usepackage{enumitem}
+\setlist{nosep}
+
+% Figure captions compact
+\usepackage[font=small,labelfont=bf]{caption}
+\renewcommand{\figurename}{Fig.}
+
+% Code style approximating K&R (monospaced, compact)
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{array} % optional for >{\raggedright\arraybackslash}
+\lstset{
+  basicstyle=\ttfamily\small,
+  keywordstyle=\bfseries,
+  commentstyle=\itshape\color{gray},
+  numbers=left, numberstyle=\tiny\color{gray}, numbersep=6pt,
+  stepnumber=5,
+  frame=none, xleftmargin=2em,
+  tabsize=4, breaklines=true, showstringspaces=false,
+  columns=fullflexible
+}
+\lstdefinelanguage{KRC}{language=C}
+
+% Title page simple
+\title{Coding and Configuration for Secure Systems}
+\author{John O\string'Keefe-Odom}
+\date{}
+
+\begin{document}
+\maketitle
+\frontmatter
+\tableofcontents
+\mainmatter
+
+\chapter{Amnesiac System Planning, Experimentation,\\ and Implementation in FreeBSD}
+
+
+%This template is tuned for a compact, classic look: narrow typeblock, Garamond body, and monospaced code.
+
+%\begin{lstlisting}[language=KRC,caption={Hello world}]
+%#include <stdio.h>
+%
+%int main(void) {
+%    printf("hello, world\n");
+%    return 0;
+%}
+%\end{lstlisting}
+
+
+
+
+
+		\noindent In this technical note, we explore configurations of the FreeBSD operating system.  With a goal of creating an amensiac system that keeps the operating system separate from working storage drives, we experiment with various configurations.  We demonstrate the planning of drive configuration coding and the reasoning behind the choices.  First, we code a system that uses the operating system on the storage drive discs.  Then we evolve the plan into using a live cd for operating system use with drives that are connected to the immutable system in RAM via configuration code.  Using an amensiac system like this, we would be able to reset the operating system to a known immutable state with every startup.  The drives could be disconnected and reattached to other systems for various purposes.  Throughout, we cover specific commands for drive and operating system management and operation.
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+We're starting with a Dell T610 Server.  Made in 2011, this machine is about ten years old.  We purchased this at a government e-waste auction.  She needed some cleanup.  We started on the front lawn, blowing out the dust with a leafblower.  
+
+Most of the time servers from these auctions will have minimal RAM.  Usually the drives and any good accessories will be stripped out.  Anytime we get a hard drive, from any source, one of the first actions we take is to erase the drives to NIST 800-88 Purge with dedicated devices.  That kind of erasing can be done with dd in Kali or FreeBSD; but, the drive erasers usually have a verification feature that's helpful.  
+\subsection{Hardware Configuration}
+This is my favorite computer.  I've named her "Blondie" after Debbie Harry's New Wave band.
+
+Now, she's configured with:
+\begin{itemize}
+	\item A DVD RW drive
+    	\item A LTO III tape backup unit
+    	\item In her 8 drive bay, we have:
+	\begin{itemize}
+		\item Two Velociraptor 80GB 10000 rpm drives.
+		\begin{itemize}
+			\item We'll use these in a mirror configuration to hold the main OS.
+		\end{itemize}
+		\item Two refurb 120GB SSDs
+		\begin{itemize}
+			\item We'll use this in a mirror as ZFS log drives.
+			\item They'll help to make writes faster.
+		\end{itemize}
+		\item Four 500GB hard drives
+		\begin{itemize}
+			\item We'll use this as a RAIDZ-2 array to hold the jails.
+			\item We have some smaller SAS drives.
+			\item We have some SATA drives.
+		\end{itemize}
+		\end{itemize}
+		\item We replaced the one CPU with two Xeon 5550 quad cores and added a cooling tower.
+		\item We added more RAM.  Currently, we're at 196GB.
+		\item We added some more NICs.
+		\begin{itemize}
+			\item We have four for the jails.
+			\item We have two for the OS.
+			\item We'll leave the two on the motherboard mostly unused, except for our iDRAC connection.
+			\begin{itemize}
+				\item iDRAC is a proprietary baseboard controller.  
+				\item We could use it to power cycle the machine.
+				\item There's a web interface that let's us know about motherboard-related facts.
+				\item We cannot give a GELI password through the console in our current setup.
+			\end{itemize}	
+	\end{itemize}
+	\item The server has two 500W power supplies.
+\end{itemize}
+Because the dual power supplies draw about 500 Watts apiece, this server gets it own circuit.
+
+The drives we're using are older, but we got enough copies of the drives to be able to support backups.  When making physical backups of the drives, it can be helpful to have other volumes of the same model.  So, instead of getting the best available, we planned for the best we could afford at quantity.
+
+The server does not have:
+\begin{itemize}
+	\item Any type of graphics card or GPU
+	\item Sound cards or microphone hardware
+	\item Wireless networking or Bluetooth.
+\end{itemize}
+\subsection{Intentions:  Paving the Road to Jails}
+We'll use the box for development.  It'll be our main development server.  We'll use it with programs that we compile on a nearby poudriere package building box.  In those package builds, we have segregated our builds into a pattern of jails that mimic the types of jails that will be needed on most of our computers.  
+
+So, there is a jail for functional groups like:  development tools, offensive and defensive security programs, browsers, desktop software, and so on.  Poudriere jails can be filled with whatever sets of programs we like.  For successful builds, we find its best to keep the jails small.  
+
+There will be three main groups of drives:
+\begin{itemize}
+	\item an OS mirror pair
+	\item a ZFS log mirror pair
+	\item a ZFS RAIDZ-2 kit of four drives.
+\end{itemize}
+
+The OS pair will hold ideas like:
+\begin{itemize}
+	\item jail configuration
+	\item main host networking and VNETs
+	\item host-based user accounts and configuration.
+\end{itemize}
+
+The ZFS kits will hold disconnected jails.  We'll set up a system of hierarchical jails that provide us with a development environment made up of modular jails that will be the children of an overarching parent.  These jails will communicate with each other and the parent through some custom VNETting.  We'll do all of our jail scripting, controls, and configuration manually.  Likewise, the base ZFS setup will be done with simple scripts.
+%------------------------------------------------
+
+\section{Methodologies}
+\subsection{Preparing the Baseboard}
+
+The T610 has a built-in RAID card that can't be totally bypassed.  This means that since we'll want ZFS to control the drives as much as possible, we'll need to tell the hardware RAID to buzz off.  We won't want hardware RAID to participate in the process.  We'll just use the software RAID through ZFS.
+
+We can't just unplug the RAID card.  We tried that, and it leads to malfunctions on this machine.  So, as a compromise, what we'll tell the machine is that each drive is its own VDEV and it's RAID-0.  We'll end up with as many VDEVs as we have physical drives.  
+
+To prepare for a later step in this process, we'll note the serial number of each drive we load into position, its model number, and its capacity.  We'll need to know that information, and we won't want to be hassled by having to power cycle the machine in the middle of the setup process just to check on those details.
+
+Later on, we'll set VDEVs with ZFS; but, from this point on, we'll basically ignore the RAID card's description of these devices as VDEVs.  
+
+With the baseboard prepared, and the BIOS set to allow us to boot from disc, we'll get started with a plain install of FreeBSD to the first two drives in a mirror configuration.
+
+\subsection{Incremental Advancement to Amnesiac System}
+With all of the manual coding and configuration needed to set up an amnesiac system like the one we desired, it was a big change from the normal BSD installs we had done for several years.  Our first pass at building an amnesiac system decayed into manually scripting a regular operating system installation that had most of the features we desired in the amnesiac system.  Both the on-disc OS system and the amnesiac system are detailed below.  
+
+\subsection{Identifying and Allocating ZFS Drive Qualities}
+We need to be able to detect the drives and partitions that we want to work with using geom, gpart, and zfs commands.  If, for some reason, you can't find those drives, then you need to address that.  While working with this particular computer, I've found that the leading cause of failing to detect a drive goes back to the VDEV assignment in the hardware RAID.  If the drive were pulled, this particular RAID card will need to have those configuration changes addressed.  Often, this means rebooting the machine.  It could be done through the iDRAC baseboard controller in some models; but the one we have here is not configured to do those tasks.
+
+\subsection{What are we going to want the ZFS kit to do?  How are we going to use the drives?  How can we wrestle with this new type of configuration?}
+\begin{table}
+  \centering
+  \caption{ZFS Concepts and Commands}
+  \label{tab:zfsconcepts}
+  \begin{tabular}{@{}p{0.18\linewidth} p{0.30\linewidth} p{0.48\linewidth}@{}}
+    \toprule
+    Topic & Concept & Command phrase example \\
+    \midrule
+    Disk labels & Use the label to associate the logical with the physical &
+      \texttt{[Host]-[PositionNumber 0-7]-[Serial\_Number]} \\
+    ZFS Compression & Faster performance: less space &
+      \texttt{zfs set compress=gzip-6 [DIRECTORY]} \\
+    ZFS zpool comment & Make a note on the pool &
+      \texttt{zfs set comment="-"} \\
+    quota & Limit growth & --- \\
+    reservation & Set aside space for directory and its children & --- \\
+    refreservation & Set aside space but don't count snapshots and child datasets & --- \\
+    canmount & Control mounting & \texttt{zfs set canmount=off [DIRECTORY]} \\
+    mountpoint & Specify where to mount & \texttt{zfs set mountpoint=/SOME [DIRECTORY]} \\
+    readonly & Control readonly & \texttt{zfs set readonly=off [DIRECTORY]} \\
+    exec & Control if it can execute & \texttt{zfs set exec=off [DIRECTORY]} \\
+    copies & Make more than one copy & \texttt{zfs set copies=2 [DIRECTORY]} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+After reading over FreeBSD Mastery:  ZFS by Alan Jude and Michael Lucas, we came to a few conclusions.  We chose to use RAIDZ-2 with Log drives because of the number of drives we have.  Some of the topics covered in that book that we'll want to apply include ideas in Table \ref{tab:zfsconcepts}.  In our first iterations we decided to install the OS on the hard drives in a pattern that looks like a conventional installation.  Once the drive partitioning and utilitization commands were worked out, we then started over and undertook the amnesiac version with the OS on a live disc that runs with attached drives.  
+
+
+Our goal for the system will be to split up the drives into three main groups, as described in Tables \ref{tab:zfsmainuseosharddisk}, \ref{tab:zfsjailuseosharddisk}, and \ref{tab:zfsslogusedisk}.  On each drive, we'll also allow:
+\begin{itemize}
+	\item 15\% of the disk's own capacity as "Free Space" by allocating a blank partition
+	\item Swap by 100 | 50 | 33 | 25 percent of RAM (with a 25\% minimum for all disks) or similar
+	\item Remainder as one large ZFS main partition.
+\end{itemize}
+We decided we would want those qualities in an amnesiac system, with the exception of running the OS from a live disc.
+
+For the OS-On-Disk system, this should bring us:
+\begin{itemize}
+\item Enough room for the main OS
+\item A 4 disk RAIDZ-2 array of almost 1.49 TB of actual storage
+\item Fast swap and copy-on-write
+\item With each disk capable of expansion or change.
+\end{itemize}
+The unused space on the drives (a blank partition of 15\%) may look like we're grossly under-utilizing the disks.  We're planning for future emergencies.  Do we need more swap?  Maybe we can add it in.  Do we need to expand or resize the disk?  Maybe we can delete that blank "Free Space" partition and use that.  By not trying to use everything, we're giving ourselves some room to solve future problems.  
+
+
+
+
+
+
+\begin{table}
+  \centering
+  \caption{ZFS Main OS Use Hard Disk: Initial Estimates}
+  \label{tab:zfsmainuseosharddisk}
+  \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}}
+    \toprule
+    & Estimate for 80\,GB HDD \\
+    \midrule
+    Blank: 15\% "Free Space" & 12\,GB \\
+    Swap: Under-allocate, deliberately & 10\,GB \\
+    ZFS Main Partition: Remainder & 58\,GB \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table} \centering \caption{ZFS Jail Use Hard Disk: Initial Estimates} \label{tab:zfsjailuseosharddisk} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule & Estimate for 500\,GB HDD \\ \midrule Blank: 15\% "Free Space" & 75\,GB \\ Swap: 25\% Physical RAM (196\,GB max) & 50\,GB \\ ZFS Main Partition: Remainder & 375\,GB \\ \bottomrule \end{tabular} \end{table}
+
+
+\begin{table} \centering \caption{ZFS SLOG Log Use SSD: Initial Estimates} \label{tab:zfsslogusedisk} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule & Estimate for 120\,GB SSD \\ \midrule Blank: 15\% "Free Space" & 18\,GB \\ Swap: 25\% Physical RAM (196\,GB max) & 50\,GB \\ ZFS Log Partition: Remainder & 52\,GB \\ \bottomrule \end{tabular} \end{table}
+
+
+\subsection{What We Can Learn From Installing an OS}
+Later on, we'll install the other drives wtih gpart and zfs commands.  This first pair, through, we could do with bsdinstall.  If we choose that, though, then we must commit the whole disk to the process.  That would be how we would normally stand up a disk drive.  In this case, we'll conduct a manual process that mimics the main steps of bsdinstall to show that the installation can be done manually.  Part of these same kinds of steps are critical tasks when administrating and installing jails.
+  
+\subsection{Basic Operating System Installation Goals}
+We're going to do an early phase, basic installation of the OS.  At this point, we'll really only set up a pair of users and some plain vanilla settings for the OS.  We want to be able to:
+\begin{itemize}
+\item to establish our ZFS kit
+\item to configure our main jail relationships
+\item to be able to check our networking with other hosts
+\item to set the basic operating system to call packages from our package server.
+\end{itemize}
+We can come back later and make a more sophisticated environment.  At this stage, we will just lay the foundation for that work.  If we don't get the ZFS kit stood up, then our more complex work with jails won't have an environment in which to thrive.
+
+
+\subsection{Main Steps for FreeBSD Installation from \texttt{bsdinstall}}
+We can see that bsdinstall is broken up into about a dozen main segments.  They are:
+\begin{itemize}
+\item Keyboard mapping
+\item Hostname
+\item Networking configuration
+\item Wireless networking
+\item Partitioning
+\item Mounting temporary root
+\item Fetch the OS
+\item Extract the OS
+\item Set a root password
+\item Set the time
+\item Add users
+\item Enable some services
+\item Copy in the config [2].
+\end{itemize}
+
+We're not going to do all of these.  We'll start with partitioning.  We won't do any wireless networking or set a root password.  We're going to skip the wireless networking for now because the hardware doesn't have that capability.  In the newer versions of bsdinstall, there are some protective measures not listed above.  We won't tackle those just yet.  
+
+\subsection{No Root Password}
+
+We won't set a root password because we will expect to always ssh into the root account with a key.  By not setting a root password, we will create a situation where a key is always required.  This can be dangerous in that it can create a single point of failure for the system.  
+
+Another risk is that we will require the ability to ssh in as root.  Later, as we establish software firewalls on the host, we will want to limit what addresses can be used to access this root with ssh.  It's a little dangerous, but it's also a little different.  
+
+We have some risk controls that will be in place.  First, we often store our keys in a special collection of USB drives.  Next, we will have 2FA on the ssh that will require a TOTP (Time-based One Time Password).  Finally, we will limit what's done in this drive.  Since most of our programs and work will be done in the jails, there is a limited amount of influence that this part of the system will have.  It's there to start the box and spin up the jails.  If we ever have to totally destroy this installation and hook up our jails to another system, that is possible.
+
+What do we gain from no root password?  An extra measure of security.  If there is no password, then password enumeration attempts should all fail.  This not only goes for root, but it goes for other users.  Many of the automated login attacks we've seen have been simple dictionary attacks; these brute force exercises rarely attempt to account for the types of login procedures that we expect to put in place.  
+
+Not having a root password may also truncate or stop our ability to use commands like \texttt{su} or \texttt{sudo}.  As we're trying to stop privilege escalation, we'll also be stopping legitimate means of priv-esc.  It could be inconvenient, but we've used this technique before.
+
+Also, there is another risk:  leaving the needed key lying around.  For example, if we give the key to a user account operator, like ourselves, and then we import copies of the key to the box for easy use:  well, then those keys could be used and re-used locally.  This would be the equivalent for storing a plain-text password on the box.  They keys are ultimately simple text files with decorated, long, strings of hashes.  It's the software that goes with the keys, combined with the configuration of the programs for logging in to a service, that makes them special.  Switching from passwords to keys is not a perfect answer; but, it's the answer we'll use this time.
+
+If someone wishes to put a root password in place, then that's a procedure that will be easy to implement.  For now, though, there will be no root password.  And that means we have to build the keys we will use to log in.
+
+\subsection{Be Able to Build the Keys}
+We can build our keys using the live disc's shell. and a thumbdrive.  The main command to build the keys is:\\\\
+\texttt{ssh-keygen -b 1024 -t rsa}\\
+
+Copy the files output to a thumbdrive and keep them handy for mounting.
+
+\subsection{Partition, Mount, and Use a Thumbdrive from Live Disc's Shell}
+Let's take some time to go over some detailed instructions on how to build those keys and get them onto a thumbdrive.  The live disc's shell mostly uses a read-only file system.  So, some people may not be familiar with how we are going to get the keys made and saved anywhere that will persist.
+\subsection{Start the Box and the Live Disk's Shell}
+With the hardware booted to the LiveCD (installation disc), we select "Shell" from the three main choices in the first menu.  This drops us into the shell.  If we try to save a file of any kind, we'll probably get an error message back that says we're in a read-only file system.
+Our main set of directions for this is in the FreeBSD Handbook.  We look carefully at the sections for USB storage and "Adding Disks"
+\subsection{Be Able to Plug in the USB Thumbdrive and Find Its Logical Address}
+
+\texttt{camcontrol devlist}\\
+
+This should show the USB drive.  If the list is long, we can pipe it to more and slowly advance through the list.  In our case, the USB was at da0.  
+
+The listing should also show any other storage device that's plugged in to the machine.  So, all of those hard drives loaded into the bays should appear.  If they don't, then take it as a warning sign that we're having a problem with the RAID card's physical drive VDEVs.  On the T610, we were seeing drives in positions 0 to 7 in addition to the USB thumbdrive we're working on now.  
+
+\subsection{Be Able to Partition the USB}
+Since our USB has not been prepared for use with anything, we have to partition it.  We can pretty much use the default commands fro 17.2 "Adding Disks" to set up the drive.  Here, we create a simple UFS file system and mount it to a directory that we'll put in /tmp. If our USB is already partitioned, we would want to skip this part.  \\\\
+\texttt{\# gpart create -s GPT da0}\\
+\texttt{\# gpart add -t freebsd-ufs -a 1M da0}\\
+\texttt{\# newfs -U /dev/da0p1}\\\\
+Mount the USB to the /tmp Directory:\\\\
+\texttt{\# mkdir /tmp/someDir}\\
+\texttt{\# mount /dev/da0p1 /tmp/someDir}\\
+
+\subsection{Be Able to Write to the USB}
+We could now write a simple text file onto /tmp/someDir, unmount the drive, and then re-mount it to check our work.  That would go like:\\\\
+\texttt{\# cd /tmp}\\
+\texttt{\# umount /tmp/someDir}\\
+\texttt{\# rm -r /tmp/someDir}\\\\
+Unplug the drive.  Plug it in another slot.  Use camcontrol devlist to find it again.  It'll probably get the same address, like "da0".\\\\
+\texttt{\# mkdir /tmp/otherDir}\\
+\texttt{\# mount /dev/da0p1 /tmp/otherDir}\\
+\texttt{\# ls /tmp/otherDir}\\
+
+\subsection{Be Able to Put Some Key Pairs on the USB}
+Using these same principles, we can mount our USB thumbdrive, generate ssh keys, and save them there for later.\\\\
+\texttt{\# mkdir /tmp/otherDir/keys}\\
+\texttt{\# ssh-keygen -b 1024 -t rsa}\\
+
+During the ssh-keygen dialog, simply direct the program to save the keys to \texttt{/tmp/otherDir/keys}.  Be sure to record your passphrase somewhere.  
+
+\subsection{Be Able to Use Commands to Build Out the Drives}
+We'd like to show a quick overview of some of the drive-related commands.  These will be applied soon.
+
+To list what devices are detected by the OS, we can use:\\\\
+\texttt{gpart show}\\\\
+We will want to note the serial number of each drive, by position.
+We then note which drives we want to use for the main body of the RAIDZ-2 kit.  All of this will become one pool of ZFS VDEVs.  Then we'll add in the log mirrors.  So, in the sequence of 0-7, numbering the drives, we should expect to skip those two for now.
+
+Make the notes if you haven't already because we're going to list all of the drives for the main pool in one pop.  This task may have been done before we set up the physical VDEVs for the hardware RAID.
+
+We're going to choose to put a swap partition on the SSDs.  We can add one onto the other disks, but a maximum of 4 swap partitions is recommended in the FreeBSD Handbook.  Later on, we will be able to select swap partitions by mounting them and using commands like \texttt{swapon swapoff}.\\
+
+To put the ZFS partition on the remaining disks:\\\\
+\texttt{gpart create -s SCHEME DISK\_DEVICE}\\\\
+\texttt{gpart create -s gpt da4}
+\\
+
+To add the main ZFS partition:\\\\
+\texttt{gpart add -a 1m -l ZFS\_NUMBER -t freebsd-zfs DISK\_DEVICE}\\\\
+\texttt{gpart add -a 1m -l ZFS-BLONDIE-4-WD123465789 -t freebsd-zfs  da4}
+\\
+
+To add the partition's swap:\\\\
+\texttt{gpart add -a 1m -slg -l SWAP\_NUMBER -t freebsd-swap DISK\_DEVICE}\\\\
+\texttt{gpart add -a 1m -slg -l SWAP-BLONDIE-4-WD123465789 -t freebsd-swap da4}
+\\
+
+To add a logging partition on the SLOG SSDs:\\\\
+\texttt{gpart add -a 1m -l ZLOG\_NUMBER -t freebsd-zfs DISK\_DEVICE}\\\\
+\texttt{gpart add -a 1m -l ZLOG-BLONDIE-2-WD123465789 -t freebsd-zfs  da2}\\\\
+
+With each disk partitioned, we can add them to the pool for our RAIDZ-2 kit.\\\\
+\texttt{zpool create RAID POOL\_NAME DISK\_LABEL/ZFS\_PARTITION\_LABEL ...next disk/partition...}\\\\
+
+\noindent\texttt{zpool create BLONDIE-MAIN raidz2 \textbackslash }\\
+\texttt{BLONDIE-4-WD12345/ZFS-BLONDIE-4-WD12345 \textbackslash }\\
+\texttt{BLONDIE-5-WD12345/ZFS-BLONDIE-5-WD12345 \textbackslash }\\
+\texttt{BLONDIE-6-WD12345/ZFS-BLONDIE-6-WD12345 \textbackslash }\\
+\texttt{BLONDIE-7-WD12345/ZFS-BLONDIE-7-WD12345 }\\
+
+We can add on the mirrors for logging:\\\\
+\texttt{zpool add BLONDIE-MAIN log mirror \textbackslash}\\
+\texttt{BLONDIE-2-WD12345/ZLOG-BLONDIE-2-WD12345 \textbackslash}\\
+\texttt{BLONDIE-3-WD12345/ZLOG-BLONDIE-3-WD12345}\\
+
+
+Once we get to the point that we have an operating system on disks, and disks ready for use with logs and jails, then we're at the end of this phase of system administration.
+
+\subsection{Goals for Amnesiac Systems}
+We chose at this point to do some experimental installs.  For clarity, notes on those are not presented here.  We did change our goals for the system.  We recognized that we wanted:
+\begin{itemize}
+\item Use a LiveCD for an immutable OS
+\item Encrypt disc partitions instead of the whole disc
+\item Ensure we save keys and metadata to promote disc recovery
+\item Prepare commands in advance to reduce complexity.
+\end{itemize}
+
+From our testing, we recognizes that a Live CD offered the best answer for an immutable system.  It does come at the price of some instability.  The "El Torrito" discs have a limited set of services.  Adjusting the configuration of the operating system means drafting, burning, and testing a new disc.  The "shell" instance on a FreeBSD installation disc is reportedly less stable; but, we did not know why or how it was less stable than a normal operating system.  We worked through our disc commands and kept careful notes.  Adding the physical serial number of the disc alone increased the complexity of manually typing in each command.  We discovered the need to encrypt the discs by partitions instead of the whole disc because there was a visibility problem during the execution of discovering and attaching the discs.  There was a poorly documented detail about protecting the disc metadata and keys.  The keys are provided during the setup dialog; but, these highly important items will disappear after the setup process closes.  This means it is important that an operator recognize the need to intercept and to record these keys.  Without them, a later recovery of a disc is impossible.  Since one typo would derail our experimental setups, we had to keep a second support computer on hand to record notes and consult references.  
+
+%------------------------------------------------
+
+\section{Results}
+As our experimentation concluded, we had learned enough to stand a reasonable chance to setup an amnesiac machine.  Its features include:
+
+\begin{itemize}
+\item An immutable OS
+\item Encrypted disc partitions 
+\item Swap and logging for ZFS disc features
+\item Metadata and keys saved to a separate USB drive
+\item A disc for holding FreeBSD jails (containerization)
+\item Enough room to expand, to update, and to recover.
+\end{itemize}
+
+\subsection{Configure for SWAP Disk, ZFS Cache, ZFS SLOG Mirror, and ZFS RAIDz2}
+
+\begin{table} \centering \caption{FreeBSD Swap Disk — Estimate of 500\,GB HDD} \label{tab:freebsdswapdisc} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule GEOM Disk List Mediasize & 465\,GB \\ \midrule Blank: 15\% "Free Space" & 70\,GB \\ Swap & 395\,GB \\ \bottomrule \end{tabular} \end{table}
+
+
+\begin{table} \centering \caption{ZFS Cache (Read Cache) Disk — Estimate of 80\,GB HDD} \label{tab:zfscachedisc} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule GEOM Disk List Mediasize & 74\,GB \\ \midrule Blank: 15\% "Free Space" & 11\,GB \\ Swap & 63\,GB \\ \bottomrule \end{tabular} \end{table}
+
+
+\begin{table} \centering \caption{ZFS SLOG Log Mirror (Write Cache) Disk — Initial Estimates} \label{tab:zfsslogmirror} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule & Estimate for 120\,GB SSD \\ \midrule GEOM Disk List Mediasize & 465\,GB \\ Blank: 15\% "Free Space" & 18\,GB \\ Swap: 25\% Physical RAM (196\,GB max) & 50\,GB \\ ZFS Log Partition: Remainder & 52\,GB \\ \bottomrule \end{tabular} \end{table}
+
+
+
+\begin{table} \centering \caption{ZFS Jail Use Hard Disk — Estimate of 500\,GB HDD} \label{tab:zfsjailusehdd} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule & Estimate for 500\,GB HDD \\ \midrule GEOM Disk List Mediasize & 465\,GB \\ Blank: 15\% "Free Space" & 75\,GB \\ Swap: 25\% Physical RAM (196\,GB max) & 50\,GB \\ ZFS Main Partition: Remainder & 375\,GB \\ \bottomrule \end{tabular} \end{table}
+
+Changed config to keep the RAIDZ2 for main work.  I was having trouble with the SSDs; so, I removed them and replaced them with two 80GB Western Digital Velociraptors.  I added another WD Velociraptor for cache.  Then we added a Western Digital Blue 500GB for a swap disk.  That sounds like a lot of swap, but we hope to upgrade to near 196GB of RAM this year. So, a little more than twice that would be 400GB of swap.  The next disk size on hand was 500GB.
+
+We had some mis-aligned partitions with RAIDZ2 work for Blondie.  We were using the full 500GB on the label as our actual amount of media to work with.  Since less is available, we will have to set those up again.
+
+We used gpart delete to delete each partition.  Then we used gpart destroy to delete the partition table for the whole disk.  In the end, gpart showed us only the CD.
+
+\subsection{Startup with \texttt{boontonly.iso}}
+For this run, we’ll begin by using the boot-only disk.  We won’t plan to ever boot from these hard drives.  We’ll just use the shell on the CD.  As with the others, we’ll mount a USB to store metadata information.  We’ll partition and encrypt the disks.  In the following examples, we provide the actual serial numbers for the hard drives that were used.  This example was derived from notes we maintained during experimentation; serial numbers in other instances will vary, of course.
+
+\subsection{Mount the USB to Save the Metadata Backup File}
+\texttt{mkdir /tmp/usb3}\\
+\texttt{mount /dev/da0p1 /tmp/usb3}
+
+\subsection{Create Swap Disk in Bay 0}
+\texttt{gpart create -s GPT mfid0}\\\\
+\texttt{gpart add -a 5K -s 395G -t freebsd-swap -l ZFS-BLONDIE-0-SWAP-WCC2ERZ56512 mfid0}
+
+\subsection{Create ZFS Cache in Bay 1}
+\texttt{gpart create -s GPT mfid1}\\\\
+\texttt{gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-1-CACHE-WXL1E40C1352 mfid1}
+
+\subsection{Create ZFS SLOG in Bays 2 and 3}
+\texttt{gpart create -s GPT mfid2}\\\\
+\texttt{gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-2-SLOG-WXL1E4067503 mfid2}\\\\
+\texttt{gpart create -s GPT mfid3}\\\\
+\texttt{gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-3-SLOG-WXC0CA9V8431 mfid3}\\\\
+
+\subsection{Create ZFS Work Disks for Jails}
+\subsection{Bay 4}
+\texttt{gpart create -s GPT mfid4}\\\\
+\texttt{gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\\\\
+\texttt{gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-4-FILES-WCC2EE134983 mfid4}
+\subsection{Bay 5}
+\texttt{gpart create -s GPT mfid5}\\\\
+\texttt{gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-5-SWAP-WMC2E3914420 mfid5}\\\\
+\texttt{gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-5-FILES-WMC2E3914420 mfid5}
+\subsection{Bay 6}
+\texttt{gpart create -s GPT mfid6}\\\\
+\texttt{gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-6-SWAP-WCC2ETT39577 mfid6}\\\\
+\texttt{gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-6-FILES-WCC2ETT39577 mfid6}
+\subsection{Bay 7}
+\texttt{gpart create -s GPT mfid7}\\\\
+\texttt{gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-7-SWAP-WCAYU2878968 mfid7}\\\\
+\texttt{gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-7-FILES-WCAYU2878968 mfid7}\\
+
+We should note that “Bay 7” is an observation of the physical hardware.  The device (“mfid7”) could have whatever number assigned at the end that the machine gave it.  If the hardware raid had a problem with recognizing a device, the number might not correlate to what bay it is in.  When powering up, check your geometry.  
+
+\subsection{Encrypt those partitions}
+During this phase, we’ll encrypt the partitions.  That means that we should have some recordkeeping materials on hand.  Use a password manager or a notebook to carefully record the password that is about to be typed in.  With each one completed, the machine will tell us that it has saved a file of backup metadata.  We will want to copy that metadata file to the thumbdrive.  If the encryption gets jammed up, or if there is some type of problem, then the metadata file will be used as part of the recovery process.  Without a metadata file, recovering an encrypted partition can be difficult or impossible.  
+
+If you lose the metadata file, but still have routine access to the geli encryption because you know the password and the machine is functioning alright, then you can export another copy of the metadata.  This means that anyone with root access to the machine, who can use geli commands, would also be able to export such a file.  Keep this in mind if you need to secure your machine.
+
+When we give the subcommand to “init,” the machine will ask us to give the new password twice.  This is part of the password setting process.  When we give the subcommand to “attach,” the machine will ask us to give the password as part of the normal attachment process. Type carefully, and look at the records carefully, because this is the main chance to make sure the password notes are right.  
+
+\subsection{Commands to Encrypt the Partitions}
+\texttt{geli init -l 256 mfid0p1}\footnote{“Geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}\\
+\texttt{geli attach mfid0p1}\\\\
+\texttt{geli init -l 256 mfid1p1}\\
+\texttt{geli attach mfid1p1}\\\\
+\texttt{geli init -l 256 mfid2p1}\\
+\texttt{geli attach mfid2p1}\\\\
+\texttt{geli init -l 256 mfid3p1}\\
+\texttt{geli attach mfid3p1}\\\\
+\texttt{geli init -l 256 mfid4p1}\\
+\texttt{geli attach mfid4p1}\\\\
+\texttt{geli init -l 256 mfid4p2}\\
+\texttt{geli attach mfid4p2}\\\\
+\texttt{geli init -l 256 mfid5p1}\\
+\texttt{geli attach mfid5p1}\\\\
+\texttt{geli init -l 256 mfid5p2}\\
+\texttt{geli attach mfid5p2}\\\\
+\texttt{geli init -l 256 mfid6p1}\\
+\texttt{geli attach mfid6p1}\\\\
+\texttt{geli init -l 256 mfid6p2}\\
+\texttt{geli attach mfid6p2}\\\\
+\texttt{geli init -l 256 mfid7p1}\\
+\texttt{geli attach mfid7p1}\\\\
+\texttt{geli init -l 256 mfid7p2}\\
+\texttt{geli attach mfid7p2}\\\\
+
+\subsection{To Preserve the Metadata Backup Files}
+Let us reiterate:  preserving these backups at the time of disk creation is essential for later recoveries.  If these files are not saved, then a powerdown of the system will cause them to be lost.  They're automatically stored in an ephemeral directory.  Conserve the ability to recover a disk later by recording these metadata backup files to a safe location.
+
+Each metadata backup file was probably created with a name that does not look like the drive’s label.  Instead, the machine assigns a backup file name based on geometry.  Since we can have a hardware configuration change that could mess up that pattern, we will want to save our backup files with names that look more like the disk labels.  That way, if the drives move, then we can better discover which metadata file goes with it.\\
+
+\noindent\texttt{cp /var/backups/mfid0p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-0-SWAP-WCC2ERZ56512.eli}\\\\
+\texttt{cp /var/backups/mfid1p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-1-CACHE-WXL1E40C1352.eli}\\\\
+\texttt{cp /var/backups/mfid2p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-2-SLOG-WXL1E4067503.eli}\\\\
+\texttt{cp /var/backups/mfid3p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-3-SLOG-WXC0CA9V8431.eli}\\\\
+\texttt{cp /var/backups/mfid4p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-4-SWAP-WCC2EE134983.eli}\\\\
+\texttt{cp /var/backups/mfid4p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-4-FILES-WCC2EE134983.eli}\\\\
+\texttt{cp /var/backups/mfid5p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-5-SWAP-WMC2E3914420.eli}\\\\
+\texttt{cp /var/backups/mfid5p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-5-FILES-WMC2E3914420.eli}\\\\
+\texttt{cp /var/backups/mfid6p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-6-SWAP-WCC2ETT39577.eli}\\\\
+\texttt{cp /var/backups/mfid6p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-6-FILES-WCC2ETT39577.eli}\\\\
+\texttt{cp /var/backups/mfid7p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-7-SWAP-WCAYU2878968.eli}\\\\
+\texttt{cp /var/backups/mfid7p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-7-FILES-WCAYU2878968.eli}
+
+\subsection{File Name Check:  Editing Labels}
+We got through all that, and found that we had named a file incorrectly.  During experimentation, we had a typo; BAY 4 should be
+\texttt{WCC2EE134983} but that's not what we saw when we checked our work.  Not the end of the world.  We can move the .eli metadata file, and we can use gpart modify to change the label.\\
+
+\noindent\texttt{gpart modify -i 1 -l \\ZFS-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\\\\
+\texttt{gpart modify -i 2 -l \\ZFS-BLONDIE-4-FILES-WCC2EE134983 mfid4}\\
+
+\texttt{gpart show} and \texttt{geli status} should show our drives as we expect them to be.
+
+At this point, all of the drives should be partitioned and decrypted and attached.  We can build a zpool for our ZFS file system. We can attach that swap drive for the benefit of our operating system right now.
+
+
+\subsection{To Use the Swap Disk}
+REF:  https://www.cyberciti.biz/faq/create-a-freebsd-swap-file/ \\
+
+\noindent\texttt{swapon mfid0p1.eli}
+\texttt{swapinfo -k}\\
+
+64G turned out to be the maximum capacity.  We will need to fix up the swap better.  We can fit 6 x 64G (384G) of swap partitions in our planned space.  So, let’s modify and add.\\
+
+\texttt{gpart resize -i 1 -s 64G mfid0}\\
+
+We would need to add, to init and to attach five more swap partitions.
+We also have to restore mfid0 because there’s a problem with reading the metadata.  \\
+
+\noindent\texttt{gpart recover mfid0}\\
+\texttt{gpart status mfid0}\\
+\texttt{geli attach mfid0p1}\\\\
+\texttt{gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-B-WCC2ERZ56512 mfid0}\\\\
+\texttt{gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-C-WCC2ERZ56512 mfid0}\\\\
+\texttt{gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-D-WCC2ERZ56512 mfid0}\\\\
+\texttt{gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-E-WCC2ERZ56512 mfid0}\\\\
+\texttt{gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-F-WCC2ERZ56512 mfid0}\\\\
+
+
+Then we need to establish encryption for all of those.\\
+
+\noindent\texttt{geli init -l 256 mfid0p2}\\
+\texttt{geli attach mfid0p2}\\
+\texttt{geli init -l 256 mfid0p3}\\
+\texttt{geli attach mfid0p3}\\
+\texttt{geli init -l 256 mfid0p4}\\
+\texttt{geli attach mfid0p4}\\
+\texttt{geli init -l 256 mfid0p5}\\
+\texttt{geli attach mfid0p5}\\
+\texttt{geli init -l 256 mfid0p6}\\
+\texttt{geli attach mfid0p6}\\
+
+using \texttt{swapinfo}, \texttt{swapon} and \texttt{swapoff}, we were able to remove some of the other swap partitions and add on these.  Did see a kernel limit on swap.  Total configured swap exceeded kern.maxswzone (98087976 pages).  We could tune the kernel, or we could reduce swap.  For now, we reduce swap from 384GB to 324GB.
+
+Simliarly, we could add on the other swap partitions, although in our current use, we probably won’t need them.  They would serve us better in cases where we were doing more intensive work, or working on another machine.  We can mount them now, anyway, to see that it can be done.
+
+To add on all the other swap partitions:\\\\
+\noindent\texttt{swapon /dev/mfid4p1.eli}\\
+\texttt{swapon /dev/mfid5p1.eli}\\
+\texttt{swapon /dev/mfid6p1.eli}\\
+\texttt{swapon /dev/mfid7p1.eli}\\
+\texttt{swapinfo -h}\\
+
+\subsection{Create the zpool for BLONDIE}
+We’ll now create a mountpoint on the tmpfs, create the zpool, and then add in the cache and SLOG mirrored disks.
+
+\subsection{Create a mountpoint}
+Create a mountpoint so that we will be able to mount the zpool without errors as we create it.\\
+
+\noindent\texttt{mkdir /tmp/BLONDIE}\\
+
+
+\printchapterendnotes
+\chapter{FreeBSD Tape Operations}
+\begin{center}\vspace{-0.5\baselineskip}\parbox{0.85\textwidth}{\small\itshape
+We explored the planning and use of LTO tape as a resource for storing backups.  We describe common commands, patterns of MT and TAR commands.  We recommend some techniques for testing, rehearsing, and using tape archives.\par}\end{center}
+\section{Introduction}
+
+We wanted to see if it would be possible for us to make use of an LTO tape machine that was on one of our salvaged computers.  We’d often heard of the performance of using tape for backups.  We’d seen some hints about the bravery needed for working with tape in modifying old mainframe programs.  We rarely saw any strong tutorials or comprehensive directions for tape operations.
+
+The average person has almost never used tapes as a part of personal computing these days.  Businesses which do use tapes often do so as part of larger, commercial data center operations.  For many of us, the closest we’ve come to tape operations was with using cassette tapes for storage on personal machines in the 1980s.  LTO tapes are often praised but infrequently used.  We wanted to break through this mystery.
+
+
+%------------------------------------------------
+
+\section{Methodology}
+
+Our plan is to write a file to tape, eject the tape, and be able to read the file back from the tape again.  Once there, we will want to do a simple sequence of file writes and reads without damaging the files on tape.  
+
+
+
+%------------------------------------------------
+
+\section{Results}
+
+We used a Dell T610 tower computer with an LTO3 single deck tape machine on board.  We have some LTO3 tapes that can be used with it.  Our tape drivers and common commands are built into FreeBSD.
+
+Warning:  We want to use the nsa driver.  There is an sa driver, but it has some limitations.  When we tried using sa, we were not able to properly advance down the tape through multiple file markers.  Use nsa for the the driver.
+
+
+\subsection{Code Notes}
+1.  Place files in a directory that you control.  Isolating the files to be copied to tape is safer than copying them directly from where they are.
+
+2.  \texttt{mt -f /dev/nsa0 load}\\
+This will load the tape onto the machine.
+
+3.  \texttt{mt -f /dev/nas0 rewind}\\
+This will spool the tape to the beginning.
+
+4.  \texttt{mt -f /dev/nsa0 status}\\
+To check to see where we are on the tape.  Assuming this is the first use of the tape, we could start writing immediately.
+
+5.  If there are files on the tape, we need to either scan ahead and log the files, or we need to consult our notes to find where on the tape we should go.  We could easily overwrite a file and damage the sequence.  Use the write persistent notch to protect the tape when possible.
+
+6.  \texttt{mt -f /dev/nsa0 com or eod}\\
+To go to the end of the records.
+
+7. \texttt{tar cvf /dev/nsa0 [FILE\_TO\_ARCHIVE]}\\
+Once at the proper spot on the tape, give the command to archive the files.
+
+8.  \texttt{mt -f  /dev/nsa0 weof1}\\
+Write an end-of-file marker.
+
+9.  \texttt{tar -t}\\
+To see the archive on the tape.
+
+\texttt{tar xf /dev/nsa0}\\
+To get the archive from the tape.
+
+10.  Write notes.  Log and record what was put on the tape.
+
+11.  For the next record, just rewind and advance through the markers to get to the next blank space for writing a record.
+
+\subsection{Sample Files: test.txt }
+\texttt{The quick brown fox jumped over the lazy dogs.}
+\subsection{Sample Files:  test2.txt}
+\texttt{The other dog is still lazy, too.}
+\subsection{Sample Files:  test3.txt}
+\texttt{The fox is just really fast.}
+\subsection{Sample Files:  test4.txt}
+\texttt{Yet some more records.}
+\subsection{Sample Files:  test5.txt}
+\texttt{And another record.}
+\subsection{Sample Script:  scriptedDemo.sh}
+\texttt{\#!/usr/bin/env sh\\
+clear \\
+echo "scriptedDemo"\\
+echo "Press ENTER to continue."\\
+read INPUT\\
+\#\# Check tape\\
+echo "Check if tape is staged in machine."\\
+echo "Press ENTER to continue."\\
+read INPUT\\
+clear\\
+\#\# Load the tape into the machine\\
+echo "Here we go."\\
+echo\\
+echo "Loading tape into machine."\\
+echo "mt -f /dev/nsa0 load"\\
+mt -f /dev/nsa0 load\\
+\#\# Rewind tape\\
+echo "Rewinding tape"\\
+echo "mt -f /dev/nsa0 rewind"\\
+mt -f /dev/nsa0 rewind\\
+echo "Press ENTER to continue."\\
+read INPUT\\
+clear\\
+echo "Reading status from tape."\\
+echo "mt -f /dev/nsa0 status"\\
+mt -f /dev/nsa0 status\\
+echo\\
+echo "Press ENTER to continue."\\
+read INPUT\\
+clear\\
+echo "Looking for file 0 on the tape."\\
+echo "We should be at the beginning."\\
+echo "So, no mt commands this time."\\
+echo "tar t -f /dev/nsa0"\\
+tar t -f /dev/nsa0\\
+echo\\
+echo "Press ENTER to continue."\\
+read INPUT\\
+clear\\
+echo "Looking for file 1 on tape."\\
+echo "Rewind to the beginning."\\
+mt -f /dev/nsa0 rewind\\
+echo "Go forward space count 1 file."\\
+echo "mt -f /dev/nsa0 fsf 1"\\
+mt -f /dev/nsa0 fsf 1\\
+echo "tar t -f /dev/nsa0"\\
+tar t -f /dev/nsa0\\
+echo "Press ENTER to continue."\\
+read INPUT\\
+clear\\
+echo "Looking for file 2 on tape."\\
+echo "Back up to 0 and go forward space count 2 files."\\
+echo "mt -f /dev/nsa0 rewind"\\
+mt -f /dev/nsa0 rewind\\
+echo "mt -f /dev/nsa0 fsf 2"\\
+mt -f /dev/nsa0 fsf 2\\
+echo "Show where we are with status."\\
+echo "mt -f /dev/nsa0 status"\\
+mt -f /dev/nsa0 status\\
+echo\\
+echo "Look in that spot with tar."\\
+echo "tar t -f /dev/nsa0"\\
+tar t -f /dev/nsa0\\
+echo "Press ENTER to continue."\\
+read INPUT\\
+clear\\
+echo "Looking for third archive on tape."\\
+echo "Back up to 0 and go forward space count 3 files."\\
+echo "mt -f /dev/nsa0 rewind"\\
+mt -f /dev/nsa0 rewind\\
+echo "mt -f /dev/nsa0 fsf 3"\\
+mt -f /dev/nsa0 fsf 3\\
+echo "See where we are with status."\\
+echo "mt -f /dev/nsa0 status"\\
+mt -f /dev/nsa0 status\\
+echo\\
+echo "See what is here with tar."\\
+echo "tar t -f /dev/nsa0"\\
+tar t -f /dev/nsa0\\
+echo "Press ENTER to continue."\\
+read INPUT\\
+clear\\
+echo "Take the tape offline."\\
+echo "Rewind tape."\\
+echo "mt -f /dev/nsa0 rewind"\\
+mt -f /dev/nsa0 rewind\\
+echo "mt -f /dev/nsa0 offline"\\
+mt -f /dev/nsa0 offline\\
+exit 0\\}
+
+\section{Analysis}
+\subsection{Quality}
+1.  We found there were significant weaknesses in tape sequencing.  Unlike random access memory, overwriting can damage end of file markers which are only navigational delimiters readily usable with the tape.  Simple practice showed it was very easy to accidentally overwrite a tape marker.  All subsequent files on the tape might be inaccessible as a result.\\
+
+2.  Logging.  Since there may be many files on these long tapes, logging support and file navigation are essential.  The usual lapses in notation can make frequent use of the tapes more hazardous with each use.\\
+
+3.  Security.  Unlike geli-encrypted hard drives, the main file protection scheme is through whatever encryption we apply to the files themselves.  Tar has some compression algorithms, but encrypting files is another step altogether.  Since the files may be in storage for a long time, having the backups encrypted on tape can be a critical step.  This encryption would need to be applied before IV.B.7. tar or archiving the files to tape.
+
+\subsection{Tests}
+Writing to tape should be rehearsed.  Checking status and reading files to confirm our location on the tape is a good idea.  
+
+Any write operation should be couched on a good, rehearsed read script.  Isolate the files to be written to their own directory.  Add an encryption step if necessary.  Rehearse the tar tape archive commands.  Compartmentalize the steps of the tape operations plan to reduce catastrophic failures and a loss of data. 
+
+
+%------------------------------------------------
+
+\section{Discussion}
+Tape operations have been long recommended as the preferred form of backup.  Off-site backup offers strong advantages to an on-premesis system operator.  We can’t count the number of times we’ve seen backups recommended; yet we find very few practical tutorials or directions.
+
+Tape backups and hard drive backups might be easily and securely routed to an off site location through the US mail.  They could be mailed to yourself at a personal mailbox, remote office, P.O. Box, or to a trusted person.  Notice that any person or entity entrusted to possess the data may also be at risk or some sort of liability.
+
+
+%----------------------------------------------------------------------------------------
+%	 REFERENCES
+%----------------------------------------------------------------------------------------
+
+%\printbibliography % Output the bibliography
+\section{References}
+A.  Books – none.  2023 versions of the FreeBSD handbook don’t cover tape operations.
+
+B.  man pages – \texttt{mt}, \texttt{tar} man pages.
+
+C.  URLs – FreeBSD man pages for above.
+\texttt{man.freebsd.org/cgi/man.cgi?}  query mt tar
+
+%----------------------------------------------------------------------------------------
+Text with\footnote{First note.} inline references.
+More text\footnote{Second note.}
+\printchapterendnotes
+\end{document}

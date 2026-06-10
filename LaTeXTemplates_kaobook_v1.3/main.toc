@@ -1,0 +1,110 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {english}{}\relax
+\contentsline {chapter}{Preface}{v}{chapter*.1}%
+\contentsline {chapter}{\nonumberline Contents}{vii}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\etoc@startlocaltoc {2}
+\etoc@startlocaltoc {3}
+\contentsline {section}{\numberline {1.1}The Main Ideas}{1}{section.1.1}%
+\contentsline {mtocsection}{\numberline {1.1}The Main Ideas}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}What This Class Does}{1}{section.1.2}%
+\contentsline {mtocsection}{\numberline {1.2}What This Class Does}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}What This Class Does Not Do}{2}{section.1.3}%
+\contentsline {mtocsection}{\numberline {1.3}What This Class Does Not Do}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}How to Use This Class}{3}{section.1.4}%
+\contentsline {mtocsection}{\numberline {1.4}How to Use This Class}{3}{section.1.4}%
+\contentsline {part}{\nonumberline Class Options, Commands and Environments}{5}{part*.7}%
+\contentsline {chapter}{\numberline {2}Class Options}{7}{chapter.2}%
+\etoc@startlocaltoc {4}
+\etoc@startlocaltoc {5}
+\contentsline {section}{\numberline {2.1}\texttt {KOMA} Options}{7}{section.2.1}%
+\contentsline {mtocsection}{\numberline {2.1}\texttt {KOMA} Options}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}\texttt {kao} Options}{7}{section.2.2}%
+\contentsline {mtocsection}{\numberline {2.2}\texttt {kao} Options}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Other Things Worth Knowing}{7}{section.2.3}%
+\contentsline {mtocsection}{\numberline {2.3}Other Things Worth Knowing}{7}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Document Structure}{8}{section.2.4}%
+\contentsline {mtocsection}{\numberline {2.4}Document Structure}{8}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Margin Stuff}{9}{chapter.3}%
+\etoc@startlocaltoc {6}
+\etoc@startlocaltoc {7}
+\contentsline {section}{\numberline {3.1}Sidenotes}{9}{section.3.1}%
+\contentsline {mtocsection}{\numberline {3.1}Sidenotes}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Marginnotes}{9}{section.3.2}%
+\contentsline {mtocsection}{\numberline {3.2}Marginnotes}{9}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Footnotes}{10}{section.3.3}%
+\contentsline {mtocsection}{\numberline {3.3}Footnotes}{10}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Margintoc}{10}{section.3.4}%
+\contentsline {mtocsection}{\numberline {3.4}Margintoc}{10}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Marginlisting}{11}{section.3.5}%
+\contentsline {mtocsection}{\numberline {3.5}Marginlisting}{11}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Figures and Tables}{13}{chapter.4}%
+\etoc@startlocaltoc {8}
+\etoc@startlocaltoc {9}
+\contentsline {section}{\numberline {4.1}Normal Figures and Tables}{13}{section.4.1}%
+\contentsline {mtocsection}{\numberline {4.1}Normal Figures and Tables}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Margin Figures and Tables}{16}{section.4.2}%
+\contentsline {mtocsection}{\numberline {4.2}Margin Figures and Tables}{16}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Wide Figures and Tables}{16}{section.4.3}%
+\contentsline {mtocsection}{\numberline {4.3}Wide Figures and Tables}{16}{section.4.3}%
+\contentsline {chapter}{\numberline {5}References}{19}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Citations}{19}{section.5.1}%
+\contentsline {mtocsection}{\numberline {5.1}Citations}{19}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Glossaries and Indices}{20}{section.5.2}%
+\contentsline {mtocsection}{\numberline {5.2}Glossaries and Indices}{20}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Hyperreferences}{21}{section.5.3}%
+\contentsline {mtocsection}{\numberline {5.3}Hyperreferences}{21}{section.5.3}%
+\contentsline {section}{\numberline {5.4}A Final Note on Compilation}{22}{section.5.4}%
+\contentsline {mtocsection}{\numberline {5.4}A Final Note on Compilation}{22}{section.5.4}%
+\contentsline {part}{\nonumberline Design and Additional Features}{25}{part*.16}%
+\contentsline {chapter}{\numberline {6}Page Design}{27}{chapter.6}%
+\etoc@startlocaltoc {10}
+\etoc@startlocaltoc {11}
+\contentsline {section}{\numberline {6.1}Headings}{27}{section.6.1}%
+\contentsline {mtocsection}{\numberline {6.1}Headings}{27}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Headers \& Footers}{28}{section.6.2}%
+\contentsline {mtocsection}{\numberline {6.2}Headers \& Footers}{28}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Table of Contents}{28}{section.6.3}%
+\contentsline {mtocsection}{\numberline {6.3}Table of Contents}{28}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Paper Size}{29}{section.6.4}%
+\contentsline {mtocsection}{\numberline {6.4}Paper Size}{29}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Page Layout}{29}{section.6.5}%
+\contentsline {mtocsection}{\numberline {6.5}Page Layout}{29}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Numbers \& Counters}{30}{section.6.6}%
+\contentsline {mtocsection}{\numberline {6.6}Numbers \& Counters}{30}{section.6.6}%
+\contentsline {section}{\numberline {6.7}White Space}{31}{section.6.7}%
+\contentsline {mtocsection}{\numberline {6.7}White Space}{31}{section.6.7}%
+\contentsline {chapter}{\numberline {7}Mathematics and Boxes}{33}{chapter.7}%
+\etoc@startlocaltoc {12}
+\etoc@startlocaltoc {13}
+\contentsline {section}{\numberline {7.1}Theorems}{33}{section.7.1}%
+\contentsline {mtocsection}{\numberline {7.1}Theorems}{33}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Boxes \& Environments}{34}{sidenote.7.4}%
+\contentsline {mtocsection}{\numberline {7.2}Boxes \& Custom Environments \sidenote [][*1.8]{Notice that in the table of contents and in the header, the name of this section is \enquote {Boxes \& Environments}; we achieved this with the optional argument of the \texttt {section} command.}}{34}{sidenote.7.4}%
+\contentsline {section}{\numberline {7.3}Experiments}{35}{section.7.3}%
+\contentsline {mtocsection}{\numberline {7.3}Experiments}{35}{section.7.3}%
+\contentsline {part}{\nonumberline Appendix}{37}{part*.20}%
+\contentsline {chapter}{\numberline {A}Heading on Level\xspace 0 (chapter)}{39}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Heading on Level\xspace 1 (section)}{39}{section.A.1}%
+\contentsline {mtocsection}{\numberline {A.1}Heading on Level\xspace 1 (section)}{39}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Heading on Level\xspace 2 (subsection)}{39}{subsection.A.1.1}%
+\contentsline {mtocsubsection}{\numberline {A.1.1}Heading on Level\xspace 2 (subsection)}{39}{subsection.A.1.1}%
+\contentsline {subsubsection}{\nonumberline Heading on Level\xspace 3 (subsubsection)}{39}{subsubsection*.22}%
+\contentsline {paragraph}{\nonumberline Heading on Level\xspace 4 (paragraph)}{40}{paragraph*.24}%
+\contentsline {section}{\numberline {A.2}Lists}{40}{section.A.2}%
+\contentsline {mtocsection}{\numberline {A.2}Lists}{40}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Example for list\xspace (itemize)}{40}{subsection.A.2.1}%
+\contentsline {mtocsubsection}{\numberline {A.2.1}Example for list\xspace (itemize)}{40}{subsection.A.2.1}%
+\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*itemize)}{40}{subsubsection*.26}%
+\contentsline {subsection}{\numberline {A.2.2}Example for list\xspace (enumerate)}{40}{subsection.A.2.2}%
+\contentsline {mtocsubsection}{\numberline {A.2.2}Example for list\xspace (enumerate)}{40}{subsection.A.2.2}%
+\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*enumerate)}{41}{subsubsection*.28}%
+\contentsline {subsection}{\numberline {A.2.3}Example for list\xspace (description)}{41}{subsection.A.2.3}%
+\contentsline {mtocsubsection}{\numberline {A.2.3}Example for list\xspace (description)}{41}{subsection.A.2.3}%
+\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*description)}{41}{subsubsection*.30}%
+\contentsline {chapter}{\numberline {B}Fonts Testing}{43}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Font Sizes}{43}{section.B.1}%
+\contentsline {mtocsection}{\numberline {B.1}Font Sizes}{43}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Font Families}{43}{section.B.2}%
+\contentsline {mtocsection}{\numberline {B.2}Font Families}{43}{section.B.2}%
+\contentsline {chapter}{Alphabetical Index}{47}{section*.31}%
