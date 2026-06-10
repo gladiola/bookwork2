@@ -8,7 +8,8 @@ bindingoffset=0.12in]{geometry}
 % Use system fonts (XeLaTeX/LuaLaTeX)
 \usepackage{fontspec}
 \usepackage{titlesec}
-
+\usepackage{imakeidx}
+\makeindex[intoc,columns=2]
 \setmainfont{InfoOTDisp}
 \setmonofont{IBM Plex Mono}
 \newfontfamily\headingfont{Eurostile W01}
@@ -33,7 +34,9 @@ bindingoffset=0.12in]{geometry}
 
 \usepackage{seqsplit}
 
-% Compact chapter headings (smallcaps-ish)
+%----------------------------------------------------------------------------------------
+%	Titles and Headings Code
+%----------------------------------------------------------------------------------------
 \usepackage{titlesec}
 \titleformat{\chapter}[hang]{\chapterfont\large}{\thechapter}{1em}{}
 \titlespacing*{\chapter}{0pt}{-10pt}{10pt}
@@ -47,6 +50,9 @@ bindingoffset=0.12in]{geometry}
 \fancyhead[LE,RO]{\thepage}
 \fancyhead[RE,LO]{\small\itshape \leftmark}
 
+%----------------------------------------------------------------------------------------
+%	Endnotes code
+%----------------------------------------------------------------------------------------
 \usepackage{endnotes}
 \let\footnote=\endnote
 \renewcommand\enoteheading{} % suppress package heading
@@ -61,6 +67,11 @@ bindingoffset=0.12in]{geometry}
 \setcounter{endnote}{0}%
 \endgroup
 }
+
+\usepackage{makeidx}
+\makeindex
+
+
 \usepackage{url}
 % Paragraph and list compactness
 \setlength{\parindent}{1.5em}
@@ -90,21 +101,46 @@ bindingoffset=0.12in]{geometry}
 \lstdefinelanguage{KRC}{language=C}
 
 % Title page simple
-\title{{\chapterfont Coding and Configuration for Secure Systems}}
-\author{John O\string'Keefe-Odom}
+\title{{\chapterfont Coding and Configuration \\for Secure Systems in BSDs}}
+\author{John O\string'Keefe-Odom, ALM}
 \date{}
 
 \begin{document}
 \maketitle
 \frontmatter
 \tableofcontents
+%----------------------------------------------------------------------------------------
+%	Foreword
+%----------------------------------------------------------------------------------------
+\chapter*{Foreword}
+\addcontentsline{toc}{chapter}{Foreword}
+
+Your foreword text goes here...
+
+%----------------------------------------------------------------------------------------
+%	Acknowledgements
+%----------------------------------------------------------------------------------------
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+
+Your acknowledgements text goes here...
+
+%----------------------------------------------------------------------------------------
+%	Introduction
+%----------------------------------------------------------------------------------------
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+Your introduction text goes here...
+
+
 \mainmatter
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER
 %----------------------------------------------------------------------------------------
 
-\chapter{Amnesiac System \\Planning, Experimentation,\\ and Implementation in FreeBSD}
+\chapter{Amnesiac Systems in FreeBSD}
 
 
 %This template is tuned for a compact, classic look: narrow typeblock, Garamond body, and monospaced code.
@@ -122,13 +158,13 @@ bindingoffset=0.12in]{geometry}
 
 
 
-		\noindent In this technical note, we explore configurations of the FreeBSD operating system.  With a goal of creating an amensiac system that keeps the operating system separate from working storage drives, we experiment with various configurations.  We demonstrate the planning of drive configuration coding and the reasoning behind the choices.  First, we code a system that uses the operating system on the storage drive discs.  Then we evolve the plan into using a live cd for operating system use with drives that are connected to the immutable system in RAM via configuration code.  Using an amensiac system like this, we would be able to reset the operating system to a known immutable state with every startup.  The drives could be disconnected and reattached to other systems for various purposes.  Throughout, we cover specific commands for drive and operating system management and operation.
+		\noindent In this technical note, we explore configurations of the \index{FreeBSD}FreeBSD operating system.  With a goal of creating an \index{amensiac}amensiac system that keeps the operating system separate from working storage drives, we experiment with various configurations.  We demonstrate the planning of drive configuration coding and the reasoning behind the choices.  First, we code a system that uses the operating system on the storage drive discs.  Then we evolve the plan into using a live cd\index{live CD} for operating system use with drives that are connected to the immutable system in RAM via configuration code.  Using an \index{amensiac}amensiac system like this, we would be able to reset the operating system to a known immutable state with every startup.  The drives could be disconnected and reattached to other systems for various purposes.  Throughout, we cover specific commands for drive and operating system management and operation.
 
 \section{Introduction}
 
 We're starting with a Dell T610 Server.  Made in 2011, this machine is about ten years old.  We purchased this at a government e-waste auction.  She needed some cleanup.  We started on the front lawn, blowing out the dust with a leafblower.  
 
-Most of the time servers from these auctions will have minimal RAM.  Usually the drives and any good accessories will be stripped out.  Anytime we get a hard drive, from any source, one of the first actions we take is to erase the drives to NIST 800-88 Purge with dedicated devices.  That kind of erasing can be done with dd in Kali or FreeBSD; but, the drive erasers usually have a verification feature that's helpful.  
+Most of the time servers from these auctions will have minimal RAM.  Usually the drives and any good accessories will be stripped out.  Anytime we get a hard drive, from any source, one of the first actions we take is to erase the drives to NIST 800-88 Purge\index{NIST 800-88!Purge} with dedicated devices.  That kind of erasing can be done with dd in Kali or \index{FreeBSD}FreeBSD; but, the drive erasers usually have a verification feature that's helpful.  
 \subsection{Hardware Configuration}
 This is my favorite computer.  I've named her "Blondie" after Debbie Harry's New Wave band.
 
@@ -213,7 +249,7 @@ To prepare for a later step in this process, we'll note the serial number of eac
 
 Later on, we'll set VDEVs with ZFS; but, from this point on, we'll basically ignore the RAID card's description of these devices as VDEVs.  
 
-With the baseboard prepared, and the BIOS set to allow us to boot from disc, we'll get started with a plain install of FreeBSD to the first two drives in a mirror configuration.
+With the baseboard prepared, and the BIOS set to allow us to boot from disc, we'll get started with a plain install of \index{FreeBSD}FreeBSD to the first two drives in a mirror configuration.
 
 \subsection{Incremental Advancement to Amnesiac System}
 With all of the manual coding and configuration needed to set up an amnesiac system like the one we desired, it was a big change from the normal BSD installs we had done for several years.  Our first pass at building an amnesiac system decayed into manually scripting a regular operating system installation that had most of the features we desired in the amnesiac system.  Both the on-disc OS system and the amnesiac system are detailed below.  
@@ -248,7 +284,7 @@ We need to be able to detect the drives and partitions that we want to work with
   \end{tabular}
 \end{table}
 
-After reading over FreeBSD Mastery:  ZFS by Alan Jude and Michael Lucas, we came to a few conclusions.  We chose to use RAIDZ-2 with Log drives because of the number of drives we have.  Some of the topics covered in that book that we'll want to apply include ideas in Table \ref{tab:zfsconcepts}.  In our first iterations we decided to install the OS on the hard drives in a pattern that looks like a conventional installation.  Once the drive partitioning and utilitization commands were worked out, we then started over and undertook the amnesiac version with the OS on a live disc that runs with attached drives.  
+After reading over \index{FreeBSD Mastery:  ZFS}FreeBSD Mastery:  ZFS by Alan Jude and Michael Lucas, we came to a few conclusions.  We chose to use RAIDZ-2 with Log drives because of the number of drives we have.  Some of the topics covered in that book that we'll want to apply include ideas in Table \ref{tab:zfsconcepts}.  In our first iterations we decided to install the OS on the hard drives in a pattern that looks like a conventional installation.  Once the drive partitioning and utilitization commands were worked out, we then started over and undertook the \index{amensiac}amnesiac version with the OS on a live disc that runs with attached drives.  
 
 
 Our goal for the system will be to split up the drives into three main groups, as described in Tables \ref{tab:zfsmainuseosharddisk}, \ref{tab:zfsjailuseosharddisk}, and \ref{tab:zfsslogusedisk}.  On each drive, we'll also allow:
@@ -257,7 +293,7 @@ Our goal for the system will be to split up the drives into three main groups, a
 	\item Swap by 100 | 50 | 33 | 25 percent of RAM (with a 25\% minimum for all disks) or similar
 	\item Remainder as one large ZFS main partition.
 \end{itemize}
-We decided we would want those qualities in an amnesiac system, with the exception of running the OS from a live disc.
+We decided we would want those qualities in an \index{amensiac}amnesiac system, with the exception of running the OS from a live disc.
 
 For the OS-On-Disk system, this should bring us:
 \begin{itemize}
@@ -354,7 +390,7 @@ Copy the files output to a thumbdrive and keep them handy for mounting.
 Let's take some time to go over some detailed instructions on how to build those keys and get them onto a thumbdrive.  The live disc's shell mostly uses a read-only file system.  So, some people may not be familiar with how we are going to get the keys made and saved anywhere that will persist.
 \subsection{Start the Box and the Live Disk's Shell}
 With the hardware booted to the LiveCD (installation disc), we select "Shell" from the three main choices in the first menu.  This drops us into the shell.  If we try to save a file of any kind, we'll probably get an error message back that says we're in a read-only file system.
-Our main set of directions for this is in the FreeBSD Handbook.  We look carefully at the sections for USB storage and "Adding Disks"
+Our main set of directions for this is in the \index{FreeBSD Handbook}FreeBSD Handbook.  We look carefully at the sections for USB storage and "Adding Disks"
 \subsection{Be Able to Plug in the USB Thumbdrive and Find Its Logical Address}
 
 \texttt{camcontrol devlist}\\
@@ -399,7 +435,7 @@ We then note which drives we want to use for the main body of the RAIDZ-2 kit.  
 
 Make the notes if you haven't already because we're going to list all of the drives for the main pool in one pop.  This task may have been done before we set up the physical VDEVs for the hardware RAID.
 
-We're going to choose to put a swap partition on the SSDs.  We can add one onto the other disks, but a maximum of 4 swap partitions is recommended in the FreeBSD Handbook.  Later on, we will be able to select swap partitions by mounting them and using commands like \texttt{swapon swapoff}.\\
+We're going to choose to put a swap partition on the SSDs.  We can add one onto the other disks, but a maximum of 4 swap partitions is recommended in the \index{FreeBSD Handbook}FreeBSD Handbook.  Later on, we will be able to select swap partitions by mounting them and using commands like \texttt{swapon swapoff}.\\
 
 To put the ZFS partition on the remaining disks:\\\\
 \texttt{gpart create -s SCHEME DISK\_DEVICE}\\\\
@@ -446,7 +482,7 @@ We chose at this point to do some experimental installs.  For clarity, notes on 
 \item Prepare commands in advance to reduce complexity.
 \end{itemize}
 
-From our testing, we recognizes that a Live CD offered the best answer for an immutable system.  It does come at the price of some instability.  The "El Torrito" discs have a limited set of services.  Adjusting the configuration of the operating system means drafting, burning, and testing a new disc.  The "shell" instance on a FreeBSD installation disc is reportedly less stable; but, we did not know why or how it was less stable than a normal operating system.  We worked through our disc commands and kept careful notes.  Adding the physical serial number of the disc alone increased the complexity of manually typing in each command.  We discovered the need to encrypt the discs by partitions instead of the whole disc because there was a visibility problem during the execution of discovering and attaching the discs.  There was a poorly documented detail about protecting the disc metadata and keys.  The keys are provided during the setup dialog; but, these highly important items will disappear after the setup process closes.  This means it is important that an operator recognize the need to intercept and to record these keys.  Without them, a later recovery of a disc is impossible.  Since one typo would derail our experimental setups, we had to keep a second support computer on hand to record notes and consult references.  
+From our testing, we recognizes that a Live CD offered the best answer for an immutable system.  It does come at the price of some instability.  The "El Torrito" discs have a limited set of services.  Adjusting the configuration of the operating system means drafting, burning, and testing a new disc.  The "shell" instance on a \index{FreeBSD}FreeBSD installation disc is reportedly less stable; but, we did not know why or how it was less stable than a normal operating system.  We worked through our disc commands and kept careful notes.  Adding the physical serial number of the disc alone increased the complexity of manually typing in each command.  We discovered the need to encrypt the discs by partitions instead of the whole disc because there was a visibility problem during the execution of discovering and attaching the discs.  There was a poorly documented detail about protecting the disc metadata and keys.  The keys are provided during the setup dialog; but, these highly important items will disappear after the setup process closes.  This means it is important that an operator recognize the need to intercept and to record these keys.  Without them, a later recovery of a disc is impossible.  Since one typo would derail our experimental setups, we had to keep a second support computer on hand to record notes and consult references.  
 
 %------------------------------------------------
 
@@ -647,7 +683,7 @@ Create a mountpoint so that we will be able to mount the zpool without errors as
 %----------------------------------------------------------------------------------------
 %	CHAPTER
 %----------------------------------------------------------------------------------------
-\chapter{FreeBSD Tape Operations}
+\chapter{\index{FreeBSD}FreeBSD Tape Operations}
 \begin{center}\vspace{-0.5\baselineskip}\parbox{0.85\textwidth}{\small\itshape
 We explored the planning and use of LTO tape as a resource for storing backups.  We describe common commands, patterns of MT and TAR commands.  We recommend some techniques for testing, rehearsing, and using tape archives.\par}\end{center}
 \section{Introduction}
@@ -669,7 +705,7 @@ Our plan is to write a file to tape, eject the tape, and be able to read the fil
 
 \section{Results}
 
-We used a Dell T610 tower computer with an LTO3 single deck tape machine on board.  We have some LTO3 tapes that can be used with it.  Our tape drivers and common commands are built into FreeBSD.
+We used a Dell T610 tower computer with an LTO3 single deck tape machine on board.  We have some LTO3 tapes that can be used with it.  Our tape drivers and common commands are built into \index{FreeBSD}FreeBSD.
 
 Warning:  We want to use the nsa driver.  There is an sa driver, but it has some limitations.  When we tried using sa, we were not able to properly advance down the tape through multiple file markers.  Use nsa for the the driver.
 
@@ -836,7 +872,7 @@ Tape backups and hard drive backups might be easily and securely routed to an of
 
 %\printbibliography % Output the bibliography
 \section{References}
-A.  Books – none.  2023 versions of the FreeBSD handbook don’t cover tape operations.
+A.  Books – none.  2023 versions of the \index{FreeBSD Handbook}FreeBSD handbook don’t cover tape operations.
 
 B.  man pages – \texttt{mt}, \texttt{tar} man pages.
 
@@ -847,4 +883,8 @@ C.  URLs – FreeBSD man pages for above.
 Text with\footnote{First note.} inline references.
 More text\footnote{Second note.}
 \printchapterendnotes
+
+\backmatter
+\printindex
+
 \end{document}
