@@ -26,7 +26,7 @@
 \contentsline {subsection}{\numberline {1.2.17}Goals for Amnesiac Systems}{11}{}%
 \contentsline {section}{\numberline {1.3}Results}{11}{}%
 \contentsline {subsection}{\numberline {1.3.1}Configure for SWAP Disk, ZFS Cache, ZFS SLOG Mirror, and ZFS RAIDz2}{12}{}%
-\contentsline {subsection}{\numberline {1.3.2}Startup with \texttt {boontonly.iso}}{12}{}%
+\contentsline {subsection}{\numberline {1.3.2}Startup with \texttt {bootonly.iso}}{12}{}%
 \contentsline {subsection}{\numberline {1.3.3}Mount the USB to Save the Metadata Backup File}{13}{}%
 \contentsline {subsection}{\numberline {1.3.4}Create Swap Disk in Bay 0}{13}{}%
 \contentsline {subsection}{\numberline {1.3.5}Create ZFS Cache in Bay 1}{13}{}%

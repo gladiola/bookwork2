@@ -11,6 +11,7 @@
 \indexentry{RAIDZ-2}{2}
 \indexentry{FreeBSD}{3}
 \indexentry{gpart}{3}
+\indexentry{zpool!comment}{4}
 \indexentry{FreeBSD Mastery:  ZFS}{4}
 \indexentry{RAIDZ-2}{4}
 \indexentry{amensiac}{4}
@@ -125,6 +126,7 @@
 \indexentry{gpart!modify}{17}
 \indexentry{gpart!show}{17}
 \indexentry{geli!status}{17}
+\indexentry{zpool}{17}
 \indexentry{swapon}{17}
 \indexentry{swapinfo}{17}
 \indexentry{gpart!resize}{18}
@@ -154,6 +156,9 @@
 \indexentry{swapon}{19}
 \indexentry{swapon}{19}
 \indexentry{swapinfo}{19}
+\indexentry{zpool}{19}
+\indexentry{zpool}{19}
+\indexentry{zpool}{19}
 \indexentry{FreeBSD}{29}
 \indexentry{FreeBSD}{29}
 \indexentry{FreeBSD Handbook}{34}

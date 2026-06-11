@@ -85,8 +85,9 @@
 
   \indexspace
 
-  \item zpool
+  \item zpool, 17, 19
     \subitem add, 10
+    \subitem comment, 4
     \subitem create, 10
 
 \end{theindex}

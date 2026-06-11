@@ -102,7 +102,7 @@ bindingoffset=0.12in]{geometry}
 
 % Title page simple
 \title{{\chapterfont Coding and Configuration \\for Secure Systems in BSDs}}
-\author{John O\string'Keefe-Odom, ALM}
+\author{John O\string'Keefe-Odom}
 \date{}
 
 \begin{document}
@@ -116,7 +116,7 @@ bindingoffset=0.12in]{geometry}
 \chapter*{Author}
 \addcontentsline{toc}{chapter}{Author}
 
-John O\string'Keefe-Odom received a Master of Liberal Arts (ALM) in Extension Studies in the field of Cybersecurity from Harvard Univerisity, Harvard University Extension School in 2026.  He holds various technical certifications in cybersecurity including:  CISSP, CSSLP, CCSP, SecurityX, PenTest+, CySA+,  Security+, and Linux+.  He has worked as a senior application security engineer for various companies for over ten years.  
+John O\string'Keefe-Odom received a Master of Liberal Arts (ALM) in Extension Studies in the field of Cybersecurity from Harvard Univerisity, Harvard University Extension School in 2026.  He holds various technical certifications in cybersecurity including:  CISSP, CSSLP, CCSP, SecurityX, PenTest+, CySA+, Security+, and Linux+.  He has worked as a senior application security engineer and software engineer for various companies for over ten years.  
 
 
 %----------------------------------------------------------------------------------------
@@ -282,7 +282,7 @@ We need to be able to detect the drives and partitions that we want to work with
       \texttt{[Host]-[PositionNumber 0-7]-[Serial\_Number]}\footnote{This pattern of coordinating host computer, bay position, and drive serial number was recommended by Lucas and Jude.  Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.}\\
     ZFS Compression & Faster performance: less space\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.} &
       \texttt{zfs set compress=gzip-6 [DIRECTORY]}\footnote{zfs set shown in:  “Zfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zfs&apropos=0&sektion=0&manpath=FreeBSD+14.0-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}  \\
-    ZFS zpool comment& Make a note on the pool\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.} &
+    ZFS \index{zpool!comment}zpool comment& Make a note on the pool\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.} &
       \texttt{zfs set comment="-"}\footnote{zfs set shown in:  “Zfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zfs&apropos=0&sektion=0&manpath=FreeBSD+14.0-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}  \\
     quota\footnote{“Chapter 6 Managing ZFS File Systems (Solaris ZFS Administration Guide).” \url{Docs.oracle.com, docs.oracle.com/cd/E19120-01/open.solaris/817-2271/6mhupg6m3/index.html}.}& Limit growth\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.} & --- \\
     reservation\footnote{“Chapter 6 Managing ZFS File Systems (Solaris ZFS Administration Guide).” \url{Docs.oracle.com, docs.oracle.com/cd/E19120-01/open.solaris/817-2271/6mhupg6m3/index.html}.} & Set aside space for directory and its children\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.} & --- \\
@@ -530,7 +530,7 @@ We had some mis-aligned partitions with RAIDZ2 work for Blondie.  We were using 
 
 We used  \index{gpart}gpart delete to delete each partition.  Then we used  \index{gpart}gpart destroy to delete the partition table for the whole disk.  In the end,  \index{gpart}gpart showed us only the CD.
 
-\subsection{Startup with \texttt{boontonly.iso}}
+\subsection{Startup with \texttt{bootonly.iso}}
 For this run, we’ll begin by using the boot-only disk.  We won’t plan to ever boot from these hard drives.  We’ll just use the shell on the CD.  As with the others, we’ll mount a USB to store metadata information.  We’ll partition and encrypt the disks.  In the following examples, we provide the actual serial numbers for the hard drives that were used.  This example was derived from notes we maintained during experimentation; serial numbers in other instances will vary, of course.
 
 \subsection{Mount the USB to Save the Metadata Backup File}
@@ -631,7 +631,7 @@ We got through all that, and found that we had named a file incorrectly.  During
 
 \texttt{ \index{gpart!show}gpart show}\footnote{Ibid.} and \texttt{\index{geli!status}geli status}\footnote{“geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.} should show our drives as we expect them to be.
 
-At this point, all of the drives should be partitioned and decrypted and attached.  We can build a zpool for our ZFS file system. We can attach that swap drive for the benefit of our operating system right now.
+At this point, all of the drives should be partitioned and decrypted and attached.  We can build a \index{zpool}zpool for our ZFS file system. We can attach that swap drive for the benefit of our operating system right now.
 
 
 \subsection{To Use the Swap Disk}
@@ -681,11 +681,11 @@ To add on all the other swap partitions:\\\\
 \texttt{\index{swapon}swapon /dev/mfid7p1.eli}\footnote{Ibid.}\\
 \texttt{\index{swapinfo}swapinfo -h}\footnote{Ibid.}\\
 
-\subsection{Create the zpool for BLONDIE}
-We’ll now create a mountpoint on the tmpfs, create the zpool, and then add in the cache and SLOG mirrored disks.
+\subsection{Create the \index{zpool}zpool for BLONDIE}
+We’ll now create a mountpoint on the tmpfs, create the \index{zpool}zpool, and then add in the cache and SLOG mirrored disks.
 
 \subsection{Create a mountpoint}
-Create a mountpoint so that we will be able to mount the zpool without errors as we create it.\\
+Create a mountpoint so that we will be able to mount the \index{zpool}zpool without errors as we create it.\\
 
 \noindent\texttt{mkdir /tmp/BLONDIE}\footnote{“mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
