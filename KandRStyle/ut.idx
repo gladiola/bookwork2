@@ -3,7 +3,9 @@
 \indexentry{live CD}{1}
 \indexentry{amensiac}{1}
 \indexentry{NIST 800-88!Purge}{1}
+\indexentry{dd}{1}
 \indexentry{FreeBSD}{1}
+\indexentry{LTO III tape}{1}
 \indexentry{RAIDZ-2}{1}
 \indexentry{geli}{2}
 \indexentry{RAIDZ-2}{2}
@@ -14,7 +16,7 @@
 \indexentry{amensiac}{4}
 \indexentry{amensiac}{5}
 \indexentry{RAIDZ-2}{5}
-\indexentry{gpart}{5}
+\indexentry{gpart}{6}
 \indexentry{USB!drive}{7}
 \indexentry{2FA}{7}
 \indexentry{TOTP}{7}

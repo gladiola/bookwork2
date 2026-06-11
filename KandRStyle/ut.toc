@@ -11,10 +11,10 @@
 \contentsline {subsection}{\numberline {1.2.2}Incremental Advancement to Amnesiac System}{3}{}%
 \contentsline {subsection}{\numberline {1.2.3}Identifying and Allocating ZFS Drive Qualities}{3}{}%
 \contentsline {subsection}{\numberline {1.2.4}What are we going to want the ZFS kit to do? How are we going to use the drives? How can we wrestle with this new type of configuration?}{4}{}%
-\contentsline {subsection}{\numberline {1.2.5}What We Can Learn From Installing an OS}{5}{}%
+\contentsline {subsection}{\numberline {1.2.5}What We Can Learn From Installing an OS}{6}{}%
 \contentsline {subsection}{\numberline {1.2.6}Basic Operating System Installation Goals}{6}{}%
 \contentsline {subsection}{\numberline {1.2.7}Main Steps for FreeBSD Installation from \texttt {bsdinstall}}{6}{}%
-\contentsline {subsection}{\numberline {1.2.8}No Root Password}{6}{}%
+\contentsline {subsection}{\numberline {1.2.8}No Root Password}{7}{}%
 \contentsline {subsection}{\numberline {1.2.9}Be Able to Build the Keys}{7}{}%
 \contentsline {subsection}{\numberline {1.2.10}Partition, Mount, and Use a Thumbdrive from Live Disc's Shell}{8}{}%
 \contentsline {subsection}{\numberline {1.2.11}Start the Box and the Live Disk's Shell}{8}{}%

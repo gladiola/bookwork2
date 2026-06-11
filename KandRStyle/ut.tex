@@ -116,7 +116,7 @@ bindingoffset=0.12in]{geometry}
 \chapter*{Author}
 \addcontentsline{toc}{chapter}{Author}
 
-Your author bio goes here...
+John O\string'Keefe-Odom received a Master of Liberal Arts (ALM) in Extension Studies in the field of Cybersecurity from Harvard Univerisity, Harvard University Extension School in 2026.  He holds various technical certifications in cybersecurity including:  CISSP, CSSLP, CCSP, SecurityX, PenTest+, CySA+,  Security+, and Linux+.  He has worked as a senior application security engineer for various companies for over ten years.  
 
 
 %----------------------------------------------------------------------------------------
@@ -135,9 +135,7 @@ Your foreword text goes here...
 
 Your acknowledgements text goes here...
 
-With our chosen style of citations, we tried to provide references that would withstand common lab use and academic rigor.  We provided in-chapter sections for convenient references to books, man pages, and websites.  We also continued with inline footnoting for chapter endnotes; we especially noted various computer commands and technologies since they are fundamentally derivative works upon which we depend.  This made for a lot of references and some duplicity.  
-
-Unfortunately, we've seen indications that political activitists will attempt to subject manuscripts to unduly harsh automated scrutiny.  Arguably, Harvard President Claudine Gay's time in academic leadership came to a harsh and unfair end when her past work was subjected to such an analysis.  Near that time, several professional academics aligned with Harvard were targeted with similar examinations that may have been racially prejudicial and politically motivated by conservative authoritarians.  These instances of harsh scrutiny seemed to go beyond the regular pursuit of academic rigor and its associated quest for truth.  It all seemed politically motivated; it must have come as an unfair surprise so many years after the original research and publication.  These days, no one can know if they'll be subject to such a harsh and unfair manipulation of the academic process.  Since my past education includes a graduation from Harvard, I would be loathe to bring shame onto the institution unfairly.  We have cited generously.
+With our chosen style of citations, we tried to provide references that would withstand common lab use and academic rigor.  We provided in-chapter sections for convenient references to books, man pages, and websites.  We also continued with inline footnoting for chapter endnotes; we especially noted various computer commands and technologies since they are fundamentally derivative works upon which we depend.  This made for a lot of references and some duplicity.  We have cited generously.
 
 %----------------------------------------------------------------------------------------
 %	Introduction
@@ -178,17 +176,17 @@ Your introduction text goes here...
 
 We're starting with a Dell T610 Server.  Made in 2011, this machine is about ten years old.  We purchased this at a government e-waste auction.  She needed some cleanup.  We started on the front lawn, blowing out the dust with a leafblower.  
 
-Most of the time servers from these auctions will have minimal RAM.  Usually the drives and any good accessories will be stripped out.  Anytime we get a hard drive, from any source, one of the first actions we take is to erase the drives to NIST 800-88 Purge\index{NIST 800-88!Purge} with dedicated devices.  That kind of erasing can be done with dd in Kali or \index{FreeBSD}FreeBSD; but, the drive erasers usually have a verification feature that's helpful.  
+Most of the time servers from these auctions will have minimal RAM.  Usually the drives and any good accessories will be stripped out.  Anytime we get a hard drive, from any source, one of the first actions we take is to erase the drives to NIST 800-88 Purge\index{NIST 800-88!Purge}\footnote{Chandramouli, Ramaswamy. Guidelines for Media Sanitization. 2025, \url{nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r2.pdf}, \url{https://doi.org/10.6028/nist.sp.800-88r2}.} with dedicated devices.  That kind of erasing can be done with \index{dd}\texttt{dd} in Kali or \index{FreeBSD}FreeBSD; but, the drive erasers usually have a verification feature that's helpful.  
 \subsection{Hardware Configuration}
 This is my favorite computer.  I've named her "Blondie" after Debbie Harry's New Wave band.\footnote{“Blondie | the Official Website of Blondie, Featuring Tour Dates, Presale Ticketing, News, the Official Store and More.” \url{Blondie.net}, 2026, blondie.net/. Accessed 10 June 2026.}
 
 Now, she's configured with:
 \begin{itemize}
 	\item A DVD RW drive
-    	\item A LTO III\footnote{“LTO Ultrium 3: Product Views | Fujifilm [United States].” Fujifilm.com, 2026, \url{www.fujifilm.com/us/en/business/data-storage/data-storage-media/lto-ultrium-3/product-views}. Accessed 10 June 2026.} tape backup unit
+    	\item A \index{LTO III tape}LTO III\footnote{“LTO Ultrium 3: Product Views | Fujifilm [United States].” Fujifilm.com, 2026, \url{www.fujifilm.com/us/en/business/data-storage/data-storage-media/lto-ultrium-3/product-views}. Accessed 10 June 2026.} tape backup unit
     	\item In her 8 drive bay, we have:
 	\begin{itemize}
-		\item Two Velociraptor\footnote{''WD VelociRaptor ® SATA Hard Drives'' \url{https://theretroweb.com/storage/documentation/wd6000-velociraptor-68407cb5c0c96653507203.pdf}} 80GB 10000 rpm drives.
+		\item Two VelociRaptor\footnote{''WD VelociRaptor ® SATA Hard Drives'' \url{https://theretroweb.com/storage/documentation/wd6000-velociraptor-68407cb5c0c96653507203.pdf}} 80GB 10000 rpm drives.
 		\begin{itemize}
 			\item We'll use these in a mirror configuration to hold the main OS.
 		\end{itemize}
@@ -672,7 +670,7 @@ Then we need to establish encryption for all of those.\\
 \texttt{\index{geli!init}geli init -l 256 mfid0p6}\footnote{Ibid.}\\
 \texttt{\index{geli!attach}geli attach mfid0p6}\footnote{Ibid.}\\
 
-using \texttt{\index{swapinfo}swapinfo}\footnote{“swapon.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=swapon&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}, \texttt{\index{swapon}swapon}\footnote{Ibid.} and \texttt{\index{swapoff}swapoff}\footnote{Ibid.}, we were able to remove some of the other swap partitions and add on these.  Did see a kernel limit on swap.  Total configured swap exceeded kern.maxswzone (98087976 pages).  We could tune the kernel, or we could reduce swap.  For now, we reduce swap from 384GB to 324GB.
+Using \texttt{\index{swapinfo}swapinfo}\footnote{“swapon.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=swapon&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}, \texttt{\index{swapon}swapon}\footnote{Ibid.} and \texttt{\index{swapoff}swapoff}\footnote{Ibid.}, we were able to remove some of the other swap partitions and add on these.  Did see a kernel limit on swap.  Total configured swap exceeded kern.maxswzone (98087976 pages).  We could tune the kernel, or we could reduce swap.  For now, we reduce swap from 384GB to 324GB.
 
 Simliarly, we could add on the other swap partitions, although in our current use, we probably won’t need them.  They would serve us better in cases where we were doing more intensive work, or working on another machine.  We can mount them now, anyway, to see that it can be done.
 
