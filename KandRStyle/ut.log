@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  11 JUN 2026 09:34
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  11 JUN 2026 09:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2721,7 +2721,9 @@ no(0)/m/n/10 man.freebsd.org/cgi/man.cgi?
 
 ] [36
 
-] (./ut.gls) [37] [38
+] (./ut.gls) [37
+
+] [38
 
 ]
 runsystem(makeindex ut.idx)...executed safely (allowed).
@@ -2739,12 +2741,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 15401 strings out of 475846
- 299265 string characters out of 5781395
- 1959879 words of memory out of 5000000
- 36234 multiletter control sequences out of 15000+600000
+ 15406 strings out of 475846
+ 299424 string characters out of 5781395
+ 1958879 words of memory out of 5000000
+ 36239 multiletter control sequences out of 15000+600000
  562269 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 91i,15n,117p,2246b,470s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 91i,15n,117p,2246b,473s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on ut.xdv (51 pages, 735052 bytes).
+Output written on ut.xdv (51 pages, 737036 bytes).
