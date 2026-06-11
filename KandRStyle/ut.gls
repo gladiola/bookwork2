@@ -3,6 +3,9 @@
 \glsgroupheading{B}\relax \glsresetentrylist %
 \glossentry{bsd}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{3}}}\glsgroupskip
+\glsgroupheading{C}\relax \glsresetentrylist %
+\glossentry{cissp}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{iii}}}\glsgroupskip
 \glsgroupheading{J}\relax \glsresetentrylist %
 \glossentry{jail}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{1\delimN 2}}}%
