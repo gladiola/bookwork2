@@ -71,6 +71,10 @@ bindingoffset=0.12in]{geometry}
 \usepackage{makeidx}
 \makeindex
 
+\usepackage[toc,nonumberlist]{glossaries}
+\makeglossaries
+\input{glossary.tex}
+
 
 \usepackage{url}
 % Paragraph and list compactness
@@ -938,6 +942,7 @@ More text\footnote{Second note.}
 \printchapterendnotes
 
 \backmatter
+\printglossary[title=Glossary]
 \printindex
 
 \end{document}
