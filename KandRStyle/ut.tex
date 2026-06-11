@@ -116,7 +116,7 @@ bindingoffset=0.12in]{geometry}
 \chapter*{Author}
 \addcontentsline{toc}{chapter}{Author}
 
-John O\string'Keefe-Odom received a Master of Liberal Arts (ALM) in Extension Studies in the field of Cybersecurity from Harvard Univerisity, Harvard University Extension School in 2026.  He holds various technical certifications in cybersecurity including:  CISSP, CSSLP, CCSP, SecurityX, PenTest+, CySA+, Security+, and Linux+.  He has worked as a senior application security engineer and software engineer for various companies for over ten years.  
+John O\string'Keefe-Odom received a Master of Liberal Arts (ALM) in Extension Studies in the field of Cybersecurity from Harvard Univerisity, Harvard University Extension School, in 2026.  He received an AAS in Web Programming from Chattanooga State Community College in 2013.  He received a BA in English:  Writing from the University of Tennessee at Chattanooga in 2001.  He holds various technical certifications in cybersecurity including:  CISSP, CSSLP, CCSP, SecurityX, PenTest+, CySA+, Security+, and Linux+.  He has worked as a senior application security engineer and software engineer for various companies for over ten years.  
 
 
 %----------------------------------------------------------------------------------------
@@ -136,6 +136,8 @@ Your foreword text goes here...
 Your acknowledgements text goes here...
 
 With our chosen style of citations, we tried to provide references that would withstand common lab use and academic rigor.  We provided in-chapter sections for convenient references to books, man pages, and websites.  We also continued with inline footnoting for chapter endnotes; we especially noted various computer commands and technologies since they are fundamentally derivative works upon which we depend.  This made for a lot of references and some duplicity.  We have cited generously.
+
+We decided to set a previous book in fonts by Erik Spiekermann after seeing ``Helvetica'' by Gary Hustwit (2007). We carried that through here.  InfoOTDisp-Book is copyrighted by Ole Schaefer and Erik Spiekermann; it is published by FSI Fonts und Software GmbH.  Eurostile Extended Regular and Eurostile W01 Regular are copyrighted 2006 and 2010 by URW Design and Development.  
 
 %----------------------------------------------------------------------------------------
 %	Introduction
@@ -405,7 +407,7 @@ With the hardware booted to the LiveCD (installation disc), we select "Shell" fr
 Our main set of directions for this is in the \index{FreeBSD Handbook}FreeBSD Handbook.  We look carefully at the sections for USB storage and "Adding Disks"
 \subsection{Be Able to Plug in the USB Thumbdrive and Find Its Logical Address}
 
-\texttt{\index{camcontrol!devlist}camcontrol devlist}\\
+\texttt{\index{camcontrol!devlist}camcontrol devlist}\footnote{“camcontrol.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=camcontrol&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
 This should show the USB drive.  If the list is long, we can pipe it to more and slowly advance through the list.  In our case, the USB was at da0.  
 
@@ -413,9 +415,9 @@ The listing should also show any other storage device that's plugged in to the m
 
 \subsection{Be Able to Partition the USB}
 Since our USB has not been prepared for use with anything, we have to partition it.  We can pretty much use the default commands fro 17.2 "Adding Disks" to set up the drive.  Here, we create a simple UFS file system and mount it to a directory that we'll put in /tmp. If our USB is already partitioned, we would want to skip this part.  \\\\
-\texttt{\index{gpart!create}gpart create -s GPT da0}\\
-\texttt{\index{gpart!add}gpart add -t freebsd-ufs -a 1M da0}\\
-\texttt{\index{newfs}newfs -U /dev/da0p1}\\\\
+\texttt{\index{gpart!create}gpart create -s GPT da0}\footnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026}\\
+\texttt{\index{gpart!add}gpart add -t freebsd-ufs -a 1M da0}\footnote{Ibid.}\\
+\texttt{\index{newfs}newfs -U /dev/da0p1}\footnote{“newfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=newfs&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
 Mount the USB to the /tmp Directory:\\\\
 \texttt{\index{mkdir}mkdir /tmp/someDir}\footnote{“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 \texttt{\index{mount}mount /dev/da0p1 /tmp/someDir}\footnote{“Mount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
