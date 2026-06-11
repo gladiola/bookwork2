@@ -200,7 +200,7 @@ Now, she's configured with:
 		\end{itemize}
 		\item Four 500GB hard drives
 		\begin{itemize}
-			\item We'll use this as a \index{RAIDZ-2}RAIDZ-2 array to hold the jails.
+			\item We'll use this as a \index{RAIDZ-2}RAIDZ-2 array to hold the \glspl{jail}.
 			\item We have some smaller SAS drives.
 			\item We have some SATA drives.
 		\end{itemize}
@@ -234,7 +234,7 @@ The server does not have:
 \subsection{Intentions:  Paving the Road to Jails}
 We'll use the box for development.  It'll be our main development server.  We'll use it with programs that we compile on a nearby poudriere package building box.  In those package builds, we have segregated our builds into a pattern of jails that mimic the types of jails that will be needed on most of our computers.  
 
-So, there is a jail for functional groups like:  development tools, offensive and defensive security programs, browsers, desktop software, and so on.  Poudriere jails can be filled with whatever sets of programs we like.  For successful builds, we find its best to keep the jails small.  
+So, there is a \gls{jail} for functional groups like:  development tools, offensive and defensive security programs, browsers, desktop software, and so on.  Poudriere jails can be filled with whatever sets of programs we like.  For successful builds, we find its best to keep the jails small.  
 
 There will be three main groups of drives:
 \begin{itemize}
@@ -267,7 +267,7 @@ Later on, we'll set VDEVs with ZFS; but, from this point on, we'll basically ign
 With the baseboard prepared, and the BIOS set to allow us to boot from disc, we'll get started with a plain install of \index{FreeBSD}FreeBSD to the first two drives in a mirror configuration.
 
 \subsection{Incremental Advancement to Amnesiac System}
-With all of the manual coding and configuration needed to set up an amnesiac system like the one we desired, it was a big change from the normal BSD installs we had done for several years.  Our first pass at building an amnesiac system decayed into manually scripting a regular operating system installation that had most of the features we desired in the amnesiac system.  Both the on-disc OS system and the amnesiac system are detailed below.  
+With all of the manual coding and configuration needed to set up an amnesiac system like the one we desired, it was a big change from the normal \gls{bsd} installs we had done for several years.  Our first pass at building an amnesiac system decayed into manually scripting a regular operating system installation that had most of the features we desired in the amnesiac system.  Both the on-disc OS system and the amnesiac system are detailed below.  
 
 \subsection{Identifying and Allocating ZFS Drive Qualities}
 We need to be able to detect the drives and partitions that we want to work with using geom, \index{gpart}gpart, and zfs commands.  If, for some reason, you can't find those drives, then you need to address that.  While working with this particular computer, I've found that the leading cause of failing to detect a drive goes back to the VDEV assignment in the hardware RAID.  If the drive were pulled, this particular RAID card will need to have those configuration changes addressed.  Often, this means rebooting the machine.  It could be done through the iDRAC baseboard controller in some models; but the one we have here is not configured to do those tasks.
