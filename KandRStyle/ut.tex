@@ -345,7 +345,7 @@ The unused space on the drives (a blank partition of 15\%) may look like we're g
 
 
 \subsection{What We Can Learn From Installing an OS}
-Later on, we'll install the other drives wtih \index{gpart}gpart and zfs commands.  This first pair, through, we could do with bsdinstall.  If we choose that, though, then we must commit the whole disk to the process.  That would be how we would normally stand up a disk drive.  In this case, we'll conduct a manual process that mimics the main steps of bsdinstall to show that the installation can be done manually.  Part of these same kinds of steps are critical tasks when administrating and installing jails.
+Later on, we'll install the other drives wtih \index{gpart}gpart and zfs commands.  This first pair, through, we could do with \index{bsdinstall}bsdinstall\footnote{ “bsdinstall.'' Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=bsdinstall&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}.  If we choose that, though, then we must commit the whole disk to the process.  That would be how we would normally stand up a disk drive.  In this case, we'll conduct a manual process that mimics the main steps of \index{bsdinstall}bsdinstall\footnote{Ibid.} to show that the installation can be done manually.  Part of these same kinds of steps are critical tasks when administrating and installing jails.
   
 \subsection{Basic Operating System Installation Goals}
 We're going to do an early phase, basic installation of the OS.  At this point, we'll really only set up a pair of users and some plain vanilla settings for the OS.  We want to be able to:
@@ -358,8 +358,11 @@ We're going to do an early phase, basic installation of the OS.  At this point, 
 We can come back later and make a more sophisticated environment.  At this stage, we will just lay the foundation for that work.  If we don't get the ZFS kit stood up, then our more complex work with jails won't have an environment in which to thrive.
 
 
-\subsection{Main Steps for FreeBSD Installation from \texttt{bsdinstall}}
-We can see that bsdinstall is broken up into about a dozen main segments.  They are:
+\subsection{Main Steps for FreeBSD Installation from \index{bsdinstall}bsdinstall}
+\protect\footnote{"bsdinstall.'' Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=bsdinstall&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}}
+
+We can see that \index{bsdinstall}\texttt{bsdinstall}
+\footnote{"bsdinstall.'' Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=bsdinstall&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}} is broken up into about a dozen main segments.  They are:
 \begin{itemize}
 \item Keyboard mapping
 \item Hostname
