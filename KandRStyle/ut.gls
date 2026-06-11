@@ -18,13 +18,14 @@
 		\setentrycounter[]{page}\glsnumberformat{1\delimN 2}}}\glsgroupskip
 \glsgroupheading{N}\relax \glsresetentrylist %
 \glossentry{nic}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{2}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{2}}}%
+\glossentry{nist}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{1}}}\glsgroupskip
 \glsgroupheading{P}\relax \glsresetentrylist %
 \glossentry{poudriere}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{2}}}\glsgroupskip
 \glsgroupheading{R}\relax \glsresetentrylist %
 \glossentry{ram}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{iii}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{1\delimN 2}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{5}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{7}\delimN 
