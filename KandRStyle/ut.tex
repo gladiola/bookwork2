@@ -96,7 +96,7 @@ bindingoffset=0.12in]{geometry}
   commentstyle=\itshape\color{gray},
   numbers=left, numberstyle=\tiny\color{gray}, numbersep=6pt,
   stepnumber=5,
-  frame=none, xleftmargin=2em,
+  f\gls{ram}e=none, xleftmargin=2em,
   tabsize=4, breaklines=true, showstringspaces=false,
   columns=fullflexible
 }
@@ -118,8 +118,7 @@ bindingoffset=0.12in]{geometry}
 \chapter*{Author}
 \addcontentsline{toc}{chapter}{Author}
 
-John O\string'Keefe-Odom received a Master of Liberal Arts (ALM) in Extension Studies in the field of Cybersecurity from Harvard Univerisity, Harvard University Extension School, in 2026.  He received an AAS in Web Programming from Chattanooga State Community College in 2013.  He received a BA in English:  Writing from the University of Tennessee at Chattanooga in 2001.  He holds various technical certifications in cybersecurity including:  \gls{cissp}, \gls{csslp}, \gls{ccsp}, SecurityX, PenTest+, CySA+, Security+, and Linux+.  He has worked as a senior application security engineer and software engineer for various companies for over ten years.  
-
+John O\string'Keefe-Odom received a Master of Liberal Arts (ALM) in Extension Studies in the field of Cybersecurity from Harvard Univerisity, Harvard University Extension School, in 2026.  He received an AAS in Web Prog\gls{ram}ming from Chattanooga State Community College in 2013.  He received a BA in English:  Writing from the University of Tennessee at Chattanooga in 2001.  He holds various technical certifications in cybersecurity including:  \gls{cissp}, \gls{csslp}, \gls{ccsp}, SecurityX, PenTest+, CySA+, Security+, and Linux+.  He has worked as a senior application security engineer and software engineer for various companies for over ten years.  
 
 %----------------------------------------------------------------------------------------
 %	Foreword
@@ -159,7 +158,7 @@ Your introduction text goes here...
 \chapter{Amnesiac Systems in FreeBSD}
 
 
-%This template is tuned for a compact, classic look: narrow typeblock, Garamond body, and monospaced code.
+%This template is tuned for a compact, classic look: narrow typeblock, Ga\gls{ram}ond body, and monospaced code.
 
 %\begin{lstlisting}[language=KRC,caption={Hello world}]
 %#include <stdio.h>
@@ -174,13 +173,13 @@ Your introduction text goes here...
 
 
 
-		\noindent In this technical note, we explore configurations of the \index{FreeBSD}FreeBSD operating system.  With a goal of creating an \index{amensiac}amensiac system that keeps the operating system separate from working storage drives, we experiment with various configurations.  We demonstrate the planning of drive configuration coding and the reasoning behind the choices.  First, we code a system that uses the operating system on the storage drive discs.  Then we evolve the plan into using a live cd\index{live CD} for operating system use with drives that are connected to the immutable system in RAM via configuration code.  Using an \index{amensiac}amensiac system like this, we would be able to reset the operating system to a known immutable state with every startup.  The drives could be disconnected and reattached to other systems for various purposes.  Throughout, we cover specific commands for drive and operating system management and operation.
+		\noindent In this technical note, we explore configurations of the \index{FreeBSD}FreeBSD operating system.  With a goal of creating an \index{amensiac}amensiac system that keeps the operating system separate from working storage drives, we experiment with various configurations.  We demonstrate the planning of drive configuration coding and the reasoning behind the choices.  First, we code a system that uses the operating system on the storage drive discs.  Then we evolve the plan into using a live cd\index{live CD} for operating system use with drives that are connected to the immutable system in \gls{ram} via configuration code.  Using an \index{amensiac}amensiac system like this, we would be able to reset the operating system to a known immutable state with every startup.  The drives could be disconnected and reattached to other systems for various purposes.  Throughout, we cover specific commands for drive and operating system management and operation.
 
 \section{Introduction}
 
 We're starting with a Dell T610 Server.  Made in 2011, this machine is about ten years old.  We purchased this at a government e-waste auction.  She needed some cleanup.  We started on the front lawn, blowing out the dust with a leafblower.  
 
-Most of the time servers from these auctions will have minimal RAM.  Usually the drives and any good accessories will be stripped out.  Anytime we get a hard drive, from any source, one of the first actions we take is to erase the drives to NIST 800-88 Purge\index{NIST 800-88!Purge}\footnote{Chandramouli, Ramaswamy. Guidelines for Media Sanitization. 2025, \url{nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r2.pdf}, \url{https://doi.org/10.6028/nist.sp.800-88r2}.} with dedicated devices.  That kind of erasing can be done with \index{dd}\texttt{dd} in Kali or \index{FreeBSD}FreeBSD; but, the drive erasers usually have a verification feature that's helpful.  
+Most of the time servers from these auctions will have minimal \gls{ram}.  Usually the drives and any good accessories will be stripped out.  Anytime we get a hard drive, from any source, one of the first actions we take is to erase the drives to NIST 800-88 Purge\index{NIST 800-88!Purge}\footnote{Chand\gls{ram}ouli, \gls{ram}aswamy. Guidelines for Media Sanitization. 2025, \url{nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r2.pdf}, \url{https://doi.org/10.6028/nist.sp.800-88r2}.} with dedicated devices.  That kind of erasing can be done with \index{dd}\texttt{dd} in Kali or \index{FreeBSD}FreeBSD; but, the drive erasers usually have a verification feature that's helpful.  
 \subsection{Hardware Configuration}
 This is my favorite computer.  I've named her "Blondie" after Debbie Harry's New Wave band.\footnote{“Blondie | the Official Website of Blondie, Featuring Tour Dates, Presale Ticketing, News, the Official Store and More.” \url{Blondie.net}, 2026, blondie.net/. Accessed 10 June 2026.}
 
@@ -207,8 +206,8 @@ Now, she's configured with:
 		\end{itemize}
 		\end{itemize}
 		\item We replaced the one CPU with two Xeon 5550\footnote{Intel® Xeon® Processor 5500 Series an Intelligent Approach to IT Challenges. \url{www.intel.com/content/dam/doc/product-brief/xeon-5500-server-brief.pdf.}} quad cores and added a cooling tower.
-		\item We added more RAM.  Currently, we're at 196GB.
-		\item We added some more NICs.
+		\item We added more \gls{ram}.  Currently, we're at 196GB.
+		\item We added some more \gls{nic}s.
 		\begin{itemize}
 			\item We have four for the jails.
 			\item We have two for the OS.
@@ -228,14 +227,14 @@ The drives we're using are older, but we got enough copies of the drives to be a
 
 The server does not have:
 \begin{itemize}
-	\item Any type of graphics card or GPU
+	\item Any type of graphics card or \gls{gpu}
 	\item Sound cards or microphone hardware
 	\item Wireless networking or Bluetooth.
 \end{itemize}
 \subsection{Intentions:  Paving the Road to Jails}
-We'll use the box for development.  It'll be our main development server.  We'll use it with programs that we compile on a nearby poudriere package building box.  In those package builds, we have segregated our builds into a pattern of jails that mimic the types of jails that will be needed on most of our computers.  
+We'll use the box for development.  It'll be our main development server.  We'll use it with prog\gls{ram}s that we compile on a nearby poudriere package building box.  In those package builds, we have segregated our builds into a pattern of jails that mimic the types of jails that will be needed on most of our computers.  
 
-So, there is a \gls{jail} for functional groups like:  development tools, offensive and defensive security programs, browsers, desktop software, and so on.  Poudriere jails can be filled with whatever sets of programs we like.  For successful builds, we find its best to keep the jails small.  
+So, there is a \gls{jail} for functional groups like:  development tools, offensive and defensive security prog\gls{ram}s, browsers, desktop software, and so on.  \gls{poudriere} jails can be filled with whatever sets of prog\gls{ram}s we like.  For successful builds, we find its best to keep the jails small.  
 
 There will be three main groups of drives:
 \begin{itemize}
@@ -247,11 +246,11 @@ There will be three main groups of drives:
 The OS pair will hold ideas like:
 \begin{itemize}
 	\item jail configuration
-	\item main host networking and VNETs
+	\item main host networking and \gls{vnet}
 	\item host-based user accounts and configuration.
 \end{itemize}
 
-The ZFS kits will hold disconnected jails.  We'll set up a system of hierarchical jails that provide us with a development environment made up of modular jails that will be the children of an overarching parent.  These jails will communicate with each other and the parent through some custom VNETting.  We'll do all of our jail scripting, controls, and configuration manually.  Likewise, the base ZFS setup will be done with simple scripts.
+The ZFS kits will hold disconnected jails.  We'll set up a system of hierarchical jails that provide us with a development environment made up of modular jails that will be the children of an overarching parent.  These jails will communicate with each other and the parent through some custom \gls{vnet}.  We'll do all of our jail scripting, controls, and configuration manually.  Likewise, the base ZFS setup will be done with simple scripts.
 %------------------------------------------------
 
 \section{Methodologies}
@@ -306,7 +305,7 @@ After reading over \index{FreeBSD Mastery:  ZFS}FreeBSD Mastery:  ZFS by Alan Ju
 Our goal for the system will be to split up the drives into three main groups, as described in Tables \ref{tab:zfsmainuseosharddisk}, \ref{tab:zfsjailuseosharddisk}, and \ref{tab:zfsslogusedisk}.  On each drive, we'll also allow:
 \begin{itemize}
 	\item 15\% of the disk's own capacity as "Free Space" by allocating a blank partition
-	\item Swap by 100 | 50 | 33 | 25 percent of RAM (with a 25\% minimum for all disks) or similar
+	\item Swap by 100 | 50 | 33 | 25 percent of \gls{ram} (with a 25\% minimum for all disks) or similar
 	\item Remainder as one large ZFS main partition.
 \end{itemize}
 We decided we would want those qualities in an \index{amensiac}amnesiac system, with the exception of running the OS from a live disc.
@@ -340,10 +339,10 @@ The unused space on the drives (a blank partition of 15\%) may look like we're g
   \end{tabular}
 \end{table}
 
-\begin{table} \centering \caption{ZFS Jail Use Hard Disk: Initial Estimates} \label{tab:zfsjailuseosharddisk} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule & Estimate for 500\,GB HDD \\ \midrule Blank: 15\% "Free Space" & 75\,GB \\ Swap: 25\% Physical RAM (196\,GB max) & 50\,GB \\ ZFS Main Partition: Remainder & 375\,GB \\ \bottomrule \end{tabular} \end{table}
+\begin{table} \centering \caption{ZFS Jail Use Hard Disk: Initial Estimates} \label{tab:zfsjailuseosharddisk} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule & Estimate for 500\,GB HDD \\ \midrule Blank: 15\% "Free Space" & 75\,GB \\ Swap: 25\% Physical \gls{ram} (196\,GB max) & 50\,GB \\ ZFS Main Partition: Remainder & 375\,GB \\ \bottomrule \end{tabular} \end{table}
 
 
-\begin{table} \centering \caption{ZFS SLOG Log Use SSD: Initial Estimates} \label{tab:zfsslogusedisk} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule & Estimate for 120\,GB SSD \\ \midrule Blank: 15\% "Free Space" & 18\,GB \\ Swap: 25\% Physical RAM (196\,GB max) & 50\,GB \\ ZFS Log Partition: Remainder & 52\,GB \\ \bottomrule \end{tabular} \end{table}
+\begin{table} \centering \caption{ZFS SLOG Log Use SSD: Initial Estimates} \label{tab:zfsslogusedisk} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule & Estimate for 120\,GB SSD \\ \midrule Blank: 15\% "Free Space" & 18\,GB \\ Swap: 25\% Physical \gls{ram} (196\,GB max) & 50\,GB \\ ZFS Log Partition: Remainder & 52\,GB \\ \bottomrule \end{tabular} \end{table}
 
 
 \subsection{What We Can Learn From Installing an OS}
@@ -389,13 +388,13 @@ We won't set a root password because we will expect to always ssh into the root 
 
 Another risk is that we will require the ability to ssh in as root.  Later, as we establish software firewalls on the host, we will want to limit what addresses can be used to access this root with ssh.  It's a little dangerous, but it's also a little different.  
 
-We have some risk controls that will be in place.  First, we often store our keys in a special collection of \index{USB!drive}USB drives.  Next, we will have \index{2FA}2FA on the ssh that will require a \index{TOTP}TOTP (Time-based One Time Password).  Finally, we will limit what's done in this drive.  Since most of our programs and work will be done in the jails, there is a limited amount of influence that this part of the system will have.  It's there to start the box and spin up the \index{jails}jails.  If we ever have to totally destroy this installation and hook up our \index{jails}jails to another system, that is possible.
+We have some risk controls that will be in place.  First, we often store our keys in a special collection of \index{USB!drive}USB drives.  Next, we will have \index{2FA}2FA on the ssh that will require a \index{TOTP}TOTP (Time-based One Time Password).  Finally, we will limit what's done in this drive.  Since most of our prog\gls{ram}s and work will be done in the jails, there is a limited amount of influence that this part of the system will have.  It's there to start the box and spin up the \index{jails}jails.  If we ever have to totally destroy this installation and hook up our \index{jails}jails to another system, that is possible.
 
 What do we gain from no root password?  An extra measure of security.  If there is no password, then password enumeration attempts should all fail.  This not only goes for root, but it goes for other users.  Many of the automated login attacks we've seen have been simple dictionary attacks; these brute force exercises rarely attempt to account for the types of login procedures that we expect to put in place.  
 
 Not having a root password may also truncate or stop our ability to use commands like \texttt{\index{su}su} or \texttt{\index{sudo}sudo}.  As we're trying to stop privilege escalation, we'll also be stopping legitimate means of priv-esc.  It could be inconvenient, but we've used this technique before.
 
-Also, there is another risk:  leaving the needed key lying around.  For example, if we give the key to a user account operator, like ourselves, and then we import copies of the key to the box for easy use:  well, then those keys could be used and re-used locally.  This would be the equivalent for storing a plain-text password on the box.  They keys are ultimately simple text files with decorated, long, strings of hashes.  It's the software that goes with the keys, combined with the configuration of the programs for logging in to a service, that makes them special.  Switching from passwords to keys is not a perfect answer; but, it's the answer we'll use this time.
+Also, there is another risk:  leaving the needed key lying around.  For example, if we give the key to a user account operator, like ourselves, and then we import copies of the key to the box for easy use:  well, then those keys could be used and re-used locally.  This would be the equivalent for storing a plain-text password on the box.  They keys are ultimately simple text files with decorated, long, strings of hashes.  It's the software that goes with the keys, combined with the configuration of the prog\gls{ram}s for logging in to a service, that makes them special.  Switching from passwords to keys is not a perfect answer; but, it's the answer we'll use this time.
 
 If someone wishes to put a root password in place, then that's a procedure that will be easy to implement.  For now, though, there will be no root password.  And that means we have to build the keys we will use to log in.
 
@@ -442,7 +441,7 @@ Using these same principles, we can mount our USB thumbdrive, generate ssh keys,
 \texttt{\index{mkdir} mkdir /tmp/otherDir/keys}\footnote{“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 \texttt{\index{ssh-keygen} ssh-keygen -b 1024 -t rsa}\footnote{“ssh-Keygen.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=ssh-keygen&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
-During the ssh-keygen dialog, simply direct the program to save the keys to \texttt{/tmp/otherDir/keys}.  Be sure to record your passphrase somewhere.  
+During the ssh-keygen dialog, simply direct the prog\gls{ram} to save the keys to \texttt{/tmp/otherDir/keys}.  Be sure to record your passphrase somewhere.  
 
 \subsection{Be Able to Use Commands to Build Out the Drives}
 We'd like to show a quick overview of some of the drive-related commands.  These will be applied soon.
@@ -525,13 +524,13 @@ As our experimentation concluded, we had learned enough to stand a reasonable ch
 \begin{table} \centering \caption{ZFS Cache (Read Cache) Disk — Estimate of 80\,GB HDD} \label{tab:zfscachedisc} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule GEOM Disk List Mediasize & 74\,GB \\ \midrule Blank: 15\% "Free Space" & 11\,GB \\ Swap & 63\,GB \\ \bottomrule \end{tabular} \end{table}
 
 
-\begin{table} \centering \caption{ZFS SLOG Log Mirror (Write Cache) Disk — Initial Estimates} \label{tab:zfsslogmirror} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule & Estimate for 120\,GB SSD \\ \midrule GEOM Disk List Mediasize & 465\,GB \\ Blank: 15\% "Free Space" & 18\,GB \\ Swap: 25\% Physical RAM (196\,GB max) & 50\,GB \\ ZFS Log Partition: Remainder & 52\,GB \\ \bottomrule \end{tabular} \end{table}
+\begin{table} \centering \caption{ZFS SLOG Log Mirror (Write Cache) Disk — Initial Estimates} \label{tab:zfsslogmirror} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule & Estimate for 120\,GB SSD \\ \midrule GEOM Disk List Mediasize & 465\,GB \\ Blank: 15\% "Free Space" & 18\,GB \\ Swap: 25\% Physical \gls{ram} (196\,GB max) & 50\,GB \\ ZFS Log Partition: Remainder & 52\,GB \\ \bottomrule \end{tabular} \end{table}
 
 
 
-\begin{table} \centering \caption{ZFS Jail Use Hard Disk — Estimate of 500\,GB HDD} \label{tab:zfsjailusehdd} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule & Estimate for 500\,GB HDD \\ \midrule GEOM Disk List Mediasize & 465\,GB \\ Blank: 15\% "Free Space" & 75\,GB \\ Swap: 25\% Physical RAM (196\,GB max) & 50\,GB \\ ZFS Main Partition: Remainder & 375\,GB \\ \bottomrule \end{tabular} \end{table}
+\begin{table} \centering \caption{ZFS Jail Use Hard Disk — Estimate of 500\,GB HDD} \label{tab:zfsjailusehdd} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule & Estimate for 500\,GB HDD \\ \midrule GEOM Disk List Mediasize & 465\,GB \\ Blank: 15\% "Free Space" & 75\,GB \\ Swap: 25\% Physical \gls{ram} (196\,GB max) & 50\,GB \\ ZFS Main Partition: Remainder & 375\,GB \\ \bottomrule \end{tabular} \end{table}
 
-Changed config to keep the RAIDZ2 for main work.  I was having trouble with the SSDs; so, I removed them and replaced them with two 80GB Western Digital Velociraptors.  I added another WD Velociraptor for cache.  Then we added a Western Digital Blue 500GB for a swap disk.  That sounds like a lot of swap, but we hope to upgrade to near 196GB of RAM this year. So, a little more than twice that would be 400GB of swap.  The next disk size on hand was 500GB.
+Changed config to keep the RAIDZ2 for main work.  I was having trouble with the SSDs; so, I removed them and replaced them with two 80GB Western Digital Velociraptors.  I added another WD Velociraptor for cache.  Then we added a Western Digital Blue 500GB for a swap disk.  That sounds like a lot of swap, but we hope to upgrade to near 196GB of \gls{ram} this year. So, a little more than twice that would be 400GB of swap.  The next disk size on hand was 500GB.
 
 We had some mis-aligned partitions with RAIDZ2 work for Blondie.  We were using the full 500GB on the label as our actual amount of media to work with.  Since less is available, we will have to set those up again.
 
@@ -746,7 +745,7 @@ Create a mountpoint so that we will be able to mount the \index{zpool}zpool with
 We explored the planning and use of LTO tape as a resource for storing backups.  We describe common commands, patterns of MT and TAR commands.  We recommend some techniques for testing, rehearsing, and using tape archives.\par}\end{center}
 \section{Introduction}
 
-We wanted to see if it would be possible for us to make use of an LTO tape machine that was on one of our salvaged computers.  We’d often heard of the performance of using tape for backups.  We’d seen some hints about the bravery needed for working with tape in modifying old mainframe programs.  We rarely saw any strong tutorials or comprehensive directions for tape operations.
+We wanted to see if it would be possible for us to make use of an LTO tape machine that was on one of our salvaged computers.  We’d often heard of the performance of using tape for backups.  We’d seen some hints about the bravery needed for working with tape in modifying old mainf\gls{ram}e prog\gls{ram}s.  We rarely saw any strong tutorials or comprehensive directions for tape operations.
 
 The average person has almost never used tapes as a part of personal computing these days.  Businesses which do use tapes often do so as part of larger, commercial data center operations.  For many of us, the closest we’ve come to tape operations was with using cassette tapes for storage on personal machines in the 1980s.  LTO tapes are often praised but infrequently used.  We wanted to break through this mystery.
 
