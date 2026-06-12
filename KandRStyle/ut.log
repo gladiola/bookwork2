@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  11 JUN 2026 20:44
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  11 JUN 2026 20:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1606,34 +1606,11 @@ LaTeX Font Info:    Font shape `TU/CourierNew(0)/b/n' will be
 Underfull \vbox (badness 5924) has occurred while \output is active []
 
  [12]
-Overfull \hbox (131.143pt too wide) in paragraph at lines 552--554
-[]\TU/CourierNew(0)/m/n/10 gpart add -a 5K -s 395G -t freebsd-swap -l ZFS-BLOND
-IE-0-SWAP-WCC2ERZ56512
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 556--558
 
  []
 
 
-Overfull \hbox (125.14203pt too wide) in paragraph at lines 556--558
-[]\TU/CourierNew(0)/m/n/10 gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE
--1-CACHE-WXL1E40C1352
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 560--564
-
- []
-
-
-Overfull \hbox (119.14105pt too wide) in paragraph at lines 560--564
-[]\TU/CourierNew(0)/m/n/10 gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE
--2-SLOG-WXL1E4067503
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 560--564
 
  []
@@ -1644,9 +1621,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 560--564
  []
 
 
-Overfull \hbox (118.84105pt too wide) in paragraph at lines 560--564
-[]\TU/CourierNew(0)/m/n/10 gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE
--3-SLOG-WXC0CA9V8431
+Underfull \hbox (badness 10000) in paragraph at lines 560--564
+
  []
 
 
@@ -1665,31 +1641,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 567--570
  []
 
 
-Overfull \hbox (125.14203pt too wide) in paragraph at lines 567--570
-[]\TU/CourierNew(0)/m/n/10 gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDI
-E-4-SWAP-WCC2EE134983
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 567--570
 
  []
 
 
-Overfull \hbox (95.13715pt too wide) in paragraph at lines 567--570
-[]\TU/CourierNew(0)/m/n/10 gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-4-FI
-LES-WCC2EE134983
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 571--574
 
- []
-
-
-Overfull \hbox (125.14203pt too wide) in paragraph at lines 571--574
-[]\TU/CourierNew(0)/m/n/10 gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDI
-E-5-SWAP-WMC2E3914420
  []
 
 
@@ -1709,12 +1667,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 575--578
  []
 
 
-Overfull \hbox (124.84203pt too wide) in paragraph at lines 575--578
-[]\TU/CourierNew(0)/m/n/10 gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDI
-E-6-SWAP-WCC2ETT39577
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 575--578
 
  []
@@ -1731,20 +1683,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 579--582
  []
 
 
-Overfull \hbox (125.14203pt too wide) in paragraph at lines 579--582
-[]\TU/CourierNew(0)/m/n/10 gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDI
-E-7-SWAP-WCAYU2878968
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 579--582
 
- []
-
-
-Overfull \hbox (95.13715pt too wide) in paragraph at lines 579--582
-[]\TU/CourierNew(0)/m/n/10 gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-7-FI
-LES-WCAYU2878968
  []
 
 

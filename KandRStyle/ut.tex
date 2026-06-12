@@ -550,35 +550,35 @@ For this run, we’ll begin by using the boot-only disk.  We won’t plan to eve
 
 \subsection{Create Swap Disk in Bay 0}
 \texttt{\index{gpart!create}gpart create -s GPT mfid0}\footnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\
-\texttt{\index{gpart!add}gpart add -a 5K -s 395G -t freebsd-swap -l ZFS-BLONDIE-0-SWAP-WCC2ERZ56512 mfid0}\footnote{Ibid.}
+\texttt{\index{gpart!add}gpart add -a 5K -s 395G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-0-SWAP-WCC2ERZ56512 mfid0}\footnote{Ibid.}
 
 \subsection{Create ZFS Cache in Bay 1}
 \texttt{\index{gpart!create}gpart create -s GPT mfid1}\footnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-1-CACHE-WXL1E40C1352 mfid1}\footnote{Ibid.}
+\texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs \textbackslash\\-l ZFS-BLONDIE-1-CACHE-WXL1E40C1352 mfid1}\footnote{Ibid.}
 
 \subsection{Create ZFS SLOG in Bays 2 and 3}
 \texttt{\index{gpart!create}gpart create -s GPT mfid2}\footnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-2-SLOG-WXL1E4067503 mfid2}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs \textbackslash\\-l ZFS-BLONDIE-2-SLOG-WXL1E4067503 mfid2}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!create}gpart create -s GPT mfid3}\footnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs -l ZFS-BLONDIE-3-SLOG-WXC0CA9V8431 mfid3}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs \textbackslash\\ -l ZFS-BLONDIE-3-SLOG-WXC0CA9V8431 mfid3}\footnote{Ibid.}\\\\
 
 \subsection{Create ZFS Work Disks for Jails}
 \subsection{Bay 4}
 \texttt{\index{gpart!create}gpart create -s GPT mfid4}\footnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\footnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-4-FILES-WCC2EE134983 mfid4}\footnote{Ibid.}
+\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l ZFS-BLONDIE-4-FILES-WCC2EE134983 mfid4}\footnote{Ibid.}
 \subsection{Bay 5}
 \texttt{\index{gpart!create}gpart create -s GPT mfid5}\footnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-5-SWAP-WMC2E3914420 mfid5}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-5-SWAP-WMC2E3914420 mfid5}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-5-FILES-WMC2E3914420 mfid5}\footnote{Ibid.}
 \subsection{Bay 6}
 \texttt{\index{gpart!create}gpart create -s GPT mfid6}\footnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-6-SWAP-WCC2ETT39577 mfid6}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\ -l ZFS-BLONDIE-6-SWAP-WCC2ETT39577 mfid6}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-6-FILES-WCC2ETT39577 mfid6}\footnote{Ibid.}
 \subsection{Bay 7}
 \texttt{\index{gpart!create}gpart create -s GPT mfid7}\footnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap -l ZFS-BLONDIE-7-SWAP-WCAYU2878968 mfid7}\footnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-7-FILES-WCAYU2878968 mfid7}\footnote{Ibid.}\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-7-SWAP-WCAYU2878968 mfid7}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l ZFS-BLONDIE-7-FILES-WCAYU2878968 mfid7}\footnote{Ibid.}\\
 
 We should note that “Bay 7” is an observation of the physical hardware.  The device (“mfid7”) could have whatever number assigned at the end that the machine gave it.  If the hardware raid had a problem with recognizing a device, the number might not correlate to what bay it is in.  When powering up, check your geometry.  
 
@@ -637,8 +637,8 @@ Each metadata backup file was probably created with a name that does not look li
 We got through all that, and found that we had named a file incorrectly.  During experimentation, we had a typo; BAY 4 should be
 \texttt{WCC2EE134983} but that's not what we saw when we checked our work.  Not the end of the world.  We can move the .eli metadata file, and we can use  \index{gpart!modify}gpart\footnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.} modify to change the label.\\
 
-\noindent\texttt{ \index{gpart!modify}gpart modify -i 1 -l \\ZFS-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\footnote{Ibid.}\\\\
-\texttt{ \index{gpart!modify}gpart modify -i 2 -l \\ZFS-BLONDIE-4-FILES-WCC2EE134983 mfid4}\footnote{Ibid.}\\
+\noindent\texttt{ \index{gpart!modify}gpart modify -i 1 \textbackslash\\-l ZFS-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\footnote{Ibid.}\\\\
+\texttt{ \index{gpart!modify}gpart modify -i 2 \textbackslash\\-l ZFS-BLONDIE-4-FILES-WCC2EE134983 mfid4}\footnote{Ibid.}\\
 
 \texttt{ \index{gpart!show}gpart show}\footnote{Ibid.} and \texttt{\index{geli!status}geli status}\footnote{“geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.} should show our drives as we expect them to be.
 
@@ -662,10 +662,10 @@ We also have to restore mfid0 because there’s a problem with reading the metad
 \texttt{ \index{gpart!status}gpart status mfid0}\footnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 \texttt{\index{geli!attach}geli attach mfid0p1}\footnote{“geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}\\\\
 \texttt{ \index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-B-WCC2ERZ56512 mfid0}\footnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
-\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-C-WCC2ERZ56512 mfid0}\footnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-D-WCC2ERZ56512 mfid0}\footnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-E-WCC2ERZ56512 mfid0}\footnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap -l \\ZFS-BLONDIE-0-SWAP-F-WCC2ERZ56512 mfid0}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-0-SWAP-C-WCC2ERZ56512 mfid0}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-0-SWAP-D-WCC2ERZ56512 mfid0}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-0-SWAP-E-WCC2ERZ56512 mfid0}\footnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-0-SWAP-F-WCC2ERZ56512 mfid0}\footnote{Ibid.}\\\\
 
 
 Then we need to establish encryption for all of those.\\
