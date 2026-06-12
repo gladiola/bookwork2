@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  11 JUN 2026 20:50
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  12 JUN 2026 08:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -723,6 +723,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
 \Hy@SectionHShift=\skip79
+)
+(c:/texlive/2023/texmf-dist/tex/latex/xurl/xurl.sty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
 )
 (c:/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
@@ -1656,12 +1659,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 571--574
  []
 
 
-Overfull \hbox (95.13715pt too wide) in paragraph at lines 571--574
-[]\TU/CourierNew(0)/m/n/10 gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-5-FI
-LES-WMC2E3914420
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 575--578
 
  []
@@ -1669,12 +1666,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 575--578
 
 Underfull \hbox (badness 10000) in paragraph at lines 575--578
 
- []
-
-
-Overfull \hbox (94.83714pt too wide) in paragraph at lines 575--578
-[]\TU/CourierNew(0)/m/n/10 gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-6-FI
-LES-WCC2ETT39577
  []
 
 
@@ -1833,11 +1824,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 640--642
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 649--650
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 651--653
 
  []
@@ -1922,181 +1908,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 701--702
 
  []
 
-
-Overfull \hbox (10.96973pt too wide) in paragraph at lines 706--707
-\TU/InfoOTDisp(0)/b/n/10 “bsdinstall.” Freebsd.org, 2025, [][]$[][][] [] [][][]
-[][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
- []
-
-
-Overfull \hbox (47.62933pt too wide) in paragraph at lines 706--707
-[][][][][][][][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][
-][][][] [] [][][][][][][] [] [][] [] [][][][][][][][][][] []
- []
-
-
-Overfull \hbox (3.6225pt too wide) in paragraph at lines 708--709
-[][][][][] [] [][][][][][][][][][] [] [][][][][][][] [] [] [] [][][][][][][] []
- [] [] [][][][][][][] [] [][][][][][][] []
- []
-
 [19]
-Overfull \hbox (29.6264pt too wide) in paragraph at lines 710--711
-[][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][
-][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] []
- []
-
-
-Overfull \hbox (29.6264pt too wide) in paragraph at lines 712--713
-[][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][
-][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] []
- []
-
-
-Overfull \hbox (15.09972pt too wide) in paragraph at lines 714--715
-[]\TU/InfoOTDisp(0)/b/n/10 “geli(8).” Freebsd.org, 2025, [][]$[][][] [] [][][][
-][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
- []
-
-
-Overfull \hbox (21.27972pt too wide) in paragraph at lines 716--717
-[]\TU/InfoOTDisp(0)/b/n/10 “gpart(8).” Freebsd.org, 2026, [][]$[][][] [] [][][]
-[][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
- []
-
-
-Overfull \hbox (17.62445pt too wide) in paragraph at lines 716--717
-[][][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] []
- [][][][][][][] [] [][] [] [][][][][][][][][][] []
- []
-
-
-Overfull \hbox (29.6264pt too wide) in paragraph at lines 718--719
-[][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][
-][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] []
- []
-
-
-Overfull \hbox (11.65973pt too wide) in paragraph at lines 720--721
-[]\TU/InfoOTDisp(0)/b/n/10 “mkdir.” Freebsd.org, 2025, [][]$[][][] [] [][][][][
-][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
- []
-
-
-Overfull \hbox (17.62445pt too wide) in paragraph at lines 720--721
-[][][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] []
- [][][][][][][] [] [][] [] [][][][][][][][][][] []
- []
-
-
-Overfull \hbox (15.12971pt too wide) in paragraph at lines 722--723
-[]\TU/InfoOTDisp(0)/b/n/10 “mount.” Freebsd.org, 2025, [][]$[][][] [] [][][][][
-][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
- []
-
-
-Overfull \hbox (17.62445pt too wide) in paragraph at lines 722--723
-[][][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] []
- [][][][][][][] [] [][] [] [][][][][][][][][][] []
- []
-
-
-Overfull \hbox (0.50972pt too wide) in paragraph at lines 724--725
-[]\TU/InfoOTDisp(0)/b/n/10 “mt.” Freebsd.org, 2025, [][]$[][][] [] [][][][][][]
-[] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
- []
-
-
-Overfull \hbox (29.6264pt too wide) in paragraph at lines 724--725
-[][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][
-][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] []
- []
-
-
-Overfull \hbox (13.12971pt too wide) in paragraph at lines 726--727
-[]\TU/InfoOTDisp(0)/b/n/10 “newfs.” Freebsd.org, 2025, [][]$[][][] [] [][][][][
-][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
- []
-
-
-Overfull \hbox (17.62445pt too wide) in paragraph at lines 726--727
-[][][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] []
- [][][][][][][] [] [][] [] [][][][][][][][][][] []
- []
-
-
-Overfull \hbox (0.95972pt too wide) in paragraph at lines 728--729
-[]\TU/InfoOTDisp(0)/b/n/10 “rm.” Freebsd.org, 2025, [][]$[][][] [] [][][][][][]
-[] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
- []
-
-
-Overfull \hbox (29.6264pt too wide) in paragraph at lines 728--729
-[][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][
-][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] []
- []
-
-
-Overfull \hbox (4.1225pt too wide) in paragraph at lines 730--731
-[][][][][] [] [][][][][][][][][][][] [] [][][][][][][] [] [] [] [][][][][][][] 
-[] [] [] [][][][][][][] [] [][][][][][][] []
- []
-
-
-Overfull \hbox (29.6264pt too wide) in paragraph at lines 732--733
-[][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][
-][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] []
- []
-
-
-Overfull \hbox (20.09972pt too wide) in paragraph at lines 734--735
-[]\TU/InfoOTDisp(0)/b/n/10 “swapon.” Freebsd.org, 2025, [][]$[][][] [] [][][][]
-[][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
- []
-
-
-Overfull \hbox (23.62543pt too wide) in paragraph at lines 734--735
-[][][][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] 
-[] [][][][][][][] [] [][] [] [][][][][][][][][][] []
- []
-
-
-Overfull \hbox (20.10973pt too wide) in paragraph at lines 736--737
-[]\TU/InfoOTDisp(0)/b/n/10 “umount.” Freebsd.org, 2025, [][]$[][][] [] [][][][]
-[][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
- []
-
-
-Overfull \hbox (23.62543pt too wide) in paragraph at lines 736--737
-[][][][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] 
-[] [][][][][][][] [] [][] [] [][][][][][][][][][] []
- []
-
-
-Overfull \hbox (0.91972pt too wide) in paragraph at lines 738--739
-[]\TU/InfoOTDisp(0)/b/n/10 “zfs.” Freebsd.org, 2025, [][]$[][][] [] [][][][][][
-][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
- []
-
-
-Overfull \hbox (5.6225pt too wide) in paragraph at lines 738--739
-[][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][
-][][][][][] [] [][] [] [][][][][][][][][][] []
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
-Overfull \hbox (11.22972pt too wide) in paragraph at lines 740--741
-[]\TU/InfoOTDisp(0)/b/n/10 “zpool.” Freebsd.org, 2025, [][]$[][][] [] [][][][][
-][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] []
- []
+Underfull \hbox (badness 10000) in paragraph at lines 746--747
 
-
-Overfull \hbox (17.62445pt too wide) in paragraph at lines 740--741
-[][][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] []
- [][][][][][][] [] [][] [] [][][][][][][][][][] []
  []
 
 [21] [22
@@ -2105,638 +1922,38 @@ Overfull \hbox (17.62445pt too wide) in paragraph at lines 740--741
 LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 8.0pt on input line 12.
 
-Overfull \hbox (22.61125pt too wide) in paragraph at lines 2--15
-[]\TU/InfoOTDisp(0)/m/n/8 Chand[]RAMouli, []RAMaswamy. Guidelines for Media San
-itization. 2025, [][]$[][][][][][][] [] [][][][] [] [][][] [] [][][][][][][][] 
-[]
- []
-
-
-Overfull \hbox (18.81718pt too wide) in paragraph at lines 2--15
-[][][][][][][][][][][][][][][][][][][] [] [][][][] [] [][] [] [][][][][][][][][
-] [] [][][]$[][]\TU/InfoOTDisp(0)/m/n/8 , [][]$[][][][][] [] [] [] [][][] [] []
-[][] [] [][] [] [][][][] [] [][][][] []
- []
-
-
-Overfull \hbox (0.66151pt too wide) in paragraph at lines 45--62
-[][][] [] [][] [] [][] [] [][][][][][][][] [] [][][][][][][][][][][][][] [] [][
-][][][][][][][][][][][][][][][][][][] [] [][][][][][][][][][][][][][][] []
- []
-
-
-Overfull \hbox (37.99345pt too wide) in paragraph at lines 64--72
-[][]\TU/InfoOTDisp(0)/m/n/8 ”WD VelociRaptor ® SATA Hard Drives” [][]$[][][][][
-] [] [] [] [][][][][][][][][][][] [] [][][] [] [][][][][][][] [] [][][][][][][]
-[][][][][][] []
- []
-
-
-Overfull \hbox (4.4223pt too wide) in paragraph at lines 158--171
-[][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][
-][][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][] []
- []
-
-
-Overfull \hbox (4.4223pt too wide) in paragraph at lines 190--203
-[][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][
-][][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][] []
- []
-
-
-Overfull \hbox (26.06621pt too wide) in paragraph at lines 205--218
-[][][] [][] [][][][] [] [][][][][][] [] [][][] [] [][] [] [][][][][][][][][][] 
-[] [][][][] [] [][][][][][][] [] [][][][][][][][][] [] [][][][][][][][][] [] []
-[][][][] []
- []
-
-
-Overfull \hbox (26.06621pt too wide) in paragraph at lines 237--250
-[][][] [][] [][][][] [] [][][][][][] [] [][][] [] [][] [] [][][][][][][][][][] 
-[] [][][][] [] [][][][][][][] [] [][][][][][][][][] [] [][][][][][][][][] [] []
-[][][][] []
- []
-
-
-Overfull \hbox (26.06621pt too wide) in paragraph at lines 269--282
-[][][] [][] [][][][] [] [][][][][][] [] [][][] [] [][] [] [][][][][][][][][][] 
-[] [][][][] [] [][][][][][][] [] [][][][][][][][][] [] [][][][][][][][][] [] []
-[][][][] []
- []
-
-
-Overfull \hbox (26.06621pt too wide) in paragraph at lines 301--314
-[][][] [][] [][][][] [] [][][][][][] [] [][][] [] [][] [] [][][][][][][][][][] 
-[] [][][][] [] [][][][][][][] [] [][][][][][][][][] [] [][][][][][][][][] [] []
-[][][][] []
- []
-
-
-Overfull \hbox (4.4223pt too wide) in paragraph at lines 333--346
-[][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][
-][][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][] []
- []
-
-
-Overfull \hbox (26.06621pt too wide) in paragraph at lines 348--361
-[][][] [][] [][][][] [] [][][][][][] [] [][][] [] [][] [] [][][][][][][][][][] 
-[] [][][][] [] [][][][][][][] [] [][][][][][][][][] [] [][][][][][][][][] [] []
-[][][][] []
- []
-
-
-Overfull \hbox (4.4223pt too wide) in paragraph at lines 380--393
-[][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][
-][][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][] []
- []
-
-
-Overfull \hbox (26.06621pt too wide) in paragraph at lines 395--408
-[][][] [][] [][][][] [] [][][][][][] [] [][][] [] [][] [] [][][][][][][][][][] 
-[] [][][][] [] [][][][][][][] [] [][][][][][][][][] [] [][][][][][][][][] [] []
-[][][][] []
- []
-
-
-Overfull \hbox (4.4223pt too wide) in paragraph at lines 427--440
-[][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][
-][][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][] []
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23
 
 ]
-Overfull \hbox (26.06621pt too wide) in paragraph at lines 442--455
-[][][] [][] [][][][] [] [][][][][][] [] [][][] [] [][] [] [][][][][][][][][][] 
-[] [][][][] [] [][][][][][][] [] [][][][][][][][][] [] [][][][][][][][][] [] []
-[][][][] []
- []
-
-
-Overfull \hbox (4.4223pt too wide) in paragraph at lines 474--487
-[][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][
-][][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][] []
- []
-
-
-Overfull \hbox (26.06621pt too wide) in paragraph at lines 489--502
-[][][] [][] [][][][] [] [][][][][][] [] [][][] [] [][] [] [][][][][][][][][][] 
-[] [][][][] [] [][][][][][][] [] [][][][][][][][][] [] [][][][][][][][][] [] []
-[][][][] []
- []
-
-
-Overfull \hbox (4.4223pt too wide) in paragraph at lines 521--534
-[][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][
-][][][][][] [] [][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][] []
- []
-
-
-Overfull \hbox (15.68123pt too wide) in paragraph at lines 602--612
-[][] \TU/InfoOTDisp(0)/m/n/8 “bsdinstall.” Freebsd.org, 2025, [][]$[][][] [] []
-[][][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][
-][][][][][] []
- []
-
-
-Overfull \hbox (18.82465pt too wide) in paragraph at lines 602--612
-[][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][
-] [] [][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][]
- []
- []
-
-
-Overfull \hbox (14.43056pt too wide) in paragraph at lines 617--622
-[][]\TU/InfoOTDisp(0)/m/n/8 ”bsdinstall.” Freebsd.org, 2025, [][]$[][][] [] [][
-][][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][]
-[][][][][] []
- []
-
-
-Overfull \hbox (18.82465pt too wide) in paragraph at lines 617--622
-[][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][
-] [] [][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][]
- []
- []
-
-
-Overfull \hbox (14.43056pt too wide) in paragraph at lines 624--629
-[][]\TU/InfoOTDisp(0)/m/n/8 ”bsdinstall.” Freebsd.org, 2025, [][]$[][][] [] [][
-][][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][]
-[][][][][] []
- []
-
-
-Overfull \hbox (18.82465pt too wide) in paragraph at lines 624--629
-[][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][
-] [] [][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][]
- []
- []
-
-
-Overfull \hbox (20.49855pt too wide) in paragraph at lines 631--640
-[][]\TU/InfoOTDisp(0)/m/n/8 “ssh-Keygen.” Freebsd.org, 2025, [][]$[][][] [] [][
-][][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][]
-[][][][][][] []
- []
-
-
-Overfull \hbox (18.82465pt too wide) in paragraph at lines 631--640
-[][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][
-] [] [][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][]
- []
- []
-
-
-Overfull \hbox (17.95056pt too wide) in paragraph at lines 642--651
-[][]\TU/InfoOTDisp(0)/m/n/8 “camcontrol.” Freebsd.org, 2025, [][]$[][][] [] [][
-][][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][]
-[][][][][] []
- []
-
-
-Overfull \hbox (18.82465pt too wide) in paragraph at lines 642--651
-[][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][
-] [] [][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][]
- []
- []
-
-
-Overfull \hbox (24.04889pt too wide) in paragraph at lines 653--662
-[][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, [][]$[][][] [] [][][
-][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [
-] [][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 653--662
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (17.5289pt too wide) in paragraph at lines 667--676
-[][]\TU/InfoOTDisp(0)/m/n/8 “newfs.” Freebsd.org, 2025, [][]$[][][] [] [][][][]
-[][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [
-][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 667--676
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (16.4889pt too wide) in paragraph at lines 678--687
-[][]\TU/InfoOTDisp(0)/m/n/8 “Mkdir.” Freebsd.org, 2025, [][]$[][][] [] [][][][]
-[][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [
-][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 678--687
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (19.2249pt too wide) in paragraph at lines 689--698
-[][]\TU/InfoOTDisp(0)/m/n/8 “Mount.” Freebsd.org, 2025, [][]$[][][] [] [][][][]
-[][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [
-][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 689--698
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (1.33612pt too wide) in paragraph at lines 700--709
-[][]\TU/InfoOTDisp(0)/m/n/8 “cd.” Freebsd.org, 2025, [][]$[][][] [] [][][][][][
-][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][] [] [][][][][]
-[][] [] [] []
- []
-
-
-Overfull \hbox (3.0955pt too wide) in paragraph at lines 700--709
-[][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][][][][
-][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\TU/Inf
-oOTDisp(0)/m/n/8 . Ac-
- []
-
-
-Overfull \hbox (27.91368pt too wide) in paragraph at lines 711--720
-[][]\TU/InfoOTDisp(0)/m/n/8 “umount.” Freebsd.org, 2025, [][]$[][][] [] [][][][
-][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][][] [
-] [][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 711--720
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 722--731
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24]
-Overfull \hbox (16.4889pt too wide) in paragraph at lines 733--742
-[][]\TU/InfoOTDisp(0)/m/n/8 “Mkdir.” Freebsd.org, 2025, [][]$[][][] [] [][][][]
-[][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [
-][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 733--742
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (19.2249pt too wide) in paragraph at lines 744--753
-[][]\TU/InfoOTDisp(0)/m/n/8 “Mount.” Freebsd.org, 2025, [][]$[][][] [] [][][][]
-[][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [
-][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 744--753
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (3.0955pt too wide) in paragraph at lines 755--764
-[][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][][][][
-][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\TU/Inf
-oOTDisp(0)/m/n/8 . Ac-
- []
-
-
-Overfull \hbox (16.4889pt too wide) in paragraph at lines 766--775
-[][]\TU/InfoOTDisp(0)/m/n/8 “Mkdir.” Freebsd.org, 2025, [][]$[][][] [] [][][][]
-[][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [
-][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 766--775
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (20.49855pt too wide) in paragraph at lines 777--786
-[][]\TU/InfoOTDisp(0)/m/n/8 “ssh-Keygen.” Freebsd.org, 2025, [][]$[][][] [] [][
-][][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][]
-[][][][][][] []
- []
-
-
-Overfull \hbox (18.82465pt too wide) in paragraph at lines 777--786
-[][][][][][][] [] [] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][
-] [] [][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][]
- []
- []
-
-
-Overfull \hbox (24.04889pt too wide) in paragraph at lines 788--797
-[][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, [][]$[][][] [] [][][
-][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [
-] [][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 788--797
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (24.04889pt too wide) in paragraph at lines 799--808
-[][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, [][]$[][][] [] [][][
-][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [
-] [][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 799--808
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (16.0089pt too wide) in paragraph at lines 831--840
-[][]\TU/InfoOTDisp(0)/m/n/8 “zpool.” Freebsd.org, 2025, [][]$[][][] [] [][][][]
-[][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [
-][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 831--840
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (16.4889pt too wide) in paragraph at lines 848--857
-[][]\TU/InfoOTDisp(0)/m/n/8 “Mkdir.” Freebsd.org, 2025, [][]$[][][] [] [][][][]
-[][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [
-][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 848--857
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (19.1289pt too wide) in paragraph at lines 859--868
-[][]\TU/InfoOTDisp(0)/m/n/8 “mount.” Freebsd.org, 2025, [][]$[][][] [] [][][][]
-[][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [
-][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 859--868
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (24.04889pt too wide) in paragraph at lines 870--879
-[][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, [][]$[][][] [] [][][
-][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [
-] [][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 870--879
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25]
-Overfull \hbox (15.12012pt too wide) in paragraph at lines 938--947
-[][]\TU/InfoOTDisp(0)/m/n/8 “Geli(8).” Freebsd.org, 2025, [][]$[][][] [] [][][]
-[][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][] [] [
-][][][][][][] []
- []
-
-
-Overfull \hbox (1.33612pt too wide) in paragraph at lines 1018--1027
-[][]\TU/InfoOTDisp(0)/m/n/8 “cp.” Freebsd.org, 2025, [][]$[][][] [] [][][][][][
-][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][] [] [][][][][]
-[][] [] [] []
- []
-
-
-Overfull \hbox (3.0955pt too wide) in paragraph at lines 1018--1027
-[][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][][][][
-][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\TU/Inf
-oOTDisp(0)/m/n/8 . Ac-
- []
-
-
-Overfull \hbox (24.04889pt too wide) in paragraph at lines 1062--1071
-[][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, [][]$[][][] [] [][][
-][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [
-] [][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 1062--1071
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (14.30412pt too wide) in paragraph at lines 1082--1091
-[][]\TU/InfoOTDisp(0)/m/n/8 “geli(8).” Freebsd.org, 2025, [][]$[][][] [] [][][]
-[][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][] [] [
-][][][][][][] []
- []
-
-
-Overfull \hbox (27.90569pt too wide) in paragraph at lines 1093--1102
-[][]\TU/InfoOTDisp(0)/m/n/8 “swapon.” Freebsd.org, 2025, [][]$[][][] [] [][][][
-][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][][] [
-] [][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 1093--1102
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (24.04889pt too wide) in paragraph at lines 1107--1116
-[][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, [][]$[][][] [] [][][
-][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [
-] [][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 1107--1116
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26]
-Overfull \hbox (24.04889pt too wide) in paragraph at lines 1118--1127
-[][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, [][]$[][][] [] [][][
-][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [
-] [][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 1118--1127
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (24.04889pt too wide) in paragraph at lines 1129--1138
-[][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, [][]$[][][] [] [][][
-][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [
-] [][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 1129--1138
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (14.30412pt too wide) in paragraph at lines 1140--1149
-[][]\TU/InfoOTDisp(0)/m/n/8 “geli(8).” Freebsd.org, 2025, [][]$[][][] [] [][][]
-[][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][] [] [
-][][][][][][] []
- []
-
-
-Overfull \hbox (24.04889pt too wide) in paragraph at lines 1151--1160
-[][]\TU/InfoOTDisp(0)/m/n/8 “gpart(8).” Freebsd.org, 2026, [][]$[][][] [] [][][
-][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [
-] [][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 1151--1160
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (14.30412pt too wide) in paragraph at lines 1174--1183
-[][]\TU/InfoOTDisp(0)/m/n/8 “geli(8).” Freebsd.org, 2025, [][]$[][][] [] [][][]
-[][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][] [] [
-][][][][][][] []
- []
-
-
-Overfull \hbox (27.90569pt too wide) in paragraph at lines 1212--1221
-[][]\TU/InfoOTDisp(0)/m/n/8 “swapon.” Freebsd.org, 2025, [][]$[][][] [] [][][][
-][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][][] [
-] [][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 1212--1221
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (27.90569pt too wide) in paragraph at lines 1229--1238
-[][]\TU/InfoOTDisp(0)/m/n/8 “swapon.” Freebsd.org, 2025, [][]$[][][] [] [][][][
-][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][][] [
-] [][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 1229--1238
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-
-Overfull \hbox (16.3529pt too wide) in paragraph at lines 1252--1261
-[][]\TU/InfoOTDisp(0)/m/n/8 “mkdir.” Freebsd.org, 2025, [][]$[][][] [] [][][][]
-[][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][][][][] [] [][][][][] [] [
-][][][][][][] []
- []
-
-
-Overfull \hbox (0.20552pt too wide) in paragraph at lines 1252--1261
-[] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][] [] [][] [] [][][
-][][][][][][][] [] [][][][] [] [][][][][][][] [] [][][][][][] [] [][][][]$[][]\
-TU/InfoOTDisp(0)/m/n/8 .
- []
-
-) [27] [28
+ [26])
+[27] [28
 
 ]
 Chapter 2.
 [29]
-Overfull \hbox (17.12445pt too wide) in paragraph at lines 907--908
+Overfull \hbox (17.12445pt too wide) in paragraph at lines 912--913
 \TU/CourierNew(0)/m/n/10 echo "Back up to 0 and go forward space count 2 files.
 " 
  []
 
 
-Overfull \hbox (17.12445pt too wide) in paragraph at lines 907--908
+Overfull \hbox (17.12445pt too wide) in paragraph at lines 912--913
 \TU/CourierNew(0)/m/n/10 echo "Back up to 0 and go forward space count 3 files.
 " 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 907--908
+Underfull \hbox (badness 10000) in paragraph at lines 912--913
 
  []
 
@@ -2744,7 +1961,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 907--908
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [31]
-Underfull \hbox (badness 10000) in paragraph at lines 911--912
+Underfull \hbox (badness 10000) in paragraph at lines 916--917
 
  []
 
@@ -2752,7 +1969,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 911--912
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [32]
-Underfull \hbox (badness 10000) in paragraph at lines 913--914
+Underfull \hbox (badness 10000) in paragraph at lines 918--919
 
  []
 
@@ -2760,7 +1977,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 913--914
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [33]
-Overfull \hbox (20.11507pt too wide) in paragraph at lines 941--943
+Overfull \hbox (20.11507pt too wide) in paragraph at lines 946--948
 []\TU/InfoOTDisp(0)/b/n/10 C. URLs – FreeBSD man pages for above. \TU/CourierNe
 w(0)/m/n/10 man.freebsd.org/cgi/man.cgi?
  []
@@ -2795,10 +2012,10 @@ Package rerunfilecheck Info: File `ut.out' has not changed.
 (rerunfilecheck)             Checksum: 3BC6111BB6D75BF0F4DDF44A54FEF1BE;13174.
  ) 
 Here is how much of TeX's memory you used:
- 22430 strings out of 475846
- 408689 string characters out of 5781395
- 1959879 words of memory out of 5000000
- 43163 multiletter control sequences out of 15000+600000
+ 22455 strings out of 475846
+ 409262 string characters out of 5781395
+ 1974879 words of memory out of 5000000
+ 43184 multiletter control sequences out of 15000+600000
  562629 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  91i,15n,117p,2246b,515s stack positions out of 10000i,1000n,20000p,200000b,200000s

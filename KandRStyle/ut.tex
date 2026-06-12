@@ -76,7 +76,7 @@ bindingoffset=0.12in]{geometry}
 
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black]{hyperref}
 
-\usepackage{url}
+\usepackage{xurl}
 % Paragraph and list compactness
 \setlength{\parindent}{1.5em}
 \setlength{\parskip}{0pt}
@@ -570,11 +570,11 @@ For this run, we’ll begin by using the boot-only disk.  We won’t plan to eve
 \subsection{Bay 5}
 \texttt{\index{gpart!create}gpart create -s GPT mfid5}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-5-SWAP-WMC2E3914420 mfid5}\footnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-5-FILES-WMC2E3914420 mfid5}\footnote{Ibid.}
+\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l ZFS-BLONDIE-5-FILES-WMC2E3914420 mfid5}\footnote{Ibid.}
 \subsection{Bay 6}
 \texttt{\index{gpart!create}gpart create -s GPT mfid6}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\ -l ZFS-BLONDIE-6-SWAP-WCC2ETT39577 mfid6}\footnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs -l ZFS-BLONDIE-6-FILES-WCC2ETT39577 mfid6}\footnote{Ibid.}
+\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l ZFS-BLONDIE-6-FILES-WCC2ETT39577 mfid6}\footnote{Ibid.}
 \subsection{Bay 7}
 \texttt{\index{gpart!create}gpart create -s GPT mfid7}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-7-SWAP-WCAYU2878968 mfid7}\footnote{Ibid.}\\\\
@@ -646,7 +646,7 @@ At this point, all of the drives should be partitioned and decrypted and attache
 
 
 \subsection{To Use the Swap Disk}
-REF:  https://www.cyberciti.biz/faq/create-a-freebsd-swap-file/ \\
+
 
 \noindent\texttt{\index{swapon}swapon mfid0p1.eli}\footnote{“swapon.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=swapon&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}
 \texttt{\index{swapinfo}swapinfo -k}\footnote{Ibid.}\\
@@ -702,7 +702,11 @@ Create a mountpoint so that we will be able to mount the \index{zpool}zpool with
 
 \section{Chapter References}
 \subsection{Books}
+For our ZFS planning, we read: Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.
+
 \subsection{MAN Pages}
+Online MAN pages were available at: \url{man.freebsd.org} with an interface that allows for keyword based searches.
+
  “bsdinstall.'' Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=bsdinstall&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 
 “camcontrol.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=camcontrol&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
@@ -739,6 +743,7 @@ Create a mountpoint so that we will be able to mount the \index{zpool}zpool with
 
 “zpool.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zpool&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.
 \subsection{Websites}
+When planning and exploring our use of swap, we consulted:  \url{https://www.cyberciti.biz/faq/create-a-freebsd-swap-file/}. \\
 
 \printchapterendnotes
 
