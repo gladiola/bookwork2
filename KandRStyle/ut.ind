@@ -31,8 +31,8 @@
   \indexspace
 
   \item geli, \hyperpage{2}, \hyperpage{15}
-    \subitem attach, \hyperpage{15, 16}, \hyperpage{18}
-    \subitem init, \hyperpage{15, 16}, \hyperpage{18}
+    \subitem attach, \hyperpage{15, 16}, \hyperpage{18, 19}
+    \subitem init, \hyperpage{15, 16}, \hyperpage{18, 19}
     \subitem status, \hyperpage{17}
   \item gpart, \hyperpage{3}, \hyperpage{6}, \hyperpage{9}, 
 		\hyperpage{12}
@@ -76,9 +76,9 @@
   \item ssh-keygen, \hyperpage{7}, \hyperpage{9}
   \item su, \hyperpage{7}
   \item sudo, \hyperpage{7}
-  \item swapinfo, \hyperpage{17--19}
-  \item swapoff, \hyperpage{18}
-  \item swapon, \hyperpage{10}, \hyperpage{17--19}
+  \item swapinfo, \hyperpage{18, 19}
+  \item swapoff, \hyperpage{19}
+  \item swapon, \hyperpage{10}, \hyperpage{18, 19}
 
   \indexspace
 

@@ -11,7 +11,9 @@ bindingoffset=0.12in]{geometry}
 \usepackage{imakeidx}
 \makeindex[intoc,columns=2]
 \setmainfont{InfoOTDisp}
-\setmonofont{Fixedsys 8514oem (Unicode)}
+\setmonofont[
+    Scale=1.0
+]{Courier New}
 \newfontfamily\headingfont{Eurostile W01}
 \newfontfamily\chapterfont{Eurostile Extd}
 
@@ -97,8 +99,11 @@ bindingoffset=0.12in]{geometry}
   numbers=left, numberstyle=\tiny\color{gray}, numbersep=6pt,
   stepnumber=5,
   frame=none, xleftmargin=2em,
-  tabsize=4, breaklines=true, showstringspaces=false,
-  columns=fullflexible
+  tabsize=4,  showstringspaces=false,
+  columns=fullflexible,
+    breaklines=true,
+  breakatwhitespace=false,
+  keepspaces=true
 }
 \lstdefinelanguage{KRC}{language=C}
 
@@ -461,18 +466,18 @@ To put the ZFS partition on the remaining disks:\\\\
 \\
 
 To add the main ZFS partition:\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -l ZFS\_NUMBER -t freebsd-zfs DISK\_DEVICE}\footnote{Ibid.}\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -l ZFS-BLONDIE-4-WD123465789 -t freebsd-zfs  da4}\footnote{Ibid.}
+\texttt{ \index{gpart!add}gpart add -a 1m -l ZFS\_NUMBER \textbackslash\\ -t freebsd-zfs DISK\_DEVICE}\footnote{Ibid.}\\\\
+\texttt{ \index{gpart!add}gpart add -a 1m -l ZFS-BLONDIE-4-WD123465789 \textbackslash\\-t freebsd-zfs  da4}\footnote{Ibid.}
 \\
 
 To add the partition's swap:\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -slg -l SWAP\_NUMBER -t freebsd-swap DISK\_DEVICE}\footnote{Ibid.}\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -slg -l SWAP-BLONDIE-4-WD123465789 -t freebsd-swap da4}\footnote{Ibid.}
+\texttt{ \index{gpart!add}gpart add -a 1m -slg -l SWAP\_NUMBER \textbackslash\\-t freebsd-swap DISK\_DEVICE}\footnote{Ibid.}\\\\
+\texttt{ \index{gpart!add}gpart add -a 1m -slg -l SWAP-BLONDIE-4-WD123465789 \textbackslash\\-t freebsd-swap da4}\footnote{Ibid.}
 \\
 
 To add a logging partition on the SLOG SSDs:\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -l ZLOG\_NUMBER -t freebsd-zfs DISK\_DEVICE}\footnote{Ibid.}\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -l ZLOG-BLONDIE-2-WD123465789 -t freebsd-zfs  da2}\footnote{Ibid.}\\\\
+\texttt{ \index{gpart!add}gpart add -a 1m -l ZLOG\_NUMBER  \textbackslash\\-t freebsd-zfs DISK\_DEVICE}\footnote{Ibid.}\\\\
+\texttt{ \index{gpart!add}gpart add -a 1m -l ZLOG-BLONDIE-2-WD123465789 \textbackslash\\-t freebsd-zfs  da2}\footnote{Ibid.}\\\\
 
 With each disk partitioned, we can add them to the pool for our RAIDZ-2 kit.\\\\
 \texttt{\index{zpool!create}zpool create RAID POOL\_NAME DISK\_LABEL/ZFS\_PARTITION\_LABEL ...next disk/partition...}\footnote{“zpool.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zpool&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
