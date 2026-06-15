@@ -1,0 +1,176 @@
+Amnesiac
+
+OED:  1913 "One who is afflicted with amnesia."  “Amnesiac, N.” Oxford English Dictionary, Oxford UP, December 2024, https://doi.org/10.1093/OED/9207200444.
+
+
+FreeBSD
+live cd
+
+
+
+immutable system
+
+OED:  "1.b.
+1621–
+technical. Not subject to variation in different cases; invariable: used e.g. of markings which are the same in all the individuals of a species."
+“Immutable, Adj., Sense 1.b.” Oxford English Dictionary, Oxford UP, December 2025, https://doi.org/10.1093/OED/1176087402.
+
+configuration
+OED: "8.
+1962–
+Computing. The way the constituent parts of a computer system are chosen or interconnected in order to suit it for a particular task or use; the units or devices required for this."
+“Configuration, N., Sense 8.” Oxford English Dictionary, Oxford UP, June 2026, https://doi.org/10.1093/OED/1065280211.
+
+coding
+OED: "3.
+1946–
+Computing. The conversion of information into code usable by a computer or other machine; the writing or editing of code for a computer program, application, etc. Also: computer code."
+“Coding, N., Sense 3.” Oxford English Dictionary, Oxford UP, June 2025, https://doi.org/10.1093/OED/4701717734.
+
+operating system
+OED: "Computing.
+
+    1961–
+    The low-level (low-level adj. 4b) software that supports a computer's basic functions, such as scheduling tasks, controlling peripherals, and allocating storage."
+“Operating System, N.” Oxford English Dictionary, Oxford UP, July 2023, https://doi.org/10.1093/OED/4828064025.
+
+
+
+dd
+Kali
+drive erasers
+DVD RW drive
+tape backup unit
+
+
+
+
+
+mirror
+OED
+"4.
+1993–
+transitive. Computing. To write (data) on to two separate devices (esp. two hard disks) simultaneously, to protect against the possible failure of one; to create (a duplicate disk) in this manner. Also: to copy (a website) on to a different server (cf. mirror site n.)."
+“Mirror, V., Sense 4.” Oxford English Dictionary, Oxford UP, December 2025, https://doi.org/10.1093/OED/8366938443.
+
+
+
+RAIDZ-2 array
+motherboard
+OED
+"Electronics.
+
+    1965–
+    A printed circuit board on which the principal components of a microcomputer or other electronic device are mounted, and to which other boards (daughterboards) may be connected."
+
+“Motherboard, N.” Oxford English Dictionary, Oxford UP, July 2023, https://doi.org/10.1093/OED/1154882806.
+
+baseboard
+graphics card
+offensive and defensive security
+disconnected jails
+vnet
+RAID
+OED
+"Computing.
+
+    1988–
+    Redundant array of inexpensive disks (or drives), a data storage system which combines multiple hard drives to form a system functioning as single drive."
+“RAID, N.” Oxford English Dictionary, Oxford UP, June 2026, https://doi.org/10.1093/OED/4981410541.
+
+RAID card
+RAID-0
+VDEV
+BIOS
+UEFI
+disk label
+refreservation
+reservation
+datasets
+mountpoint
+drive partitioning
+swap
+bsdinstall
+Keyboard mapping
+Hostname
+ssh
+password enumeration
+privilege escalation
+plain-text password
+hashes
+keys
+
+thumbdrive
+OED
+"a. A mechanism that is operated by the thumb; b. Computing (a proprietary name for) a USB flash drive, esp. a small one in the shape of a long and relatively flat rectangular prism; cf. memory stick n."
+“Thumb Drive, N.” Oxford English Dictionary, Oxford UP, March 2026, https://doi.org/10.1093/OED/9979951645.
+
+memory stick
+OED
+"(Originally) a type of memory card for use in digital cameras and other devices; (now chiefly) a USB flash drive, esp. a small one in the shape of a long and relatively flat rectangular prism.
+A proprietary name."
+“Memory Stick, N.” Oxford English Dictionary, Oxford UP, June 2026, https://doi.org/10.1093/OED/1531282927.
+
+ssh-keygen
+Shell
+OED
+"b.
+1974–
+In some operating systems (originally Multics and Unix): a program that translates commands keyed by the user into commands that the operating system can act on, thereby providing a high-level interface with the user. Also (more fully shell window): a window in which such commands can be invoked."
+“Shell, N., Additional sense.” Oxford English Dictionary, Oxford UP, March 2026, https://doi.org/10.1093/OED/4563192747.
+
+
+Logical Address
+
+
+
+pipe
+OED(1)
+"III.26.b.
+1979–
+A physical or notional data channel or route."
+“Pipe, N. (1), Sense III.26.b.” Oxford English Dictionary, Oxford UP, June 2026, https://doi.org/10.1093/OED/5943533372.
+OED(2)
+"III.26.c.
+1982–
+A temporary connection between two processes or commands, so that the output from one command becomes the input for the next."
+“Pipe, N. (1), Sense III.26.c.” Oxford English Dictionary, Oxford UP, June 2026, https://doi.org/10.1093/OED/8044200378.
+
+
+drive position
+
+Encrypt
+OED
+"transitive. To convert (data, a message, etc.) into cipher or code, esp. in order to prevent unauthorized access; to conceal in something by this means."
+“Encrypt, V.” Oxford English Dictionary, Oxford UP, December 2025, https://doi.org/10.1093/OED/1124748007.
+
+
+physical serial number
+
+dialog
+OED(1)
+"4.b.
+1984–
+Chiefly in form dialog. = dialogue box n."
+
+“Dialogue | Dialog, N., Sense 4.b.” Oxford English Dictionary, Oxford UP, June 2026, https://doi.org/10.1093/OED/4999880636.
+OED(2)
+"Computing.
+
+    1984–
+    A window in a graphical user interface which asks the user for input in response to some given information, such as a choice of command in answer to a question."
+“Dialogue Box | Dialog Box, N.” Oxford English Dictionary, Oxford UP, June 2026, https://doi.org/10.1093/OED/3367209004.
+
+Cache
+SLOG
+SLOG Mirror
+partition table
+Bay
+hardware RAID
+software RAID
+metadata (for geli encryption)
+
+
+
+
+
