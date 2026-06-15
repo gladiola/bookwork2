@@ -12,22 +12,22 @@
 \contentsline {subsection}{\numberline {1.2.3}Identifying and Allocating ZFS Drive Qualities}{3}{subsection.1.2.3}%
 \contentsline {subsection}{\numberline {1.2.4}What are we going to want the ZFS kit to do? How are we going to use the drives? How can we wrestle with this new type of \gls {configuration}?}{4}{subsection.1.2.4}%
 \contentsline {subsection}{\numberline {1.2.5}What We Can Learn From Installing an OS}{6}{subsection.1.2.5}%
-\contentsline {subsection}{\numberline {1.2.6}Basic Operating System Installation Goals}{6}{subsection.1.2.6}%
+\contentsline {subsection}{\numberline {1.2.6}Basic \Gls {operating system} Installation Goals}{6}{subsection.1.2.6}%
 \contentsline {subsection}{\numberline {1.2.7}Main Steps for FreeBSD Installation from bsdinstall}{6}{subsection.1.2.7}%
 \contentsline {subsection}{\numberline {1.2.8}No Root Password}{7}{subsection.1.2.8}%
 \contentsline {subsection}{\numberline {1.2.9}Be Able to Build the Keys}{7}{subsection.1.2.9}%
-\contentsline {subsection}{\numberline {1.2.10}Partition, Mount, and Use a Thumbdrive from Live Disc's Shell}{8}{subsection.1.2.10}%
-\contentsline {subsection}{\numberline {1.2.11}Start the Box and the Live Disk's Shell}{8}{subsection.1.2.11}%
-\contentsline {subsection}{\numberline {1.2.12}Be Able to Plug in the USB Thumbdrive and Find Its Logical Address}{8}{subsection.1.2.12}%
+\contentsline {subsection}{\numberline {1.2.10}Partition, Mount, and Use a \Gls {thumbdrive} from Live Disc's \Gls {shell}}{8}{subsection.1.2.10}%
+\contentsline {subsection}{\numberline {1.2.11}Start the Box and the Live Disk's \Gls {shell}}{8}{subsection.1.2.11}%
+\contentsline {subsection}{\numberline {1.2.12}Be Able to Plug in the USB \Gls {thumbdrive} and Find Its Logical Address}{8}{subsection.1.2.12}%
 \contentsline {subsection}{\numberline {1.2.13}Be Able to Partition the USB}{8}{subsection.1.2.13}%
 \contentsline {subsection}{\numberline {1.2.14}Be Able to Write to the USB}{9}{subsection.1.2.14}%
 \contentsline {subsection}{\numberline {1.2.15}Be Able to Put Some Key Pairs on the USB}{9}{subsection.1.2.15}%
 \contentsline {subsection}{\numberline {1.2.16}Be Able to Use Commands to Build Out the Drives}{9}{subsection.1.2.16}%
 \contentsline {subsection}{\numberline {1.2.17}Goals for \Gls {amnesiac} Systems}{11}{subsection.1.2.17}%
 \contentsline {section}{\numberline {1.3}Results}{11}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Configure for SWAP Disk, ZFS Cache, ZFS SLOG Mirror, and ZFS RAIDz2}{12}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.1}Configure for SWAP Disk, ZFS \Gls {cache}, ZFS SLOG \Gls {mirror}, and ZFS RAIDz2}{12}{subsection.1.3.1}%
 \contentsline {subsection}{\numberline {1.3.2}Startup with \texttt {bootonly.iso}}{13}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Mount the USB to Save the Metadata Backup File}{13}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.3}Mount the USB to Save the \Gls {metadata} Backup File}{13}{subsection.1.3.3}%
 \contentsline {subsection}{\numberline {1.3.4}Create Swap Disk in Bay 0}{13}{subsection.1.3.4}%
 \contentsline {subsection}{\numberline {1.3.5}Create ZFS Cache in Bay 1}{13}{subsection.1.3.5}%
 \contentsline {subsection}{\numberline {1.3.6}Create ZFS SLOG in Bays 2 and 3}{13}{subsection.1.3.6}%
@@ -36,9 +36,9 @@
 \contentsline {subsection}{\numberline {1.3.9}Bay 5}{14}{subsection.1.3.9}%
 \contentsline {subsection}{\numberline {1.3.10}Bay 6}{14}{subsection.1.3.10}%
 \contentsline {subsection}{\numberline {1.3.11}Bay 7}{14}{subsection.1.3.11}%
-\contentsline {subsection}{\numberline {1.3.12}Encrypt those partitions}{15}{subsection.1.3.12}%
-\contentsline {subsection}{\numberline {1.3.13}Commands to Encrypt the Partitions}{15}{subsection.1.3.13}%
-\contentsline {subsection}{\numberline {1.3.14}To Preserve the Metadata Backup Files}{16}{subsection.1.3.14}%
+\contentsline {subsection}{\numberline {1.3.12} \Gls {encrypt} those partitions}{15}{subsection.1.3.12}%
+\contentsline {subsection}{\numberline {1.3.13}Commands to \Gls {encrypt} the Partitions}{15}{subsection.1.3.13}%
+\contentsline {subsection}{\numberline {1.3.14}To Preserve the \Gls {metadata} Backup Files}{16}{subsection.1.3.14}%
 \contentsline {subsection}{\numberline {1.3.15}File Name Check: Editing Labels}{17}{subsection.1.3.15}%
 \contentsline {subsection}{\numberline {1.3.16}To Use the Swap Disk}{18}{subsection.1.3.16}%
 \contentsline {subsection}{\numberline {1.3.17}Create the zpool for BLONDIE}{19}{subsection.1.3.17}%
@@ -66,5 +66,5 @@
 \contentsline {section}{\numberline {2.6}References}{34}{section.2.6}%
 \contentsline {chapter}{Endnotes}{35}{chapter*.15}%
 \contentsline {chapter}{Glossary}{37}{section*.16}%
-\contentsline {chapter}{Endnotes}{39}{chapter*.18}%
-\contentsline {chapter}{Index}{41}{section*.19}%
+\contentsline {chapter}{Endnotes}{41}{chapter*.18}%
+\contentsline {chapter}{Index}{43}{section*.19}%

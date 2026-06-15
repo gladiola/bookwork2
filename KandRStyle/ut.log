@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  15 JUN 2026 11:34
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  15 JUN 2026 16:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1347,8 +1347,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 ]
 Overfull \hbox (7.4107pt too wide) in paragraph at lines 223--224
-[]\TU/InfoOTDisp(0)/b/n/10 There’s a web interface that let’s us know about mot
-herboard-related
+[]\TU/InfoOTDisp(0)/b/n/10 There’s a web interface that let’s us know about []m
+otherboard-related
  []
 
 [2]
@@ -1426,7 +1426,12 @@ Overfull \hbox (23.99998pt too wide) in paragraph at lines 285--305
  [][] 
  []
 
-[4] [5] [6]
+[4] [5]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Gls' on input line 356.
+
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 407--409
 
  []
@@ -1438,14 +1443,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 407--409
 
 
 Overfull \hbox (5.22276pt too wide) in paragraph at lines 412--412
-|[]\TU/EurostileW01(0)/b/n/12 Partition, Mount, and Use a Thumbdrive from Live 
-Disc's
+|[]\TU/EurostileW01(0)/b/n/12 Partition, Mount, and Use a []Thumbdrive from Liv
+e Disc's
  []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Gls' on input line 412.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Gls' on input line 412.
 
 
 Underfull \vbox (badness 1178) has occurred while \output is active []
 
  [7]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Gls' on input line 414.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Gls' on input line 417.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 419--420
 
  []
@@ -1625,12 +1647,25 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\Gls' on input line 499.
 
 [11]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Gls' on input line 524.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Gls' on input line 524.
+
 LaTeX Font Info:    Font shape `TU/CourierNew(0)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 544.
 
 Underfull \vbox (badness 5924) has occurred while \output is active []
 
  [12]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Gls' on input line 547.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 556--558
 
  []
@@ -1706,6 +1741,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 579--582
  []
 
 [14]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Gls' on input line 585.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Gls' on input line 592.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 593--617
 
  []
@@ -1771,6 +1815,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 593--617
  []
 
 [15]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Gls' on input line 618.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 621--622
 
  []
@@ -2014,20 +2063,20 @@ w(0)/m/n/10 man.freebsd.org/cgi/man.cgi?
 ] (./ut.gls
 \openout4 = `ut.ent'.
 
-) [37
+ [37
 
 
-] [38
+] [38]) [39] [40
 
-] (./ut.ent) [39
+] (./ut.ent) [41
 
-] [40
+]
+[42
 
 ]
 runsystem(makeindex ut.idx)...executed safely (allowed).
 
- (./ut.ind)
-[41
+ (./ut.ind) [43
 
 ] (./ut.aux)
  ***********
@@ -2039,15 +2088,15 @@ L3 programming layer <2023-08-11>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `ut.out' has not changed.
-(rerunfilecheck)             Checksum: 361A9183E54D0037925CC840456BDA17;13255.
+(rerunfilecheck)             Checksum: 83B272AB23F962E7903A8953F7542951;13263.
  ) 
 Here is how much of TeX's memory you used:
- 22576 strings out of 475846
- 411915 string characters out of 5781395
+ 22966 strings out of 475846
+ 419219 string characters out of 5781395
  1974879 words of memory out of 5000000
- 43304 multiletter control sequences out of 15000+600000
+ 43694 multiletter control sequences out of 15000+600000
  562629 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 91i,15n,117p,2246b,515s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 91i,15n,117p,2246b,729s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on ut.pdf (53 pages).
+Output written on ut.pdf (55 pages).
