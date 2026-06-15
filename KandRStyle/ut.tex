@@ -108,7 +108,7 @@ bindingoffset=0.12in]{geometry}
 \lstdefinelanguage{KRC}{language=C}
 
 % Title page simple
-\title{{\chapterfont Coding and Configuration \\for Secure Systems in BSDs}}
+\title{{\chapterfont Coding and \Gls{configuration} \\for Secure Systems in BSDs}}
 \author{John O\string'Keefe-Odom}
 \date{}
 
@@ -178,14 +178,14 @@ Your introduction text goes here...
 
 
 
-		\noindent In this technical note, we explore configurations of the \index{FreeBSD}FreeBSD operating system.  With a goal of creating an \index{amensiac}amensiac system that keeps the operating system separate from working storage drives, we experiment with various configurations.  We demonstrate the planning of drive configuration coding and the reasoning behind the choices.  First, we code a system that uses the operating system on the storage drive discs.  Then we evolve the plan into using a live cd\index{live CD} for operating system use with drives that are connected to the immutable system in \gls{ram} via configuration code.  Using an \index{amensiac}amensiac system like this, we would be able to reset the operating system to a known immutable state with every startup.  The drives could be disconnected and reattached to other systems for various purposes.  Throughout, we cover specific commands for drive and operating system management and operation.
+		\noindent In this technical note, we explore \gls{configuration}s of the \index{FreeBSD}FreeBSD operating system.  With a goal of creating an \index{amensiac}amensiac system that keeps the operating system separate from working storage drives, we experiment with various \gls{configuration}s.  We demonstrate the planning of drive \gls{configuration} coding and the reasoning behind the choices.  First, we code a system that uses the operating system on the storage drive discs.  Then we evolve the plan into using a live cd\index{live CD} for operating system use with drives that are connected to the gls{immutable system} in \gls{ram} via \gls{configuration} code.  Using an \index{amensiac}amensiac system like this, we would be able to reset the operating system to a known immutable state with every startup.  The drives could be disconnected and reattached to other systems for various purposes.  Throughout, we cover specific commands for drive and operating system management and operation.
 
 \section{Introduction}
 
 We're starting with a Dell T610 Server.  Made in 2011, this machine is about ten years old.  We purchased this at a government e-waste auction.  She needed some cleanup.  We started on the front lawn, blowing out the dust with a leafblower.  
 
 Most of the time servers from these auctions will have minimal \gls{ram}.  Usually the drives and any good accessories will be stripped out.  Anytime we get a hard drive, from any source, one of the first actions we take is to erase the drives to \gls{nist} 800-88 Purge\index{NIST 800-88!Purge}\footnote{Chandramouli, Ramaswamy. Guidelines for Media Sanitization. 2025, \url{nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r2.pdf}, \url{https://doi.org/10.6028/nist.sp.800-88r2}.} with dedicated devices.  That kind of erasing can be done with \index{dd}\texttt{dd} in Kali or \index{FreeBSD}FreeBSD; but, the drive erasers usually have a verification feature that's helpful.  
-\subsection{Hardware Configuration}
+\subsection{Hardware \Gls{configuration}}
 This is my favorite computer.  I've named her "Blondie" after Debbie Harry's New Wave band.\footnote{“Blondie | the Official Website of Blondie, Featuring Tour Dates, Presale Ticketing, News, the Official Store and More.” \url{Blondie.net}, 2026, blondie.net/. Accessed 10 June 2026.}
 
 Now, she's configured with:
@@ -196,7 +196,7 @@ Now, she's configured with:
 	\begin{itemize}
 		\item Two VelociRaptor\footnote{''WD VelociRaptor ® SATA Hard Drives'' \url{https://theretroweb.com/storage/documentation/wd6000-velociraptor-68407cb5c0c96653507203.pdf}} 80GB 10000 rpm drives.
 		\begin{itemize}
-			\item We'll use these in a mirror configuration to hold the main OS.
+			\item We'll use these in a mirror \gls{configuration} to hold the main OS.
 		\end{itemize}
 		\item Two refurb 120GB SSDs
 		\begin{itemize}
@@ -250,12 +250,12 @@ There will be three main groups of drives:
 
 The OS pair will hold ideas like:
 \begin{itemize}
-	\item jail configuration
+	\item jail \gls{configuration}
 	\item main host networking and \gls{vnet}
-	\item host-based user accounts and configuration.
+	\item host-based user accounts and \gls{configuration}.
 \end{itemize}
 
-The ZFS kits will hold disconnected jails.  We'll set up a system of hierarchical jails that provide us with a development environment made up of modular jails that will be the children of an overarching parent.  These jails will communicate with each other and the parent through some custom \gls{vnet}.  We'll do all of our jail scripting, controls, and configuration manually.  Likewise, the base ZFS setup will be done with simple scripts.
+The ZFS kits will hold disconnected jails.  We'll set up a system of hierarchical jails that provide us with a development environment made up of modular jails that will be the children of an overarching parent.  These jails will communicate with each other and the parent through some custom \gls{vnet}.  We'll do all of our jail scripting, controls, and \gls{configuration} manually.  Likewise, the base ZFS setup will be done with simple scripts.
 %------------------------------------------------
 
 \section{Methodologies}
@@ -269,15 +269,15 @@ To prepare for a later step in this process, we'll note the serial number of eac
 
 Later on, we'll set VDEVs with ZFS; but, from this point on, we'll basically ignore the RAID card's description of these devices as VDEVs.  
 
-With the baseboard prepared, and the BIOS set to allow us to boot from disc, we'll get started with a plain install of \index{FreeBSD}FreeBSD to the first two drives in a mirror configuration.
+With the baseboard prepared, and the BIOS set to allow us to boot from disc, we'll get started with a plain install of \index{FreeBSD}FreeBSD to the first two drives in a mirror \gls{configuration}.
 
 \subsection{Incremental Advancement to \Gls{amnesiac} System}
-With all of the manual coding and configuration needed to set up an \gls{amnesiac} system like the one we desired, it was a big change from the normal \gls{bsd} installs we had done for several years.  Our first pass at building an \gls{amnesiac} system decayed into manually scripting a regular operating system installation that had most of the features we desired in the \gls{amnesiac} system.  Both the on-disc OS system and the \gls{amnesiac} system are detailed below.  
+With all of the manual coding and \gls{configuration} needed to set up an \gls{amnesiac} system like the one we desired, it was a big change from the normal \gls{bsd} installs we had done for several years.  Our first pass at building an \gls{amnesiac} system decayed into manually scripting a regular operating system installation that had most of the features we desired in the \gls{amnesiac} system.  Both the on-disc OS system and the \gls{amnesiac} system are detailed below.  
 
 \subsection{Identifying and Allocating ZFS Drive Qualities}
-We need to be able to detect the drives and partitions that we want to work with using geom, \index{gpart}gpart, and zfs commands.  If, for some reason, you can't find those drives, then you need to address that.  While working with this particular computer, I've found that the leading cause of failing to detect a drive goes back to the VDEV assignment in the hardware RAID.  If the drive were pulled, this particular RAID card will need to have those configuration changes addressed.  Often, this means rebooting the machine.  It could be done through the iDRAC baseboard controller in some models; but the one we have here is not configured to do those tasks.
+We need to be able to detect the drives and partitions that we want to work with using geom, \index{gpart}gpart, and zfs commands.  If, for some reason, you can't find those drives, then you need to address that.  While working with this particular computer, I've found that the leading cause of failing to detect a drive goes back to the VDEV assignment in the hardware RAID.  If the drive were pulled, this particular RAID card will need to have those \gls{configuration} changes addressed.  Often, this means rebooting the machine.  It could be done through the iDRAC baseboard controller in some models; but the one we have here is not configured to do those tasks.
 
-\subsection{What are we going to want the ZFS kit to do?  How are we going to use the drives?  How can we wrestle with this new type of configuration?}
+\subsection{What are we going to want the ZFS kit to do?  How are we going to use the drives?  How can we wrestle with this new type of \gls{configuration}?}
 \begin{table}
   \centering
   \caption{ZFS Concepts and Commands}
@@ -372,7 +372,7 @@ We can see that \index{bsdinstall}\texttt{bsdinstall}
 \begin{itemize}
 \item Keyboard mapping
 \item Hostname
-\item Networking configuration
+\item Networking \gls{configuration}
 \item Wireless networking
 \item Partitioning
 \item Mounting temporary root
@@ -399,7 +399,7 @@ What do we gain from no root password?  An extra measure of security.  If there 
 
 Not having a root password may also truncate or stop our ability to use commands like \texttt{\index{su}su} or \texttt{\index{sudo}sudo}.  As we're trying to stop privilege escalation, we'll also be stopping legitimate means of priv-esc.  It could be inconvenient, but we've used this technique before.
 
-Also, there is another risk:  leaving the needed key lying around.  For example, if we give the key to a user account operator, like ourselves, and then we import copies of the key to the box for easy use:  well, then those keys could be used and re-used locally.  This would be the equivalent for storing a plain-text password on the box.  They keys are ultimately simple text files with decorated, long, strings of hashes.  It's the software that goes with the keys, combined with the configuration of the prog\gls{ram}s for logging in to a service, that makes them special.  Switching from passwords to keys is not a perfect answer; but, it's the answer we'll use this time.
+Also, there is another risk:  leaving the needed key lying around.  For example, if we give the key to a user account operator, like ourselves, and then we import copies of the key to the box for easy use:  well, then those keys could be used and re-used locally.  This would be the equivalent for storing a plain-text password on the box.  They keys are ultimately simple text files with decorated, long, strings of hashes.  It's the software that goes with the keys, combined with the \gls{configuration} of the prog\gls{ram}s for logging in to a service, that makes them special.  Switching from passwords to keys is not a perfect answer; but, it's the answer we'll use this time.
 
 If someone wishes to put a root password in place, then that's a procedure that will be easy to implement.  For now, though, there will be no root password.  And that means we have to build the keys we will use to log in.
 
@@ -505,7 +505,7 @@ We chose at this point to do some experimental installs.  For clarity, notes on 
 \item Prepare commands in advance to reduce complexity.
 \end{itemize}
 
-From our testing, we recognizes that a Live CD offered the best answer for an immutable system.  It does come at the price of some instability.  The "El Torrito" discs have a limited set of services.  Adjusting the configuration of the operating system means drafting, burning, and testing a new disc.  The "shell" instance on a \index{FreeBSD}FreeBSD installation disc is reportedly less stable; but, we did not know why or how it was less stable than a normal operating system.  We worked through our disc commands and kept careful notes.  Adding the physical serial number of the disc alone increased the complexity of manually typing in each command.  We discovered the need to encrypt the discs by partitions instead of the whole disc because there was a visibility problem during the execution of discovering and attaching the discs.  There was a poorly documented detail about protecting the disc metadata and keys.  The keys are provided during the setup dialog; but, these highly important items will disappear after the setup process closes.  This means it is important that an operator recognize the need to intercept and to record these keys.  Without them, a later recovery of a disc is impossible.  Since one typo would derail our experimental setups, we had to keep a second support computer on hand to record notes and consult references.  
+From our testing, we recognizes that a Live CD offered the best answer for an \gls{immutable system}.  It does come at the price of some instability.  The "El Torrito" discs have a limited set of services.  Adjusting the \gls{configuration} of the operating system means drafting, burning, and testing a new disc.  The "shell" instance on a \index{FreeBSD}FreeBSD installation disc is reportedly less stable; but, we did not know why or how it was less stable than a normal operating system.  We worked through our disc commands and kept careful notes.  Adding the physical serial number of the disc alone increased the complexity of manually typing in each command.  We discovered the need to encrypt the discs by partitions instead of the whole disc because there was a visibility problem during the execution of discovering and attaching the discs.  There was a poorly documented detail about protecting the disc metadata and keys.  The keys are provided during the setup dialog; but, these highly important items will disappear after the setup process closes.  This means it is important that an operator recognize the need to intercept and to record these keys.  Without them, a later recovery of a disc is impossible.  Since one typo would derail our experimental setups, we had to keep a second support computer on hand to record notes and consult references.  
 
 %------------------------------------------------
 
@@ -618,7 +618,7 @@ When we give the subcommand to “init,” the machine will ask us to give the n
 \subsection{To Preserve the Metadata Backup Files}
 Let us reiterate:  preserving these backups at the time of disk creation is essential for later recoveries.  If these files are not saved, then a powerdown of the system will cause them to be lost.  They're automatically stored in an ephemeral directory.  Conserve the ability to recover a disk later by recording these metadata backup files to a safe location.
 
-Each metadata backup file was probably created with a name that does not look like the drive’s label.  Instead, the machine assigns a backup file name based on geometry.  Since we can have a hardware configuration change that could mess up that pattern, we will want to save our backup files with names that look more like the disk labels.  That way, if the drives move, then we can better discover which metadata file goes with it.\\
+Each metadata backup file was probably created with a name that does not look like the drive’s label.  Instead, the machine assigns a backup file name based on geometry.  Since we can have a hardware \gls{configuration} change that could mess up that pattern, we will want to save our backup files with names that look more like the disk labels.  That way, if the drives move, then we can better discover which metadata file goes with it.\\
 
 \noindent\texttt{\index{cp}cp /var/backups/mfid0p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-0-SWAP-WCC2ERZ56512.eli}\footnote{“cp.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=cp&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
 \texttt{\index{cp}cp /var/backups/mfid1p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-1-CACHE-WXL1E40C1352.eli}\footnote{Ibid.}\\\\
@@ -953,6 +953,7 @@ More text\footnote{Second note.}
 
 \backmatter
 \printglossary[title=Glossary]
+\printchapterendnotes
 \printindex
 
 \end{document}

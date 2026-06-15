@@ -2,15 +2,15 @@
 \contentsline {chapter}{Preface}{v}{chapter*.3}%
 \contentsline {chapter}{Acknowledgements}{vii}{chapter*.4}%
 \contentsline {chapter}{Introduction}{ix}{chapter*.5}%
-\contentsline {chapter}{\numberline {1}\\gls{amnesiac} Systems in FreeBSD}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {1}\Gls {amnesiac} Systems in FreeBSD}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Hardware Configuration}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Hardware \Gls {configuration}}{1}{subsection.1.1.1}%
 \contentsline {subsection}{\numberline {1.1.2}Intentions: Paving the Road to Jails}{2}{subsection.1.1.2}%
 \contentsline {section}{\numberline {1.2}Methodologies}{3}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Preparing the Baseboard}{3}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Incremental Advancement to \gls {Amnesiac} System}{3}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.2}Incremental Advancement to \Gls {amnesiac} System}{3}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Identifying and Allocating ZFS Drive Qualities}{3}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}What are we going to want the ZFS kit to do? How are we going to use the drives? How can we wrestle with this new type of configuration?}{4}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.4}What are we going to want the ZFS kit to do? How are we going to use the drives? How can we wrestle with this new type of \gls {configuration}?}{4}{subsection.1.2.4}%
 \contentsline {subsection}{\numberline {1.2.5}What We Can Learn From Installing an OS}{6}{subsection.1.2.5}%
 \contentsline {subsection}{\numberline {1.2.6}Basic Operating System Installation Goals}{6}{subsection.1.2.6}%
 \contentsline {subsection}{\numberline {1.2.7}Main Steps for FreeBSD Installation from bsdinstall}{6}{subsection.1.2.7}%
@@ -23,7 +23,7 @@
 \contentsline {subsection}{\numberline {1.2.14}Be Able to Write to the USB}{9}{subsection.1.2.14}%
 \contentsline {subsection}{\numberline {1.2.15}Be Able to Put Some Key Pairs on the USB}{9}{subsection.1.2.15}%
 \contentsline {subsection}{\numberline {1.2.16}Be Able to Use Commands to Build Out the Drives}{9}{subsection.1.2.16}%
-\contentsline {subsection}{\numberline {1.2.17}Goals for \gls {amnesiac} Systems}{11}{subsection.1.2.17}%
+\contentsline {subsection}{\numberline {1.2.17}Goals for \Gls {amnesiac} Systems}{11}{subsection.1.2.17}%
 \contentsline {section}{\numberline {1.3}Results}{11}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}Configure for SWAP Disk, ZFS Cache, ZFS SLOG Mirror, and ZFS RAIDz2}{12}{subsection.1.3.1}%
 \contentsline {subsection}{\numberline {1.3.2}Startup with \texttt {bootonly.iso}}{13}{subsection.1.3.2}%
@@ -66,4 +66,5 @@
 \contentsline {section}{\numberline {2.6}References}{34}{section.2.6}%
 \contentsline {chapter}{Endnotes}{35}{chapter*.15}%
 \contentsline {chapter}{Glossary}{37}{section*.16}%
-\contentsline {chapter}{Index}{39}{section*.18}%
+\contentsline {chapter}{Endnotes}{39}{chapter*.18}%
+\contentsline {chapter}{Index}{41}{section*.19}%
