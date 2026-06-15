@@ -12,14 +12,22 @@
 
   \indexspace
 
+  \item cache, \hyperpage{12}, \hyperpage{19}
   \item camcontrol
     \subitem devlist, \hyperpage{8}
   \item cd, \hyperpage{9}
+  \item coding, \hyperpage{1}, \hyperpage{3}
   \item cp, \hyperpage{16, 17}
 
   \indexspace
 
   \item dd, \hyperpage{1}
+  \item dialog, \hyperpage{9}, \hyperpage{11}
+
+  \indexspace
+
+  \item encrypt, \hyperpage{11}, \hyperpage{13}, \hyperpage{15}, 
+		\hyperpage{18}, \hyperpage{33}
 
   \indexspace
 
@@ -65,6 +73,11 @@
   \item newfs, \hyperpage{8}
   \item NIST 800-88
     \subitem Purge, \hyperpage{1}
+
+  \indexspace
+
+  \item operating system, \hyperpage{1}, \hyperpage{3}, \hyperpage{6}, 
+		\hyperpage{11}, \hyperpage{18}
 
   \indexspace
 
