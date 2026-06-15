@@ -128,10 +128,10 @@ John O\string'Keefe-Odom received a Master of Liberal Arts (ALM) in Extension St
 %----------------------------------------------------------------------------------------
 %	Foreword
 %----------------------------------------------------------------------------------------
-\chapter*{Foreword}
-\addcontentsline{toc}{chapter}{Foreword}
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
 
-Your foreword text goes here...
+Your preface text goes here...
 
 %----------------------------------------------------------------------------------------
 %	Acknowledgements
@@ -160,7 +160,7 @@ Your introduction text goes here...
 %	CHAPTER
 %----------------------------------------------------------------------------------------
 
-\chapter{Amnesiac Systems in FreeBSD}
+\chapter{\\gls{amnesiac} Systems in FreeBSD}
 
 
 %This template is tuned for a compact, classic look: narrow typeblock, Ga\gls{ram}ond body, and monospaced code.
@@ -184,7 +184,7 @@ Your introduction text goes here...
 
 We're starting with a Dell T610 Server.  Made in 2011, this machine is about ten years old.  We purchased this at a government e-waste auction.  She needed some cleanup.  We started on the front lawn, blowing out the dust with a leafblower.  
 
-Most of the time servers from these auctions will have minimal \gls{ram}.  Usually the drives and any good accessories will be stripped out.  Anytime we get a hard drive, from any source, one of the first actions we take is to erase the drives to \gls{nist} 800-88 Purge\index{NIST 800-88!Purge}\footnote{Chand\gls{ram}ouli, \gls{ram}aswamy. Guidelines for Media Sanitization. 2025, \url{nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r2.pdf}, \url{https://doi.org/10.6028/nist.sp.800-88r2}.} with dedicated devices.  That kind of erasing can be done with \index{dd}\texttt{dd} in Kali or \index{FreeBSD}FreeBSD; but, the drive erasers usually have a verification feature that's helpful.  
+Most of the time servers from these auctions will have minimal \gls{ram}.  Usually the drives and any good accessories will be stripped out.  Anytime we get a hard drive, from any source, one of the first actions we take is to erase the drives to \gls{nist} 800-88 Purge\index{NIST 800-88!Purge}\footnote{Chandramouli, Ramaswamy. Guidelines for Media Sanitization. 2025, \url{nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r2.pdf}, \url{https://doi.org/10.6028/nist.sp.800-88r2}.} with dedicated devices.  That kind of erasing can be done with \index{dd}\texttt{dd} in Kali or \index{FreeBSD}FreeBSD; but, the drive erasers usually have a verification feature that's helpful.  
 \subsection{Hardware Configuration}
 This is my favorite computer.  I've named her "Blondie" after Debbie Harry's New Wave band.\footnote{“Blondie | the Official Website of Blondie, Featuring Tour Dates, Presale Ticketing, News, the Official Store and More.” \url{Blondie.net}, 2026, blondie.net/. Accessed 10 June 2026.}
 
@@ -239,7 +239,7 @@ The server does not have:
 \subsection{Intentions:  Paving the Road to Jails}
 We'll use the box for development.  It'll be our main development server.  We'll use it with prog\gls{ram}s that we compile on a nearby poudriere package building box.  In those package builds, we have segregated our builds into a pattern of jails that mimic the types of jails that will be needed on most of our computers.  
 
-So, there is a \gls{jail} for functional groups like:  development tools, offensive and defensive security prog\gls{ram}s, browsers, desktop software, and so on.  \gls{poudriere} jails can be filled with whatever sets of prog\gls{ram}s we like.  For successful builds, we find its best to keep the jails small.  
+So, there is a \gls{jail} for functional groups like:  development tools, offensive and defensive security programs, browsers, desktop software, and so on.  \gls{poudriere} jails can be filled with whatever sets of programs we like.  For successful builds, we find its best to keep the jails small.  
 
 There will be three main groups of drives:
 \begin{itemize}
@@ -271,8 +271,8 @@ Later on, we'll set VDEVs with ZFS; but, from this point on, we'll basically ign
 
 With the baseboard prepared, and the BIOS set to allow us to boot from disc, we'll get started with a plain install of \index{FreeBSD}FreeBSD to the first two drives in a mirror configuration.
 
-\subsection{Incremental Advancement to Amnesiac System}
-With all of the manual coding and configuration needed to set up an amnesiac system like the one we desired, it was a big change from the normal \gls{bsd} installs we had done for several years.  Our first pass at building an amnesiac system decayed into manually scripting a regular operating system installation that had most of the features we desired in the amnesiac system.  Both the on-disc OS system and the amnesiac system are detailed below.  
+\subsection{Incremental Advancement to \gls{Amnesiac} System}
+With all of the manual coding and configuration needed to set up an \gls{amnesiac} system like the one we desired, it was a big change from the normal \gls{bsd} installs we had done for several years.  Our first pass at building an \gls{amnesiac} system decayed into manually scripting a regular operating system installation that had most of the features we desired in the \gls{amnesiac} system.  Both the on-disc OS system and the \gls{amnesiac} system are detailed below.  
 
 \subsection{Identifying and Allocating ZFS Drive Qualities}
 We need to be able to detect the drives and partitions that we want to work with using geom, \index{gpart}gpart, and zfs commands.  If, for some reason, you can't find those drives, then you need to address that.  While working with this particular computer, I've found that the leading cause of failing to detect a drive goes back to the VDEV assignment in the hardware RAID.  If the drive were pulled, this particular RAID card will need to have those configuration changes addressed.  Often, this means rebooting the machine.  It could be done through the iDRAC baseboard controller in some models; but the one we have here is not configured to do those tasks.
@@ -304,7 +304,7 @@ We need to be able to detect the drives and partitions that we want to work with
   \end{tabular}
 \end{table}
 
-After reading over \index{FreeBSD Mastery:  ZFS}FreeBSD Mastery:  ZFS by Alan Jude and Michael Lucas\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.}, we came to a few conclusions.  We chose to use \index{RAIDZ-2}RAIDZ-2 with Log drives because of the number of drives we have\footnote{Lucas and Jude provide a detailed breakdown of different RAID and RAID-Z combinations with differing numbers of drives.  Their analysis and provided charts were our cheif reason for settling in on RAIDZ2.  Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.}.  Some of the topics covered in that book that we'll want to apply include ideas in Table \ref{tab:zfsconcepts}.  In our first iterations we decided to install the OS on the hard drives in a pattern that looks like a conventional installation.  Once the drive partitioning and utilitization commands were worked out, we then started over and undertook the \index{amensiac}amnesiac version with the OS on a live disc that runs with attached drives.  
+After reading over \index{FreeBSD Mastery:  ZFS}FreeBSD Mastery:  ZFS by Alan Jude and Michael Lucas\footnote{Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.}, we came to a few conclusions.  We chose to use \index{RAIDZ-2}RAIDZ-2 with Log drives because of the number of drives we have\footnote{Lucas and Jude provide a detailed breakdown of different RAID and RAID-Z combinations with differing numbers of drives.  Their analysis and provided charts were our cheif reason for settling in on RAIDZ2.  Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.}.  Some of the topics covered in that book that we'll want to apply include ideas in Table \ref{tab:zfsconcepts}.  In our first iterations we decided to install the OS on the hard drives in a pattern that looks like a conventional installation.  Once the drive partitioning and utilitization commands were worked out, we then started over and undertook the \index{amensiac}\gls{amnesiac} version with the OS on a live disc that runs with attached drives.  
 
 
 Our goal for the system will be to split up the drives into three main groups, as described in Tables \ref{tab:zfsmainuseosharddisk}, \ref{tab:zfsjailuseosharddisk}, and \ref{tab:zfsslogusedisk}.  On each drive, we'll also allow:
@@ -313,7 +313,7 @@ Our goal for the system will be to split up the drives into three main groups, a
 	\item Swap by 100 | 50 | 33 | 25 percent of \gls{ram} (with a 25\% minimum for all disks) or similar
 	\item Remainder as one large ZFS main partition.
 \end{itemize}
-We decided we would want those qualities in an \index{amensiac}amnesiac system, with the exception of running the OS from a live disc.
+We decided we would want those qualities in an \index{amensiac}\gls{amnesiac} system, with the exception of running the OS from a live disc.
 
 For the OS-On-Disk system, this should bring us:
 \begin{itemize}
@@ -496,7 +496,7 @@ We can add on the mirrors for logging:\\\\
 
 Once we get to the point that we have an operating system on disks, and disks ready for use with logs and jails, then we're at the end of this phase of system administration.
 
-\subsection{Goals for Amnesiac Systems}
+\subsection{Goals for \gls{amnesiac} Systems}
 We chose at this point to do some experimental installs.  For clarity, notes on those are not presented here.  We did change our goals for the system.  We recognized that we wanted:
 \begin{itemize}
 \item Use a LiveCD for an immutable OS
@@ -510,7 +510,7 @@ From our testing, we recognizes that a Live CD offered the best answer for an im
 %------------------------------------------------
 
 \section{Results}
-As our experimentation concluded, we had learned enough to stand a reasonable chance to setup an amnesiac machine.  Its features include:
+As our experimentation concluded, we had learned enough to stand a reasonable chance to setup an \gls{amnesiac} machine.  Its features include:
 
 \begin{itemize}
 \item An immutable OS
@@ -580,7 +580,7 @@ For this run, we’ll begin by using the boot-only disk.  We won’t plan to eve
 \texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-7-SWAP-WCAYU2878968 mfid7}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l ZFS-BLONDIE-7-FILES-WCAYU2878968 mfid7}\footnote{Ibid.}\\
 
-We should note that “Bay 7” is an observation of the physical hardware.  The device (“mfid7”) could have whatever number assigned at the end that the machine gave it.  If the hardware raid had a problem with recognizing a device, the number might not correlate to what bay it is in.  When powering up, check your geometry.  
+We should note that “Bay 7” is an observation of the physical hardware.  The device (“mfid7”) could have whatever number assigned at the end that the machine gave it.  If the hardware RAID had a problem with recognizing a device, the number might not correlate to what bay it is in.  When powering up, check your geometry.  
 
 \subsection{Encrypt those partitions}
 During this phase, we’ll encrypt the partitions.  That means that we should have some recordkeeping materials on hand.  Use a password manager or a notebook to carefully record the password that is about to be typed in.  With each one completed, the machine will tell us that it has saved a file of backup metadata.  We will want to copy that metadata file to the thumbdrive.  If the encryption gets jammed up, or if there is some type of problem, then the metadata file will be used as part of the recovery process.  Without a metadata file, recovering an encrypted partition can be difficult or impossible.  
