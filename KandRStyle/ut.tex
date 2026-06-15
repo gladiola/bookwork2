@@ -162,9 +162,6 @@ Your introduction text goes here...
 
 \chapter{\Gls{amnesiac} Systems in FreeBSD}
 
-
-%This template is tuned for a compact, classic look: narrow typeblock, Ga\gls{ram}ond body, and monospaced code.
-
 %\begin{lstlisting}[language=KRC,caption={Hello world}]
 %#include <stdio.h>
 %
@@ -178,7 +175,7 @@ Your introduction text goes here...
 
 
 
-		\noindent In this technical note, we explore \gls{configuration}s of the \index{FreeBSD}FreeBSD \gls{operating system}.  With a goal of creating an \index{amensiac}amensiac system that keeps the \gls{operating system} separate from working storage drives, we experiment with various \gls{configuration}s.  We demonstrate the planning of drive \gls{configuration} \gls{coding} and the reasoning behind the choices.  First, we code a system that uses the \gls{operating system} on the storage drive discs.  Then we evolve the plan into using a live cd\index{live CD} for \gls{operating system} use with drives that are connected to the gls{immutable system} in \gls{ram} via \gls{configuration} code.  Using an \index{amensiac}amensiac system like this, we would be able to reset the \gls{operating system} to a known immutable state with every startup.  The drives could be disconnected and reattached to other systems for various purposes.  Throughout, we cover specific commands for drive and \gls{operating system} management and operation.
+		\noindent In this technical note, we explore index{configuration}\gls{configuration}s of the \index{FreeBSD}FreeBSD \index{operating system}\gls{operating system}.  With a goal of creating an \index{amensiac}gls{amensiac} system that keeps the \index{operating system}\gls{operating system} separate from working storage drives, we experiment with various index{configuration}\gls{configuration}s.  We demonstrate the planning of drive index{configuration}\gls{configuration} index{coding}\gls{coding} and the reasoning behind the choices.  First, we code a system that uses the \index{operating system}\gls{operating system} on the storage drive discs.  Then we evolve the plan into using a live cd\index{live CD} for \index{operating system}\gls{operating system} use with drives that are connected to the gls{immutable system} in \gls{ram} via \gls{configuration} code.  Using an \index{amensiac}amensiac system like this, we would be able to reset the \index{operating system}\gls{operating system} to a known immutable state with every startup.  The drives could be disconnected and reattached to other systems for various purposes.  Throughout, we cover specific commands for drive and \index{operating system}\gls{operating system} management and operation.
 
 \section{Introduction}
 
@@ -272,7 +269,7 @@ Later on, we'll set VDEVs with ZFS; but, from this point on, we'll basically ign
 With the baseboard prepared, and the BIOS set to allow us to boot from disc, we'll get started with a plain install of \index{FreeBSD}FreeBSD to the first two drives in a \Gls{mirror} \gls{configuration}.
 
 \subsection{Incremental Advancement to \Gls{amnesiac} System}
-With all of the manual \gls{coding} and \gls{configuration} needed to set up an \gls{amnesiac} system like the one we desired, it was a big change from the normal \gls{bsd} installs we had done for several years.  Our first pass at building an \gls{amnesiac} system decayed into manually scripting a regular \gls{operating system} installation that had most of the features we desired in the \gls{amnesiac} system.  Both the on-disc OS system and the \gls{amnesiac} system are detailed below.  
+With all of the manual \gls{coding} and \gls{configuration} needed to set up an \gls{amnesiac} system like the one we desired, it was a big change from the normal \gls{bsd} installs we had done for several years.  Our first pass at building an \gls{amnesiac} system decayed into manually scripting a regular \index{operating system}\gls{operating system} installation that had most of the features we desired in the \gls{amnesiac} system.  Both the on-disc OS system and the \gls{amnesiac} system are detailed below.  
 
 \subsection{Identifying and Allocating ZFS Drive Qualities}
 We need to be able to detect the drives and partitions that we want to work with using geom, \index{gpart}gpart, and zfs commands.  If, for some reason, you can't find those drives, then you need to address that.  While working with this particular computer, I've found that the leading cause of failing to detect a drive goes back to the VDEV assignment in the hardware  \gls{raid}.  If the drive were pulled, this particular  \gls{raid} card will need to have those \gls{configuration} changes addressed.  Often, this means rebooting the machine.  It could be done through the iDRAC baseboard controller in some models; but the one we have here is not configured to do those tasks.
@@ -353,13 +350,13 @@ The unused space on the drives (a blank partition of 15\%) may look like we're g
 \subsection{What We Can Learn From Installing an OS}
 Later on, we'll install the other drives wtih \index{gpart}gpart and zfs commands.  This first pair, through, we could do with \index{bsdinstall}bsdinstall\footnote{ “bsdinstall.'' Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=bsdinstall&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}.  If we choose that, though, then we must commit the whole disk to the process.  That would be how we would normally stand up a disk drive.  In this case, we'll conduct a manual process that mimics the main steps of \index{bsdinstall}bsdinstall\footnote{Ibid.} to show that the installation can be done manually.  Part of these same kinds of steps are critical tasks when administrating and installing jails.
   
-\subsection{Basic \Gls{operating system} Installation Goals}
+\subsection{Basic \index{operating system}\Gls{operating system} Installation Goals}
 We're going to do an early phase, basic installation of the OS.  At this point, we'll really only set up a pair of users and some plain vanilla settings for the OS.  We want to be able to:
 \begin{itemize}
 \item to establish our ZFS kit
 \item to configure our main jail relationships
 \item to be able to check our networking with other hosts
-\item to set the basic \gls{operating system} to call packages from our package server.
+\item to set the basic \index{operating system}\gls{operating system} to call packages from our package server.
 \end{itemize}
 We can come back later and make a more sophisticated environment.  At this stage, we will just lay the foundation for that work.  If we don't get the ZFS kit stood up, then our more complex work with jails won't have an environment in which to thrive.
 
@@ -494,7 +491,7 @@ We can add on the \gls{mirror}s for logging:\\\\
 \texttt{BLONDIE-3-WD12345/ZLOG-BLONDIE-3-WD12345}\\
 
 
-Once we get to the point that we have an \gls{operating system} on disks, and disks ready for use with logs and jails, then we're at the end of this phase of system administration.
+Once we get to the point that we have an \index{operating system}\gls{operating system} on disks, and disks ready for use with logs and jails, then we're at the end of this phase of system administration.
 
 \subsection{Goals for \Gls{amnesiac} Systems}
 We chose at this point to do some experimental installs.  For clarity, notes on those are not presented here.  We did change our goals for the system.  We recognized that we wanted:
@@ -505,7 +502,7 @@ We chose at this point to do some experimental installs.  For clarity, notes on 
 \item Prepare commands in advance to reduce complexity.
 \end{itemize}
 
-From our testing, we recognizes that a Live CD offered the best answer for an \gls{immutable system}.  It does come at the price of some instability.  The "El Torrito" discs have a limited set of services.  Adjusting the \gls{configuration} of the \gls{operating system} means drafting, burning, and testing a new disc.  The " \gls{shell}" instance on a \index{FreeBSD}FreeBSD installation disc is reportedly less stable; but, we did not know why or how it was less stable than a normal \gls{operating system}.  We worked through our disc commands and kept careful notes.  Adding the physical serial number of the disc alone increased the complexity of manually typing in each command.  We discovered the need to  \gls{encrypt} the discs by partitions instead of the whole disc because there was a visibility problem during the execution of discovering and attaching the discs.  There was a poorly documented detail about protecting the disc  \gls{metadata} and keys.  The keys are provided during the setup  \gls{dialog}; but, these highly important items will disappear after the setup process closes.  This means it is important that an operator recognize the need to intercept and to record these keys.  Without them, a later recovery of a disc is impossible.  Since one typo would derail our experimental setups, we had to keep a second support computer on hand to record notes and consult references.  
+From our testing, we recognizes that a Live CD offered the best answer for an \gls{immutable system}.  It does come at the price of some instability.  The "El Torrito" discs have a limited set of services.  Adjusting the \gls{configuration} of the \index{operating system}\gls{operating system} means drafting, burning, and testing a new disc.  The " \gls{shell}" instance on a \index{FreeBSD}FreeBSD installation disc is reportedly less stable; but, we did not know why or how it was less stable than a normal \index{operating system}\gls{operating system}.  We worked through our disc commands and kept careful notes.  Adding the physical serial number of the disc alone increased the complexity of manually typing in each command.  We discovered the need to  \gls{encrypt} the discs by partitions instead of the whole disc because there was a visibility problem during the execution of discovering and attaching the discs.  There was a poorly documented detail about protecting the disc  \gls{metadata} and keys.  The keys are provided during the setup  \gls{dialog}; but, these highly important items will disappear after the setup process closes.  This means it is important that an operator recognize the need to intercept and to record these keys.  Without them, a later recovery of a disc is impossible.  Since one typo would derail our experimental setups, we had to keep a second support computer on hand to record notes and consult references.  
 
 %------------------------------------------------
 
@@ -642,7 +639,7 @@ We got through all that, and found that we had named a file incorrectly.  During
 
 \texttt{ \index{gpart!show}gpart show}\footnote{Ibid.} and \texttt{\index{geli!status}geli status}\footnote{“geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.} should show our drives as we expect them to be.
 
-At this point, all of the drives should be partitioned and decrypted and attached.  We can build a \index{zpool}zpool for our ZFS file system. We can attach that swap drive for the benefit of our \gls{operating system} right now.
+At this point, all of the drives should be partitioned and decrypted and attached.  We can build a \index{zpool}zpool for our ZFS file system. We can attach that swap drive for the benefit of our \index{operating system}\gls{operating system} right now.
 
 
 \subsection{To Use the Swap Disk}
