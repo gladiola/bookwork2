@@ -118,10 +118,48 @@ Choices for immutability across the board led to a deterministic outcome for the
 " it decided how
 the damage was going to spread and therefore, how it became very difficult to get better and fix the problems"
 
+4.2. Incident / Operational Event
+A simple change had a design error that led to incorrect accountability and attribution in logs.
+"unnoticed edge case"
+"the audit log
+became a means to falsely record the administrative actions"
+
+"the main constraint was that the wrong data had already been
+written to the immutable storage under a retention lock. This meant that they were not allowed to delete, change, or overwrite the
+affected files"
+
+4.3. Response and Mitigation
+common rollback and containment
+"to a point of compensating records and annotation layers"
+created a correction manifest
+had to append more data to explain the incorrect data
+needed to create instructions for future use to prevent mistakes related to the incorrect data
 
 
+5. Results and Discussion
+5.1. Key Findings
+"security was more about having strong identity controls than the technology of
+immutability itself"
 
+"a trusted writer ... making faulty records."
 
+"Therefore, identity management, least privilege, key rotation, and
+detection mechanisms are, in fact, more important than immutability in determining a real security posture."
 
+5.2. Discussion: Immutability ≠ Security
+"Immutability does not ascertain that the data
+is correct"
 
+"One way to see it is that security goes beyond storage alone. It is the result of a combination of access control, monitoring,
+detection, incident response capacity, and governance. Immutability can help make evidence last and also make some types of
+alterations less tempting, but it is not a substitute for strong IAM, secure pipelines, and separation of duties. Actually, immutable
+architectures can even heighten the need for these controls because errors and breaches are more difficult to be fixed."
+
+6. Conclusion and Future Scope
+6.1. Conclusion
+"which is great for audits, forensics, and
+accountability. However, the case study and subsequent analysis also reveal that the implementation of immutability brings about a
+set of practical problems: on top of the fact that mistakes become very hard to fix, wrong data can be being there forever, and the
+response to the security incidents frequently necessitates layered workarounds such as compensating records, re-indexing, or
+rebuilding state from trusted checkpoints."
 
