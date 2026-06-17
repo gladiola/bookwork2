@@ -163,3 +163,13 @@ set of practical problems: on top of the fact that mistakes become very hard to 
 response to the security incidents frequently necessitates layered workarounds such as compensating records, re-indexing, or
 rebuilding state from trusted checkpoints."
 
+
+AI Summary
+Model: GPT-5.5
+GitHub: https://github.com/gladiola/bookwork2
+
+The article argues that immutability should be treated mainly as an operational constraint, not as a standalone security feature. The notes correctly emphasize that immutable systems preserve evidence and support compliance, but they do not guarantee that the preserved data is accurate or safe. If an attacker, insider, or buggy service can still write to the system, immutability can make the resulting damage permanent.
+
+The paper’s core tradeoff is that immutability changes how teams correct failures. Instead of editing or deleting bad data, teams must append compensating records, rebuild indexes, and reconstruct trusted state from checkpoints. That makes recovery slower, raises storage and compute costs, and increases governance complexity, especially under long retention requirements.
+
+The case study reinforces this point by showing that an ingestion bug polluted audit logs with incorrect identities for hours. Because the logs were retention-locked, the team could not repair the original records and instead had to create correction manifests, annotate downstream queries, and document the anomaly for auditors. The practical lesson is that strong IAM, least privilege, key rotation, monitoring, validation, and incident-response processes matter more than immutability alone. Immutability helps preserve history, but it does not replace upstream trust controls or careful operational design.
