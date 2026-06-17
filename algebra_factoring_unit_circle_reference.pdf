@@ -1,0 +1,100 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 2280 >>
+stream
+BT
+/F1 14 Tf
+72 760 Td
+(Algebra Factoring Patterns + Unit Circle Reference) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+0 -14 Td
+(Common Factoring Patterns:) Tj
+0 -14 Td
+(1\) Greatest Common Factor:      ax + ay = a\(x + y\)) Tj
+0 -14 Td
+(2\) Difference of Squares:       a^2 - b^2 = \(a - b\)\(a + b\)) Tj
+0 -14 Td
+(3\) Perfect Square Trinomial:    a^2 + 2ab + b^2 = \(a + b\)^2) Tj
+0 -14 Td
+(4\) Perfect Square Trinomial:    a^2 - 2ab + b^2 = \(a - b\)^2) Tj
+0 -14 Td
+(5\) Trinomial \(x^2 + bx + c\):    x^2 + bx + c = \(x + m\)\(x + n\), m+n=b, mn=c) Tj
+0 -14 Td
+(6\) AC Method \(ax^2 + bx + c\):   split middle term, then factor by grouping) Tj
+0 -14 Td
+(7\) Grouping:                    ax + ay + bx + by = \(a + b\)\(x + y\)) Tj
+0 -14 Td
+(8\) Sum of Cubes:                a^3 + b^3 = \(a + b\)\(a^2 - ab + b^2\)) Tj
+0 -14 Td
+(9\) Difference of Cubes:         a^3 - b^3 = \(a - b\)\(a^2 + ab + b^2\)) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(Unit Circle Reference \(exact values\):) Tj
+0 -14 Td
+(Angle      Radians   \(cos, sin\)                 tan) Tj
+0 -14 Td
+(0 deg      0         \(1, 0\)                     0) Tj
+0 -14 Td
+(30 deg     pi/6      \(sqrt\(3\)/2, 1/2\)           sqrt\(3\)/3) Tj
+0 -14 Td
+(45 deg     pi/4      \(sqrt\(2\)/2, sqrt\(2\)/2\)     1) Tj
+0 -14 Td
+(60 deg     pi/3      \(1/2, sqrt\(3\)/2\)           sqrt\(3\)) Tj
+0 -14 Td
+(90 deg     pi/2      \(0, 1\)                     undefined) Tj
+0 -14 Td
+(120 deg    2pi/3     \(-1/2, sqrt\(3\)/2\)          -sqrt\(3\)) Tj
+0 -14 Td
+(135 deg    3pi/4     \(-sqrt\(2\)/2, sqrt\(2\)/2\)    -1) Tj
+0 -14 Td
+(150 deg    5pi/6     \(-sqrt\(3\)/2, 1/2\)          -sqrt\(3\)/3) Tj
+0 -14 Td
+(180 deg    pi        \(-1, 0\)                    0) Tj
+0 -14 Td
+(210 deg    7pi/6     \(-sqrt\(3\)/2, -1/2\)         sqrt\(3\)/3) Tj
+0 -14 Td
+(225 deg    5pi/4     \(-sqrt\(2\)/2, -sqrt\(2\)/2\)   1) Tj
+0 -14 Td
+(240 deg    4pi/3     \(-1/2, -sqrt\(3\)/2\)         sqrt\(3\)) Tj
+0 -14 Td
+(270 deg    3pi/2     \(0, -1\)                    undefined) Tj
+0 -14 Td
+(300 deg    5pi/3     \(1/2, -sqrt\(3\)/2\)          -sqrt\(3\)) Tj
+0 -14 Td
+(315 deg    7pi/4     \(sqrt\(2\)/2, -sqrt\(2\)/2\)    -1) Tj
+0 -14 Td
+(330 deg    11pi/6    \(sqrt\(3\)/2, -1/2\)          -sqrt\(3\)/3) Tj
+0 -14 Td
+(360 deg    2pi       \(1, 0\)                     0) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000247 00000 n 
+0000000317 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2649
+%%EOF
