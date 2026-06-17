@@ -1,0 +1,127 @@
+Immutability as a Constraint Notes
+
+
+Immutability as an Operational Constraint Rather Than a
+Security Feature
+Mallikarjun Vppalapati
+Sr Technical Consultant at Hitachi Vantara, USA.
+
+
+1. Introduction
+"Immutability has really become one of the most frequently mentioned design principles in the context of modern computing"
+
+"The argument is often made that if something cannot be altered, then it also cannot
+be compromised."
+
+"By just making something immutable
+you haven't necessarily made it safe; what you have effectively done is taken away the possibility of alteration and replaced it with
+a new operational reality: correction must happen through additional writes, and recovery must happen through reconciliation
+rather than repair"
+
+1.1. Challenges
+Immutability can be expensive because everything appended to must be stored.  So, storage costs will continually increase.  Lifecycle planning is needed to keep storage costs from ballooning out of control.
+
+Retention policies can add to the problem.  If they require years of retention, then the scope for the ballooning storage costs will be related to that.  
+
+Error correction and patching can become more complicated.
+
+1.2. Problem Statement
+The immutability of a system can backfire as a defense.
+" Even in an immutable system, attackers can still insert malicious data, steal credentials, change access
+controls, or exploit flaws in the services that write to the immutable system. Should the attacker be granted the writing privilege,
+then immutability will make the resultant damage endure forever."
+
+immutability can create a situation where damage is permanent.
+
+1.3. Motivation
+"Imagine a case where a wrongly configured setting pushed into
+an immutable infrastructure pipeline will be uncontrollably spread to all the environments."
+
+for incident response, the immutability of a system will require a slower approach
+" nevertheless, immutability
+systems require a more consideration, slower problem-solving procedure: quarantine, invalidate, supersede, and reconstruct state
+from known good checkpoints."
+
+" immutability is not a replacement for sound access controls,
+monitoring, and key management"
+
+if SREs, security teams, and compliance teams don't agree about the qualities of immutability and how it affects a system, then there can be "gaps in ownership and accountability."
+
+
+
+2. Literature Review
+2.1. Immutability in Computing Systems
+""Immutable infrastructure"
+is a term that depicts a scenario where, instead of patching a server, container or image, the whole unit is replaced.  The idea is not
+to tweak a live instance but to create a new artifact (such as a container image or golden VM image), test it, and deploy it"
+
+Infrastructure as Code (IaC), cloud deployments, and containerization mean that the natural working environment for a production deployment is conducive to accepting immutability and scaling and automated reproduction of infrastructure.
+
+"Append-only logs lie at the very foundation of distributed systems
+because they allow replication, ordering, and recovery."
+Contemporary logging involves storing changes in sequence rather than overwriting.
+
+2.2. Immutability in Security & Compliance
+"Unalterable audit trails are enormously helpful in forensic investigations as they not only disclose the precise sequence of
+events but also show the patterns of access and usage."
+
+"Therefore, immutability is usually seen
+as a protective measure that elevates the level of accountability, integrity, and non-repudiation of individuals."
+
+"... laws and regulations such as SOX, HIPAA, PCI-DSS, and the various sector-specific retention rules
+(especially the ones for financial services) have led organizations to invest in systems that can demonstrate that records have been
+kept as stipulated"
+
+If an attacker can gain control of an account, their actions under that identity can create noise that has to be filtered out when examining the logs.
+
+2.3. Threat Models and Security Limitations
+If the attack is from an insider threat, then an immutable system would not stop them.  That is, the immutable logs could compound the problem.  
+"Compromised credentials are another fundamental issue. If the attackers get hold of API keys, service accounts, or
+administrator privileges, they will be able to write to immutable systems just like legitimate services"
+
+3. Proposed Methodology
+3.1. Conceptual Framework
+" immutability is a feature applicable at different layers of a system"
+"immutability is less about "cannot change" in the absolute
+meaning and more about "should not change"
+
+" rollback is frequently done by simply redeploying previously verified artifacts, and error
+correction needs reconciliation rather than deletion"
+
+3.2. Classification Model
+"Hard immutability describes a state of being unchangeable where changes are so heavily protected by technical mechanisms
+and therefore practically infeasible the alteration process is therefore practically impossible."
+
+"Soft immutability...can be reverted by using privileged credentials."
+
+"Operational immutability implies the lack of changes without the use of technology"
+
+" it is dependent on the team culture, tooling, and adherence. "
+"Operational immutability can be
+compromised if engineers decide to disregard the process in a situation"
+
+3.3. Research Approach
+	1.  Put the ideas in a table to show how they break up
+	2.  Build some systems and watch them
+	3.  Look for problems.
+
+4. Case Study
+4.1. Scenario Overview
+Case study description:  7 year retention example.
+"To support the claim that immutability is essentially an operational constraint, the case study delves into a real-world cloud-
+based audit logging pipeline incorporating append-only logs with immutable object storage under retention lock. The design of the
+system followed a compliance audit that revealed inadequacies in the integrity and retention of logs. The management team
+insisted that all security-related events, i.e., authentication logs, privileged actions, and infrastructure changes, should be stored in a
+tamperproof way for at least seven years."
+
+Choices for immutability across the board led to a deterministic outcome for the scope of damage.
+" it decided how
+the damage was going to spread and therefore, how it became very difficult to get better and fix the problems"
+
+
+
+
+
+
+
+

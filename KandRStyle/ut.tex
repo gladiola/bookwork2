@@ -178,11 +178,26 @@ Your introduction text goes here...
 		\noindent In this technical note, we explore index{configuration}\gls{configuration}s of the \index{FreeBSD}FreeBSD \index{operating system}\gls{operating system}.  With a goal of creating an \index{amensiac}gls{amensiac} system that keeps the \index{operating system}\gls{operating system} separate from working storage drives, we experiment with various index{configuration}\gls{configuration}s.  We demonstrate the planning of drive index{configuration}\gls{configuration} index{coding}\gls{coding} and the reasoning behind the choices.  First, we code a system that uses the \index{operating system}\gls{operating system} on the storage drive discs.  Then we evolve the plan into using a live cd\index{live CD} for \index{operating system}\gls{operating system} use with drives that are connected to the gls{immutable system} in \gls{ram} via \gls{configuration} code.  Using an \index{amensiac}amensiac system like this, we would be able to reset the \index{operating system}\gls{operating system} to a known immutable state with every startup.  The drives could be disconnected and reattached to other systems for various purposes.  Throughout, we cover specific commands for drive and \index{operating system}\gls{operating system} management and operation.
 
 \section{Introduction}
+\subsection{Background and Content}
+\subsection{Problem Statement}
+\subsection{Project Objectives}
+\subsection{Scope of Work}
+\subsection{Variables}
+\subsection{Assumptions, Risks, and Limitations}
+\subsection{Significance of the Project}
 
+\section{Literature Review}
+\subsection{Overview of Existing Solutions or Approaches}
+\subsection{Comparisons of Technologies or Frameworks}
+\subsection{Gaps in the Literature}
+\section{Methodology}
+\subsection{Technical Research Questions}
+\subsection{System Architecture and Design}
+\subsection{Implementation Plan}
 We're starting with a Dell T610 Server.  Made in 2011, this machine is about ten years old.  We purchased this at a government e-waste auction.  She needed some cleanup.  We started on the front lawn, blowing out the dust with a leafblower.  
 
 Most of the time servers from these auctions will have minimal \gls{ram}.  Usually the drives and any good accessories will be stripped out.  Anytime we get a hard drive, from any source, one of the first actions we take is to erase the drives to \gls{nist} 800-88 Purge\index{NIST 800-88!Purge}\footnote{Chandramouli, Ramaswamy. Guidelines for Media Sanitization. 2025, \url{nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r2.pdf}, \url{https://doi.org/10.6028/nist.sp.800-88r2}.} with dedicated devices.  That kind of erasing can be done with \index{dd}\texttt{dd} in Kali or \index{FreeBSD}FreeBSD; but, the drive erasers usually have a verification feature that's helpful.  
-\subsection{Hardware \Gls{configuration}}
+\subsubsection{Hardware \Gls{configuration}}
 This is my favorite computer.  I've named her "Blondie" after Debbie Harry's New Wave band.\footnote{“Blondie | the Official Website of Blondie, Featuring Tour Dates, Presale Ticketing, News, the Official Store and More.” \url{Blondie.net}, 2026, blondie.net/. Accessed 10 June 2026.}
 
 Now, she's configured with:
@@ -233,7 +248,7 @@ The server does not have:
 	\item Sound cards or microphone hardware
 	\item Wireless networking or Bluetooth.
 \end{itemize}
-\subsection{Intentions:  Paving the Road to Jails}
+\subsubsection{Intentions:  Paving the Road to Jails}
 We'll use the box for development.  It'll be our main development server.  We'll use it with prog\gls{ram}s that we compile on a nearby poudriere package building box.  In those package builds, we have segregated our builds into a pattern of jails that mimic the types of jails that will be needed on most of our computers.  
 
 So, there is a \gls{jail} for functional groups like:  development tools, offensive and defensive security programs, browsers, desktop software, and so on.  \gls{poudriere} jails can be filled with whatever sets of programs we like.  For successful builds, we find its best to keep the jails small.  
@@ -255,8 +270,8 @@ The OS pair will hold ideas like:
 The ZFS kits will hold disconnected jails.  We'll set up a system of hierarchical jails that provide us with a development environment made up of modular jails that will be the children of an overarching parent.  These jails will communicate with each other and the parent through some custom \gls{vnet}.  We'll do all of our jail scripting, controls, and \gls{configuration} manually.  Likewise, the base ZFS setup will be done with simple scripts.
 %------------------------------------------------
 
-\section{Methodologies}
-\subsection{Preparing the Baseboard}
+
+\subsubsection{Preparing the Baseboard}
 
 The T610 has a built-in  \gls{raid} card that can't be totally bypassed.  This means that since we'll want ZFS to control the drives as much as possible, we'll need to tell the hardware  \gls{raid} to buzz off.  We won't want hardware  \gls{raid} to participate in the process.  We'll just use the software  \gls{raid} through ZFS.
 
@@ -268,13 +283,13 @@ Later on, we'll set VDEVs with ZFS; but, from this point on, we'll basically ign
 
 With the baseboard prepared, and the BIOS set to allow us to boot from disc, we'll get started with a plain install of \index{FreeBSD}FreeBSD to the first two drives in a \Gls{mirror} \gls{configuration}.
 
-\subsection{Incremental Advancement to \Gls{amnesiac} System}
+\subsubsection{Incremental Advancement to \Gls{amnesiac} System}
 With all of the manual \index{coding}\gls{coding} and \gls{configuration} needed to set up an \gls{amnesiac} system like the one we desired, it was a big change from the normal \gls{bsd} installs we had done for several years.  Our first pass at building an \gls{amnesiac} system decayed into manually scripting a regular \index{operating system}\gls{operating system} installation that had most of the features we desired in the \gls{amnesiac} system.  Both the on-disc OS system and the \gls{amnesiac} system are detailed below.  
 
-\subsection{Identifying and Allocating ZFS Drive Qualities}
+\subsubsection{Identifying and Allocating ZFS Drive Qualities}
 We need to be able to detect the drives and partitions that we want to work with using geom, \index{gpart}gpart, and zfs commands.  If, for some reason, you can't find those drives, then you need to address that.  While working with this particular computer, I've found that the leading cause of failing to detect a drive goes back to the VDEV assignment in the hardware  \gls{raid}.  If the drive were pulled, this particular  \gls{raid} card will need to have those \gls{configuration} changes addressed.  Often, this means rebooting the machine.  It could be done through the iDRAC baseboard controller in some models; but the one we have here is not configured to do those tasks.
 
-\subsection{What are we going to want the ZFS kit to do?  How are we going to use the drives?  How can we wrestle with this new type of \gls{configuration}?}
+\subsubsection{What are we going to want the ZFS kit to do?  How are we going to use the drives?  How can we wrestle with this new type of \gls{configuration}?}
 \begin{table}
   \centering
   \caption{ZFS Concepts and Commands}
@@ -321,11 +336,6 @@ For the OS-On-Disk system, this should bring us:
 \end{itemize}
 The unused space on the drives (a blank partition of 15\%) may look like we're grossly under-utilizing the disks.  We're planning for future emergencies.  Do we need more swap?  Maybe we can add it in.  Do we need to expand or resize the disk?  Maybe we can delete that blank "Free Space" partition and use that.  By not trying to use everything, we're giving ourselves some room to solve future problems.  
 
-
-
-
-
-
 \begin{table}
   \centering
   \caption{ZFS Main OS Use Hard Disk: Initial Estimates}
@@ -347,10 +357,10 @@ The unused space on the drives (a blank partition of 15\%) may look like we're g
 \begin{table} \centering \caption{ZFS SLOG Log Use \GLS{ssd}: Initial Estimates} \label{tab:zfsslogusedisk} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule & Estimate for 120\,GB \GLS{ssd} \\ \midrule Blank: 15\% "Free Space" & 18\,GB \\ Swap: 25\% Physical \gls{ram} (196\,GB max) & 50\,GB \\ ZFS Log Partition: Remainder & 52\,GB \\ \bottomrule \end{tabular} \end{table}
 
 
-\subsection{What We Can Learn From Installing an OS}
+\subsubsection{What We Can Learn From Installing an OS}
 Later on, we'll install the other drives wtih \index{gpart}gpart and zfs commands.  This first pair, through, we could do with \index{bsdinstall}bsdinstall\footnote{ “bsdinstall.'' Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=bsdinstall&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}.  If we choose that, though, then we must commit the whole disk to the process.  That would be how we would normally stand up a disk drive.  In this case, we'll conduct a manual process that mimics the main steps of \index{bsdinstall}bsdinstall\footnote{Ibid.} to show that the installation can be done manually.  Part of these same kinds of steps are critical tasks when administrating and installing jails.
   
-\subsection{Basic \index{operating system}\Gls{operating system} Installation Goals}
+\subsubsection{Basic \index{operating system}\Gls{operating system} Installation Goals}
 We're going to do an early phase, basic installation of the OS.  At this point, we'll really only set up a pair of users and some plain vanilla settings for the OS.  We want to be able to:
 \begin{itemize}
 \item to establish our ZFS kit
@@ -361,7 +371,7 @@ We're going to do an early phase, basic installation of the OS.  At this point, 
 We can come back later and make a more sophisticated environment.  At this stage, we will just lay the foundation for that work.  If we don't get the ZFS kit stood up, then our more complex work with jails won't have an environment in which to thrive.
 
 
-\subsection{Main Steps for FreeBSD Installation from \index{bsdinstall}bsdinstall}
+\subsubsection{Main Steps for FreeBSD Installation from \index{bsdinstall}bsdinstall}
 \protect\footnote{"bsdinstall.'' Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=bsdinstall&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}}
 
 We can see that \index{bsdinstall}\texttt{bsdinstall}
@@ -384,7 +394,7 @@ We can see that \index{bsdinstall}\texttt{bsdinstall}
 
 We're not going to do all of these.  We'll start with partitioning.  We won't do any wireless networking or set a root password.  We're going to skip the wireless networking for now because the hardware doesn't have that capability.  In the newer versions of bsdinstall, there are some protective measures not listed above.  We won't tackle those just yet.  
 
-\subsection{No Root Password}
+\subsubsection{No Root Password}
 
 We won't set a root password because we will expect to always \gls{ssh} into the root account with a key.  By not setting a root password, we will create a situation where a key is always required.  This can be dangerous in that it can create a single point of failure for the system.  
 
@@ -400,18 +410,18 @@ Also, there is another risk:  leaving the needed key lying around.  For example,
 
 If someone wishes to put a root password in place, then that's a procedure that will be easy to implement.  For now, though, there will be no root password.  And that means we have to build the keys we will use to log in.
 
-\subsection{Be Able to Build the Keys}
+\subsubsection{Be Able to Build the Keys}
 We can build our keys using the live disc's  \gls{shell}. and a  \gls{thumbdrive}.  The main command to build the keys is:\\\\
 \texttt{\index{ssh-keygen}ssh-keygen -b 1024 -t rsa}\footnote{“ssh-Keygen.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=ssh-keygen&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
 Copy the files output to a  \gls{thumbdrive} and keep them handy for mounting.
 
-\subsection{Partition, Mount, and Use a  \Gls{thumbdrive} from Live Disc's  \Gls{shell}}
+\subsubsection{Partition, Mount, and Use a  \Gls{thumbdrive} from Live Disc's  \Gls{shell}}
 Let's take some time to go over some detailed instructions on how to build those keys and get them onto a  \gls{thumbdrive}.  The live disc's  \gls{shell} mostly uses a read-only file system.  So, some people may not be familiar with how we are going to get the keys made and saved anywhere that will persist.
-\subsection{Start the Box and the Live Disk's  \Gls{shell}}
+\subsubsection{Start the Box and the Live Disk's  \Gls{shell}}
 With the hardware booted to the LiveCD (installation disc), we select " \Gls{shell}" from the three main choices in the first menu.  This drops us into the  \gls{shell}.  If we try to save a file of any kind, we'll probably get an error message back that says we're in a read-only file system.
 Our main set of directions for this is in the \index{FreeBSD Handbook}FreeBSD Handbook.  We look carefully at the sections for USB storage and "Adding Disks"
-\subsection{Be Able to Plug in the USB  \Gls{thumbdrive} and Find Its Logical Address}
+\subsubsection{Be Able to Plug in the USB  \Gls{thumbdrive} and Find Its Logical Address}
 
 \texttt{\index{camcontrol!devlist}camcontrol devlist}\footnote{“camcontrol.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=camcontrol&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
@@ -419,7 +429,7 @@ This should show the USB drive.  If the list is long, we can  \gls{pipe} it to m
 
 The listing should also show any other storage device that's plugged in to the machine.  So, all of those hard drives loaded into the bays should appear.  If they don't, then take it as a warning sign that we're having a problem with the  \gls{raid} card's physical drive VDEVs.  On the T610, we were seeing drives in positions 0 to 7 in addition to the USB  \gls{thumbdrive} we're working on now.  
 
-\subsection{Be Able to Partition the USB}
+\subsubsection{Be Able to Partition the USB}
 Since our USB has not been prepared for use with anything, we have to partition it.  We can pretty much use the default commands fro 17.2 "Adding Disks" to set up the drive.  Here, we create a simple UFS file system and mount it to a directory that we'll put in /tmp. If our USB is already partitioned, we would want to skip this part.  \\\\
 \texttt{\index{gpart!create}gpart create -s GPT da0}\footnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026}\\
 \texttt{\index{gpart!add}gpart add -t freebsd-ufs -a 1M da0}\footnote{Ibid.}\\
@@ -428,7 +438,7 @@ Mount the USB to the /tmp Directory:\\\\
 \texttt{\index{mkdir}mkdir /tmp/someDir}\footnote{“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 \texttt{\index{mount}mount /dev/da0p1 /tmp/someDir}\footnote{“Mount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
-\subsection{Be Able to Write to the USB}
+\subsubsection{Be Able to Write to the USB}
 We could now write a simple text file onto /tmp/someDir, unmount the drive, and then re-mount it to check our work.  That would go like:\\\\
 \texttt{\index{cd}cd /tmp}\footnote{“cd.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=cd&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 \texttt{\index{umount}umount /tmp/someDir}\footnote{“umount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=umount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
@@ -438,14 +448,14 @@ Unplug the drive.  Plug it in another slot.  Use camcontrol devlist to find it a
 \texttt{\index{mount}mount /dev/da0p1 /tmp/otherDir}\footnote{“Mount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 \texttt{\index{ls}ls /tmp/otherDir}\footnote{“ls.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=ls&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
-\subsection{Be Able to Put Some Key Pairs on the USB}
+\subsubsection{Be Able to Put Some Key Pairs on the USB}
 Using these same principles, we can mount our USB  \gls{thumbdrive}, generate \gls{ssh} keys, and save them there for later.\\\\
 \texttt{\index{mkdir} mkdir /tmp/otherDir/keys}\footnote{“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 \texttt{\index{ssh-keygen} ssh-keygen -b 1024 -t rsa}\footnote{“ssh-Keygen.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=ssh-keygen&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
 During the ssh-keygen  \index{dialog}\gls{dialog}, simply direct the prog\gls{ram} to save the keys to \texttt{/tmp/otherDir/keys}.  Be sure to record your passphrase somewhere.  
 
-\subsection{Be Able to Use Commands to Build Out the Drives}
+\subsubsection{Be Able to Use Commands to Build Out the Drives}
 We'd like to show a quick overview of some of the drive-related commands.  These will be applied soon.
 
 To list what devices are detected by the OS, we can use:\\\\
@@ -493,7 +503,7 @@ We can add on the \gls{mirror}s for logging:\\\\
 
 Once we get to the point that we have an \index{operating system}\gls{operating system} on disks, and disks ready for use with logs and jails, then we're at the end of this phase of system administration.
 
-\subsection{Goals for \Gls{amnesiac} Systems}
+\subsubsection{Goals for \Gls{amnesiac} Systems}
 We chose at this point to do some experimental installs.  For clarity, notes on those are not presented here.  We did change our goals for the system.  We recognized that we wanted:
 \begin{itemize}
 \item Use a LiveCD for an immutable OS
@@ -506,7 +516,6 @@ From our testing, we recognizes that a Live CD offered the best answer for an \g
 
 %------------------------------------------------
 
-\section{Results}
 As our experimentation concluded, we had learned enough to stand a reasonable chance to setup an \gls{amnesiac} machine.  Its features include:
 
 \begin{itemize}
@@ -518,18 +527,12 @@ As our experimentation concluded, we had learned enough to stand a reasonable ch
 \item Enough room to expand, to update, and to recover.
 \end{itemize}
 
-\subsection{Configure for SWAP Disk, ZFS  \index{cache}\Gls{cache}, ZFS SLOG \Gls{mirror}, and ZFS RAIDz2}
+\subsubsection{Configure for SWAP Disk, ZFS  \index{cache}\Gls{cache}, ZFS SLOG \Gls{mirror}, and ZFS RAIDz2}
 
 \begin{table} \centering \caption{FreeBSD Swap Disk — Estimate of 500\,GB HDD} \label{tab:freebsdswapdisc} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule GEOM Disk List Mediasize & 465\,GB \\ \midrule Blank: 15\% "Free Space" & 70\,GB \\ Swap & 395\,GB \\ \bottomrule \end{tabular} \end{table}
 
-
 \begin{table} \centering \caption{ZFS  \index{cache}\Gls{cache} (Read  \index{cache}\Gls{cache}) Disk — Estimate of 80\,GB HDD} \label{tab:zfscachedisc} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule GEOM Disk List Mediasize & 74\,GB \\ \midrule Blank: 15\% "Free Space" & 11\,GB \\ Swap & 63\,GB \\ \bottomrule \end{tabular} \end{table}
-
-
 \begin{table} \centering \caption{ZFS SLOG Log Mirror (Write  \index{cache}\Gls{cache}) Disk — Initial Estimates} \label{tab:zfsslogmirror} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule & Estimate for 120\,GB \GLS{ssd} \\ \midrule GEOM Disk List Mediasize & 465\,GB \\ Blank: 15\% "Free Space" & 18\,GB \\ Swap: 25\% Physical \gls{ram} (196\,GB max) & 50\,GB \\ ZFS Log Partition: Remainder & 52\,GB \\ \bottomrule \end{tabular} \end{table}
-
-
-
 \begin{table} \centering \caption{ZFS Jail Use Hard Disk — Estimate of 500\,GB HDD} \label{tab:zfsjailusehdd} \begin{tabular}{@{}p{0.60\linewidth} p{0.35\linewidth}@{}} \toprule & Estimate for 500\,GB HDD \\ \midrule GEOM Disk List Mediasize & 465\,GB \\ Blank: 15\% "Free Space" & 75\,GB \\ Swap: 25\% Physical \gls{ram} (196\,GB max) & 50\,GB \\ ZFS Main Partition: Remainder & 375\,GB \\ \bottomrule \end{tabular} \end{table}
 
 Changed config to keep the RAIDZ2 for main work.  I was having trouble with the \GLS{ssd}s; so, I removed them and replaced them with two 80GB Western Digital Velociraptors.  I added another WD Velociraptor for  \index{cache}\gls{cache}.  Then we added a Western Digital Blue 500GB for a swap disk.  That sounds like a lot of swap, but we hope to upgrade to near 196GB of \gls{ram} this year. So, a little more than twice that would be 400GB of swap.  The next disk size on hand was 500GB.
@@ -538,55 +541,55 @@ We had some mis-aligned partitions with RAIDZ2 work for Blondie.  We were using 
 
 We used  \index{gpart}gpart delete to delete each partition.  Then we used  \index{gpart}gpart destroy to delete the partition table for the whole disk.  In the end,  \index{gpart}gpart showed us only the CD.
 
-\subsection{Startup with \texttt{bootonly.iso}}
+\subsubsection{Startup with \texttt{bootonly.iso}}
 For this run, we’ll begin by using the boot-only disk.  We won’t plan to ever boot from these hard drives.  We’ll just use the  \gls{shell} on the CD.  As with the others, we’ll mount a USB to store  \gls{metadata} information.  We’ll partition and  \index{encrypt}\gls{encrypt} the disks.  In the following examples, we provide the actual serial numbers for the hard drives that were used.  This example was derived from notes we maintained during experimentation; serial numbers in other instances will vary, of course.
 
-\subsection{Mount the USB to Save the  \Gls{metadata} Backup File}
+\subsubsection{Mount the USB to Save the  \Gls{metadata} Backup File}
 \texttt{\index{mkdir}mkdir /tmp/usb3}\footnote{“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 \texttt{\index{mount}mount /dev/da0p1 /tmp/usb3}\footnote{“mount.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mount&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}
 
-\subsection{Create Swap Disk in Bay 0}
+\subsubsection{Create Swap Disk in Bay 0}
 \texttt{\index{gpart!create}gpart create -s GPT mfid0}\footnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\
 \texttt{\index{gpart!add}gpart add -a 5K -s 395G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-0-SWAP-WCC2ERZ56512 mfid0}\footnote{Ibid.}
 
-\subsection{Create ZFS Cache in Bay 1}
+\subsubsection{Create ZFS Cache in Bay 1}
 \texttt{\index{gpart!create}gpart create -s GPT mfid1}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs \textbackslash\\-l ZFS-BLONDIE-1-CACHE-WXL1E40C1352 mfid1}\footnote{Ibid.}
 
-\subsection{Create ZFS SLOG in Bays 2 and 3}
+\subsubsection{Create ZFS SLOG in Bays 2 and 3}
 \texttt{\index{gpart!create}gpart create -s GPT mfid2}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs \textbackslash\\-l ZFS-BLONDIE-2-SLOG-WXL1E4067503 mfid2}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!create}gpart create -s GPT mfid3}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs \textbackslash\\ -l ZFS-BLONDIE-3-SLOG-WXC0CA9V8431 mfid3}\footnote{Ibid.}\\\\
 
-\subsection{Create ZFS Work Disks for Jails}
-\subsection{Bay 4}
+\subsubsection{Create ZFS Work Disks for Jails}
+\subsubsection{Bay 4}
 \texttt{\index{gpart!create}gpart create -s GPT mfid4}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l ZFS-BLONDIE-4-FILES-WCC2EE134983 mfid4}\footnote{Ibid.}
-\subsection{Bay 5}
+\subsubsection{Bay 5}
 \texttt{\index{gpart!create}gpart create -s GPT mfid5}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-5-SWAP-WMC2E3914420 mfid5}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l ZFS-BLONDIE-5-FILES-WMC2E3914420 mfid5}\footnote{Ibid.}
-\subsection{Bay 6}
+\subsubsection{Bay 6}
 \texttt{\index{gpart!create}gpart create -s GPT mfid6}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\ -l ZFS-BLONDIE-6-SWAP-WCC2ETT39577 mfid6}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l ZFS-BLONDIE-6-FILES-WCC2ETT39577 mfid6}\footnote{Ibid.}
-\subsection{Bay 7}
+\subsubsection{Bay 7}
 \texttt{\index{gpart!create}gpart create -s GPT mfid7}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-7-SWAP-WCAYU2878968 mfid7}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l ZFS-BLONDIE-7-FILES-WCAYU2878968 mfid7}\footnote{Ibid.}\\
 
 We should note that “Bay 7” is an observation of the physical hardware.  The device (“mfid7”) could have whatever number assigned at the end that the machine gave it.  If the hardware  \gls{raid} had a problem with recognizing a device, the number might not correlate to what bay it is in.  When powering up, check your geometry.  
 
-\subsection{ \index{encrypt}\Gls{encrypt} those partitions}
+\subsubsection{ \index{encrypt}\Gls{encrypt} those partitions}
 During this phase, we’ll  \index{encrypt}\gls{encrypt} the partitions.  That means that we should have some recordkeeping materials on hand.  Use a password manager or a notebook to carefully record the password that is about to be typed in.  With each one completed, the machine will tell us that it has saved a file of backup  \gls{metadata}.  We will want to copy that  \gls{metadata} file to the  \gls{thumbdrive}.  If the  \index{encrypt}\gls{encrypt}ion gets jammed up, or if there is some type of problem, then the  \gls{metadata} file will be used as part of the recovery process.  Without a  \gls{metadata} file, recovering an  \index{encrypt}\gls{encrypt}ed partition can be difficult or impossible.  
 
 If you lose the  \gls{metadata} file, but still have routine access to the \index{geli}geli  \index{encrypt}\gls{encrypt}ion because you know the password and the machine is functioning alright, then you can export another copy of the  \gls{metadata}.  This means that anyone with root access to the machine, who can use \index{geli}geli commands, would also be able to export such a file.  Keep this in mind if you need to secure your machine.
 
 When we give the subcommand to “init,” the machine will ask us to give the new password twice.  This is part of the password setting process.  When we give the subcommand to “attach,” the machine will ask us to give the password as part of the normal attachment process. Type carefully, and look at the records carefully, because this is the main chance to make sure the password notes are right.  
 
-\subsection{Commands to  \index{encrypt}\Gls{encrypt} the Partitions}
+\subsubsection{Commands to  \index{encrypt}\Gls{encrypt} the Partitions}
 \texttt{\index{geli!init}geli init -l 256 mfid0p1}\footnote{“Geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}\\
 \texttt{\index{geli!attach}geli attach mfid0p1}\footnote{Ibid.}\\\\
 \texttt{\index{geli!init}geli init -l 256 mfid1p1}\footnote{Ibid.}\\
@@ -612,7 +615,7 @@ When we give the subcommand to “init,” the machine will ask us to give the n
 \texttt{\index{geli!init}geli init -l 256 mfid7p2}\footnote{Ibid.}\\
 \texttt{\index{geli!attach}geli attach mfid7p2}\footnote{Ibid.}\\\\
 
-\subsection{To Preserve the  \Gls{metadata} Backup Files}
+\subsubsection{To Preserve the  \Gls{metadata} Backup Files}
 Let us reiterate:  preserving these backups at the time of disk creation is essential for later recoveries.  If these files are not saved, then a powerdown of the system will cause them to be lost.  They're automatically stored in an ephemeral directory.  Conserve the ability to recover a disk later by recording these  \gls{metadata} backup files to a safe location.
 
 Each  \gls{metadata} backup file was probably created with a name that does not look like the drive’s label.  Instead, the machine assigns a backup file name based on geometry.  Since we can have a hardware \gls{configuration} change that could mess up that pattern, we will want to save our backup files with names that look more like the disk labels.  That way, if the drives move, then we can better discover which  \gls{metadata} file goes with it.\\
@@ -630,7 +633,7 @@ Each  \gls{metadata} backup file was probably created with a name that does not 
 \texttt{\index{cp}cp /var/backups/mfid7p1.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-7-SWAP-WCAYU2878968.eli}\footnote{Ibid.}\\\\
 \texttt{\index{cp}cp /var/backups/mfid7p2.eli /tmp/usb3/backups\\\_27SEP2020/ZFS-BLONDIE-7-FILES-WCAYU2878968.eli}\footnote{Ibid.}
 
-\subsection{File Name Check:  Editing Labels}
+\subsubsection{File Name Check:  Editing Labels}
 We got through all that, and found that we had named a file incorrectly.  During experimentation, we had a typo; BAY 4 should be
 \texttt{WCC2EE134983} but that's not what we saw when we checked our work.  Not the end of the world.  We can move the .eli  \gls{metadata} file, and we can use  \index{gpart!modify}gpart\footnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.} modify to change the label.\\
 
@@ -641,10 +644,7 @@ We got through all that, and found that we had named a file incorrectly.  During
 
 At this point, all of the drives should be partitioned and decrypted and attached.  We can build a \index{zpool}zpool for our ZFS file system. We can attach that swap drive for the benefit of our \index{operating system}\gls{operating system} right now.
 
-
-\subsection{To Use the Swap Disk}
-
-
+\subsubsection{To Use the Swap Disk}
 \noindent\texttt{\index{swapon}swapon mfid0p1.eli}\footnote{“swapon.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=swapon&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}
 \texttt{\index{swapinfo}swapinfo -k}\footnote{Ibid.}\\
 
@@ -663,7 +663,6 @@ We also have to restore mfid0 because there’s a problem with reading the  \gls
 \texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-0-SWAP-D-WCC2ERZ56512 mfid0}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-0-SWAP-E-WCC2ERZ56512 mfid0}\footnote{Ibid.}\\\\
 \texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap \textbackslash\\-l ZFS-BLONDIE-0-SWAP-F-WCC2ERZ56512 mfid0}\footnote{Ibid.}\\\\
-
 
 Then we need to establish  \index{encrypt}\gls{encrypt}ion for all of those.\\
 
@@ -688,15 +687,16 @@ To add on all the other swap partitions:\\\\
 \texttt{\index{swapon}swapon /dev/mfid6p1.eli}\footnote{Ibid.}\\
 \texttt{\index{swapon}swapon /dev/mfid7p1.eli}\footnote{Ibid.}\\
 \texttt{\index{swapinfo}swapinfo -h}\footnote{Ibid.}\\
-
-\subsection{Create the \index{zpool}zpool for BLONDIE}
+\subsubsection{Create the \index{zpool}zpool for BLONDIE}
 We’ll now create a mountpoint on the tmpfs, create the \index{zpool}zpool, and then add in the  \index{cache}\gls{cache} and SLOG \Gls{mirror}ed disks.
-
-\subsection{Create a mountpoint}
+\subsubsection{Create a mountpoint}
 Create a mountpoint so that we will be able to mount the \index{zpool}zpool without errors as we create it.\\
-
 \noindent\texttt{mkdir /tmp/BLONDIE}\footnote{“mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
+\section{Analysis}
+\subsection{Quality}
+\subsection{Tests}
+\section{Discussion}
 \section{Chapter References}
 \subsection{Books}
 For our ZFS planning, we read: Lucas, Michael W, and Allan Jude. FreeBSD Mastery: ZFS. Tilted Windmill Press, 21 May 2015.
@@ -807,17 +807,17 @@ To get the archive from the tape.
 
 11.  For the next record, just rewind and advance through the markers to get to the next blank space for writing a record.
 
-\subsection{Sample Files: test.txt }
+\subsubsection{Sample Files: test.txt }
 \texttt{The quick brown fox jumped over the lazy dogs.}
-\subsection{Sample Files:  test2.txt}
+\subsubsection{Sample Files:  test2.txt}
 \texttt{The other dog is still lazy, too.}
-\subsection{Sample Files:  test3.txt}
+\subsubsection{Sample Files:  test3.txt}
 \texttt{The fox is just really fast.}
-\subsection{Sample Files:  test4.txt}
+\subsubsection{Sample Files:  test4.txt}
 \texttt{Yet some more records.}
-\subsection{Sample Files:  test5.txt}
+\subsubsection{Sample Files:  test5.txt}
 \texttt{And another record.}
-\subsection{Sample Script:  scriptedDemo.sh}
+\subsubsection{Sample Script:  scriptedDemo.sh}
 \texttt{\#!/usr/bin/env sh\\
 clear \\
 echo "scriptedDemo"\\
