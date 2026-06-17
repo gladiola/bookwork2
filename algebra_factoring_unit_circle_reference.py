@@ -86,7 +86,8 @@ def main() -> None:
         "360 deg    2pi       (1, 0)                     0",
     ]
 
-    output_path = Path(__file__).with_name("algebra_factoring_unit_circle_reference.pdf")
+    output_path = Path(__file__).parent / "research" / "algebra_factoring_unit_circle_reference.pdf"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     build_pdf(lines, output_path)
 
 
