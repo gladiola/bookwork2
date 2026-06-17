@@ -86,7 +86,8 @@ def main() -> None:
         "360 deg    2pi       (1, 0)                     0",
     ]
 
-    build_pdf(lines, Path("/home/runner/work/bookwork2/bookwork2/algebra_factoring_unit_circle_reference.pdf"))
+    output_path = Path(__file__).with_name("algebra_factoring_unit_circle_reference.pdf")
+    build_pdf(lines, output_path)
 
 
 if __name__ == "__main__":
