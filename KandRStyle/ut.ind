@@ -1,10 +1,10 @@
 \begin{theindex}
 
-  \item 2FA, \hyperpage{9}
+  \item 2FA, \hyperpage{8}
 
   \indexspace
 
-  \item amensiac, \hyperpage{1}, \hyperpage{7}
+  \item amensiac, \hyperpage{1}, \hyperpage{5}
 
   \indexspace
 
@@ -12,102 +12,101 @@
 
   \indexspace
 
-  \item cache, \hyperpage{14}, \hyperpage{21}
+  \item cache, \hyperpage{13, 14}, \hyperpage{20}
   \item camcontrol
     \subitem devlist, \hyperpage{10}
-  \item cd, \hyperpage{11}
+  \item cd, \hyperpage{10}
   \item coding, \hyperpage{1}, \hyperpage{5}
   \item cp, \hyperpage{18, 19}
 
   \indexspace
 
-  \item dd, \hyperpage{3}
+  \item dd, \hyperpage{2}
   \item dialog, \hyperpage{11}, \hyperpage{13}
 
   \indexspace
 
-  \item encrypt, \hyperpage{13}, \hyperpage{15}, \hyperpage{17}, 
-		\hyperpage{20}, \hyperpage{35}
+  \item encrypt, \hyperpage{12--14}, \hyperpage{16, 17}, \hyperpage{20}, 
+		\hyperpage{33}
 
   \indexspace
 
-  \item FreeBSD, \hyperpage{1}, \hyperpage{3}, \hyperpage{5}, 
-		\hyperpage{13}, \hyperpage{31}
-  \item FreeBSD Handbook, \hyperpage{10}, \hyperpage{12}, 
-		\hyperpage{36}
+  \item FreeBSD, \hyperpage{1, 2}, \hyperpage{4}, \hyperpage{13}, 
+		\hyperpage{29}
+  \item FreeBSD Handbook, \hyperpage{9}, \hyperpage{11}, \hyperpage{34}
   \item FreeBSD Mastery:  ZFS, \hyperpage{5}
 
   \indexspace
 
-  \item geli, \hyperpage{4}, \hyperpage{17}
-    \subitem attach, \hyperpage{17, 18}, \hyperpage{20}
-    \subitem init, \hyperpage{17, 18}, \hyperpage{20}
+  \item geli, \hyperpage{3}, \hyperpage{16}
+    \subitem attach, \hyperpage{17}, \hyperpage{19, 20}
+    \subitem init, \hyperpage{17}, \hyperpage{20}
     \subitem status, \hyperpage{19}
   \item gpart, \hyperpage{5}, \hyperpage{7}, \hyperpage{11}, 
 		\hyperpage{14}
-    \subitem add, \hyperpage{10}, \hyperpage{12}, \hyperpage{15, 16}, 
-		\hyperpage{20}
-    \subitem create, \hyperpage{10}, \hyperpage{12}, \hyperpage{15, 16}
+    \subitem add, \hyperpage{10--12}, \hyperpage{15, 16}, 
+		\hyperpage{19, 20}
+    \subitem create, \hyperpage{10, 11}, \hyperpage{15, 16}
     \subitem modify, \hyperpage{19}
-    \subitem recover, \hyperpage{20}
-    \subitem resize, \hyperpage{20}
+    \subitem recover, \hyperpage{19}
+    \subitem resize, \hyperpage{19}
     \subitem show, \hyperpage{19}
-    \subitem status, \hyperpage{20}
+    \subitem status, \hyperpage{19}
 
   \indexspace
 
-  \item jails, \hyperpage{9}
+  \item jails, \hyperpage{8}
 
   \indexspace
 
   \item live CD, \hyperpage{1}
-  \item ls, \hyperpage{11}
+  \item ls, \hyperpage{10}
   \item LTO III tape, \hyperpage{3}
 
   \indexspace
 
-  \item mkdir, \hyperpage{10, 11}, \hyperpage{15}
-  \item mount, \hyperpage{11}, \hyperpage{15}
+  \item mkdir, \hyperpage{10, 11}, \hyperpage{14}
+  \item mount, \hyperpage{10}, \hyperpage{14}
 
   \indexspace
 
   \item newfs, \hyperpage{10}
   \item NIST 800-88
-    \subitem Purge, \hyperpage{3}
+    \subitem Purge, \hyperpage{2}
 
   \indexspace
 
-  \item operating system, \hyperpage{1}, \hyperpage{5}, \hyperpage{8}, 
-		\hyperpage{13}, \hyperpage{19}
+  \item operating system, \hyperpage{1}, \hyperpage{5}, 
+		\hyperpage{7, 8}, \hyperpage{12, 13}, \hyperpage{19}
 
   \indexspace
 
-  \item RAIDZ-2, \hyperpage{3--5}, \hyperpage{7}, \hyperpage{11, 12}
-  \item rm, \hyperpage{11}
+  \item RAIDZ-2, \hyperpage{3--5}, \hyperpage{11, 12}
+  \item rm, \hyperpage{10}
 
   \indexspace
 
-  \item ssh-keygen, \hyperpage{10, 11}
+  \item ssh-keygen, \hyperpage{9}, \hyperpage{11}
   \item su, \hyperpage{9}
   \item sudo, \hyperpage{9}
-  \item swapinfo, \hyperpage{19--21}
+  \item swapinfo, \hyperpage{19, 20}
   \item swapoff, \hyperpage{20}
-  \item swapon, \hyperpage{12}, \hyperpage{19--21}
+  \item swapon, \hyperpage{11}, \hyperpage{19, 20}
 
   \indexspace
 
-  \item TOTP, \hyperpage{9}
+  \item TOTP, \hyperpage{8}
 
   \indexspace
 
-  \item umount, \hyperpage{11}
+  \item umount, \hyperpage{10}
   \item USB
-    \subitem drive, \hyperpage{9}
+    \subitem drive, \hyperpage{8}
 
   \indexspace
 
-  \item zpool, \hyperpage{19}, \hyperpage{21}
-    \subitem add, \hyperpage{13}
+  \item zpool, \hyperpage{19--21}
+    \subitem add, \hyperpage{12}
     \subitem comment, \hyperpage{6}
     \subitem create, \hyperpage{12}
 
