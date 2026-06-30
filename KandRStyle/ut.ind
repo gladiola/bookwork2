@@ -55,6 +55,10 @@
 
   \indexspace
 
+  \item hard immutability, \hyperpage{2}
+
+  \indexspace
+
   \item jails, \hyperpage{8}
 
   \indexspace
@@ -78,6 +82,7 @@
 
   \item operating system, \hyperpage{1}, \hyperpage{5}, 
 		\hyperpage{7, 8}, \hyperpage{12, 13}, \hyperpage{19}
+  \item operational immutability, \hyperpage{2}
 
   \indexspace
 
@@ -86,6 +91,7 @@
 
   \indexspace
 
+  \item soft immutability, \hyperpage{2}
   \item ssh-keygen, \hyperpage{9}, \hyperpage{11}
   \item su, \hyperpage{9}
   \item sudo, \hyperpage{9}

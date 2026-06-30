@@ -18,6 +18,9 @@
 \glossaryentry{operating system?\glossentry{operating system}|setentrycounter[]{page}"\glsnumberformat}{1}
 \glossaryentry{operating system?\glossentry{operating system}|setentrycounter[]{page}"\glsnumberformat}{1}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{2}
+\glossaryentry{hard immutability?\glossentry{hard immutability}|setentrycounter[]{page}"\glsnumberformat}{2}
+\glossaryentry{soft immutability?\glossentry{soft immutability}|setentrycounter[]{page}"\glsnumberformat}{2}
+\glossaryentry{operational immutability?\glossentry{operational immutability}|setentrycounter[]{page}"\glsnumberformat}{2}
 \glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{2}
 \glossaryentry{NIST?\glossentry{nist}|setentrycounter[]{page}"\glsnumberformat}{2}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{3}

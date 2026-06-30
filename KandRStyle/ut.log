@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  30 JUN 2026 12:11
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  30 JUN 2026 12:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2022,12 +2022,12 @@ Package rerunfilecheck Info: File `ut.out' has not changed.
 (rerunfilecheck)             Checksum: 65AA331E5A83400ADEA807A0A662237C;5783.
  ) 
 Here is how much of TeX's memory you used:
- 22971 strings out of 475846
- 419333 string characters out of 5781395
- 1970879 words of memory out of 5000000
- 43699 multiletter control sequences out of 15000+600000
+ 23061 strings out of 475846
+ 422087 string characters out of 5781395
+ 1971879 words of memory out of 5000000
+ 43789 multiletter control sequences out of 15000+600000
  562629 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 91i,15n,117p,2246b,729s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 91i,15n,117p,2246b,733s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on ut.pdf (55 pages).
