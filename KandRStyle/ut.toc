@@ -24,8 +24,8 @@
 \contentsline {subsubsection}{Preparing the Baseboard}{4}{subsubsection*.8}%
 \contentsline {subsubsection}{Incremental Advancement to \Gls {amnesiac} System}{4}{subsubsection*.9}%
 \contentsline {subsubsection}{Identifying and Allocating ZFS Drive Qualities}{4}{subsubsection*.10}%
-\contentsline {subsubsection}{What are we going to want the ZFS kit to do? How are we going to use the drives? How can we wrestle with this new type of \gls {configuration}?}{4}{subsubsection*.11}%
-\contentsline {subsubsection}{What We Can Learn From Installing an OS}{6}{subsubsection*.16}%
+\contentsline {subsubsection}{What are we going to want the ZFS kit to do? How are we going to use the drives? How can we wrestle with this new type of \gls {configuration}?}{5}{subsubsection*.11}%
+\contentsline {subsubsection}{What We Can Learn From Installing an OS}{7}{subsubsection*.16}%
 \contentsline {subsubsection}{Basic \Gls {operating system} Installation Goals}{7}{subsubsection*.17}%
 \contentsline {subsubsection}{Main Steps for FreeBSD Installation from bsdinstall}{7}{subsubsection*.18}%
 \contentsline {subsubsection}{No Root Password}{8}{subsubsection*.19}%

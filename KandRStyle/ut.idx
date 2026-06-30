@@ -13,21 +13,21 @@
 \indexentry{dd|hyperpage}{2}
 \indexentry{FreeBSD|hyperpage}{2}
 \indexentry{LTO III tape|hyperpage}{2}
-\indexentry{RAIDZ-2|hyperpage}{2}
+\indexentry{RAIDZ-2|hyperpage}{3}
 \indexentry{geli|hyperpage}{3}
 \indexentry{RAIDZ-2|hyperpage}{3}
 \indexentry{FreeBSD|hyperpage}{4}
 \indexentry{coding|hyperpage}{4}
 \indexentry{operating system|hyperpage}{4}
 \indexentry{gpart|hyperpage}{4}
-\indexentry{FreeBSD Mastery:  ZFS|hyperpage}{4}
-\indexentry{RAIDZ-2|hyperpage}{4}
 \indexentry{zpool!comment|hyperpage}{5}
-\indexentry{amensiac|hyperpage}{6}
+\indexentry{FreeBSD Mastery:  ZFS|hyperpage}{5}
+\indexentry{RAIDZ-2|hyperpage}{5}
+\indexentry{amensiac|hyperpage}{5}
 \indexentry{amensiac|hyperpage}{6}
 \indexentry{RAIDZ-2|hyperpage}{6}
-\indexentry{gpart|hyperpage}{6}
-\indexentry{bsdinstall|hyperpage}{6}
+\indexentry{gpart|hyperpage}{7}
+\indexentry{bsdinstall|hyperpage}{7}
 \indexentry{bsdinstall|hyperpage}{7}
 \indexentry{operating system|hyperpage}{7}
 \indexentry{operating system|hyperpage}{7}
@@ -40,14 +40,14 @@
 \indexentry{jails|hyperpage}{8}
 \indexentry{su|hyperpage}{8}
 \indexentry{sudo|hyperpage}{8}
-\indexentry{ssh-keygen|hyperpage}{9}
+\indexentry{ssh-keygen|hyperpage}{8}
 \indexentry{FreeBSD Handbook|hyperpage}{9}
 \indexentry{camcontrol!devlist|hyperpage}{9}
 \indexentry{gpart!create|hyperpage}{9}
 \indexentry{gpart!add|hyperpage}{9}
 \indexentry{newfs|hyperpage}{9}
 \indexentry{mkdir|hyperpage}{9}
-\indexentry{mount|hyperpage}{10}
+\indexentry{mount|hyperpage}{9}
 \indexentry{cd|hyperpage}{10}
 \indexentry{umount|hyperpage}{10}
 \indexentry{rm|hyperpage}{10}
@@ -59,7 +59,7 @@
 \indexentry{dialog|hyperpage}{10}
 \indexentry{gpart|hyperpage}{10}
 \indexentry{RAIDZ-2|hyperpage}{10}
-\indexentry{FreeBSD Handbook|hyperpage}{11}
+\indexentry{FreeBSD Handbook|hyperpage}{10}
 \indexentry{swapon|hyperpage}{11}
 \indexentry{gpart!create|hyperpage}{11}
 \indexentry{gpart!create|hyperpage}{11}
@@ -88,8 +88,8 @@
 \indexentry{gpart|hyperpage}{13}
 \indexentry{gpart|hyperpage}{13}
 \indexentry{gpart|hyperpage}{13}
+\indexentry{encrypt|hyperpage}{13}
 \indexentry{cache|hyperpage}{13}
-\indexentry{encrypt|hyperpage}{14}
 \indexentry{mkdir|hyperpage}{14}
 \indexentry{mount|hyperpage}{14}
 \indexentry{gpart!create|hyperpage}{14}

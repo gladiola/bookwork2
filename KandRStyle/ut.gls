@@ -20,7 +20,8 @@
 		\setentrycounter[]{page}\glsnumberformat{1}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{4}}}%
 \glossentry{configuration}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{1\delimR 4}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{1\delimN 2}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{4\delimN 5}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{7\delimN 8}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{12}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{17}}}%
@@ -32,8 +33,7 @@
 		\setentrycounter[]{page}\glsnumberformat{12}}}\glsgroupskip
 \glsgroupheading{E}\relax \glsresetentrylist %
 \glossentry{encrypt}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{12}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{14}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{12\delimN 13}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{16}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{19}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{33}}}\glsgroupskip
@@ -45,13 +45,12 @@
 		\setentrycounter[]{page}\glsnumberformat{12}}}\glsgroupskip
 \glsgroupheading{J}\relax \glsresetentrylist %
 \glossentry{jail}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{2\delimN 3}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{3}}}\glsgroupskip
 \glsgroupheading{M}\relax \glsresetentrylist %
 \glossentry{memory stick}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{39}}}%
 \glossentry{metadata}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{12}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{14}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{12\delimR 14}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{16\delimR 19}}}%
 \glossentry{mirror}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{2\delimR 4}\delimN 
@@ -62,7 +61,7 @@
 		\setentrycounter[]{page}\glsnumberformat{3}}}\glsgroupskip
 \glsgroupheading{N}\relax \glsresetentrylist %
 \glossentry{nic}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{2}}}%
+		\setentrycounter[]{page}\glsnumberformat{3}}}%
 \glossentry{nist}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{2}}}\glsgroupskip
 \glsgroupheading{O}\relax \glsresetentrylist %
@@ -87,23 +86,24 @@
 		\setentrycounter[]{page}\glsnumberformat{24}}}%
 \glossentry{ram}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{1\delimR 3}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{6\delimR 8}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{6}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{8}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{10}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{13\delimN 14}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{29}}}\glsgroupskip
 \glsgroupheading{S}\relax \glsresetentrylist %
 \glossentry{sas}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{2}}}%
+		\setentrycounter[]{page}\glsnumberformat{3}}}%
 \glossentry{sata}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{2}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{3}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{23}}}%
 \glossentry{shell}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{8\delimN 9}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{12\delimN 13}}}%
 \glossentry{ssd}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{2}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{7}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{11}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{6}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{10\delimN 11}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{13}}}%
 \glossentry{ssh}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{8}\delimN 
@@ -114,5 +114,5 @@
 		\setentrycounter[]{page}\glsnumberformat{16}}}\glsgroupskip
 \glsgroupheading{V}\relax \glsresetentrylist %
 \glossentry{vnet}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{3}}}%
+		\setentrycounter[]{page}\glsnumberformat{4}}}%
 \end{theglossary}\glossarypostamble

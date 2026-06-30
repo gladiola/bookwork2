@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  30 JUN 2026 11:47
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  30 JUN 2026 11:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1331,11 +1331,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 LaTeX Font Warning: Font shape `TU/EurostileW01(0)/b/n' undefined
 (Font)              using `TU/EurostileW01(0)/m/n' instead on input line 180.
 
+\openout4 = `ut.ent'.
+
 [1
 
 ]
-\openout4 = `ut.ent'.
-
 LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 205.
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1348,7 +1348,7 @@ Overfull \hbox (7.4107pt too wide) in paragraph at lines 241--242
 otherboard-related
  []
 
-[3]
+[3] [4]
 Overfull \hbox (6.5517pt too wide) in paragraph at lines 308--309
 []|\TU/CourierNew(0)/m/n/10 [Host]-[PositionNumber
  []
@@ -1361,11 +1361,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
 Underfull \hbox (badness 10000) in paragraph at lines 310--311
 \TU/CourierNew(0)/m/n/10 compress=gzip-6
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 311--311
-[]|\TU/InfoOTDisp(0)/b/n/10 Make a note on the
  []
 
 
@@ -1413,7 +1408,11 @@ Overfull \hbox (23.99998pt too wide) in paragraph at lines 303--323
  [][] 
  []
 
-[4] [5] [6] [7]
+[5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 420--422
 
  []
@@ -1423,7 +1422,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 420--422
 
  []
 
-[8]
+
+Underfull \vbox (badness 1755) has occurred while \output is active []
+
+ [8]
 Underfull \hbox (badness 10000) in paragraph at lines 432--433
 
  []
@@ -1448,11 +1450,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 439--446
 
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 448--456
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 448--456
 
@@ -1469,6 +1466,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 448--456
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 448--456
+
+ []
+
+
+Underfull \vbox (badness 1960) has occurred while \output is active []
+
+ [9]
 Underfull \hbox (badness 10000) in paragraph at lines 458--461
 
  []
@@ -1585,22 +1590,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 498--503
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 504--508
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 504--508
+
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-Underfull \hbox (badness 10000) in paragraph at lines 504--508
+Underfull \vbox (badness 5893) has occurred while \output is active []
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 504--508
-
- []
-
-[12]
+ [12]
 LaTeX Font Info:    Font shape `TU/CourierNew(0)/b/n' will be
 (Font)              scaled to size 10.0pt on input line 550.
- [13]
+
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 562--564
 
  []
@@ -1908,7 +1917,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 749--750
 
 [22] (./ut.ent
 LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 10.
+(Font)              scaled to size 8.0pt on input line 34.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2011,10 +2020,10 @@ Package rerunfilecheck Info: File `ut.out' has not changed.
 Here is how much of TeX's memory you used:
  22971 strings out of 475846
  419333 string characters out of 5781395
- 1974879 words of memory out of 5000000
+ 1972879 words of memory out of 5000000
  43699 multiletter control sequences out of 15000+600000
  562629 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 91i,15n,117p,2246b,729s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 91i,15n,117p,2246b,772s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on ut.pdf (55 pages).
