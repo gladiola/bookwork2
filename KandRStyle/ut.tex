@@ -188,6 +188,12 @@ Your introduction text goes here...
 
 \section{Literature Review}
 \subsection{Overview of Existing Solutions or Approaches}
+
+We came across an article ("Immutability as an Operational Constraint Rather Than a
+Security Feature") that pointed out that immutability can be a constraint.  In this approach, the entire system was assumed to be an immutable system.  This helped us to realize what a benefit it was to not make the entire system immutable.  Our original intention was to have centralized, core, aspects of the operating system be immutable; other parts of the system could be changed within the rules and limits set by the OS.  
+
+Still, those changeable parts might have logging and monitoring activities, such as database snapshots set up in a way that allowed these cautions about immutability to contribute to our planning.  Let's look at what Mallikarjun Vppalapati in more detail.
+
 \subsection{Comparisons of Technologies or Frameworks}
 \subsection{Gaps in the Literature}
 \section{Methodology}
