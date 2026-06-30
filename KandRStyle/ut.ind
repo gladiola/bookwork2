@@ -5,6 +5,7 @@
   \indexspace
 
   \item amensiac, \hyperpage{1}, \hyperpage{5}
+  \item amnesiac, \hyperpage{1}
 
   \indexspace
 
@@ -17,6 +18,7 @@
     \subitem devlist, \hyperpage{10}
   \item cd, \hyperpage{10}
   \item coding, \hyperpage{1}, \hyperpage{5}
+  \item configuration, \hyperpage{1}
   \item cp, \hyperpage{18, 19}
 
   \indexspace
@@ -55,7 +57,10 @@
 
   \indexspace
 
-  \item hard immutability, \hyperpage{2}
+  \item immutability
+    \subitem hard, \hyperpage{2}
+    \subitem operational, \hyperpage{2}
+    \subitem soft, \hyperpage{2}
 
   \indexspace
 
@@ -82,7 +87,6 @@
 
   \item operating system, \hyperpage{1}, \hyperpage{5}, 
 		\hyperpage{7, 8}, \hyperpage{12, 13}, \hyperpage{19}
-  \item operational immutability, \hyperpage{2}
 
   \indexspace
 
@@ -91,7 +95,6 @@
 
   \indexspace
 
-  \item soft immutability, \hyperpage{2}
   \item ssh-keygen, \hyperpage{9}, \hyperpage{11}
   \item su, \hyperpage{9}
   \item sudo, \hyperpage{9}
