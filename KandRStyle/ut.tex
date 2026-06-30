@@ -53,7 +53,7 @@ bindingoffset=0.12in]{geometry}
 \fancyhead[RE,LO]{\small\itshape \leftmark}
 
 
-
+%---------- ENDNOTES -----------------
 % Endnotes: inline [n], printed later
 \usepackage{endnotes}
 \renewcommand{\enoteheading}{} % suppress heading
@@ -77,6 +77,9 @@ bindingoffset=0.12in]{geometry}
   \setcounter{endnote}{0}%
 }
 
+%--------- Figures ----------------
+\usepackage{rotating}
+\usepackage{graphicx}
 
 
 
@@ -187,7 +190,7 @@ Your introduction text goes here...
 
 
 
-		\noindent In this technical note, we explore \index{configuration}\gls{configuration}s of the \index{FreeBSD}FreeBSD \index{operating system}\gls{operating system}.  With a goal of creating an \index{amnesiac}\gls{amnesiac} system that keeps the \index{operating system}\gls{operating system} separate from working storage drives, we experiment with various index{configuration}\gls{configuration}s.  We demonstrate the planning of drive index{configuration}\gls{configuration} \index{coding}\gls{coding} and the reasoning behind the choices.  First, we code a system that uses the \index{operating system}\gls{operating system} on the storage drive discs.  Then we evolve the plan into using a live cd\index{live CD} for \index{operating system}\gls{operating system} use with drives that are connected to the gls{immutable system} in \gls{ram} via \gls{configuration} code.  Using an \index{amensiac}amensiac system like this, we would be able to reset the \index{operating system}\gls{operating system} to a known immutable state with every startup.  The drives could be disconnected and reattached to other systems for various purposes.  Throughout, we cover specific commands for drive and \index{operating system}\gls{operating system} management and operation.
+		\noindent In this technical note, we explore \index{configuration}\gls{configuration}s of the \index{FreeBSD}FreeBSD \index{operating system}\gls{operating system}.  With a goal of creating an \index{amnesiac}\gls{amnesiac} system that keeps the \index{operating system}\gls{operating system} separate from working storage drives, we experiment with various \index{configuration}\gls{configuration}s.  We demonstrate the planning of drive index{configuration}\gls{configuration} \index{coding}\gls{coding} and the reasoning behind the choices.  First, we code a system that uses the \index{operating system}\gls{operating system} on the storage drive discs.  Then we evolve the plan into using a live cd\index{live CD} for \index{operating system}\gls{operating system} use with drives that are connected to the gls{immutable system} in \gls{ram} via \gls{configuration} code.  Using an \index{amensiac}amensiac system like this, we would be able to reset the \index{operating system}\gls{operating system} to a known immutable state with every startup.  The drives could be disconnected and reattached to other systems for various purposes.  Throughout, we cover specific commands for drive and \index{operating system}\gls{operating system} management and operation.
 
 \section{Introduction}
 \subsection{Background and Content}
@@ -201,6 +204,7 @@ Your introduction text goes here...
 \section{Literature Review}
 \subsection{Overview of Existing Solutions or Approaches}
 
+
 We came across an article ("Immutability as an Operational Constraint Rather Than a
 Security Feature")\endnote{Vppalapati, Mallikarjun. “Immutability as an Operational Constraint rather than a Security Feature.” International Journal of Artificial Intelligence, Data Science, and Machine Learning, vol. 3, no. 2, 30 June 2022, pp. 176–184, \url{https://doi.org/10.63282/3050-9262.ijaidsml-v3i2p119}. Accessed 21 June 2026.}  that pointed out that immutability can be a limiting factor.  The author warned, "By just making something immutable you haven't necessarily made it safe; what you have effectively done is taken away the possibility of alteration and replaced it with a new operational reality: correction must happen through additional writes, and recovery must happen through reconciliation rather than repair"\endnote{Vppalapati, Mallikarjun. “Immutability as an Operational Constraint rather than a Security Feature.” International Journal of Artificial Intelligence, Data Science, and Machine Learning, vol. 3, no. 2, 30 June 2022, pp. 176–184, \url{https://doi.org/10.63282/3050-9262.ijaidsml-v3i2p119}. Accessed 21 June 2026.}  
 
@@ -212,8 +216,17 @@ Vppalapati described three kinds of immutability:  hard, soft, and operational.
 "\index{immutability!hard}\Gls{hard immutability} describes a state of being unchangeable where changes are so heavily protected by technical mechanisms
 and therefore practically infeasible the alteration process is therefore practically impossible."\endnote{Vppalapati, Mallikarjun. “Immutability as an Operational Constraint rather than a Security Feature.” International Journal of Artificial Intelligence, Data Science, and Machine Learning, vol. 3, no. 2, 30 June 2022, pp. 176–184, \url{https://doi.org/10.63282/3050-9262.ijaidsml-v3i2p119}. Accessed 21 June 2026.}  "\index{immutability!soft}\Gls{soft immutability}...can be reverted by using privileged credentials."\endnote{Vppalapati, Mallikarjun. “Immutability as an Operational Constraint rather than a Security Feature.” International Journal of Artificial Intelligence, Data Science, and Machine Learning, vol. 3, no. 2, 30 June 2022, pp. 176–184, \url{https://doi.org/10.63282/3050-9262.ijaidsml-v3i2p119}. Accessed 21 June 2026.}  "\index{immutability!operational}\Gls{operational immutability} implies the lack of changes without the use of technology"\endnote{Vppalapati, Mallikarjun. “Immutability as an Operational Constraint rather than a Security Feature.” International Journal of Artificial Intelligence, Data Science, and Machine Learning, vol. 3, no. 2, 30 June 2022, pp. 176–184, \url{https://doi.org/10.63282/3050-9262.ijaidsml-v3i2p119}. Accessed 21 June 2026.}  In our proposed system, we would use hard immutability in the optical read-only recording of the core OS.  We would use operational immutability as a control because we were applying an optical disc that required physical access to the server for alterations.  We would also use soft immutability, in the writing of data to files in attached storage that was not automatically loaded by the system on boot.  
 
-
 \subsection{Comparisons of Technologies or Frameworks}
+... compare with diagrams 
+
+% ...
+\begin{figure}[htbp]
+  \centering
+  \rotatebox{90}{\scalebox{1.75}{\includegraphics[width=\linewidth]{figures/Storage Disposition(1)}}}
+  \caption{Your caption}
+  \label{fig:your-figure}
+\end{figure}
+
 \subsection{Gaps in the Literature}
 \section{Methodology}
 \subsection{Technical Research Questions}
@@ -425,7 +438,7 @@ We won't set a root password because we will expect to always \gls{ssh} into the
 
 Another risk is that we will require the ability to \gls{ssh} in as root.  Later, as we establish software firewalls on the host, we will want to limit what addresses can be used to access this root with \gls{ssh}.  It's a little dangerous, but it's also a little different.  
 
-We have some risk controls that will be in place.  First, we often store our keys in a special collection of \index{USB!drive}USB drives.  Next, we will have \index{2FA}2FA on the \gls{ssh} that will require a \index{TOTP}TOTP (Time-based One Time Password).  Finally, we will limit what's done in this drive.  Since most of our prog\gls{ram}s and work will be done in the jails, there is a limited amount of influence that this part of the system will have.  It's there to start the box and spin up the \index{jails}jails.  If we ever have to totally destroy this installation and hook up our \index{jails}jails to another system, that is possible.
+We have some risk controls that will be in place.  First, we often store our keys in a special collection of \index{USB!drive}USB drives.  Next, we will have \index{2FA}2FA on the \gls{ssh} that will require a \index{TOTP}TOTP (Time-based One Time Password).  Finally, we will limit what's done in this drive.  Since most of our programs and work will be done in the jails, there is a limited amount of influence that this part of the system will have.  It's there to start the box and spin up the \index{jails}jails.  If we ever have to totally destroy this installation and hook up our \index{jails}jails to another system, that is possible.
 
 What do we gain from no root password?  An extra measure of security.  If there is no password, then password enumeration attempts should all fail.  This not only goes for root, but it goes for other users.  Many of the automated login attacks we've seen have been simple dictionary attacks; these brute force exercises rarely attempt to account for the types of login procedures that we expect to put in place.  
 
@@ -968,6 +981,205 @@ B.  man pages – \texttt{mt}, \texttt{tar} man pages.
 C.  URLs – FreeBSD man pages for above.
 \texttt{man.freebsd.org/cgi/man.cgi?}  query mt tar
 
+%----------------------------------------------------------------------------------------
+Text with\endnote{First note.} inline references.
+More text\endnote{Second note.}
+\printchapterendnotes
+
+
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER
+%----------------------------------------------------------------------------------------
+\chapter{Login Procedures for Disconnected Systems}
+\begin{center}\vspace{-0.5\baselineskip}\parbox{0.85\textwidth}{\small\itshape
+This outline will help us to log into a laptop that is set up to be a disconnected, air-grapped machine.  We cover what items are needed, and how to attach and to decrypt the disks.  The operating system is provided through immutable, read-only, optical media.  Some key values were encoded onto magstripe cards.  Others were recorded in a paper notebook.  The machine now has a refined set of startup procedures that are incompatible with normal laptop use.  A general outline of the machine's login procedures are listed here.\par}\end{center}
+
+\section{Introduction}
+
+We wanted to establish an air-gapped machine for off-network use.  To protect critical data and programs, we wanted to have a recoverable immutable operating system with encrypted storage.  To inhibit networking, we permanently disabled the wired and wireless systems.  We prepared on-machine and peripherial encrypted storage.  
+
+Our intention is to use the laptop as a general-purpose air-grapped machine.  We want to be able to generate keys and certificates, to access and to edit secrets, and to develop small scripts offline.  
+
+The login procedure for this disconnected laptop is similar to a procedure used for disconnected rack servers.  Due to the portability of the laptop, and the frequent use of some of the authentication challenges, the laptop has some magstripe additions.
+
+
+%------------------------------------------------
+
+\section{Methodology}
+
+
+Booting this machine requires a few phases:
+\begin{enumerate}
+\item Physical access.
+\item POST and BIOS.
+\item Disk discovery and attachment.
+\item Disk decryption.
+\item Dataset attachment.
+\end{enumerate}
+
+Powering off the machine requires a similar reversed sequence:
+\begin{enumerate}
+\item Dataset detachment.
+\item Encrypted partition detachment.
+\item Disk detachment.
+\item Poweroff.
+\item Physical security of related parts.
+\end{enumerate}
+
+Of these, discovering and attaching the disks for use may be the biggest stumbling block for the uninitiated.  Manually decrypting the disks is a close second.  Attaching a dataset is very similar to normal ZFS use.  Most of these tasks are done automatically by operating systems.  In this system, the steps have been disconnected.  This allows us to swap out storage and provide a measure of procedural security to the system.
+
+%------------------------------------------------
+
+\section{Results}
+
+\subsection{Required Or Specific Equipment}
+We used a Dell XFR laptop that was purchased from a police auction.  We replaced the main hard drive.  We disassembled the machine and prepared it for air-grapped use.  The Ethernet connection jack was jammed with epoxy putty.  The camera and microphone assemblies were removed.  The wifi card and antennas were removed.  A privacy screen of polarized vinyl was installed over the display.  USB ports were temporarily blocked with plugs that can be removed with a specialized tool.  The laptop has been fitted with a bluetooth tracking device and a tinted luggage tag.  
+
+Some key values are stored on encrypted USB drives that are equipped with a read-only physical switch.  If this switch is not moved into the "write" position, then the disk will not successfully decrypt.  The drives were encrypted with Camelia using geli in a ZFS partition set up with gpart.  The USB drives are labelled with color-coded tags and inventory stickers to identify the classification of data held on them and the drives' individuality.
+
+For convenience, some key values have been written to magstripe cards.  This is nearly equivalent to writing the passwords down in plain text.  If the card reader is connected, when the card is swiped, it will reveal its values wherever the cursor is available.  Inputting text from a magstripe card is not much different from using a keyboard.  To get the magstripe to read properly, character sets and deliminating characters have to be used to construct the password values.  The specific magstripe cards and a magstripe reader are needed if the passphrases are not input manually.
+
+For paper backups, some key values have been written in UV-readable "invisible" ink in a notebook.  To use this notebook, a UV penlight is kept on hand.  To update that notebook, UV ink is loaded into refillable cartridges of a fountian pen.  
+
+\subsection{Code Notes for Power Up}
+\begin{enumerate}
+\item Assemble the needed components:
+\begin{itemize}
+\item The laptop
+\item Power for the laptop
+\item USB software-encrypted storage with read-only disk
+\item USB hardware encrypted disk (if needed) with software encrypted storage dataset
+\item Codebook with UV lights and inks (if needed)
+\item Magstripe reader
+\item Any other mutlifactor devices needed for specific systems (biometric readers, TOTP/HOTP authentication devices, certificates, etc.).
+\end{itemize}
+
+\item Attach peripherals and power up the laptop.  
+
+USB temporary plugs may need to be removed.  Connect the magstripe reader, if needed.  Be prepared to connect any USB drives that get used.
+
+\item BIOS password.  
+
+BIOS settings are usually tuned to have the boot order boot the system from optical disk.  If needed, use the function key to select which disk is needed for a one-time boot.  There will only be a few seconds in the startup to to press the correct key.
+
+\item Use a recent FreeBSD bootonly.iso disk on optical media.  
+
+This will only have the most primitive collections of programs and will not be sufficient for certificate generation due to the libraries that are provided.  The operator should be able to hear the disk spin up.  
+
+\item At the menu, select LiveCD to get a root prompt in terminal.
+
+\item Attach and discover disks.
+
+If the disks are hardware encrypted, then provide the PIN according to the manufacturer's directions.  Enter the PIN carefully, as there may be administrative reset or disk-wiping functions available.  With the disk hardware decrypted and attached, a message should be visible on the console describing the detection of the device.
+
+\texttt{geom disk list} - should show the disks recognized by the system.
+
+\texttt{gpart show} - should provide an indicator of partition numbers
+
+\item Attach and decrypt partitions
+\texttt{geli attach [DISK\_NAMEpPARTITION\_NUMBER]}
+
+If a passphrase was recorded on magstripe, this is the point where the dedicated card will need to be swiped.  If the card does not work, then this is the point where the paper UV ink backup notes may be used.
+
+\item Discover and attach zpools and zfs datasets.
+\texttt{zpool import POOL\_NAME\_ON\_ATTACHED\_DISK
+zpool import -af} to forcefully attach all available zpools
+\texttt{zpool status}
+
+If a MAC kerenel mod like mac\_biba is used on the file system, then the system may be a UFS file system on a ZFS Volume.  These are often mounted with mount from a /dev device node or a GEOM label.  [Advanced ZFS]
+
+\item Observe datasets.  Notes should tell us where to go to see where the datasets have automatically mounted.    Or, we can use zfs commands to set a mountpoint to a desired location.  In the read-only LiveCD media, our most likely attachment point may be /tmp.
+
+\item Use the laptop to interact with files on the storage.
+
+\item Decrypt individual files with openssl.
+\end{enumerate}
+
+\subsection{Code Notes for Poweroff}
+The poweroff procedure is similar to a reverse of the poweron, but there are fewer steps.  If the ZFS elements are not properly exported, then future imports may require a \texttt{-f} force attribute on the commands.  Notice also if there are automount directories associated with a ZFS dataset, then these will not be destroyed upon dismount.  Instead, they will appear empty.  Hardware drives will generally re-encrypt once disconnected from the machine.
+
+With a LiveCD or El Torrito in FreeBSD, it is very common for the system to reboot after a shutdown command.  Watch your system carefully to avoid spending laptop battery power after giving a poweroff command.  Notice also that the laptop will not go into a suspend or hibernate mode if the laptop display is closed.  Those are advanced gui and system functions which will not be covered in El Torrito.
+
+1.  Dispose of decrypted copies of any files that are in the plain.  Ensure that an encrypted copy continues to live on the storage drives.  Re-encrypt if necessary.
+
+2.  Dismount media.
+\texttt{zfs export [DATASET\_NAME]
+geli detatch [DRIVE.eli]
+geom disk list}
+
+In order to dismount the media, do not have a terminal command line open on any directories associated with that media.  To confirm a directory is empty after dismount, use ls.  
+
+
+
+\section{Analysis}
+\subsection{Quality}
+We have some fragile areas of the system.
+
+We can swipe a card with the password in an environment where reading a password from a book might be uncomfortable.  The speed of the magstripe's use can be a blessing during development and testing or other times when the challenges may be frequently encountered.  However, the password will need to be stored in plain text on the magnetic stripe.  This means that magstripe cards used for passwords will need physical access control safeguards.  
+
+BIOS is used instead of UEFI to keep the boot process simple and uniform with other machines.  
+
+USB detachable storage has been a well-known security weak point for over a decade.  We have chosen USB port blockers; but, those frequently come with proprietary plastic keys to insert or extract them.  It's obvious that those port blockers are an inconveniece device; they don't provide full access controls; they're usefulness is limited to slowing down the surrepetitious attachment of USB devices.
+
+\subsection{Tests}
+Disk metadata backups.  geli is frequently used in automatic installations of FreeBSD systems using bsdinstall.  However, those automatic installs don't prompt an admin for saving a copy of the disk metadata.  If that metadata file is not saved someplace where its contents can be carefully preserved, then any difficulty with decrypting the disk may be scuttled.  The recovery commands for geli will often require or prompt for a path to the metadata file.  
+
+Not only should the metadata be saved, but use of it should be periodically rehearsed.  Since it is needed for disk recovery, and period since the last recovery rehearsal should be considered a time of unconfirmed disk storage.  That data is in jeopardy of being lost to a disk decryption problem.  Rehearse the recovery of disks with the metadata files.  Without them, the only option in the event of a disk decryption problem will be to start over with a geli init to basically reformat the encrypted drive partition.
+
+%------------------------------------------------
+
+\section{Discussion}
+\subsection{Summary of Usefulness}
+We believe that this disposition of resources will position us well to intervene on attempts at root-level persistence.  So many machines these days are configured to boot into an operating system on power-up that a disconnected system might not be anticipated by an attacker.  
+
+The disconnected system has also been useful for swapping out storage drives on a machine.  Many machines are being built and sold with on-motherboard RAM and immovable SSDs.  While this supports thinner designes for single-board laptops, it doesn't suit our experimentation methods on salvaged equipment.  
+
+\subsection{Lessons Learned}
+This type of system requires some practice for routine use.  When using disconnected systems or live-disc systems, the configurations may not persist between boots.  A lack of rehearsals or familiarity with the boot and power-up procedure may cause delays as the operator teaches themselves the pattern or troubleshoot omitted steps.
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	 REFERENCES
+%----------------------------------------------------------------------------------------
+
+%\printbibliography % Output the bibliography
+\section{References}
+\subsection{Books} 
+Lucas, Michael W. and Jude, Allan.  FreeBSD Mastery:  ZFS.  2015.  ISBN-13:  978-1-64235-000-5.
+
+We found this book to be an excellent guide to ZFS, overall.  We also adopted naming suggestions that aligned exterior drive serial numbers with disk labelling.  Chapter 2 featured a helpful guide on planning RAIDZ configurations with notes on efficiency.  Advice on snapshots, cloning, and block devices for non-ZFS file systesms were all helpful.  
+
+\subsection{MAN pages} 
+\texttt{openssl enc} FreeBSD MAN pages,
+\url{https://man.freebsd.org/cgi/man.cgi?query=enc\&apropos=0\&sektion=1\&manpath=freebsd-ports\&format=html}
+
+\texttt{zfs} Freebsd MAN pages,
+\url{https://man.freebsd.org/cgi/man.cgi?query=zfs\&apropos=0\&sektion=0\&manpath=FreeBSD+14.1-RELEASE+and+Ports\&arch=default\&format=html}
+
+\texttt{zpool} FreeBSD MAN pages,
+\url{https://man.freebsd.org/cgi/man.cgi?query=zpool\&apropos=0\&sektion=0\&manpath=FreeBSD+14.1-RELEASE+and+Ports\&arch=default\&format=html}
+
+\texttt{geom} FreeBSD MAN pages,
+\url{https://man.freebsd.org/cgi/man.cgi?query=geom\&apropos=0\&sektion=0\&manpath=FreeBSD+14.1-RELEASE+and+Ports\&arch=default\&format=html}
+
+\texttt{geli} FreeBSD MAN pages,
+\url{https://man.freebsd.org/cgi/man.cgi?query=geli\&apropos=0\&sektion=0\&manpath=FreeBSD+14.1-RELEASE+and+Ports\&arch=default\&format=html}
+
+\texttt{gpart} FreeBSD MAN pages,
+\url{https://man.freebsd.org/cgi/man.cgi?query=gpart\&apropos=0\&sektion=0\&manpath=FreeBSD+14.1-RELEASE+and+Ports\&arch=default\&format=html}
+
+\texttt{dd} FreeBSD MAN pages,
+\url{https://man.freebsd.org/cgi/man.cgi?query=dd\&apropos=0\&sektion=0\&manpath=FreeBSD+14.1-RELEASE+and+Ports\&arch=default\&format=html}
+
+\subsection{URLs}
+FreeBSD Handbook, ZFS, \url{https://docs.freebsd.org/en/books/handbook/zfs/}
+
+FreeBSD Handbook, Storage, \url{https://docs.freebsd.org/en/books/handbook/disks/}
+
+%----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
 Text with\endnote{First note.} inline references.
 More text\endnote{Second note.}
