@@ -190,14 +190,32 @@ Your introduction text goes here...
 
 
 
-		\noindent In this technical note, we explore \index{configuration}\gls{configuration}s of the \index{FreeBSD}FreeBSD \index{operating system}\gls{operating system}.  With a goal of creating an \index{amnesiac}\gls{amnesiac} system that keeps the \index{operating system}\gls{operating system} separate from working storage drives, we experiment with various \index{configuration}\gls{configuration}s.  We demonstrate the planning of drive index{configuration}\gls{configuration} \index{coding}\gls{coding} and the reasoning behind the choices.  First, we code a system that uses the \index{operating system}\gls{operating system} on the storage drive discs.  Then we evolve the plan into using a live cd\index{live CD} for \index{operating system}\gls{operating system} use with drives that are connected to the gls{immutable system} in \gls{ram} via \gls{configuration} code.  Using an \index{amensiac}amensiac system like this, we would be able to reset the \index{operating system}\gls{operating system} to a known immutable state with every startup.  The drives could be disconnected and reattached to other systems for various purposes.  Throughout, we cover specific commands for drive and \index{operating system}\gls{operating system} management and operation.
+		\noindent In this technical note, we explore \index{configuration}\gls{configuration}s of the \index{FreeBSD}FreeBSD \index{operating system}\gls{operating system}.  With a goal of creating an \index{amnesiac}\gls{amnesiac} system that keeps the \index{operating system}\gls{operating system} separate from working storage drives, we experiment with various \index{configuration}\gls{configuration}s.  We demonstrate the planning of drive index{configuration}\gls{configuration} \index{coding}\gls{coding} and the reasoning behind the choices.  First, we code a system that uses the \index{operating system}\gls{operating system} on the storage drive discs.  Then we evolve the plan into using a live cd\index{live CD} for \index{operating system}\gls{operating system} use with drives that are connected to the \gls{immutable system} in \gls{ram} via \gls{configuration} code.  Using an \index{amensiac}amensiac system like this, we would be able to reset the \index{operating system}\gls{operating system} to a known immutable state with every startup.  The drives could be disconnected and reattached to other systems for various purposes.  Throughout, we cover specific commands for drive and \index{operating system}\gls{operating system} management and operation.
 
 \section{Introduction}
 \subsection{Background and Content}
 \subsection{Problem Statement}
+
+Attackers cannot destructively interact with systems without writing to them.  Our goal is to keep the core services and operating system stable and immutable through physical security controls.  This will allow the system to resist common attacks such as the encryption of files from ransomware and persistent account takeovers.  
+
 \subsection{Project Objectives}
+
+Our system, hostname Blondie, set an example for amnesiac system implementation and design with FreeBSD.  We hope that this example system will raise awareness and set patterns that will allow others to gain some of the same risk controls in their systems.
+
 \subsection{Scope of Work}
+\subsubsection{Hypothesis:  H1}
+An immutable operating system will be more resistant to destructive attack.
+Attackers cannot destructively interact with systems without writing to them.
+\subsubsection{Hypothesis:  H2}
+An immutable operating system will promote system integrity.
+With ransomware as a dominant contemporary threat, integrity of the CIA triad rises to the forefront of defensive needs.  
+\subsubsection{Hypothesis:  H3}
+An immutable operating system will promote rapid recovery.
+With core components and configurations unchanged, an immutable system restarted after an attack will experience a more rapid recovery.
 \subsection{Variables}
+\subsubsection{Non-Adversarial Threats}
+\subsubsection{Adversarial Threats}
+
 \subsection{Assumptions, Risks, and Limitations}
 \subsection{Significance of the Project}
 
@@ -985,7 +1003,7 @@ More text\endnote{Second note.}
 %----------------------------------------------------------------------------------------
 %	CHAPTER
 %----------------------------------------------------------------------------------------
-\chapter{\index{FreeBSD}FreeBSD Tape Operations}
+\chapter{Basic Tape Operations with \index{FreeBSD}FreeBSD }
 \begin{center}\vspace{-0.5\baselineskip}\parbox{0.85\textwidth}{\small\itshape
 We explored the planning and use of LTO tape as a resource for storing backups.  We describe common commands, patterns of MT and TAR commands.  We recommend some techniques for testing, rehearsing, and using tape archives.\par}\end{center}
 \section{Introduction}
