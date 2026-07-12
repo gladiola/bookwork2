@@ -4,56 +4,56 @@
 
   \indexspace
 
-  \item amensiac, \hyperpage{5}, \hyperpage{13}
+  \item amensiac, \hyperpage{5}, \hyperpage{12}
   \item amnesiac, \hyperpage{5}
 
   \indexspace
 
-  \item bsdinstall, \hyperpage{14}
+  \item bsdinstall, \hyperpage{14, 15}
 
   \indexspace
 
-  \item cache, \hyperpage{20}, \hyperpage{27}
+  \item cache, \hyperpage{20, 21}, \hyperpage{27}
   \item camcontrol
-    \subitem devlist, \hyperpage{16}
+    \subitem devlist, \hyperpage{17}
   \item cd, \hyperpage{17}
-  \item coding, \hyperpage{1}, \hyperpage{5}, \hyperpage{11}
+  \item coding, \hyperpage{1}, \hyperpage{5}, \hyperpage{12}
   \item configuration, \hyperpage{5}
-  \item cp, \hyperpage{24, 25}
+  \item cp, \hyperpage{25, 26}
 
   \indexspace
 
   \item dd, \hyperpage{9}
-  \item dialog, \hyperpage{17}, \hyperpage{19}
+  \item dialog, \hyperpage{18}, \hyperpage{20}
 
   \indexspace
 
-  \item encrypt, \hyperpage{19--21}, \hyperpage{23}, \hyperpage{26}, 
+  \item encrypt, \hyperpage{19--21}, \hyperpage{23, 24}, \hyperpage{27}, 
 		\hyperpage{49}
 
   \indexspace
 
   \item FreeBSD, \hyperpage{5}, \hyperpage{9}, \hyperpage{11}, 
-		\hyperpage{19}, \hyperpage{45}
+		\hyperpage{20}, \hyperpage{45}
   \item FreeBSD Handbook, \hyperpage{16}, \hyperpage{18}, 
 		\hyperpage{50}
-  \item FreeBSD Mastery:  ZFS, \hyperpage{13}
+  \item FreeBSD Mastery:  ZFS, \hyperpage{12}
 
   \indexspace
 
   \item geli, \hyperpage{10}, \hyperpage{23}
-    \subitem attach, \hyperpage{23, 24}, \hyperpage{26}
-    \subitem init, \hyperpage{23, 24}, \hyperpage{26}
-    \subitem status, \hyperpage{25}
-  \item gpart, \hyperpage{12}, \hyperpage{14}, \hyperpage{17}, 
-		\hyperpage{20}
-    \subitem add, \hyperpage{16}, \hyperpage{18}, \hyperpage{21, 22}, 
-		\hyperpage{26}
-    \subitem create, \hyperpage{16}, \hyperpage{18}, \hyperpage{21, 22}
-    \subitem modify, \hyperpage{25}
+    \subitem attach, \hyperpage{24}, \hyperpage{26, 27}
+    \subitem init, \hyperpage{24}, \hyperpage{27}
+    \subitem status, \hyperpage{26}
+  \item gpart, \hyperpage{12}, \hyperpage{14}, \hyperpage{18}, 
+		\hyperpage{21}
+    \subitem add, \hyperpage{17--19}, \hyperpage{22, 23}, 
+		\hyperpage{26, 27}
+    \subitem create, \hyperpage{17, 18}, \hyperpage{22, 23}
+    \subitem modify, \hyperpage{26}
     \subitem recover, \hyperpage{26}
     \subitem resize, \hyperpage{26}
-    \subitem show, \hyperpage{25}
+    \subitem show, \hyperpage{26}
     \subitem status, \hyperpage{26}
 
   \indexspace
@@ -75,31 +75,30 @@
 
   \indexspace
 
-  \item mkdir, \hyperpage{17}, \hyperpage{21}
+  \item mkdir, \hyperpage{17, 18}, \hyperpage{21}
   \item mount, \hyperpage{17}, \hyperpage{21}
 
   \indexspace
 
-  \item newfs, \hyperpage{16}
+  \item newfs, \hyperpage{17}
   \item NIST 800-88
     \subitem Purge, \hyperpage{9}
 
   \indexspace
 
-  \item operating system, \hyperpage{5}, \hyperpage{11}, \hyperpage{14}, 
-		\hyperpage{19}, \hyperpage{25}
+  \item operating system, \hyperpage{5}, \hyperpage{12}, 
+		\hyperpage{14, 15}, \hyperpage{19, 20}, \hyperpage{26}
 
   \indexspace
 
-  \item RAIDZ-2, \hyperpage{10, 11}, \hyperpage{13}, \hyperpage{17}, 
-		\hyperpage{19}
+  \item RAIDZ-2, \hyperpage{10--12}, \hyperpage{18, 19}
   \item rm, \hyperpage{17}
 
   \indexspace
 
-  \item ssh-keygen, \hyperpage{16, 17}
-  \item su, \hyperpage{15}
-  \item sudo, \hyperpage{15}
+  \item ssh-keygen, \hyperpage{16}, \hyperpage{18}
+  \item su, \hyperpage{16}
+  \item sudo, \hyperpage{16}
   \item swapinfo, \hyperpage{26, 27}
   \item swapoff, \hyperpage{27}
   \item swapon, \hyperpage{18}, \hyperpage{26, 27}
@@ -116,9 +115,9 @@
 
   \indexspace
 
-  \item zpool, \hyperpage{25}, \hyperpage{27}
+  \item zpool, \hyperpage{26--28}
     \subitem add, \hyperpage{19}
-    \subitem comment, \hyperpage{12}
-    \subitem create, \hyperpage{18, 19}
+    \subitem comment, \hyperpage{13}
+    \subitem create, \hyperpage{19}
 
 \end{theindex}
