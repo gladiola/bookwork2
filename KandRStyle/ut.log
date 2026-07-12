@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  12 JUL 2026 10:54
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  12 JUL 2026 11:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1386,17 +1386,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [5]
 \openout4 = `ut.ent'.
 
- [6] [7]
+ [6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
 File: figures/public to private.png Graphic file (type bmp)
 <figures/public to private.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8]
+[8]
 LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 318.
-
-[9]
+ [9]
 Overfull \hbox (7.4107pt too wide) in paragraph at lines 354--355
 []\TU/InfoOTDisp(0)/b/n/10 There’s a web interface that let’s us know about []m
 otherboard-related
@@ -2127,7 +2127,7 @@ Package rerunfilecheck Info: File `ut.out' has not changed.
 Here is how much of TeX's memory you used:
  23638 strings out of 475846
  431196 string characters out of 5781395
- 1976879 words of memory out of 5000000
+ 1975879 words of memory out of 5000000
  44345 multiletter control sequences out of 15000+600000
  562629 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

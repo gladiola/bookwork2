@@ -27,7 +27,7 @@
 \contentsline {section}{\numberline {2.2}Literature Review}{7}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Overview of Existing Solutions or Approaches}{7}{subsection.2.2.1}%
 \contentsline {subsubsection}{Immutability as a Constraining Concept}{7}{subsubsection*.15}%
-\contentsline {subsubsection}{Immutability Examples in Blockchains}{7}{subsubsection*.16}%
+\contentsline {subsubsection}{Immutability Examples in Blockchains}{8}{subsubsection*.16}%
 \contentsline {subsubsection}{Immutability Examples in Database Administration}{9}{subsubsection*.17}%
 \contentsline {subsection}{\numberline {2.2.2}Comparisons of Technologies or Frameworks}{9}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Gaps in the Literature}{9}{subsection.2.2.3}%
