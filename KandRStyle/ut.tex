@@ -160,6 +160,8 @@ With our chosen style of citations, we tried to provide references that would wi
 
 We decided to set a previous book in fonts by Erik Spiekermann after seeing ``Helvetica'' by Gary Hustwit (2007). We carried that through here.  InfoOTDisp-Book is copyrighted by Ole Schaefer and Erik Spiekermann; it is published by FSI Fonts und Software GmbH.  Eurostile Extended Regular and Eurostile W01 Regular are copyrighted 2006 and 2010 by URW Design and Development.  
 
+For typesetting and formatting, we chose LaTex.  We repeatedly consulted various AI and Internet sources for coding the document which generated the paper.  For bibliographic formatting, we frequently used MyBib. \endnote{Mybib. “MyBib Bibliography Generator.” MyBib.Com, 13 July 2018, \url{https://www.mybib.com}. Accessed 12 July 2026.}
+
 %----------------------------------------------------------------------------------------
 %	Introduction
 %----------------------------------------------------------------------------------------
@@ -170,6 +172,22 @@ Your introduction text goes here...
 
 
 \mainmatter
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER
+%----------------------------------------------------------------------------------------
+\chapter{Understanding Risks to Physical Systems }
+\begin{center}\vspace{-0.5\baselineskip}\parbox{0.85\textwidth}{\small\itshape
+We conducted a risk assessment to better understand the threat of criminal action against an in-house system.  We examined both cybercrimes and physical crimes using data that was normalized to a per-capita rates of crimes.  We drew from FBI \gls{icc} annual reports and Chattanooga Police open data records.  The population samples were taken from the US Census Bureau reports.\par}\end{center}
+\section{Introduction}
+\section{Methodology}
+\section{Results}
+%----------------------------------------------------------------------------------------
+Text with\endnote{First note.} inline references.
+More text\endnote{Second note.}
+\printchapterendnotes
+
+
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER
@@ -258,18 +276,25 @@ With core components and configurations unchanged, an immutable system restarted
 \section{Literature Review}
 \subsection{Overview of Existing Solutions or Approaches}
 
-
-We came across an article ("Immutability as an Operational Constraint Rather Than a
+\subsubsection{Immutability as a Constraining Concept}
+We wanted to better understand immutability as an idea.  We came across an article ("Immutability as an Operational Constraint Rather Than a
 Security Feature")\endnote{Vppalapati, Mallikarjun. “Immutability as an Operational Constraint rather than a Security Feature.” International Journal of Artificial Intelligence, Data Science, and Machine Learning, vol. 3, no. 2, 30 June 2022, pp. 176–184, \url{https://doi.org/10.63282/3050-9262.ijaidsml-v3i2p119}. Accessed 21 June 2026.}  that pointed out that immutability can be a limiting factor.  The author warned, "By just making something immutable you haven't necessarily made it safe; what you have effectively done is taken away the possibility of alteration and replaced it with a new operational reality: correction must happen through additional writes, and recovery must happen through reconciliation rather than repair"\endnote{Vppalapati, Mallikarjun. “Immutability as an Operational Constraint rather than a Security Feature.” International Journal of Artificial Intelligence, Data Science, and Machine Learning, vol. 3, no. 2, 30 June 2022, pp. 176–184, \url{https://doi.org/10.63282/3050-9262.ijaidsml-v3i2p119}. Accessed 21 June 2026.}  
 
 In this approach, the entire system was assumed to be an immutable system.  This helped us to realize what a benefit it was to not make the entire system immutable.  Our original intention was to have centralized, core, aspects of the operating system be immutable; other parts of the system could be changed within the rules and limits set by the OS.  
 
-Still, those changeable parts might have logging and monitoring activities, such as database snapshots set up in a way that allowed these cautions about immutability to contribute to our planning.  Mallikarjun Vppalapati pointed out problems that could be had when records of on-system actions became immutable.  Suppose a log or record was contaminated with malware or privacy information that needed to be forgotten under GDPR.  Administrators might need to undertake complicated edits to allow future auditors to bypass data that should not be considered.  Vppalapati outlined a situation in which a simple programmatic error needed an elaborate and complicated fix because simple overwrites were not available.\endnote{Vppalapati, Mallikarjun. “Immutability as an Operational Constraint rather than a Security Feature.” International Journal of Artificial Intelligence, Data Science, and Machine Learning, vol. 3, no. 2, 30 June 2022, pp. 176–184, \url{https://doi.org/10.63282/3050-9262.ijaidsml-v3i2p119}. Accessed 21 June 2026.}
+Still, those changeable parts might have logging and monitoring activities, such as database snapshots set up in a way that allowed these cautions about immutability to contribute to our planning.  Mallikarjun Vppalapati pointed out problems that could be had when records of on-system actions became immutable.  Suppose a log or record was contaminated with malware or privacy information that needed to be forgotten under \gls{gdpr}.  Administrators might need to undertake complicated edits to allow future auditors to bypass data that should not be considered.  Vppalapati outlined a situation in which a simple programmatic error needed an elaborate and complicated fix because simple overwrites were not available.\endnote{Vppalapati, Mallikarjun. “Immutability as an Operational Constraint rather than a Security Feature.” International Journal of Artificial Intelligence, Data Science, and Machine Learning, vol. 3, no. 2, 30 June 2022, pp. 176–184, \url{https://doi.org/10.63282/3050-9262.ijaidsml-v3i2p119}. Accessed 21 June 2026.}
 
 Vppalapati described three kinds of immutability:  hard, soft, and operational.
 "\index{immutability!hard}\Gls{hard immutability} describes a state of being unchangeable where changes are so heavily protected by technical mechanisms
 and therefore practically infeasible the alteration process is therefore practically impossible."\endnote{Vppalapati, Mallikarjun. “Immutability as an Operational Constraint rather than a Security Feature.” International Journal of Artificial Intelligence, Data Science, and Machine Learning, vol. 3, no. 2, 30 June 2022, pp. 176–184, \url{https://doi.org/10.63282/3050-9262.ijaidsml-v3i2p119}. Accessed 21 June 2026.}  "\index{immutability!soft}\Gls{soft immutability}...can be reverted by using privileged credentials."\endnote{Vppalapati, Mallikarjun. “Immutability as an Operational Constraint rather than a Security Feature.” International Journal of Artificial Intelligence, Data Science, and Machine Learning, vol. 3, no. 2, 30 June 2022, pp. 176–184, \url{https://doi.org/10.63282/3050-9262.ijaidsml-v3i2p119}. Accessed 21 June 2026.}  "\index{immutability!operational}\Gls{operational immutability} implies the lack of changes without the use of technology"\endnote{Vppalapati, Mallikarjun. “Immutability as an Operational Constraint rather than a Security Feature.” International Journal of Artificial Intelligence, Data Science, and Machine Learning, vol. 3, no. 2, 30 June 2022, pp. 176–184, \url{https://doi.org/10.63282/3050-9262.ijaidsml-v3i2p119}. Accessed 21 June 2026.}  In our proposed system, we would use hard immutability in the optical read-only recording of the core OS.  We would use operational immutability as a control because we were applying an optical disc that required physical access to the server for alterations.  We would also use soft immutability, in the writing of data to files in attached storage that was not automatically loaded by the system on boot.  
 
+\subsubsection{Immutability Examples in Blockchains}
+If there's a technology that has a reputation for immutability, it is the blockchain.  Simply put, the blockchain is a chain of cryptographic records; the starting point for the math used to encrypt each block is based on the previous record; the cummulative effect of the sequence of encryption is that if one record is corrupted or modified, then the break in the logic for decrypting subsequent blocks will reveal the change.  So long as the records in the blockchain are accessible, users can assume that the previous entries have been unmodified.  Blockchain has other characteristics; its records are usually distributed over networks and internets; but, the mathematical sequence of encryption and decryption based on preceding blocks is the source of its logical strength as an immutable record.
+
+Blockchains, being immutable, can run into conflict with one of the more famous requirements for mutability of our time:  \gls{gdpr}'s \gls{rtbf}.   
+\endnote{Wolford, Ben. “Everything You Need to Know About the ‘Right to Be Forgotten.’” GDPR.Eu, 5 Nov. 2018, \url{https://gdpr.eu/right-to-be-forgotten/}. Accessed 12 July 2026.}\endnote{GDPR. “Art. 17 GDPR - Right to Erasure (‘Right to Be Forgotten’) - GDPR.Eu.” GDPR.Eu, 14 Nov. 2018, \url{https://gdpr.eu/article-17-right-to-be-forgotten/}. Accessed 12 July 2026.}  Recital 65 says that a person who has their data recorded has the right to request a modification or deletion of that data.  There are some exceptions and provisions for children who get their data recorded, but at its core Recital 65 provides every person in the EU with the legal right to have their records modified.  \endnote{“Recital 65 - Right of Rectification and Erasure.” GDPR.Eu, 14 Nov. 2018, \url{https://gdpr.eu/recital-65-right-of-rectification-and-erasure/}. Accessed 12 July 2026.}  Recital 66 says that a data controller has to inform processors to erase links to or copies of personal data.  This way a request to be forgotten can't just stop with one entity or be restricted to entities that the requestor discovers on their own.  \endnote{“Recital 66 - Right to Be Forgotten.” GDPR.Eu, 14 Nov. 2018, \url{https://gdpr.eu/recital-66-right-to-be-forgotten/}. Accessed 12 July 2026.}  In these laws, we don't see exceptions for immutable systems built-in.  On the contrary, by being left out altogether the responsibility for dealing with these legal conflicts seems to go back on the immutable system owner.  If a system were to operate that was truly immutable, then if that system contained personal data that was to be erased upon a given request:  it might require the destruction of the whole system to bring the operator into legal compliance with \gls{gdpr}.  This might not be as catastrophic as it sounds; perhaps an operator could take a system offline, delete a record, and then completely regenerate the records with the required deletions omitted.  However, multiple such mutations could lead to complexities in system maintenance with multiple required regenerations.  The problem could get further complicated if the system had subsequent sequential modifications.  Altogether, system operators would be cautioned not to store personal data in immutable file structures.  Perhaps we might be further cautioned to keep immutable only what was operationally necessary as a safeguard against future laws or requirements.  As we work through the implementation of our immutable system, we shall see that sometimes the constraints can bring us structure and sometimes the limitations are innovation accellerators.
+
+\subsubsection{Immutability Examples in Database Administration}
 \subsection{Comparisons of Technologies or Frameworks}
 ... compare with diagrams 
 
@@ -1239,6 +1264,7 @@ C.  URLs – FreeBSD man pages for above.
 Text with\endnote{First note.} inline references.
 More text\endnote{Second note.}
 \printchapterendnotes
+
 
 
 
