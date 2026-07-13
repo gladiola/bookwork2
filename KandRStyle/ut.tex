@@ -297,6 +297,9 @@ Blockchains, being immutable, can run into conflict with one of the more famous 
 Blockchains offer an example of Vppalapati's \gls{hard immutability} and \gls{operational immutability}.  The \gls{eu}'s \gls{gdpr} counters with an example of \gls{soft immutability} requirements for certain kinds of data.  We can conclude that most personal data would have to be kept off of the optical discs (and out of any network distributed blockchains).  While most \gls{pii} would not seem to be a part of an operating system, later we'll see that a user's full name is requested by the system as a normal part of user account setup.  We could have a small conflict that leads to an involved repair if we're not careful. 
 
 \subsubsection{Immutability Examples in Database Administration}
+\subsubsection{Immutability and MAC Biba}
+\Gls{biba} is a mandatory access control scheme, similar to military multilevel security classifications, but with an emphasis on file integrity. \texttt{mac\_biba} allows for write down and read up; this is the opposite direction from mandatory access control schemes like military security classifications which can write up and read down. \endnote{Martins, Gary R., et al. Implementing Message Systems in Multilevel Secure Environments: Problems and Approaches. Rand, 1982.}
+\endnote{Biba, K J, et al. Integrity Considerations for Secure Computer Systems. 1977.} FreeBSD offers \texttt{mac\_biba} as part of its operating system; unfortunately, OpenBSD does not.  \endnote{"Mac\_Biba(4)." Freebsd.Org, 2025, \url{https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4&apropos=0&manpath=freebsd+15.1-release+and+ports}. Accessed 13 July 2026.}
 \subsection{Comparisons of Technologies or Frameworks}
 ... compare with diagrams 
 
