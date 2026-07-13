@@ -212,9 +212,11 @@ More text\endnote{Second note.}
 
 \section{Introduction}
 \subsection{Background and Content}
+In order to maintain persistence, download files, or interact with a file system, attackers need to be able to write to a system.  Many active attack techniques require some kind of writing action as a precedent for execution.
 \subsection{Problem Statement}
 
-Attackers cannot destructively interact with systems without writing to them.  Our goal is to keep the core services and operating system stable and immutable through physical security controls.  This will allow the system to resist common attacks such as the encryption of files from ransomware and persistent account takeovers.  
+
+Our goal is to keep the core services and operating system stable and immutable through physical security controls.  This will allow the system to resist common attacks such as the encryption of files from ransomware and persistent account takeovers.  
 
 \subsection{Project Objectives}
 
@@ -222,12 +224,14 @@ Our system, hostname Blondie, set an example for amnesiac system implementation 
 
 \subsection{Scope of Work}
 \subsubsection{Hypothesis:  H1}
-An immutable operating system will be more resistant to destructive attack.
 Attackers cannot destructively interact with systems without writing to them.
 \subsubsection{Hypothesis:  H2}
+An immutable operating system will be more resistant to destructive attack.
+Attackers cannot destructively interact with systems without writing to them.
+\subsubsection{Hypothesis:  H3}
 An immutable operating system will promote system integrity.
 With ransomware as a dominant contemporary threat, integrity of the CIA triad rises to the forefront of defensive needs.  
-\subsubsection{Hypothesis:  H3}
+\subsubsection{Hypothesis:  H4}
 An immutable operating system will promote rapid recovery.
 With core components and configurations unchanged, an immutable system restarted after an attack will experience a more rapid recovery.
 \subsection{Variables}
