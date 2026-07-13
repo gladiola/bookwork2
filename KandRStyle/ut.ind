@@ -28,15 +28,16 @@
 
   \indexspace
 
-  \item encrypt, \hyperpage{20, 21}, \hyperpage{24}, \hyperpage{27}, 
+  \item encrypt, \hyperpage{20--22}, \hyperpage{24}, \hyperpage{27}, 
 		\hyperpage{49}
 
   \indexspace
 
   \item FreeBSD, \hyperpage{5}, \hyperpage{10}, \hyperpage{12}, 
 		\hyperpage{20}, \hyperpage{45}
-  \item FreeBSD Handbook, \hyperpage{17, 18}, \hyperpage{50}
-  \item FreeBSD Mastery:  ZFS, \hyperpage{12}
+  \item FreeBSD Handbook, \hyperpage{17}, \hyperpage{19}, 
+		\hyperpage{50}
+  \item FreeBSD Mastery:  ZFS, \hyperpage{14}
 
   \indexspace
 
@@ -59,8 +60,8 @@
 
   \item immutability
     \subitem hard, \hyperpage{7}
-    \subitem operational, \hyperpage{7}
-    \subitem soft, \hyperpage{7}
+    \subitem operational, \hyperpage{8}
+    \subitem soft, \hyperpage{8}
 
   \indexspace
 
@@ -74,8 +75,8 @@
 
   \indexspace
 
-  \item mkdir, \hyperpage{17, 18}, \hyperpage{22}
-  \item mount, \hyperpage{17, 18}, \hyperpage{22}
+  \item mkdir, \hyperpage{18}, \hyperpage{22}
+  \item mount, \hyperpage{18}, \hyperpage{22}
 
   \indexspace
 
@@ -90,17 +91,18 @@
 
   \indexspace
 
-  \item RAIDZ-2, \hyperpage{10--12}, \hyperpage{14}, \hyperpage{18, 19}
+  \item RAIDZ-2, \hyperpage{10, 11}, \hyperpage{14}, \hyperpage{18}, 
+		\hyperpage{20}
   \item rm, \hyperpage{18}
 
   \indexspace
 
-  \item ssh-keygen, \hyperpage{16}, \hyperpage{18}
+  \item ssh-keygen, \hyperpage{17, 18}
   \item su, \hyperpage{16}
   \item sudo, \hyperpage{16}
-  \item swapinfo, \hyperpage{26--28}
-  \item swapoff, \hyperpage{27}
-  \item swapon, \hyperpage{19}, \hyperpage{26--28}
+  \item swapinfo, \hyperpage{27, 28}
+  \item swapoff, \hyperpage{28}
+  \item swapon, \hyperpage{19}, \hyperpage{27, 28}
 
   \indexspace
 
@@ -117,6 +119,6 @@
   \item zpool, \hyperpage{26}, \hyperpage{28}
     \subitem add, \hyperpage{20}
     \subitem comment, \hyperpage{13}
-    \subitem create, \hyperpage{19}
+    \subitem create, \hyperpage{19, 20}
 
 \end{theindex}
