@@ -4,19 +4,19 @@
 
   \indexspace
 
-  \item amensiac, \hyperpage{5}, \hyperpage{14}
+  \item amensiac, \hyperpage{5}, \hyperpage{13, 14}
   \item amnesiac, \hyperpage{5}
 
   \indexspace
 
-  \item bsdinstall, \hyperpage{15}
+  \item bsdinstall, \hyperpage{14, 15}
 
   \indexspace
 
-  \item cache, \hyperpage{21}, \hyperpage{28}
+  \item cache, \hyperpage{20, 21}, \hyperpage{28}
   \item camcontrol
     \subitem devlist, \hyperpage{17}
-  \item cd, \hyperpage{18}
+  \item cd, \hyperpage{17}
   \item coding, \hyperpage{1}, \hyperpage{5}, \hyperpage{12}
   \item configuration, \hyperpage{5}
   \item cp, \hyperpage{25, 26}
@@ -28,28 +28,29 @@
 
   \indexspace
 
-  \item encrypt, \hyperpage{20--22}, \hyperpage{24}, \hyperpage{27}, 
-		\hyperpage{49}
+  \item encrypt, \hyperpage{20}, \hyperpage{22}, \hyperpage{24}, 
+		\hyperpage{27}, \hyperpage{49}
 
   \indexspace
 
   \item FreeBSD, \hyperpage{5}, \hyperpage{10}, \hyperpage{12}, 
 		\hyperpage{20}, \hyperpage{45}
-  \item FreeBSD Handbook, \hyperpage{17}, \hyperpage{19}, 
-		\hyperpage{50}
-  \item FreeBSD Mastery:  ZFS, \hyperpage{14}
+  \item FreeBSD Handbook, \hyperpage{17, 18}, \hyperpage{50}
+  \item FreeBSD Mastery:  ZFS, \hyperpage{13}
 
   \indexspace
 
+  \item GDPR
+    \subitem Right to be Forgotten, \hyperpage{7, 8}
   \item geli, \hyperpage{11}, \hyperpage{24}
     \subitem attach, \hyperpage{24, 25}, \hyperpage{27}
     \subitem init, \hyperpage{24, 25}, \hyperpage{27}
     \subitem status, \hyperpage{26}
-  \item gpart, \hyperpage{12}, \hyperpage{15}, \hyperpage{18}, 
-		\hyperpage{21}
+  \item gpart, \hyperpage{12}, \hyperpage{14}, \hyperpage{18}, 
+		\hyperpage{22}
     \subitem add, \hyperpage{17}, \hyperpage{19}, \hyperpage{22, 23}, 
 		\hyperpage{27}
-    \subitem create, \hyperpage{17}, \hyperpage{19}, \hyperpage{22, 23}
+    \subitem create, \hyperpage{17--19}, \hyperpage{22, 23}
     \subitem modify, \hyperpage{26}
     \subitem recover, \hyperpage{27}
     \subitem resize, \hyperpage{27}
@@ -59,7 +60,7 @@
   \indexspace
 
   \item immutability
-    \subitem hard, \hyperpage{7}
+    \subitem hard, \hyperpage{8}
     \subitem operational, \hyperpage{8}
     \subitem soft, \hyperpage{8}
 
@@ -75,8 +76,10 @@
 
   \indexspace
 
-  \item mkdir, \hyperpage{18}, \hyperpage{22}
-  \item mount, \hyperpage{18}, \hyperpage{22}
+  \item mac
+    \subitem biba, \hyperpage{9}
+  \item mkdir, \hyperpage{17, 18}, \hyperpage{22}
+  \item mount, \hyperpage{17, 18}, \hyperpage{22}
 
   \indexspace
 
@@ -91,18 +94,18 @@
 
   \indexspace
 
-  \item RAIDZ-2, \hyperpage{10, 11}, \hyperpage{14}, \hyperpage{18}, 
-		\hyperpage{20}
+  \item RAIDZ-2, \hyperpage{10, 11}, \hyperpage{13, 14}, 
+		\hyperpage{18, 19}
   \item rm, \hyperpage{18}
 
   \indexspace
 
-  \item ssh-keygen, \hyperpage{17, 18}
+  \item ssh-keygen, \hyperpage{16}, \hyperpage{18}
   \item su, \hyperpage{16}
   \item sudo, \hyperpage{16}
-  \item swapinfo, \hyperpage{27, 28}
-  \item swapoff, \hyperpage{28}
-  \item swapon, \hyperpage{19}, \hyperpage{27, 28}
+  \item swapinfo, \hyperpage{26--28}
+  \item swapoff, \hyperpage{27}
+  \item swapon, \hyperpage{18}, \hyperpage{26--28}
 
   \indexspace
 
@@ -117,8 +120,8 @@
   \indexspace
 
   \item zpool, \hyperpage{26}, \hyperpage{28}
-    \subitem add, \hyperpage{20}
+    \subitem add, \hyperpage{19}
     \subitem comment, \hyperpage{13}
-    \subitem create, \hyperpage{19, 20}
+    \subitem create, \hyperpage{19}
 
 \end{theindex}

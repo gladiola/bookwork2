@@ -42,21 +42,21 @@
 \contentsline {subsubsection}{Preparing the Baseboard}{12}{subsubsection*.23}%
 \contentsline {subsubsection}{Incremental Advancement to \Gls {amnesiac} System}{12}{subsubsection*.24}%
 \contentsline {subsubsection}{Identifying and Allocating ZFS Drive Qualities}{12}{subsubsection*.25}%
-\contentsline {subsubsection}{What are we going to want the ZFS kit to do? How are we going to use the drives? How can we wrestle with this new type of \gls {configuration}?}{14}{subsubsection*.26}%
-\contentsline {subsubsection}{What We Can Learn From Installing an OS}{15}{subsubsection*.31}%
+\contentsline {subsubsection}{What are we going to want the ZFS kit to do? How are we going to use the drives? How can we wrestle with this new type of \gls {configuration}?}{13}{subsubsection*.26}%
+\contentsline {subsubsection}{What We Can Learn From Installing an OS}{14}{subsubsection*.31}%
 \contentsline {subsubsection}{Basic \Gls {operating system} Installation Goals}{15}{subsubsection*.32}%
 \contentsline {subsubsection}{Main Steps for FreeBSD Installation from bsdinstall}{15}{subsubsection*.33}%
-\contentsline {subsubsection}{No Root Password}{16}{subsubsection*.34}%
-\contentsline {subsubsection}{Be Able to Build the Keys}{17}{subsubsection*.35}%
-\contentsline {subsubsection}{Partition, Mount, and Use a \Gls {thumbdrive} from Live Disc's \Gls {shell}}{17}{subsubsection*.36}%
+\contentsline {subsubsection}{No Root Password}{15}{subsubsection*.34}%
+\contentsline {subsubsection}{Be Able to Build the Keys}{16}{subsubsection*.35}%
+\contentsline {subsubsection}{Partition, Mount, and Use a \Gls {thumbdrive} from Live Disc's \Gls {shell}}{16}{subsubsection*.36}%
 \contentsline {subsubsection}{Start the Box and the Live Disk's \Gls {shell}}{17}{subsubsection*.37}%
 \contentsline {subsubsection}{Be Able to Plug in the USB \Gls {thumbdrive} and Find Its Logical Address}{17}{subsubsection*.38}%
 \contentsline {subsubsection}{Be Able to Partition the USB}{17}{subsubsection*.39}%
-\contentsline {subsubsection}{Be Able to Write to the USB}{18}{subsubsection*.40}%
+\contentsline {subsubsection}{Be Able to Write to the USB}{17}{subsubsection*.40}%
 \contentsline {subsubsection}{Be Able to Put Some Key Pairs on the USB}{18}{subsubsection*.41}%
 \contentsline {subsubsection}{Be Able to Use Commands to Build Out the Drives}{18}{subsubsection*.42}%
 \contentsline {subsubsection}{Goals for \Gls {amnesiac} Systems}{20}{subsubsection*.43}%
-\contentsline {subsubsection}{Configure for SWAP Disk, ZFS \Gls {cache}, ZFS SLOG \Gls {mirror}, and ZFS RAIDz2}{21}{subsubsection*.44}%
+\contentsline {subsubsection}{Configure for SWAP Disk, ZFS \Gls {cache}, ZFS SLOG \Gls {mirror}, and ZFS RAIDz2}{20}{subsubsection*.44}%
 \contentsline {subsubsection}{Startup with \texttt {bootonly.iso}}{22}{subsubsection*.49}%
 \contentsline {subsubsection}{Mount the USB to Save the \Gls {metadata} Backup File}{22}{subsubsection*.50}%
 \contentsline {subsubsection}{Create Swap Disk in Bay 0}{22}{subsubsection*.51}%
@@ -71,7 +71,7 @@
 \contentsline {subsubsection}{Commands to \Gls {encrypt} the Partitions}{24}{subsubsection*.60}%
 \contentsline {subsubsection}{To Preserve the \Gls {metadata} Backup Files}{25}{subsubsection*.61}%
 \contentsline {subsubsection}{File Name Check: Editing Labels}{26}{subsubsection*.62}%
-\contentsline {subsubsection}{To Use the Swap Disk}{27}{subsubsection*.63}%
+\contentsline {subsubsection}{To Use the Swap Disk}{26}{subsubsection*.63}%
 \contentsline {subsubsection}{Create the zpool for BLONDIE}{28}{subsubsection*.64}%
 \contentsline {subsubsection}{Create a mountpoint}{28}{subsubsection*.65}%
 \contentsline {section}{\numberline {2.4}Analysis}{28}{section.2.4}%
