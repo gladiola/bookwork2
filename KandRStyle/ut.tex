@@ -212,7 +212,11 @@ More text\endnote{Second note.}
 
 \section{Introduction}
 \subsection{Background and Content}
-In order to maintain persistence, download files, or interact with a file system, attackers need to be able to write to a system.  Many active attack techniques require some kind of writing action as a precedent for execution.
+In order to maintain persistence, download files, or interact with a file system, attackers need to be able to write to a system.  Many active attack techniques require some kind of writing action as a precedent for execution.  Based on our limited penetration testing and attack experience, we identified 60 Enterprise Technique groups in MITRE ATT\&CK \endnote{MITRE. "Techniques - Enterprise | MITRE ATT\&CK®." Attack.Mitre.Org, 2023, \url{https://attack.mitre.org/techniques/enterprise/}. Accessed 13 July 2026.} that could be thwarted by removing an attacker's ability to write.  This listing is not comprehensive or absolute; we reviewed these technique categories and recognized that at least a naive attempt to carry out those techniques might involve writing to a file or process.  We ignored more passive reconaissance techniques and those that would be executed outside of the target system itself.  Still, we were able to generate a formidable list of attack techniques that would at least be hampered by an operating system that was designed to be immutable.  
+
+We cover our listing of these MITRE ATT\&CK techniques in Tables \ref{tab:mitrewrite1}, \ref{tab:mitrewrite2}, \ref{tab:mitrewrite3}, and \ref{tab:mitrewrite4}.  As we review the list, we can see how some might fall into the trap of thinking such a system was invincible or "hack proof".  Our past experience with attack and defense warns us to accept these extensive defenses as tentative.  An ingenious attacker might find a way to carry out these techniques without meeting our preconceived ideas that they require writing or that our chosen forms of immutability would protect against that writing.  Nonetheless, the lengthy list of major groups of techniques and their longer list of subtechniques implies that immutability in the right ways can serve as a provocative and solid form of defense.
+
+
 
 
 \begin{table}
