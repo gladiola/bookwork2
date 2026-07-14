@@ -83,41 +83,41 @@
 \contentsline {subsection}{\numberline {2.6.2}MAN Pages}{33}{subsection.2.6.2}%
 \contentsline {subsection}{\numberline {2.6.3}Websites}{35}{subsection.2.6.3}%
 \contentsline {chapter}{Endnotes}{37}{chapter*.70}%
-\contentsline {chapter}{\numberline {3}Login Procedures for Disconnected Systems}{47}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Introduction}{47}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Methodology}{47}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Results}{48}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Required Or Specific Equipment}{48}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Code Notes for Power Up}{48}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Code Notes for Poweroff}{49}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Analysis}{50}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Quality}{50}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Tests}{50}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Discussion}{51}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Summary of Usefulness}{51}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Lessons Learned}{51}{subsection.3.5.2}%
-\contentsline {section}{\numberline {3.6}References}{51}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Books}{51}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}MAN pages}{51}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}URLs}{52}{subsection.3.6.3}%
-\contentsline {chapter}{Endnotes}{53}{chapter*.71}%
-\contentsline {chapter}{\numberline {4}Basic Tape Operations with FreeBSD }{55}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{55}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Methodology}{55}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Results}{55}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Code Notes}{55}{subsection.4.3.1}%
-\contentsline {subsubsection}{Sample Files: test.txt }{56}{subsubsection*.72}%
-\contentsline {subsubsection}{Sample Files: test2.txt}{56}{subsubsection*.73}%
-\contentsline {subsubsection}{Sample Files: test3.txt}{56}{subsubsection*.74}%
-\contentsline {subsubsection}{Sample Files: test4.txt}{56}{subsubsection*.75}%
-\contentsline {subsubsection}{Sample Files: test5.txt}{56}{subsubsection*.76}%
-\contentsline {subsubsection}{Sample Script: scriptedDemo.sh}{56}{subsubsection*.77}%
-\contentsline {section}{\numberline {4.4}Analysis}{59}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Quality}{59}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Tests}{59}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Discussion}{59}{section.4.5}%
-\contentsline {section}{\numberline {4.6}References}{60}{section.4.6}%
-\contentsline {chapter}{Endnotes}{61}{chapter*.78}%
-\contentsline {chapter}{Glossary}{63}{section*.79}%
-\contentsline {chapter}{Endnotes}{67}{chapter*.81}%
-\contentsline {chapter}{Index}{69}{section*.82}%
+\contentsline {chapter}{\numberline {3}Login Procedures for Disconnected Systems}{45}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{45}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Methodology}{45}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Results}{46}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Required Or Specific Equipment}{46}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Code Notes for Power Up}{46}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Code Notes for Poweroff}{47}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Analysis}{48}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Quality}{48}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Tests}{48}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Discussion}{49}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Summary of Usefulness}{49}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Lessons Learned}{49}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}References}{49}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Books}{49}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}MAN pages}{49}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}URLs}{50}{subsection.3.6.3}%
+\contentsline {chapter}{Endnotes}{51}{chapter*.71}%
+\contentsline {chapter}{\numberline {4}Basic Tape Operations with FreeBSD }{53}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{53}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Methodology}{53}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Results}{53}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Code Notes}{53}{subsection.4.3.1}%
+\contentsline {subsubsection}{Sample Files: test.txt }{54}{subsubsection*.72}%
+\contentsline {subsubsection}{Sample Files: test2.txt}{54}{subsubsection*.73}%
+\contentsline {subsubsection}{Sample Files: test3.txt}{54}{subsubsection*.74}%
+\contentsline {subsubsection}{Sample Files: test4.txt}{54}{subsubsection*.75}%
+\contentsline {subsubsection}{Sample Files: test5.txt}{54}{subsubsection*.76}%
+\contentsline {subsubsection}{Sample Script: scriptedDemo.sh}{54}{subsubsection*.77}%
+\contentsline {section}{\numberline {4.4}Analysis}{57}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Quality}{57}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Tests}{57}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Discussion}{57}{section.4.5}%
+\contentsline {section}{\numberline {4.6}References}{58}{section.4.6}%
+\contentsline {chapter}{Endnotes}{59}{chapter*.78}%
+\contentsline {chapter}{Glossary}{61}{section*.79}%
+\contentsline {chapter}{Endnotes}{65}{chapter*.81}%
+\contentsline {chapter}{Index}{67}{section*.82}%
