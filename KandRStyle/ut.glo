@@ -30,26 +30,26 @@
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{12}
 \glossaryentry{GDPR?\glossentry{gdpr}|setentrycounter[]{page}"\glsnumberformat}{12}
 \glossaryentry{hard immutability?\glossentry{hard immutability}|setentrycounter[]{page}"\glsnumberformat}{12}
-\glossaryentry{soft immutability?\glossentry{soft immutability}|setentrycounter[]{page}"\glsnumberformat}{12}
-\glossaryentry{operational immutability?\glossentry{operational immutability}|setentrycounter[]{page}"\glsnumberformat}{12}
-\glossaryentry{OS?\glossentry{os}|setentrycounter[]{page}"\glsnumberformat}{12}
-\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{12}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{13}
+\glossaryentry{soft immutability?\glossentry{soft immutability}|setentrycounter[]{page}"\glsnumberformat}{13}
+\glossaryentry{operational immutability?\glossentry{operational immutability}|setentrycounter[]{page}"\glsnumberformat}{13}
+\glossaryentry{OS?\glossentry{os}|setentrycounter[]{page}"\glsnumberformat}{13}
+\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{13}
 \glossaryentry{GDPR?\glossentry{gdpr}|setentrycounter[]{page}"\glsnumberformat}{13}
 \glossaryentry{RtbF?\glossentry{rtbf}|setentrycounter[]{page}"\glsnumberformat}{13}
 \glossaryentry{GDPR?\glossentry{gdpr}|setentrycounter[]{page}"\glsnumberformat}{13}
 \glossaryentry{GDPR?\glossentry{gdpr}|setentrycounter[]{page}"\glsnumberformat}{13}
-\glossaryentry{hard immutability?\glossentry{hard immutability}|setentrycounter[]{page}"\glsnumberformat}{13}
-\glossaryentry{operational immutability?\glossentry{operational immutability}|setentrycounter[]{page}"\glsnumberformat}{13}
-\glossaryentry{EU?\glossentry{eu}|setentrycounter[]{page}"\glsnumberformat}{13}
-\glossaryentry{GDPR?\glossentry{gdpr}|setentrycounter[]{page}"\glsnumberformat}{13}
-\glossaryentry{soft immutability?\glossentry{soft immutability}|setentrycounter[]{page}"\glsnumberformat}{13}
-\glossaryentry{PII?\glossentry{pii}|setentrycounter[]{page}"\glsnumberformat}{13}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{14}
+\glossaryentry{hard immutability?\glossentry{hard immutability}|setentrycounter[]{page}"\glsnumberformat}{14}
+\glossaryentry{operational immutability?\glossentry{operational immutability}|setentrycounter[]{page}"\glsnumberformat}{14}
+\glossaryentry{EU?\glossentry{eu}|setentrycounter[]{page}"\glsnumberformat}{14}
+\glossaryentry{GDPR?\glossentry{gdpr}|setentrycounter[]{page}"\glsnumberformat}{14}
+\glossaryentry{soft immutability?\glossentry{soft immutability}|setentrycounter[]{page}"\glsnumberformat}{14}
+\glossaryentry{PII?\glossentry{pii}|setentrycounter[]{page}"\glsnumberformat}{14}
 \glossaryentry{mac biba?\glossentry{biba}|setentrycounter[]{page}"\glsnumberformat}{14}
+\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{14}
+\glossaryentry{US?\glossentry{us}|setentrycounter[]{page}"\glsnumberformat}{14}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{15}
-\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{15}
-\glossaryentry{US?\glossentry{us}|setentrycounter[]{page}"\glsnumberformat}{15}
 \glossaryentry{NIST?\glossentry{nist}|setentrycounter[]{page}"\glsnumberformat}{15}
 \glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}"\glsnumberformat}{15}
 \glossaryentry{mirror?\glossentry{mirror}|setentrycounter[]{page}"\glsnumberformat}{15}
@@ -61,8 +61,8 @@
 \glossaryentry{SATA?\glossentry{sata}|setentrycounter[]{page}"\glsnumberformat}{15}
 \glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{15}
 \glossaryentry{NIC?\glossentry{nic}|setentrycounter[]{page}"\glsnumberformat}{15}
-\glossaryentry{motherboard?\glossentry{motherboard}|setentrycounter[]{page}"\glsnumberformat}{15}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{16}
+\glossaryentry{motherboard?\glossentry{motherboard}|setentrycounter[]{page}"\glsnumberformat}{16}
 \glossaryentry{motherboard?\glossentry{motherboard}|setentrycounter[]{page}"\glsnumberformat}{16}
 \glossaryentry{GPU?\glossentry{gpu}|setentrycounter[]{page}"\glsnumberformat}{16}
 \glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{16}
@@ -75,8 +75,8 @@
 \glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}"\glsnumberformat}{16}
 \glossaryentry{VNET?\glossentry{vnet}|setentrycounter[]{page}"\glsnumberformat}{16}
 \glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}"\glsnumberformat}{16}
-\glossaryentry{RAID?\glossentry{raid}|setentrycounter[]{page}"\glsnumberformat}{16}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{17}
+\glossaryentry{RAID?\glossentry{raid}|setentrycounter[]{page}"\glsnumberformat}{17}
 \glossaryentry{RAID?\glossentry{raid}|setentrycounter[]{page}"\glsnumberformat}{17}
 \glossaryentry{RAID?\glossentry{raid}|setentrycounter[]{page}"\glsnumberformat}{17}
 \glossaryentry{RAID?\glossentry{raid}|setentrycounter[]{page}"\glsnumberformat}{17}
@@ -96,17 +96,17 @@
 \glossaryentry{RAID?\glossentry{raid}|setentrycounter[]{page}"\glsnumberformat}{17}
 \glossaryentry{RAID?\glossentry{raid}|setentrycounter[]{page}"\glsnumberformat}{17}
 \glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}"\glsnumberformat}{17}
-\glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}"\glsnumberformat}{17}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{18}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{19}
 \glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{19}
+\glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}"\glsnumberformat}{19}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{19}
 \glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{19}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{19}
-\glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}"\glsnumberformat}{19}
-\glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}"\glsnumberformat}{19}
-\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{19}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{20}
+\glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}"\glsnumberformat}{20}
+\glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}"\glsnumberformat}{20}
+\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{20}
 \glossaryentry{operating system?\glossentry{operating system}|setentrycounter[]{page}"\glsnumberformat}{20}
 \glossaryentry{operating system?\glossentry{operating system}|setentrycounter[]{page}"\glsnumberformat}{20}
 \glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}"\glsnumberformat}{20}
@@ -117,10 +117,10 @@
 \glossaryentry{SSH?\glossentry{ssh}|setentrycounter[]{page}"\glsnumberformat}{21}
 \glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}"\glsnumberformat}{21}
 \glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{21}
-\glossaryentry{shell?\glossentry{shell}|setentrycounter[]{page}"\glsnumberformat}{21}
-\glossaryentry{thumbdrive?\glossentry{thumbdrive}|setentrycounter[]{page}"\glsnumberformat}{21}
-\glossaryentry{thumbdrive?\glossentry{thumbdrive}|setentrycounter[]{page}"\glsnumberformat}{21}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{22}
+\glossaryentry{shell?\glossentry{shell}|setentrycounter[]{page}"\glsnumberformat}{22}
+\glossaryentry{thumbdrive?\glossentry{thumbdrive}|setentrycounter[]{page}"\glsnumberformat}{22}
+\glossaryentry{thumbdrive?\glossentry{thumbdrive}|setentrycounter[]{page}"\glsnumberformat}{22}
 \glossaryentry{thumbdrive?\glossentry{thumbdrive}|setentrycounter[]{page}"\glsnumberformat}{22}
 \glossaryentry{shell?\glossentry{shell}|setentrycounter[]{page}"\glsnumberformat}{22}
 \glossaryentry{thumbdrive?\glossentry{thumbdrive}|setentrycounter[]{page}"\glsnumberformat}{22}
@@ -138,9 +138,9 @@
 \glossaryentry{dialog?\glossentry{dialog}|setentrycounter[]{page}"\glsnumberformat}{23}
 \glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{23}
 \glossaryentry{mirror?\glossentry{mirror}|setentrycounter[]{page}"\glsnumberformat}{23}
-\glossaryentry{RAID?\glossentry{raid}|setentrycounter[]{page}"\glsnumberformat}{23}
-\glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}"\glsnumberformat}{23}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{24}
+\glossaryentry{RAID?\glossentry{raid}|setentrycounter[]{page}"\glsnumberformat}{24}
+\glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}"\glsnumberformat}{24}
 \glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}"\glsnumberformat}{24}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{25}
 \glossaryentry{mirror?\glossentry{mirror}|setentrycounter[]{page}"\glsnumberformat}{25}
@@ -157,28 +157,28 @@
 \glossaryentry{metadata?\glossentry{metadata}|setentrycounter[]{page}"\glsnumberformat}{25}
 \glossaryentry{dialog?\glossentry{dialog}|setentrycounter[]{page}"\glsnumberformat}{25}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{25}
-\glossaryentry{encrypt?\glossentry{encrypt}|setentrycounter[]{page}"\glsnumberformat}{25}
-\glossaryentry{metadata?\glossentry{metadata}|setentrycounter[]{page}"\glsnumberformat}{25}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{26}
 \glossaryentry{cache?\glossentry{cache}|setentrycounter[]{page}"\glsnumberformat}{26}
 \glossaryentry{cache?\glossentry{cache}|setentrycounter[]{page}"\glsnumberformat}{26}
+\glossaryentry{encrypt?\glossentry{encrypt}|setentrycounter[]{page}"\glsnumberformat}{26}
+\glossaryentry{metadata?\glossentry{metadata}|setentrycounter[]{page}"\glsnumberformat}{26}
 \glossaryentry{cache?\glossentry{cache}|setentrycounter[]{page}"\glsnumberformat}{26}
 \glossaryentry{mirror?\glossentry{mirror}|setentrycounter[]{page}"\glsnumberformat}{26}
 \glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}"\glsnumberformat}{26}
 \glossaryentry{cache?\glossentry{cache}|setentrycounter[]{page}"\glsnumberformat}{26}
 \glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{26}
-\glossaryentry{shell?\glossentry{shell}|setentrycounter[]{page}"\glsnumberformat}{26}
-\glossaryentry{metadata?\glossentry{metadata}|setentrycounter[]{page}"\glsnumberformat}{26}
-\glossaryentry{encrypt?\glossentry{encrypt}|setentrycounter[]{page}"\glsnumberformat}{26}
 \glossaryentry{cache?\glossentry{cache}|setentrycounter[]{page}"\glsnumberformat}{26}
 \glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}"\glsnumberformat}{26}
 \glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{26}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{27}
 \glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{27}
+\glossaryentry{shell?\glossentry{shell}|setentrycounter[]{page}"\glsnumberformat}{27}
+\glossaryentry{metadata?\glossentry{metadata}|setentrycounter[]{page}"\glsnumberformat}{27}
+\glossaryentry{encrypt?\glossentry{encrypt}|setentrycounter[]{page}"\glsnumberformat}{27}
 \glossaryentry{metadata?\glossentry{metadata}|setentrycounter[]{page}"\glsnumberformat}{27}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{28}
-\glossaryentry{RAID?\glossentry{raid}|setentrycounter[]{page}"\glsnumberformat}{28}
 \glossaryentry{amnesiac?\glossentry{amnesiac}|setentrycounter[]{page}"\glsnumberformat}{29}
+\glossaryentry{RAID?\glossentry{raid}|setentrycounter[]{page}"\glsnumberformat}{29}
 \glossaryentry{encrypt?\glossentry{encrypt}|setentrycounter[]{page}"\glsnumberformat}{29}
 \glossaryentry{encrypt?\glossentry{encrypt}|setentrycounter[]{page}"\glsnumberformat}{29}
 \glossaryentry{metadata?\glossentry{metadata}|setentrycounter[]{page}"\glsnumberformat}{29}
