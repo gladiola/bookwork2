@@ -35,7 +35,7 @@ bindingoffset=0.12in]{geometry}
 \linespread{0.98}
 
 \usepackage{seqsplit}
-
+\usepackage{makecell}
 %----------------------------------------------------------------------------------------
 %	Titles and Headings Code
 %----------------------------------------------------------------------------------------
@@ -242,7 +242,7 @@ The Chattanooga Police Department, like other departments of the City of Chattan
   \label{tab:chattanoogacrime3}
   \begin{tabular}{@{}p{0.05\linewidth} p{0.20\linewidth}p{0.15\linewidth}p{0.35\linewidth}p{0.05\linewidth}}
     \toprule
-    Year&Crimes Against Children&Extortion&\noindent{Threats, Stalking, Harassment, and Terrorism}&\\
+    \makecell[l]{Year}&\makecell[l]{Crimes Against Children}&\makecell[l]{Extortion}&\makecell[l]{Threats, Stalking,\\Harassment, and Terrorism}&\\
     \midrule
 2016&0&9&7&\endnote{original\url{https://www.ic3.gov/Media/PDF/AnnualReport/2016State/StateReport.aspx\#?s=47} current \url{https://www.ic3.gov/AnnualReport/Reports/2016_IC3Report.pdf}}\\
 2017&0&7&6&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2017State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2017_IC3Report.pdf}}\\
