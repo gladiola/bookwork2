@@ -181,7 +181,11 @@ Your introduction text goes here...
 We conducted a risk assessment to better understand the threat of criminal action against an in-house system.  We examined both cybercrimes and physical crimes using data that was normalized to a per-capita rates of crimes.  We drew from FBI \gls{icc} annual reports and Chattanooga Police open data records.  The population samples were taken from the US Census Bureau reports.\par}\end{center}
 \section{Introduction}
 \section{Methodology}
-\section{Results}
+We set out to better understand the rates of computer-related crimes in our area using public data sources.  We drew from FBI \gls{icc} annual reports and Chattanooga Police open data records.  The \gls{icc} reports provided categorical breakdowns of different types of internet-related crimes.  In the past, we were able to find per-state breakdowns of those crimes.  The FBI would provide four views of computer crime:  overall count, overall financial impact, victim count, and per-victim financial impact.  This was available both nationally and per state.  When following up in 2026, we noticed we were only able to immediately discover the national-level summaries of crime.
+
+Anecdotally, we know that we have witnessed several of these crimes at rates higher than shown in these tables.  We suspect that we're seeing numbers this low because few victims are taking the steps necessary to report computer crimes to federal authorities.  Nonetheless, those authorities have been the public's observable source of crime reporting.  While we continue to use this data, we may need to accept that true counts of cybercrime in the city must be scaled by an unknown factor.
+
+The Chattanooga Police Department, like other departments of the City of Chattanooga, participate in an open data project.  Anonymonized crime reports are provided to the public in a manner that lets us track by approximate region of the city and by category of crime.  We chose to do this because we recognized some crimes would be reported to local police that were not reported to federal authorities.  Some crimes, such as extortion, intimidation, or physical break-ins, were more likely to be handled by local police.  Since the systems involved are in-scope for physical damage, we felt the Chattanooga Police Department's open data would be the best public source for supporting criminal threat forecasts for events like burglary from a vehicle.  Some policed crimes may focus upon:  employees, facility safeguards, loss of computer equipment in public, loss of computer equipment by theft from facilities or vehicles, and so on.  
 
 
 \begin{table}
@@ -236,10 +240,17 @@ We conducted a risk assessment to better understand the threat of criminal actio
   \centering
   \caption{Cybercrime, City of Chattanooga, Threat to Personnel Via Network}
   \label{tab:chattanoogacrime3}
-  \begin{tabular}{@{}p{0.40\linewidth} p{0.60\linewidth}}
+  \begin{tabular}{@{}p{0.05\linewidth} p{0.20\linewidth}p{0.15\linewidth}p{0.35\linewidth}p{0.05\linewidth}}
     \toprule
-    Technique Group & Concept \\
+    Year&Crimes Against Children&Extortion&\noindent{Threats, Stalking, Harassment, and Terrorism}&\\
     \midrule
+2016&0&9&7&\endnote{original\url{https://www.ic3.gov/Media/PDF/AnnualReport/2016State/StateReport.aspx\#?s=47} current \url{https://www.ic3.gov/AnnualReport/Reports/2016_IC3Report.pdf}}\\
+2017&0&7&6&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2017State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2017_IC3Report.pdf}}\\
+2018&0&20&7&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2018State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2018_IC3Report.pdf}}\\
+2019&0&19&5&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2019State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2019_IC3Report.pdf}}\\
+2020&1&31&6&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2020State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2020_IC3Report.pdf}}\\
+2021&0&0&4&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2021State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2021_IC3Report.pdf}}\\
+2022&1&18&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2022State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2022_IC3Report.pdf}}\\
 
     \bottomrule \end{tabular} 
   \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year. Online access to the data has changed over the years.  The original per-state reports are no longer available from their previous URLs.  Aggregate, nation-level reports are still available.}
@@ -262,7 +273,7 @@ Text with\endnote{First note.} inline references.
 More text\endnote{Second note.}
 \printchapterendnotes
 
-
+\section{Results}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER
