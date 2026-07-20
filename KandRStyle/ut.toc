@@ -43,7 +43,7 @@
 \contentsline {subsubsection}{Incremental Advancement to \Gls {amnesiac} System}{21}{subsubsection*.34}%
 \contentsline {subsubsection}{Identifying and Allocating ZFS Drive Qualities}{21}{subsubsection*.35}%
 \contentsline {subsubsection}{What are we going to want the ZFS kit to do? How are we going to use the drives? How can we wrestle with this new type of \gls {configuration}?}{21}{subsubsection*.36}%
-\contentsline {subsubsection}{What We Can Learn From Installing an OS}{24}{subsubsection*.41}%
+\contentsline {subsubsection}{What We Can Learn From Installing an OS}{23}{subsubsection*.41}%
 \contentsline {subsubsection}{Basic \Gls {operating system} Installation Goals}{24}{subsubsection*.42}%
 \contentsline {subsubsection}{Main Steps for FreeBSD Installation from bsdinstall}{24}{subsubsection*.43}%
 \contentsline {subsubsection}{No Root Password}{25}{subsubsection*.44}%
@@ -57,7 +57,7 @@
 \contentsline {subsubsection}{Be Able to Use Commands to Build Out the Drives}{27}{subsubsection*.52}%
 \contentsline {subsubsection}{Goals for \Gls {amnesiac} Systems}{29}{subsubsection*.53}%
 \contentsline {subsubsection}{Configure for SWAP Disk, ZFS \Gls {cache}, ZFS SLOG \Gls {mirror}, and ZFS RAIDz2}{30}{subsubsection*.54}%
-\contentsline {subsubsection}{Startup with \texttt {bootonly.iso}}{30}{subsubsection*.59}%
+\contentsline {subsubsection}{Startup with \texttt {bootonly.iso}}{31}{subsubsection*.59}%
 \contentsline {subsubsection}{Mount the USB to Save the \Gls {metadata} Backup File}{31}{subsubsection*.60}%
 \contentsline {subsubsection}{Create Swap Disk in Bay 0}{31}{subsubsection*.61}%
 \contentsline {subsubsection}{Create ZFS Cache in Bay 1}{31}{subsubsection*.62}%
@@ -71,7 +71,7 @@
 \contentsline {subsubsection}{Commands to \Gls {encrypt} the Partitions}{33}{subsubsection*.70}%
 \contentsline {subsubsection}{To Preserve the \Gls {metadata} Backup Files}{34}{subsubsection*.71}%
 \contentsline {subsubsection}{File Name Check: Editing Labels}{35}{subsubsection*.72}%
-\contentsline {subsubsection}{To Use the Swap Disk}{35}{subsubsection*.73}%
+\contentsline {subsubsection}{To Use the Swap Disk}{36}{subsubsection*.73}%
 \contentsline {subsubsection}{Create the zpool for BLONDIE}{37}{subsubsection*.74}%
 \contentsline {subsubsection}{Create a mountpoint}{37}{subsubsection*.75}%
 \contentsline {section}{\numberline {2.4}Analysis}{37}{section.2.4}%
@@ -80,7 +80,7 @@
 \contentsline {section}{\numberline {2.5}Discussion}{37}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Chapter References}{37}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}Books}{37}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}MAN Pages}{37}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.2}MAN Pages}{38}{subsection.2.6.2}%
 \contentsline {subsection}{\numberline {2.6.3}Websites}{39}{subsection.2.6.3}%
 \contentsline {chapter}{Endnotes}{41}{chapter*.76}%
 \contentsline {chapter}{\numberline {3}Login Procedures for Disconnected Systems}{49}{chapter.3}%

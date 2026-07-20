@@ -9,7 +9,7 @@
 
   \indexspace
 
-  \item bsdinstall, \hyperpage{24}
+  \item bsdinstall, \hyperpage{23, 24}
 
   \indexspace
 
@@ -28,14 +28,15 @@
 
   \indexspace
 
-  \item encrypt, \hyperpage{29, 30}, \hyperpage{33}, \hyperpage{36}, 
-		\hyperpage{61}
+  \item encrypt, \hyperpage{29}, \hyperpage{31}, \hyperpage{33}, 
+		\hyperpage{36}, \hyperpage{61}
 
   \indexspace
 
   \item FreeBSD, \hyperpage{7}, \hyperpage{19}, \hyperpage{21}, 
 		\hyperpage{29}, \hyperpage{57}
-  \item FreeBSD Handbook, \hyperpage{26, 27}, \hyperpage{62}
+  \item FreeBSD Handbook, \hyperpage{26}, \hyperpage{28}, 
+		\hyperpage{62}
   \item FreeBSD Mastery:  ZFS, \hyperpage{21}
 
   \indexspace
@@ -46,7 +47,7 @@
     \subitem attach, \hyperpage{33, 34}, \hyperpage{36}
     \subitem init, \hyperpage{33, 34}, \hyperpage{36}
     \subitem status, \hyperpage{35}
-  \item gpart, \hyperpage{21}, \hyperpage{24}, \hyperpage{27}, 
+  \item gpart, \hyperpage{21}, \hyperpage{23}, \hyperpage{27}, 
 		\hyperpage{30}
     \subitem add, \hyperpage{26}, \hyperpage{28}, \hyperpage{31, 32}, 
 		\hyperpage{36}
@@ -79,7 +80,7 @@
   \item mac
     \subitem biba, \hyperpage{18}
   \item mkdir, \hyperpage{26, 27}, \hyperpage{31}
-  \item mount, \hyperpage{26, 27}, \hyperpage{31}
+  \item mount, \hyperpage{27}, \hyperpage{31}
 
   \indexspace
 
@@ -99,12 +100,12 @@
 
   \indexspace
 
-  \item ssh-keygen, \hyperpage{25}, \hyperpage{27}
+  \item ssh-keygen, \hyperpage{26, 27}
   \item su, \hyperpage{25}
   \item sudo, \hyperpage{25}
-  \item swapinfo, \hyperpage{35--37}
-  \item swapoff, \hyperpage{36}
-  \item swapon, \hyperpage{28}, \hyperpage{35--37}
+  \item swapinfo, \hyperpage{36, 37}
+  \item swapoff, \hyperpage{37}
+  \item swapon, \hyperpage{28}, \hyperpage{36, 37}
 
   \indexspace
 
