@@ -179,6 +179,52 @@ Your introduction text goes here...
 
 \mainmatter
 
+
+%Chapter 1: Introduction
+%Background and Content
+%Problem Statement
+%Project Objectives
+%Scope of Work
+%Variables
+%Assumptions, Risks, and Limitations
+%Significance of the Project
+
+%Chapter 2: Literature Review
+%Overview of Existing Solutions or Approaches
+%Comparisons of Technologies or Frameworks
+%Gaps in the Literature
+
+%Chapter 3: Methodology
+%Technical Research Questions
+%System Architecture / Design
+%Implementation Plan
+%Testing and Evaluation Strategy
+%Data Procurement and Logging
+%Ethical and Legal Considerations
+%Limitations
+%Changes To Initial Project Goals
+
+%Chapter 4: Analysis
+%Data Sources
+%Risk Registry
+%Protocols and Standard in the Field
+%Mobile Geotagging
+%RED Application
+%Accessing RED
+%Data Governance
+%Data Visualization
+
+%Chapter 5: Findings
+%Impact on Industry
+%Use of Sequential Numbers
+%Changes in Governance
+%Legislative Impact
+%Reduce Legacy Impact
+%Use Cases for Adoption of RED
+%Future of the RED Project
+%Enhance RED Data 
+
+
 %----------------------------------------------------------------------------------------
 %	CHAPTER
 %----------------------------------------------------------------------------------------
@@ -186,14 +232,28 @@ Your introduction text goes here...
 \begin{center}\vspace{-0.5\baselineskip}\parbox{0.85\textwidth}{\small\itshape
 We conducted a risk assessment to better understand the threat of criminal action against an in-house system.  We examined both cybercrimes and physical crimes using data that was normalized to a per-capita rates of crimes.  We drew from FBI \gls{icc} annual reports and Chattanooga Police open data records.  The population samples were taken from the US Census Bureau reports.\par}\end{center}
 \section{Introduction}
-\section{Methodology}
+\subsubsection{Background and Content}
+
+\subsubsection{Problem Statement}
+\subsubsection{Project Objectives}
+\subsubsection{Scope of Work}
+\subsubsection{Variables}
+\subsubsection{Assumptions, Risks, and Limitations}
 We set out to better understand the rates of computer-related crimes in our area using public data sources.  We drew from FBI \gls{icc} annual reports and Chattanooga Police open data records.  The \gls{icc} reports provided categorical breakdowns of different types of internet-related crimes.  In the past, we were able to find per-state breakdowns of those crimes.  The FBI would provide four views of computer crime:  overall count, overall financial impact, victim count, and per-victim financial impact.  This was available both nationally and per state.  When following up in 2026, we noticed we were only able to immediately discover the national-level summaries of crime.
 
-Anecdotally, we know that we have witnessed several of these crimes at rates higher than shown in these tables.  We suspect that we're seeing numbers this low because few victims are taking the steps necessary to report computer crimes to federal authorities.  Nonetheless, those authorities have been the public's observable source of crime reporting.  While we continue to use this data, we may need to accept that true counts of cybercrime in the city must be scaled by an unknown factor.
+Anecdotally, we know that we have witnessed several of these crimes at rates higher than shown in these tables (Tables \ref{tab:chattanoogacrime2}, \ref{tab:chattanoogacrime3}, \ref{tab:chattanoogacrime4}).  We suspect that we're seeing numbers this low because few victims are taking the steps necessary to report computer crimes to federal authorities.  For example, when companies or individuals encounter ransomware, their reactions may involve repairing the afffected endpoint but not informing law enforcement.  Nonetheless, those authorities have been the public's observable source of crime reporting.  While we continue to use this data, we may need to accept that true counts of cybercrime in the city must be scaled by an unknown factor.
 
 The Chattanooga Police Department, like other departments of the City of Chattanooga, participate in an open data project.  Anonymonized crime reports are provided to the public in a manner that lets us track by approximate region of the city and by category of crime.  We chose to do this because we recognized some crimes would be reported to local police that were not reported to federal authorities.  Some crimes, such as extortion, intimidation, or physical break-ins, were more likely to be handled by local police.  Since the systems involved are in-scope for physical damage, we felt the Chattanooga Police Department's open data would be the best public source for supporting criminal threat forecasts for events like burglary from a vehicle.  Some policed crimes may focus upon:  employees, facility safeguards, loss of computer equipment in public, loss of computer equipment by theft from facilities or vehicles, and so on.  
 
+As we examine the data from the public data sources and we feel that the reported rates are less than our experience would justify, we have to recognize that there may be shortcomings in the reported data.  Perhaps we would do well to scale the rates up to meet our experience.  However, those arbitrary inflations would damage the validity of our academic risk calculations.  So, for the time being, we leave the inflation or deflation of the end results for the reader as a localized adjustment.  Since our main goal is to show a method for determining the risks through the reported data, it could be argued that the exact numbers are less relevant than the demonstrated methods.
+\subsubsection{Significance of the Project}
 
+\section{Literature Review}
+\subsubsection{Overview of Existing Solutions or Approaches}
+\subsubsection{Comparisons of Technologies or Frameworks}
+\subsubsection{Gaps in the Literature}
+
+\section{Methodology}
 \begin{table}
   \centering
   \caption{Changes to City of Chattanooga's Population}
@@ -291,10 +351,10 @@ The Chattanooga Police Department, like other departments of the City of Chattan
   \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year. Online access to the data has changed over the years.  The original per-state reports are no longer available from their previous URLs.  Aggregate, nation-level reports are still available.}
 \end{table}
 %----------------------------------------------------------------------------------------
-
+\section{Results}
 \printchapterendnotes
 
-\section{Results}
+
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER

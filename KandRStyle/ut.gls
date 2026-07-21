@@ -7,7 +7,7 @@
 		\setentrycounter[]{page}\glsnumberformat{42\delimR 48}}}\glsgroupskip
 \glsgroupheading{B}\relax \glsresetentrylist %
 \glossentry{bec}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{3}}}%
+		\setentrycounter[]{page}\glsnumberformat{4}}}%
 \glossentry{bsd}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{21}}}\glsgroupskip
 \glsgroupheading{C}\relax \glsresetentrylist %
@@ -59,7 +59,7 @@
 		\setentrycounter[]{page}\glsnumberformat{7}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{29}}}%
 \glossentry{ipr}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{3}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{4}}}\glsgroupskip
 \glsgroupheading{J}\relax \glsresetentrylist %
 \glossentry{jail}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{19\delimN 20}}}\glsgroupskip
