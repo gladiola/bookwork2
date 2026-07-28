@@ -235,9 +235,27 @@ Your introduction text goes here...
 %	CHAPTER
 %----------------------------------------------------------------------------------------
 \chapter{Understanding Risks to Physical Systems }
+
+
 \begin{center}\vspace{-0.5\baselineskip}\parbox{0.85\textwidth}{\small\itshape
 We conducted a risk assessment to better understand the threat of criminal action against an in-house system.  We examined both cybercrimes and physical crimes using data that was normalized to a per-capita rates of crimes.  We drew from FBI \gls{icc} annual reports and Chattanooga Police open data records.  The population samples were taken from the US Census Bureau reports.\par}\end{center}
 \section{Introduction}
+\begin{figure}[h]
+  \centering
+  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-07-28 145652.png}}}
+  \caption{Example run of a Monte Carlo simulation using state-level data to set bounds.  Here we chose Personal Data Breach victim counts from 2016 and 2022 as upper and lower bounds. 10,000 rows projected randomized values between these bounds and determined mean and counts by confidence interval.
+  \endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
+  }
+  \label{fig:screenshot-montecarlo1}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-07-28 145609.png}}}
+  \caption{Example results of applying Monte Carlo simulation to advising decision making.  Here we see the assertion that there is a 90\% likelihood that the number of victims will be between 457 and 879; the mean of the simulation was 667.\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}}
+  \label{fig:screenshot-montecarlo1}
+\end{figure}
+
 \subsubsection{Background and Content}
 
 \subsubsection{Problem Statement}
@@ -446,7 +464,102 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}. The entries $a_{j,i}$ are the raw counts taken from the \gls{icc} state-level reports for the chosen source state.  Dividing each entry by $P_j$ converts it to a per-capita rate; multiplying by $N_t$ then scales that rate to match the population of the target city.  The population values in $P$ provide the year-by-year context for $N_t$ and confirm the representativeness of the scaling.  Summing the selected column $i$ of the per-capita-adjusted $M$ across all years yields the final result $R$.
 
 
+\begin{table}[h!]
+  \centering
+  \caption{Changes to City of Chattanooga's Population}
+  \label{tab:chattanoogacrime1}
+  \begin{tabular}{@{}>{\centering\arraybackslash}p{0.15\linewidth} >{\centering\arraybackslash}p{0.35\linewidth}>{\centering\arraybackslash}p{0.35\linewidth}>{\centering\arraybackslash}p{0.05\linewidth}}
+    \toprule
+    Year & City of Chattanooga Population &Change Since Previous Year &\\
+    \midrule
+2016&177,746&Baseline&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
+2017&179,530&1,784&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
+2018&181,918&2,388&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
+2019&182,799&881&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
+2020&181,560&-1,239&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
+2021&181,163&-397&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
+2022&184,086&2,923&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
+  
+    \bottomrule \end{tabular} 
+\raggedright{City population based on the US Census reported population for the City of Chattanooga itself.  Surrounding satellite cities and unincorporated areas within the Hamilton County, Tennessee, were not included.}
+\end{table}
 
+\begin{table}[h!]
+  \centering
+  \caption{Cybercrime, City of Chattanooga, Threats to System Intrusion}
+  \label{tab:chattanoogacrime2}
+  \begin{tabular}{@{}>{\centering\arraybackslash}p{0.05\linewidth} >{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.05\linewidth}}
+    \toprule
+    Year
+    &Data Breach
+    &Personal Data Breach
+    &Malware
+    &Phishing
+    &Ransomware
+    &\\
+    \midrule
+        
+
+2016&1&11&1&7&1&\endnote{original\url{https://www.ic3.gov/Media/PDF/AnnualReport/2016State/StateReport.aspx\#?s=47} current \url{https://www.ic3.gov/AnnualReport/Reports/2016_IC3Report.pdf}}\\
+2017&1&1&1&9&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2017State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2017_IC3Report.pdf}}\\
+2018&0&18&0&8&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2018State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2018_IC3Report.pdf}}\\
+2019&0&13&1&8&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2019State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2019_IC3Report.pdf}}\\
+2020&0&18&0&9&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2020State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2020_IC3Report.pdf}}\\
+2021&0&19&0&11&1&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2021State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2021_IC3Report.pdf}}\\
+2022&1&23&0&7&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2022State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2022_IC3Report.pdf}}\\
+
+    \bottomrule \end{tabular} 
+  \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year.}
+\end{table}
+
+\begin{table}[h!]
+  \centering
+  \caption{Cybercrime, City of Chattanooga, Threat to Personnel Via Network}
+  \label{tab:chattanoogacrime3}
+  \begin{tabular}{@{}>{\centering\arraybackslash}p{0.05\linewidth} >{\centering\arraybackslash}p{0.25\linewidth}>{\centering\arraybackslash}p{0.25\linewidth}>{\centering\arraybackslash}p{0.25\linewidth}>{\centering\arraybackslash}p{0.05\linewidth}}
+    \toprule
+\thead{Year} &
+\thead{Crimes Against\\Children} &
+\thead{Extortion} &
+\thead{Threats, Stalking,\\Harassment, and Terrorism} \\
+\midrule
+2016&0&9&7&\endnote{original\url{https://www.ic3.gov/Media/PDF/AnnualReport/2016State/StateReport.aspx\#?s=47} current \url{https://www.ic3.gov/AnnualReport/Reports/2016_IC3Report.pdf}}\\
+2017&0&7&6&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2017State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2017_IC3Report.pdf}}\\
+2018&0&20&7&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2018State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2018_IC3Report.pdf}}\\
+2019&0&19&5&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2019State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2019_IC3Report.pdf}}\\
+2020&1&31&6&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2020State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2020_IC3Report.pdf}}\\
+2021&0&0&4&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2021State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2021_IC3Report.pdf}}\\
+2022&1&18&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2022State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2022_IC3Report.pdf}}\\
+
+    \bottomrule \end{tabular} 
+  \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year.  Threats, stalking, and harrassment counts were combined with terrorism because the mechanisms were similar.}
+\end{table}
+
+\begin{table}[h!]
+  \centering
+  \caption{Cybercrime, City of Chattanooga, Theft of Data Via Network}
+  \label{tab:chattanoogacrime4}
+  \begin{tabular}{@{}
+  >{\centering\arraybackslash}p{0.05\linewidth} 
+  >{\centering\arraybackslash}p{0.25\linewidth} 
+  >{\centering\arraybackslash}p{0.25\linewidth}
+  >{\centering\arraybackslash}p{0.25\linewidth}
+  >{\centering\arraybackslash}p{0.05\linewidth} }
+    \toprule
+  Year&\gls{ipr} and Counterfeit&Identify Theft&\gls{bec}&\\
+
+    \midrule
+2016&1&7&4&\endnote{original\url{https://www.ic3.gov/Media/PDF/AnnualReport/2016State/StateReport.aspx\#?s=47} current \url{https://www.ic3.gov/AnnualReport/Reports/2016_IC3Report.pdf}}\\
+2017&1&8&4&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2017State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2017_IC3Report.pdf}}\\
+2018&0&10&7&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2018State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2018_IC3Report.pdf}}\\
+2019&1&7&8&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2019State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2019_IC3Report.pdf}}\\
+2020&1&10&6&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2020State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2020_IC3Report.pdf}}\\
+2021&1&13&8&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2021State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2021_IC3Report.pdf}}\\
+2022&0&14&10&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2022State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2022_IC3Report.pdf}}\\
+
+        \bottomrule \end{tabular} 
+  \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year.}
+\end{table}
 
 
 \section{Analysis}
@@ -552,102 +665,7 @@ Y_i \sim \operatorname{Poisson}\!\left(\bar{r}_i \cdot E_i\right)
   \label{fig:analysis-forecasteval}
 \end{figure}
 
-\begin{table}[h!]
-  \centering
-  \caption{Changes to City of Chattanooga's Population}
-  \label{tab:chattanoogacrime1}
-  \begin{tabular}{@{}>{\centering\arraybackslash}p{0.15\linewidth} >{\centering\arraybackslash}p{0.35\linewidth}>{\centering\arraybackslash}p{0.35\linewidth}>{\centering\arraybackslash}p{0.05\linewidth}}
-    \toprule
-    Year & City of Chattanooga Population &Change Since Previous Year &\\
-    \midrule
-2016&177,746&Baseline&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
-2017&179,530&1,784&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
-2018&181,918&2,388&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
-2019&182,799&881&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
-2020&181,560&-1,239&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
-2021&181,163&-397&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
-2022&184,086&2,923&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
-  
-    \bottomrule \end{tabular} 
-\raggedright{City population based on the US Census reported population for the City of Chattanooga itself.  Surrounding satellite cities and unincorporated areas within the Hamilton County, Tennessee, were not included.}
-\end{table}
 
-\begin{table}[h!]
-  \centering
-  \caption{Cybercrime, City of Chattanooga, Threats to System Intrusion}
-  \label{tab:chattanoogacrime2}
-  \begin{tabular}{@{}>{\centering\arraybackslash}p{0.05\linewidth} >{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.05\linewidth}}
-    \toprule
-    Year
-    &Data Breach
-    &Personal Data Breach
-    &Malware
-    &Phishing
-    &Ransomware
-    &\\
-    \midrule
-        
-
-2016&1&11&1&7&1&\endnote{original\url{https://www.ic3.gov/Media/PDF/AnnualReport/2016State/StateReport.aspx\#?s=47} current \url{https://www.ic3.gov/AnnualReport/Reports/2016_IC3Report.pdf}}\\
-2017&1&1&1&9&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2017State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2017_IC3Report.pdf}}\\
-2018&0&18&0&8&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2018State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2018_IC3Report.pdf}}\\
-2019&0&13&1&8&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2019State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2019_IC3Report.pdf}}\\
-2020&0&18&0&9&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2020State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2020_IC3Report.pdf}}\\
-2021&0&19&0&11&1&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2021State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2021_IC3Report.pdf}}\\
-2022&1&23&0&7&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2022State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2022_IC3Report.pdf}}\\
-
-    \bottomrule \end{tabular} 
-  \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year.}
-\end{table}
-
-\begin{table}[h!]
-  \centering
-  \caption{Cybercrime, City of Chattanooga, Threat to Personnel Via Network}
-  \label{tab:chattanoogacrime3}
-  \begin{tabular}{@{}>{\centering\arraybackslash}p{0.05\linewidth} >{\centering\arraybackslash}p{0.25\linewidth}>{\centering\arraybackslash}p{0.25\linewidth}>{\centering\arraybackslash}p{0.25\linewidth}>{\centering\arraybackslash}p{0.05\linewidth}}
-    \toprule
-\thead{Year} &
-\thead{Crimes Against\\Children} &
-\thead{Extortion} &
-\thead{Threats, Stalking,\\Harassment, and Terrorism} \\
-\midrule
-2016&0&9&7&\endnote{original\url{https://www.ic3.gov/Media/PDF/AnnualReport/2016State/StateReport.aspx\#?s=47} current \url{https://www.ic3.gov/AnnualReport/Reports/2016_IC3Report.pdf}}\\
-2017&0&7&6&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2017State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2017_IC3Report.pdf}}\\
-2018&0&20&7&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2018State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2018_IC3Report.pdf}}\\
-2019&0&19&5&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2019State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2019_IC3Report.pdf}}\\
-2020&1&31&6&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2020State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2020_IC3Report.pdf}}\\
-2021&0&0&4&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2021State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2021_IC3Report.pdf}}\\
-2022&1&18&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2022State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2022_IC3Report.pdf}}\\
-
-    \bottomrule \end{tabular} 
-  \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year.  Threats, stalking, and harrassment counts were combined with terrorism because the mechanisms were similar.}
-\end{table}
-
-\begin{table}[h!]
-  \centering
-  \caption{Cybercrime, City of Chattanooga, Theft of Data Via Network}
-  \label{tab:chattanoogacrime4}
-  \begin{tabular}{@{}
-  >{\centering\arraybackslash}p{0.05\linewidth} 
-  >{\centering\arraybackslash}p{0.25\linewidth} 
-  >{\centering\arraybackslash}p{0.25\linewidth}
-  >{\centering\arraybackslash}p{0.25\linewidth}
-  >{\centering\arraybackslash}p{0.05\linewidth} }
-    \toprule
-  Year&\gls{ipr} and Counterfeit&Identify Theft&\gls{bec}&\\
-
-    \midrule
-2016&1&7&4&\endnote{original\url{https://www.ic3.gov/Media/PDF/AnnualReport/2016State/StateReport.aspx\#?s=47} current \url{https://www.ic3.gov/AnnualReport/Reports/2016_IC3Report.pdf}}\\
-2017&1&8&4&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2017State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2017_IC3Report.pdf}}\\
-2018&0&10&7&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2018State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2018_IC3Report.pdf}}\\
-2019&1&7&8&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2019State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2019_IC3Report.pdf}}\\
-2020&1&10&6&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2020State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2020_IC3Report.pdf}}\\
-2021&1&13&8&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2021State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2021_IC3Report.pdf}}\\
-2022&0&14&10&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2022State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2022_IC3Report.pdf}}\\
-
-        \bottomrule \end{tabular} 
-  \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year.}
-\end{table}
 %----------------------------------------------------------------------------------------
 \section{Discussion}
 \printchapterendnotes
