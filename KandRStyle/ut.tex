@@ -79,7 +79,7 @@ bindingoffset=0.12in]{geometry}
 %--------- Figures ----------------
 \usepackage{rotating}
 \usepackage{graphicx}
-
+\usepackage[section]{placeins}
 %--------- Math ----------------
 \usepackage{amsmath}
 
@@ -225,6 +225,11 @@ Your introduction text goes here...
 %Future of the RED Project
 %Enhance RED Data 
 
+%\begin{figure}[h!]
+%  \centering
+%  \caption{}
+%  \label{fig:}
+%\end{figure}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER
@@ -477,44 +482,73 @@ This would allow us to feed per-state or national data into the forumla and bett
 
 
 
-
-
 \section{Analysis}
 
 % Empirical rate per year
+\begin{figure}[h!]
+  \centering
+
 \[
 r_{j,i} = \frac{Y_{j,i}}{P_j}
 \]
+  \caption{Empirical rate per year}
+  \label{fig:analysis-empiricalrate}
+\end{figure}
 
 % Aggregated count and exposure over historical window
+\begin{figure}[h!]
+  \centering
 \[
 Y_i = \sum_{j=t}^{t+6} Y_{j,i}
 \qquad
 E_i = \sum_{j=t}^{t+6} P_j
 \]
+  \caption{Aggregated count and exposure over historical window}
+  \label{fig:analysis-aggcountwindow}
+\end{figure}
 
 % Directly standardized (weighted mean) rate
+\begin{figure}[h!]
+  \centering
 \[
 \bar{r}_i = \frac{Y_i}{E_i} = \frac{\displaystyle\sum_{j=t}^{t+6} Y_{j,i}}{\displaystyle\sum_{j=t}^{t+6} P_j}
 \]
+  \caption{Directly standardized (weighted mean) rate}
+  \label{fig:analysis-weightedmeanrate}
+\end{figure}
 
 % Poisson model for the aggregated count
+\begin{figure}[h!]
+  \centering
 \[
 Y_i \sim \operatorname{Poisson}\!\left(\bar{r}_i \cdot E_i\right)
 \]
+  \caption{Poisson model for the aggregated count}
+  \label{fig:analysis-poissonaggcount}
+\end{figure}
 
 % Approximate 95\% confidence interval for the rate
+\begin{figure}[h!]
+  \centering
 \[
 \bar{r}_i \pm 1.96 \sqrt{\frac{\bar{r}_i}{E_i}}
 \]
+  \caption{Approximate 95\% confidence interval for the rate}
+  \label{fig:analysis-95confidencerate}
+\end{figure}
 
 % Forecast evaluation: is the forecast within the control band?
+\begin{figure}[h!]
+  \centering
 \[
 \hat{R}_i \in \left[
   \bar{r}_i - 1.96\sqrt{\frac{\bar{r}_i}{E_i}},\;
   \bar{r}_i + 1.96\sqrt{\frac{\bar{r}_i}{E_i}}
 \right]
 \]
+  \caption{Forecast evaluation: is the forecast within the control band?}
+  \label{fig:analysis-forecasteval}
+\end{figure}
 
 \begin{table}[h!]
   \centering
@@ -536,7 +570,7 @@ Y_i \sim \operatorname{Poisson}\!\left(\bar{r}_i \cdot E_i\right)
 \raggedright{City population based on the US Census reported population for the City of Chattanooga itself.  Surrounding satellite cities and unincorporated areas within the Hamilton County, Tennessee, were not included.}
 \end{table}
 
-\begin{table}
+\begin{table}[h!]
   \centering
   \caption{Cybercrime, City of Chattanooga, Threats to System Intrusion}
   \label{tab:chattanoogacrime2}
@@ -564,7 +598,7 @@ Y_i \sim \operatorname{Poisson}\!\left(\bar{r}_i \cdot E_i\right)
   \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year. Online access to the data has changed over the years.  The original per-state reports are no longer available from their previous URLs.  Aggregate, nation-level reports are still available.}
 \end{table}
 
-\begin{table}
+\begin{table}[h!]
   \centering
   \caption{Cybercrime, City of Chattanooga, Threat to Personnel Via Network}
   \label{tab:chattanoogacrime3}
@@ -587,7 +621,7 @@ Y_i \sim \operatorname{Poisson}\!\left(\bar{r}_i \cdot E_i\right)
   \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year. Online access to the data has changed over the years.  The original per-state reports are no longer available from their previous URLs.  Aggregate, nation-level reports are still available.}
 \end{table}
 
-\begin{table}
+\begin{table}[h!]
   \centering
   \caption{Cybercrime, City of Chattanooga, Theft of Data Via Network}
   \label{tab:chattanoogacrime4}
