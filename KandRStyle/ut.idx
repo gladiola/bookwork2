@@ -1,217 +1,217 @@
 \indexentry{coding|hyperpage}{1}
-\indexentry{configuration|hyperpage}{9}
-\indexentry{FreeBSD|hyperpage}{9}
-\indexentry{operating system|hyperpage}{9}
-\indexentry{amnesiac|hyperpage}{9}
-\indexentry{operating system|hyperpage}{9}
-\indexentry{configuration|hyperpage}{9}
-\indexentry{coding|hyperpage}{9}
-\indexentry{operating system|hyperpage}{9}
-\indexentry{live CD|hyperpage}{9}
-\indexentry{operating system|hyperpage}{9}
-\indexentry{amensiac|hyperpage}{9}
-\indexentry{operating system|hyperpage}{9}
-\indexentry{operating system|hyperpage}{9}
-\indexentry{GDPR!Right to be Forgotten|hyperpage}{18}
-\indexentry{immutability!hard|hyperpage}{18}
-\indexentry{immutability!soft|hyperpage}{18}
-\indexentry{immutability!operational|hyperpage}{18}
-\indexentry{GDPR!Right to be Forgotten|hyperpage}{19}
-\indexentry{mac!biba|hyperpage}{20}
-\indexentry{NIST 800-88!Purge|hyperpage}{21}
-\indexentry{dd|hyperpage}{21}
-\indexentry{FreeBSD|hyperpage}{21}
-\indexentry{LTO III tape|hyperpage}{21}
-\indexentry{RAIDZ-2|hyperpage}{21}
-\indexentry{geli|hyperpage}{22}
-\indexentry{RAIDZ-2|hyperpage}{22}
-\indexentry{FreeBSD|hyperpage}{23}
-\indexentry{coding|hyperpage}{23}
-\indexentry{operating system|hyperpage}{23}
-\indexentry{gpart|hyperpage}{23}
-\indexentry{FreeBSD Mastery:  ZFS|hyperpage}{23}
-\indexentry{RAIDZ-2|hyperpage}{23}
-\indexentry{zpool!comment|hyperpage}{24}
-\indexentry{amensiac|hyperpage}{25}
-\indexentry{amensiac|hyperpage}{25}
+\indexentry{configuration|hyperpage}{13}
+\indexentry{FreeBSD|hyperpage}{13}
+\indexentry{operating system|hyperpage}{13}
+\indexentry{amnesiac|hyperpage}{13}
+\indexentry{operating system|hyperpage}{13}
+\indexentry{configuration|hyperpage}{13}
+\indexentry{coding|hyperpage}{13}
+\indexentry{operating system|hyperpage}{13}
+\indexentry{live CD|hyperpage}{13}
+\indexentry{operating system|hyperpage}{13}
+\indexentry{amensiac|hyperpage}{13}
+\indexentry{operating system|hyperpage}{13}
+\indexentry{operating system|hyperpage}{13}
+\indexentry{GDPR!Right to be Forgotten|hyperpage}{22}
+\indexentry{immutability!hard|hyperpage}{22}
+\indexentry{immutability!soft|hyperpage}{22}
+\indexentry{immutability!operational|hyperpage}{22}
+\indexentry{GDPR!Right to be Forgotten|hyperpage}{23}
+\indexentry{mac!biba|hyperpage}{24}
+\indexentry{NIST 800-88!Purge|hyperpage}{25}
+\indexentry{dd|hyperpage}{25}
+\indexentry{FreeBSD|hyperpage}{25}
+\indexentry{LTO III tape|hyperpage}{25}
 \indexentry{RAIDZ-2|hyperpage}{25}
-\indexentry{gpart|hyperpage}{25}
-\indexentry{bsdinstall|hyperpage}{25}
-\indexentry{bsdinstall|hyperpage}{26}
-\indexentry{operating system|hyperpage}{26}
-\indexentry{operating system|hyperpage}{26}
-\indexentry{bsdinstall|hyperpage}{26}
-\indexentry{bsdinstall|hyperpage}{26}
-\indexentry{USB!drive|hyperpage}{27}
-\indexentry{2FA|hyperpage}{27}
-\indexentry{TOTP|hyperpage}{27}
-\indexentry{jails|hyperpage}{27}
-\indexentry{jails|hyperpage}{27}
-\indexentry{su|hyperpage}{27}
-\indexentry{sudo|hyperpage}{27}
-\indexentry{ssh-keygen|hyperpage}{28}
-\indexentry{FreeBSD Handbook|hyperpage}{28}
-\indexentry{camcontrol!devlist|hyperpage}{28}
-\indexentry{gpart!create|hyperpage}{28}
-\indexentry{gpart!add|hyperpage}{28}
-\indexentry{newfs|hyperpage}{28}
-\indexentry{mkdir|hyperpage}{28}
-\indexentry{mount|hyperpage}{29}
-\indexentry{cd|hyperpage}{29}
-\indexentry{umount|hyperpage}{29}
-\indexentry{rm|hyperpage}{29}
-\indexentry{mkdir|hyperpage}{29}
-\indexentry{mount|hyperpage}{29}
-\indexentry{ls|hyperpage}{29}
-\indexentry{mkdir|hyperpage}{29}
-\indexentry{ssh-keygen|hyperpage}{29}
-\indexentry{dialog|hyperpage}{29}
-\indexentry{gpart|hyperpage}{29}
+\indexentry{geli|hyperpage}{26}
+\indexentry{RAIDZ-2|hyperpage}{26}
+\indexentry{FreeBSD|hyperpage}{27}
+\indexentry{coding|hyperpage}{27}
+\indexentry{operating system|hyperpage}{27}
+\indexentry{gpart|hyperpage}{27}
+\indexentry{FreeBSD Mastery:  ZFS|hyperpage}{27}
+\indexentry{RAIDZ-2|hyperpage}{27}
+\indexentry{zpool!comment|hyperpage}{28}
+\indexentry{amensiac|hyperpage}{29}
+\indexentry{amensiac|hyperpage}{29}
 \indexentry{RAIDZ-2|hyperpage}{29}
-\indexentry{FreeBSD Handbook|hyperpage}{30}
-\indexentry{swapon|hyperpage}{30}
-\indexentry{gpart!create|hyperpage}{30}
-\indexentry{gpart!create|hyperpage}{30}
-\indexentry{gpart!add|hyperpage}{30}
-\indexentry{gpart!add|hyperpage}{30}
-\indexentry{gpart!add|hyperpage}{30}
-\indexentry{gpart!add|hyperpage}{30}
-\indexentry{gpart!add|hyperpage}{30}
-\indexentry{gpart!add|hyperpage}{30}
-\indexentry{zpool!create|hyperpage}{30}
-\indexentry{zpool!create|hyperpage}{30}
-\indexentry{RAIDZ-2|hyperpage}{30}
-\indexentry{zpool!add|hyperpage}{31}
-\indexentry{operating system|hyperpage}{31}
-\indexentry{encrypt|hyperpage}{31}
-\indexentry{operating system|hyperpage}{31}
-\indexentry{FreeBSD|hyperpage}{31}
-\indexentry{operating system|hyperpage}{31}
-\indexentry{encrypt|hyperpage}{31}
-\indexentry{dialog|hyperpage}{31}
-\indexentry{encrypt|hyperpage}{31}
-\indexentry{cache|hyperpage}{32}
-\indexentry{cache|hyperpage}{32}
-\indexentry{cache|hyperpage}{32}
-\indexentry{cache|hyperpage}{32}
-\indexentry{gpart|hyperpage}{32}
-\indexentry{gpart|hyperpage}{32}
-\indexentry{gpart|hyperpage}{32}
-\indexentry{cache|hyperpage}{32}
-\indexentry{encrypt|hyperpage}{33}
+\indexentry{gpart|hyperpage}{29}
+\indexentry{bsdinstall|hyperpage}{29}
+\indexentry{bsdinstall|hyperpage}{30}
+\indexentry{operating system|hyperpage}{30}
+\indexentry{operating system|hyperpage}{30}
+\indexentry{bsdinstall|hyperpage}{30}
+\indexentry{bsdinstall|hyperpage}{30}
+\indexentry{USB!drive|hyperpage}{31}
+\indexentry{2FA|hyperpage}{31}
+\indexentry{TOTP|hyperpage}{31}
+\indexentry{jails|hyperpage}{31}
+\indexentry{jails|hyperpage}{31}
+\indexentry{su|hyperpage}{31}
+\indexentry{sudo|hyperpage}{31}
+\indexentry{ssh-keygen|hyperpage}{32}
+\indexentry{FreeBSD Handbook|hyperpage}{32}
+\indexentry{camcontrol!devlist|hyperpage}{32}
+\indexentry{gpart!create|hyperpage}{32}
+\indexentry{gpart!add|hyperpage}{32}
+\indexentry{newfs|hyperpage}{32}
+\indexentry{mkdir|hyperpage}{32}
+\indexentry{mount|hyperpage}{33}
+\indexentry{cd|hyperpage}{33}
+\indexentry{umount|hyperpage}{33}
+\indexentry{rm|hyperpage}{33}
 \indexentry{mkdir|hyperpage}{33}
 \indexentry{mount|hyperpage}{33}
-\indexentry{gpart!create|hyperpage}{33}
-\indexentry{gpart!add|hyperpage}{33}
-\indexentry{gpart!create|hyperpage}{33}
-\indexentry{gpart!add|hyperpage}{33}
-\indexentry{gpart!create|hyperpage}{33}
-\indexentry{gpart!add|hyperpage}{33}
-\indexentry{gpart!create|hyperpage}{33}
-\indexentry{gpart!add|hyperpage}{34}
+\indexentry{ls|hyperpage}{33}
+\indexentry{mkdir|hyperpage}{33}
+\indexentry{ssh-keygen|hyperpage}{33}
+\indexentry{dialog|hyperpage}{33}
+\indexentry{gpart|hyperpage}{33}
+\indexentry{RAIDZ-2|hyperpage}{33}
+\indexentry{FreeBSD Handbook|hyperpage}{34}
+\indexentry{swapon|hyperpage}{34}
+\indexentry{gpart!create|hyperpage}{34}
 \indexentry{gpart!create|hyperpage}{34}
 \indexentry{gpart!add|hyperpage}{34}
 \indexentry{gpart!add|hyperpage}{34}
-\indexentry{gpart!create|hyperpage}{34}
 \indexentry{gpart!add|hyperpage}{34}
 \indexentry{gpart!add|hyperpage}{34}
-\indexentry{gpart!create|hyperpage}{34}
 \indexentry{gpart!add|hyperpage}{34}
 \indexentry{gpart!add|hyperpage}{34}
-\indexentry{gpart!create|hyperpage}{34}
-\indexentry{gpart!add|hyperpage}{34}
-\indexentry{gpart!add|hyperpage}{34}
+\indexentry{zpool!create|hyperpage}{34}
+\indexentry{zpool!create|hyperpage}{34}
+\indexentry{RAIDZ-2|hyperpage}{34}
+\indexentry{zpool!add|hyperpage}{35}
+\indexentry{operating system|hyperpage}{35}
 \indexentry{encrypt|hyperpage}{35}
+\indexentry{operating system|hyperpage}{35}
+\indexentry{FreeBSD|hyperpage}{35}
+\indexentry{operating system|hyperpage}{35}
 \indexentry{encrypt|hyperpage}{35}
+\indexentry{dialog|hyperpage}{35}
 \indexentry{encrypt|hyperpage}{35}
-\indexentry{encrypt|hyperpage}{35}
-\indexentry{geli|hyperpage}{35}
-\indexentry{encrypt|hyperpage}{35}
-\indexentry{geli|hyperpage}{35}
-\indexentry{encrypt|hyperpage}{35}
-\indexentry{geli!init|hyperpage}{35}
-\indexentry{geli!attach|hyperpage}{35}
-\indexentry{geli!init|hyperpage}{35}
-\indexentry{geli!attach|hyperpage}{35}
-\indexentry{geli!init|hyperpage}{35}
-\indexentry{geli!attach|hyperpage}{35}
-\indexentry{geli!init|hyperpage}{35}
-\indexentry{geli!attach|hyperpage}{35}
-\indexentry{geli!init|hyperpage}{35}
-\indexentry{geli!attach|hyperpage}{35}
-\indexentry{geli!init|hyperpage}{35}
-\indexentry{geli!attach|hyperpage}{35}
-\indexentry{geli!init|hyperpage}{36}
-\indexentry{geli!attach|hyperpage}{36}
-\indexentry{geli!init|hyperpage}{36}
-\indexentry{geli!attach|hyperpage}{36}
-\indexentry{geli!init|hyperpage}{36}
-\indexentry{geli!attach|hyperpage}{36}
-\indexentry{geli!init|hyperpage}{36}
-\indexentry{geli!attach|hyperpage}{36}
-\indexentry{geli!init|hyperpage}{36}
-\indexentry{geli!attach|hyperpage}{36}
-\indexentry{geli!init|hyperpage}{36}
-\indexentry{geli!attach|hyperpage}{36}
-\indexentry{cp|hyperpage}{36}
-\indexentry{cp|hyperpage}{36}
-\indexentry{cp|hyperpage}{36}
-\indexentry{cp|hyperpage}{36}
-\indexentry{cp|hyperpage}{37}
-\indexentry{cp|hyperpage}{37}
-\indexentry{cp|hyperpage}{37}
-\indexentry{cp|hyperpage}{37}
-\indexentry{cp|hyperpage}{37}
-\indexentry{cp|hyperpage}{37}
-\indexentry{cp|hyperpage}{37}
-\indexentry{cp|hyperpage}{37}
-\indexentry{gpart!modify|hyperpage}{37}
-\indexentry{gpart!modify|hyperpage}{37}
-\indexentry{gpart!modify|hyperpage}{37}
-\indexentry{gpart!show|hyperpage}{37}
-\indexentry{geli!status|hyperpage}{37}
-\indexentry{zpool|hyperpage}{37}
-\indexentry{operating system|hyperpage}{37}
-\indexentry{swapon|hyperpage}{38}
-\indexentry{swapinfo|hyperpage}{38}
-\indexentry{gpart!resize|hyperpage}{38}
-\indexentry{gpart!recover|hyperpage}{38}
-\indexentry{gpart!status|hyperpage}{38}
-\indexentry{geli!attach|hyperpage}{38}
+\indexentry{cache|hyperpage}{36}
+\indexentry{cache|hyperpage}{36}
+\indexentry{cache|hyperpage}{36}
+\indexentry{cache|hyperpage}{36}
+\indexentry{gpart|hyperpage}{36}
+\indexentry{gpart|hyperpage}{36}
+\indexentry{gpart|hyperpage}{36}
+\indexentry{cache|hyperpage}{36}
+\indexentry{encrypt|hyperpage}{37}
+\indexentry{mkdir|hyperpage}{37}
+\indexentry{mount|hyperpage}{37}
+\indexentry{gpart!create|hyperpage}{37}
+\indexentry{gpart!add|hyperpage}{37}
+\indexentry{gpart!create|hyperpage}{37}
+\indexentry{gpart!add|hyperpage}{37}
+\indexentry{gpart!create|hyperpage}{37}
+\indexentry{gpart!add|hyperpage}{37}
+\indexentry{gpart!create|hyperpage}{37}
+\indexentry{gpart!add|hyperpage}{38}
+\indexentry{gpart!create|hyperpage}{38}
 \indexentry{gpart!add|hyperpage}{38}
 \indexentry{gpart!add|hyperpage}{38}
+\indexentry{gpart!create|hyperpage}{38}
 \indexentry{gpart!add|hyperpage}{38}
 \indexentry{gpart!add|hyperpage}{38}
+\indexentry{gpart!create|hyperpage}{38}
 \indexentry{gpart!add|hyperpage}{38}
-\indexentry{encrypt|hyperpage}{38}
-\indexentry{geli!init|hyperpage}{38}
-\indexentry{geli!attach|hyperpage}{38}
-\indexentry{geli!init|hyperpage}{38}
-\indexentry{geli!attach|hyperpage}{38}
-\indexentry{geli!init|hyperpage}{38}
-\indexentry{geli!attach|hyperpage}{38}
-\indexentry{geli!init|hyperpage}{38}
-\indexentry{geli!attach|hyperpage}{38}
-\indexentry{geli!init|hyperpage}{38}
-\indexentry{geli!attach|hyperpage}{38}
-\indexentry{swapinfo|hyperpage}{39}
-\indexentry{swapon|hyperpage}{39}
-\indexentry{swapoff|hyperpage}{39}
-\indexentry{swapon|hyperpage}{39}
-\indexentry{swapon|hyperpage}{39}
-\indexentry{swapon|hyperpage}{39}
-\indexentry{swapon|hyperpage}{39}
-\indexentry{swapinfo|hyperpage}{39}
-\indexentry{zpool|hyperpage}{39}
-\indexentry{zpool|hyperpage}{39}
-\indexentry{cache|hyperpage}{39}
-\indexentry{zpool|hyperpage}{39}
-\indexentry{FreeBSD|hyperpage}{59}
-\indexentry{FreeBSD|hyperpage}{59}
-\indexentry{encrypt|hyperpage}{63}
-\indexentry{encrypt|hyperpage}{63}
-\indexentry{encrypt|hyperpage}{63}
-\indexentry{encrypt|hyperpage}{63}
-\indexentry{encrypt|hyperpage}{63}
-\indexentry{encrypt|hyperpage}{63}
-\indexentry{FreeBSD Handbook|hyperpage}{64}
+\indexentry{gpart!add|hyperpage}{38}
+\indexentry{gpart!create|hyperpage}{38}
+\indexentry{gpart!add|hyperpage}{38}
+\indexentry{gpart!add|hyperpage}{38}
+\indexentry{encrypt|hyperpage}{39}
+\indexentry{encrypt|hyperpage}{39}
+\indexentry{encrypt|hyperpage}{39}
+\indexentry{encrypt|hyperpage}{39}
+\indexentry{geli|hyperpage}{39}
+\indexentry{encrypt|hyperpage}{39}
+\indexentry{geli|hyperpage}{39}
+\indexentry{encrypt|hyperpage}{39}
+\indexentry{geli!init|hyperpage}{39}
+\indexentry{geli!attach|hyperpage}{39}
+\indexentry{geli!init|hyperpage}{39}
+\indexentry{geli!attach|hyperpage}{39}
+\indexentry{geli!init|hyperpage}{39}
+\indexentry{geli!attach|hyperpage}{39}
+\indexentry{geli!init|hyperpage}{39}
+\indexentry{geli!attach|hyperpage}{39}
+\indexentry{geli!init|hyperpage}{39}
+\indexentry{geli!attach|hyperpage}{39}
+\indexentry{geli!init|hyperpage}{39}
+\indexentry{geli!attach|hyperpage}{39}
+\indexentry{geli!init|hyperpage}{40}
+\indexentry{geli!attach|hyperpage}{40}
+\indexentry{geli!init|hyperpage}{40}
+\indexentry{geli!attach|hyperpage}{40}
+\indexentry{geli!init|hyperpage}{40}
+\indexentry{geli!attach|hyperpage}{40}
+\indexentry{geli!init|hyperpage}{40}
+\indexentry{geli!attach|hyperpage}{40}
+\indexentry{geli!init|hyperpage}{40}
+\indexentry{geli!attach|hyperpage}{40}
+\indexentry{geli!init|hyperpage}{40}
+\indexentry{geli!attach|hyperpage}{40}
+\indexentry{cp|hyperpage}{40}
+\indexentry{cp|hyperpage}{40}
+\indexentry{cp|hyperpage}{40}
+\indexentry{cp|hyperpage}{40}
+\indexentry{cp|hyperpage}{41}
+\indexentry{cp|hyperpage}{41}
+\indexentry{cp|hyperpage}{41}
+\indexentry{cp|hyperpage}{41}
+\indexentry{cp|hyperpage}{41}
+\indexentry{cp|hyperpage}{41}
+\indexentry{cp|hyperpage}{41}
+\indexentry{cp|hyperpage}{41}
+\indexentry{gpart!modify|hyperpage}{41}
+\indexentry{gpart!modify|hyperpage}{41}
+\indexentry{gpart!modify|hyperpage}{41}
+\indexentry{gpart!show|hyperpage}{41}
+\indexentry{geli!status|hyperpage}{41}
+\indexentry{zpool|hyperpage}{41}
+\indexentry{operating system|hyperpage}{41}
+\indexentry{swapon|hyperpage}{42}
+\indexentry{swapinfo|hyperpage}{42}
+\indexentry{gpart!resize|hyperpage}{42}
+\indexentry{gpart!recover|hyperpage}{42}
+\indexentry{gpart!status|hyperpage}{42}
+\indexentry{geli!attach|hyperpage}{42}
+\indexentry{gpart!add|hyperpage}{42}
+\indexentry{gpart!add|hyperpage}{42}
+\indexentry{gpart!add|hyperpage}{42}
+\indexentry{gpart!add|hyperpage}{42}
+\indexentry{gpart!add|hyperpage}{42}
+\indexentry{encrypt|hyperpage}{42}
+\indexentry{geli!init|hyperpage}{42}
+\indexentry{geli!attach|hyperpage}{42}
+\indexentry{geli!init|hyperpage}{42}
+\indexentry{geli!attach|hyperpage}{42}
+\indexentry{geli!init|hyperpage}{42}
+\indexentry{geli!attach|hyperpage}{42}
+\indexentry{geli!init|hyperpage}{42}
+\indexentry{geli!attach|hyperpage}{42}
+\indexentry{geli!init|hyperpage}{42}
+\indexentry{geli!attach|hyperpage}{42}
+\indexentry{swapinfo|hyperpage}{43}
+\indexentry{swapon|hyperpage}{43}
+\indexentry{swapoff|hyperpage}{43}
+\indexentry{swapon|hyperpage}{43}
+\indexentry{swapon|hyperpage}{43}
+\indexentry{swapon|hyperpage}{43}
+\indexentry{swapon|hyperpage}{43}
+\indexentry{swapinfo|hyperpage}{43}
+\indexentry{zpool|hyperpage}{43}
+\indexentry{zpool|hyperpage}{43}
+\indexentry{cache|hyperpage}{43}
+\indexentry{zpool|hyperpage}{43}
+\indexentry{FreeBSD|hyperpage}{63}
+\indexentry{FreeBSD|hyperpage}{63}
+\indexentry{encrypt|hyperpage}{67}
+\indexentry{encrypt|hyperpage}{67}
+\indexentry{encrypt|hyperpage}{67}
+\indexentry{encrypt|hyperpage}{67}
+\indexentry{encrypt|hyperpage}{67}
+\indexentry{encrypt|hyperpage}{67}
+\indexentry{FreeBSD Handbook|hyperpage}{68}
