@@ -104,6 +104,7 @@ bindingoffset=0.12in]{geometry}
 % Code style approximating K&R (monospaced, compact)
 \usepackage{xcolor}
 \usepackage{listings}
+\usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage{array} % optional for >{\raggedright\arraybackslash}
 \lstset{
@@ -254,6 +255,64 @@ As we examine the data from the public data sources and we feel that the reporte
 \subsubsection{Gaps in the Literature}
 
 \section{Methodology}
+
+Formally, we note this process below.  $R$ represents our result.  $N_s$ represents our constant for state source population and is used for dividing the crime count into a per capita rate. $N_t$ represents our constant for target sample population and is used for multiplying the rate to scale it to match the population of the target. $t$ represents our starting year for the sample from \gls{icc} and coordinates the rows until it progresses to the final year chosen which is denoted by $n$. $i$ represents our chosen category index of cybercrime. $j$ represents our year index and is built with $t$ until it progresses to the final year of the sample denoted by $n$. $p_j$ represents the population of the target city at year $j$, drawn from matrix $P$.
+
+\[
+R = \frac{N_t}{N_s} \sum_{j=t}^{t+6} M_{j,i}
+\]
+
+Two matrices inform this calculation.  The first, $P$, records the target city population for each year of the sample as a single column:
+
+\[
+P=
+\text{Years }\left\{
+\begin{matrix}
+t\\ \vdots\\ j\\ \vdots\\ n
+\end{matrix}
+\right.
+\left[
+\begin{array}{c}
+\multicolumn{1}{c}{%
+  \overbrace{\hphantom{p_{t}}}^{\text{Population}}%
+}\\
+p_t \\
+\vdots \\
+p_j \\
+\vdots \\
+p_n
+\end{array}
+\right]
+\]
+
+The second matrix, $M$, organises the raw cybercrime counts from \gls{icc} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted to a per-capita rate:
+
+\[
+M=
+\text{Years }\left\{
+\begin{matrix}
+t\\ \vdots\\ j\\ \vdots\\ n
+\end{matrix}
+\right.
+\left[
+\begin{array}{ccccccc}
+\multicolumn{7}{c}{%
+  \overbrace{%
+    \hphantom{a_{t,1}\ \cdots\ a_{t,2}\ \cdots\ a_{t,i}\ \cdots\ a_{t,m}}%
+  }^{\text{Categories}}%
+}\\
+a_{t,1} & \cdots & a_{t,2} & \cdots & a_{t,i} & \cdots & a_{t,m} \\
+\vdots  & \ddots & \vdots  & \ddots & \vdots  & \ddots & \vdots \\
+a_{j,1} & \cdots & a_{j,2} & \cdots & a_{j,i} & \cdots & a_{j,m} \\
+\vdots  & \ddots & \vdots  & \ddots & \vdots  & \ddots & \vdots \\
+a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
+\end{array}
+\right]
+\]
+
+The entries $a_{j,i}$ are the raw counts taken from the \gls{icc} state-level reports for the chosen source state.  Dividing each entry by $N_s$ converts it to a per-capita rate; multiplying by $N_t$ then scales that rate to match the population of the target city.  The population values in $P$ provide the year-by-year context for $N_t$ and confirm the representativeness of the scaling.  Summing the selected column $i$ of the per-capita-adjusted $M$ across all years yields the final result $R$.
+
+\section{Results}
 
 
 We took cybercrime data from a seven year span of \gls{icc} publications.  The annual reports for the nation and for each state showed a count of victims per category of cybercrime.  The \gls{us} \gls{fbi} defined each category for their report.  We put that data into a matrix, organized by year and category of crime.  
