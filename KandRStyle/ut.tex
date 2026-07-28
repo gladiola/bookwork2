@@ -80,8 +80,8 @@ bindingoffset=0.12in]{geometry}
 \usepackage{rotating}
 \usepackage{graphicx}
 
-
-
+%--------- Math ----------------
+\usepackage{amsmath}
 
 
 \usepackage[toc,nonumberlist,nopostdot]{glossaries}
@@ -254,11 +254,29 @@ As we examine the data from the public data sources and we feel that the reporte
 \subsubsection{Gaps in the Literature}
 
 \section{Methodology}
+
+\[
+R = \frac{c_2}{c_1} \sum_{j=t}^{t+6} M_{i,j}
+\]
+
+\[
+\text{where } M = 
+\text{Categories } \left\{ \begin{matrix} 1 \\ \vdots \\ i \\ \vdots \\ m \end{matrix} \right.
+\begin{bmatrix}
+ \overbrace{\begin{matrix} a_{1,1} & a_{1,2} & \cdots & a_{1,t} & \cdots & a_{1,t+6} & \cdots & a_{1,n} \end{matrix}}^{\text{Years}} \\
+ \vdots & \vdots & \ddots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+ a_{i,1} & a_{i,2} & \cdots & \mathbf{a_{i,t}} & \cdots & \mathbf{a_{i,t+6}} & \cdots & a_{i,n} \\
+ \vdots & \vdots & \ddots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+ a_{m,1} & a_{m,2} & \cdots & a_{m,t} & \cdots & a_{m,t+6} & \cdots & a_{m,n}
+\end{bmatrix}
+\]
+
+
 \begin{table}
   \centering
   \caption{Changes to City of Chattanooga's Population}
   \label{tab:chattanoogacrime1}
-  \begin{tabular}{@{}>{\centering\arraybackslash}p{0.15\linewidth} >{\centering\arraybackslash}p{0.40\linewidth}>{\centering\arraybackslash}p{0.40\linewidth}>{\centering\arraybackslash}p{0.05\linewidth}}
+  \begin{tabular}{@{}>{\centering\arraybackslash}p{0.15\linewidth} >{\centering\arraybackslash}p{0.35\linewidth}>{\centering\arraybackslash}p{0.35\linewidth}>{\centering\arraybackslash}p{0.05\linewidth}}
     \toprule
     Year & City of Chattanooga Population &Change Since Previous Year &\\
     \midrule
@@ -306,7 +324,7 @@ As we examine the data from the public data sources and we feel that the reporte
   \centering
   \caption{Cybercrime, City of Chattanooga, Threat to Personnel Via Network}
   \label{tab:chattanoogacrime3}
-  \begin{tabular}{@{}>{\centering\arraybackslash}p{0.05\linewidth} >{\centering\arraybackslash}p{0.20\linewidth}>{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.35\linewidth}>{\centering\arraybackslash}p{0.05\linewidth}}
+  \begin{tabular}{@{}>{\centering\arraybackslash}p{0.05\linewidth} >{\centering\arraybackslash}p{0.25\linewidth}>{\centering\arraybackslash}p{0.25\linewidth}>{\centering\arraybackslash}p{0.25\linewidth}>{\centering\arraybackslash}p{0.05\linewidth}}
     \toprule
 \thead{Year} &
 \thead{Crimes Against\\Children} &
