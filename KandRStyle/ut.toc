@@ -16,7 +16,8 @@
 \contentsline {subsubsection}{Comparisons of Technologies or Frameworks}{2}{subsubsection*.14}%
 \contentsline {subsubsection}{Gaps in the Literature}{2}{subsubsection*.15}%
 \contentsline {section}{\numberline {1.3}Methodology}{2}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Results}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.4}Results}{4}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Results}{4}{section.1.5}%
 \contentsline {chapter}{Endnotes}{7}{chapter*.20}%
 \contentsline {chapter}{\numberline {2}\Gls {amnesiac} Systems in FreeBSD}{9}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Introduction}{9}{section.2.1}%
