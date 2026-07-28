@@ -445,6 +445,12 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 
 We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}. The entries $a_{j,i}$ are the raw counts taken from the \gls{icc} state-level reports for the chosen source state.  Dividing each entry by $P_j$ converts it to a per-capita rate; multiplying by $N_t$ then scales that rate to match the population of the target city.  The population values in $P$ provide the year-by-year context for $N_t$ and confirm the representativeness of the scaling.  Summing the selected column $i$ of the per-capita-adjusted $M$ across all years yields the final result $R$.
 
+
+
+
+
+\section{Analysis}
+
 \subsubsection{Using Nation or State Data as a Control for Smaller Forecasts}
 
 If we apply unadjusted for sample size counts limited to a one-year basis, we could use a Poisson distribution as shown in Figure \ref{fig:statevent-poissoncontrolsummary}.
@@ -479,10 +485,6 @@ R_i = \frac{Y_i}{E_i}
 \end{figure}
 
 This would allow us to feed per-state or national data into the forumla and better understand the relationship of our projections to a larger view.  It could help us to understand where our projected sample's forcast would stand against the whole state overall or nationally.  This way, we could use the state and national data as controls for understanding the context of our forecast.
-
-
-
-\section{Analysis}
 
 % Empirical rate per year
 \begin{figure}[h!]
@@ -595,7 +597,7 @@ Y_i \sim \operatorname{Poisson}\!\left(\bar{r}_i \cdot E_i\right)
 2022&1&23&0&7&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2022State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2022_IC3Report.pdf}}\\
 
     \bottomrule \end{tabular} 
-  \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year. Online access to the data has changed over the years.  The original per-state reports are no longer available from their previous URLs.  Aggregate, nation-level reports are still available.}
+  \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year.}
 \end{table}
 
 \begin{table}[h!]
@@ -618,7 +620,7 @@ Y_i \sim \operatorname{Poisson}\!\left(\bar{r}_i \cdot E_i\right)
 2022&1&18&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2022State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2022_IC3Report.pdf}}\\
 
     \bottomrule \end{tabular} 
-  \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year. Online access to the data has changed over the years.  The original per-state reports are no longer available from their previous URLs.  Aggregate, nation-level reports are still available.}
+  \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year.  Threats, stalking, and harrassment counts were combined with terrorism because the mechanisms were similar.}
 \end{table}
 
 \begin{table}[h!]
@@ -644,7 +646,7 @@ Y_i \sim \operatorname{Poisson}\!\left(\bar{r}_i \cdot E_i\right)
 2022&0&14&10&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2022State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2022_IC3Report.pdf}}\\
 
         \bottomrule \end{tabular} 
-  \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year. Online access to the data has changed over the years.  The original per-state reports are no longer available from their previous URLs.  Aggregate, nation-level reports are still available.}
+  \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year.}
 \end{table}
 %----------------------------------------------------------------------------------------
 \section{Discussion}
