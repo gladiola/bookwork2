@@ -80,7 +80,6 @@ bindingoffset=0.12in]{geometry}
 \usepackage{rotating}
 \usepackage{graphicx}
 \usepackage[section]{placeins}
-
 %--------- Math ----------------
 \usepackage{amsmath}
 
@@ -226,6 +225,11 @@ Your introduction text goes here...
 %Future of the RED Project
 %Enhance RED Data 
 
+%\begin{figure}[h!]
+%  \centering
+%  \caption{}
+%  \label{fig:}
+%\end{figure}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER
@@ -256,14 +260,36 @@ As we examine the data from the public data sources and we feel that the reporte
 \subsubsection{Gaps in the Literature}
 
 \section{Methodology}
+We took cybercrime data from a seven year span of \gls{icc} publications.  The annual reports for the nation and for each state showed a count of victims per category of cybercrime.  The \gls{us} \gls{fbi} defined each category for their report.  We put that data into a matrix, organized by year and category of crime.  
 
-Formally, we note this process below.  $R$ represents our result.  $N_s$ represents our constant for state source population and is used for dividing the crime count into a per capita rate. $N_t$ represents our constant for target sample population and is used for multiplying the rate to scale it to match the population of the target. $t$ represents our starting year for the sample from \gls{icc} and coordinates the rows until it progresses to the final year chosen which is denoted by $n$. $i$ represents our chosen category index of cybercrime. $j$ represents our year index and is built with $t$ until it progresses to the final year of the sample denoted by $n$. $p_j$ represents the population of the target city at year $j$, drawn from matrix $P$.
+Each state we chose got its own matrix. We noticed that three states typically had high counts of crime; they were:  California, Texas, and Florida.  We noticed that US territories, like American Samoa, US Virgin Islands, and Puerto Rico, were reported also as if they were a state.  These smaller areas with lower populations also showed lowed low counts of cybercrime.  We chose these high crime areas (e.g. California) and low crime areas (e.g. American Samoa) as our guides for choosing maximum and minimum limits.  Our desired target areas were chosen by the target's home state; our intial runs included Chattanooga, Tennessee.
+
+\subsubsection{Using State Data to Forecast a Company's Data}
+
+Our main data sets are provided in the public interest; they're based on large units of people like states and nations.  As system operators, we have a much smaller interest; we're interested in company sized elements.  Instead of being concerned with the cybercrime fate of over 300 million Americans or 9 million Tennesseans, we are probably more interested in what might happen to 100 stakeholders.  
+
+To smooth out the counts of cybercrime into rates, we adjusted these state victim counts per capita.  We chose the US Census reports for those years to be the population values of the states.  This would provide us with a per capita rate of cybercrime based on the chosen state which represented the chosen limit or target in the distribution.
+
+Formally, we note this process below as shown in Figure \ref{fig:statcalc-percap}.  $R$ represents our result.  $N_t$ represents our constant for target sample population and is used for multiplying the rate to scale it to match the population of the target. $t$ represents our starting year for the sample from \gls{icc} and coordinates the rows until it progresses to the final year chosen which is denoted by $n$. $i$ represents our chosen category index of cybercrime. $j$ represents our year index and is built with $t$ until it progresses to the final year of the sample denoted by $n$. $P_j$ represents the population of the target city at year $j$, drawn from matrix $P$.
+
+\begin{figure}[h!]
+  \centering
+
+
+
 
 \[
-R = \frac{N_t}{N_s} \sum_{j=t}^{t+6} M_{j,i}
+R_j = N_t \sum_{j=t}^{t+6} \frac{X_{j,i}}{P_j}, \quad \text{where } X_{j,i} = \begin{cases} M_{j,i} & \text{if victim count} \\ V_{j,i} & \text{if victim impact} \\ S_{j,i} & \text{if suspect count} \\ D_{j,i} & \text{if suspect impact} \end{cases}
 \]
 
-Two matrices inform this calculation.  The first, $P$, records the target city population for each year of the sample as a single column:
+  \caption{Notation for the statistical calculation of the security event matrix adjusted for per-capita rates of incidence.}
+  \label{fig:statcalc-percap}
+\end{figure}
+
+Five matrices inform this calculation.  The first, $P$ as shown in Figure \ref{fig:statcalc-popmatrix}, records the target city population for each year of the sample as a single column.
+
+\begin{figure}[h!]
+  \centering
 
 \[
 P=
@@ -286,8 +312,15 @@ p_n
 \right]
 \]
 
-The second matrix, $M$, organises the raw cybercrime counts from \gls{icc} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted to a per-capita rate:
+  \caption{Structure of the sample population matrix indexed by year.}
+  \label{fig:statcalc-popmatrix}
+\end{figure}
 
+The second matrix, $M$ as shown in Figure \ref{fig:statevent-victimcount}, organises the raw cybercrime counts from \gls{icc} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted to a per-capita rate.
+
+
+\begin{figure}[h!]
+  \centering
 \[
 M=
 \text{Years }\left\{
@@ -300,7 +333,7 @@ t\\ \vdots\\ j\\ \vdots\\ n
 \multicolumn{7}{c}{%
   \overbrace{%
     \hphantom{a_{t,1}\ \cdots\ a_{t,2}\ \cdots\ a_{t,i}\ \cdots\ a_{t,m}}%
-  }^{\text{Categories}}%
+  }^{\text{Victim Counts by Categories}}%
 }\\
 a_{t,1} & \cdots & a_{t,2} & \cdots & a_{t,i} & \cdots & a_{t,m} \\
 \vdots  & \ddots & \vdots  & \ddots & \vdots  & \ddots & \vdots \\
@@ -311,25 +344,16 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 \right]
 \]
 
-The entries $a_{j,i}$ are the raw counts taken from the \gls{icc} state-level reports for the chosen source state.  Dividing each entry by $N_s$ converts it to a per-capita rate; multiplying by $N_t$ then scales that rate to match the population of the target city.  The population values in $P$ provide the year-by-year context for $N_t$ and confirm the representativeness of the scaling.  Summing the selected column $i$ of the per-capita-adjusted $M$ across all years yields the final result $R$.
+  \caption{Structure of the security event matrix for victim counts by cybercrime categories indexed by year.}
+  \label{fig:statevent-victimcount}
+\end{figure}
 
-\section{Results}
 
-
-We took cybercrime data from a seven year span of \gls{icc} publications.  The annual reports for the nation and for each state showed a count of victims per category of cybercrime.  The \gls{us} \gls{fbi} defined each category for their report.  We put that data into a matrix, organized by year and category of crime.  
-
-Each state we chose got its own matrix. We noticed that three states typically had high counts of crime; they were:  California, Texas, and Florida.  We noticed that US territories, like American Samoa, US Virgin Islands, and Puerto Rico, were reported also as if they were a state.  These smaller areas with lower populations also showed lowed low counts of cybercrime.  We chose these high crime areas (e.g. California) and low crime areas (e.g. American Samoa) as our guides for choosing maximum and minimum limits.  Our desired target areas were chosen by the target's home state; our intial runs included Chattanooga, Tennessee.
-
-To smooth out the counts of cybercrime into rates, we adjusted these state victim counts per capita.  We chose the US Census reports for those years to be the population values of the states.  This would provide us with a per capita rate of cybercrime based on the chosen state which represented the chosen limit or target in the distribution.
-
-Formally, we note this process below.  $R$ represents our result.  $N_s$ represents our constant for state source population and is used for dividing the crime count into a per capita rate. $N_t$ represents our constant for target sample population and is used for multiplying the rate to scale it to match the population of the target. $t$ represents our starting year for the sample of from \gls{icc} and coordinates the rows until it progresses to the final year chosen which is denoted by $n$. $i$ represents our chosen category index of cybercrime. $j$ represents our year index and is built with $t$ until it progresses to the final year of the sample denoted by $n$.
-
+The third matrix, $V$ as shown in Figure \ref{fig:statevent-victimimpact}, organises the victim impact in USD from \gls{icc} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted later to a per-capita rate.
+\begin{figure}[h!]
+  \centering
 \[
-R = \frac{N_t}{N_s} \sum_{j=t}^{t+6} M_{j,i}
-\]
-
-\[
-M=
+V=
 \text{Years }\left\{
 \begin{matrix}
 t\\ \vdots\\ j\\ \vdots\\ n
@@ -340,7 +364,7 @@ t\\ \vdots\\ j\\ \vdots\\ n
 \multicolumn{7}{c}{%
   \overbrace{%
     \hphantom{a_{t,1}\ \cdots\ a_{t,2}\ \cdots\ a_{t,i}\ \cdots\ a_{t,m}}%
-  }^{\text{Categories}}%
+  }^{\text{Victim Impacts by Categories}}%
 }\\
 a_{t,1} & \cdots & a_{t,2} & \cdots & a_{t,i} & \cdots & a_{t,m} \\
 \vdots  & \ddots & \vdots  & \ddots & \vdots  & \ddots & \vdots \\
@@ -351,7 +375,182 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 \right]
 \]
 
-\begin{table}
+
+  \caption{Structure of the security event matrix for victim impacts, as in dollars of damage, by cybercrime categories indexed by year.}
+  \label{fig:statevent-victimimpact}
+\end{figure}
+
+The fourth matrix, $S$ as shown in Figure \ref{fig:statevent-suspectcount}, organises the count of suspects from \gls{icc} by category and year.  Each entry $a_{j,i}$ helps us to understand how many suspects are operating within an area of concern.  This is a count that will be adjusted later to a per-capita rate.
+
+\begin{figure}[h!]
+  \centering
+\[
+S=
+\text{Years }\left\{
+\begin{matrix}
+t\\ \vdots\\ j\\ \vdots\\ n
+\end{matrix}
+\right.
+\left[
+\begin{array}{ccccccc}
+\multicolumn{7}{c}{%
+  \overbrace{%
+    \hphantom{a_{t,1}\ \cdots\ a_{t,2}\ \cdots\ a_{t,i}\ \cdots\ a_{t,m}}%
+  }^{\text{Suspect Counts by Categories}}%
+}\\
+a_{t,1} & \cdots & a_{t,2} & \cdots & a_{t,i} & \cdots & a_{t,m} \\
+\vdots  & \ddots & \vdots  & \ddots & \vdots  & \ddots & \vdots \\
+a_{j,1} & \cdots & a_{j,2} & \cdots & a_{j,i} & \cdots & a_{j,m} \\
+\vdots  & \ddots & \vdots  & \ddots & \vdots  & \ddots & \vdots \\
+a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
+\end{array}
+\right]
+\]
+
+  \caption{Structure of the security event matrix for suspect counts by cybercrime categories indexed by year.  These counts consider the number of actors who engage victims in a given area.}
+  \label{fig:statevent-suspectcount}
+\end{figure}
+
+The fifth matrix, $D$ as shown in Figure \ref{fig:statevent-suspectdamage}, organises the damages attributed by suspects in USD from \gls{icc} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted later to a per-capita rate.  This helps us to understand rates of effective impact, per suspect, in a given area.
+
+\begin{figure}[h!]
+  \centering
+\[
+D=
+\text{Years }\left\{
+\begin{matrix}
+t\\ \vdots\\ j\\ \vdots\\ n
+\end{matrix}
+\right.
+\left[
+\begin{array}{ccccccc}
+\multicolumn{7}{c}{%
+  \overbrace{%
+    \hphantom{a_{t,1}\ \cdots\ a_{t,2}\ \cdots\ a_{t,i}\ \cdots\ a_{t,m}}%
+  }^{\text{Suspect Damage by Categories}}%
+}\\
+a_{t,1} & \cdots & a_{t,2} & \cdots & a_{t,i} & \cdots & a_{t,m} \\
+\vdots  & \ddots & \vdots  & \ddots & \vdots  & \ddots & \vdots \\
+a_{j,1} & \cdots & a_{j,2} & \cdots & a_{j,i} & \cdots & a_{j,m} \\
+\vdots  & \ddots & \vdots  & \ddots & \vdots  & \ddots & \vdots \\
+a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
+\end{array}
+\right]
+\]
+
+  \caption{Structure of the security event matrix for suspect damage, in dollars by perpetrators, by cybercrime categories indexed by year.  This tally helps us understand how damaging each actor is to victims.}
+  \label{fig:statevent-suspectdamage}
+\end{figure}
+
+
+We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}. The entries $a_{j,i}$ are the raw counts taken from the \gls{icc} state-level reports for the chosen source state.  Dividing each entry by $P_j$ converts it to a per-capita rate; multiplying by $N_t$ then scales that rate to match the population of the target city.  The population values in $P$ provide the year-by-year context for $N_t$ and confirm the representativeness of the scaling.  Summing the selected column $i$ of the per-capita-adjusted $M$ across all years yields the final result $R$.
+
+\subsubsection{Using Nation or State Data as a Control for Smaller Forecasts}
+
+If we apply unadjusted for sample size counts limited to a one-year basis, we could use a Poisson distribution as shown in Figure \ref{fig:statevent-poissoncontrolsummary}.
+
+\begin{figure}[h!]
+  \centering
+
+\[
+X_{j,i} =
+\begin{cases}
+M_{j,i} & \text{if victim count} \\
+V_{j,i} & \text{if victim impact} \\
+S_{j,i} & \text{if suspect count} \\
+D_{j,i} & \text{if suspect impact}
+\end{cases}
+\]
+
+\[
+Y_i = \sum_{j=t}^{t+6} X_{j,i}
+\]
+
+\[
+Y_i \sim \operatorname{Poisson}(\lambda_i \, E_i)
+\]
+
+\[
+R_i = \frac{Y_i}{E_i}
+\]
+
+  \caption{Summary of applying Poisson distribution to counts from nation and state data.}
+  \label{fig:statevent-poissoncontrolsummary}
+\end{figure}
+
+This would allow us to feed per-state or national data into the forumla and better understand the relationship of our projections to a larger view.  It could help us to understand where our projected sample's forcast would stand against the whole state overall or nationally.  This way, we could use the state and national data as controls for understanding the context of our forecast.
+
+
+
+\section{Analysis}
+
+% Empirical rate per year
+\begin{figure}[h!]
+  \centering
+
+\[
+r_{j,i} = \frac{Y_{j,i}}{P_j}
+\]
+  \caption{Empirical rate per year}
+  \label{fig:analysis-empiricalrate}
+\end{figure}
+
+% Aggregated count and exposure over historical window
+\begin{figure}[h!]
+  \centering
+\[
+Y_i = \sum_{j=t}^{t+6} Y_{j,i}
+\qquad
+E_i = \sum_{j=t}^{t+6} P_j
+\]
+  \caption{Aggregated count and exposure over historical window}
+  \label{fig:analysis-aggcountwindow}
+\end{figure}
+
+% Directly standardized (weighted mean) rate
+\begin{figure}[h!]
+  \centering
+\[
+\bar{r}_i = \frac{Y_i}{E_i} = \frac{\displaystyle\sum_{j=t}^{t+6} Y_{j,i}}{\displaystyle\sum_{j=t}^{t+6} P_j}
+\]
+  \caption{Directly standardized (weighted mean) rate}
+  \label{fig:analysis-weightedmeanrate}
+\end{figure}
+
+% Poisson model for the aggregated count
+\begin{figure}[h!]
+  \centering
+\[
+Y_i \sim \operatorname{Poisson}\!\left(\bar{r}_i \cdot E_i\right)
+\]
+  \caption{Poisson model for the aggregated count}
+  \label{fig:analysis-poissonaggcount}
+\end{figure}
+
+% Approximate 95\% confidence interval for the rate
+\begin{figure}[h!]
+  \centering
+\[
+\bar{r}_i \pm 1.96 \sqrt{\frac{\bar{r}_i}{E_i}}
+\]
+  \caption{Approximate 95\% confidence interval for the rate}
+  \label{fig:analysis-95confidencerate}
+\end{figure}
+
+% Forecast evaluation: is the forecast within the control band?
+\begin{figure}[h!]
+  \centering
+\[
+\hat{R}_i \in \left[
+  \bar{r}_i - 1.96\sqrt{\frac{\bar{r}_i}{E_i}},\;
+  \bar{r}_i + 1.96\sqrt{\frac{\bar{r}_i}{E_i}}
+\right]
+\]
+  \caption{Forecast evaluation: is the forecast within the control band?}
+  \label{fig:analysis-forecasteval}
+\end{figure}
+
+\begin{table}[h!]
   \centering
   \caption{Changes to City of Chattanooga's Population}
   \label{tab:chattanoogacrime1}
@@ -371,7 +570,7 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 \raggedright{City population based on the US Census reported population for the City of Chattanooga itself.  Surrounding satellite cities and unincorporated areas within the Hamilton County, Tennessee, were not included.}
 \end{table}
 
-\begin{table}
+\begin{table}[h!]
   \centering
   \caption{Cybercrime, City of Chattanooga, Threats to System Intrusion}
   \label{tab:chattanoogacrime2}
@@ -399,7 +598,7 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
   \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year. Online access to the data has changed over the years.  The original per-state reports are no longer available from their previous URLs.  Aggregate, nation-level reports are still available.}
 \end{table}
 
-\begin{table}
+\begin{table}[h!]
   \centering
   \caption{Cybercrime, City of Chattanooga, Threat to Personnel Via Network}
   \label{tab:chattanoogacrime3}
@@ -422,7 +621,7 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
   \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year. Online access to the data has changed over the years.  The original per-state reports are no longer available from their previous URLs.  Aggregate, nation-level reports are still available.}
 \end{table}
 
-\begin{table}
+\begin{table}[h!]
   \centering
   \caption{Cybercrime, City of Chattanooga, Theft of Data Via Network}
   \label{tab:chattanoogacrime4}
@@ -448,7 +647,7 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
   \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year. Online access to the data has changed over the years.  The original per-state reports are no longer available from their previous URLs.  Aggregate, nation-level reports are still available.}
 \end{table}
 %----------------------------------------------------------------------------------------
-\section{Results}
+\section{Discussion}
 \printchapterendnotes
 
 
