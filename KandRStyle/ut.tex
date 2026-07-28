@@ -183,13 +183,36 @@ We conducted a risk assessment to better understand the threat of criminal actio
 \section{Introduction}
 \section{Methodology}
 
-Formally, we note this process below.  $R$ represents our result.  $N_s$ represents our constant for state source population and is used for dividing the crime count into a per capita rate. $N_t$ represents our constant for target sample population and is used for multiplying the rate to scale it to match the population of the target. $t$ represents our starting year for the sample from \gls{icc} and coordinates the rows until it progresses to the final year chosen which is denoted by $n$. $i$ represents our chosen category index of cybercrime. $j$ represents our year index and is built with $t$ until it progresses to the final year of the sample denoted by $n$.
+Formally, we note this process below.  $R$ represents our result.  $N_s$ represents our constant for state source population and is used for dividing the crime count into a per capita rate. $N_t$ represents our constant for target sample population and is used for multiplying the rate to scale it to match the population of the target. $t$ represents our starting year for the sample from \gls{icc} and coordinates the rows until it progresses to the final year chosen which is denoted by $n$. $i$ represents our chosen category index of cybercrime. $j$ represents our year index and is built with $t$ until it progresses to the final year of the sample denoted by $n$. $p_j$ represents the population of the target city at year $j$, drawn from matrix $P$.
 
 \[
 R = \frac{N_t}{N_s} \sum_{j=t}^{t+6} M_{j,i}
 \]
 
-Two matrices inform this calculation.  The first, $P$, captures the population change for our target city over the years of the sample; it consists of a single column of population values indexed by year and has not been formally included here.  The second, $M$, organises the raw cybercrime counts from \gls{icc} by category and year:
+Two matrices inform this calculation.  The first, $P$, records the target city population for each year of the sample as a single column:
+
+\[
+P=
+\text{Years }\left\{
+\begin{matrix}
+t\\ \vdots\\ j\\ \vdots\\ n
+\end{matrix}
+\right.
+\left[
+\begin{array}{c}
+\multicolumn{1}{c}{%
+  \overbrace{\hphantom{p_{t}}}^{\text{Population}}%
+}\\
+p_t \\
+\vdots \\
+p_j \\
+\vdots \\
+p_n
+\end{array}
+\right]
+\]
+
+The second matrix, $M$, organises the raw cybercrime counts from \gls{icc} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted to a per-capita rate:
 
 \[
 M=
@@ -214,7 +237,7 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 \right]
 \]
 
-The entries $a_{j,i}$ are the raw counts taken from the \gls{icc} state-level reports for the chosen state source.  Dividing by $N_s$ converts each count to a per-capita rate; multiplying by $N_t$ then scales that rate to the population of the target city.  Summing the selected column $i$ across all years yields the final per-capita-adjusted result $R$.
+The entries $a_{j,i}$ are the raw counts taken from the \gls{icc} state-level reports for the chosen source state.  Dividing each entry by $N_s$ converts it to a per-capita rate; multiplying by $N_t$ then scales that rate to match the population of the target city.  The population values in $P$ provide the year-by-year context for $N_t$ and confirm the representativeness of the scaling.  Summing the selected column $i$ of the per-capita-adjusted $M$ across all years yields the final result $R$.
 
 \section{Results}
 
