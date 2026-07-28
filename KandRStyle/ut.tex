@@ -255,22 +255,41 @@ As we examine the data from the public data sources and we feel that the reporte
 
 \section{Methodology}
 
+
+We took cybercrime data from a seven year span of \gls{icc} publications.  The annual reports for the nation and for each state showed a count of victims per category of cybercrime.  The \gls{us} \gls{fbi} defined each category for their report.  We put that data into a matrix, organized by year and category of crime.  
+
+Each state we chose got its own matrix. We noticed that three states typically had high counts of crime; they were:  California, Texas, and Florida.  We noticed that US territories, like American Samoa, US Virgin Islands, and Puerto Rico, were reported also as if they were a state.  These smaller areas with lower populations also showed lowed low counts of cybercrime.  We chose these high crime areas (e.g. California) and low crime areas (e.g. American Samoa) as our guides for choosing maximum and minimum limits.  Our desired target areas were chosen by the target's home state; our intial runs included Chattanooga, Tennessee.
+
+To smooth out the counts of cybercrime into rates, we adjusted these state victim counts per capita.  We chose the US Census reports for those years to be the population values of the states.  This would provide us with a per capita rate of cybercrime based on the chosen state which represented the chosen limit or target in the distribution.
+
+Formally, we note this process below.  $R$ represents our result.  $N_s$ represents our constant for state source population and is used for dividing the crime count into a per capita rate. $N_t$ represents our constant for target sample population and is used for multiplying the rate to scale it to match the population of the target. $t$ represents our starting year for the sample of from \gls{icc} and coordinates the rows until it progresses to the final year chosen which is denoted by $n$. $i$ represents our chosen category index of cybercrime. $j$ represents our year index and is built with $t$ until it progresses to the final year of the sample denoted by $n$.
+
 \[
-R = \frac{c_2}{c_1} \sum_{j=t}^{t+6} M_{i,j}
+R = \frac{N_t}{N_s} \sum_{j=t}^{t+6} M_{j,i}
 \]
 
 \[
-\text{where } M = 
-\text{Categories } \left\{ \begin{matrix} 1 \\ \vdots \\ i \\ \vdots \\ m \end{matrix} \right.
-\begin{bmatrix}
- \overbrace{\begin{matrix} a_{1,1} & a_{1,2} & \cdots & a_{1,t} & \cdots & a_{1,t+6} & \cdots & a_{1,n} \end{matrix}}^{\text{Years}} \\
- \vdots & \vdots & \ddots & \vdots & \ddots & \vdots & \ddots & \vdots \\
- a_{i,1} & a_{i,2} & \cdots & \mathbf{a_{i,t}} & \cdots & \mathbf{a_{i,t+6}} & \cdots & a_{i,n} \\
- \vdots & \vdots & \ddots & \vdots & \ddots & \vdots & \ddots & \vdots \\
- a_{m,1} & a_{m,2} & \cdots & a_{m,t} & \cdots & a_{m,t+6} & \cdots & a_{m,n}
-\end{bmatrix}
+M=
+\text{Years }\left\{
+\begin{matrix}
+t\\ \vdots\\ j\\ \vdots\\ n
+\end{matrix}
+\right.
+\left[
+\begin{array}{ccccccc}
+\multicolumn{7}{c}{%
+  \overbrace{%
+    \hphantom{a_{t,1}\ \cdots\ a_{t,2}\ \cdots\ a_{t,i}\ \cdots\ a_{t,m}}%
+  }^{\text{Categories}}%
+}\\
+a_{t,1} & \cdots & a_{t,2} & \cdots & a_{t,i} & \cdots & a_{t,m} \\
+\vdots  & \ddots & \vdots  & \ddots & \vdots  & \ddots & \vdots \\
+a_{j,1} & \cdots & a_{j,2} & \cdots & a_{j,i} & \cdots & a_{j,m} \\
+\vdots  & \ddots & \vdots  & \ddots & \vdots  & \ddots & \vdots \\
+a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
+\end{array}
+\right]
 \]
-
 
 \begin{table}
   \centering
