@@ -105,6 +105,7 @@ bindingoffset=0.12in]{geometry}
 % Code style approximating K&R (monospaced, compact)
 \usepackage{xcolor}
 \usepackage{listings}
+\usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage{array} % optional for >{\raggedright\arraybackslash}
 \lstset{
@@ -181,6 +182,40 @@ Your introduction text goes here...
 We conducted a risk assessment to better understand the threat of criminal action against an in-house system.  We examined both cybercrimes and physical crimes using data that was normalized to a per-capita rates of crimes.  We drew from FBI \gls{icc} annual reports and Chattanooga Police open data records.  The population samples were taken from the US Census Bureau reports.\par}\end{center}
 \section{Introduction}
 \section{Methodology}
+
+Formally, we note this process below.  $R$ represents our result.  $N_s$ represents our constant for state source population and is used for dividing the crime count into a per capita rate. $N_t$ represents our constant for target sample population and is used for multiplying the rate to scale it to match the population of the target. $t$ represents our starting year for the sample from \gls{icc} and coordinates the rows until it progresses to the final year chosen which is denoted by $n$. $i$ represents our chosen category index of cybercrime. $j$ represents our year index and is built with $t$ until it progresses to the final year of the sample denoted by $n$.
+
+\[
+R = \frac{N_t}{N_s} \sum_{j=t}^{t+6} M_{j,i}
+\]
+
+Two matrices inform this calculation.  The first, $P$, captures the population change for our target city over the years of the sample; it consists of a single column of population values indexed by year and has not been formally included here.  The second, $M$, organises the raw cybercrime counts from \gls{icc} by category and year:
+
+\[
+M=
+\text{Years }\left\{
+\begin{matrix}
+t\\ \vdots\\ j\\ \vdots\\ n
+\end{matrix}
+\right.
+\left[
+\begin{array}{ccccccc}
+\multicolumn{7}{c}{%
+  \overbrace{%
+    \hphantom{a_{t,1}\ \cdots\ a_{t,2}\ \cdots\ a_{t,i}\ \cdots\ a_{t,m}}%
+  }^{\text{Categories}}%
+}\\
+a_{t,1} & \cdots & a_{t,2} & \cdots & a_{t,i} & \cdots & a_{t,m} \\
+\vdots  & \ddots & \vdots  & \ddots & \vdots  & \ddots & \vdots \\
+a_{j,1} & \cdots & a_{j,2} & \cdots & a_{j,i} & \cdots & a_{j,m} \\
+\vdots  & \ddots & \vdots  & \ddots & \vdots  & \ddots & \vdots \\
+a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
+\end{array}
+\right]
+\]
+
+The entries $a_{j,i}$ are the raw counts taken from the \gls{icc} state-level reports for the chosen state source.  Dividing by $N_s$ converts each count to a per-capita rate; multiplying by $N_t$ then scales that rate to the population of the target city.  Summing the selected column $i$ across all years yields the final per-capita-adjusted result $R$.
+
 \section{Results}
 
 
