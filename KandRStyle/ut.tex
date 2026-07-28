@@ -154,7 +154,7 @@ John O\string'Keefe-Odom received a Master of Liberal Arts (ALM) in Extension St
 \addcontentsline{toc}{chapter}{Preface}
 
 Your preface text goes here...
-
+\printchapterendnotes
 %----------------------------------------------------------------------------------------
 %	Acknowledgements
 %----------------------------------------------------------------------------------------
@@ -168,7 +168,7 @@ With our chosen style of citations, we tried to provide references that would wi
 We decided to set a previous book in fonts by Erik Spiekermann after seeing ``Helvetica'' by Gary Hustwit (2007). We carried that through here.  InfoOTDisp-Book is copyrighted by Ole Schaefer and Erik Spiekermann; it is published by FSI Fonts und Software GmbH.  Eurostile Extended Regular and Eurostile W01 Regular are copyrighted 2006 and 2010 by URW Design and Development.  
 
 For typesetting and formatting, we chose LaTex.  We repeatedly consulted various AI and Internet sources for coding the document which generated the paper.  For bibliographic formatting, we frequently used MyBib. \endnote{Mybib. “MyBib Bibliography Generator.” MyBib.Com, 13 July 2018, \url{https://www.mybib.com}. Accessed 12 July 2026.}
-
+\printchapterendnotes
 %----------------------------------------------------------------------------------------
 %	Introduction
 %----------------------------------------------------------------------------------------
@@ -177,7 +177,7 @@ For typesetting and formatting, we chose LaTex.  We repeatedly consulted various
 
 Your introduction text goes here...
 
-
+\printchapterendnotes
 \mainmatter
 
 
@@ -240,7 +240,7 @@ Your introduction text goes here...
 \begin{center}\vspace{-0.5\baselineskip}\parbox{0.85\textwidth}{\small\itshape
 We conducted a risk assessment to better understand the threat of criminal action against an in-house system.  We examined both cybercrimes and physical crimes using data that was normalized to a per-capita rates of crimes.  We drew from FBI \gls{icc} annual reports and Chattanooga Police open data records.  The population samples were taken from the US Census Bureau reports.\par}\end{center}
 \section{Introduction}
-\begin{figure}[h]
+\begin{figure}[h!]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-07-28 145652.png}}}
   \caption{Example run of a Monte Carlo simulation using state-level data to set bounds.  Here we chose Personal Data Breach victim counts from 2016 and 2022 as upper and lower bounds. 10,000 rows projected randomized values between these bounds and determined mean and counts by confidence interval.
@@ -248,16 +248,27 @@ We conducted a risk assessment to better understand the threat of criminal actio
   }
   \label{fig:screenshot-montecarlo1}
 \end{figure}
+\subsubsection{Background and Content}
+We had a modest amount of education in Statistics as we began the project.  Our skills were derived primarily from three college courses.  At Chattanooga State Community College in 2011, we had courses in "Elementary Statistics." \endnote{Triola, Mario F. Elementary Statistics Technology Update + Mystatlab Student Access Code Card. Pearson College Division, 2012.} This was an algebra-based course that focused on the fundamentals of applying data to normal distributions.  Also there in 2012, we had a course in "Statistics for Engineers." \endnote{Levine, David M, et al. Applied Statistics for Engineers and Scientists. Pearson, 2001.} This was an algebra-based course that discussed various quality control techniques and statistical modeling.  In 2023 at Harvard University Extension School, we had a graduate course in "Risk in Information Security" with Derek Brink.  \endnote{Hubbard, Douglas W, and Richard Seiersen. How to Measure Anything in Cybersecurity Risk. Wiley, 2016.}  Professor Brink authored the Excel spreadsheet which we have used for Monte Carlo simulations.
 
-\begin{figure}[h]
+\begin{figure}[h!]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-07-28 145609.png}}}
-  \caption{Example results of applying Monte Carlo simulation to advising decision making.  Here we see the assertion that there is a 90\% likelihood that the number of victims will be between 457 and 879; the mean of the simulation was 667.\protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}}
+  \caption{Example results of applying Monte Carlo simulation to forecasting.  Here we see the assertion that there is a 90\% likelihood that the number of victims will be between 457 and 879; the mean of the simulation was 667.\protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}}
   \label{fig:screenshot-montecarlo1}
 \end{figure}
 
-\subsubsection{Background and Content}
+The spreadsheet conducts 10,000 simulations of data points between user-supplied bounds.  Sheets in the Excel workbook are capable of conducting a variety of these simulations.  They are differentiated by modeling style (uniform, triangular, normal, binary, or discrete) and points of interest (count, cost, or percentage).
 
+Each of the simulating rows follows these general steps:
+\begin{itemize}
+\item{Reference the lower bound.}
+\item{Ascertain the range between lower and upper bounds.}
+\item{Generate a random number.}
+\item{Multiply the random number against the range value.}
+\item{Install the generated random value in a cell.}
+\end{itemize}
+The row values are then counted, sorted, and ranked into confidence intervals.  The values and critical points are plotted on various graphs.  The end result is that it is easy for an opertor of the spreadsheet to generate a Monte Carlo simulation of a distribution between bounds.  Since there are enough iterations (10,000), the simulation can have statistical value.  Since the inputs on the spreadsheet can be readily modified and since the cells are calculated upon page saving or loading, new simulations can be run with ease.  We recognized Professor Brink's spreadsheet was a useful tool that we could apply to forecasts of interest to us here.
 \subsubsection{Problem Statement}
 \subsubsection{Project Objectives}
 \subsubsection{Scope of Work}
