@@ -238,7 +238,7 @@ Your introduction text goes here...
 
 
 \begin{center}\vspace{-0.5\baselineskip}\parbox{0.85\textwidth}{\small\itshape
-We conducted a risk assessment to better understand the threat of criminal action against an in-house system.  We examined both cybercrimes and physical crimes using data that was normalized to a per-capita rates of crimes.  We drew from FBI \gls{icc} annual reports and Chattanooga Police open data records.  The population samples were taken from the US Census Bureau reports.\par}\end{center}
+We conducted a risk assessment to better understand the threat of criminal action against an in-house system.  We examined both cybercrimes and physical crimes using data that was normalized to a per-capita rates of crimes.  We drew from FBI \gls{ic3} annual reports and Chattanooga Police open data records.  The population samples were taken from the US Census Bureau reports.\par}\end{center}
 \section{Introduction}
 \begin{figure}[h!]
   \centering
@@ -274,7 +274,7 @@ The row values are then counted, sorted, and ranked into confidence intervals.  
 \subsubsection{Scope of Work}
 \subsubsection{Variables}
 \subsubsection{Assumptions, Risks, and Limitations}
-We set out to better understand the rates of computer-related crimes in our area using public data sources.  We drew from FBI \gls{icc} annual reports and Chattanooga Police open data records.  The \gls{icc} reports provided categorical breakdowns of different types of internet-related crimes.  In the past, we were able to find per-state breakdowns of those crimes.  The FBI would provide four views of computer crime:  overall count, overall financial impact, victim count, and per-victim financial impact.  This was available both nationally and per state.  When following up in 2026, we noticed we were only able to immediately discover the national-level summaries of crime.
+We set out to better understand the rates of computer-related crimes in our area using public data sources.  We drew from FBI \gls{ic3} annual reports and Chattanooga Police open data records.  The \gls{ic3} reports provided categorical breakdowns of different types of internet-related crimes.  In the past, we were able to find per-state breakdowns of those crimes.  The FBI would provide four views of computer crime:  overall count, overall financial impact, victim count, and per-victim financial impact.  This was available both nationally and per state.  When following up in 2026, we noticed we were only able to immediately discover the national-level summaries of crime.
 
 Anecdotally, we know that we have witnessed several of these crimes at rates higher than shown in these tables (Tables \ref{tab:chattanoogacrime2}, \ref{tab:chattanoogacrime3}, \ref{tab:chattanoogacrime4}).  We suspect that we're seeing numbers this low because few victims are taking the steps necessary to report computer crimes to federal authorities.  For example, when companies or individuals encounter ransomware, their reactions may involve repairing the afffected endpoint but not informing law enforcement.  Nonetheless, those authorities have been the public's observable source of crime reporting.  While we continue to use this data, we may need to accept that true counts of cybercrime in the city must be scaled by an unknown factor.
 
@@ -289,7 +289,13 @@ As we examine the data from the public data sources and we feel that the reporte
 \subsubsection{Gaps in the Literature}
 
 \section{Methodology}
-We took cybercrime data from a seven year span of \gls{icc} publications.  The annual reports for the nation and for each state showed a count of victims per category of cybercrime.  The \gls{us} \gls{fbi} defined each category for their report.  We put that data into a matrix, organized by year and category of crime.  
+\begin{figure}[h!]
+  \centering
+  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/boxwhisker-tnpersdatabreach2016.png}}}
+  \caption{Seven year summary of personal data breaches in Tennessee reported to \gls{ic3}. }
+  \label{fig:screenshot-boxwhisker-tnpersdatabreach2016}
+\end{figure}
+We took cybercrime data from a seven year span of \gls{ic3} publications.  The annual reports for the nation and for each state showed a count of victims per category of cybercrime.  The \gls{us} \gls{fbi} defined each category for their report.  We put that data into a matrix, organized by year and category of crime.  
 
 Each state we chose got its own matrix. We noticed that three states typically had high counts of crime; they were:  California, Texas, and Florida.  We noticed that US territories, like American Samoa, US Virgin Islands, and Puerto Rico, were reported also as if they were a state.  These smaller areas with lower populations also showed lowed low counts of cybercrime.  We chose these high crime areas (e.g. California) and low crime areas (e.g. American Samoa) as our guides for choosing maximum and minimum limits.  Our desired target areas were chosen by the target's home state; our intial runs included Chattanooga, Tennessee.
 
@@ -299,7 +305,7 @@ Our main data sets are provided in the public interest; they're based on large u
 
 To smooth out the counts of cybercrime into rates, we adjusted these state victim counts per capita.  We chose the US Census reports for those years to be the population values of the states.  This would provide us with a per capita rate of cybercrime based on the chosen state which represented the chosen limit or target in the distribution.
 
-Formally, we note this process below as shown in Figure \ref{fig:statcalc-percap}.  $R$ represents our result.  $N_t$ represents our constant for target sample population and is used for multiplying the rate to scale it to match the population of the target. $t$ represents our starting year for the sample from \gls{icc} and coordinates the rows until it progresses to the final year chosen which is denoted by $n$. $i$ represents our chosen category index of cybercrime. $j$ represents our year index and is built with $t$ until it progresses to the final year of the sample denoted by $n$. $P_j$ represents the population of the target city at year $j$, drawn from matrix $P$.
+Formally, we note this process below as shown in Figure \ref{fig:statcalc-percap}.  $R$ represents our result.  $N_t$ represents our constant for target sample population and is used for multiplying the rate to scale it to match the population of the target. $t$ represents our starting year for the sample from \gls{ic3} and coordinates the rows until it progresses to the final year chosen which is denoted by $n$. $i$ represents our chosen category index of cybercrime. $j$ represents our year index and is built with $t$ until it progresses to the final year of the sample denoted by $n$. $P_j$ represents the population of the target city at year $j$, drawn from matrix $P$.
 
 \begin{figure}[h!]
   \centering
@@ -345,7 +351,7 @@ p_n
   \label{fig:statcalc-popmatrix}
 \end{figure}
 
-The second matrix, $M$ as shown in Figure \ref{fig:statevent-victimcount}, organises the raw cybercrime counts from \gls{icc} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted to a per-capita rate.
+The second matrix, $M$ as shown in Figure \ref{fig:statevent-victimcount}, organises the raw cybercrime counts from \gls{ic3} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted to a per-capita rate.
 
 
 \begin{figure}[h!]
@@ -378,7 +384,7 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 \end{figure}
 
 
-The third matrix, $V$ as shown in Figure \ref{fig:statevent-victimimpact}, organises the victim impact in USD from \gls{icc} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted later to a per-capita rate.
+The third matrix, $V$ as shown in Figure \ref{fig:statevent-victimimpact}, organises the victim impact in USD from \gls{ic3} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted later to a per-capita rate.
 \begin{figure}[h!]
   \centering
 \[
@@ -409,7 +415,7 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
   \label{fig:statevent-victimimpact}
 \end{figure}
 
-The fourth matrix, $S$ as shown in Figure \ref{fig:statevent-suspectcount}, organises the count of suspects from \gls{icc} by category and year.  Each entry $a_{j,i}$ helps us to understand how many suspects are operating within an area of concern.  This is a count that will be adjusted later to a per-capita rate.
+The fourth matrix, $S$ as shown in Figure \ref{fig:statevent-suspectcount}, organises the count of suspects from \gls{ic3} by category and year.  Each entry $a_{j,i}$ helps us to understand how many suspects are operating within an area of concern.  This is a count that will be adjusted later to a per-capita rate.
 
 \begin{figure}[h!]
   \centering
@@ -440,7 +446,7 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
   \label{fig:statevent-suspectcount}
 \end{figure}
 
-The fifth matrix, $D$ as shown in Figure \ref{fig:statevent-suspectdamage}, organises the damages attributed by suspects in USD from \gls{icc} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted later to a per-capita rate.  This helps us to understand rates of effective impact, per suspect, in a given area.
+The fifth matrix, $D$ as shown in Figure \ref{fig:statevent-suspectdamage}, organises the damages attributed by suspects in USD from \gls{ic3} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted later to a per-capita rate.  This helps us to understand rates of effective impact, per suspect, in a given area.
 
 \begin{figure}[h!]
   \centering
@@ -472,7 +478,48 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 \end{figure}
 
 
-We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}. The entries $a_{j,i}$ are the raw counts taken from the \gls{icc} state-level reports for the chosen source state.  Dividing each entry by $P_j$ converts it to a per-capita rate; multiplying by $N_t$ then scales that rate to match the population of the target city.  The population values in $P$ provide the year-by-year context for $N_t$ and confirm the representativeness of the scaling.  Summing the selected column $i$ of the per-capita-adjusted $M$ across all years yields the final result $R$.
+We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}. The entries $a_{j,i}$ are the raw counts taken from the \gls{ic3} state-level reports for the chosen source state.  Dividing each entry by $P_j$ converts it to a per-capita rate; multiplying by $N_t$ then scales that rate to match the population of the target city.  The population values in $P$ provide the year-by-year context for $N_t$ and confirm the representativeness of the scaling.  Summing the selected column $i$ of the per-capita-adjusted $M$ across all years yields the final result $R$.
+
+
+\begin{table}[h!]
+  \centering
+  \caption{Changes to City of Chattanooga's Population}
+  \label{tab:chattanoogacrime1}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.15\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}}
+    \toprule
+    \textbf{Year} & 
+    \rotatebox{90}{\begin{tabular}{@{}ll@{}}American Samoa\\Population\end{tabular}} &
+    \rotatebox{90}{\begin{tabular}{@{}ll@{}}References\end{tabular}} &
+    \rotatebox{90}{\begin{tabular}{@{}ll@{}}City of Chattanooga\\Population\end{tabular}} &
+    \rotatebox{90}{\begin{tabular}{@{}ll@{}}References\end{tabular}} &
+    \rotatebox{90}{\begin{tabular}{@{}ll@{}}State of Tennessee\\Population\end{tabular}} &
+    \rotatebox{90}{\begin{tabular}{@{}ll@{}}References\end{tabular}} &
+    \rotatebox{90}{\begin{tabular}{@{}ll@{}}State of California\\Population\end{tabular}} &
+    \rotatebox{90}{\begin{tabular}{@{}ll@{}}References\end{tabular}} 
+
+    \\
+    \midrule
+2016&&&177,746&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,646,010&\endnote{\url{https://www.census.gov/quickfacts/fact/table/TN/PST045222}}\\
+2017&&&179,530&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,708,799&\endnote{\url{https://www.census.gov/quickfacts/fact/table/TN/PST045222}}\\
+2018&&&181,918&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,771,631&\endnote{\url{https://www.census.gov/quickfacts/fact/table/TN/PST045222}}\\
+2019&&&182,799&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,829,174&\endnote{\url{https://www.census.gov/quickfacts/fact/table/TN/PST045222}}\\
+2020&&&181,560&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,925,619&\endnote{\url{https://www2.census.gov/programs-surveys/popest/datasets/2020-2022/state/totals/NST-EST2022-POPCHG2020_2022.csv}}\\
+2021&&&181,163&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,968,351&\endnote{\url{https://www2.census.gov/programs-surveys/popest/datasets/2020-2022/state/totals/NST-EST2022-POPCHG2020_2022.csv}}\\
+2022&&&184,086&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&7,051,339&\endnote{\url{https://www2.census.gov/programs-surveys/popest/datasets/2020-2022/state/totals/NST-EST2022-POPCHG2020_2022.csv}}\\
+
+    \bottomrule \end{tabular} 
+\raggedright{City population based on the US Census reported population for the City of Chattanooga itself.  Surrounding satellite cities and unincorporated areas within the Hamilton County, Tennessee, were not included.}
+\end{table}
+
 
 
 \begin{table}[h!]
