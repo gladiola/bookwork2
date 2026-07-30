@@ -270,17 +270,49 @@ Each of the simulating rows follows these general steps:
 \end{itemize}
 The row values are then counted, sorted, and ranked into confidence intervals.  The values and critical points are plotted on various graphs.  The end result is that it is easy for an opertor of the spreadsheet to generate a Monte Carlo simulation of a distribution between bounds.  Since there are enough iterations (10,000), the simulation can have statistical value.  Since the inputs on the spreadsheet can be readily modified and since the cells are calculated upon page saving or loading, new simulations can be run with ease.  We recognized Professor Brink's spreadsheet was a useful tool that we could apply to forecasts of interest to us here.
 \subsubsection{Problem Statement}
+We need a cheap source of risk information to inform procedural decisions in the lab.  We can't afford to pay a vendor for intelligence feeds.  Free attack-specific feeds that work well for defense technologies like Snort or Suricata are not in a form that would inform policy-level risk decisions.  We want to gather this information efficiently and without generating any civil or criminal liability or threats; we're not going to conduct firsthand research in cybercrime forums to determine what shape a localized risk might take.  We want to be able to  use publicly available cybercrime data in order to persue commercial-grade decisions on a localized scale in a manner that is informed and practical.
+
+These conditions suggest that we should use the following resources:
+\begin{itemize}
+  \item \gls{us} \gls{ic3} data
+  \item \gls{cert} data from other nations
+  \item Open Data from local government agencies
+  \item MITRE ATT\&CK for guiding data selection
+  \item Other scientifically valid open data sources.
+\end{itemize}
+
+We found during our research that there would sometimes be promising documents published by security vendors and software companies.  Unfortunately, many of those were not accompanied by scientifically valid open data sources.  So it is with caution that we could sometimes accept the assertions; however, we sometimes found that the reports were useless beyond identifying an anecdotal cause, condition, or effect.  Without data to quantify those identified conditions, we were sometimes left with a good idea that could not be proven in a manner that supported a quantitative risk assessment.  In those times, those leads had to sometimes be abandoned or be allowed to fall short of their potential impact.  Unscientific assertions from vendors seemed to be a trend in our research environment; unscientific assertions from vendors is such a part of the problem's environment that it is a problem almost unto itself.
+
 \subsubsection{Project Objectives}
+We want to be able to conduct a quantative risk assessment for our small project lab that would be scientific and illustrative enough to allow others to accept it as guidance.  
+
+We want others to be able to conduct their own risk assessments 
+and be able to use these notes as a pattern for their own benefit.
+
+We want to proceed with an educated, professionally supported philosophical framework of ideas.  We didn't want to decay into philosophical edge cases like harshly questioning cause and effect, blindly ignoring unquantified threats, or emotionally fueling conspiratorial fears.  We need to keep our feet on the ground and our systems defended; but, if the risk assessment shows that threats are rare or severe, then we need to understand that through quantitative analysis.
+
 \subsubsection{Scope of Work}
+We chose to limit our risk analysis to the algebraic scaling of \gls{ic3} data on Excel spreadsheets to limit the calculations by hand.  The data has four main trends (victim count, victim impact, suspect count, suspect impact), but to keep the analysis productive we would proceed all the way through with victim count.  This would support an assessment of likelihood.  Then we would go through the mathematics again to determine severity by scaling the values of victim impact.  With those two categories available, we would have the minimum amount of data needed to conduct a quantitative assessment of likelihood and severity.  This would meet the minimum expectations of most risk assessments' data analysis needs.
+
+We would need to scope the data to understand it in a verifiable context.  Since our goal is to analyze a project-sized scaling, we would need to couch that target between verifiable guideposts.  So, we chose to scale state-level data to our city's population.  Alongside this, we could scale state-level data to a small organization's size (e.g. 150 people as stakeholders).  Since that scaled data would be calculated, we would want to present it in context with states and territories that represented high and low levels of cybercrime (California and American Samoa).  This way we would set a scope that would allow a reader to see the effect of scaling from known states down to the small business organization level.  
 \subsubsection{Variables}
+Not all of the collected \gls{ic3} data categories were stable over time.  As the reports were produced year to year, new threats emerged and the cybercrime field changed.  This meant that some categories that were present at the older end of our analysis (2016) were not present at the end of our sampling (2022) or later.  Because of this, we had to ignore some categories or combine others.  Variability in criminal activity affected reporting.  
+
+This had indirect effects on our analysis.  Check Fraud and Credit Card Fraud, as activity titles, changed over the years.  Threats to people, in the form of both Terrorism and Stalking, changed over the years.  This meant that we chose to ignore some categories that would seem to have value to commercial businesses while combining counts into one category in others.  Our picking and choosing among the categories genuinely shapes the risk picture we're considering as we do the risk assessment.  Our projects and labs can't live in a fictional world where entire threat categories don't exist; but, we had to keep the data calculatable in order to proceed. 
 \subsubsection{Assumptions, Risks, and Limitations}
 We set out to better understand the rates of computer-related crimes in our area using public data sources.  We drew from FBI \gls{ic3} annual reports and Chattanooga Police open data records.  The \gls{ic3} reports provided categorical breakdowns of different types of internet-related crimes.  In the past, we were able to find per-state breakdowns of those crimes.  The FBI would provide four views of computer crime:  overall count, overall financial impact, victim count, and per-victim financial impact.  This was available both nationally and per state.  When following up in 2026, we noticed we were only able to immediately discover the national-level summaries of crime.
 
 Anecdotally, we know that we have witnessed several of these crimes at rates higher than shown in these tables (Tables \ref{tab:chattanoogacrime2}, \ref{tab:chattanoogacrime3}, \ref{tab:chattanoogacrime4}).  We suspect that we're seeing numbers this low because few victims are taking the steps necessary to report computer crimes to federal authorities.  For example, when companies or individuals encounter ransomware, their reactions may involve repairing the afffected endpoint but not informing law enforcement.  Nonetheless, those authorities have been the public's observable source of crime reporting.  While we continue to use this data, we may need to accept that true counts of cybercrime in the city must be scaled by an unknown factor.
 
-The Chattanooga Police Department, like other departments of the City of Chattanooga, participate in an open data project.  Anonymonized crime reports are provided to the public in a manner that lets us track by approximate region of the city and by category of crime.  We chose to do this because we recognized some crimes would be reported to local police that were not reported to federal authorities.  Some crimes, such as extortion, intimidation, or physical break-ins, were more likely to be handled by local police.  Since the systems involved are in-scope for physical damage, we felt the Chattanooga Police Department's open data would be the best public source for supporting criminal threat forecasts for events like burglary from a vehicle.  Some policed crimes may focus upon:  employees, facility safeguards, loss of computer equipment in public, loss of computer equipment by theft from facilities or vehicles, and so on.  
+The Chattanooga Police Department, like other departments of the City of Chattanooga, participate in an open data project.  Anonymonized crime reports are provided to the public in a manner that lets us track by approximate region of the city and by category of crime.  We chose to do this because we recognized some crimes would be reported to local police that were not reported to federal authorities.  Some crimes, such as physical break-ins, were more likely to be handled by local police.  Since the systems involved are in-scope for physical damage, we felt the Chattanooga Police Department's open data would be the best public source for supporting criminal threat forecasts for events like burglary from a vehicle.  Some of the crime categories, such as extortion or threats against a person, could be reported to either federal \gls{ic3} or local police; the nature of the threats might be different; but, there may be more direct physical threats reported to local police; there is no formal mimetic analysis that would shuttle a threatening complaint to one law enforcement agency or another.  Meanwhile, some locally policed crimes may focus upon:  employees, facility safeguards, loss of computer equipment in public, loss of computer equipment by theft from facilities or vehicles, and so on.  
 
 As we examine the data from the public data sources and we feel that the reported rates are less than our experience would justify, we have to recognize that there may be shortcomings in the reported data.  Perhaps we would do well to scale the rates up to meet our experience.  However, those arbitrary inflations would damage the validity of our academic risk calculations.  So, for the time being, we leave the inflation or deflation of the end results for the reader as a localized adjustment.  Since our main goal is to show a method for determining the risks through the reported data, it could be argued that the exact numbers are less relevant than the demonstrated methods.
+\subsubsection{Limitations Imposed by Federal Law Enforcement in Tennessee}
+During our research, one shocking fact came to light.  At the Cybersecurity Summit conference in Nashville, TN in 2023, Derek Rousseau, a Special Agent from the FBI Nashville Cyber Squad, presented and answered a Q\&A.  To our surprise, the special agent answered a direct question, How much money needs to be at stake for the \gls{fbi} to get involved in a cybercrime?  His answer was that the US Attorney in Nashville wanted to see at least \$100,000 in damage for domestic crimes or \$400,000 in damage for international crimes.  For damage amounts below that, it was not effective to devote an \gls{fbi} special agent to investigate the crime.  As a result, the special agent encouraged the reporting of smaller crimes so that cases could be aggregated against a suspect to levels that merited federal investigation and prosecution.  Later, as we compare \gls{ic3} crime data, we'll see that many of the annual totals are below these limits.  This suggests that the \gls{us} is prosecuting only a fraction of those reported crimes that affect the population.
+\subsubsection{Limitations Derived from Reporting}
+Another limitation on our projections arises from the voluntary nature of the reporting.  Since victims or defenders need to advise the \gls{ic3} of a security event, only those who follow through with the voluntary reporting actions will get counted.  Commercial defenders will see that in their experience only a small number of daily cybersecurity events will seem worthy to report to federal law enforcement; the scope of true attacks would seem through those anecdotes to be much greater than the reported numbers.  Since all of the reports are likely to be initiated by those who speak up, we cannot escape the experimental design problems associated with a convenience sample when using \gls{ic3} data for our statistics.
+
+As we've seen and will see, the grouping of those reports does not match our experimental needs.  States and nations are simply too large to be of practical benefit to defenders.  Most small businesses and organizations will need the value of public information; commercial vendors can provide similar data for a fee; we need the free data, but we need to tailor it down to the size of a defending organization to apply it realistically to risk assessments for cybersecurity defense.
 \subsubsection{Significance of the Project}
 
 \section{Literature Review}
@@ -483,7 +515,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 
 \begin{table}[h!]
   \centering
-  \caption{Changes to City of Chattanooga's Population}
+  \caption{Changes to Population in Key Areas}
   \label{tab:chattanoogacrime1}
   \begin{tabular}{@{}>{\centering\arraybackslash}
   p{0.15\linewidth} >{\centering\arraybackslash}
@@ -517,40 +549,53 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 2022&&&184,086&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&7,051,339&\endnote{\url{https://www2.census.gov/programs-surveys/popest/datasets/2020-2022/state/totals/NST-EST2022-POPCHG2020_2022.csv}}\\
 
     \bottomrule \end{tabular} 
-\raggedright{City population based on the US Census reported population for the City of Chattanooga itself.  Surrounding satellite cities and unincorporated areas within the Hamilton County, Tennessee, were not included.}
+\raggedright{City population based on the US Census reported population for the City of Chattanooga itself.  Surrounding satellite cities and unincorporated areas within the Hamilton County, Tennessee, were not included. Population for the State of Tennessee provided perspective on calculated rates in later tables. Population for American Samoa and the State of California were included for perspective on maximum and minimum counts in later tables.}
 \end{table}
+
 
 
 
 \begin{table}[h!]
   \centering
-  \caption{Changes to City of Chattanooga's Population}
-  \label{tab:chattanoogacrime1}
-  \begin{tabular}{@{}>{\centering\arraybackslash}p{0.15\linewidth} >{\centering\arraybackslash}p{0.35\linewidth}>{\centering\arraybackslash}p{0.35\linewidth}>{\centering\arraybackslash}p{0.05\linewidth}}
-    \toprule
-    Year & City of Chattanooga Population &Change Since Previous Year &\\
-    \midrule
-2016&177,746&Baseline&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
-2017&179,530&1,784&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
-2018&181,918&2,388&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
-2019&182,799&881&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
-2020&181,560&-1,239&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
-2021&181,163&-397&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
-2022&184,086&2,923&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}\\
-  
-    \bottomrule \end{tabular} 
-\raggedright{City population based on the US Census reported population for the City of Chattanooga itself.  Surrounding satellite cities and unincorporated areas within the Hamilton County, Tennessee, were not included.}
-\end{table}
-
-\begin{table}[h!]
-  \centering
-  \caption{Cybercrime, City of Chattanooga, Threats to System Intrusion}
+  \caption{Projected In-City Victim Counts, City of Chattanooga, Threats to System Intrusion}
   \label{tab:chattanoogacrime2}
-  \begin{tabular}{@{}>{\centering\arraybackslash}p{0.05\linewidth} >{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.05\linewidth}}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.05\linewidth} >{\centering\arraybackslash}
+  p{0.35\linewidth}>{\centering\arraybackslash}
+  p{0.35\linewidth}>{\centering\arraybackslash}
+  p{0.05\linewidth}}
     \toprule
     Year
     &Data Breach
     &Personal Data Breach
+    &\\
+    \midrule
+        
+
+2016&1&11&\endnote{original\url{https://www.ic3.gov/Media/PDF/AnnualReport/2016State/StateReport.aspx\#?s=47} current \url{https://www.ic3.gov/AnnualReport/Reports/2016_IC3Report.pdf}}\\
+2017&1&1&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2017State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2017_IC3Report.pdf}}\\
+2018&0&18&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2018State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2018_IC3Report.pdf}}\\
+2019&0&13&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2019State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2019_IC3Report.pdf}}\\
+2020&0&18&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2020State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2020_IC3Report.pdf}}\\
+2021&0&19&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2021State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2021_IC3Report.pdf}}\\
+2022&1&23&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2022State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2022_IC3Report.pdf}}\\
+
+    \bottomrule \end{tabular} 
+  \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year.}
+\end{table}
+
+
+\begin{table}[h!]
+  \centering
+  \caption{Projected In-City Victim Counts, City of Chattanooga, Threats to System Intrusion}
+  \label{tab:chattanoogacrime3}
+  \begin{tabular}{@{}>{\centering\arraybackslash}p{0.05\linewidth} >{\centering\arraybackslash}
+  p{0.25\linewidth}>{\centering\arraybackslash}
+  p{0.25\linewidth}>{\centering\arraybackslash}
+  p{0.25\linewidth}>{\centering\arraybackslash}
+  p{0.05\linewidth}}
+    \toprule
+    Year
     &Malware
     &Phishing
     &Ransomware
@@ -558,13 +603,13 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
     \midrule
         
 
-2016&1&11&1&7&1&\endnote{original\url{https://www.ic3.gov/Media/PDF/AnnualReport/2016State/StateReport.aspx\#?s=47} current \url{https://www.ic3.gov/AnnualReport/Reports/2016_IC3Report.pdf}}\\
-2017&1&1&1&9&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2017State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2017_IC3Report.pdf}}\\
-2018&0&18&0&8&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2018State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2018_IC3Report.pdf}}\\
-2019&0&13&1&8&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2019State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2019_IC3Report.pdf}}\\
-2020&0&18&0&9&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2020State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2020_IC3Report.pdf}}\\
-2021&0&19&0&11&1&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2021State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2021_IC3Report.pdf}}\\
-2022&1&23&0&7&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2022State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2022_IC3Report.pdf}}\\
+2016&1&7&1&\endnote{original\url{https://www.ic3.gov/Media/PDF/AnnualReport/2016State/StateReport.aspx\#?s=47} current \url{https://www.ic3.gov/AnnualReport/Reports/2016_IC3Report.pdf}}\\
+2017&1&9&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2017State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2017_IC3Report.pdf}}\\
+2018&0&8&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2018State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2018_IC3Report.pdf}}\\
+2019&1&8&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2019State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2019_IC3Report.pdf}}\\
+2020&0&9&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2020State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2020_IC3Report.pdf}}\\
+2021&0&11&1&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2021State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2021_IC3Report.pdf}}\\
+2022&0&7&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2022State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2022_IC3Report.pdf}}\\
 
     \bottomrule \end{tabular} 
   \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year.}
@@ -572,14 +617,20 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 
 \begin{table}[h!]
   \centering
-  \caption{Cybercrime, City of Chattanooga, Threat to Personnel Via Network}
-  \label{tab:chattanoogacrime3}
-  \begin{tabular}{@{}>{\centering\arraybackslash}p{0.05\linewidth} >{\centering\arraybackslash}p{0.25\linewidth}>{\centering\arraybackslash}p{0.25\linewidth}>{\centering\arraybackslash}p{0.25\linewidth}>{\centering\arraybackslash}p{0.05\linewidth}}
+  \caption{Projected In-City Victim Counts, City of Chattanooga, Threats to Personnel}
+  \label{tab:chattanoogacrime4}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.05\linewidth} >{\centering\arraybackslash}
+  p{0.25\linewidth}>{\centering\arraybackslash}
+  p{0.25\linewidth}>{\centering\arraybackslash}
+  p{0.25\linewidth}>{\centering\arraybackslash}
+  p{0.05\linewidth}}
     \toprule
-\thead{Year} &
-\thead{Crimes Against\\Children} &
-\thead{Extortion} &
-\thead{Threats, Stalking,\\Harassment, and Terrorism} \\
+    Year &
+    \rotatebox{90}{\begin{tabular}{@{}ll@{}}Crimes Against\\Children\end{tabular}} &
+    \rotatebox{90}{\begin{tabular}{@{}ll@{}}Extortion\end{tabular}} &
+    \rotatebox{90}{\begin{tabular}{@{}ll@{}}Threats, Stalking,\\Harassment, and Terrorism\end{tabular}} &
+ \\
 \midrule
 2016&0&9&7&\endnote{original\url{https://www.ic3.gov/Media/PDF/AnnualReport/2016State/StateReport.aspx\#?s=47} current \url{https://www.ic3.gov/AnnualReport/Reports/2016_IC3Report.pdf}}\\
 2017&0&7&6&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2017State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2017_IC3Report.pdf}}\\
@@ -595,8 +646,8 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 
 \begin{table}[h!]
   \centering
-  \caption{Cybercrime, City of Chattanooga, Theft of Data Via Network}
-  \label{tab:chattanoogacrime4}
+  \caption{Projected In-City Victim Counts, City of Chattanooga, Theft of Data Via Network}
+  \label{tab:chattanoogacrime5}
   \begin{tabular}{@{}
   >{\centering\arraybackslash}p{0.05\linewidth} 
   >{\centering\arraybackslash}p{0.25\linewidth} 
