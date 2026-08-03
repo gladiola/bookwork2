@@ -670,6 +670,17 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
   \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's population for that year.}
 \end{table}
 
+\subsubsection{Methodology for Monte Carlo Simulations in Excel}
+We chose \gls{ic3} crime data from American Samoa to act as our 10\% confidence limit.  We chose data from Californiz to act as our 90\% confidence limit.  We set those limits by looking at seven year spans of crime data and taking the median.  This means we would be likely to have observations above and below the limits, but that the limits themselves would have a basis in observation.  
+We input and processed the data as follows:
+\begin{itemize}
+\item We imported the data from\gls{ic3} crime tables
+\item We calculated counts and costs for Chattanooga, American Samoa, and California.
+\item We imported a Uniform distribution table from the Monte Carlo Toolkit.
+\item We set median summary counts from American Samoa as our 10\% interval.
+\item We set median summary counts from California as our 90\% interval.
+\item We accepted the Monte Carlo percentages and exceedence curves.
+\end{itemize}
 
 \section{Analysis}
 
