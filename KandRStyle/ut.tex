@@ -51,7 +51,7 @@ bindingoffset=0.12in]{geometry}
 \fancyhead[LE,RO]{\thepage}
 \fancyhead[RE,LO]{\small\itshape \leftmark}
 
-
+\usepackage{float}
 %---------- ENDNOTES -----------------
 % Endnotes: inline [n], printed later
 \usepackage{endnotes}
@@ -225,7 +225,7 @@ Your introduction text goes here...
 %Future of the RED Project
 %Enhance RED Data 
 
-%\begin{figure}[h!]
+%\begin{figure}[H]
 %  \centering
 %  \caption{}
 %  \label{fig:}
@@ -240,7 +240,7 @@ Your introduction text goes here...
 \begin{center}\vspace{-0.5\baselineskip}\parbox{0.85\textwidth}{\small\itshape
 We conducted a\index{risk assessment} risk assessment to better understand the threat of criminal action against an in-house system.  We examined both \index{cybercrime} cybercrimes and physical crimes using data that was normalized to a per-capita rates of crimes.  We drew from FBI \gls{ic3} annual reports and\index{Chattanooga} Chattanooga Police\index{open data} Open Data records.  The \index{population} population\index{sample} samples were taken from the\index{US Census} US Census Bureau reports.\par}\end{center}
 \section{Introduction}
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-07-28 145652.png}}}
   \caption{Example run of a\index{simulation!Monte Carlo} Monte Carlo simulation using state-level data to set bounds.  Here we chose\index{Personal Data Breach} Personal Data Breach victim counts from 2016 and 2022 as upper and lower bounds. 10,000 rows projected randomized values between these bounds and determined mean and counts by\index{confidence interval} confidence interval.
@@ -251,7 +251,7 @@ We conducted a\index{risk assessment} risk assessment to better understand the t
 \subsection{Background and Content}
 We had a modest amount of education in\index{statistics} statistics as we began the project.  Our skills were derived primarily from three college courses.  At\index{Chattanooga}\index{Community College!Chattanooga State} Chattanooga State Community College in 2011, we had courses in "Elementary Statistics." \endnote{Triola, Mario F. Elementary Statistics Technology Update + Mystatlab Student Access Code Card. Pearson College Division, 2012.} This was an algebra-based course that focused on the fundamentals of applying data to normal distributions.  Also there in 2012, we had a course in "Statistics for Engineers." \endnote{Levine, David M, et al. Applied Statistics for Engineers and Scientists. Pearson, 2001.} This was an algebra-based course that discussed various quality control techniques and statistical modeling.  In 2023 at\index{University!Harvard!Extension School} Harvard University Extension School, we had a graduate course in "Risk in Information Security" with Derek Brink.  \endnote{Hubbard, Douglas W, and Richard Seiersen. How to Measure Anything in Cybersecurity Risk. Wiley, 2016.}  Professor Brink authored the Excel spreadsheet which we have used for\index{simulation!Monte Carlo} Monte Carlo simulations.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-07-28 145609.png}}}
   \caption{Example results of applying\index{simulation!Monte Carlo} Monte Carlo simulation to forecasting.  Here we see the assertion that there is a 90\% likelihood that the number of victims will be between 457 and 879; the mean of the simulation was 667.\protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}}
@@ -291,6 +291,9 @@ and be able to use these notes as a pattern for their own benefit.
 
 We want to proceed with an educated, professionally supported philosophical framework of ideas.  We didn't want to decay into philosophical edge cases like harshly questioning cause and effect, blindly ignoring unquantified threats, or emotionally fueling conspiratorial fears.  We need to keep our feet on the ground and our systems defended; but, if the\index{risk assessment} risk assessment shows that threats are rare or severe, then we need to understand that through quantitative analysis.
 
+\subsubsection{Limits on Hypothesis Testing}
+By themselves, the Monte Carlo simulations will allow us to make some narrow assertions, but for the statistics to have greater local benefit follow-on data gathering and analysis would be needed.  In this project we are scaling down national and state level data to a more localized scope.  However, that doesn't provide us with testable hypothesis.  These statistics could be used as a baseline for understanding the context of other treatments, measurements, or forecasts; but, by themselves, there will be little we can prove or disprove with our simulations.  We will be able to make simple assertions about the likelihood and severity of impact certain cybercrime types may have on our sample, but we will not be able to forecast the effectiveness of any local treatments, mitigations, or defensive techniques.
+
 \subsection{Scope of Work}
 We chose to limit our risk analysis to the algebraic scaling of \gls{ic3} data on Excel spreadsheets to limit the calculations by hand.  The data has four main trends (victim count, victim impact, suspect count, suspect impact), but to keep the analysis productive we would proceed all the way through with victim count.  This would support an assessment of likelihood.  Then we would go through the mathematics again to determine severity by scaling the values of victim impact.  With those two categories available, we would have the minimum amount of data needed to conduct a quantitative assessment of likelihood and severity.  This would meet the minimum expectations of most\index{risk assessment} risk assessments' data analysis needs.
 
@@ -300,6 +303,9 @@ Not all of the collected \gls{ic3} data categories were stable over time.  As th
 
 This had indirect effects on our analysis.  Check Fraud and Credit Card Fraud, as activity titles, changed over the years.  Threats to people, in the form of both Terrorism and Stalking, changed over the years.  This meant that we chose to ignore some categories that would seem to have value to commercial businesses while combining counts into one category in others.  Our picking and choosing among the categories genuinely shapes the risk picture we're considering as we do the\index{risk assessment} risk assessment.  Our projects and labs can't live in a fictional world where entire threat categories don't exist; but, we had to keep the data calculatable in order to proceed. 
 \subsection{Assumptions, Risks, and Limitations}
+
+
+
 We set out to better understand the rates of computer-related crimes in our area using public data sources.  We drew from FBI \gls{ic3} annual reports and\index{Chattanooga} Chattanooga Police\index{open data} open data records.  The \gls{ic3} reports provided categorical breakdowns of different types of internet-related crimes.  In the past, we were able to find per-state breakdowns of those crimes.  The FBI would provide four views of computer crime:  overall count, overall financial impact, victim count, and per-victim financial impact.  This was available both nationally and per state.  When following up in 2026, we noticed we were only able to immediately discover the national-level summaries of crime.
 
 Anecdotally, we know that we have witnessed several of these crimes at rates higher than shown in these tables (Tables \ref{tab:chattanoogacrime2}, \ref{tab:chattanoogacrime3}, \ref{tab:chattanoogacrime4}).  We suspect that we're seeing numbers this low because few victims are taking the steps necessary to report computer crimes to federal authorities.  For example, when companies or individuals encounter ransomware, their reactions may involve repairing the afffected endpoint but not informing law enforcement.  Nonetheless, those authorities have been the public's observable source of crime reporting.  While we continue to use this data, we may need to accept that true counts of \index{cybercrime} cybercrime in the city must be scaled by an unknown factor.
@@ -323,7 +329,7 @@ We haven't found many examples outside of college classrooms that allow readers 
 
 In our hometown of\index{Chattanooga} Chattanooga, there have been public non-profit efforts to use\index{open data} open data in workshops that are free and open to the public.  Most of the data sets used for those activities are part of local government's participation in an\index{open data} open data initiative. \endnote{"City of Chattanooga Hub." Chattanooga.Gov, 2025, \url{https://data.chattanooga.gov/}} By working through Jupyter notebooks and group discussions, participants might learn more about public bicycle rental use, for example.  Our interests, meanwhile, lay firmly within the cybersecurity realm.  
 \section{Methodology}
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/boxwhisker-tnpersdatabreach2016.png}}}
   \caption{Seven year summary of\index{Personal Data Breach} Personal Data Breaches in Tennessee reported to \gls{ic3}. }
@@ -341,7 +347,7 @@ To smooth out the counts of \index{cybercrime} cybercrime into rates, we adjuste
 
 Formally, we note this process below as shown in Figure \ref{fig:statcalc-percap}.  $R$ represents our result.  $N_t$ represents our constant for target \index{sample} sample \index{population} population and is used for multiplying the rate to scale it to match the \index{population} population of the target. $t$ represents our starting year for the \index{sample} sample from \gls{ic3} and coordinates the rows until it progresses to the final year chosen which is denoted by $n$. $i$ represents our chosen category index of \index{cybercrime} cybercrime. $j$ represents our year index and is built with $t$ until it progresses to the final year of the \index{sample} sample denoted by $n$. $P_j$ represents the \index{population} population of the target city at year $j$, drawn from matrix $P$.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
 
 
@@ -357,7 +363,7 @@ R_j = N_t \sum_{j=t}^{t+6} \frac{X_{j,i}}{P_j}, \quad \text{where } X_{j,i} = \b
 
 Five matrices inform this calculation.  The first, $P$ as shown in Figure \ref{fig:statcalc-popmatrix}, records the target city \index{population} population for each year of the \index{sample} sample as a single column.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
 
 \[
@@ -388,7 +394,7 @@ p_n
 The second matrix, $M$ as shown in Figure \ref{fig:statevent-victimcount}, organises the raw \index{cybercrime} cybercrime counts from \gls{ic3} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted to a per-capita rate.
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
 \[
 M=
@@ -419,7 +425,7 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 
 
 The third matrix, $V$ as shown in Figure \ref{fig:statevent-victimimpact}, organises the victim impact in USD from \gls{ic3} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted later to a per-capita rate.
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
 \[
 V=
@@ -451,7 +457,7 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 
 The fourth matrix, $S$ as shown in Figure \ref{fig:statevent-suspectcount}, organises the count of suspects from \gls{ic3} by category and year.  Each entry $a_{j,i}$ helps us to understand how many suspects are operating within an area of concern.  This is a count that will be adjusted later to a per-capita rate.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
 \[
 S=
@@ -482,7 +488,7 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 
 The fifth matrix, $D$ as shown in Figure \ref{fig:statevent-suspectdamage}, organises the damages attributed by suspects in USD from \gls{ic3} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted later to a per-capita rate.  This helps us to understand rates of effective impact, per suspect, in a given area.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
 \[
 D=
@@ -515,7 +521,7 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}. The entries $a_{j,i}$ are the raw counts taken from the \gls{ic3} state-level reports for the chosen source state.  Dividing each entry by $P_j$ converts it to a per-capita rate; multiplying by $N_t$ then scales that rate to match the \index{population} population of the target city.  The \index{population} population values in $P$ provide the year-by-year context for $N_t$ and confirm the representativeness of the scaling.  Summing the selected column $i$ of the per-capita-adjusted $M$ across all years yields the final result $R$.
 
 
-\begin{table}[h!]
+\begin{table}[H]
   \centering
   \caption{Changes to \index{population} population in Key Areas}
   \label{tab:chattanoogacrime1}
@@ -557,7 +563,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 
 \subsubsection{Corporate and Personal Data Breaches}
 
-\begin{table}[h!]
+\begin{table}[H]
   \centering
   \caption{Projected In-City Victim Counts, City of\index{Chattanooga} Chattanooga, Threats to System Intrusion}
   \label{tab:chattanoogacrime2}
@@ -585,42 +591,42 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
     \bottomrule \end{tabular} 
   \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's \index{population} population for that year.}
 \end{table}
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-08-05 093747.png}}}
-  \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 50\% probability that 0.5 or more\index{data breach} data breaches will occur within the \index{sample} sample.  This unusual result is because the confidence bounds are between 0 and 1.  We interpret this as a 50\% probability that one data breach will occur. \index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.
+  \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 50\% probability that 0.5 or more\index{data breach} data breaches will occur within the \index{sample} sample.  This unusual result is because the confidence bounds are between 0 and 1.  We interpret this as a 50\% probability that one data breach will occur. \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
   \label{fig:screenshot-montecarlopersdatabreachexceedence}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-08-05 092857.png}}}
-  \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 90\% probability that\index{data breach} data breaches will cost \$3,202 or more in a year.  There is a 50\% likelihood that they will cost \$16,678 or more in a year.  There is a 10\% chance that they will cost \$30,106 or more in a year. \index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.
+  \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 90\% probability that\index{data breach} data breaches will cost \$3,202 or more in a year.  There is a 50\% likelihood that they will cost \$16,678 or more in a year.  There is a 10\% chance that they will cost \$30,106 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
   \label{fig:screenshot-montecarlopersdatabreachimpact}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-08-03 143039.png}}}
-  \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 90\% probability that 8 or more\index{Personal Data Breach} Personal Data Breaches will occur within the \index{sample} sample.  There is a 50\% likelihood that 17 or more will occur.  There is a 10\% chance that 26 or more will occur. \index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.
+  \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 90\% probability that 8 or more\index{Personal Data Breach} Personal Data Breaches will occur within the \index{sample} sample.  There is a 50\% likelihood that 17 or more will occur.  There is a 10\% chance that 26 or more will occur. \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
   \label{fig:screenshot-montecarlopersdatabreachexceedence}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-08-03 212425.png}}}
-  \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 90\% probability that\index{Personal Data Breach} Personal Data Breaches will cost \$10,362 or more in a year.  There is a 50\% likelihood that they will cost \$52,724 or more in a year.  There is a 10\% chance that they will cost \$94,876 or more in a year. \index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.
+  \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 90\% probability that\index{Personal Data Breach} Personal Data Breaches will cost \$10,362 or more in a year.  There is a 50\% likelihood that they will cost \$52,724 or more in a year.  There is a 10\% chance that they will cost \$94,876 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and \index{California} California.  The medians of those rates were used to set 10\% and 90\% \index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
   \label{fig:screenshot-montecarlopersdatabreachimpact}
 \end{figure}
 \subsubsection{Threats to System Intrusion}
-\begin{table}[h!]
+\begin{table}[H]
   \centering
   \caption{Projected In-City Victim Counts, City of\index{Chattanooga} Chattanooga, Threats to System Intrusion}
   \label{tab:chattanoogacrime3}
@@ -649,8 +655,8 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
     \bottomrule \end{tabular} 
   \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's \index{population} population for that year.}
 \end{table}
-
-\begin{table}[h!]
+\subsubsection{Threats to Personnel}
+\begin{table}[H]
   \centering
   \caption{Projected In-City Victim Counts, City of\index{Chattanooga} Chattanooga, Threats to Personnel}
   \label{tab:chattanoogacrime4}
@@ -678,8 +684,8 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
     \bottomrule \end{tabular} 
   \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's \index{population} population for that year.  Threats, stalking, and harrassment counts were combined with terrorism because the mechanisms were similar.}
 \end{table}
-
-\begin{table}[h!]
+\subsubsection{Threats to Theft of Data Via Network}
+\begin{table}[H]
   \centering
   \caption{Projected In-City Victim Counts, City of\index{Chattanooga} Chattanooga, Theft of Data Via Network}
   \label{tab:chattanoogacrime5}
@@ -726,7 +732,7 @@ We input and processed the data as follows:
 
 If we apply unadjusted for\index{sample} sample size counts limited to a one-year basis, we could use a Poisson distribution as shown in Figure \ref{fig:statevent-poissoncontrolsummary}.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
 
 \[
@@ -758,7 +764,7 @@ R_i = \frac{Y_i}{E_i}
 This would allow us to feed per-state or national data into the forumla and better understand the relationship of our projections to a larger view.  It could help us to understand where our projected\index{sample} sample's forcast would stand against the whole state overall or nationally.  This way, we could use the state and national data as controls for understanding the context of our forecast.
 
 % Empirical rate per year
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
 
 \[
@@ -769,7 +775,7 @@ r_{j,i} = \frac{Y_{j,i}}{P_j}
 \end{figure}
 
 % Aggregated count and exposure over historical window
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
 \[
 Y_i = \sum_{j=t}^{t+6} Y_{j,i}
@@ -781,7 +787,7 @@ E_i = \sum_{j=t}^{t+6} P_j
 \end{figure}
 
 % Directly standardized (weighted mean) rate
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
 \[
 \bar{r}_i = \frac{Y_i}{E_i} = \frac{\displaystyle\sum_{j=t}^{t+6} Y_{j,i}}{\displaystyle\sum_{j=t}^{t+6} P_j}
@@ -791,7 +797,7 @@ E_i = \sum_{j=t}^{t+6} P_j
 \end{figure}
 
 % Poisson model for the aggregated count
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
 \[
 Y_i \sim \operatorname{Poisson}\!\left(\bar{r}_i \cdot E_i\right)
@@ -801,7 +807,7 @@ Y_i \sim \operatorname{Poisson}\!\left(\bar{r}_i \cdot E_i\right)
 \end{figure}
 
 % Approximate 95\% confidence interval for the rate
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
 \[
 \bar{r}_i \pm 1.96 \sqrt{\frac{\bar{r}_i}{E_i}}
@@ -811,7 +817,7 @@ Y_i \sim \operatorname{Poisson}\!\left(\bar{r}_i \cdot E_i\right)
 \end{figure}
 
 % Forecast evaluation: is the forecast within the control band?
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
 \[
 \hat{R}_i \in \left[
