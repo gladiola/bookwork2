@@ -129,12 +129,26 @@ bindingoffset=0.12in]{geometry}
 \makegapedcells
 %\renewcommand{\arraystretch}{1.15}
 
+
+
+
 % Title page simple
 \title{{\chapterfont \index{coding}\Gls{coding} and \Gls{configuration} \\for Secure Systems in BSDs}}
 \author{John O\string'Keefe-Odom}
 \date{}
 
 \begin{document}
+
+\newpage
+\thispagestyle{empty}   % no page number or header
+\vspace*{\fill}         % push text to vertical center
+\begin{center}
+  \itshape              % italics are traditional
+  For the nameless victims I saw at work one day.\\We are coming to the rescue of our memory of your worst days.\\We know that cybercrime became a crime when it hurt you.
+\end{center}
+\vspace{\fill}
+\newpage
+
 \maketitle
 \frontmatter
 \tableofcontents
@@ -154,24 +168,27 @@ John O\string'Keefe-Odom received a Master of Liberal Arts (ALM) in Extension St
 \addcontentsline{toc}{chapter}{Preface}
 
 Your preface text goes here...
-\printchapterendnotes
+
 %----------------------------------------------------------------------------------------
 %	Acknowledgements
 %----------------------------------------------------------------------------------------
 \chapter*{Acknowledgements}
 \addcontentsline{toc}{chapter}{Acknowledgements}
 
-Your acknowledgements text goes here...
+As a web programmer, I make a hundred mistakes a day. If I make less than that, I'm behind.  When it comes to computing, mine has been a path of hammering.  I'm the type of person who will hammer and hammer and hammer away at the problem until I eventually break through.  So, I can't promise you a flawless path to success, but I can suggest that we will learn something from this journey.
+
+The mistakes and omissions which follow are entirely mine.  I would like to thank some people for their help along the way.
+
+If I had not found our local hacking group DC423, then I might not have sustained a professional interest in cybersecurity so successfully.  If I had not attended many \index{B-Sides}B-Sides security conferences around the Southeastern US, then I might not have realized how grand and stimulating the community of hackers really is.  
+
+I had many influential professors along the way.  I fell into the right crowd of instructors at \index{Community College!Chattanooga State}Chattanooga State Community College with Leigh MacGregor, Mrs. Peacock, and host of others whose names I cannot recall.  Doctors Kizza, Dumas, Kandah, and especially Li Yang from the \index{University!of Tennessee!at Chatttanooga}University of Tennessee at Chattanooga built a base that prepared me for later challenges in Computer Science.  Ken Smith, MFA, was my mentor for writing at UTC.  I have many fond memories of the faculty during my undergraduate years there as an English major.  I studied under heroes of the intellect like Doctors Richards, Noe, Rehyansky, Ware, and many others.  \index{University!Harvard!Extension School}At Harvard Extension School, I'm sure I pissed off almost every TA and instructor who had the misery of grading my work.  For them, I am grateful.  Many thanks to my  professors at Harvard:  Len Evanchik, Daniel Garrie, David Cass, Derek Brink, Ramesh Nagappan, Joseph Ficara, Minlan Yu, David Arias, Eddie Kohler, David Malan, and Bruce Huang.  And, of course, an extra special thanks to the professor for whom I was her "most challenging student," Heather Hinton. 
 
 With our chosen style of citations, we tried to provide references that would withstand common lab use and academic rigor.  We provided in-chapter sections for convenient references to books, man pages, and websites.  We also continued with inline footnoting for chapter endnotes; we especially noted various computer commands and technologies since they are fundamentally derivative works upon which we depend.  This made for a lot of references and some duplicity.  We have cited generously.
 
 We decided to set a previous book in fonts by Erik Spiekermann after seeing ``Helvetica'' by Gary Hustwit (2007). We carried that through here.  InfoOTDisp-Book is copyrighted by Ole Schaefer and Erik Spiekermann; it is published by FSI Fonts und Software GmbH.  Eurostile Extended Regular and Eurostile W01 Regular are copyrighted 2006 and 2010 by URW Design and Development.  
 
 For typesetting and formatting, we chose LaTex.  We repeatedly consulted various AI and Internet sources for coding the document which generated the paper.  For bibliographic formatting, we frequently used MyBib. \endnote{Mybib. “MyBib Bibliography Generator.” MyBib.Com, 13 July 2018, \url{https://www.mybib.com}. Accessed 12 July 2026.}
-
-As a web programmer, I make a hundred mistakes a day. If I make less than that, I'm behind.  I've been at work, and I've heard bosses say, "Who made these 138 database errors?"  It was me.  One time, I noticed I made 49 errors: I was slacking off.  
-
-I'm sure that there are many people who've been held in high esteem for their great likelihood of success in their endeavors; when it comes to computing, mine has been a path of hammering.  I'm the type of person who will hammer and hammer and hammer away at the problem until I eventually break through.  So, I can't promise you a flawless path to success, but I can suggest that we will learn something from this journey.  
+  
 \printchapterendnotes
 %----------------------------------------------------------------------------------------
 %	Introduction
@@ -273,7 +290,7 @@ I also remember my friend next to me, Eddie, typing in a program in another way.
 
 The computers we used at school and saw around us:  they were expensive computers.  They cost thousands of dollars.  It was clear to me that I shouldn't even ask for one because there was no way we'd be able to buy one of those.  Yet, somehow, I ran across an ad in a magazine for a Commodore 64.  It was \$200. 
 
-Now, that was a lot of money back then, too.  It was a bare-bones system.  I would still need some more components.  But, it was\$200.   
+Now, that was a lot of money back then, too.  It was a bare-bones system.  I would still need some more components.  But, it was \$200.   
 
 A friend of mine, Donald, had proudly told me at school how he had a job and made money mowing lawns and raking leaves.  That sounded pretty good to me:  making money.  I was mildly interested in lawn care.  Most of all, I knew I could do it.  I could push the lawnmower.  My dad made me mow the lawn.  I could earn some money.  I canvassed the neighborhood.  Some people said no.  Some people said they mowed their own lawn.  I didn't want to go too far up the street into Donald's territory.  I found one customer:  the man across the street. 
 
@@ -1080,7 +1097,7 @@ These hint in the numbers can suggest to us an illustration that the overall cla
 %	CHAPTER
 %----------------------------------------------------------------------------------------
 
-\chapter{\Gls{amnesiac} Systems in FreeBSD}
+\chapter{Amnesiac Systems in FreeBSD}
 
 %\begin{lstlisting}[language=KRC,caption={Hello world}]
 %#include <stdio.h>

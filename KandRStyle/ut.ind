@@ -11,6 +11,7 @@
 
   \indexspace
 
+  \item B-Sides, \hyperpage{ix}
   \item bsdinstall, \hyperpage{61, 62}
 
   \indexspace
@@ -27,7 +28,8 @@
     \subitem Police Department, \hyperpage{21}
   \item coding, \hyperpage{1}, \hyperpage{45}, \hyperpage{59}
   \item Community College
-    \subitem Chattanooga State, \hyperpage{v}, \hyperpage{17}
+    \subitem Chattanooga State, \hyperpage{v}, \hyperpage{ix}, 
+		\hyperpage{17}
   \item confidence interval, \hyperpage{17, 18}, \hyperpage{41--43}
   \item configuration, \hyperpage{45}
   \item cp, \hyperpage{72, 73}
@@ -153,9 +155,10 @@
   \item umount, \hyperpage{65}
   \item University
     \subitem Harvard
-      \subsubitem Extension School, \hyperpage{v}, \hyperpage{18}
+      \subsubitem Extension School, \hyperpage{v}, \hyperpage{ix}, 
+		\hyperpage{18}
     \subitem of Tennessee
-      \subsubitem at Chatttanooga, \hyperpage{v}
+      \subsubitem at Chatttanooga, \hyperpage{v}, \hyperpage{ix}
   \item US Census, \hyperpage{17}, \hyperpage{25}, \hyperpage{28}
   \item USB
     \subitem drive, \hyperpage{63}
