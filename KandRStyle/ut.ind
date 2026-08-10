@@ -1,173 +1,175 @@
 \begin{theindex}
 
-  \item 2FA, \hyperpage{63}
+  \item 2FA, \hyperpage{109}
 
   \indexspace
 
-  \item amensiac, \hyperpage{45}, \hyperpage{61}
-  \item American Samoa, \hyperpage{20}, \hyperpage{24}, \hyperpage{28}, 
-		\hyperpage{36}, \hyperpage{41--43}
-  \item amnesiac, \hyperpage{45}
+  \item amensiac, \hyperpage{91}, \hyperpage{107}
+  \item American Samoa, \hyperpage{66}, \hyperpage{70}, \hyperpage{74}, 
+		\hyperpage{82}, \hyperpage{87--89}
+  \item amnesiac, \hyperpage{91}
 
   \indexspace
 
   \item B-Sides, \hyperpage{ix}
-  \item bsdinstall, \hyperpage{61, 62}
+  \item bsdinstall, \hyperpage{107, 108}
 
   \indexspace
 
-  \item cache, \hyperpage{68}, \hyperpage{75}
-  \item California, \hyperpage{24}, \hyperpage{28}, \hyperpage{36}, 
-		\hyperpage{41--43}
+  \item cache, \hyperpage{114}, \hyperpage{121}
+  \item California, \hyperpage{70}, \hyperpage{74}, \hyperpage{82}, 
+		\hyperpage{87--89}
   \item camcontrol
-    \subitem devlist, \hyperpage{64}
-  \item cd, \hyperpage{65}
-  \item Chattanooga, \hyperpage{v}, \hyperpage{17}, \hyperpage{21}, 
-		\hyperpage{23, 24}, \hyperpage{28, 29}, \hyperpage{31}, 
-		\hyperpage{34}, \hyperpage{36}, \hyperpage{41--43}
-    \subitem Police Department, \hyperpage{21}
-  \item coding, \hyperpage{1}, \hyperpage{45}, \hyperpage{59}
+    \subitem devlist, \hyperpage{110}
+  \item cd, \hyperpage{111}
+  \item Chattanooga, \hyperpage{v}, \hyperpage{63}, \hyperpage{67}, 
+		\hyperpage{69, 70}, \hyperpage{74, 75}, \hyperpage{77}, 
+		\hyperpage{80}, \hyperpage{82}, \hyperpage{87--89}
+    \subitem Police Department, \hyperpage{67}
+  \item coding, \hyperpage{1}, \hyperpage{91}, \hyperpage{105}
   \item Community College
     \subitem Chattanooga State, \hyperpage{v}, \hyperpage{ix}, 
-		\hyperpage{17}
-  \item confidence interval, \hyperpage{17, 18}, \hyperpage{41--43}
-  \item configuration, \hyperpage{45}
-  \item cp, \hyperpage{72, 73}
-  \item cybercrime, \hyperpage{17}, \hyperpage{19--22}, 
-		\hyperpage{24--27}, \hyperpage{42, 43}
+		\hyperpage{63}
+  \item confidence interval, \hyperpage{63, 64}, \hyperpage{87--89}
+  \item configuration, \hyperpage{91}
+  \item cp, \hyperpage{118, 119}
+  \item cybercrime, \hyperpage{63}, \hyperpage{65--68}, 
+		\hyperpage{70--73}, \hyperpage{88, 89}
 
   \indexspace
 
-  \item data breach, \hyperpage{29, 30}
-  \item dd, \hyperpage{57}
-  \item dialog, \hyperpage{65}, \hyperpage{67}
+  \item data breach, \hyperpage{75, 76}
+  \item dd, \hyperpage{103}
+  \item dialog, \hyperpage{111}, \hyperpage{113}
 
   \indexspace
 
-  \item encrypt, \hyperpage{67}, \hyperpage{69}, \hyperpage{71}, 
-		\hyperpage{74}, \hyperpage{99}
+  \item encrypt, \hyperpage{113}, \hyperpage{115}, \hyperpage{117}, 
+		\hyperpage{120}, \hyperpage{145}
 
   \indexspace
 
-  \item Florida, \hyperpage{24}
-  \item FreeBSD, \hyperpage{45}, \hyperpage{57}, \hyperpage{59}, 
-		\hyperpage{67}, \hyperpage{95}
-  \item FreeBSD Handbook, \hyperpage{64}, \hyperpage{66}, 
-		\hyperpage{100}
-  \item FreeBSD Mastery:  ZFS, \hyperpage{59}
+  \item Florida, \hyperpage{70}
+  \item FreeBSD, \hyperpage{91}, \hyperpage{103}, \hyperpage{105}, 
+		\hyperpage{113}, \hyperpage{141}
+  \item FreeBSD Handbook, \hyperpage{110}, \hyperpage{112}, 
+		\hyperpage{146}
+  \item FreeBSD Mastery:  ZFS, \hyperpage{105}
 
   \indexspace
 
   \item GDPR
-    \subitem Right to be Forgotten, \hyperpage{54, 55}
-  \item geli, \hyperpage{58}, \hyperpage{71}
-    \subitem attach, \hyperpage{71, 72}, \hyperpage{74}
-    \subitem init, \hyperpage{71, 72}, \hyperpage{74}
-    \subitem status, \hyperpage{73}
-  \item gpart, \hyperpage{59}, \hyperpage{61}, \hyperpage{65}, 
-		\hyperpage{68}
-    \subitem add, \hyperpage{64}, \hyperpage{66}, \hyperpage{69, 70}, 
-		\hyperpage{74}
-    \subitem create, \hyperpage{64}, \hyperpage{66}, \hyperpage{69, 70}
-    \subitem modify, \hyperpage{73}
-    \subitem recover, \hyperpage{74}
-    \subitem resize, \hyperpage{74}
-    \subitem show, \hyperpage{73}
-    \subitem status, \hyperpage{74}
+    \subitem Right to be Forgotten, \hyperpage{100, 101}
+  \item geli, \hyperpage{104}, \hyperpage{117}
+    \subitem attach, \hyperpage{117, 118}, \hyperpage{120}
+    \subitem init, \hyperpage{117, 118}, \hyperpage{120}
+    \subitem status, \hyperpage{119}
+  \item gpart, \hyperpage{105}, \hyperpage{107}, \hyperpage{111}, 
+		\hyperpage{114}
+    \subitem add, \hyperpage{110}, \hyperpage{112}, 
+		\hyperpage{115, 116}, \hyperpage{120}
+    \subitem create, \hyperpage{110}, \hyperpage{112}, 
+		\hyperpage{115, 116}
+    \subitem modify, \hyperpage{119}
+    \subitem recover, \hyperpage{120}
+    \subitem resize, \hyperpage{120}
+    \subitem show, \hyperpage{119}
+    \subitem status, \hyperpage{120}
 
   \indexspace
 
   \item immutability
-    \subitem hard, \hyperpage{54}
-    \subitem operational, \hyperpage{54}
-    \subitem soft, \hyperpage{54}
+    \subitem hard, \hyperpage{100}
+    \subitem operational, \hyperpage{100}
+    \subitem soft, \hyperpage{100}
 
   \indexspace
 
-  \item jails, \hyperpage{63}
+  \item jails, \hyperpage{109}
 
   \indexspace
 
-  \item live CD, \hyperpage{45}
-  \item ls, \hyperpage{65}
-  \item LTO III tape, \hyperpage{57}
+  \item live CD, \hyperpage{91}
+  \item ls, \hyperpage{111}
+  \item LTO III tape, \hyperpage{103}
 
   \indexspace
 
   \item mac
-    \subitem biba, \hyperpage{56}
-  \item malware, \hyperpage{32}
-  \item mkdir, \hyperpage{64, 65}, \hyperpage{69}
-  \item mount, \hyperpage{65}, \hyperpage{69}
+    \subitem biba, \hyperpage{102}
+  \item malware, \hyperpage{78}
+  \item mkdir, \hyperpage{110, 111}, \hyperpage{115}
+  \item mount, \hyperpage{111}, \hyperpage{115}
 
   \indexspace
 
-  \item newfs, \hyperpage{64}
+  \item newfs, \hyperpage{110}
   \item NIST 800-88
-    \subitem Purge, \hyperpage{57}
+    \subitem Purge, \hyperpage{103}
 
   \indexspace
 
-  \item open data, \hyperpage{17}, \hyperpage{19}, \hyperpage{21--23}
-  \item operating system, \hyperpage{45}, \hyperpage{59}, 
-		\hyperpage{62}, \hyperpage{67}, \hyperpage{73}
+  \item open data, \hyperpage{63}, \hyperpage{65}, \hyperpage{67--69}
+  \item operating system, \hyperpage{91}, \hyperpage{105}, 
+		\hyperpage{108}, \hyperpage{113}, \hyperpage{119}
 
   \indexspace
 
-  \item Personal Data Breach, \hyperpage{17}, \hyperpage{24}, 
-		\hyperpage{30, 31}
-  \item phishing, \hyperpage{33}
-  \item population, \hyperpage{17}, \hyperpage{20}, \hyperpage{22}, 
-		\hyperpage{24, 25}, \hyperpage{27--29}, \hyperpage{31}, 
-		\hyperpage{34}, \hyperpage{36}
-  \item Puerto Rico, \hyperpage{24}
+  \item Personal Data Breach, \hyperpage{63}, \hyperpage{70}, 
+		\hyperpage{76, 77}
+  \item phishing, \hyperpage{79}
+  \item population, \hyperpage{63}, \hyperpage{66}, \hyperpage{68}, 
+		\hyperpage{70, 71}, \hyperpage{73--75}, \hyperpage{77}, 
+		\hyperpage{80}, \hyperpage{82}
+  \item Puerto Rico, \hyperpage{70}
 
   \indexspace
 
-  \item RAIDZ-2, \hyperpage{57--59}, \hyperpage{61}, \hyperpage{65, 66}
-  \item risk assessment, \hyperpage{17}, \hyperpage{19--22}
-    \subitem quantitative, \hyperpage{19}
-  \item rm, \hyperpage{65}
+  \item RAIDZ-2, \hyperpage{103--105}, \hyperpage{107}, 
+		\hyperpage{111, 112}
+  \item risk assessment, \hyperpage{63}, \hyperpage{65--68}
+    \subitem quantitative, \hyperpage{65}
+  \item rm, \hyperpage{111}
 
   \indexspace
 
-  \item sample, \hyperpage{17}, \hyperpage{25}, \hyperpage{29, 30}, 
-		\hyperpage{36, 37}, \hyperpage{41--43}
-    \subitem convenience, \hyperpage{22}
+  \item sample, \hyperpage{63}, \hyperpage{71}, \hyperpage{75, 76}, 
+		\hyperpage{82, 83}, \hyperpage{87--89}
+    \subitem convenience, \hyperpage{68}
   \item simulation
-    \subitem Monte Carlo, \hyperpage{17, 18}, \hyperpage{29--33}, 
-		\hyperpage{36}
-  \item ssh-keygen, \hyperpage{64, 65}
-  \item statistics, \hyperpage{17}, \hyperpage{22, 23}
-  \item su, \hyperpage{63}
-  \item sudo, \hyperpage{63}
-  \item swapinfo, \hyperpage{74, 75}
-  \item swapoff, \hyperpage{75}
-  \item swapon, \hyperpage{66}, \hyperpage{74, 75}
+    \subitem Monte Carlo, \hyperpage{63, 64}, \hyperpage{75--79}, 
+		\hyperpage{82}
+  \item ssh-keygen, \hyperpage{110, 111}
+  \item statistics, \hyperpage{63}, \hyperpage{68, 69}
+  \item su, \hyperpage{109}
+  \item sudo, \hyperpage{109}
+  \item swapinfo, \hyperpage{120, 121}
+  \item swapoff, \hyperpage{121}
+  \item swapon, \hyperpage{112}, \hyperpage{120, 121}
 
   \indexspace
 
-  \item Texas, \hyperpage{24}
-  \item TOTP, \hyperpage{63}
+  \item Texas, \hyperpage{70}
+  \item TOTP, \hyperpage{109}
 
   \indexspace
 
-  \item umount, \hyperpage{65}
+  \item umount, \hyperpage{111}
   \item University
     \subitem Harvard
       \subsubitem Extension School, \hyperpage{v}, \hyperpage{ix}, 
-		\hyperpage{18}
+		\hyperpage{64}
     \subitem of Tennessee
       \subsubitem at Chatttanooga, \hyperpage{v}, \hyperpage{ix}
-  \item US Census, \hyperpage{17}, \hyperpage{25}, \hyperpage{28}
+  \item US Census, \hyperpage{63}, \hyperpage{71}, \hyperpage{74}
   \item USB
-    \subitem drive, \hyperpage{63}
+    \subitem drive, \hyperpage{109}
 
   \indexspace
 
-  \item zpool, \hyperpage{73}, \hyperpage{75}
-    \subitem add, \hyperpage{67}
-    \subitem comment, \hyperpage{60}
-    \subitem create, \hyperpage{66}
+  \item zpool, \hyperpage{119}, \hyperpage{121}
+    \subitem add, \hyperpage{113}
+    \subitem comment, \hyperpage{106}
+    \subitem create, \hyperpage{112}
 
 \end{theindex}
