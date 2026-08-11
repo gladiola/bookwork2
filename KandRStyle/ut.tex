@@ -80,6 +80,9 @@ bindingoffset=0.12in]{geometry}
 \usepackage{rotating}
 \usepackage{graphicx}
 \usepackage[section]{placeins}
+\newcommand{\riskgraphscreenshot}[1]{%
+  \rotatebox{0}{\scalebox{1}{\includegraphics[width=0.95\linewidth,height=5in,keepaspectratio]{#1}}}%
+}
 %--------- Math ----------------
 \usepackage{amsmath}
 
@@ -1627,7 +1630,7 @@ We conducted a\index{risk assessment} risk assessment to better understand the t
 \section{Introduction}
 \begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-07-28 145652.png}}}
+  \riskgraphscreenshot{figures/Screenshot 2026-07-28 145652.png}
   \caption{Example run of a\index{simulation!Monte Carlo} Monte Carlo simulation using state-level data to set bounds.  Here we chose\index{Personal Data Breach} Personal Data Breach victim counts from 2016 and 2022 as upper and lower bounds. 10,000 rows projected randomized values between these bounds and determined mean and counts by\index{confidence interval} confidence interval.
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
@@ -1638,7 +1641,7 @@ We had a modest amount of education in\index{statistics} statistics as we began 
 
 \begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-07-28 145609.png}}}
+  \riskgraphscreenshot{figures/Screenshot 2026-07-28 145609.png}
   \caption{Example results of applying\index{simulation!Monte Carlo} Monte Carlo simulation to forecasting.  Here we see the assertion that there is a 90\% likelihood that the number of victims will be between 457 and 879; the mean of the simulation was 667.\protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}}
   \label{fig:screenshot-montecarlo1}
 \end{figure}
@@ -1978,7 +1981,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 \end{table}
 \begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-08-05 093747.png}}}
+  \riskgraphscreenshot{figures/Screenshot 2026-08-05 093747.png}
   \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 50\% probability that 0.5 or more\index{data breach} data breaches will occur within the \index{sample} sample.  This unusual result is because the confidence bounds are between 0 and 1.  We interpret this as a 50\% probability that one data breach will occur. \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
@@ -1987,7 +1990,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 
 \begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-08-05 092857.png}}}
+  \riskgraphscreenshot{figures/Screenshot 2026-08-05 092857.png}
   \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 90\% probability that\index{data breach} data breaches will cost \$3,202 or more in a year.  There is a 50\% likelihood that they will cost \$16,678 or more in a year.  There is a 10\% chance that they will cost \$30,106 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
@@ -1995,7 +1998,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 \end{figure}
 \begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-08-03 143039.png}}}
+  \riskgraphscreenshot{figures/Screenshot 2026-08-03 143039.png}
   \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 90\% probability that 8 or more\index{Personal Data Breach} Personal Data Breaches will occur within the \index{sample} sample.  There is a 50\% likelihood that 17 or more will occur.  There is a 10\% chance that 26 or more will occur. \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
@@ -2004,7 +2007,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 
 \begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-08-03 212425.png}}}
+  \riskgraphscreenshot{figures/Screenshot 2026-08-03 212425.png}
   \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 90\% probability that\index{Personal Data Breach} Personal Data Breaches will cost \$10,362 or more in a year.  There is a 50\% likelihood that they will cost \$52,724 or more in a year.  There is a 10\% chance that they will cost \$94,876 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and \index{California} California.  The medians of those rates were used to set 10\% and 90\% \index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
@@ -2043,7 +2046,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 
 \begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-08-06 090519.png}}}
+  \riskgraphscreenshot{figures/Screenshot 2026-08-06 090519.png}
   \caption{The Monte Carlo simulation determined that there would be a 50\% chance of malware.  \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and \index{California} California.  The medians of those rates were used to set 10\% and 90\% \index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
@@ -2052,7 +2055,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 
 \begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-08-06 090805.png}}}
+  \riskgraphscreenshot{figures/Screenshot 2026-08-06 090805.png}
   \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 90\% probability that\index{malware} malware will cost \$63 or more in a year.  There is a 50\% likelihood that they will cost \$322 or more in a year.  There is a 10\% chance that they will cost \$585 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and \index{California} California.  The medians of those rates were used to set 10\% and 90\% \index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
@@ -2061,7 +2064,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 
 \begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-08-06 091252.png}}}
+  \riskgraphscreenshot{figures/Screenshot 2026-08-06 091252.png}
   \caption{The Monte Carlo simulation determined that there would be a 90\% chance of 3 or more index{phishing} phishing events.  There was a 50\% chance of 7 or more index{phishing} phishing events.  There was a 10\% chance of 11 or more events.  \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and \index{California} California.  The medians of those rates were used to set 10\% and 90\% \index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
@@ -2070,7 +2073,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 
 \begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-08-06 091913.png}}}
+  \riskgraphscreenshot{figures/Screenshot 2026-08-06 091913.png}
   \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 90\% probability that\index{phishing} phishing events will cost \$4003 or more in a year.  There is a 50\% likelihood that they will cost \$19,873 or more in a year.  There is a 10\% chance that they will cost \$36,397 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and \index{California} California.  The medians of those rates were used to set 10\% and 90\% \index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
@@ -2108,7 +2111,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 
 \begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-08-06 085637.png}}}
+  \riskgraphscreenshot{figures/Screenshot 2026-08-06 085637.png}
   \caption{The Monte Carlo simulation determined that there would be no reasonable chance of crimes against children in this sample.  \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and \index{California} California.  The medians of those rates were used to set 10\% and 90\% \index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
@@ -2117,7 +2120,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 
 \begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-08-06 090100.png}}}
+  \riskgraphscreenshot{figures/Screenshot 2026-08-06 090100.png}
   \caption{Since the Monte Carlo simulation determined that there would be no reasonable chance of crimes against children in this sample, we can see that there would be no financial impact.  \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and \index{California} California.  The medians of those rates were used to set 10\% and 90\% \index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
