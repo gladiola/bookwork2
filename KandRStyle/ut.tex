@@ -1,7 +1,8 @@
 \documentclass[10pt,twoside]{book}
+\usepackage[cam,center,width=6.5in,height=9.5in]{crop}
 \usepackage[paperwidth=6in,paperheight=9in,
 inner=0.95in,outer=0.6in,top=0.75in,bottom=0.85in,
-bindingoffset=0.12in]{geometry}
+bindingoffset=0.12in,showframe]{geometry}
 \pdfpagewidth=6in
 \pdfpageheight=9in
 
@@ -1911,14 +1912,14 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
   \caption{Changes to \index{population} population in Key Areas}
   \label{tab:chattanoogacrime1}
   \begin{tabular}{@{}>{\centering\arraybackslash}
-  p{0.15\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
   p{0.07\linewidth}>{\centering\arraybackslash}
   p{0.07\linewidth}>{\centering\arraybackslash}
   p{0.07\linewidth}>{\centering\arraybackslash}
   p{0.07\linewidth}>{\centering\arraybackslash}
   p{0.07\linewidth}>{\centering\arraybackslash}
   p{0.07\linewidth}>{\centering\arraybackslash}
-  p{0.07\linewidth}>{\centering\arraybackslash}
+  p{0.09\linewidth}>{\centering\arraybackslash}
   p{0.07\linewidth}}
     \toprule
     \textbf{Year} &
@@ -1933,16 +1934,16 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 
     \\
     \midrule
-2016&&&177,746&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,646,010&\endnote{\url{https://www.census.gov/quickfacts/fact/table/TN/PST045222}}\\
-2017&&&179,530&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,708,799&\endnote{\url{https://www.census.gov/quickfacts/fact/table/TN/PST045222}}\\
-2018&&&181,918&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,771,631&\endnote{\url{https://www.census.gov/quickfacts/fact/table/TN/PST045222}}\\
-2019&&&182,799&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,829,174&\endnote{\url{https://www.census.gov/quickfacts/fact/table/TN/PST045222}}\\
-2020&&&181,560&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,925,619&\endnote{\url{https://www2.census.gov/programs-surveys/popest/datasets/2020-2022/state/totals/NST-EST2022-POPCHG2020_2022.csv}}\\
-2021&&&181,163&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,968,351&\endnote{\url{https://www2.census.gov/programs-surveys/popest/datasets/2020-2022/state/totals/NST-EST2022-POPCHG2020_2022.csv}}\\
-2022&&&184,086&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&7,051,339&\endnote{\url{https://www2.census.gov/programs-surveys/popest/datasets/2020-2022/state/totals/NST-EST2022-POPCHG2020_2022.csv}}\\
+2016&52,245&\endnote{\url{https://fred.stlouisfed.org/series/POPTOTASA647NWDB}}&177,746&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,646,010&\endnote{\url{https://www.census.gov/quickfacts/fact/table/TN/PST045222}}&39,149,186&\endnote{\url{https://fred.stlouisfed.org/series/CAPOP}}\\
+2017&51,586&\endnote{\url{https://fred.stlouisfed.org/series/POPTOTASA647NWDB}}&179,530&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,708,799&\endnote{\url{https://www.census.gov/quickfacts/fact/table/TN/PST045222}}&39,337,785&\endnote{\url{https://fred.stlouisfed.org/series/CAPOP}}\\
+2018&50,908&\endnote{\url{https://fred.stlouisfed.org/series/POPTOTASA647NWDB}}&181,918&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,771,631&\endnote{\url{https://www.census.gov/quickfacts/fact/table/TN/PST045222}}&39,437,463&\endnote{\url{https://fred.stlouisfed.org/series/CAPOP}}\\
+2019&50,209&\endnote{\url{https://fred.stlouisfed.org/series/POPTOTASA647NWDB}}&182,799&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,829,174&\endnote{\url{https://www.census.gov/quickfacts/fact/table/TN/PST045222}}&39,437,610&\endnote{\url{https://fred.stlouisfed.org/series/CAPOP}}\\
+2020&49,751&\endnote{\url{https://fred.stlouisfed.org/series/POPTOTASA647NWDB}}&181,560&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,925,619&\endnote{\url{https://www2.census.gov/programs-surveys/popest/datasets/2020-2022/state/totals/NST-EST2022-POPCHG2020_2022.csv}}&39,538,223&\endnote{\url{https://fred.stlouisfed.org/series/CAPOP}}\\
+2021&49,225&\endnote{\url{https://fred.stlouisfed.org/series/POPTOTASA647NWDB}}&181,163&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&6,968,351&\endnote{\url{https://www2.census.gov/programs-surveys/popest/datasets/2020-2022/state/totals/NST-EST2022-POPCHG2020_2022.csv}}&39,152,927&\endnote{\url{https://fred.stlouisfed.org/series/CAPOP}}\\
+2022&48,342&\endnote{\url{https://fred.stlouisfed.org/series/POPTOTASA647NWDB}}&184,086&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&7,051,339&\endnote{\url{https://www2.census.gov/programs-surveys/popest/datasets/2020-2022/state/totals/NST-EST2022-POPCHG2020_2022.csv}}&39,125,347&\endnote{\url{https://fred.stlouisfed.org/series/CAPOP}}\\
 
     \bottomrule \end{tabular}
-\raggedright{City \index{population} population based on the\index{US Census} US Census reported \index{population} population for the City of\index{Chattanooga} Chattanooga itself.  Surrounding satellite cities and unincorporated areas within the Hamilton County, Tennessee, were not included. \index{population} population for the State of Tennessee provided perspective on calculated rates in later tables. \index{population} population for \index{American Samoa} American Samoa and the State of\index{California} California were included for perspective on maximum and minimum counts in later tables.}
+\raggedright{City \index{population} population based on the\index{US Census} US Census reported \index{population} population for the City of\index{Chattanooga} Chattanooga itself.  Surrounding satellite cities and unincorporated areas within the Hamilton County, Tennessee, were not included. \index{population} Population for the State of Tennessee provided perspective on calculated rates in later tables. \index{population} Population for \index{American Samoa} American Samoa and the State of\index{California} California were included for perspective on maximum and minimum counts in later tables.}
 \end{table}
 
 
@@ -1976,9 +1977,19 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
     \bottomrule \end{tabular}
   \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's \index{population} population for that year.}
 \end{table}
+\newpage
 \begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-08-05 093747.png}}}
+  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_dataBreach.png}}}
+  \caption{We ran a\index{simulation!Monte Carlo} Monte Carlo simulation of 10,000 iterations to spread random instances between confidence intervals taken from means of a seven year sample. We bounded between 0 and 2 possible data breaches over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
+  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
+  }
+  \label{fig:screenshot-montecarlopersdatabreachexceedence}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/count_dataBreach_percentile.png}}}
   \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 50\% probability that 0.5 or more\index{data breach} data breaches will occur within the \index{sample} sample.  This unusual result is because the confidence bounds are between 0 and 1.  We interpret this as a 50\% probability that one data breach will occur. \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
@@ -1987,8 +1998,17 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 
 \begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-08-05 092857.png}}}
-  \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 90\% probability that\index{data breach} data breaches will cost \$3,202 or more in a year.  There is a 50\% likelihood that they will cost \$16,678 or more in a year.  There is a 10\% chance that they will cost \$30,106 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
+  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_dataBreach_impact.png}}}
+  \caption{We ran a\index{simulation!Monte Carlo} Monte Carlo simulation of 10,000 iterations to spread random instances between confidence intervals taken from means of a seven year sample. We set a lower bound that the breach would cost at \$0.  We set an upper bound that the breach would cost \$33,527.27.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
+  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
+  }
+  \label{fig:screenshot-montecarlopersdatabreachexceedence}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/percent_dataBreach_impact.png}}}
+  \caption{A\index{simulation!Monte Carlo} Monte Carlo simulation suggests that there is a 90\% probability that\index{data breach} data breaches will cost \$3,576 or more in a year.  There is a 50\% likelihood that they will cost \$16,731 or more in a year.  There is a 10\% chance that they will cost \$29,778 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
   \label{fig:screenshot-montecarlopersdatabreachimpact}
