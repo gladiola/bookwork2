@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  15 AUG 2026 15:18
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  15 AUG 2026 15:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2216,8 +2216,8 @@ File: figures/histogram_phishing_impact.png Graphic file (type bmp)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [97]
-File: figures/percent_malware_impact.png Graphic file (type bmp)
-<figures/percent_malware_impact.png>
+File: figures/percent_phishing_impact.png Graphic file (type bmp)
+<figures/percent_phishing_impact.png>
 
 Overfull \hbox (0.59259pt too wide) in paragraph at lines 2172--2172
  []|\TU/InfoOTDisp(0)/b/n/10 Year| 
@@ -3179,10 +3179,10 @@ Package rerunfilecheck Info: File `ut.out' has not changed.
 (rerunfilecheck)             Checksum: FE68332E9F3184E9310C6283A43AA29A;15298.
  ) 
 Here is how much of TeX's memory you used:
- 24609 strings out of 475846
- 452593 string characters out of 5781395
- 1973879 words of memory out of 5000000
- 45265 multiletter control sequences out of 15000+600000
+ 24618 strings out of 475846
+ 452948 string characters out of 5781395
+ 1974879 words of memory out of 5000000
+ 45273 multiletter control sequences out of 15000+600000
  562629 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  91i,22n,117p,5788b,791s stack positions out of 10000i,1000n,20000p,200000b,200000s
