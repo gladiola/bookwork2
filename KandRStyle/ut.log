@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  15 AUG 2026 19:14
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  15 AUG 2026 19:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -900,22 +900,6 @@ ly defined.
 
 LaTeX Warning: Label `fig:screenshot-montecarlo-databreach-impact-percent' mult
 iply defined.
-
-
-LaTeX Warning: Label `fig:screenshot-montecarlo-extortion-count-histo' multiply
- defined.
-
-
-LaTeX Warning: Label `fig:screenshot-montecarlo-extortion-count-percent' multip
-ly defined.
-
-
-LaTeX Warning: Label `fig:screenshot-montecarlo-extortion-impact-histo' multipl
-y defined.
-
-
-LaTeX Warning: Label `fig:screenshot-montecarlo-extortion-impact-percent' multi
-ply defined.
 
 )
 \openout1 = `ut.aux'.
@@ -2306,13 +2290,16 @@ File: figures/percent_extortion_impact.png Graphic file (type bmp)
 [104]
 File: figures/histogram_threats.png Graphic file (type bmp)
 <figures/histogram_threats.png>
-File: figures/count_extortion_percentile.png Graphic file (type bmp)
-<figures/count_extortion_percentile.png>
-File: figures/histogram_extortion_impact.png Graphic file (type bmp)
-<figures/histogram_extortion_impact.png>
+File: figures/count_threats_percentile.png Graphic file (type bmp)
+<figures/count_threats_percentile.png>
+File: figures/histogram_threat_impact.png Graphic file (type bmp)
+<figures/histogram_threat_impact.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [105]
-File: figures/percent_extortion_impact.png Graphic file (type bmp)
-<figures/percent_extortion_impact.png>
+File: figures/percent_threats_impact.png Graphic file (type bmp)
+<figures/percent_threats_impact.png>
 
 Overfull \hbox (0.59259pt too wide) in paragraph at lines 2330--2330
  []|\TU/InfoOTDisp(0)/b/n/10 Year| 
@@ -3248,10 +3235,10 @@ Package rerunfilecheck Info: File `ut.out' has not changed.
 (rerunfilecheck)             Checksum: 183DC37694E339EE076296958A1F31D8;15298.
  ) 
 Here is how much of TeX's memory you used:
- 24739 strings out of 475846
- 457852 string characters out of 5781395
- 1974879 words of memory out of 5000000
- 45383 multiletter control sequences out of 15000+600000
+ 24770 strings out of 475846
+ 459107 string characters out of 5781395
+ 1973879 words of memory out of 5000000
+ 45411 multiletter control sequences out of 15000+600000
  562629 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  91i,22n,117p,5788b,791s stack positions out of 10000i,1000n,20000p,200000b,200000s
