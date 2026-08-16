@@ -2122,7 +2122,10 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%  PHISHING %%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\begingroup
+\newlength{\savedintextsepphishing}
+\newlength{\savedtextfloatsepphishing}
+\setlength{\savedintextsepphishing}{\intextsep}
+\setlength{\savedtextfloatsepphishing}{\textfloatsep}
 \setlength{\intextsep}{8pt plus 2pt minus 2pt}
 \setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
 \begin{figure}[!htbp]
@@ -2183,8 +2186,9 @@ Likelihood
     \bottomrule \end{tabular}
   \raggedright{A\index{Monte Carlo simulation} Monte Carlo simulation was run using a discrete distribution.  We bounded the simulation between 3 and 12 events.  We assigned a 10\% likelihood to each bin.  The resulting distribution showed the effect of randomness on each possible outcome.}
 \end{table}
-\endgroup
 \FloatBarrier
+\setlength{\intextsep}{\savedintextsepphishing}
+\setlength{\textfloatsep}{\savedtextfloatsepphishing}
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_phishing_impact.png}}}
