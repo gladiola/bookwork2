@@ -2122,35 +2122,34 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%  PHISHING %%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\begingroup
-\setlength{\intextsep}{8pt plus 2pt minus 2pt}
-\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
-\begin{figure}[!htbp]
+\begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/discrete_phishing_count.png}}}
-  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations to spread random instances between confidence intervals taken from means of a seven year sample. We bounded between 7 and 11 possible phishing events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
+  \rotatebox{0}{\scalebox{1}{\includegraphics[scale=0.25]{figures/discrete_phishing_count.png}}}
+  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a discrete distribution to spread random instances between confidence intervals taken from the means of seven year samples. We bounded between 7 and 11 possible phishing events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
   \label{fig:screenshot-montecarlo-phishing-count-discrete}
 \end{figure}
-\begin{table}[!htbp]
+When we computed the upper and lower bounds, we recognized that a normal distribution would not fit well for forecasting likelihood.  We took the mean of the sample from American Samoa for the lower bound (3); we took the mean from the sample from California for the upper bound (12); we had a separation of 9 units.  Therefore, we switched to a discrete model with all 10 options sharing an equal likelihood.
+\begin{table}[H]
   \centering
   \caption{Monte Carlo Discrete Simulation Values for Phishing}
   \label{tab:discrete_phishing_montecarlo}
-  \begin{tabular}{@{}>{\centering\arraybackslash}p{0.05\linewidth} >{\centering\arraybackslash}
-  p{0.16\linewidth}>{\centering\arraybackslash}
-  p{0.16\linewidth}>{\centering\arraybackslash}
-  p{0.16\linewidth}>{\centering\arraybackslash}
-  p{0.16\linewidth}>{\centering\arraybackslash}
-  p{0.16\linewidth}>{\centering\arraybackslash}  
-  p{0.16\linewidth}}
+  \begin{center}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}  
+  p{0.10\linewidth}}
     \toprule
 Events
-    &3
-    &4
-    &5
-    &6
-    &7\\
+&3
+&4
+&5
+&6
+&7\\
     \midrule
 Likelihood    
 &9.5\%
@@ -2159,13 +2158,13 @@ Likelihood
 &10.1\%
 &10.3\%\\
     \bottomrule \end{tabular}
-\begin{tabular}{@{}>{\centering\arraybackslash}p{0.05\linewidth} >{\centering\arraybackslash}
-  p{0.16\linewidth}>{\centering\arraybackslash}
-  p{0.16\linewidth}>{\centering\arraybackslash}
-  p{0.16\linewidth}>{\centering\arraybackslash}
-  p{0.16\linewidth}>{\centering\arraybackslash}
-  p{0.16\linewidth}>{\centering\arraybackslash}  
-  p{0.16\linewidth}}
+\begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}}
     \toprule
 Events    
     &8
@@ -2181,14 +2180,14 @@ Likelihood
 &10.1\%
 &9.9\%\\
     \bottomrule \end{tabular}
+    \end{center}
   \raggedright{A\index{Monte Carlo simulation} Monte Carlo simulation was run using a discrete distribution.  We bounded the simulation between 3 and 12 events.  We assigned a 10\% likelihood to each bin.  The resulting distribution showed the effect of randomness on each possible outcome.}
 \end{table}
-\FloatBarrier
-\endgroup
+
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_phishing_impact.png}}}
-  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations to spread random instances between confidence intervals taken from means of a seven year sample. We set a lower bound that the events would cost at \$0.  We set an upper bound that the events would cost \$40,268.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
+  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a normal distribution to spread random instances between confidence intervals taken from means of a seven year sample. We set a lower bound that the events would cost at \$0.  We set an upper bound that the events would cost \$40,268.  \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
   \label{fig:screenshot-montecarlo-phishing-impact-histo}
@@ -2197,7 +2196,7 @@ Likelihood
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/percent_phishing_impact.png}}}
-  \caption{A\index{Monte Carlo simulation} Monte Carlo simulation suggests that there is a 90\% probability that\index{phishing} phishing events will cost \$4,661.40 or more in a year.  There is a 50\% likelihood that they will cost \$20,179.13 or more in a year.  There is a 10\% chance that they will cost \$35,678.52 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
+  \caption{A\index{Monte Carlo simulation} Monte Carlo simulation with a normal distribution suggests that there is a 90\% probability that\index{phishing} phishing events will cost \$4,661.40 or more in a year.  There is a 50\% likelihood that they will cost \$20,179.13 or more in a year.  There is a 10\% chance that they will cost \$35,678.52 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
   \label{fig:screenshot-montecarlo-phishing-impact-percent}
@@ -2245,6 +2244,7 @@ Likelihood
   \centering
   \caption{Projected In-City Victim Counts, City of\index{Chattanooga} Chattanooga, Threats to Personnel}
   \label{tab:chattanoogacrime4}
+  \begin{center}
   \begin{tabular}{@{}>{\centering\arraybackslash}
   p{0.05\linewidth} >{\centering\arraybackslash}
   p{0.25\linewidth}>{\centering\arraybackslash}
@@ -2266,7 +2266,9 @@ Likelihood
 2021&0&0&4&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2021State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2021_IC3Report.pdf}}\\
 2022&1&18&0&\endnote{original:\url{https://www.ic3.gov/Media/PDF/AnnualReport/2022State/StateReport.aspx\#?s=47} current: \url{https://www.ic3.gov/AnnualReport/Reports/2022_IC3Report.pdf}}\\
 
-    \bottomrule \end{tabular}
+    \bottomrule 
+    \end{tabular}
+    \end{center}
   \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's \index{population} population for that year.  Threats, stalking, and harrassment counts were combined with terrorism because the mechanisms were similar.}
 \end{table}
 %%%%%%%%%%%%%%% CRIMES AGAINST CHILDREN %%%%%%%%%%%%%%%%%%%
@@ -2328,21 +2330,63 @@ Likelihood
 \newpage
 \begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[scale=0.50]{figures/histogram_threats.png}}}
-  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations to spread random instances between confidence intervals taken from means of a seven year sample. We bounded between 7 and 11 possible threat (threats, stalking, harrassment, and terrorism) events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
+  \rotatebox{0}{\scalebox{1}{\includegraphics[scale=0.25]{figures/discrete_threats_percentile.png}}}
+  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a discrete distribution to spread random instances between confidence intervals taken from the means of seven year samples. We bounded between 0 and 11 possible threat (threats, stalking, harrassment, and terrorism) events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
   \label{fig:screenshot-montecarlo-threat-count-histo}
 \end{figure}
 
-\begin{figure}[H]
+\begin{table}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/count_threats_percentile.png}}}
-  \caption{A\index{Monte Carlo simulation} Monte Carlo simulation suggests that there is a 10\% probability that at least 7 threat events will occur within the sample.  There is a 50\% chance that 8 or more\index{extortion} threat events will occur within the \index{sample} sample.  There is a 90\% chance that 10 threat events will occur. \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
-  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
-  }
-  \label{fig:screenshot-montecarlo-threat-count-percent}
-\end{figure}
+  \caption{Monte Carlo Discrete Simulation Values for Threats, Stalking, Harrassment, and Terrorism}
+  \label{tab:discrete_threats_montecarlo}
+  \begin{center}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}  
+  p{0.10\linewidth}}
+    \toprule
+Events
+&0
+&1
+&2
+&3
+\\
+    \midrule
+Likelihood    
+&12.5\%
+&12.5\%
+&12.9\%
+&12.3\%
+\\
+    \bottomrule \end{tabular}
+\begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash} 
+  p{0.10\linewidth}}
+    \toprule
+Events    
+    &4
+    &5
+    &6
+    &7\\
+    \midrule
+Likelihood
+&12.8\%
+&12.6\%
+&11.8\%
+&12.5\%
+\\
+    \bottomrule 
+    \end{tabular}
+    \end{center}
+  \raggedright{A\index{Monte Carlo simulation} Monte Carlo simulation was run using a discrete distribution.  We bounded the simulation between 0 and 7 events.  We assigned a 12.5\% likelihood to each bin.  The resulting distribution showed the effect of randomness on each possible outcome.}
+\end{table}
 
 \begin{figure}[H]
   \centering

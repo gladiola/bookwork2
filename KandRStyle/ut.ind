@@ -47,7 +47,7 @@
 
   \item encrypt, \hyperpage{151}, \hyperpage{153}, \hyperpage{155}, 
 		\hyperpage{158}, \hyperpage{183}
-  \item extortion, \hyperpage{103--105}
+  \item extortion, \hyperpage{103, 104}
 
   \indexspace
 
@@ -149,9 +149,9 @@
 
   \item sample, \hyperpage{77}, \hyperpage{85}, \hyperpage{90}, 
 		\hyperpage{92}, \hyperpage{95}, \hyperpage{99}, 
-		\hyperpage{103}, \hyperpage{105}, \hyperpage{108}, 
-		\hyperpage{110}, \hyperpage{112}, \hyperpage{114}, 
-		\hyperpage{116, 117}, \hyperpage{122--127}
+		\hyperpage{103}, \hyperpage{108}, \hyperpage{110}, 
+		\hyperpage{112}, \hyperpage{114}, \hyperpage{116, 117}, 
+		\hyperpage{122--127}
     \subitem convenience, \hyperpage{82}
   \item ssh-keygen, \hyperpage{148, 149}
   \item statistics, \hyperpage{77}, \hyperpage{82, 83}
