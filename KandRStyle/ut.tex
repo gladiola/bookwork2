@@ -2152,8 +2152,8 @@ When we computed the upper and lower bounds, we recognized that a normal distrib
 \end{bmatrix}
 =
 \begin{bmatrix}
-3 & 3 & 0 & 3 & 3 & 3 & 3\\
-\$0 &\$0 &\$0 &\$0 &\$0 &\$0 &\$0
+3 & \cdots & 3\\
+\$0 & \cdots &\$0
 \end{bmatrix}.
 \]
 
@@ -2180,16 +2180,44 @@ m \in \{\text{scaled count},\text{scaled dollars}\}
 
 \subsubsection{Upper Bound Computation}
 
- \[
-\bar{X}_{\text{California}}^{(m)}
-= \frac{1}{N}\sum_{i=1}^{N} X_{\text{California},i}^{(m)},
-\qquad
-m \in \{\text{count},\text{dollars}\}
+
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+2,059 & 3,302 & \cdots & 2,041\\
+\$11,073,447 &\$8,864,419  & \cdots &\$14,628,440 
+
+\end{bmatrix}.
 \]
 \[
 \begin{bmatrix}
-\bar{X}_{\text{California}}^{(\text{count})}\\
-\bar{X}_{\text{California}}^{(\text{dollars})}
+\mathbf{x}_{\text{California}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+9 & 15 & \cdots & 15\\
+\$48,402 &\$40,268 & \cdots &\$64,505 
+\end{bmatrix}.
+\]
+
+  \[
+\bar{X}_{\text{California}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{California},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{California}}^{(\text{scaled count})}\\
+\bar{X}_{\text{California}}^{(\text{scaled dollars})}
 \end{bmatrix}
 =
 \begin{bmatrix}
@@ -2197,7 +2225,7 @@ m \in \{\text{count},\text{dollars}\}
 \$40,268
 \end{bmatrix}.
 \]
-
+\subsubsection{Monte Carlo Simulations for Likelihood and Impact}
 \begin{table}[H]
   \centering
   \caption{Monte Carlo Discrete Simulation Values for Phishing}
