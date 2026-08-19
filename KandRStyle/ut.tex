@@ -2122,6 +2122,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%  PHISHING %%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+\subsection{Phishing}
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[scale=0.25]{figures/discrete_phishing_count.png}}}
@@ -2131,19 +2132,70 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
   \label{fig:screenshot-montecarlo-phishing-count-discrete}
 \end{figure}
 When we computed the upper and lower bounds, we recognized that a normal distribution would not fit well for forecasting likelihood.  We took the mean of the sample from American Samoa for the lower bound (3); we took the mean from the sample from California for the upper bound (12); we had a separation of 9 units.  Therefore, we switched to a discrete model with all 10 options sharing an equal likelihood.
+\subsubsection{Lower Bound Computation}
+
 \[
-\bar{X}_{\text{American Samoa}} = \frac{1}{N}\sum_{i=1}^{N} X_{\text{American Samoa},i} = 3
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 1 & 0 & 1 & 1 & 1 & 1\\
+\$0 &\$0 &\$0 &\$0 &\$0 &\$0 &\$0 
+\end{bmatrix}.
 \]
 \[
-\bar{X}_{\text{California}} = \frac{1}{N}\sum_{i=1}^{N} X_{\text{California},i} = 12
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+3 & 3 & 0 & 3 & 3 & 3 & 3\\
+\$0 &\$0 &\$0 &\$0 &\$0 &\$0 &\$0
+\end{bmatrix}.
+\]
+
+  \[
+\bar{X}_{\text{American Samoa}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{American Samoa},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
 \]
 \[
-[\bar{X}_{\text{American Samoa}},\ \bar{X}_{\text{California}}]
-\quad \text{with } \bar{X}_{\text{American Samoa}} \le \bar{X}_{\text{California}}
+\begin{bmatrix}
+\bar{X}_{\text{American Samoa}}^{(\text{scaled count})}\\
+\bar{X}_{\text{American Samoa}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+3\\
+\$0
+\end{bmatrix}.
+\]
+
+\subsubsection{Upper Bound Computation}
+
+ \[
+\bar{X}_{\text{California}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{California},i}^{(m)},
+\qquad
+m \in \{\text{count},\text{dollars}\}
 \]
 \[
-\mathrm{CI}_{1-\alpha},\quad
-\alpha=0.80\ \text{(for 80\% CI)}.
+\begin{bmatrix}
+\bar{X}_{\text{California}}^{(\text{count})}\\
+\bar{X}_{\text{California}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+12\\
+\$40,268
+\end{bmatrix}.
 \]
 
 \begin{table}[H]
@@ -2202,28 +2254,17 @@ Likelihood
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_phishing_impact.png}}}
-  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a normal distribution to spread random instances between confidence intervals taken from means of a seven year sample. We set a lower bound that the events would cost at \$0.  We set an upper bound that the events would cost \$40,268.  \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
+  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a normal distribution to spread random instances between bounds taken from means of seven year samples. We set a lower bound that the events would cost at \$0.  We set an upper bound that the events would cost \$40,268.  \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
   \label{fig:screenshot-montecarlo-phishing-impact-histo}
 \end{figure}
-\[
-\bar{X}_{\text{American Samoa}} = \frac{1}{N}\sum_{i=1}^{N} X_{\text{American Samoa},i} = \$0
-\]
-\[
-\bar{X}_{\text{California}} = \frac{1}{N}\sum_{i=1}^{N} X_{\text{California},i} = \$40,268
-\]
-\[
-[\bar{X}_{\text{American Samoa}},\ \bar{X}_{\text{California}}]
-\quad \text{with } \bar{X}_{\text{American Samoa}} \le \bar{X}_{\text{California}}
-\]
-\[
-\mathrm{CI}_{1-\alpha},\quad
-\alpha=0.80\ \text{(for 80\% CI)}.
-\]
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/percent_phishing_impact.png}}}
+  \[
+\mathrm{CI}_{80\%}(\theta) = [\$4,661.40, \$35,678.52]
+\]
   \caption{A\index{Monte Carlo simulation} Monte Carlo simulation with a normal distribution suggests that there is a 90\% probability that\index{phishing} phishing events will cost \$4,661.40 or more in a year.  There is a 50\% likelihood that they will cost \$20,179.13 or more in a year.  There is a 10\% chance that they will cost \$35,678.52 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  H with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
@@ -2231,6 +2272,7 @@ Likelihood
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%  RANSOMWARE %%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+\subsection{Ransomware}
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_ransomware.png}}}
