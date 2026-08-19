@@ -39,15 +39,15 @@
 \contentsline {subsection}{\numberline {3.3.1}Using State Data to Forecast a Company's Data}{84}{subsection.3.3.1}%
 \contentsline {subsubsection}{Corporate and Personal Data Breaches}{89}{subsubsection*.35}%
 \contentsline {subsubsection}{Threats to System Intrusion}{94}{subsubsection*.45}%
-\contentsline {subsubsection}{Threats to Personnel}{101}{subsubsection*.59}%
-\contentsline {subsubsection}{Threats to Theft of Data Via Network}{107}{subsubsection*.71}%
-\contentsline {subsection}{\numberline {3.3.2}Methodology for Monte Carlo Simulations in Excel}{116}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Analysis}{116}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Using Nation or State Data as a Control for Smaller Forecasts}{116}{subsection.3.4.1}%
-\contentsline {section}{\numberline {3.5}Discussion}{118}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Why Some Categories Might Be Lower}{118}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Crimes Against Children and Complaints}{119}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Business Email Compromise Versus Ransomware}{119}{subsection.3.5.3}%
+\contentsline {subsubsection}{Threats to Personnel}{102}{subsubsection*.59}%
+\contentsline {subsubsection}{Threats to Theft of Data Via Network}{108}{subsubsection*.71}%
+\contentsline {subsection}{\numberline {3.3.2}Methodology for Monte Carlo Simulations in Excel}{117}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Analysis}{117}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Using Nation or State Data as a Control for Smaller Forecasts}{117}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.5}Discussion}{119}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Why Some Categories Might Be Lower}{119}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Crimes Against Children and Complaints}{120}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Business Email Compromise Versus Ransomware}{120}{subsection.3.5.3}%
 \contentsline {chapter}{Endnotes}{121}{chapter*.96}%
 \contentsline {chapter}{\numberline {4}Amnesiac Systems in FreeBSD}{129}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Introduction}{129}{section.4.1}%
