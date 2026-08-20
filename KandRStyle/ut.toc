@@ -37,33 +37,33 @@
 \contentsline {subsection}{\numberline {3.2.3}Gaps in the Literature}{83}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}Methodology}{84}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Using State Data to Forecast a Company's Data}{84}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Population Changes During Sampled Years}{88}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Corporate and Personal Data Breaches}{89}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Data Breach}{90}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Personal Data Breach}{93}{subsection.3.3.5}%
-\contentsline {subsubsection}{Threats to System Intrusion}{95}{subsubsection*.44}%
-\contentsline {subsection}{\numberline {3.3.6}Malware}{96}{subsection.3.3.6}%
-\contentsline {subsection}{\numberline {3.3.7}Phishing}{98}{subsection.3.3.7}%
-\contentsline {subsubsection}{Lower Bound Computation}{98}{subsubsection*.50}%
-\contentsline {subsubsection}{Upper Bound Computation}{98}{subsubsection*.51}%
-\contentsline {subsubsection}{Monte Carlo Simulations for Likelihood and Impact}{99}{subsubsection*.52}%
-\contentsline {subsection}{\numberline {3.3.8}Ransomware}{101}{subsection.3.3.8}%
-\contentsline {subsection}{\numberline {3.3.9}Threats to Personnel}{104}{subsection.3.3.9}%
-\contentsline {subsection}{\numberline {3.3.10}Crimes Against Children}{105}{subsection.3.3.10}%
-\contentsline {subsection}{\numberline {3.3.11}Extortion}{106}{subsection.3.3.11}%
-\contentsline {subsection}{\numberline {3.3.12}Threats, Stalking, Harassment, and Terrorism}{108}{subsection.3.3.12}%
-\contentsline {subsubsection}{Lower Bound Computation}{108}{subsubsection*.68}%
-\contentsline {subsubsection}{Upper Bound Computation}{108}{subsubsection*.69}%
-\contentsline {subsubsection}{Monte Carlo Simulations for Likelihood and Impact}{109}{subsubsection*.70}%
-\contentsline {subsection}{\numberline {3.3.13}Threats to Theft of Data Via Network}{111}{subsection.3.3.13}%
-\contentsline {subsection}{\numberline {3.3.14}Intellectual Property Theft}{112}{subsection.3.3.14}%
-\contentsline {subsection}{\numberline {3.3.15}Identity Theft}{114}{subsection.3.3.15}%
-\contentsline {subsection}{\numberline {3.3.16}Business Email Compromise}{116}{subsection.3.3.16}%
-\contentsline {subsection}{\numberline {3.3.17}Methodology for Monte Carlo Simulations in Excel}{118}{subsection.3.3.17}%
-\contentsline {section}{\numberline {3.4}Analysis}{118}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Using Nation or State Data as a Control for Smaller Forecasts}{118}{subsection.3.4.1}%
-\contentsline {section}{\numberline {3.5}Discussion}{120}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Why Some Categories Might Be Lower}{120}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.3.2}Methodology for Monte Carlo Simulations in Excel}{88}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Population Changes During Sampled Years}{89}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Corporate and Personal Data Breaches}{90}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Data Breach}{91}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Personal Data Breach}{94}{subsection.3.3.6}%
+\contentsline {subsubsection}{Threats to System Intrusion}{96}{subsubsection*.44}%
+\contentsline {subsection}{\numberline {3.3.7}Malware}{97}{subsection.3.3.7}%
+\contentsline {subsection}{\numberline {3.3.8}Phishing}{99}{subsection.3.3.8}%
+\contentsline {subsubsection}{Lower Bound Computation}{99}{subsubsection*.50}%
+\contentsline {subsubsection}{Upper Bound Computation}{99}{subsubsection*.51}%
+\contentsline {subsubsection}{Monte Carlo Simulations for Likelihood and Impact}{100}{subsubsection*.52}%
+\contentsline {subsection}{\numberline {3.3.9}Ransomware}{102}{subsection.3.3.9}%
+\contentsline {subsection}{\numberline {3.3.10}Threats to Personnel}{105}{subsection.3.3.10}%
+\contentsline {subsection}{\numberline {3.3.11}Crimes Against Children}{106}{subsection.3.3.11}%
+\contentsline {subsection}{\numberline {3.3.12}Extortion}{107}{subsection.3.3.12}%
+\contentsline {subsection}{\numberline {3.3.13}Threats, Stalking, Harassment, and Terrorism}{109}{subsection.3.3.13}%
+\contentsline {subsubsection}{Lower Bound Computation}{109}{subsubsection*.68}%
+\contentsline {subsubsection}{Upper Bound Computation}{109}{subsubsection*.69}%
+\contentsline {subsubsection}{Monte Carlo Simulations for Likelihood and Impact}{110}{subsubsection*.70}%
+\contentsline {subsection}{\numberline {3.3.14}Threats to Theft of Data Via Network}{112}{subsection.3.3.14}%
+\contentsline {subsection}{\numberline {3.3.15}Intellectual Property Theft}{113}{subsection.3.3.15}%
+\contentsline {subsection}{\numberline {3.3.16}Identity Theft}{115}{subsection.3.3.16}%
+\contentsline {subsection}{\numberline {3.3.17}Business Email Compromise}{117}{subsection.3.3.17}%
+\contentsline {section}{\numberline {3.4}Analysis}{119}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Using Nation or State Data as a Control for Smaller Forecasts}{119}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.5}Discussion}{121}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Why Some Categories Might Be Lower}{121}{subsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.5.2}Crimes Against Children and Complaints}{121}{subsection.3.5.2}%
 \contentsline {subsection}{\numberline {3.5.3}Business Email Compromise Versus Ransomware}{121}{subsection.3.5.3}%
 \contentsline {chapter}{Endnotes}{123}{chapter*.95}%

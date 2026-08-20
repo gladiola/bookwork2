@@ -1905,6 +1905,24 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 
 
 We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}. The entries $a_{j,i}$ are the raw counts taken from the \gls{ic3} state-level reports for the chosen source state.  Dividing each entry by $P_j$ converts it to a per-capita rate; multiplying by $N_t$ then scales that rate to match the \index{population} population of the target city.  The \index{population} population values in $P$ provide the year-by-year context for $N_t$ and confirm the representativeness of the scaling.  Summing the selected column $i$ of the per-capita-adjusted $M$ across all years yields the final result $R$.
+\subsection{Methodology for\index{Monte Carlo simulation} Monte Carlo Simulations in Excel}
+We chose \gls{ic3} crime data from \index{American Samoa} American Samoa to act as our 10\% confidence limit.  We chose data from California to act as our 90\% confidence limit.  We set those limits by looking at seven year spans of crime data and taking the median.  This means we would be likely to have observations above and below the limits, but that the limits themselves would have a basis in observation.
+We input and processed the data as follows:
+\begin{itemize}
+\item We imported the data from \gls{ic3} crime tables
+\item We calculated counts and costs for:
+  \begin{itemize}
+    \item \index{Chattanooga} Chattanooga
+    \item \index{American Samoa} American Samoa
+    \item \index{California} California.
+  \end{itemize}
+\item We imported a normal distribution table from the\index{Monte Carlo simulation} Monte Carlo Toolkit.
+\item We set mean summary counts from\index{American Samoa} American Samoa as our 10\% interval.
+\item We set mean summary counts from\index{California} California as our 90\% interval.
+\item We accepted the\index{Monte Carlo simulation} Monte Carlo percentages and exceedence curves.
+\end{itemize}
+
+There were times when it was obvious that a normal distribution would not fit.  When there was a choice between a count of 0 and 1 events, we ran a supplementary binary distribution.  When there was a choice of less than 8 events, we ran a supplementary discrete distribution.  We needed to change the distribution type when modeling the count or likelihood of an event; we did not need to change from a normal distribution when modeling impact because the range of currency was not overly narrow.
 
 %%%%%%%%%%%%%%%%%%%%%%% POPULATION %%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Population Changes During Sampled Years}
@@ -2288,7 +2306,7 @@ Likelihood
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/percent_phishing_impact.png}}}
   \[
-\mathrm{CI}_{80\%}(\theta) = [\$5,081.29, \$41,415.88]
+\mathrm{CI}_{80\%}(\theta) = [\$5,081,  \$41,415]
 \]
   \caption{A\index{Monte Carlo simulation} Monte Carlo simulation with a normal distribution suggests that there is a 90\% probability that\index{phishing} phishing events will cost \$5,081.29 or more in a year.  There is a 50\% likelihood that they will cost \$23,193.11 or more in a year.  There is a 10\% chance that they will cost \$41,415.88 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  H with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
@@ -2515,7 +2533,7 @@ m \in \{\text{scaled count},\text{scaled dollars}\}
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[scale=0.25]{figures/discrete_threats_percentile.png}}}
-  \caption{THIS GRAPH IS WRONGWe ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a discrete distribution to spread random instances between confidence intervals taken from the means of seven year samples. We bounded between 7 and 11 possible threat (threats, stalking, harrassment, and terrorism) events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
+  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a discrete distribution to spread random instances between confidence intervals taken from the means of seven year samples. We bounded between 7 and 11 possible threat (threats, stalking, harrassment, and terrorism) events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
   \label{fig:screenshot-montecarlo-threat-count-histo}
@@ -2528,54 +2546,36 @@ m \in \{\text{scaled count},\text{scaled dollars}\}
   \begin{center}
   \begin{tabular}{@{}>{\centering\arraybackslash}
   p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}  
   p{0.10\linewidth}>{\centering\arraybackslash}
   p{0.10\linewidth}>{\centering\arraybackslash}
   p{0.10\linewidth}>{\centering\arraybackslash}  
   p{0.10\linewidth}}
     \toprule
 Events
-&0
-&1
-&2
-&3
+&7
+&8
+&9
+&10
+&11
 \\
     \midrule
 Likelihood    
-&12.5\%
-&12.5\%
-&12.9\%
-&12.3\%
+&20.6\%
+&19.8\%
+&20.5\%
+&19.6\%
+&19.5\%
 \\
     \bottomrule \end{tabular}
-\begin{tabular}{@{}>{\centering\arraybackslash}
-  p{0.20\linewidth} >{\centering\arraybackslash}
-  p{0.10\linewidth}>{\centering\arraybackslash}
-  p{0.10\linewidth}>{\centering\arraybackslash}
-  p{0.10\linewidth}>{\centering\arraybackslash} 
-  p{0.10\linewidth}}
-    \toprule
-Events    
-    &4
-    &5
-    &6
-    &7\\
-    \midrule
-Likelihood
-&12.8\%
-&12.6\%
-&11.8\%
-&12.5\%
-\\
-    \bottomrule 
-    \end{tabular}
     \end{center}
-  \raggedright{THIS TABLE IS WRONGA\index{Monte Carlo simulation} Monte Carlo simulation was run using a discrete distribution.  We bounded the simulation between 0 and 7 events.  We assigned a 12.5\% likelihood to each bin.  The resulting distribution showed the effect of randomness on each possible outcome.}
+  \raggedright{A\index{Monte Carlo simulation} Monte Carlo simulation was run using a discrete distribution.  We bounded the simulation between 7 and 11 events.  We assigned a 20\% likelihood to each bin.  The resulting distribution showed the effect of randomness on each possible outcome.}
 \end{table}
 
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_threat_impact.png}}}
-  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations to spread random instances between confidence intervals taken from means of a seven year sample. We set a lower bound that the event would cost at \$0.  We set an upper bound that the event would cost \$7,112.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
+  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations to spread random instances between confidence intervals taken from means of a seven year sample. We set a lower bound that the event would cost at \$0.  We set an upper bound that the event would cost \$7,954.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
   \label{fig:screenshot-montecarlo-threat-impact-histo}
@@ -2584,7 +2584,10 @@ Likelihood
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/percent_threats_impact.png}}}
-  \caption{A\index{Monte Carlo simulation} Monte Carlo simulation suggests that there is a 90\% probability that\index{threat} threat events will cost \$780.19 or more in a year.  There is a 50\% likelihood that they will cost \$3,539.18 or more in a year.  There is a 10\% chance that they will cost \$6,263.78 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
+    \[
+\mathrm{CI}_{80\%}(\theta) = [\$897,  \$7,072]
+\]
+  \caption{A\index{Monte Carlo simulation} Monte Carlo simulation suggests that there is a 90\% probability that\index{threat} threat events will cost \$897.29 or more in a year.  There is a 50\% likelihood that they will cost \$4,032.65 or more in a year.  There is a 10\% chance that they will cost \$7,072.47 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
   \label{fig:screenshot-montecarlo-threat-impact-percent}
@@ -2731,19 +2734,6 @@ Likelihood
   \label{fig:screenshot-montecarlo-bec-impact-percent}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%% End of graphs %%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Methodology for\index{Monte Carlo simulation} Monte Carlo Simulations in Excel}
-We chose \gls{ic3} crime data from \index{American Samoa} American Samoa to act as our 10\% confidence limit.  We chose data from California to act as our 90\% confidence limit.  We set those limits by looking at seven year spans of crime data and taking the median.  This means we would be likely to have observations above and below the limits, but that the limits themselves would have a basis in observation.
-We input and processed the data as follows:
-\begin{itemize}
-\item We imported the data from \gls{ic3} crime tables
-\item We calculated counts and costs for\index{Chattanooga} Chattanooga, \index{American Samoa} American Samoa, and\index{California} California.
-\item We imported a normal distribution table from the\index{Monte Carlo simulation} Monte Carlo Toolkit.
-\item We set median summary counts from\index{American Samoa} American Samoa as our 10\% interval.
-\item We set median summary counts from\index{California} California as our 90\% interval.
-\item We accepted the\index{Monte Carlo simulation} Monte Carlo percentages and exceedence curves.
-\end{itemize}
-
-There were times when it was obvious that a normal distribution would not fit.  When there was a choice between a count of 0 and 1 events, we ran a supplementary binary distribution.  When there was a choice of less than 8 events, we ran a supplementary discrete distribution.  We needed to change the distribution type when modeling the count or likelihood of an event; we did not need to change from a normal distribution when modeling impact because the range of currency was not overly narrow.
 
 
 
