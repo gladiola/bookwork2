@@ -1907,6 +1907,7 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}. The entries $a_{j,i}$ are the raw counts taken from the \gls{ic3} state-level reports for the chosen source state.  Dividing each entry by $P_j$ converts it to a per-capita rate; multiplying by $N_t$ then scales that rate to match the \index{population} population of the target city.  The \index{population} population values in $P$ provide the year-by-year context for $N_t$ and confirm the representativeness of the scaling.  Summing the selected column $i$ of the per-capita-adjusted $M$ across all years yields the final result $R$.
 
 %%%%%%%%%%%%%%%%%%%%%%% POPULATION %%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Population Changes During Sampled Years}
 \begin{table}[H]
   \centering
   \caption{Changes to \index{population} Population in Key Areas}
@@ -1947,7 +1948,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 \end{table}
 
 
-\subsubsection{Corporate and Personal Data Breaches}
+\subsection{Corporate and Personal Data Breaches}
 
 \begin{table}[H]
   \centering
@@ -1980,6 +1981,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 
 %%%%%%%%%%%%%%%%%%%%%% DATA BREACH %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+\subsection{Data Breach}
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_dataBreach.png}}}
@@ -2017,6 +2019,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%% PERSONAL DATA BREACH %%%%%%%%%%%%%%%%%%%%
 \newpage
+\subsection{Personal Data Breach}
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_persDataBreach.png}}}
@@ -2085,6 +2088,7 @@ We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%  MALWARE %%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+\subsection{Malware}
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_malware.png}}}
@@ -2363,6 +2367,7 @@ Likelihood
   \raggedright{Counts deduced from IC3 Victim Complaints for Tennessee adjusted for a per-capita rate and then multiplied by the city's \index{population} population for that year.  Threats, stalking, and harrassment counts were combined with terrorism because the mechanisms were similar.}
 \end{table}
 %%%%%%%%%%%%%%% CRIMES AGAINST CHILDREN %%%%%%%%%%%%%%%%%%%
+\subsection{Crimes Against Children}
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_children.png}}}
@@ -2382,6 +2387,7 @@ Likelihood
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%  EXTORTION %%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+\subsection{Extortion}
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_extortion.png}}}
@@ -2583,7 +2589,7 @@ Likelihood
   }
   \label{fig:screenshot-montecarlo-threat-impact-percent}
 \end{figure}
-\subsubsection{Threats to Theft of Data Via Network}
+\subsection{Threats to Theft of Data Via Network}
 \begin{table}[H]
   \centering
   \caption{Projected In-City Victim Counts, City of\index{Chattanooga} Chattanooga, Theft of Data Via Network}
@@ -2611,6 +2617,7 @@ Likelihood
 \end{table}
 %%%%%%%%%%%%%%%%%%%%  IPR %%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+\subsection{Intellectual Property Theft}
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_ipr.png}}}
@@ -2646,45 +2653,10 @@ Likelihood
   }
   \label{fig:screenshot-montecarlo-ipr-impact-percent}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%  IDENTITY THEFT %%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\begin{figure}[H]
-  \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_ipr.png}}}
-  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations to spread random instances between confidence intervals taken from means of a seven year sample. We bounded between 0 and 11 possible identity theft events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
-  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
-  }
-  \label{fig:screenshot-montecarlo-ipr-count-histo}
-\end{figure}
 
-\begin{figure}[H]
-  \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/count_ipr_percentile.png}}}
-  \caption{A\index{Monte Carlo simulation} Monte Carlo simulation suggests that there is a 50\% chance that an\index{intellectual property rights} intellectual property rights event will occur within the \index{sample} sample. \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
-  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
-  }
-  \label{fig:screenshot-montecarlo-ipr-count-percent}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_ipr_impact.png}}}
-  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations to spread random instances between confidence intervals taken from means of a seven year sample. We set a lower bound that the event would cost at \$0.  We set an upper bound that the event would cost \$5,082.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
-  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
-  }
-  \label{fig:screenshot-montecarlo-ipr-impact-histo}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/percent_ipr_impact.png}}}
-  \caption{A\index{Monte Carlo simulation} Monte Carlo simulation suggests that there is a 90\% probability that\index{intellectual property rights} intellectual property rights events will cost \$537.45 or more in a year.  There is a 50\% likelihood that they will cost \$2,511.72 or more in a year.  There is a 10\% chance that they will cost \$4,544.28 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
-  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
-  }
-  \label{fig:screenshot-montecarlo-ipr-impact-percent}
-\end{figure}
 %%%%%%%%%%%%%%  IDENTITY THEFT %%%%%%%%%%%%%%%%%%%%
 \newpage
+\subsection{Identity Theft}
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_idtheft.png}}}
@@ -2722,6 +2694,7 @@ Likelihood
 \end{figure}
 %%%%%%%%%%%%%%  BUSINESS EMAIL COMPROMISE %%%%%%%%%%%%%%%%%%%%
 \newpage
+\subsection{Business Email Compromise}
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_bec.png}}}
@@ -2762,10 +2735,10 @@ Likelihood
 We chose \gls{ic3} crime data from \index{American Samoa} American Samoa to act as our 10\% confidence limit.  We chose data from California to act as our 90\% confidence limit.  We set those limits by looking at seven year spans of crime data and taking the median.  This means we would be likely to have observations above and below the limits, but that the limits themselves would have a basis in observation.
 We input and processed the data as follows:
 \begin{itemize}
-\item We imported the data from\gls{ic3} crime tables
+\item We imported the data from \gls{ic3} crime tables
 \item We calculated counts and costs for\index{Chattanooga} Chattanooga, \index{American Samoa} American Samoa, and\index{California} California.
 \item We imported a normal distribution table from the\index{Monte Carlo simulation} Monte Carlo Toolkit.
-\item We set median summary counts from \index{American Samoa} American Samoa as our 10\% interval.
+\item We set median summary counts from\index{American Samoa} American Samoa as our 10\% interval.
 \item We set median summary counts from\index{California} California as our 90\% interval.
 \item We accepted the\index{Monte Carlo simulation} Monte Carlo percentages and exceedence curves.
 \end{itemize}
