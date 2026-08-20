@@ -6,26 +6,26 @@
 
   \item amensiac, \hyperpage{131}, \hyperpage{147}
   \item American Samoa, \hyperpage{80}, \hyperpage{84}, \hyperpage{88}, 
-		\hyperpage{118}, \hyperpage{124--129}
+		\hyperpage{119}, \hyperpage{124--129}
   \item amnesiac, \hyperpage{131}
 
   \indexspace
 
   \item B-Sides, \hyperpage{ix}
   \item bsdinstall, \hyperpage{147, 148}
-  \item business email compromise, \hyperpage{116, 117}
+  \item business email compromise, \hyperpage{117, 118}
 
   \indexspace
 
   \item cache, \hyperpage{154}, \hyperpage{161}
-  \item California, \hyperpage{84}, \hyperpage{88}, \hyperpage{118}, 
+  \item California, \hyperpage{84}, \hyperpage{88}, \hyperpage{119}, 
 		\hyperpage{124--129}
   \item camcontrol
     \subitem devlist, \hyperpage{150}
   \item cd, \hyperpage{151}
   \item Chattanooga, \hyperpage{v}, \hyperpage{77}, \hyperpage{81}, 
 		\hyperpage{83, 84}, \hyperpage{88, 89}, \hyperpage{94}, 
-		\hyperpage{103}, \hyperpage{109}, \hyperpage{118}, 
+		\hyperpage{103}, \hyperpage{110}, \hyperpage{119}, 
 		\hyperpage{124--129}
     \subitem Police Department, \hyperpage{81}
   \item Chattanooga State Community College, \hyperpage{v}, 
@@ -85,12 +85,12 @@
 
   \indexspace
 
-  \item identity theft, \hyperpage{114, 115}
+  \item identity theft, \hyperpage{115, 116}
   \item immutability
     \subitem hard, \hyperpage{140}
     \subitem operational, \hyperpage{140}
     \subitem soft, \hyperpage{140}
-  \item intellectual property rights, \hyperpage{110--113}
+  \item intellectual property rights, \hyperpage{111--114}
 
   \indexspace
 
@@ -109,8 +109,9 @@
   \item malware, \hyperpage{95, 96}
   \item mkdir, \hyperpage{150, 151}, \hyperpage{155}
   \item Monte Carlo simulation, \hyperpage{77, 78}, \hyperpage{90--93}, 
-		\hyperpage{95--102}, \hyperpage{105--108}, 
-		\hyperpage{110--118}
+		\hyperpage{95, 96}, \hyperpage{98--102}, 
+		\hyperpage{105, 106}, \hyperpage{108, 109}, 
+		\hyperpage{111--119}
   \item mount, \hyperpage{151}, \hyperpage{155}
 
   \indexspace
@@ -133,7 +134,7 @@
   \item phishing, \hyperpage{99}
   \item population, \hyperpage{77}, \hyperpage{80}, \hyperpage{82}, 
 		\hyperpage{84, 85}, \hyperpage{87--89}, \hyperpage{94}, 
-		\hyperpage{103}, \hyperpage{109}
+		\hyperpage{103}, \hyperpage{110}
   \item Puerto Rico, \hyperpage{84}
 
   \indexspace
@@ -149,8 +150,8 @@
 
   \item sample, \hyperpage{77}, \hyperpage{85}, \hyperpage{90}, 
 		\hyperpage{92}, \hyperpage{95}, \hyperpage{101}, 
-		\hyperpage{105}, \hyperpage{110}, \hyperpage{112}, 
-		\hyperpage{114}, \hyperpage{116}, \hyperpage{118, 119}, 
+		\hyperpage{105}, \hyperpage{111}, \hyperpage{113}, 
+		\hyperpage{115}, \hyperpage{117}, \hyperpage{119, 120}, 
 		\hyperpage{124--129}
     \subitem convenience, \hyperpage{82}
   \item ssh-keygen, \hyperpage{150, 151}
@@ -164,7 +165,7 @@
   \indexspace
 
   \item Texas, \hyperpage{84}
-  \item threat, \hyperpage{108}
+  \item threat, \hyperpage{109}
   \item TOTP, \hyperpage{149}
 
   \indexspace
