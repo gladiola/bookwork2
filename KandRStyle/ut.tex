@@ -1906,7 +1906,7 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 
 We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}. The entries $a_{j,i}$ are the raw counts taken from the \gls{ic3} state-level reports for the chosen source state.  Dividing each entry by $P_j$ converts it to a per-capita rate; multiplying by $N_t$ then scales that rate to match the \index{population} population of the target city.  The \index{population} population values in $P$ provide the year-by-year context for $N_t$ and confirm the representativeness of the scaling.  Summing the selected column $i$ of the per-capita-adjusted $M$ across all years yields the final result $R$.
 \subsection{Methodology for\index{Monte Carlo simulation} Monte Carlo Simulations in Excel}
-We chose \gls{ic3} crime data from \index{American Samoa} American Samoa to act as our 10\% confidence limit.  We chose data from California to act as our 90\% confidence limit.  We set those limits by looking at seven year spans of crime data and taking the median.  This means we would be likely to have observations above and below the limits, but that the limits themselves would have a basis in observation.
+We chose \gls{ic3} crime data from \index{American Samoa} American Samoa to act as our lower bound.  We chose data from California to act as our upper bound.  We set those limits by looking at seven year spans of crime data and taking the median.  This means we would be likely to have observations above and below the limits, but that the limits themselves would have a basis in observation.
 We input and processed the data as follows:
 \begin{itemize}
 \item We imported the data from \gls{ic3} crime tables
@@ -1917,8 +1917,8 @@ We input and processed the data as follows:
     \item \index{California} California.
   \end{itemize}
 \item We imported a normal distribution table from the\index{Monte Carlo simulation} Monte Carlo Toolkit.
-\item We set mean summary counts from\index{American Samoa} American Samoa as our 10\% interval.
-\item We set mean summary counts from\index{California} California as our 90\% interval.
+\item We set mean summary counts from\index{American Samoa} American Samoa as our lower bound.
+\item We set mean summary counts from\index{California} California as our upper bound.
 \item We accepted the\index{Monte Carlo simulation} Monte Carlo percentages and exceedence curves.
 \end{itemize}
 
@@ -2306,7 +2306,7 @@ Likelihood
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/percent_phishing_impact.png}}}
   \[
-\mathrm{CI}_{80\%}(\theta) = [\$5,081,  \$41,415]
+\mathrm{CI}_{80\%}(\theta) = [\$5081, \$41415]
 \]
   \caption{A\index{Monte Carlo simulation} Monte Carlo simulation with a normal distribution suggests that there is a 90\% probability that\index{phishing} phishing events will cost \$5,081.29 or more in a year.  There is a 50\% likelihood that they will cost \$23,193.11 or more in a year.  There is a 10\% chance that they will cost \$41,415.88 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  H with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
@@ -2585,7 +2585,7 @@ Likelihood
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/percent_threats_impact.png}}}
     \[
-\mathrm{CI}_{80\%}(\theta) = [\$897,  \$7,072]
+\mathrm{CI}_{80\%}(\theta) = [\$897,  \$7072]
 \]
   \caption{A\index{Monte Carlo simulation} Monte Carlo simulation suggests that there is a 90\% probability that\index{threat} threat events will cost \$897.29 or more in a year.  There is a 50\% likelihood that they will cost \$4,032.65 or more in a year.  There is a 10\% chance that they will cost \$7,072.47 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
