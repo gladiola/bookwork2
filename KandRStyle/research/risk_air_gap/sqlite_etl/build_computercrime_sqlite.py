@@ -292,14 +292,15 @@ def iter_sheet_cells(sheet_xml: bytes, shared_strings: list[str]) -> Iterable[di
                 continue
             row_index, column_index = split_cell_reference(cell_ref)
             formula = cell.find(f'{{{NS_MAIN}}}f')
+            decoded_value = decode_cell_value(cell, shared_strings)
             rows.append(
                 {
                     'cell_ref': cell_ref,
                     'row_index': row_index,
                     'column_index': column_index,
                     'cell_type': cell.attrib.get('t', 'n'),
-                    'raw_value': decode_cell_value(cell, shared_strings),
-                    'display_value': decode_cell_value(cell, shared_strings),
+                    'raw_value': decoded_value,
+                    'display_value': decoded_value,
                     'formula': formula.text if formula is not None else None,
                     'formula_type': formula.attrib.get('t') if formula is not None else None,
                 }

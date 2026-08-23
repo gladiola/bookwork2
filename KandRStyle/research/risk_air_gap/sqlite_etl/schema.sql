@@ -174,6 +174,7 @@ CREATE TABLE IF NOT EXISTS simulation_inputs (
     value_range_ref TEXT,
     probability_range_ref TEXT,
     notes TEXT,
+    -- Each workbook simulation sheet represents one scenario.
     UNIQUE(sheet_id)
 );
 

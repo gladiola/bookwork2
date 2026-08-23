@@ -1,11 +1,11 @@
 # ComputerCrime workbook SQLite ETL
 
-This folder implements the SQLite requirement for `/home/runner/work/bookwork2/bookwork2/KandRStyle/research/risk_air_gap/ComputerCrime_AUG2026_Impact_Final_With_C5C7_IFERROR_CHARTS_FIXED.xlsx`.
+This folder implements the SQLite requirement for `../ComputerCrime_AUG2026_Impact_Final_With_C5C7_IFERROR_CHARTS_FIXED.xlsx`.
 
 ## What it loads
 
 - Raw workbook provenance into SQLite:
-  - source files in `/home/runner/work/bookwork2/bookwork2/KandRStyle/research/risk_air_gap`
+  - source files in `..`
   - workbook sheets
   - defined names
   - sheet relationships
@@ -42,6 +42,7 @@ Graphs are stored as assets, not reverse-engineered into primary fact tables.
 Monte Carlo sheets are loaded in two layers.
 
 - Inputs: distribution type, measure type, confidence level, lower bound, upper bound, and iteration range go into `simulation_inputs`.
+- Each workbook simulation sheet is treated as one scenario, so `simulation_inputs` stores one row per simulation sheet.
 - Outputs: min, max, mean, median, sample standard deviation, and selected percentiles go into `simulation_outputs`.
 - The workbook already stores cached random samples in column `D`; the ETL computes summary statistics from those cached values.
 - If full reproducibility at the row level is needed, pass `--include-iterations` to load the 10,000 iteration values into `simulation_iterations`.
@@ -49,7 +50,7 @@ Monte Carlo sheets are loaded in two layers.
 ## Usage
 
 ```bash
-python /home/runner/work/bookwork2/bookwork2/KandRStyle/research/risk_air_gap/sqlite_etl/build_computercrime_sqlite.py \
+python KandRStyle/research/risk_air_gap/sqlite_etl/build_computercrime_sqlite.py \
   --sqlite /tmp/computercrime.sqlite3 \
   --extract-assets-dir /tmp/computercrime-assets
 ```
@@ -57,7 +58,7 @@ python /home/runner/work/bookwork2/bookwork2/KandRStyle/research/risk_air_gap/sq
 To include all Monte Carlo iterations:
 
 ```bash
-python /home/runner/work/bookwork2/bookwork2/KandRStyle/research/risk_air_gap/sqlite_etl/build_computercrime_sqlite.py \
+python KandRStyle/research/risk_air_gap/sqlite_etl/build_computercrime_sqlite.py \
   --sqlite /tmp/computercrime.sqlite3 \
   --extract-assets-dir /tmp/computercrime-assets \
   --include-iterations
