@@ -10,8 +10,10 @@
 %  - California state-level Data Breach counts (2016-2022): 568, 632, 385, 235, 367, 188, 381
 %    City-scaled counts: 2, 2, 1, 0, 1, 0, 1   Mean = 7/7 = 1.00 → upper bound = 1
 %  - Bounds: 0 to 1 → BINARY distribution (Binary_DataBreach sheet)
-%  - Binary_DataBreach sheet: Value 1 probability = 0.71
-%    → P(0 events) = 71%,  P(1 event) = 29%
+%  - Binary_DataBreach sheet: C5 = 0.71 probability; formula =IF(RAND()<$C$5,1,0)
+%    → P(1 event)  = 71%  (RAND() < 0.71 → returns 1)
+%    → P(0 events) = 29%  (RAND() >= 0.71 → returns 0)
+%    The 0.71 is derived as the midpoint of the two means: (0.43 + 1.00)/2 ≈ 0.715
 %  - AS city-scaled impacts (treating #DIV/0! as $0): $0,$0,$0,$0,$1,168,227,$0,$0
 %    Mean AS scaled impact = $166,890
 %  - CA city-scaled impacts (2016-2022):
@@ -151,7 +153,7 @@ m \in \{\text{scaled count},\text{scaled dollars}\}
   }
   \label{fig:screenshot-montecarlo-databreach-count-binary}
 \end{figure}
-When we computed the upper and lower bounds, we recognized that a normal distribution would not fit well for forecasting likelihood.  We took the mean of the sample from American Samoa for the lower bound (0); we took the mean from the sample from California for the upper bound (1); we had a separation of 1 unit.  Therefore, we switched to a binary model with both options sharing the likelihood determined by the simulation.
+When we computed the upper and lower bounds, we recognized that a normal distribution would not fit well for forecasting likelihood.  We took the mean of the sample from American Samoa for the lower bound (0); we took the mean from the sample from California for the upper bound (1); we had a separation of 1 unit.  Therefore, we switched to a binary model.  The probability assigned to a breach occurring in a given year was set to the midpoint of the two means: $(0.43 + 1.00)/2 \approx 0.71$.
 \begin{table}[H]
   \centering
   \caption{Monte Carlo Binary Simulation Values for Data Breach}
@@ -167,12 +169,12 @@ Events
 &1\\
     \midrule
 Likelihood
-&71\%
-&29\%\\
+&29\%
+&71\%\\
     \bottomrule
   \end{tabular}
   \end{center}
-  \raggedright{A\index{Monte Carlo simulation} Monte Carlo simulation was run using a binary distribution.  We bounded the simulation between 0 and 1 events.  The simulation assigned a 71\% likelihood to 0 events and a 29\% likelihood to 1 event per year.  The resulting distribution reflects the rarity of data breach events at this population scale.}
+  \raggedright{A\index{Monte Carlo simulation} Monte Carlo simulation was run using a binary distribution.  We bounded the simulation between 0 and 1 events.  The simulation assigned a 71\% likelihood to 1 event and a 29\% likelihood to 0 events per year.  The probability 0.71 was derived as the midpoint of the American Samoa mean (0.43) and the California mean (1.00).  The resulting distribution reflects the moderate probability of a data breach event at this population scale.}
 \end{table}
 
 \begin{figure}[H]
