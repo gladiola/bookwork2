@@ -1,0 +1,46 @@
+In ComputerCrime_AUG2026_Impact_Final_With_C5C7_IFERROR_CHARTS_FIXED.xlsx, look at Discrete_Phishing.  We need a similar sheet for the crime of BEC, Business Email Compromise.  Use the means from Amercian_Samoa and California to set the lower and upper bounds.  Take the seven year samples of the crime and mean the values for the years 2016 to 2022; do not use the median; use the mean.  Make a bar chart on the page for each potential value; for example, if the range is 3 to 5 then make a column for 3, 4, and 5.  The result should look similar to Discrete_Phishing, but with columns and facts relevant to Identity Theft.  Add this page to the Table of Contents when you are done.  Be sure to include a hyperlink back to the table of contents on every page.  Any graphs should be printable in black and white.
+
+Use the California upper bound (mean) to recalculate Monte Carlo graphs on Normal($)BEC.
+
+Check to make sure the box and whisker plots haven't fallen off of the last three pages again.
+
+
+
+Look carefully at ut.tex section on Phishing, lines 2661 to 2136.  We want to use this as a template for achieving a goal.  We want another section of ut.tex, Data Breach  (currently on lines 2000 to 2037) to look like the Phishing one.  We have a blank template text file in sample_formula_entry.txt.
+
+We want to fill in some details using worksheets from ComputerCrime_AUG2026_Impact_Final_With_C5C7_IFERROR_CHARTS_FIXED.xlsx.
+We want to use the means from _American_Samoa worksheets to establish a mean to be used as a lower bound.  Find the per-capita rate of crime for the crime category (Data Breach) for the years 2016 to 2022.  Take the mean.  Apply this as the lower bound on the Monte Carlo worksheet you are making.
+
+We want to use the means from _California worksheets to establish a mean to be used as a upper bound.  Find the per-capita rate of crime for the crime category (Data Breach) for the years 2016 to 2022.  Take the mean.  Apply this as the upper bound on the Monte Carlo worksheet you are making.
+
+Count the number of categories among the upper and lower bound.  If the bounds are between 0 and 1, then you will need a binary distribution.  If the bounds are between 2 and 10 values, then you will need a discrete.
+
+If you need a discrete then follow this path: Each value will need its own bar graph on the discrete sheet.  If the range is 3 to 5, then we would want to see a bar graph for 3, 4, and 5.  You may need to modify a copy of Discrete_Phishing to hold the correct number of bar graphs depending upon the results of your searches for the means that are used as upper and lower bounds.
+
+If you need a binary, then you will do something similar, but you will use the Binary worksheet as your starting point.  Ensure that any graphs on the binary pages are in black and white.  They should look similar to the discrete sheets.
+
+A successful endstate will include Monte Carlo random values in Column D fulfilling the graph you build.  There should not typically be any 0 counts for values or unused bar charts when you are finished.  The graph should be fulfilled as Discrete_Phishing was, but with information relevant to the crime category at hand.
+
+If the Discrete_BEC sheet is built and functioning to standard, then use it to fill in the needed values for ut.tex.  
+Look at sample_formula_entry.txt.  We will walk through areas where you will apply the spreadsheet data to make substitutions.
+In the first matrix, add three columns of values separated by \cdots.  Use the raw count for American Samoa.  Choose from years 2016, 2017, and 2022.  
+In the first matrix, add three columns of impacts separated by \cdots.  Use the raw impact values for American Samoa.  Choose from years 2016, 2017, and 2022.
+
+In the second matrix, do similar work, but this time use per-capita scaled values for count and impact.
+In the third matrix, show the means of the scaled count and scaled dollars for American Samoa.
+In the fourth matrix, do the work for California in a pattern similar to that of American Samoa.
+In the fifth matrix, do the work for per-capita California in a pattern similar to that of American Samoa.
+
+In the section Monte Carlo Simulations for Likelihood and Impact, add in values that match the matrix entries.  
+The sentence "We bounded between..." should show the American Samoa mean and the California mean being set as lower and upper limits.
+In the sentence " We took the mean of the sample from American Samoa for the lower bound (); we took the mean from the sample from California for the upper bound (); we had a separation of  units." we should apply the facts in parenthesis or inline text as needed.
+In Monte Carlo Discrete Simulation Values for Phishing, build the Events and Likelihood table to match the percentages per category from the Monte Carlo simulation.  For example, if a 10% likelihood was initially assigned and 11.3% came out of the simulation, report the 11.3% value.  
+
+Fill in the following paragraphs for cost in a similar manner.
+Store your results not in ut.tex, but in a separate text file that I can download and inspect.  Leave ut.tex, the sample text file in tact.  Adjust the workbook if you have to, as above.
+
+Create figures for the graphs to match the text.  Refer to previously made .png files in the folder figures as examples.  ensure the graphs in the figures are in black and white.
+
+Ensure any worksheets you create are added to the workbook's table of contents.
+
+Every time you finish, ensure the following:  ensure that every page has a link back to the table of contents.  Ensure that every Monte Carlo page can calculate.  Ensure that all graphs are in black and white.  Ensure that the box and whisker plots haven't fallen off of the page.  Ensure that the features of the workbook all work.  Do not shortcut the process or send errors back down the line.  The workbook should open uncorrupted and unbroken on receipt.
