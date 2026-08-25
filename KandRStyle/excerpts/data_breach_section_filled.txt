@@ -220,8 +220,8 @@ Likelihood
 %  6. E18 = =SUM(E16:E17) (validation check, should = 1)
 %  7. D21:D10020 = =IF(RAND()<$C$5,1,0) (10,000 Monte Carlo formulas)
 %  8. Helper rows 11-13 added for chart data:
-%       C12=0, D12==E17  (0-event category and its simulation pct)
-%       C13=1, D13==E16  (1-event category and its simulation pct)
+%       C12=0, D12=E17  (0-event category and its simulation pct)
+%       C13=1, D13=E16  (1-event category and its simulation pct)
 %  9. BarChart built from D12:D13 with categories C12:C13
 %     → single series, two bars; black fill, black border (B&W compliant)
 %     → chart references actual simulation output (E17/E16), not input P
@@ -235,8 +235,12 @@ Likelihood
 %  - KandRStyle/figures/percent_dataBreach_impact.png    (pre-existing)
 %
 % NOTE ON SIMULATION VALUES:
-%  The table above reports 72.1% (1 event) and 27.9% (0 events) which are
-%  the Monte Carlo simulation output values from a representative 10,000-
-%  iteration run with P=0.71. On F9 recalculation these will vary slightly.
+%  The table above (72.1% for 1 event, 27.9% for 0 events) and the figure
+%  binary_dataBreach_count.png are FIXED SNAPSHOTS from a representative
+%  10,000-iteration run with input probability P=0.71. They will not update
+%  automatically. Each F9 recalculation of the workbook will produce slightly
+%  different counts; the document values should be treated as a single
+%  representative draw from the distribution (as is standard practice for
+%  Monte Carlo reporting in published risk analyses).
 %
 %%%%%%%%%%%%%%%%%%%%  END OF STATUS  %%%%%%%%%%%%%%%%%%%%
