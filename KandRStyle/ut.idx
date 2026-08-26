@@ -8,6 +8,79 @@
 \indexentry{Chattanooga State Community College|hyperpage}{ix}
 \indexentry{University of Tennessee at Chatttanooga|hyperpage}{ix}
 \indexentry{Harvard University Extension School|hyperpage}{ix}
+\indexentry{vulnerabilities|hyperpage}{17}
+\indexentry{exploit|hyperpage}{17}
+\indexentry{SQL Injection|hyperpage}{17}
+\indexentry{SQL Injection|hyperpage}{17}
+\indexentry{static content|hyperpage}{17}
+\indexentry{form-based content|hyperpage}{17}
+\indexentry{dynamic content|hyperpage}{17}
+\indexentry{user input|hyperpage}{17}
+\indexentry{URL encoding|hyperpage}{17}
+\indexentry{SQL Injection|hyperpage}{17}
+\indexentry{SQL Injection|hyperpage}{18}
+\indexentry{validate|hyperpage}{18}
+\indexentry{sanitize|hyperpage}{18}
+\indexentry{PHP|hyperpage}{18}
+\indexentry{SQL Injection|hyperpage}{18}
+\indexentry{OWASP|hyperpage}{18}
+\indexentry{OWASP|hyperpage}{18}
+\indexentry{OWASP|hyperpage}{18}
+\indexentry{vulnerabilities|hyperpage}{18}
+\indexentry{SQL Injection|hyperpage}{18}
+\indexentry{vulnerabilities|hyperpage}{18}
+\indexentry{automated attack tools|hyperpage}{18}
+\indexentry{SQL Injection|hyperpage}{18}
+\indexentry{data in motion|hyperpage}{18}
+\indexentry{data at rest|hyperpage}{18}
+\indexentry{injection attacks|hyperpage}{18}
+\indexentry{injection attacks|hyperpage}{18}
+\indexentry{risk assessment|hyperpage}{18}
+\indexentry{threat modeling|hyperpage}{18}
+\indexentry{automated attack tools|hyperpage}{18}
+\indexentry{attack tools|hyperpage}{18}
+\indexentry{network defender|hyperpage}{18}
+\indexentry{attack mitigation|hyperpage}{19}
+\indexentry{defensive techniques|hyperpage}{19}
+\indexentry{risk controls|hyperpage}{19}
+\indexentry{risk assessment|hyperpage}{19}
+\indexentry{NIST|hyperpage}{19}
+\indexentry{Cybersecurity Framework|hyperpage}{19}
+\indexentry{risk assessment|hyperpage}{19}
+\indexentry{NIST|hyperpage}{19}
+\indexentry{SQL Injection|hyperpage}{19}
+\indexentry{mitigation|hyperpage}{19}
+\indexentry{mitigation|hyperpage}{19}
+\indexentry{SQL Injection|hyperpage}{19}
+\indexentry{continuous monitoring|hyperpage}{20}
+\indexentry{risk assessment|hyperpage}{20}
+\indexentry{SQL Injection|hyperpage}{20}
+\indexentry{NIST|hyperpage}{20}
+\indexentry{Cybersecurity Framework|hyperpage}{20}
+\indexentry{mitigation|hyperpage}{20}
+\indexentry{quasi-natural experiments|hyperpage}{20}
+\indexentry{experimental design|hyperpage}{20}
+\indexentry{experimental design|hyperpage}{20}
+\indexentry{quasi-natural experiments|hyperpage}{20}
+\indexentry{experimental design|hyperpage}{20}
+\indexentry{random control trials|hyperpage}{20}
+\indexentry{randomized controlled trials|hyperpage}{20}
+\indexentry{randomized controlled trials|hyperpage}{20}
+\indexentry{randomized controlled trials|hyperpage}{20}
+\indexentry{quasi-natural experiments|hyperpage}{20}
+\indexentry{SQL Injection|hyperpage}{30}
+\indexentry{buffer overflow|hyperpage}{31}
+\indexentry{exploitation frameworks|hyperpage}{31}
+\indexentry{Metasploit|hyperpage}{31}
+\indexentry{Burp Suite|hyperpage}{31}
+\indexentry{social engineering|hyperpage}{31}
+\indexentry{phishing|hyperpage}{31}
+\indexentry{pentester|hyperpage}{31}
+\indexentry{VirtualBox|hyperpage}{31}
+\indexentry{virtual machines|hyperpage}{31}
+\indexentry{Kali Linux|hyperpage}{31}
+\indexentry{payloads|hyperpage}{31}
+\indexentry{msfvenom|hyperpage}{31}
 \indexentry{risk assessment|hyperpage}{77}
 \indexentry{cybercrime|hyperpage}{77}
 \indexentry{Chattanooga|hyperpage}{77}
@@ -76,16 +149,21 @@
 \indexentry{Chattanooga|hyperpage}{84}
 \indexentry{cybercrime|hyperpage}{85}
 \indexentry{cybercrime|hyperpage}{85}
+\indexentry{per capita|hyperpage}{85}
 \indexentry{US Census|hyperpage}{85}
 \indexentry{population|hyperpage}{85}
 \indexentry{cybercrime|hyperpage}{85}
+\indexentry{distribution|hyperpage}{85}
 \indexentry{sample|hyperpage}{85}
 \indexentry{population|hyperpage}{85}
+\indexentry{scale|hyperpage}{85}
 \indexentry{population|hyperpage}{85}
 \indexentry{sample|hyperpage}{85}
+\indexentry{index|hyperpage}{85}
 \indexentry{cybercrime|hyperpage}{85}
 \indexentry{sample|hyperpage}{85}
 \indexentry{population|hyperpage}{85}
+\indexentry{matrix|hyperpage}{85}
 \indexentry{population|hyperpage}{85}
 \indexentry{sample|hyperpage}{85}
 \indexentry{sample|hyperpage}{85}
@@ -458,13 +536,36 @@
 \indexentry{amnesiac|hyperpage}{135}
 \indexentry{operating system|hyperpage}{135}
 \indexentry{configuration|hyperpage}{135}
+\indexentry{configuration|hyperpage}{135}
 \indexentry{coding|hyperpage}{135}
 \indexentry{operating system|hyperpage}{135}
 \indexentry{live CD|hyperpage}{135}
 \indexentry{operating system|hyperpage}{135}
 \indexentry{amensiac|hyperpage}{135}
 \indexentry{operating system|hyperpage}{135}
+\indexentry{immutable state|hyperpage}{135}
 \indexentry{operating system|hyperpage}{135}
+\indexentry{persistence|hyperpage}{135}
+\indexentry{penetration testing|hyperpage}{135}
+\indexentry{MITRE ATT\&CK|hyperpage}{135}
+\indexentry{reconnaissance|hyperpage}{135}
+\indexentry{operating system|hyperpage}{135}
+\indexentry{immutable|hyperpage}{135}
+\indexentry{MITRE ATT\&CK|hyperpage}{135}
+\indexentry{immutability|hyperpage}{135}
+\indexentry{immutability|hyperpage}{135}
+\indexentry{immutability|hyperpage}{135}
+\indexentry{physical security|hyperpage}{135}
+\indexentry{Pre-OS Boot|hyperpage}{140}
+\indexentry{command history logging|hyperpage}{140}
+\indexentry{protocol tunneling|hyperpage}{140}
+\indexentry{proxy|hyperpage}{140}
+\indexentry{remote access tools|hyperpage}{140}
+\indexentry{rogue domain controller|hyperpage}{140}
+\indexentry{rootkit|hyperpage}{140}
+\indexentry{scheduled task|hyperpage}{140}
+\indexentry{ransomware|hyperpage}{142}
+\indexentry{account takeover|hyperpage}{142}
 \indexentry{GDPR!Right to be Forgotten|hyperpage}{144}
 \indexentry{immutability!hard|hyperpage}{144}
 \indexentry{immutability!soft|hyperpage}{144}
@@ -478,6 +579,22 @@
 \indexentry{RAIDZ-2|hyperpage}{147}
 \indexentry{geli|hyperpage}{148}
 \indexentry{RAIDZ-2|hyperpage}{148}
+\indexentry{ZFS|hyperpage}{148}
+\indexentry{jails|hyperpage}{148}
+\indexentry{hierarchical jails|hyperpage}{148}
+\indexentry{jails|hyperpage}{148}
+\indexentry{jails|hyperpage}{148}
+\indexentry{ZFS|hyperpage}{148}
+\indexentry{ZFS|hyperpage}{148}
+\indexentry{hardware RAID|hyperpage}{149}
+\indexentry{software RAID|hyperpage}{149}
+\indexentry{ZFS|hyperpage}{149}
+\indexentry{VDEV|hyperpage}{149}
+\indexentry{RAID-0|hyperpage}{149}
+\indexentry{VDEVs|hyperpage}{149}
+\indexentry{serial number|hyperpage}{149}
+\indexentry{VDEVs|hyperpage}{149}
+\indexentry{ZFS|hyperpage}{149}
 \indexentry{FreeBSD|hyperpage}{149}
 \indexentry{coding|hyperpage}{149}
 \indexentry{operating system|hyperpage}{149}
@@ -659,8 +776,58 @@
 \indexentry{zpool|hyperpage}{165}
 \indexentry{cache|hyperpage}{165}
 \indexentry{zpool|hyperpage}{165}
+\indexentry{air-gapped|hyperpage}{177}
+\indexentry{immutable|hyperpage}{177}
+\indexentry{operating system|hyperpage}{177}
+\indexentry{encrypted storage|hyperpage}{177}
+\indexentry{encrypted storage|hyperpage}{177}
+\indexentry{air-gapped|hyperpage}{177}
+\indexentry{keys|hyperpage}{177}
+\indexentry{certificates|hyperpage}{177}
+\indexentry{secrets|hyperpage}{177}
+\indexentry{authentication|hyperpage}{177}
+\indexentry{magstripe|hyperpage}{177}
+\indexentry{air-gapped|hyperpage}{178}
+\indexentry{WiFi|hyperpage}{178}
+\indexentry{privacy screen|hyperpage}{178}
+\indexentry{USB|hyperpage}{178}
+\indexentry{bluetooth tracking device|hyperpage}{178}
+\indexentry{encrypted USB drives|hyperpage}{178}
+\indexentry{Camellia|hyperpage}{178}
+\indexentry{geli|hyperpage}{178}
+\indexentry{ZFS|hyperpage}{178}
+\indexentry{gpart|hyperpage}{178}
+\indexentry{magstripe cards|hyperpage}{178}
+\indexentry{passphrases|hyperpage}{178}
+\indexentry{UV-readable ink|hyperpage}{178}
+\indexentry{multifactor authentication|hyperpage}{178}
+\indexentry{TOTP|hyperpage}{178}
+\indexentry{HOTP|hyperpage}{178}
+\indexentry{certificates|hyperpage}{178}
 \indexentry{FreeBSD|hyperpage}{185}
+\indexentry{LTO tape|hyperpage}{185}
+\indexentry{tape|hyperpage}{185}
+\indexentry{backups|hyperpage}{185}
+\indexentry{tape operations|hyperpage}{185}
+\indexentry{tapes|hyperpage}{185}
+\indexentry{tapes|hyperpage}{185}
+\indexentry{data center|hyperpage}{185}
+\indexentry{tape operations|hyperpage}{185}
+\indexentry{LTO tape|hyperpage}{185}
+\indexentry{tape|hyperpage}{185}
+\indexentry{tape|hyperpage}{185}
+\indexentry{tape|hyperpage}{185}
+\indexentry{tape|hyperpage}{185}
+\indexentry{LTO3|hyperpage}{185}
+\indexentry{tape machine|hyperpage}{185}
+\indexentry{LTO3 tapes|hyperpage}{185}
+\indexentry{tape drivers|hyperpage}{185}
 \indexentry{FreeBSD|hyperpage}{185}
+\indexentry{nsa driver|hyperpage}{185}
+\indexentry{sa driver|hyperpage}{185}
+\indexentry{tape|hyperpage}{185}
+\indexentry{file markers|hyperpage}{185}
+\indexentry{nsa driver|hyperpage}{185}
 \indexentry{encrypt|hyperpage}{189}
 \indexentry{encrypt|hyperpage}{189}
 \indexentry{encrypt|hyperpage}{189}
