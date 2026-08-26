@@ -1,0 +1,518 @@
+# COMPREHENSIVE INDEX TERMS ANALYSIS FOR ut.tex
+# Document: Coding and Configuration for Secure Systems in BSDs
+# Analysis Date: 2026-08-26
+# Note: This list excludes terms already indexed in the document
+
+## 1. SECURITY CONCEPTS & PRINCIPLES (Not Yet Indexed)
+- CIA triad (Confidentiality, Integrity, Availability) - Core security principle mentioned in text
+- Confidentiality - First element of CIA triad
+- Integrity - Second element of CIA triad; emphasized regarding ransomware threat
+- Availability - Third element of CIA triad
+- Immutable system / Immutability (soft/hard/operational) - Central theme of Chapter 4; discussed extensively
+  * Amnesiac systems - Systems that reset to known state on startup
+  * Immutable storage - Write-once storage approaches
+- Defense in depth - Multi-layered security approach
+- Zero-trust architecture - Mentioned implicitly in attack prevention discussions
+- Attack surface reduction - Minimizing ways attackers can compromise systems
+- Fail-secure / Fail-open design - System behavior on failure
+
+## 2. RISK ASSESSMENT & QUANTITATIVE ANALYSIS (Terms to enhance existing index)
+- Risk quantification - Measuring and assigning numerical values to risks
+- Likelihood assessment - Probability of threat occurrence
+- Impact assessment - Severity of threat consequences
+- Risk mitigation - Reducing risk likelihood or impact
+- Threat actor - Entities creating cybercrime threats
+- Threat modeling - Systematic identification of potential threats
+- Poisson distribution - Statistical distribution used for count modeling
+- Normal distribution - Statistical distribution used in Monte Carlo simulations
+- Triangular distribution - Alternative statistical distribution for simulations
+- Discrete distribution - Distribution model for bounded integer values
+- Uniform distribution - Equal probability distribution
+- Confidence intervals - Range of probable values in statistical analysis
+- Standard deviation - Measure of statistical dispersion
+- Variance - Measure of spread in statistical data
+- Skewness - Asymmetry in statistical distributions
+- Binomial distribution - Distribution for binary outcomes
+- Per-capita rates - Crime statistics normalized by population
+- Baseline simulation - Starting point for comparative risk analysis
+
+## 3. CYBERCRIME TYPES & ATTACK VECTORS (Enhance existing index)
+- Data exfiltration - Stealing data from systems
+- Lateral movement - Moving through network after initial compromise
+- Persistence mechanisms - Methods to maintain access after breach
+- Command and control (C2/C&C) - Communication with compromised systems
+- Beaconing - Compromised system regularly contacting attacker
+- Zero-day exploit - Vulnerability unknown to vendor/public
+- Vulnerability disclosure - Responsible reporting of security flaws
+- Patch management - Process of applying security updates
+- Privilege escalation - Gaining higher system permissions
+- Lateral escalation - Gaining access to other systems/accounts
+- Post-exploitation - Actions after successful initial compromise
+- Proof of concept (PoC) - Demonstration that vulnerability exists
+- Indicator of compromise (IoC) - Evidence of breach/attack
+- Threat hunting - Proactive search for threats in environment
+- Incident response - Procedures for handling security incidents
+- Forensic analysis - Investigating and analyzing security incidents
+- Chain of custody - Documented handling of evidence
+- Root cause analysis - Determining underlying causes of incidents
+
+## 4. ENCRYPTION & CRYPTOGRAPHY (Not yet indexed; critical for security)
+- Public key infrastructure (PKI) - System for managing digital certificates
+- Asymmetric encryption - Encryption using public/private key pairs
+- Symmetric encryption - Encryption using single shared key
+- Key derivation - Process of generating cryptographic keys from passwords
+- Key stretching - Making weak passwords stronger through computation
+- Salt (cryptographic) - Random data added to passwords before hashing
+- Pepper (cryptographic) - Secret data added to password hash
+- Cryptographic hash - Mathematical function for data integrity
+- Message authentication code (MAC) - Verify message authenticity and integrity
+- Authenticated encryption - Encryption with integrated authentication
+- Elliptic curve cryptography - Modern asymmetric encryption approach
+- RSA (Rivest-Shamir-Adleman) - Public key cryptography algorithm
+- AES (Advanced Encryption Standard) - Symmetric encryption standard
+- HMAC (Hash-based Message Authentication Code) - Cryptographic authentication
+- PBKDF2 - Password-based key derivation function
+- Argon2 - Modern password hashing algorithm
+- Scrypt - Key derivation function designed for passwords
+- Bcrypt - Password hashing algorithm
+- ChaCha20 - Stream cipher algorithm
+- Poly1305 - Message authentication algorithm
+
+## 5. AUTHENTICATION & ACCESS CONTROL (Not yet indexed)
+- Authentication - Verifying user identity
+- Authorization - Determining what authenticated user can do
+- Accounting - Logging user actions and access
+- Multi-factor authentication (MFA) - Multiple verification methods required
+- Two-factor authentication (2FA) - Two different verification methods
+- Time-based one-time password (TOTP) - Time-synchronized OTP
+- Challenge-response authentication - User proves identity through challenge
+- Biometric authentication - Authentication using biological characteristics
+- Certificate-based authentication - Using digital certificates for identity
+- Single sign-on (SSO) - One login for multiple systems
+- Access control list (ACL) - Explicit permissions for resources
+- Role-based access control (RBAC) - Permissions based on user roles
+- Attribute-based access control (ABAC) - Permissions based on attributes
+- Principle of least privilege - Giving minimum necessary permissions
+- Separation of duties - Dividing tasks to prevent fraud
+- Default deny - Deny access unless explicitly allowed
+
+## 6. FREEBSD-SPECIFIC CONCEPTS & CONFIGURATIONS
+### File Systems & Storage
+- ZFS (Zettabyte File System) - Advanced file system (already indexed but could be enhanced)
+- VDEV (Virtual Device) - Component of ZFS pool
+- Copy-on-write - Efficient data storage technique used by ZFS
+- ZFS compression - Reducing data size in ZFS
+- ZFS deduplication - Eliminating duplicate data blocks
+- ZFS snapshots - Point-in-time file system copies
+- ZFS replication - Copying data between ZFS systems
+- ZFS send/receive - Commands for ZFS replication
+- ZFS import/export - Moving pools between systems
+- ZFS pool management - Creating and managing storage pools
+- Quota (ZFS) - Limiting dataset size
+- Reservation (ZFS) - Guaranteeing space availability
+- Refreservation (ZFS) - Space guarantee excluding snapshots
+- Mountpoint (ZFS) - Where file system attaches to directory tree
+- Canmount (ZFS) - Whether dataset can be mounted automatically
+- Dataset (ZFS) - Hierarchical file system structure
+- RAIDZ / RAIDZ-1 / RAIDZ-2 / RAIDZ-3 - ZFS redundancy levels
+- Mirror configuration - Mirroring for redundancy
+- Log device / SLOG - Separate log device for performance
+- L2ARC (Level 2 Adaptive Replacement Cache) - Extended cache for ZFS
+- ARC (Adaptive Replacement Cache) - In-memory cache for ZFS
+
+### Disk Management
+- Partition scheme - MBR vs GPT partitioning
+- Geom (Geometry) - Disk geometry framework in FreeBSD
+- GPART - Partition table management tool
+- Disk label - Logical identifier for physical disk
+- SATA drives - Serial ATA storage devices
+- SAS drives - Serial Attached SCSI storage devices
+- SSD - Solid-state drives
+- HDD - Hard disk drives
+- LTO tape - Linear tape-open backup media
+- Tape drive - Device for reading/writing magnetic tape
+- Tape archive - Files stored sequentially on tape
+- Tape file markers - Delimiters between files on tape
+- Write-protect notch - Physical protection against overwriting tape
+- Tape sequencing - Managing file locations on tape
+
+### System Management
+- Jails - FreeBSD virtualization/containerization technology
+- Jail configuration - Setting up FreeBSD jails
+- VNET (Virtual Networking) - Networking for jails
+- Root filesystem - Primary system filesystem
+- Live CD - Operating system running from read-only media
+- Bootloader - Program that loads the kernel
+- Kernel module - Dynamically loaded kernel component
+- Sysctl - System configuration and runtime parameters
+- RC scripts - System startup/shutdown scripts (rc.conf, rc.local)
+- bsdinstall - FreeBSD installation utility
+- Package management - Installing/managing software packages (pkg)
+- Ports - FreeBSD collection of third-party software
+- Poudriere - Bulk package building system for FreeBSD
+- Hierachical jails - Parent-child jail relationships
+
+### FreeBSD-Specific Commands (enhance existing index)
+- gpart resize - Resizing disk partitions
+- gpart recover - Recovering partition table information
+- gpart modify - Modifying partition attributes
+- geli attach - Attaching encrypted volume
+- geli init - Initializing GELI encryption
+- geli status - Checking encryption status
+- zpool recover - Recovering pool configuration
+- zpool resilver - Rebuilding failed pool components
+- mt (magnetic tape) commands - Tape device control
+  * mt fsf - Forward space file markers
+  * mt bsf - Backward space file markers
+  * mt eom - Go to end of media
+- TAR tape archive - Creating tape backups with tar
+- Dialog utility - Interactive command-line interface tool
+
+### Hardware Terms (for FreeBSD systems)
+- Dell PowerEdge server - Enterprise server hardware
+- Baseboard management controller - Server remote management interface
+- iDRAC (Integrated Dell Remote Access Controller) - Dell's management interface
+- RAID card - Hardware RAID controller
+- Network interface card (NIC) - Ethernet adapter
+- Motherboard - Primary circuit board
+- CPU - Central processing unit
+- RAM - Random access memory
+- GPU - Graphics processing unit
+- Power supply unit (PSU) - Power management hardware
+- Thermal management - Cooling system management
+
+## 7. ATTACK TYPES & MITRE ATT&CK TECHNIQUES (Already mentioned but not indexed)
+- Persistence mechanisms - Maintaining access after initial compromise
+- Defense evasion - Avoiding detection by security tools
+- Credential access - Stealing user credentials
+- Discovery - Gathering information about target systems
+- Lateral movement - Moving through network
+- Execution - Running malicious code
+- Collection - Gathering data from systems
+- Exfiltration - Removing stolen data
+- Command and control - Communicating with compromised systems
+- Impact - Destroying or disrupting systems
+
+### Specific Attack Techniques (from MITRE ATT&CK framework)
+- Container escape - Breaking out of containerized environment
+- Process injection - Injecting code into running processes
+- Rootkit installation - Installing root-level malware
+- Firmware corruption - Malicious firmware modifications
+- Registry modification - Modifying Windows registry for persistence
+- Scheduled task abuse - Using task scheduler for persistence
+- Pre-OS boot mechanisms - Bootkit and bootloader attacks
+- Data destruction - Intentional data deletion
+- Disk wipe - Overwriting all disk data
+- File and directory permissions modification
+- Hijack execution flow - Modifying how programs are loaded
+- OS credential dumping - Extracting cached credentials
+- Masquerading - Disguising malicious files as legitimate
+- Obfuscation - Hiding malicious code
+- Indicator removal - Deleting evidence of attack
+- Reflective code loading - Loading code into memory stealthily
+
+## 8. DEFENSIVE TECHNIQUES & HARDENING
+- Air-gapped system - Network-isolated system for security
+- Immutable infrastructure - Systems that cannot be modified
+- Read-only filesystem - Filesystem mounted as read-only
+- Disable execution permission - Preventing code execution in directories
+- Firewall rules - Network traffic filtering policies
+- Network segmentation - Dividing network into security zones
+- DMZ (Demilitarized Zone) - Isolated network segment
+- Allowlist/Whitelist - Explicitly allowed items
+- Denylist/Blacklist - Explicitly blocked items
+- MAC (Mandatory Access Control) - System-enforced access control
+- SELinux - Security-enhanced Linux
+- AppArmor - Linux application security module
+- Capabilities (Linux) - Fine-grained privilege system
+- Chroot - Change root directory for process isolation
+- Sandboxing - Isolating untrusted code execution
+- Containerization - Lightweight virtualization approach
+- Virtualization - Full system virtualization
+
+## 9. STANDARDS, FRAMEWORKS & ORGANIZATIONS (Not yet indexed)
+- NIST (National Institute of Standards and Technology) - U.S. standards body
+- NIST SP 800-series - NIST publications on IT security
+- MITRE - Non-profit research organization
+- MITRE ATT&CK - Attack framework and knowledge base
+- CAPEC (Common Attack Pattern Enumeration and Classification) - Attack patterns
+- CWE (Common Weakness Enumeration) - Software weakness classification
+- CVE (Common Vulnerabilities and Exposures) - Vulnerability identification
+- FBI (Federal Bureau of Investigation) - U.S. law enforcement
+- FBI IC3 - Internet Crime Complaint Center
+- OWASP - Open Web Application Security Project
+- OWASP Top 10 - Critical web application vulnerabilities
+- GDPR - General Data Protection Regulation (EU)
+- SANS - Security training organization
+- ISO/IEC 27001 - Information security management standard
+- PCI DSS - Payment card industry data security standard
+- HIPAA - Health Insurance Portability and Accountability Act
+- SOC 2 - Service Organization Control framework
+- COBIT - IT governance framework
+- CIS Controls - Cybersecurity best practices
+
+## 10. WEB APPLICATION & INJECTION ATTACK CONCEPTS
+- SQL Injection attack - Inserting malicious SQL into queries
+- SQL query sanitization - Removing dangerous SQL elements
+- Parameterized queries - Using placeholders instead of string concatenation
+- Input validation - Checking user input for safety
+- Input encoding - Converting input to safe format
+- Output encoding - Encoding output to prevent injection
+- SOAP (Simple Object Access Protocol) - XML-based web service protocol
+- SOAP parameter tampering - Modifying SOAP parameters
+- LDAP Injection - Injecting malicious LDAP commands
+- Command injection - Inserting shell commands into input
+- Code injection - Inserting code into running programs
+- Cross-site scripting (XSS) - Injecting scripts into web pages
+- Cross-site request forgery (CSRF) - Forging user requests
+- HTTP request smuggling - Exploiting HTTP parsing differences
+- Buffer overflow - Writing beyond allocated memory
+- Stack overflow - Exceeding stack memory limits
+- Heap overflow - Exceeding heap memory limits
+- Format string attack - Exploiting format string vulnerabilities
+- Race condition - Exploiting timing between operations
+- Time-of-check-time-of-use (TOCTOU) - Race condition in security checks
+
+## 11. PROGRAMMING & DEVELOPMENT CONCEPTS
+- K&R style - Kernighan and Ritchie coding style
+- Programming language - System for writing instructions
+- Compiled vs interpreted languages - Execution methods
+- Type system - Rules for variable types
+- Memory management - Allocating and freeing memory
+- Pointer - Reference to memory location
+- Array - Collection of elements
+- Data structure - Organized data storage
+- Algorithm - Step-by-step procedure
+- Variable - Named storage for data
+- Function - Reusable code block
+- Library - Collection of reusable code
+- API - Interface for code communication
+- Framework - Pre-built code structure
+- Middleware - Software between applications
+- Version control - Managing code changes (Git, etc.)
+- CI/CD - Continuous integration/continuous deployment
+- DevOps - Development and operations integration
+- Testing (unit, integration, system, acceptance) - Verification methods
+- Debugging - Finding and fixing errors
+- Logging - Recording system events
+
+## 12. NETWORKING & PROTOCOLS (Not extensively indexed)
+- TCP/IP - Transmission Control Protocol/Internet Protocol
+- Ethernet - Local area network technology
+- Wi-Fi - Wireless network technology
+- Network mask / Subnet mask - Dividing network into subnets
+- IP address - Network node identifier
+- MAC address - Physical network address
+- Port (network) - Service endpoint on a host
+- DNS - Domain Name System
+- DHCP - Dynamic Host Configuration Protocol
+- VPN - Virtual private network
+- TLS/SSL - Encryption for web communications
+- SSH - Secure shell remote access
+- HTTPS - HTTP with TLS encryption
+- HTTP - Hypertext Transfer Protocol
+- REST API - Representational State Transfer
+- gRPC - Remote procedure call framework
+- UDP - User Datagram Protocol
+- ICMP - Internet Control Message Protocol
+- ARP - Address Resolution Protocol
+- BGP - Border Gateway Protocol
+- OSPF - Open Shortest Path First routing
+- Network monitoring - Analyzing network traffic
+- Packet capture - Recording network packets
+- Intrusion detection system (IDS) - Detecting attacks
+- Intrusion prevention system (IPS) - Blocking attacks
+- Web application firewall (WAF) - Protecting web apps
+
+## 13. DATA STORAGE & BACKUP CONCEPTS
+- Backup strategy - Plan for backing up data
+- Incremental backup - Backing up changed data only
+- Differential backup - Backing up changes since full backup
+- Full backup - Complete data backup
+- Backup rotation - Managing multiple backup copies
+- Backup retention - How long to keep backups
+- Recovery point objective (RPO) - Data loss tolerance
+- Recovery time objective (RTO) - Downtime tolerance
+- Disaster recovery - Restoring after major failure
+- Business continuity - Maintaining operations during disruption
+- High availability - Minimizing downtime
+- Redundancy - Multiple copies for failure protection
+- Geographic redundancy - Backups in different locations
+- Erasure coding - Distributed data protection
+- Data retention - How long to keep data
+- Data lifecycle - Birth to destruction of data
+
+## 14. LEGAL & COMPLIANCE CONCEPTS
+- Data breach notification - Informing affected parties
+- Right to be forgotten - GDPR data deletion right
+- Data protection - Safeguarding personal information
+- Privacy - Controlling personal information
+- Digital forensics - Gathering digital evidence
+- Evidence handling - Proper evidence management
+- Non-repudiation - Proving someone did an action
+- Accountability - Responsibility for actions
+- Audit trail - Recording of system actions
+- Compliance - Following regulations
+- Governance - Decision-making structures
+- Risk management - Managing organizational risks
+
+## 15. STATISTICAL & MATHEMATICAL CONCEPTS
+- Mean - Average value
+- Median - Middle value
+- Mode - Most common value
+- Standard deviation - Measure of spread
+- Variance - Spread of values
+- Correlation - Relationship between variables
+- Regression - Statistical relationship modeling
+- Hypothesis testing - Testing statistical claims
+- P-value - Probability of results if null hypothesis true
+- Confidence level - Certainty percentage (80%, 90%, 95%)
+- Null hypothesis - Assumption that no effect exists
+- Alternative hypothesis - Claim being tested
+- Type I error - False positive
+- Type II error - False negative
+- Sample size - Number of observations
+- Population - All possible observations
+- Sampling - Selecting subset for analysis
+- Bias - Systematic error in measurement
+- Confounding variable - Unmeasured variable affecting results
+- Causation vs correlation - Difference between relationship and cause
+- Scaling - Adjusting data to different populations
+- Extrapolation - Predicting beyond known values
+- Interpolation - Estimating within known values
+
+## 16. HARDWARE SECURITY
+- Hardware security module (HSM) - Cryptographic device
+- Trusted Platform Module (TPM) - System security chip
+- Secure enclave - Protected processor area
+- Trusted execution environment (TEE) - Secure code execution
+- Hardware wallet - Device for storing cryptographic keys
+- Secure boot - Verifying boot process integrity
+- UEFI - Unified Extensible Firmware Interface
+- BIOS - Basic Input/Output System
+- Firmware - Low-level system software
+- Microcode - Lowest-level processor instructions
+- Secure enclave - Isolated processor area
+- Side-channel attack - Exploiting physical implementation
+- Timing attack - Exploiting execution time variation
+- Power analysis - Analyzing power consumption
+- Fault injection - Deliberately causing errors
+
+## 17. THREAT MODELING & ANALYSIS TERMS
+- Threat actor - Entity causing threats
+- Attack vector - Path for attack to occur
+- Attack surface - All potential compromise points
+- Vulnerability - Weakness that can be exploited
+- Exploit - Code/technique to exploit vulnerability
+- Payload - Code delivered by exploit
+- Shellcode - Low-level exploit payload
+- Beaconing - Regular communication by malware
+- Dead drop - Hidden location for exchanging data
+- Stager/stage payload - Multi-stage attack delivery
+- Anti-forensics - Preventing evidence gathering
+- Obfuscation - Making code hard to understand
+- Steganography - Hiding data in other data
+- Covert channel - Hidden communication method
+- Return-oriented programming (ROP) - Attack technique
+- Address space layout randomization (ASLR) - Memory protection
+- Data execution prevention (DEP) - Preventing code in data areas
+- NX bit - No-execute bit in CPU
+- Stack canary - Detecting stack overflow
+- Fuzzing - Testing with random/malformed input
+
+## 18. SPECIFIC CYBERCRIME TYPES (Enhance IC3 list)
+- Investment scams - Fraudulent investment offers
+- Romance scams - Relationship fraud for money
+- Advance fee fraud - Requesting upfront payment
+- Tech support scams - False tech support offers
+- Lottery/sweepstakes scams - Fake winning notifications
+- Charity fraud - Fraudulent charity requests
+- Unemployment scams - Fake job offers
+- Refinance/foreclosure scams - Housing fraud
+- Intellectual property theft - Stealing IP/trade secrets
+- Hostile takeover attempt - Corporate espionage
+- Product tampering - Contaminating products
+- Counterfeiting - Creating fake products
+- Piracy - Unauthorized copying of copyrighted material
+- Wire fraud - Defrauding via electronic communication
+- Check fraud - Creating/altering fraudulent checks
+- Loan fraud - False information for loan approval
+
+## 19. INCIDENT RESPONSE & FORENSICS
+- Containment - Stopping attack spread
+- Eradication - Removing attacker access
+- Recovery - Restoring systems to normal
+- Lessons learned - Post-incident analysis
+- Threat intelligence - Information about threats
+- Attack reconstruction - Understanding attack flow
+- Timeline analysis - Chronological attack analysis
+- Host-based forensics - Analyzing compromised host
+- Network forensics - Analyzing network traffic
+- Memory forensics - Analyzing RAM contents
+- Log analysis - Examining system logs
+- Artifact analysis - Examining digital artifacts
+- Malware analysis - Studying malicious code
+- Reverse engineering - Analyzing binary code
+- Static analysis - Analyzing without execution
+- Dynamic analysis - Analyzing during execution
+- Sandbox environment - Isolated analysis environment
+
+## 20. COMPLIANCE & SECURITY GOVERNANCE
+- Security posture - Overall security state
+- Risk register - Documentation of identified risks
+- Risk matrix - Plotting likelihood vs impact
+- Control framework - Set of security controls
+- Compensating control - Alternative control
+- Technical control - Technology-based control
+- Administrative control - Policy-based control
+- Physical control - Physical security measures
+- Detective control - Finding security violations
+- Preventive control - Stopping violations
+- Corrective control - Fixing violations
+- Security assessment - Evaluating security
+- Vulnerability assessment - Finding weaknesses
+- Penetration test - Simulated attack
+- Red team - Adversary simulation team
+- Blue team - Defense team
+- Purple team - Combined red/blue team
+- Tabletop exercise - Discussion-based scenario
+- Incident simulation - Testing incident response
+- Security awareness training - Educating users
+- Security metrics - Measuring security
+
+---
+
+## CATEGORIZED SUMMARY FOR INDEXING
+
+Total new terms identified: 400+ technical terms across 20 categories
+
+### HIGH PRIORITY FOR INDEXING (Core to document content)
+- Amnesiac/Amnesiac systems - Central theme of Chapter 4
+- Immutable system/Immutability - Throughout book
+- GELI (already partially indexed - enhance)
+- ZFS concepts (VDEV, RAIDZ, snapshots, etc.)
+- Copy-on-write - Fundamental to ZFS
+- Quantitative risk assessment - Central methodology
+- Threat actor/Attack vector/Attack surface
+- Defense evasion/Persistence mechanisms
+- Container escape - Specific attack technique
+- Privilege escalation
+
+### MEDIUM PRIORITY (Significant technical depth)
+- Cryptography terms (symmetric/asymmetric, key derivation, etc.)
+- Access control systems (RBAC, ABAC, ACL)
+- Networking protocols (TCP/IP, VPN, TLS, SSH)
+- Backup and disaster recovery concepts
+- Statistical distribution types
+- Incident response procedures
+- Regulatory frameworks (NIST, OWASP, CWE, CVE)
+- FreeBSD-specific commands and utilities
+- Disk management tools (gpart, geom)
+
+### LOWER PRIORITY (Supportive concepts)
+- Programming language concepts
+- General mathematical/statistical terms
+- Hardware component names
+- Cloud and virtualization buzzwords
+- General IT management terminology
+
