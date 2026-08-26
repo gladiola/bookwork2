@@ -1641,7 +1641,7 @@ We had a modest amount of education in\index{statistics} statistics as we began 
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/Screenshot 2026-07-28 145609.png}}}
   \caption{Example results of applying\index{Monte Carlo simulation} Monte Carlo simulation to forecasting.  Here we see the assertion that there is a 90\% likelihood that the number of victims will be between 457 and 879; the mean of the simulation was 667.\protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}}
-  \label{fig:screenshot-montecarlo1}
+  \label{fig:screenshot-montecarlo2}
 \end{figure}
 
 The spreadsheet conducts 10,000 simulations of data points between user-supplied bounds.  Sheets in the Excel workbook are capable of conducting a variety of these simulations.  They are differentiated by modeling style (uniform, triangular, normal, \gls{binary}, or discrete) and points of interest (count, cost, or percentage).
@@ -2097,7 +2097,7 @@ m \in \{\text{scaled count},\text{scaled dollars}\}
   \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a \gls{binary} distribution to spread random instances between upper and lower bounds taken from the means of seven year samples. We bounded between 0 and 1 possible \index{data breach}\gls{databreach} events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The means of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} \gls{cybercrime} counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
-  \label{fig:screenshot-montecarlo-databreach-count-\gls{binary}}
+  \label{fig:screenshot-montecarlo-databreach-count-binary}
 \end{figure}
 When we computed the upper and lower bounds, we recognized that a normal distribution would not fit well for forecasting likelihood.  We took the mean of the sample from American Samoa for the lower bound (0); we took the mean from the sample from California for the upper bound (1); we had a separation of 1 unit.  Therefore, we switched to a \gls{binary} model with 2 possible outcomes.
 \begin{table}[H]
