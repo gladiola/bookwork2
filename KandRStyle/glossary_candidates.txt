@@ -1,0 +1,195 @@
+GLOSSARY CANDIDATE TERMS FROM UT.TEX
+=====================================
+
+This file contains technical terms found in ut.tex that are not currently in glossary.tex.
+Terms are organized by frequency of use and category.
+
+METHODOLOGY:
+- Analyzed ut.tex for technical terminology
+- Excluded terms already defined in glossary.tex
+- Excluded existing acronyms
+- Sorted by frequency to prioritize most-used terms
+
+
+HIGH FREQUENCY TERMS (50+ occurrences)
+=======================================
+attack (394 occurrences)
+FreeBSD (287 occurrences)
+cybercrime (114 occurrences)
+swap (66 occurrences)
+threat (55 occurrences)
+
+
+MEDIUM-HIGH FREQUENCY TERMS (20-49 occurrences)
+================================================
+partition (48 occurrences)
+backup (47 occurrences)
+password (34 occurrences)
+SQL injection (28 occurrences)
+data breach (27 occurrences)
+binary (27 occurrences)
+malware (26 occurrences)
+
+
+MEDIUM FREQUENCY TERMS (10-19 occurrences)
+===========================================
+ransomware (19 occurrences)
+exploit (19 occurrences)
+risk assessment (16 occurrences)
+dataset (13 occurrences)
+phishing (11 occurrences)
+
+
+LOW-MEDIUM FREQUENCY TERMS (5-9 occurrences)
+=============================================
+authentication (7 occurrences)
+BIOS (6 occurrences)
+mountpoint (6 occurrences)
+integrity (6 occurrences)
+container (6 occurrences)
+penetration testing (6 occurrences)
+forensics (6 occurrences)
+network security (6 occurrences)
+live disc (5 occurrences)
+botnet (5 occurrences)
+executable (5 occurrences)
+
+
+LOW FREQUENCY TERMS (2-4 occurrences)
+======================================
+baseboard (4 occurrences)
+decryption (4 occurrences)
+virtualization (4 occurrences)
+trojan (4 occurrences)
+DDoS (4 occurrences)
+blockchain (4 occurrences)
+live cd (3 occurrences)
+snapshot (3 occurrences)
+rootkit (3 occurrences)
+endpoint (3 occurrences)
+buffer overflow (3 occurrences)
+passphrase (3 occurrences)
+hash (3 occurrences)
+certificate (3 occurrences)
+VDEV (2 occurrences)
+firewall (2 occurrences)
+cross-site scripting (2 occurrences)
+interpreter (2 occurrences)
+obfuscation (2 occurrences)
+
+
+SINGLE OCCURRENCE TERMS
+========================
+UEFI (1 occurrence)
+graphics card (1 occurrence)
+RAID-0 (1 occurrence)
+refreservation (1 occurrence)
+reservation (1 occurrence)
+vulnerability (1 occurrence)
+authorization (1 occurrence)
+compliance (1 occurrence)
+audit (1 occurrence)
+XSS (1 occurrence)
+privilege escalation (1 occurrence)
+social engineering (1 occurrence)
+biometric (1 occurrence)
+
+
+RECOMMENDED PRIORITY TERMS FOR GLOSSARY
+========================================
+Based on frequency and importance to the document's technical content:
+
+CRITICAL (should definitely be added):
+1. attack - 394 uses, fundamental security concept
+2. FreeBSD - 287 uses, primary operating system discussed
+3. cybercrime - 114 uses, central topic of the work
+4. swap - 66 uses, important system concept
+5. threat - 55 uses, fundamental security concept
+6. partition - 48 uses, important storage concept
+7. backup - 47 uses, important data protection concept
+8. password - 34 uses, fundamental authentication concept
+9. SQL injection - 28 uses, specific attack type
+10. data breach - 27 uses, important security incident type
+11. binary - 27 uses, fundamental computing concept
+12. malware - 26 uses, fundamental security threat
+13. ransomware - 19 uses, specific malware type
+14. exploit - 19 uses, fundamental security concept
+15. risk assessment - 16 uses, important methodology
+16. dataset - 13 uses, ZFS and data structure concept
+17. phishing - 11 uses, common attack vector
+
+HIGH PRIORITY:
+18. authentication - fundamental security concept
+19. BIOS - hardware/boot concept
+20. mountpoint - filesystem concept
+21. integrity - data security concept
+22. container - virtualization concept
+23. penetration testing - security testing methodology
+24. forensics - investigation methodology
+25. network security - broad security category
+26. live disc - system deployment method
+27. botnet - attack infrastructure
+28. executable - program file type
+
+MEDIUM PRIORITY:
+29. baseboard - hardware component
+30. decryption - cryptographic operation
+31. virtualization - system architecture
+32. trojan - malware type
+33. DDoS - attack type
+34. blockchain - distributed ledger technology
+35. snapshot - backup/versioning concept
+36. rootkit - malware type
+37. endpoint - network/security concept
+38. buffer overflow - vulnerability type
+39. passphrase - authentication concept
+40. hash - cryptographic/data concept
+41. certificate - cryptographic concept
+42. VDEV - ZFS storage concept
+43. firewall - network security device
+
+
+CATEGORY GROUPINGS
+==================
+
+SECURITY THREATS & ATTACKS:
+- attack, threat, exploit, malware, ransomware, phishing
+- SQL injection, trojan, rootkit, botnet, DDoS, buffer overflow
+- cross-site scripting, XSS, privilege escalation, social engineering
+
+SECURITY CONCEPTS & PRACTICES:
+- cybercrime, data breach, vulnerability, risk assessment
+- authentication, authorization, password, passphrase, biometric
+- penetration testing, forensics, network security, integrity
+- firewall, endpoint, compliance, audit
+
+OPERATING SYSTEMS & HARDWARE:
+- FreeBSD, BIOS, UEFI, baseboard, graphics card
+- live cd, live disc
+
+STORAGE & FILESYSTEMS:
+- swap, partition, dataset, mountpoint, backup, snapshot
+- VDEV, RAID-0, refreservation, reservation
+
+PROGRAMMING & EXECUTION:
+- binary, executable, interpreter, obfuscation
+
+VIRTUALIZATION & CONTAINERS:
+- virtualization, container, hypervisor (if found)
+
+CRYPTOGRAPHY:
+- decryption (encryption already in glossary)
+- hash, certificate
+
+EMERGING TECHNOLOGIES:
+- blockchain, cryptocurrency (if found)
+
+
+NOTES:
+======
+- Terms listed here are suggestions; editorial judgment should be applied
+- Some low-frequency terms may be too specialized for a general glossary
+- Consider whether technical readers would benefit from definitions
+- Some terms (like "attack" or "threat") may be too general for glossary
+- FreeBSD is highly specific and important to this document
+- ZFS-specific terms (dataset, VDEV, mountpoint) are important for technical accuracy
