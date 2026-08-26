@@ -4271,7 +4271,7 @@ Also, there is another risk:  leaving the needed key lying around.  For example,
 If someone wishes to put a root \gls{password} in place, then that's a procedure that will be easy to implement.  For now, though, there will be no root \gls{password}.  And that means we have to build the keys we will use to log in.
 
 \subsubsection{Be Able to Build the Keys}
-We can build our keys using the live disc's  \gls{shell}. and a  \gls{\gls{thumbdrive}}.  The main command to build the keys is:\\\\
+We can build our keys using the live disc's  \gls{shell}. and a  \gls{thumbdrive}.  The main command to build the keys is:\\\\
 \texttt{\index{ssh-keygen}ssh-keygen -b 1024 -t rsa}\endnote{“ssh-Keygen.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=ssh-keygen&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 
 Copy the files output to a  \gls{thumbdrive} and keep them handy for mounting.
@@ -4443,7 +4443,7 @@ For this run, we’ll begin by using the boot-only disk.  We won’t plan to eve
 We should note that “Bay 7” is an observation of the physical hardware.  The device (“mfid7”) could have whatever number assigned at the end that the machine gave it.  If the hardware  \gls{raid} had a problem with recognizing a device, the number might not correlate to what bay it is in.  When powering up, check your geometry.
 
 \subsubsection{ \index{encrypt}\Gls{encrypt} those partitions}
-During this phase, we’ll  \index{encrypt}\gls{encrypt} the partitions.  That means that we should have some recordkeeping materials on hand.  Use a \gls{password} manager or a notebook to carefully record the \gls{password} that is about to be typed in.  With each one completed, the machine will tell us that it has saved a file of \gls{backup}  \gls{metadata}.  We will want to copy that  \gls{metadata} file to the  \gls{\gls{thumbdrive}}.  If the  \index{encrypt}\gls{encrypt}ion gets jammed up, or if there is some type of problem, then the  \gls{metadata} file will be used as part of the recovery process.  Without a  \gls{metadata} file, recovering an  \index{encrypt}\gls{encrypt}ed \gls{partition} can be difficult or impossible.
+During this phase, we’ll  \index{encrypt}\gls{encrypt} the partitions.  That means that we should have some recordkeeping materials on hand.  Use a \gls{password} manager or a notebook to carefully record the \gls{password} that is about to be typed in.  With each one completed, the machine will tell us that it has saved a file of \gls{backup}  \gls{metadata}.  We will want to copy that  \gls{metadata} file to the  \gls{thumbdrive}.  If the  \index{encrypt}\gls{encrypt}ion gets jammed up, or if there is some type of problem, then the  \gls{metadata} file will be used as part of the recovery process.  Without a  \gls{metadata} file, recovering an  \index{encrypt}\gls{encrypt}ed \gls{partition} can be difficult or impossible.
 
 If you lose the  \gls{metadata} file, but still have routine access to the \index{geli}geli  \index{encrypt}\gls{encrypt}ion because you know the \gls{password} and the machine is functioning alright, then you can export another copy of the  \gls{metadata}.  This means that anyone with root access to the machine, who can use \index{geli}geli commands, would also be able to export such a file.  Keep this in mind if you need to secure your machine.
 
@@ -4812,7 +4812,7 @@ More text\endnote{Second note.}
 We explored the planning and use of \gls{lto} tape as a resource for storing backups.  We describe common commands, patterns of MT and TAR commands.  We recommend some techniques for testing, rehearsing, and using tape archives.\par}\end{center}
 \section{Introduction}
 
-We wanted to see if it would be possible for us to make use of an \index{LTO tape}\gls{lto} tape machine that was on one of our salvaged computers.  We'd often heard of the performance of using \index{tape}tape for \index{backups}backups.  We'd seen some hints about the bravery needed for working with tape in modifying old mainf\gls{ram}e prog\gls{ram}s.  We rarely saw any strong tutorials or comprehensive directions for \index{tape operations}tape operations.
+We wanted to see if it would be possible for us to make use of an \index{LTO tape}\gls{lto} tape machine that was on one of our salvaged computers.  We'd often heard of the performance of using \index{tape}tape for \index{backups}backups.  We'd seen some hints about the bravery needed for working with tape in modifying old mainframe programs.  We rarely saw any strong tutorials or comprehensive directions for \index{tape operations}tape operations.
 
 The average person has almost never used \index{tapes}tapes as a part of personal computing these days.  Businesses which do use \index{tapes}tapes often do so as part of larger, commercial \index{data center}data center operations.  For many of us, the closest we've come to \index{tape operations}tape operations was with using cassette tapes for storage on personal machines in the 1980s.  \index{LTO tape}\gls{lto} tapes are often praised but infrequently used.  We wanted to break through this mystery.
 

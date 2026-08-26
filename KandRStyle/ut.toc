@@ -1,0 +1,204 @@
+\contentsline {chapter}{Author}{v}{chapter*.2}%
+\contentsline {chapter}{Preface}{vii}{chapter*.3}%
+\contentsline {chapter}{Acknowledgements}{ix}{chapter*.4}%
+\contentsline {chapter}{Endnotes}{xi}{chapter*.5}%
+\contentsline {chapter}{Introduction}{xiii}{chapter*.6}%
+\contentsline {chapter}{Endnotes}{xv}{chapter*.7}%
+\contentsline {chapter}{\numberline {1}Anecdotes on the Journey}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Computers and Insects}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}First Light}{7}{section.1.2}%
+\contentsline {section}{\numberline {1.3}\gls {attack} Topology: The String of Pearls \gls {configuration}}{10}{section.1.3}%
+\contentsline {section}{\numberline {1.4}The Reveal}{13}{section.1.4}%
+\contentsline {chapter}{Endnotes}{15}{chapter*.8}%
+\contentsline {chapter}{\numberline {2}Towards Experimentation}{17}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{17}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Related Work}{19}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Motivation}{26}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Experimental Structure}{28}{section.2.4}%
+\contentsline {section}{\numberline {2.5}The Road Ahead}{30}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Sample Tutorial with Msfvenom}{31}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Pineapple Pi}{40}{section.2.7}%
+\contentsline {chapter}{Endnotes}{63}{chapter*.21}%
+\contentsline {chapter}{\numberline {3}Building a Baseline for Quantitiative Risk Assessments}{77}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{77}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Background and Content}{77}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Problem Statement}{79}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Project Objectives}{79}{subsection.3.1.3}%
+\contentsline {subsubsection}{Limits on Hypothesis Testing}{80}{subsubsection*.24}%
+\contentsline {subsection}{\numberline {3.1.4}Scope of Work}{80}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Variables}{80}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Assumptions, Risks, and Limitations}{81}{subsection.3.1.6}%
+\contentsline {subsubsection}{Limitations Imposed by Federal Law Enforcement in Tennessee}{82}{subsubsection*.25}%
+\contentsline {subsubsection}{Limitations Derived from Reporting}{82}{subsubsection*.26}%
+\contentsline {subsection}{\numberline {3.1.7}Significance of the Project}{83}{subsection.3.1.7}%
+\contentsline {section}{\numberline {3.2}Literature Review}{83}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Overview of Existing Solutions or Approaches}{83}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Comparisons of Technologies or Frameworks}{83}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Gaps in the Literature}{83}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Methodology}{84}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Using State Data to Forecast a Company's Data}{84}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Methodology for Monte Carlo Simulations in Excel}{88}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Population Changes During Sampled Years}{89}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Corporate and Personal Data Breaches}{90}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}\gls {databreach}}{91}{subsection.3.3.5}%
+\contentsline {subsubsection}{Lower Bound Computation}{91}{subsubsection*.36}%
+\contentsline {subsubsection}{Upper Bound Computation}{91}{subsubsection*.37}%
+\contentsline {subsubsection}{Monte Carlo Simulations for Likelihood and Impact}{92}{subsubsection*.38}%
+\contentsline {subsection}{\numberline {3.3.6}Personal \gls {databreach}}{94}{subsection.3.3.6}%
+\contentsline {subsubsection}{Lower Bound Computation}{94}{subsubsection*.43}%
+\contentsline {subsubsection}{Upper Bound Computation}{94}{subsubsection*.44}%
+\contentsline {subsubsection}{Monte Carlo Simulations for Likelihood and Impact}{95}{subsubsection*.45}%
+\contentsline {subsubsection}{Threats to System Intrusion}{97}{subsubsection*.50}%
+\contentsline {subsection}{\numberline {3.3.7}\gls {malware}}{98}{subsection.3.3.7}%
+\contentsline {subsubsection}{Lower Bound Computation}{98}{subsubsection*.52}%
+\contentsline {subsubsection}{Upper Bound Computation}{98}{subsubsection*.53}%
+\contentsline {subsubsection}{Monte Carlo Simulations for Likelihood and Impact}{99}{subsubsection*.54}%
+\contentsline {subsection}{\numberline {3.3.8}\gls {phishing}}{101}{subsection.3.3.8}%
+\contentsline {subsubsection}{Lower Bound Computation}{101}{subsubsection*.59}%
+\contentsline {subsubsection}{Upper Bound Computation}{101}{subsubsection*.60}%
+\contentsline {subsubsection}{Monte Carlo Simulations for Likelihood and Impact}{102}{subsubsection*.61}%
+\contentsline {subsection}{\numberline {3.3.9}\gls {ransomware}}{104}{subsection.3.3.9}%
+\contentsline {subsection}{\numberline {3.3.10}Threats to Personnel}{107}{subsection.3.3.10}%
+\contentsline {subsection}{\numberline {3.3.11}Crimes Against Children}{108}{subsection.3.3.11}%
+\contentsline {subsubsection}{Lower Bound Computation}{108}{subsubsection*.71}%
+\contentsline {subsubsection}{Upper Bound Computation}{108}{subsubsection*.72}%
+\contentsline {subsubsection}{Monte Carlo Simulations for Likelihood and Impact}{109}{subsubsection*.73}%
+\contentsline {subsection}{\numberline {3.3.12}Extortion}{111}{subsection.3.3.12}%
+\contentsline {subsection}{\numberline {3.3.13}Threats, Stalking, Harassment, and Terrorism}{112}{subsection.3.3.13}%
+\contentsline {subsubsection}{Lower Bound Computation}{112}{subsubsection*.82}%
+\contentsline {subsubsection}{Upper Bound Computation}{113}{subsubsection*.83}%
+\contentsline {subsubsection}{Monte Carlo Simulations for Likelihood and Impact}{114}{subsubsection*.84}%
+\contentsline {subsection}{\numberline {3.3.14}Threats to Theft of Data Via Network}{116}{subsection.3.3.14}%
+\contentsline {subsection}{\numberline {3.3.15}Intellectual Property Rights (\gls {ipr})}{117}{subsection.3.3.15}%
+\contentsline {subsubsection}{Lower Bound Computation}{117}{subsubsection*.90}%
+\contentsline {subsubsection}{Upper Bound Computation}{117}{subsubsection*.91}%
+\contentsline {subsubsection}{Monte Carlo Simulations for Likelihood and Impact}{118}{subsubsection*.92}%
+\contentsline {subsection}{\numberline {3.3.16}Identity Theft}{120}{subsection.3.3.16}%
+\contentsline {subsubsection}{Lower Bound Computation}{120}{subsubsection*.97}%
+\contentsline {subsubsection}{Upper Bound Computation}{120}{subsubsection*.98}%
+\contentsline {subsubsection}{Monte Carlo Simulations for Likelihood and Impact}{121}{subsubsection*.99}%
+\contentsline {subsection}{\numberline {3.3.17}Business Email Compromise}{123}{subsection.3.3.17}%
+\contentsline {subsubsection}{Lower Bound Computation}{123}{subsubsection*.104}%
+\contentsline {subsubsection}{Upper Bound Computation}{123}{subsubsection*.105}%
+\contentsline {subsubsection}{Monte Carlo Simulations for Likelihood and Impact}{124}{subsubsection*.106}%
+\contentsline {section}{\numberline {3.4}Analysis}{126}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Using Nation or State Data as a Control for Smaller Forecasts}{126}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.5}Discussion}{128}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Why Some Categories Might Be Lower}{128}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Crimes Against Children and Complaints}{128}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Business Email Compromise Versus \gls {ransomware}}{128}{subsection.3.5.3}%
+\contentsline {chapter}{Endnotes}{129}{chapter*.118}%
+\contentsline {chapter}{\numberline {4}\gls {amnesiac} Systems in FreeBSD}{135}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{135}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Background and Content}{135}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Problem Statement}{135}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Project Objectives}{142}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Scope of Work}{142}{subsection.4.1.4}%
+\contentsline {subsubsection}{Hypothesis: H1}{142}{subsubsection*.125}%
+\contentsline {subsubsection}{Hypothesis: H2}{142}{subsubsection*.126}%
+\contentsline {subsubsection}{Hypothesis: H3}{142}{subsubsection*.127}%
+\contentsline {subsubsection}{Hypothesis: H4}{142}{subsubsection*.128}%
+\contentsline {subsection}{\numberline {4.1.5}Variables}{142}{subsection.4.1.5}%
+\contentsline {subsubsection}{Non-Adversarial Threats}{142}{subsubsection*.129}%
+\contentsline {subsubsection}{Adversarial Threats}{143}{subsubsection*.130}%
+\contentsline {subsection}{\numberline {4.1.6}Assumptions, Risks, and Limitations}{143}{subsection.4.1.6}%
+\contentsline {subsubsection}{Assumptions}{143}{subsubsection*.131}%
+\contentsline {subsubsection}{Risks}{143}{subsubsection*.132}%
+\contentsline {subsubsection}{Limitations}{143}{subsubsection*.133}%
+\contentsline {subsection}{\numberline {4.1.7}Significance of the Project}{143}{subsection.4.1.7}%
+\contentsline {section}{\numberline {4.2}Literature Review}{143}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Overview of Existing Solutions or Approaches}{143}{subsection.4.2.1}%
+\contentsline {subsubsection}{Immutability as a Constraining Concept}{143}{subsubsection*.134}%
+\contentsline {subsubsection}{Immutability Examples in Blockchains}{144}{subsubsection*.135}%
+\contentsline {subsubsection}{Immutability Examples in Database Administration}{145}{subsubsection*.136}%
+\contentsline {subsection}{\numberline {4.2.2}Comparisons of Technologies or Frameworks}{145}{subsection.4.2.2}%
+\contentsline {subsubsection}{Immutability and \gls {biba}}{145}{subsubsection*.137}%
+\contentsline {subsection}{\numberline {4.2.3}Gaps in the Literature}{146}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Methodology}{146}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Technical Research Questions}{146}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}System Architecture and Design}{146}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Implementation Plan}{146}{subsection.4.3.3}%
+\contentsline {subsubsection}{Hardware \Gls {configuration}}{147}{subsubsection*.139}%
+\contentsline {subsubsection}{Intentions: Paving the Road to Jails}{148}{subsubsection*.140}%
+\contentsline {subsubsection}{Preparing the Baseboard}{148}{subsubsection*.141}%
+\contentsline {subsubsection}{Incremental Advancement to \Gls {amnesiac} System}{149}{subsubsection*.142}%
+\contentsline {subsubsection}{Identifying and Allocating \gls {zfs} Drive Qualities}{149}{subsubsection*.143}%
+\contentsline {subsubsection}{What are we going to want the \gls {zfs} kit to do? How are we going to use the drives? How can we wrestle with this new type of \gls {configuration}?}{149}{subsubsection*.144}%
+\contentsline {subsubsection}{What We Can Learn From Installing an \gls {os}}{151}{subsubsection*.149}%
+\contentsline {subsubsection}{Basic \Gls {operating system} Installation Goals}{152}{subsubsection*.150}%
+\contentsline {subsubsection}{Main Steps for FreeBSD Installation from bsdinstall}{152}{subsubsection*.151}%
+\contentsline {subsubsection}{No Root \gls {password}}{152}{subsubsection*.152}%
+\contentsline {subsubsection}{Be Able to Build the Keys}{153}{subsubsection*.153}%
+\contentsline {subsubsection}{\gls {partition}, Mount, and Use a \Gls {thumbdrive} from Live Disc's \Gls {shell}}{153}{subsubsection*.154}%
+\contentsline {subsubsection}{Start the Box and the Live Disk's \Gls {shell}}{154}{subsubsection*.155}%
+\contentsline {subsubsection}{Be Able to Plug in the USB \Gls {thumbdrive} and Find Its Logical Address}{154}{subsubsection*.156}%
+\contentsline {subsubsection}{Be Able to \gls {partition} the USB}{154}{subsubsection*.157}%
+\contentsline {subsubsection}{Be Able to Write to the USB}{154}{subsubsection*.158}%
+\contentsline {subsubsection}{Be Able to Put Some Key Pairs on the USB}{155}{subsubsection*.159}%
+\contentsline {subsubsection}{Be Able to Use Commands to Build Out the Drives}{155}{subsubsection*.160}%
+\contentsline {subsubsection}{Goals for \Gls {amnesiac} Systems}{157}{subsubsection*.161}%
+\contentsline {subsubsection}{Configure for SWAP Disk, \gls {zfs} \Gls {cache}, \gls {zfs} SLOG \Gls {mirror}, and \gls {zfs} RAIDz2}{159}{subsubsection*.162}%
+\contentsline {subsubsection}{Startup with \texttt {bootonly.iso}}{159}{subsubsection*.167}%
+\contentsline {subsubsection}{Mount the USB to Save the \Gls {metadata} \gls {backup} File}{159}{subsubsection*.168}%
+\contentsline {subsubsection}{Create Swap Disk in Bay 0}{159}{subsubsection*.169}%
+\contentsline {subsubsection}{Create \gls {zfs} \gls {cache} in Bay 1}{159}{subsubsection*.170}%
+\contentsline {subsubsection}{Create \gls {zfs} SLOG in Bays 2 and 3}{159}{subsubsection*.171}%
+\contentsline {subsubsection}{Create \gls {zfs} Work Disks for Jails}{160}{subsubsection*.172}%
+\contentsline {subsubsection}{Bay 4}{160}{subsubsection*.173}%
+\contentsline {subsubsection}{Bay 5}{160}{subsubsection*.174}%
+\contentsline {subsubsection}{Bay 6}{160}{subsubsection*.175}%
+\contentsline {subsubsection}{Bay 7}{160}{subsubsection*.176}%
+\contentsline {subsubsection}{ \Gls {encrypt} those partitions}{161}{subsubsection*.177}%
+\contentsline {subsubsection}{Commands to \Gls {encrypt} the Partitions}{161}{subsubsection*.178}%
+\contentsline {subsubsection}{To Preserve the \Gls {metadata} \gls {backup} Files}{162}{subsubsection*.179}%
+\contentsline {subsubsection}{File Name Check: Editing Labels}{163}{subsubsection*.180}%
+\contentsline {subsubsection}{To Use the Swap Disk}{164}{subsubsection*.181}%
+\contentsline {subsubsection}{Create the zpool for BLONDIE}{165}{subsubsection*.182}%
+\contentsline {subsubsection}{Create a mountpoint}{165}{subsubsection*.183}%
+\contentsline {section}{\numberline {4.4}Analysis}{166}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Quality}{166}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Tests}{166}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Discussion}{166}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Chapter References}{166}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Books}{166}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}MAN Pages}{166}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Websites}{167}{subsection.4.6.3}%
+\contentsline {chapter}{Endnotes}{169}{chapter*.184}%
+\contentsline {chapter}{\numberline {5}Login Procedures for Disconnected Systems}{177}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{177}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Methodology}{177}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Results}{178}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Required Or Specific Equipment}{178}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Code Notes for Power Up}{178}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Code Notes for Poweroff}{179}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}Analysis}{180}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Quality}{180}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Tests}{180}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Discussion}{181}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Summary of Usefulness}{181}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Lessons Learned}{181}{subsection.5.5.2}%
+\contentsline {section}{\numberline {5.6}References}{181}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Books}{181}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}MAN pages}{181}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}URLs}{182}{subsection.5.6.3}%
+\contentsline {chapter}{Endnotes}{183}{chapter*.185}%
+\contentsline {chapter}{\numberline {6}Basic Tape Operations with FreeBSD }{185}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introduction}{185}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Methodology}{185}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Results}{185}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Code Notes}{185}{subsection.6.3.1}%
+\contentsline {subsubsection}{Sample Files: test.txt }{186}{subsubsection*.186}%
+\contentsline {subsubsection}{Sample Files: test2.txt}{186}{subsubsection*.187}%
+\contentsline {subsubsection}{Sample Files: test3.txt}{186}{subsubsection*.188}%
+\contentsline {subsubsection}{Sample Files: test4.txt}{186}{subsubsection*.189}%
+\contentsline {subsubsection}{Sample Files: test5.txt}{186}{subsubsection*.190}%
+\contentsline {subsubsection}{Sample Script: scriptedDemo.sh}{186}{subsubsection*.191}%
+\contentsline {section}{\numberline {6.4}Analysis}{189}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Quality}{189}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Tests}{189}{subsection.6.4.2}%
+\contentsline {section}{\numberline {6.5}Discussion}{189}{section.6.5}%
+\contentsline {section}{\numberline {6.6}References}{190}{section.6.6}%
+\contentsline {chapter}{Endnotes}{191}{chapter*.192}%
+\contentsline {chapter}{Glossary}{193}{section*.193}%
+\contentsline {chapter}{Endnotes}{199}{chapter*.195}%
+\contentsline {chapter}{Index}{201}{section*.196}%
