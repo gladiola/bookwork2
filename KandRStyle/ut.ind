@@ -6,35 +6,35 @@
 
   \item amensiac, \hyperpage{133}, \hyperpage{149}
   \item American Samoa, \hyperpage{80}, \hyperpage{84}, 
-		\hyperpage{88, 89}, \hyperpage{126--131}
+		\hyperpage{88, 89}, \hyperpage{128--132}
   \item amnesiac, \hyperpage{133}
 
   \indexspace
 
   \item B-Sides, \hyperpage{ix}
   \item bsdinstall, \hyperpage{149, 150}
-  \item business email compromise, \hyperpage{120, 121}
+  \item business email compromise, \hyperpage{122, 123}
 
   \indexspace
 
   \item cache, \hyperpage{156}, \hyperpage{163}
   \item California, \hyperpage{84}, \hyperpage{88, 89}, 
-		\hyperpage{126--131}
+		\hyperpage{128--132}
   \item camcontrol
     \subitem devlist, \hyperpage{152}
   \item cd, \hyperpage{153}
   \item Chattanooga, \hyperpage{v}, \hyperpage{77}, \hyperpage{81}, 
 		\hyperpage{83, 84}, \hyperpage{88--90}, \hyperpage{97}, 
-		\hyperpage{106}, \hyperpage{113}, \hyperpage{126--130}
+		\hyperpage{107}, \hyperpage{114}, \hyperpage{128--132}
     \subitem Police Department, \hyperpage{81}
   \item Chattanooga State Community College, \hyperpage{v}, 
 		\hyperpage{ix}, \hyperpage{77}
   \item coding, \hyperpage{1}, \hyperpage{133}, \hyperpage{147}
-  \item confidence interval, \hyperpage{77, 78}, \hyperpage{126--130}
+  \item confidence interval, \hyperpage{77, 78}, \hyperpage{128--132}
   \item configuration, \hyperpage{133}
   \item cp, \hyperpage{160, 161}
   \item cybercrime, \hyperpage{77}, \hyperpage{79--82}, 
-		\hyperpage{84--87}, \hyperpage{126--131}
+		\hyperpage{84--87}, \hyperpage{128--132}
 
   \indexspace
 
@@ -46,7 +46,7 @@
 
   \item encrypt, \hyperpage{155}, \hyperpage{157}, \hyperpage{159}, 
 		\hyperpage{162}, \hyperpage{187}
-  \item extortion, \hyperpage{108, 109}
+  \item extortion, \hyperpage{109, 110}
 
   \indexspace
 
@@ -84,12 +84,12 @@
 
   \indexspace
 
-  \item identity theft, \hyperpage{117, 118}
+  \item identity theft, \hyperpage{119, 120}
   \item immutability
     \subitem hard, \hyperpage{142}
     \subitem operational, \hyperpage{142}
     \subitem soft, \hyperpage{142}
-  \item intellectual property rights, \hyperpage{114, 115}
+  \item intellectual property rights, \hyperpage{116, 117}
 
   \indexspace
 
@@ -105,13 +105,14 @@
 
   \item mac
     \subitem biba, \hyperpage{144}
-  \item malware, \hyperpage{98, 99}
+  \item malware, \hyperpage{99, 100}, \hyperpage{129}
   \item mkdir, \hyperpage{152, 153}, \hyperpage{157}
   \item Monte Carlo simulation, \hyperpage{77, 78}, \hyperpage{88}, 
-		\hyperpage{92, 93}, \hyperpage{95--99}, 
-		\hyperpage{101--105}, \hyperpage{108, 109}, 
-		\hyperpage{111, 112}, \hyperpage{114, 115}, 
-		\hyperpage{117, 118}, \hyperpage{120, 121}
+		\hyperpage{92, 93}, \hyperpage{95--97}, 
+		\hyperpage{99, 100}, \hyperpage{102--106}, 
+		\hyperpage{109, 110}, \hyperpage{112, 113}, 
+		\hyperpage{116, 117}, \hyperpage{119, 120}, 
+		\hyperpage{122, 123}
   \item mount, \hyperpage{153}, \hyperpage{157}
 
   \indexspace
@@ -131,26 +132,25 @@
 
   \item personal data breach, \hyperpage{77}, \hyperpage{84}, 
 		\hyperpage{95}, \hyperpage{97}
-  \item phishing, \hyperpage{102}
+  \item phishing, \hyperpage{103}
   \item population, \hyperpage{77}, \hyperpage{80}, \hyperpage{82}, 
 		\hyperpage{84, 85}, \hyperpage{87}, \hyperpage{89, 90}, 
-		\hyperpage{97}, \hyperpage{106}, \hyperpage{113}
+		\hyperpage{97}, \hyperpage{107}, \hyperpage{114}
   \item Puerto Rico, \hyperpage{84}
 
   \indexspace
 
   \item RAIDZ-2, \hyperpage{145--147}, \hyperpage{149}, 
 		\hyperpage{153, 154}
-  \item ransomware, \hyperpage{104, 105}
+  \item ransomware, \hyperpage{105, 106}
   \item risk assessment, \hyperpage{77}, \hyperpage{79--82}
     \subitem quantitative, \hyperpage{79}
   \item rm, \hyperpage{153}
 
   \indexspace
 
-  \item sample, \hyperpage{77}, \hyperpage{85}, \hyperpage{98}, 
-		\hyperpage{104}, \hyperpage{108}, \hyperpage{114}, 
-		\hyperpage{122}, \hyperpage{126--130}
+  \item sample, \hyperpage{77}, \hyperpage{85}, \hyperpage{105}, 
+		\hyperpage{109}, \hyperpage{124}, \hyperpage{128--132}
     \subitem convenience, \hyperpage{82}
   \item ssh-keygen, \hyperpage{152, 153}
   \item statistics, \hyperpage{77}, \hyperpage{82, 83}
@@ -163,7 +163,7 @@
   \indexspace
 
   \item Texas, \hyperpage{84}
-  \item threat, \hyperpage{112}
+  \item threat, \hyperpage{113}
   \item TOTP, \hyperpage{151}
 
   \indexspace
