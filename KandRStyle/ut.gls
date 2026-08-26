@@ -2,11 +2,13 @@
 \begin{theglossary}\glossaryheader
 \glsgroupheading{A}\relax \glsresetentrylist %
 \glossentry{amnesiac}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{ii}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{135\delimR 168}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{170\delimR 176}}}%
 \glossentry{apt}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{128}}}%
 \glossentry{attack}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{i}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{6}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{9\delimR 11}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{13\delimN 14}\delimN 
@@ -59,21 +61,22 @@
 		\setentrycounter[]{page}\glsnumberformat{162}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{165}}}%
 \glossentry{ccsp}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{iii}}}%
+		\setentrycounter[]{page}\glsnumberformat{v}}}%
 \glossentry{cert}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{79}}}%
 \glossentry{certificate}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{179}}}%
 \glossentry{cissp}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{iii}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{v}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{129\delimR 134}}}%
 \glossentry{coding}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{vii}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{ix}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{1}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{135}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{142}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{149}}}%
 \glossentry{configuration}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{i}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{1}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{10}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{22}\delimN 
@@ -91,7 +94,7 @@
 		\setentrycounter[]{page}\glsnumberformat{136\delimN 137}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{169}}}%
 \glossentry{csslp}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{iii}}}%
+		\setentrycounter[]{page}\glsnumberformat{v}}}%
 \glossentry{cybercrime}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{1}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{26\delimN 27}\delimN 
@@ -100,6 +103,7 @@
 		\setentrycounter[]{page}\glsnumberformat{130\delimR 134}}}\glsgroupskip
 \glsgroupheading{D}\relax \glsresetentrylist %
 \glossentry{databreach}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{ii}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{77}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{90\delimR 92}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{94\delimR 96}}}%
@@ -190,6 +194,7 @@
 		\setentrycounter[]{page}\glsnumberformat{145}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{171}}}%
 \glossentry{ipr}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{ii}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{116\delimR 118}}}\glsgroupskip
 \glsgroupheading{J}\relax \glsresetentrylist %
 \glossentry{jail}{\glossaryentrynumbers{\relax 
@@ -207,6 +212,7 @@
 \glossentry{biba}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{145}}}%
 \glossentry{malware}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{ii}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{8}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{27}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{54}\delimN 
@@ -239,6 +245,8 @@
 		\setentrycounter[]{page}\glsnumberformat{63\delimN 64}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{146}}}\glsgroupskip
 \glsgroupheading{O}\relax \glsresetentrylist %
+\glossentry{oed}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{193\delimR 196}}}%
 \glossentry{operating system}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{41}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{135}\delimN 
@@ -282,6 +290,7 @@
 		\setentrycounter[]{page}\glsnumberformat{161}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{178\delimR 180}}}%
 \glossentry{phishing}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{ii}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{31}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{97}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{101\delimN 102}}}%
@@ -314,6 +323,7 @@
 		\setentrycounter[]{page}\glsnumberformat{158\delimN 159}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{181}}}%
 \glossentry{ransomware}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{ii}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{81}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{97}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{104}\delimN 
@@ -373,7 +383,7 @@
 		\setentrycounter[]{page}\glsnumberformat{128}}}\glsgroupskip
 \glsgroupheading{U}\relax \glsresetentrylist %
 \glossentry{us}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{vii}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{ix}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{13}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{27}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{57}\delimN 

@@ -2906,43 +2906,232 @@ Likelihood
   \label{fig:screenshot-montecarlo-children-impact-percent}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%  EXTORTION %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%  EXTORTION %%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \subsection{Extortion}
+\subsubsection{Lower Bound Computation}
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+2 & 1 & \cdots & 2\\
+\$0 & \$0 & \cdots & \$7
+\end{bmatrix}.
+\]
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+6 & \cdots & 7.62\\
+\$0 & \cdots & \$300
+\end{bmatrix}.
+\]
+  \[
+\bar{X}_{\text{American Samoa}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{American Samoa},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{American Samoa}}^{(\text{scaled count})}\\
+\bar{X}_{\text{American Samoa}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+5.60\\
+\$300
+\end{bmatrix}.
+\]
+\subsubsection{Upper Bound Computation}
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+2{,}257 & 2{,}054 & \cdots & 4{,}746\\
+\$2{,}413{,}243 & \$1{,}725{,}544 & \cdots & \$22
+\end{bmatrix}.
+\]
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+10 & 9 & \cdots & 22.33\\
+\$10{,}692.26 & \$7{,}560.81 & \cdots & \$2{,}331.31
+\end{bmatrix}.
+\]
+\[
+\bar{X}_{\text{California}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{California},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{California}}^{(\text{scaled count})}\\
+\bar{X}_{\text{California}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+26.48\\
+\$43{,}167.06
+\end{bmatrix}.
+\]
+\subsubsection{Monte Carlo Simulations for Likelihood and Impact}
 \begin{figure}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_extortion.png}}}
-  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations to spread random instances between confidence intervals taken from means of a seven year sample. We bounded between 6 and 22 possible extortion events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} \gls{cybercrime} counts respectively.}
-  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
+  \rotatebox{0}{\scalebox{1}{\includegraphics[scale=0.25]{figures/discrete_extortion_count.png}}}
+  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a discrete distribution to spread random instances between upper and lower bounds taken from the means of seven year samples. We bounded between 6 and 26 possible \index{extortion}extortion events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The means of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
+  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
-  \label{fig:screenshot-montecarlo-extortion-count-histo}
+  \label{fig:screenshot-montecarlo-extortion-count-discrete}
 \end{figure}
-
-\begin{figure}[H]
+When we computed the upper and lower bounds, we recognized that a normal distribution would not fit well for forecasting likelihood.  We took the mean of the sample from American Samoa for the lower bound (5.60, rounded to 6); we took the mean from the sample from California for the upper bound (26.48, rounded to 26); we had a separation of 20 units.  Therefore, we switched to a discrete model with all 21 options sharing an equal likelihood.
+\begin{table}[H]
   \centering
-  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/count_extortion_percentile.png}}}
-  \caption{A\index{Monte Carlo simulation} Monte Carlo simulation suggests that there is a 10\% probability that at least 7 extortion events will occur within the sample.  There is a 50\% chance that 14 or more\index{extortion} extortion events will occur within the \index{sample} sample.  There is a 90\% chance that 20 extortion events will occur. \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
-  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
-  }
-  \label{fig:screenshot-montecarlo-extortion-count-percent}
-\end{figure}
+  \caption{Monte Carlo Discrete Simulation Values for Extortion}
+  \label{tab:discrete_extortion_montecarlo}
+  \begin{center}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewid}
+    \toprule
+Events
+    &6
+    &7
+    &8
+    &9
+    &10\\
+    \midrule
+Likelihood
+    &4.8\%
+    &4.8\%
+    &4.8\%
+    &4.8\%
+    &4.8\%\\
+    \bottomrule \end{tabular}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewid}
+    \toprule
+Events
+    &11
+    &12
+    &13
+    &14
+    &15\\
+    \midrule
+Likelihood
+    &4.8\%
+    &4.8\%
+    &4.8\%
+    &4.8\%
+    &4.8\%\\
+    \bottomrule \end{tabular}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewid}
+    \toprule
+Events
+    &16
+    &17
+    &18
+    &19
+    &20\\
+    \midrule
+Likelihood
+    &4.8\%
+    &4.8\%
+    &4.8\%
+    &4.8\%
+    &4.8\%\\
+    \bottomrule \end{tabular}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewidth}>{\centering\arraybackslash}
+  p{0.10\linewid}
+    \toprule
+Events
+    &21
+    &22
+    &23
+    &24
+    &25\\
+    \midrule
+Likelihood
+    &4.8\%
+    &4.8\%
+    &4.8\%
+    &4.8\%
+    &4.8\%\\
+    \bottomrule \end{tabular}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewid}
+    \toprule
+Events
+    &26\\
+    \midrule
+Likelihood
+    &4.8\%\\
+    \bottomrule \end{tabular}
+    \end{center}
+  \raggedright{A\index{Monte Carlo simulation} Monte Carlo simulation was run using a discrete distribution.  We bounded the simulation between 6 and 26 events.  We assigned an approximately 4.8\% likelihood to each bin.  The resulting distribution showed the effect of randomness on each possible outcome.}
+\end{table}
 
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_extortion_impact.png}}}
-  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations to spread random instances between confidence intervals taken from means of a seven year sample. We set a lower bound that the event would cost at \$0.  We set an upper bound that the event would cost \$51,288.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} \gls{cybercrime} counts respectively.}
-  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
+  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a normal distribution to spread random instances between bounds taken from means of seven year samples. We set a lower bound that the events would cost at \$300.  We set an upper bound that the events would cost \$43{,}167.06.  \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The means of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{extortion} extortion impact values respectively.}
+  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
   \label{fig:screenshot-montecarlo-extortion-impact-histo}
 \end{figure}
-
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/percent_extortion_impact.png}}}
-  \caption{A\index{Monte Carlo simulation} Monte Carlo simulation suggests that there is a 90\% probability that\index{extortion} extortion events will cost \$5,765.60 or more in a year.  There is a 50\% likelihood that they will cost \$25,497.15 or more in a year.  There is a 10\% chance that they will cost \$45,471.69 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
-  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
+  \[
+\mathrm{CI}_{80\%}(\theta) = [\${P10}, \${P90}]
+\]
+  \caption{A\index{Monte Carlo simulation} Monte Carlo simulation with a normal distribution suggests that there is a 90\% probability that\index{extortion} extortion events will cost \${P10} or more in a year.  There is a 50\% likelihood that they will cost \${P50} or more in a year.  There is a 10\% chance that they will cost \${P90} or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The means of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{extortion} extortion impact values respectively.}
+  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
   \label{fig:screenshot-montecarlo-extortion-impact-percent}
 \end{figure}
+
 %%%%%%%%%%% THREATS, STALKING, HARASSMENT, TERRORISM %%%%%%%%%%
 \subsection{Threats, Stalking, Harassment, and Terrorism}
 \subsubsection{Lower Bound Computation}
