@@ -450,7 +450,7 @@ Will it be possible to know, before experimentation begins in earnest, if the ex
 
 \section{Related Work}
 
-We know that a standardized review of \index{risk assessment}\gls{riskassessment} categories can be found from \index{NIST}\gls{nist}.  Their \index{Cybersecurity Framework}Cybersecurity Framework lists core components functions that include the topics of, "Identify, Protect, Detect, Respond, Recover."  \endnote{\_\_\_\_\_. "Framework for Improving Ciritcal Infrastructure Cybersecurity." \gls{nist}, 2014. This \gls{nist} document provides the summary structure of risk assessments discussed in this report. Most of the document is a large, multi-page chart.}  For this next piece, I would suggest that a direct reference to the \index{risk assessment}\gls{riskassessment} categories in the reference would be helpful.  \index{NIST}\gls{nist} provided a detailed and lengthy chart packed with information.  Below, we briefly consider chart components and points to concepts readily observed in the experiments under consideration.  This next paragraph will likely require a direct comparison to the table \endnote{Ibid.} to be helpful.
+We know that a standardized review of \index{risk assessment}\gls{riskassessment} categories can be found from \index{NIST}\gls{nist}.  Their \index{Cybersecurity Framework}Cybersecurity Framework lists core components functions that include the topics of, "Identify, Protect, Detect, Respond, Recover."  \endnote{\_\_\_\_\_. "Framework for Improving Ciritcal Infrastructure Cybersecurity." \gls{nist}, 2014. This \gls{nist} document provides the summary structure of risk assessments discussed in this report. Most of the document is a large, multi-page chart.}  For this next piece, I would suggest that a direct reference to the \index{risk assessment}\gls{riskassessment} categories in the reference would be helpful.  \index{NIST}\gls{nist} provided a detailed and lengthy chart packed with information.  Below, we briefly consider chart components and points to concepts readily observed in the experiments under consideration.  This next paragraph will likely require a direct comparison to the table \endnote{Ibidem.} to be helpful.
 
 When we consider the possibility of responding to a \index{SQL Injection}SQL Injection \gls{attack} by mitigating with an experimentally proven technique, we can see participation in all of these functions.  I find it helpful to consider them in reverse by supposing participation in a selected category of each function.  To "Recover": "Improvements" would have been agreed upon already, as part of accepting the concept of responsive security maintenance and \index{mitigation}mitigation.  To "Respond" : "\index{mitigation}Mitigation" is directly listed.  To "Detect" : "Security Continuous Monitoring" can be chosen; for example, even though \index{SQL Injection}SQL Injection attacks attempt to strike at the database, they are most likely to be detected by filtering and examining logs of calls made to the website through URLs.  This is why in the "Detect" function we are more likely to choose \index{continuous monitoring}continuous monitoring over "Anomalies and Events."  To "Protect" : "Information Protection Processes \& Procedures" would be chosen because periodic log reviews would be a protection procedure.  Finally, to "Identify" : "\index{risk assessment}\gls{riskassessment}", or the identification, observation and response to risk from \index{SQL Injection}SQL Injection attacks would be chosen.  In this way, we can quickly relate the broader categories of the \index{NIST}\gls{nist} \index{Cybersecurity Framework}Cybersecurity Framework to the immediate actions of mitigating SQLIATK.  This framework is useful to us as a paradigm for devising and implementing a \index{mitigation}mitigation response because it is a widely acknowledged emerging government standard for communicating information security concerns throughout the structure of entities like governments and businesses.\endnote{\_\_\_\_\_. "Framework for Improving Ciritcal Infrastructure Cybersecurity." \gls{nist}, 2014. This \gls{nist} document provides the summary structure of risk assessments discussed in this report. Most of the document is a large, multi-page chart.}\endnote{\_\_\_\_\_. "https://www.nist.gov/news-events/events/2017/03/cybersecurity-framework-virtual-events" \gls{nist}, INTERNET.}
 
@@ -460,9 +460,9 @@ When we consider the possibility of responding to a \index{SQL Injection}SQL Inj
 
 Given the scope of detail of our studies, and the role Shadish's work plays in them, I felt is was appropriate to concentrate on chapters 1, 4 and 11.
 
-The late William Shadish was an industry leader in describing \index{quasi-natural experiments}quasi-natural experiments. \endnote{Shadish, William. CV, University of California Merced. INTERNET: http://faculty.ucmerced.edu/wshadish/shadish-cv-jan-2015. Shadish, William. Biographical sketch, University of California Merced.http://faculty.ucmerced.edu/wshadish/biosketch.} \endnote{\_\_\_\_\_. INTERNET: http://www.ipr.northwestern.edu/workshops/annual-summer-workshops/quasi-experimental-design-and-analysis/ This workshop shows that Shadish's methods are still being studied and implemented. This workshop is one example of coaching other professionals into using quasi-experimental design techniques. It was sponsored by Northwestern University and funded by a grant from the \gls{us} Department of Education.} A recent article by Benjamin Dean shows that Shadish's ideas can be readily applied to evaluating cybersecurity threats \endnote{Kampf, David, ed.; Dean, Benjamin. "Natural and Quasi-Natural Experiments to Evaluate Cybersecurity Policies," Journal of International Affairs. pp.139-160. Winter 2016, Volume 70, Number 1. JIA.SIPA.COLUMBIA.EDU. Columbia University.} \endnote{Ibid.}. Shadish's work seemed to focus primarily on the social sciences and education \endnote{Shadish, William. CV, University of California Merced. INTERNET: http://faculty.ucmerced.edu/wshadish/shadish-cv-jan-2015. Shadish, William. Biographical sketch, University of California Merced.http://faculty.ucmerced.edu/wshadish/biosketch.} \endnote{Shadish, William, Shadish, William R. Jr., Thomas Cook, Laura C. Leviton. Foundations of Program Evaluation: Theories and Practice. pp. 36-67. Sage Publications, First printing, 1991. ISBN 0-08-039355-1. UTC Library Call H 62 .S433 1991. pp. 21-35.}, but the constraints on experiments make his work applicable to establishing good \index{experimental design}experimental design for evaluating information security practices. There is an analogy available because many of the conditions in cyberattacks and social policy affect distinct units (like one person or one machine) with one-time events. Dean's work summarized methods that can be used to relate Shadish's \index{experimental design}experimental design guidance to larger situations involving policy changes. \endnote{Kampf, David, ed.; Dean, Benjamin. "Natural and Quasi-Natural Experiments to Evaluate Cybersecurity Policies," Journal of International Affairs. pp.139-160. Winter 2016, Volume 70, Number 1. JIA.SIPA.COLUMBIA.EDU. Columbia University.}
+The late William Shadish was an industry leader in describing \index{quasi-natural experiments}quasi-natural experiments. \endnote{Shadish, William. CV, University of California Merced. INTERNET: http://faculty.ucmerced.edu/wshadish/shadish-cv-jan-2015. Shadish, William. Biographical sketch, University of California Merced.http://faculty.ucmerced.edu/wshadish/biosketch.} \endnote{\_\_\_\_\_. INTERNET: http://www.ipr.northwestern.edu/workshops/annual-summer-workshops/quasi-experimental-design-and-analysis/ This workshop shows that Shadish's methods are still being studied and implemented. This workshop is one example of coaching other professionals into using quasi-experimental design techniques. It was sponsored by Northwestern University and funded by a grant from the \gls{us} Department of Education.} A recent article by Benjamin Dean shows that Shadish's ideas can be readily applied to evaluating cybersecurity threats \endnote{Kampf, David, ed.; Dean, Benjamin. "Natural and Quasi-Natural Experiments to Evaluate Cybersecurity Policies," Journal of International Affairs. pp.139-160. Winter 2016, Volume 70, Number 1. JIA.SIPA.COLUMBIA.EDU. Columbia University.} \endnote{Ibidem.}. Shadish's work seemed to focus primarily on the social sciences and education \endnote{Shadish, William. CV, University of California Merced. INTERNET: http://faculty.ucmerced.edu/wshadish/shadish-cv-jan-2015. Shadish, William. Biographical sketch, University of California Merced.http://faculty.ucmerced.edu/wshadish/biosketch.} \endnote{Shadish, William, Shadish, William R. Jr., Thomas Cook, Laura C. Leviton. Foundations of Program Evaluation: Theories and Practice. pp. 36-67. Sage Publications, First printing, 1991. ISBN 0-08-039355-1. UTC Library Call H 62 .S433 1991. pp. 21-35.}, but the constraints on experiments make his work applicable to establishing good \index{experimental design}experimental design for evaluating information security practices. There is an analogy available because many of the conditions in cyberattacks and social policy affect distinct units (like one person or one machine) with one-time events. Dean's work summarized methods that can be used to relate Shadish's \index{experimental design}experimental design guidance to larger situations involving policy changes. \endnote{Kampf, David, ed.; Dean, Benjamin. "Natural and Quasi-Natural Experiments to Evaluate Cybersecurity Policies," Journal of International Affairs. pp.139-160. Winter 2016, Volume 70, Number 1. JIA.SIPA.COLUMBIA.EDU. Columbia University.}
 
-To accept the point made by Dean \endnote{Ibid.} that we should use \index{quasi-natural experiments}quasi-natural experimentation because common, reproducable scientific experimentation methods may be too difficult or too complex for the contemporary network security environment: we could look for a counterpoint by turning to examples of effective scientific \index{experimental design}experiment design like those described by Virgil Anderson. \endnote{Anderson, Virgil and Robert McLean. Design of Experiments: A Realistic Approach. pp. 79-93. Purdue University, University of Tennessee. Marcel Dekker, Inc., New York, 1974. ISBN 0-8247-7493-0. UTC Library Call QA 279 .A53 This book shows the more rigid, traditional model of experimental design. It's presented as a reference in contrast to the main theme of quasi-experimentation that is our focus in this study.} He thoroughly described experiments based on \index{random control trials}random control trials. Dean asserted, as we'll see, that, "To date, \index{randomized controlled trials}randomized controlled trials have not been proposed, much less attempted, for cybersecurity policies. \endnote{Kampf, David, ed.; Dean, Benjamin. "Natural and Quasi-Natural Experiments to Evaluate Cybersecurity Policies," Journal of International Affairs. pp.139-160. Winter 2016, Volume 70, Number 1. JIA.SIPA.COLUMBIA.EDU. Columbia University.}" Meanwhile, "The gold standard for research design to evaluate policies is the \index{randomized controlled trials}randomized controlled trial. \endnote{Ibid.}(p. 147)" As we discuss later, we'll see that \index{randomized controlled trials}randomized controlled trials are much more expensive in design and execution while being poorly suited to responding to the real-world conditions of cyberattacks. Instead, \index{quasi-natural experiments}quasi-natural experiments are favored.
+To accept the point made by Dean \endnote{Ibidem.} that we should use \index{quasi-natural experiments}quasi-natural experimentation because common, reproducable scientific experimentation methods may be too difficult or too complex for the contemporary network security environment: we could look for a counterpoint by turning to examples of effective scientific \index{experimental design}experiment design like those described by Virgil Anderson. \endnote{Anderson, Virgil and Robert McLean. Design of Experiments: A Realistic Approach. pp. 79-93. Purdue University, University of Tennessee. Marcel Dekker, Inc., New York, 1974. ISBN 0-8247-7493-0. UTC Library Call QA 279 .A53 This book shows the more rigid, traditional model of experimental design. It's presented as a reference in contrast to the main theme of quasi-experimentation that is our focus in this study.} He thoroughly described experiments based on \index{random control trials}random control trials. Dean asserted, as we'll see, that, "To date, \index{randomized controlled trials}randomized controlled trials have not been proposed, much less attempted, for cybersecurity policies. \endnote{Kampf, David, ed.; Dean, Benjamin. "Natural and Quasi-Natural Experiments to Evaluate Cybersecurity Policies," Journal of International Affairs. pp.139-160. Winter 2016, Volume 70, Number 1. JIA.SIPA.COLUMBIA.EDU. Columbia University.}" Meanwhile, "The gold standard for research design to evaluate policies is the \index{randomized controlled trials}randomized controlled trial. \endnote{Ibidem.}(p. 147)" As we discuss later, we'll see that \index{randomized controlled trials}randomized controlled trials are much more expensive in design and execution while being poorly suited to responding to the real-world conditions of cyberattacks. Instead, \index{quasi-natural experiments}quasi-natural experiments are favored.
 
 To accept the chart outlined by Dean \endnote{Kampf, David, ed.; Dean, Benjamin. "Natural and Quasi-Natural Experiments to Evaluate Cybersecurity Policies," Journal of International Affairs. pp.139-160. Winter 2016, Volume 70, Number 1. JIA.SIPA.COLUMBIA.EDU. Columbia University.} that would describe some quasi-natural experimentation methods and expected outcomes, we would need to better understand Dean's underlying authority: Shadish. Shadish described some characteristics of program evaluation. It should be noted that Shadish wasn't writing about computer programs themselves; instead, Shadish was writing about social programs and policies. It was in that sense that Dean was able to apply Shadish's assertions to cybersecurity policies for nation-states. We, too, can adapt Shadish's advice on the relationship between quasi-natural experimentation and policy (i.e. "social program" \endnote{Shadish, William R. Jr., Thomas Cook, Laura C. Leviton. Foundations of Program Evaluation: Theories and Practice. pp. 36-67. Sage Publications, First printing, 1991. ISBN 0-08-039355-1. UTC Library Call H 62 .S433 1991.}) in our quest for better rapidly developed network defenses.
 
@@ -485,13 +485,13 @@ In Chapter 11, "Generalized Causal Inference:  A Grounded Theory" we have a chan
 Shadish attributed "the experiment" we accept today as the work of Fisher. \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., pp. 2-3: "But when scientists started to use experiments in areas such as public health or education, in which extraneous influences are harder to control ... they found that the controls used in natural science in the laboratory worked poorly in these new applications. So they developed new methods of dealing with extraneous influence, such as random assignment (Fisher, 1925) or adding a nonrandomized control group (Coover \& Angell, 1907). As theoretical and observational experience accumulated across these settings and topics, more sources of bias were identified and more methods were developed to cope with them (Dehue, 2000)."}
  To Fisher and his contemporaries, we ascribe the concepts of random assignment and a nonrandomized control group. Random assignment and nonrandomized control groups were as important to experimentation as laboratory glassware was to Chemistry. Assignment and control brought certain features to the thought behind experiments. Shadish wrote, "... the key feature ... is still to deliberately vary something so as to discover what happens to something else later. \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 3 : "Today, the key feature common to all experiments is still to deliberately vary something so as to discover what happens to something else later--to discover the effects of the presumed causes."}"
 
-Shadish discussed the influence of Locke, Mackie and Hume on the concepts of cause and effect; he discussed the influence of Rubin and John Stuart Mill on causal relationships. Locke's definitions were, "A cause is that which makes any other thing, either simple idea, substance, or mode, begin to be; and an effect is that, which had its beginning from some other thing. \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 4: "John Locke said: ... 'A cause is that which makes any other thing, either simple idea, substance, or mode, begin to be; and an effect is that, which had its beginning from some other thing' (p. 325)."}" When describing Mackie's work on causes, Shadish told us about Mackie's "inus condition -- 'an insufficient but non-redundant part of an unnecessary but sufficient condition.' \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 4: "A lighted match is, therefore, what Mackie (1974) called an inus condition-- 'an insufficient but non-redundant part of an unnecessary but sufficient condition' (p.62) ... It is part of a sufficient condition to start a fire in combination with the full constellation of factors."}" The inus condition is significant to us in these explorations about SQL Injection Attacks on complex networked systems because practical experience shows us that so many smaller, contributing factors play a role but cannot be so strongly described as the cause themselves. Shadish likened these to the lighted match which starts the forest fire. "It is part of a sufficient condition," he wrote, " ... in combination with the full constellation of factors. \endnote{Ibid.}" Inus conditions may also need a relationship to a larger set of conditions. Shadish wrote in one example, "... was an inus condition. It was insufficient cause by itself, and its effectiveness required it to be embedded in a larger set of conditions that were not even fully understood by the original investigators. Most causes are more accurately called inus conditions. \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 5: "Endostatin was an inus condition. It was insufficient cause by itself, and its effectiveness required it to be embedded in a larger set of conditions that were not even fully understood by original investigators."}" I felt that this was particularly close to some practical conclusions that I've seen drawn about cause and effect in computer security problems. That is, we may say that a certain \gls{attack} causes some specified damage, but the \gls{attack} code is surrounded by many supporting inus conditions that are an assumed and often ignored part of the problem. The file structure of the attacked program might be one such example. The many \gls{configuration} details of a web server or database might be others. Many attacks require a very specific set of conditions to be present in order for an \gls{attack} to succeed. These conditions would be the inus conditions in some of our problems. Shadish went on to warn that, "causal relationships ... are not deterministic but only increase the probability that an effect will occur... To different degrees, all causal relationships are context dependent.\endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 5: "Most causes are more accurately called inus conditions. ... This is one reason that the causal relationships we discuss in this book are not deterministic but only increase in probability that an effect will occur (Eells, 1991; Holland, 1994)."}" Shadish went on to outline Hume's influence over effect by pointing out that, "An effect is the difference between what did happen and what would have happened.\endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 5: "An effect is the difference between what did happen and what would have happened."}" Counterfactual conditions ("A counterfactual is something that is contrary to fact," e.g.\endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 5: "A counterfactual is something that is contrary to fact."}) were noted in Shadish's discussion of Rubin's Causal Model and its influence over our understanding of case-control studies. He concluded his discussions on cause and effect definitions with John Stuart Mill's, " ... a causal relationship exists if (1) the cause preceded the effect, (2) the cause was related to the effect, and (3) we can find no plausible alternative explanation for the effect other than the cause. \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 6: "How do we know if cause and effect are related? In a classic analysis formalized by the 19th-centure philosopher John Stuart Mill, a causal relationship exists if (1) the cause preceded the effect, (2) the cause was related to the effect, and (3) we can find no plausible alternative explanation for the effect other than the cause."}"
+Shadish discussed the influence of Locke, Mackie and Hume on the concepts of cause and effect; he discussed the influence of Rubin and John Stuart Mill on causal relationships. Locke's definitions were, "A cause is that which makes any other thing, either simple idea, substance, or mode, begin to be; and an effect is that, which had its beginning from some other thing. \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 4: "John Locke said: ... 'A cause is that which makes any other thing, either simple idea, substance, or mode, begin to be; and an effect is that, which had its beginning from some other thing' (p. 325)."}" When describing Mackie's work on causes, Shadish told us about Mackie's "inus condition -- 'an insufficient but non-redundant part of an unnecessary but sufficient condition.' \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 4: "A lighted match is, therefore, what Mackie (1974) called an inus condition-- 'an insufficient but non-redundant part of an unnecessary but sufficient condition' (p.62) ... It is part of a sufficient condition to start a fire in combination with the full constellation of factors."}" The inus condition is significant to us in these explorations about SQL Injection Attacks on complex networked systems because practical experience shows us that so many smaller, contributing factors play a role but cannot be so strongly described as the cause themselves. Shadish likened these to the lighted match which starts the forest fire. "It is part of a sufficient condition," he wrote, " ... in combination with the full constellation of factors. \endnote{Ibidem.}" Inus conditions may also need a relationship to a larger set of conditions. Shadish wrote in one example, "... was an inus condition. It was insufficient cause by itself, and its effectiveness required it to be embedded in a larger set of conditions that were not even fully understood by the original investigators. Most causes are more accurately called inus conditions. \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 5: "Endostatin was an inus condition. It was insufficient cause by itself, and its effectiveness required it to be embedded in a larger set of conditions that were not even fully understood by original investigators."}" I felt that this was particularly close to some practical conclusions that I've seen drawn about cause and effect in computer security problems. That is, we may say that a certain \gls{attack} causes some specified damage, but the \gls{attack} code is surrounded by many supporting inus conditions that are an assumed and often ignored part of the problem. The file structure of the attacked program might be one such example. The many \gls{configuration} details of a web server or database might be others. Many attacks require a very specific set of conditions to be present in order for an \gls{attack} to succeed. These conditions would be the inus conditions in some of our problems. Shadish went on to warn that, "causal relationships ... are not deterministic but only increase the probability that an effect will occur... To different degrees, all causal relationships are context dependent.\endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 5: "Most causes are more accurately called inus conditions. ... This is one reason that the causal relationships we discuss in this book are not deterministic but only increase in probability that an effect will occur (Eells, 1991; Holland, 1994)."}" Shadish went on to outline Hume's influence over effect by pointing out that, "An effect is the difference between what did happen and what would have happened.\endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 5: "An effect is the difference between what did happen and what would have happened."}" Counterfactual conditions ("A counterfactual is something that is contrary to fact," e.g.\endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 5: "A counterfactual is something that is contrary to fact."}) were noted in Shadish's discussion of Rubin's Causal Model and its influence over our understanding of case-control studies. He concluded his discussions on cause and effect definitions with John Stuart Mill's, " ... a causal relationship exists if (1) the cause preceded the effect, (2) the cause was related to the effect, and (3) we can find no plausible alternative explanation for the effect other than the cause. \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 6: "How do we know if cause and effect are related? In a classic analysis formalized by the 19th-centure philosopher John Stuart Mill, a causal relationship exists if (1) the cause preceded the effect, (2) the cause was related to the effect, and (3) we can find no plausible alternative explanation for the effect other than the cause."}"
 
 In these terms Shadish described, we can begin to see the details of contention about the validity of experiments that could prove the strengthening of a system through patching or modification. Take Mill's third point, above, for example. How often do we presume that an \gls{attack} was the cause of damage because we did not discover another cause? Assuming the correct identification of a cause by admitting that there are no other explanations can lead to dangerous omissions when human deceit is a factor. For example, I remember one Forensic Anthropology professor describe to me that during criminal investigations it was common for bodies to be discovered hidden beneath something else that was buried, like refuse or a dead animal. In cases where deception can provide an attacker defense by confounding an investigation, there might be a secondary planting of evidence, a secondary \gls{attack} with code, or another confounding mechanism that might cause us to prematurely conclude that we've correctly identified an \gls{attack}. Since correct contamination identification is a strong predicate for implementing effective countermeasures, our incorrect assumptions can provoke an early quit to an investigation that might actually prolong or promote an \gls{attack} by causing us to emplace the wrong corrections. When installing defensive measures in reaction to damage from an \gls{attack}, we can imagine how simple assumptions of cause and effect can create worsening complexities.
 
-Shadish also discussed the old saw, "Correlation does not prove causation," and confounds. In discussing manipulatable and nonmanipulatable causes, he pointed out, "Experiments explore the effects of things that can be manipulated ... Nonmanipulatable events or attributes cannot be causes in experiments because we cannot deliberately vary them to see what then happens. \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 7: "Experiments explore the effects of things that can be manipulated. ... Nonmanipulable events ... or attributes ... cannot be causes in experiments because we cannot deliberately vary them to see what happens. Consequently, most scientists and philosophers agree that it is much harder to discover the effects of nonmanipulable causes."}" I would suggest that this one-off nature of reality, when observing an \gls{attack} against a website, goes to show that we witness nonmanipulatable events. During the one event that is an \gls{attack}, the specifics of the \gls{attack} are normally beyond our control; they are nonmaniuplatable events. However, Shadish does suggest support for the action of simulating an \gls{attack} to explore its cause, effect and causal relationships because he wrote, "analogue experiments can sometimes be done on nonmanipulatable causes, that is, experiments that manipulate an agent that is similar to the cause of interest \endnote{Ibid.}(p. 7)" In that, I would suggest, is justification for continuing with an experiment to simulate a SQL Injection \gls{attack}, its detection, its defense, and its recovery.
+Shadish also discussed the old saw, "Correlation does not prove causation," and confounds. In discussing manipulatable and nonmanipulatable causes, he pointed out, "Experiments explore the effects of things that can be manipulated ... Nonmanipulatable events or attributes cannot be causes in experiments because we cannot deliberately vary them to see what then happens. \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 7: "Experiments explore the effects of things that can be manipulated. ... Nonmanipulable events ... or attributes ... cannot be causes in experiments because we cannot deliberately vary them to see what happens. Consequently, most scientists and philosophers agree that it is much harder to discover the effects of nonmanipulable causes."}" I would suggest that this one-off nature of reality, when observing an \gls{attack} against a website, goes to show that we witness nonmanipulatable events. During the one event that is an \gls{attack}, the specifics of the \gls{attack} are normally beyond our control; they are nonmaniuplatable events. However, Shadish does suggest support for the action of simulating an \gls{attack} to explore its cause, effect and causal relationships because he wrote, "analogue experiments can sometimes be done on nonmanipulatable causes, that is, experiments that manipulate an agent that is similar to the cause of interest \endnote{Ibidem.}(p. 7)" In that, I would suggest, is justification for continuing with an experiment to simulate a SQL Injection \gls{attack}, its detection, its defense, and its recovery.
 
-Before he continues to tell us about what kind of experiment might be at hand, Shadish covered causal description and causal explantion. These discussions of "the whole" or "the part" of cause as "molar" or "molecular" causal conditions offered important insight into instances when we might need to guard against projecting results into wider conclusions \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 10: "These examples also show the close parallel between descriptive and explanatory causation and molar and molecular causation.\textsuperscript{4 }... 4. By molar, we mean something taken as a whole rather than in parts. An analogy is to physics, in which molar might refer to the properties or motions of masses, as distinguished from those of molecules or atoms that make up those masses."}. However, they also offer us an opportunity to make some important distinguishments among what types of experiments might be at hand. I assert that, depending on the behavior of the programmer at the time: the scientific interactions might be in different forms of experiments. We might have a "natural experiment" at the moment of \gls{attack}. We might have a "correlational design, passive observational design, and nonexperimental design" \endnote{Ibid.}(p. 18) in various stages of logging, discovery, or normal business and machine operations related to the \gls{attack} event. This might be of relevance later, as quasi-experimental results are applied to patching activities and improving risk assessments by applying risk controls: it will be critical to maintain correct context in order to understand why attacks succeed and why people and machines might fail or succeed in responding to those attacks.
+Before he continues to tell us about what kind of experiment might be at hand, Shadish covered causal description and causal explantion. These discussions of "the whole" or "the part" of cause as "molar" or "molecular" causal conditions offered important insight into instances when we might need to guard against projecting results into wider conclusions \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 10: "These examples also show the close parallel between descriptive and explanatory causation and molar and molecular causation.\textsuperscript{4 }... 4. By molar, we mean something taken as a whole rather than in parts. An analogy is to physics, in which molar might refer to the properties or motions of masses, as distinguished from those of molecules or atoms that make up those masses."}. However, they also offer us an opportunity to make some important distinguishments among what types of experiments might be at hand. I assert that, depending on the behavior of the programmer at the time: the scientific interactions might be in different forms of experiments. We might have a "natural experiment" at the moment of \gls{attack}. We might have a "correlational design, passive observational design, and nonexperimental design" \endnote{Ibidem.}(p. 18) in various stages of logging, discovery, or normal business and machine operations related to the \gls{attack} event. This might be of relevance later, as quasi-experimental results are applied to patching activities and improving risk assessments by applying risk controls: it will be critical to maintain correct context in order to understand why attacks succeed and why people and machines might fail or succeed in responding to those attacks.
 
 Shadish wrote, "In the end, then, causal descriptions and causal explanations are in delicate balance in experiments. What experiments do best is to improve causal descriptions; they do less well at explaining causal relationships. \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 12: "In the end, then, causal descriptions and causal explanations are in delicate balance in experiments. What experiments do best is to improve causal descriptions; they do less well at explaining causal relationships."}" Causal description, he stated, is about the consequences of varying treatment in an experiment. "The practical importance of causal explanation is brought home when [a treatment] ... fails to solve the problem. Explanatory knowledge then offers clues about how to fix the problem.\endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 10: "The practical importance of causal explanation is brought home when ... (another easily learned manipulation) fails to solve the problem. Explanatory knowledge then offers clues about how to fix the problem ..."}" These descriptions of different segments of considering cause can help us understand why sometimes we leap to a conclusion about why a treatment might be a good choice. The explanatory knowledge he refers to may be, in our cases as programmers facing SQLIATK, an overall understanding of how these attacks work. Without a personal library of understanding how to defend against these attacks, suggestions that programmers present fortified programs are not readily realizable suggestions for improvement. How can we improve this broad explanatory knowledge that helps us recognize clues? Through training and experience, and also through experimentation.
 
@@ -499,17 +499,17 @@ Although we have already mentioned that the types of experiments we are interest
 
 "Experiment: a study in which an intervention is deliberately introduced to observe its effects. \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 12.}"
 
-"Randomized Experiment: An experiment in which units are assigned to receive the treatment or an alternative condition by a random process ... \endnote{Ibid.}"
+"Randomized Experiment: An experiment in which units are assigned to receive the treatment or an alternative condition by a random process ... \endnote{Ibidem.}"
 
 "Quasi-Experiment: An experiment in which units are not assigned to conditions randomly. \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 12.}"
 
-"Natural Experiment: Not really an experiment because the cause usually cannot be manipulated; a study that contrasts a naturally occurring event such as an earthquake with a comparison condition. \endnote{Ibid.}"
+"Natural Experiment: Not really an experiment because the cause usually cannot be manipulated; a study that contrasts a naturally occurring event such as an earthquake with a comparison condition. \endnote{Ibidem.}"
 
 "Correlational Study: Usually synonymous with nonexperimental or observational study; a study that simply observes the size and direction of a relationship among variables. \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 12.}"
 
 As Shadish discussed the features of a quasi-experiment, he noted some key ideas:
 
-"Quasi-experiments share with all other experiments a similar purpose -- to test descriptive causal hypotheses about manipulatable causes ... \endnote{Ibid.}(p. 14)"
+"Quasi-experiments share with all other experiments a similar purpose -- to test descriptive causal hypotheses about manipulatable causes ... \endnote{Ibidem.}(p. 14)"
 
 "In quasi-experiments, the cause is manipulable and occurs before the effect is measured. \endnote{Shadish, William, Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0., p. 14: "In quasi-experiments, the cause in manipulable and occurs before the effect is measured."}"
 
@@ -529,7 +529,7 @@ Accepting these concepts, let us continue with our discussion by exploring why w
 
 Returning to the work by Dean, we can see that a "sprint" or round of experiments for the purpose of changing a policy might itself be regarded as a quasi-experiment. Dean discussed the impact of policy changes, particularly at the national level. He wrote, "Quasi-natural experiments, by contrast, do not involve the random application of treatment. Instead, a treatment is applied due to social or political factors, such as a change in laws or implementation of a new government program. ...The group that receives treatment in a quasi-natural experiment is called the comparison group instead of the control group.\endnote{Kampf, David, ed.; Dean, Benjamin. "Natural and Quasi-Natural Experiments to Evaluate Cybersecurity Policies," Journal of International Affairs. pp.139-160. Winter 2016, Volume 70, Number 1. JIA.SIPA.COLUMBIA.EDU. Columbia University.}(p. 148)"
 
-Dean also advised readers to consider to cost of these kinds of experiments. While I would expect that, for academic purposes, we might initially see cost as a matter of number of test iterations or with respect to monetary expense of machine setup and licensing, Dean related experimental design to cost. He asserted that a more complex experimental design would be more expensive to run in order to affect a policy change("... the robustness and generalizability of the results increases at the expense of practicality and/or cost" \endnote{Ibid.}(p.149)). The design types he presented graduated from single-element characteristics that required simple treatment to multi-element characteristics that involved more complex patterns of control groups and testing. Dean advised that three feature types could broadly describe the experiment's complexity:
+Dean also advised readers to consider to cost of these kinds of experiments. While I would expect that, for academic purposes, we might initially see cost as a matter of number of test iterations or with respect to monetary expense of machine setup and licensing, Dean related experimental design to cost. He asserted that a more complex experimental design would be more expensive to run in order to affect a policy change("... the robustness and generalizability of the results increases at the expense of practicality and/or cost" \endnote{Ibidem.}(p.149)). The design types he presented graduated from single-element characteristics that required simple treatment to multi-element characteristics that involved more complex patterns of control groups and testing. Dean advised that three feature types could broadly describe the experiment's complexity:
 (1) whether the study was prospective or retrospective; (2) whether the study used a control group, a comparison group, or neither; (3) comparison of data over time or over multiple characteristics. \endnote{Kampf, David, ed.; Dean, Benjamin. "Natural and Quasi-Natural Experiments to Evaluate Cybersecurity Policies," Journal of International Affairs. pp.139-160. Winter 2016, Volume 70, Number 1. JIA.SIPA.COLUMBIA.EDU. Columbia University.}(p. 149)
 
 % ==============================================
@@ -546,17 +546,17 @@ OWASP's website for its Top 10 of 2017 describes injection as, "Injection flaws,
 
 Should we need to respond to the idea that injection attacks are worth securing against, my reading has included selections from Paul Day's "CyberAttack." \endnote{Day, Paul. CyberAttack: The truth about digital crime, cyber warfare and government snooping. Carlton Books, 2014. ISBN 978-1-78097-533-7. Paul Day's book provides short, easy-to-read chapters on popular topics in the malicious use of computers.}  This is a general information book on contemporary issues in information security that summarizes emerging topics and explains information security industry jargon in plain terms.
 
-Day pointed out some contemporary factors that show that crime supported by computer abuse has made a substantial impact on many economies and cultures.  We see the 2001 Budapest Convention as an international standard and mechanism for accepting the concept of computer crimes across nations and cultures.  Day noted that the European Commission chose to adopt a "'general policy against \gls{cybercrime}'\endnote{Ibid.}(p. 7)" because there was "no agreed definition of \gls{cybercrime}" in May 2007.  He wrote, "The Commission's solution was to propose a threefold definition:  1. Traditional forms of crime such as fraud or forgery committed over electronic communication systems and information systems.  2.  The publication of illegal content over electronic media (e.g. child sexual abuse material or incitement to racial hatred).  3.  Crimes unique to electronic networks (e.g. attacks against information systems, denial of service and hacking).\endnote{Day, Paul. CyberAttack: The truth about digital crime, cyber warfare and government snooping. Carlton Books, 2014. ISBN 978-1-78097-533-7. Paul Day's book provides short, easy-to-read chapters on popular topics in the malicious use of computers.}(p. 7)"  Day wrote, in the United States, "The \gls{fbi} currently track \gls{cybercrime} types using 27 different categories of \gls{cybercrime} -- but there are more than 60 subcategories.  Different law enforcement agencies across the world have different \gls{cybercrime} laws -- and some countries have no laws at all. \endnote{Ibid.}(p. 7)"   Similarly, Dean noted, "... all countries might benefit on a net basis from international cooperation around increasing cybersecurity and fighting \gls{cybercrime}. Yet such cooperation does not occur ogranically, even between countries or regions with commonly held values and interests, (e.g. the Eurpoean Union and United States). \endnote{Kampf, David, ed.; Dean, Benjamin. "Natural and Quasi-Natural Experiments to Evaluate Cybersecurity Policies," Journal of International Affairs. pp.139-160. Winter 2016, Volume 70, Number 1. JIA.SIPA.COLUMBIA.EDU. Columbia University.}(p. 146)"
+Day pointed out some contemporary factors that show that crime supported by computer abuse has made a substantial impact on many economies and cultures.  We see the 2001 Budapest Convention as an international standard and mechanism for accepting the concept of computer crimes across nations and cultures.  Day noted that the European Commission chose to adopt a "'general policy against \gls{cybercrime}'\endnote{Ibidem.}(p. 7)" because there was "no agreed definition of \gls{cybercrime}" in May 2007.  He wrote, "The Commission's solution was to propose a threefold definition:  1. Traditional forms of crime such as fraud or forgery committed over electronic communication systems and information systems.  2.  The publication of illegal content over electronic media (e.g. child sexual abuse material or incitement to racial hatred).  3.  Crimes unique to electronic networks (e.g. attacks against information systems, denial of service and hacking).\endnote{Day, Paul. CyberAttack: The truth about digital crime, cyber warfare and government snooping. Carlton Books, 2014. ISBN 978-1-78097-533-7. Paul Day's book provides short, easy-to-read chapters on popular topics in the malicious use of computers.}(p. 7)"  Day wrote, in the United States, "The \gls{fbi} currently track \gls{cybercrime} types using 27 different categories of \gls{cybercrime} -- but there are more than 60 subcategories.  Different law enforcement agencies across the world have different \gls{cybercrime} laws -- and some countries have no laws at all. \endnote{Ibidem.}(p. 7)"   Similarly, Dean noted, "... all countries might benefit on a net basis from international cooperation around increasing cybersecurity and fighting \gls{cybercrime}. Yet such cooperation does not occur ogranically, even between countries or regions with commonly held values and interests, (e.g. the Eurpoean Union and United States). \endnote{Kampf, David, ed.; Dean, Benjamin. "Natural and Quasi-Natural Experiments to Evaluate Cybersecurity Policies," Journal of International Affairs. pp.139-160. Winter 2016, Volume 70, Number 1. JIA.SIPA.COLUMBIA.EDU. Columbia University.}(p. 146)"
 
 Day explained, "Cyber-criminals have quickly learned how to steal in cyberspace - and the 'triangle of \gls{cybercrime}' relies on three things: (1) the generation of possibilities for \gls{cybercrime} through data theft and \gls{malware} introduction; (2) the operation and maintenance of cyber-criminals through a secondary supply chain; and (3) a seemingly endless supply of low level cyber-criminals and 'cash-out mules' who are the foot soldiers in the cyber-mafia -- and who get caught eventually."  \endnote{Day, Paul. CyberAttack: The truth about digital crime, cyber warfare and government snooping. Carlton Books, 2014. ISBN 978-1-78097-533-7. Paul Day's book provides short, easy-to-read chapters on popular topics in the malicious use of computers.}(p. 6) In this scheme that Day outlined, our interest in evaluating SQL Injection Attacks is related to his first point.  SQLIATK are a common mechanism of intrusion; those injection-based intrusions are often the breach in a system's security that leads to subsequent victimization from computer crimes.
 
 Later in his book, after discussing the direct and indirect costs of \gls{cybercrime}, Day summarized three studies commissioned by the \gls{us} and UK governments between 2006 and 2012.  In those the studies provided several recommendations for preventing \gls{cybercrime}.  Among those relevant to our experiments, include:
 
-"1.  Interfere with the distribution of crime-ware via filtering, automated patching and coutnermeasures against content injection attacks.  Spam filters can prevent the delivery of deceptive messages" (i.e. a common mechanism for gaining initial entry to a system by deception and user-sponsored intrusion). "Automated patching can make systems less vulnerable.  Improved countermeasures to content injection attacks can prevent cross-site scripting and SQL injection attacks. \endnote{Ibid.}(p. 48)"  This assertion by Day suggests support for the general idea of developing patches to systems subject to \gls{attack}.
+"1.  Interfere with the distribution of crime-ware via filtering, automated patching and coutnermeasures against content injection attacks.  Spam filters can prevent the delivery of deceptive messages" (i.e. a common mechanism for gaining initial entry to a system by deception and user-sponsored intrusion). "Automated patching can make systems less vulnerable.  Improved countermeasures to content injection attacks can prevent cross-site scripting and SQL injection attacks. \endnote{Ibidem.}(p. 48)"  This assertion by Day suggests support for the general idea of developing patches to systems subject to \gls{attack}.
 
 "6.  Interfere with the ability of the attacker to receive and use confidential data by encoding data in a form that renders it valueless to an attacker. \endnote{Day, Paul. CyberAttack: The truth about digital crime, cyber warfare and government snooping. Carlton Books, 2014. ISBN 978-1-78097-533-7. Paul Day's book provides short, easy-to-read chapters on popular topics in the malicious use of computers.}(p. 49)" This is significant to us because many of the standardized methods available in server-side programming languages contain methods already available to neutralize an attacker's attempt to sniff out a target with simple matching by encrypting the data before the \gls{attack} occurs.  Dictionary attacks, based on the exhaustive iteration over word lists, can be foiled by breaking the ability of an attacker to discover a simple match within a system by encrypting the data beforehand.  Similarly, navigation within a system can be foiled by jamming dictionary style attacks that an attacker might use to navigate to commonly named directories by using encrypted strings instead of plaintext names.  That is, if directory names are coined with a \gls{hash} instead of plain language, then they can form a defensive layer against these kinds of attacks.  We have witnessed these tactics in the wild, and they can be an attacker's obstacle in some of the experiments that we might establish.
 
-"3. Prevent crime-ware from executing by validating code prior to execution. \endnote{Ibid.}(p. 49)"  In large corporations we may see job-scheduling software that is used to initiate and validate a program run against a pre-planned schedule.  For most small computer users, however, there aren't readily available code-validation procedures that would interfere with execution that could be readily implemented in a way that would stifle SQLIATK.  Many attacks seem to be predicated on the idea that the attacker intends to abuse a legitimate system.  The \gls{attack} is often a momentary abuse of a common, working program.  Perhaps its features or options or ability to carry data are momentarily misused for the purpose of \gls{attack}.  In these situations, the seemingly easy advice to validate code can actually turn into a complex problem.  I would suggest that computers are good at following linear instructions, but presently poor at human right-brain style thinking that allows us to make holistic evaluations in a moment.\endnote{Edwards, Betty. Drawing on the Right Side of the Brain: A Course in Enhancing Creativity and Artistic Confidence. Jeremey P. Tarcher, Inc., St. Martin's Press, 1989. ISBN 978-0-87477-513-2. Betty Edwards' book describes theories in left and right brain cognition in simple, popular terms for the purpose of supporting instruction in elementary illustration. Her book provides examples on the differences in left-brain, analytical and detailed thinking and in right-brain, holistic evaluations.}  In practice I have seen that identifying SQLIATK code can be done by directly reading server logs; as a person familiar with reading code, I can readily see the \gls{attack} occurring in isolated lines.  However, explaining to a computer, in principle, that each run of a server side program was validated before that program executes is a tall order.  Instead, we often see web programming professionals opting for validating data input.  Some more thorough evaluations might guide data validation with client-side form-based suggestive limitations, server-side inspection and validation of received data, and maybe server-side inspection and validation of processed data prepared for output.  All in, this concept of code validation prior to execution is a rich area for exploration with experiments like these.  I would suggest that preventing known \gls{attack} code form executing might be an example of a quantifiable and qualifiable test that could yield simple \gls{binary} ("yes/no") results that might lend itself well to simple mathematical scoring and statistical analysis.
+"3. Prevent crime-ware from executing by validating code prior to execution. \endnote{Ibidem.}(p. 49)"  In large corporations we may see job-scheduling software that is used to initiate and validate a program run against a pre-planned schedule.  For most small computer users, however, there aren't readily available code-validation procedures that would interfere with execution that could be readily implemented in a way that would stifle SQLIATK.  Many attacks seem to be predicated on the idea that the attacker intends to abuse a legitimate system.  The \gls{attack} is often a momentary abuse of a common, working program.  Perhaps its features or options or ability to carry data are momentarily misused for the purpose of \gls{attack}.  In these situations, the seemingly easy advice to validate code can actually turn into a complex problem.  I would suggest that computers are good at following linear instructions, but presently poor at human right-brain style thinking that allows us to make holistic evaluations in a moment.\endnote{Edwards, Betty. Drawing on the Right Side of the Brain: A Course in Enhancing Creativity and Artistic Confidence. Jeremey P. Tarcher, Inc., St. Martin's Press, 1989. ISBN 978-0-87477-513-2. Betty Edwards' book describes theories in left and right brain cognition in simple, popular terms for the purpose of supporting instruction in elementary illustration. Her book provides examples on the differences in left-brain, analytical and detailed thinking and in right-brain, holistic evaluations.}  In practice I have seen that identifying SQLIATK code can be done by directly reading server logs; as a person familiar with reading code, I can readily see the \gls{attack} occurring in isolated lines.  However, explaining to a computer, in principle, that each run of a server side program was validated before that program executes is a tall order.  Instead, we often see web programming professionals opting for validating data input.  Some more thorough evaluations might guide data validation with client-side form-based suggestive limitations, server-side inspection and validation of received data, and maybe server-side inspection and validation of processed data prepared for output.  All in, this concept of code validation prior to execution is a rich area for exploration with experiments like these.  I would suggest that preventing known \gls{attack} code form executing might be an example of a quantifiable and qualifiable test that could yield simple \gls{binary} ("yes/no") results that might lend itself well to simple mathematical scoring and statistical analysis.
 
 With contemporary factors like these to be considered, I think we can suggest that SQLIATK experiments are worthwhile.  We can see that they can be societally beneficial by reducing the likelihood of successful computer crimes.  We can see that the experiments can serve humanity even though we may not have a universal acceptance of what a computer crime is (e.g. the European Convention's in-principle acceptance, above).  We can see that there is probable cause for suggesting that advice for mechanisms to reduce computer crime, like Paul Day's suggestions above, could be testable as experiments by computer scientists.
 
@@ -933,231 +933,231 @@ This article outlines the difficulties in correctly attributing a cyberattack.  
 
 
 % Shadish Text
-% Quotations from William Shadish's book, Experimental and Quasi-Experimental Designs for Generalized Causal Inference. \endnote{Ibid.}
+% Quotations from William Shadish's book, Experimental and Quasi-Experimental Designs for Generalized Causal Inference. \endnote{Ibidem.}
 
 %REF Shadish
 \bibitem{Shadish2A}
-Shadish, William, \endnote{Ibid.}, pp. 2-3:
+Shadish, William, \endnote{Ibidem.}, pp. 2-3:
 "But when scientists started to use experiments in areas such as public health or education, in which extraneous influences are harder to control ... they found that the controls used in natural science in the laboratory worked poorly in these new applications.  So they developed new methods of dealing with extraneous influence, such as random assignment (Fisher, 1925) or adding a nonrandomized control group (Coover \& Angell, 1907).  As theoretical and observational experience accumulated across these settings and topics, more sources of bias were identified and more methods were developed to cope with them (Dehue, 2000)."
 
 %REF Shadish
 \bibitem{Shadish3B}
-Shadish, William, \endnote{Ibid.}, p. 3 :
+Shadish, William, \endnote{Ibidem.}, p. 3 :
 "Today, the key feature common to all experiments is still to deliberately vary something so as to discover what happens to something else later--to discover the effects of the presumed causes."
 
 %REF Shadish
 \bibitem{Shadish3C}
-Shadish, William, \endnote{Ibid.}, p. 3:
+Shadish, William, \endnote{Ibidem.}, p. 3:
 "This chapter begins to explore these matters by (1) discussing the nature of causation that experiments test, (2) explaining the specialized terminology (e.g. randomized experiments, quasi-experiments) that describes social experiments, (3) introducing the problem of how to generalize causal connections from individual experiments, and (4) briefly situating the experiment within larger literature on the nature of science."
 
 %REF Shadish
 \bibitem{Shadish4A}
-Shadish, William, \endnote{Ibid.}, p. 4:
+Shadish, William, \endnote{Ibidem.}, p. 4:
 "John Locke said: ... 'A cause is that which makes any other thing, either simple idea, substance, or mode, begin to be; and an effect is that, which had its beginning from some other thing' (p. 325)."
 
 %REF Shadish
 \bibitem{Shadish4B}
-Shadish, William, \endnote{Ibid.}, p. 4:
+Shadish, William, \endnote{Ibidem.}, p. 4:
 "A lighted match is, therefore, what Mackie (1974) called an inus condition-- 'an insufficient but non-redundant part of an unnecessary but sufficient condition' (p.62) ... It is part of a sufficient condition to start a fire in combination with the full constellation of factors."
 
 %REF Shadish
 \bibitem{Shadish5A}
-Shadish, William, \endnote{Ibid.}, p. 5:
+Shadish, William, \endnote{Ibidem.}, p. 5:
 "Endostatin was an inus condition.  It was insufficient cause by itself, and its effectiveness required it to be embedded in a larger set of conditions that were not even fully understood by original investigators."
 
 %REF Shadish
 \bibitem{Shadish5B}
-Shadish, William, \endnote{Ibid.}, p. 5:
+Shadish, William, \endnote{Ibidem.}, p. 5:
 "Most causes are more accurately called inus conditions. ... This is one reason that the causal relationships we discuss in this book are not deterministic but only increase in probability that an effect will occur (Eells, 1991; Holland, 1994)."
 
 %REF Shadish
 \bibitem{Shadish5C}
-Shadish, William, \endnote{Ibid.}, p. 5:
+Shadish, William, \endnote{Ibidem.}, p. 5:
 "To difference degrees, all causal relationships are context dependent, so the generalization of experimental effect is always at issue."
 
 %REF Shadish
 \bibitem{Shadish5D}
-Shadish, William, \endnote{Ibid.}, p. 5:
+Shadish, William, \endnote{Ibidem.}, p. 5:
 "A counterfactual is something that is contrary to fact."
 
 
 %REF Shadish
 \bibitem{Shadish5E}
-Shadish, William, \endnote{Ibid.}, p. 5:
+Shadish, William, \endnote{Ibidem.}, p. 5:
 "An effect is the difference between what did happen and what would have happened."
 
 %REF Shadish
 \bibitem{Shadish6A}
-Shadish, William, \endnote{Ibid.}, p. 6:
+Shadish, William, \endnote{Ibidem.}, p. 6:
 "How do we know if cause and effect are related?  In a classic analysis formalized by the 19th-centure philosopher John Stuart Mill, a causal relationship exists if (1) the cause preceded the effect, (2) the cause was related to the effect, and (3) we can find no plausible alternative explanation for the effect other than the cause."
 
 %REF Shadish
 \bibitem{Shadish7A}
-Shadish, William, \endnote{Ibid.}, p. 7:
+Shadish, William, \endnote{Ibidem.}, p. 7:
 "A well-known maxim in research is:  Correlation does not prove causation.  This is so because we may not know which variable came first nor whether alternative explanations for the presumed effect exist."
 
 %REF Shadish
 \bibitem{Shadish7B}
-Shadish, William, \endnote{Ibid.}, p. 7:
+Shadish, William, \endnote{Ibidem.}, p. 7:
 "Correlations also do little to rule out alternative explanations for a relationship between two variables ... That relationship may not be causal at all but rather due to a third variable (often called a confound)."
 
 %REF Shadish
 \bibitem{Shadish7C}
-Shadish, William, \endnote{Ibid.}, p. 7:
+Shadish, William, \endnote{Ibidem.}, p. 7:
 "Experiments explore the effects of things that can be manipulated. ... Nonmanipulable events ... or attributes ... cannot be causes in experiments because we cannot deliberately vary them to see what happens.  Consequently, most scientists and philosophers agree that it is much harder to discover the effects of nonmanipulable causes."
 
 %REF Shadish
 \bibitem{Shadish9A}
-Shadish, William, \endnote{Ibid.}, p. 9:
+Shadish, William, \endnote{Ibidem.}, p. 9:
 "The unique strength of experimentation is in describing the consequences attributable to deliberately varying a treatment.  We call this causal description."
 
 %REF Shadish
 \bibitem{Shadish9B}
-Shadish, William, \endnote{Ibid.}, p. 9:
+Shadish, William, \endnote{Ibidem.}, p. 9:
 "... the conditions under which that causal relationship holds -- what we call causal explanation."
 
 %REF Shadish
 \bibitem{Shadish10A}
-Shadish, William, \endnote{Ibid.}, p. 10:
+Shadish, William, \endnote{Ibidem.}, p. 10:
 "The practical importance of causal explanation is brought home when ... (another easily learned manipulation) fails to solve the problem.  Explanatory knowledge then offers clues about how to fix the problem ..."
 
 %REF Shadish
 \bibitem{Shadish10B}
-Shadish, William, \endnote{Ibid.}, p. 10:
+Shadish, William, \endnote{Ibidem.}, p. 10:
 "So causal explanation is an important route to the generalization of causal descriptions because it tells us which features of the causal relationship are essential to transfer to other situations."
 
 %REF Shadish
 \bibitem{Shadish10C}
-Shadish, William, \endnote{Ibid.}, p. 10:
+Shadish, William, \endnote{Ibidem.}, p. 10:
 "These examples also show the close parallel between descriptive and explanatory causation and molar and molecular causation.\textsuperscript{4 }... 4. By molar, we mean something taken as a whole rather than in parts.  An analogy is to physics, in which molar might refer to the properties or motions of masses, as distinguished from those of molecules or atoms that make up those masses."
 
 %REF Shadish
 \bibitem{Shadish11A}
-Shadish, William, \endnote{Ibid.}, p. 11:
+Shadish, William, \endnote{Ibidem.}, p. 11:
 "If experiments are less able to provide this highly prized explanatory causal knowledge, why are experiments so central to science ... ?"
 
 %REF Shadish
 \bibitem{Shadish11B}
-Shadish, William, \endnote{Ibid.}, p. 11:
+Shadish, William, \endnote{Ibidem.}, p. 11:
 "First, many causal explanations consist of chains of descriptive causal links in which one event causes the next. ... Second, experiments help distinguish between the validity of competing explanatory theories ..."
 
 %REF Shadish
 \bibitem{Shadish12A}
-Shadish, William, \endnote{Ibid.}, p. 12:
+Shadish, William, \endnote{Ibidem.}, p. 12:
 "In the end, then, causal descriptions and causal explanations are in delicate balance in experiments.  What experiments do best is to improve causal descriptions; they do less well at explaining causal relationships."
 
 %REF Shadish
 \bibitem{Shadish14A}
-Shadish, William, \endnote{Ibid.}, p. 14:
+Shadish, William, \endnote{Ibidem.}, p. 14:
 "In quasi-experiments, the cause in manipulable and occurs before the effect is measured."
 
 %REF Shadish
 \bibitem{Shadish14B}
-Shadish, William, \endnote{Ibid.}, p. 14:
+Shadish, William, \endnote{Ibidem.}, p. 14:
 "In quasi-experiments, the researcher has to enumerate alternative explanations one by one, decide which are plausible, and then use logic, design, and measurement to assess whether each one is operating in a way that might explain any observed effect."
 
 %REF Shadish
 \bibitem{Shadish15A}
-Shadish, William, \endnote{Ibid.}, p. 15:
+Shadish, William, \endnote{Ibidem.}, p. 15:
 "The efforts of the quasi-experimenter start to look like attempts to bandage a wound that would have been less severe if random assignment had been used initially."
 
 %REF Shadish
 \bibitem{Shadish15B}
-Shadish, William, \endnote{Ibid.}, p. 15:
+Shadish, William, \endnote{Ibidem.}, p. 15:
 "The ruling out of alternative hypotheses is closely related to falsificationist logic popularized by Popper (1959).  Popper noted how hard it is to be sure that a general conclusion ... is correct based on a limited set of observations ... After all, future observations may change ... So confirmation is logically difficult.  By contrast, observing a disconfirming instance ... is sufficient, in Popper's view, to falsify the general conclusion ... Accordingly, Popper urged scientists to try deliberately to falsify the conclusions they wish to draw rather than only to seek information corroborating them.  Conclusions that withstand falsification are retained in scientific books or journals and treated as plausible until better evidence comes along.  Quasi-experimentation is falsificationist in that it requires experimenters to identify a causal claim and then to generate and examine plausible alternative explanations that might falsify their claim."
 
 %REF Shadish
 \bibitem{Shadish15C}
-Shadish, William, \endnote{Ibid.}, p. 15:
+Shadish, William, \endnote{Ibidem.}, p. 15:
 "Kuhn (1962) pointed out that falsification depends on two assumptions that can never be fully tested.  The first is that the causal claim is perfectly specified. ... Second, falsification falsification requires measures that are perfectly valid reflections of the theory being tested."
 
 %REF Shadish
 \bibitem{Shadish16A}
-Shadish, William, \endnote{Ibid.}, p. 16:
+Shadish, William, \endnote{Ibidem.}, p. 16:
 "... a fallibilist version of falsification is possible. ... Fallibilist falsification also assumes that theory-neutral observation is impossible but that observations can approach a more factlike status when they have been repeatedly made across different theoretical conceptions of a construct, across multiple kinds of measurements, and at multiple times."
 
 %REF Shadish
 \bibitem{Shadish16B}
-Shadish, William, \endnote{Ibid.}, p. 16:
+Shadish, William, \endnote{Ibidem.}, p. 16:
 "As a result, observations that repeatedly occur despite different theories being built into them have a special factlike status even if they can never be fully justified as theory-neutral facts."
 
 %REF Shadish
 \bibitem{Shadish16C}
-Shadish, William, \endnote{Ibid.}, p. 16:
+Shadish, William, \endnote{Ibidem.}, p. 16:
 "It is neither feasible nor desirable to rule out all possible alternative interpretations of a causal relationship.  Instead, only plausible alternatives constitute the major focus.  ... It also recognizes that many alternatives have no serious empirical or experimental support and so do not warrant special attention.  However, lack of support can sometimes be deceiving."
 
 %REF Shadish
 \bibitem{Shadish17A}
-Shadish, William, \endnote{Ibid.}, p. 17:
+Shadish, William, \endnote{Ibidem.}, p. 17:
 "Thus the focus on plausibility is a two-edged sword:  it reduces the range of alternatives to be considered in quasi-experimental work, yet it also leaves the resulting causal influence vulnerable to the discovery that an implausible-seeming alternative may later emerge as a likely causal agent."
 
 
 %REF Shadish p.18A
 \bibitem{Shadish18A}
-Shadish, William, \endnote{Ibid.}, p.18.
+Shadish, William, \endnote{Ibidem.}, p.18.
 
 "Most experiments are highly localized and particularistic.  They are almost always conducted in a restricted range of settings, often just one, with a particular version of one type of treatment rather than, say, a sample of all possible versions."
 
 %REF Shadish
 \bibitem{Shadish19A}
-Shadish, William, \endnote{Ibid.},p.19:
+Shadish, William, \endnote{Ibidem.},p.19:
 "In defining generalization as a problem, we do not assume that more broadly applicable results are always more desirable."
 
 %REF Shadish
 \bibitem{Shadish19B}
-Shadish, William, \endnote{Ibid.},p.19:
+Shadish, William, \endnote{Ibidem.},p.19:
 "Experiments that demonstrate limited generalization may be just as valuable as those that demonstrate broad generalization."
 
 %REF Shadish
 \bibitem{Shadish20A}
-Shadish, William, \endnote{Ibid.}, p. 20:
+Shadish, William, \endnote{Ibidem.}, p. 20:
 "We call these construct validity generalizations (inferences about the constructs that research operations represent) and external validity generalizations (inferences about whether the causal relationship holds over variation in persons, settings, treatment, and measurement variables)."
 
 %REF Shadish
 \bibitem{Shadish20B}
-Shadish, William, \endnote{Ibid.}, p. 20:
+Shadish, William, \endnote{Ibidem.}, p. 20:
 
 "The first causal generalization problem concerns how to go from the particular units, treatments, observations, and settings on which data are collected to the higher order constructs these instances represent."
 
 %REF Shadish
 \bibitem{Shadish21A}
-Shadish, William, \endnote{Ibid.}, p. 21:
+Shadish, William, \endnote{Ibidem.}, p. 21:
 
 "How can we generalize from a sample of instances and the data patterns associated with them to the particular target constructs they represent?"
 
 %REF Shadish
 \bibitem{Shadish21B}
-Shadish, William, \endnote{Ibid.}, p. 21:
+Shadish, William, \endnote{Ibidem.}, p. 21:
 "The second problem of generalization is to infer whether a causal relationship holds over variations in persons, settings, treatments and outcomes."
 
 %REF Shadish
 \bibitem{Shadish22A}
-Shadish, William, \endnote{Ibid.}, p. 22:
+Shadish, William, \endnote{Ibidem.}, p. 22:
 "Whichever way the causal generalization issue is framed, experiments do not seem at first glance to be very useful."
 
 %REF Shadish
 \bibitem{Shadish22B}
-Shadish, William, \endnote{Ibid.}, p. 22:
+Shadish, William, \endnote{Ibidem.}, p. 22:
 "So what is it that justifies any belief that an experiment can achieve a better fit between the sampling particulars of a study and more general inferences to constructs or over variations in persons, settings, treatments, and outcomes?"
 
 %REF Shadish
 \bibitem{Shadish23A}
-Shadish, William, \endnote{Ibid.}, p. 23:
+Shadish, William, \endnote{Ibidem.}, p. 23:
 "The method more often recommended for achieving this close fit is the use of formal probability sampling of instances of units, treatments, observations, or settings (Rossi, Wright, \& Anderson, 1983)."
 
 %REF Shadish
 \bibitem{Shadish23B}
-Shadish, William, \endnote{Ibid.}, p. 23:
+Shadish, William, \endnote{Ibidem.}, p. 23:
 "Random selection involves selecting cases by chance to represent that population, whereas random assignment involves assigning cases to multiple conditions."
 
 %REF Shadish
 \bibitem{Shadish23C}
-Shadish, William, \endnote{Ibid.}, p. 23:
+Shadish, William, \endnote{Ibidem.}, p. 23:
 "Random selection occurs even more rarely with treatments, outcomes, and settings than with people."
 
 %REF Shadish
 \bibitem{Shadish24A}
-Shadish, William, \endnote{Ibid.}, p. 24:
+Shadish, William, \endnote{Ibidem.}, p. 24:
 "Practicing scientists routinely make causal generalizations in their research, and they almost never use formal probability sampling when they do.  In this book, we present a theory of causal generalization that is grounded in the actual practice of science (Matt, Cook, \&  Shadish, 2000)."
 
 %REF Quotations from Herbert Lin's article on attribution.
@@ -1175,7 +1175,7 @@ Lin, Herbert, \endnote{Kampf, David, ed.; Lin, Herbert. "Attribution of Maliciou
 
 %REF Lin
 \bibitem{LinH97A}
-Lin, Herbert, \endnote{Ibid.}, p.  97:
+Lin, Herbert, \endnote{Ibidem.}, p.  97:
 "Prior to 11 September 2001 attacks on the United States, a nation-state was responsible for the acts of private groups inside its territory over which it exercised 'effective control.' \textsuperscript{36}  In the aftermath of those attacks, the United States took the position that the mere harboring of these actors, even in the absence of control over them, suffixes to make the state where the terrorists are located responsible for their actions, and many parts of the international community, including the UN Security Council, concurred with this position. \textsuperscript{37}"
 
 %REF Lin
@@ -1185,7 +1185,7 @@ Lin, Herbert, \endnote{Kampf, David, ed.; Lin, Herbert. "Attribution of Maliciou
 
 %REF Lin
 \bibitem{LinH98A}
-Lin, Herbert, \endnote{Ibid.}, p. 98:
+Lin, Herbert, \endnote{Ibidem.}, p. 98:
 "To the best of this author's knowledge, there is no body of international law that holds a nation accountable for the actions of its citizens per se."
 
 %REF Lin
@@ -1200,7 +1200,7 @@ Lin, Herbert, \endnote{Kampf, David, ed.; Lin, Herbert. "Attribution of Maliciou
 
 %REF Lin
 \bibitem{LinH99A}
-Lin, Herbert, \endnote{Ibid.}, p. 99:
+Lin, Herbert, \endnote{Ibidem.}, p. 99:
 "Under the Rome Statute (which establishes the International Criminal Court and gives it jurisdiction over individuals charged with war crimes), Fidler argues that 'those making and posting the Islamic State's videos are criminally accountable' under IHL. \textsuperscript{42}"
 
 
@@ -1211,7 +1211,7 @@ Lin, Herbert, \endnote{Kampf, David, ed.; Lin, Herbert. "Attribution of Maliciou
 
 %REF Lin
 \bibitem{LinH100A}
-Lin, Herbert, \endnote{Ibid.}, p. 100:
+Lin, Herbert, \endnote{Ibidem.}, p. 100:
 "... the conventional wisdom holds that one cannot attribute a malicious cyber activity to its perpetrator with high confidence. \textsuperscript{44}"
 
 %REF Lin
@@ -1221,7 +1221,7 @@ Lin, Herbert, \endnote{Kampf, David, ed.; Lin, Herbert. "Attribution of Maliciou
 
 %REF Lin
 \bibitem{LinH101B}
-Lin, Herbert, \endnote{Ibid.}, p.  101:
+Lin, Herbert, \endnote{Ibidem.}, p.  101:
 "For example, a given intrusion may be similar or even identical to a previous intrusion -- the same code could be executed, the same IP addresses used, the same technical signatures found.  Such similarity would suggest that the same party could be behind the intrusion at hand. \textsuperscript{47}  ...Is such similarity conclusive or dispositive?  Absolutely not.  But neither should the clue it provides be thrown away."
 
 
@@ -1232,7 +1232,7 @@ Lin, Herbert, \endnote{Kampf, David, ed.; Lin, Herbert. "Attribution of Maliciou
 
 %REF Lin
 \bibitem{LinH102A}
-Lin, Herbert, \endnote{Ibid.}, p. 102:
+Lin, Herbert, \endnote{Ibidem.}, p. 102:
 "... the perpetrators behaved in ways that were similar to the behavior of criminals like serial killers who 'stage' the crime scene, arranging it to send a message or conceal involvement.  Such stagings go beyond what is necessary to commit the crime, and they thus provide extra information that can be helpful in attribution."
 
 %REF Lin
@@ -1242,7 +1242,7 @@ Lin, Herbert, \endnote{Kampf, David, ed.; Lin, Herbert. "Attribution of Maliciou
 
 %REF Lin
 \bibitem{LinH102C}
-Lin, Herbert, \endnote{Ibid.}, p. 102:
+Lin, Herbert, \endnote{Ibidem.}, p. 102:
 "Sometimes intruders make mistakes of operational security.  For example, an intruder may discuss his or her plans on insecure channels that are monitored."
 
 %REF Lin
@@ -1252,7 +1252,7 @@ Lin, Herbert, \endnote{Kampf, David, ed.; Lin, Herbert. "Attribution of Maliciou
 
 %REF Lin
 \bibitem{LinH102E}
-Lin, Herbert, \endnote{Ibid.}, p. 102:
+Lin, Herbert, \endnote{Ibidem.}, p. 102:
 "The style and methodology of an intrusion may also be helpful to attribution."
 
 
@@ -1264,7 +1264,7 @@ Lin, Herbert, \endnote{Kampf, David, ed.; Lin, Herbert. "Attribution of Maliciou
 
 %REF Lin
 \bibitem{LinH103B}
-Lin, Herbert, \endnote{Ibid.}, p. 103:
+Lin, Herbert, \endnote{Ibidem.}, p. 103:
 "HUMINT is not necessarily clandestine."
 
 
@@ -1276,7 +1276,7 @@ Lin, Herbert, \endnote{Kampf, David, ed.; Lin, Herbert. "Attribution of Maliciou
 
 %REF Lin
 \bibitem{LinH104B}
-Lin, Herbert, \endnote{Ibid.}, p. 104:
+Lin, Herbert, \endnote{Ibidem.}, p. 104:
 "Finally, historical relationships help to frame the attribution process."
 
 
@@ -1287,7 +1287,7 @@ Lin, Herbert, \endnote{Kampf, David, ed.; Lin, Herbert. "Attribution of Maliciou
 
 %REF Lin
 \bibitem{LinH105A}
-Lin, Herbert, \endnote{Ibid.}, p. 105-106:
+Lin, Herbert, \endnote{Ibidem.}, p. 105-106:
 "Lastly, it is important to understand that the all-source intelligence process described in this section has a different focus than the discussion of the ultimate responsibility of states and non-state actors in previous sections. ... understanding who did what (the focus of the intelligence process) is different from, though relevant to, understanding who is to blame."
 
 %REF Lin
@@ -1298,7 +1298,7 @@ Lin, Herbert, \endnote{Kampf, David, ed.; Lin, Herbert. "Attribution of Maliciou
 
 %REF Lin
 \bibitem{LinH106B}
-Lin, Herbert, \endnote{Ibid.}, p. 106-107
+Lin, Herbert, \endnote{Ibidem.}, p. 106-107
 "Also in 2015, ... James Clapper testified, '... most can no longer assume that their activities will remain undetected.  Nor can they assume that if detected, they will be able to conceal their identities.' ... He testified in 2016, '... However improvements in offensive tradecraft, the use of proxies, and the creation  of cover organizations will hinder timely, high-confidence attribution of responsibility for state-sponsored cyber operations.' \textsuperscript{55}"
 
 %REF Lin
@@ -1308,7 +1308,7 @@ Lin, Herbert, \endnote{Kampf, David, ed.; Lin, Herbert. "Attribution of Maliciou
 
 %REF Lin
 \bibitem{LinH107B}
-Lin, Herbert, \endnote{Ibid.}, p. 107:
+Lin, Herbert, \endnote{Ibidem.}, p. 107:
 "In addition to the Mandiant APT1 report described above some other examples of private sector involvement in attribution include:\textsuperscript{57}...
  \begin{itemize}
 \item FireEye's report, 'APT28 - A window Into Russia's Cyber Espionage Operations' ... \textsuperscript{58}...
@@ -1329,7 +1329,7 @@ Lin, Herbert, \endnote{Kampf, David, ed.; Lin, Herbert. "Attribution of Maliciou
 
 %REF Lin
 \bibitem{LinH110A}
-Lin, Herbert, \endnote{Ibid.}, p. 110:
+Lin, Herbert, \endnote{Ibidem.}, p. 110:
 "... has presumed that the attribution task is to determine as best as possible the machine, human intruder, and/or ultimately responsible parties that are behind a given malicious cyber incident. ... whereas attribution to an ultimately responsible party strongly depends on the legal, policy, and political definition of 'ultimately responsible.'"
 
 %REF OWASPZaw
@@ -1364,7 +1364,7 @@ Nather: We were all making stuff up as fast as we could. This was in the mid-90s
 
 %REF NatherRanum
 \bibitem{NatherRanumB}
-Interview, Marcus Ranum and Wendy Nather, \endnote{Ibid.}:
+Interview, Marcus Ranum and Wendy Nather, \endnote{Ibidem.}:
 
 "Nather: (Laughs) I think we're on a trajectory for profound change. It used to be that everyone who worked in computing or who created anything was expected to be technical, and therefore we felt confident in making fun of them if they messed up -- we were all on the same playing field. But now, there are manufacturers that don't have any feel for the security side of things. It's not fair to look down our noses at them, and it's really becoming democratized in a way, but we do have to help them."
 
@@ -1394,11 +1394,11 @@ This workshop shows that Shadish's methods are still being studied and implement
 
 %REF Shadish
 \bibitem{Shadish12}
-Shadish, William, \endnote{Ibid.}, p. 12.
+Shadish, William, \endnote{Ibidem.}, p. 12.
 
 %REF Shadish
 \bibitem{Shadish14}
-Shadish, William, \endnote{Ibid.}, p. 14.
+Shadish, William, \endnote{Ibidem.}, p. 14.
 
 %REF Shadish
 \bibitem{ShadishProgEval2135}
@@ -1414,7 +1414,7 @@ Stallings, William.  Network Security Essentials:  Applications and Standards.  
 Stallings, William. \endnote{Stallings, William. Network Security Essentials: Applications and Standards. Fifth Edition. ISBN 978-0-13-337043-0. pp. ... -357}  p. 348 "As with statistical anomaly detection, rule-based anomaly detection does not require knowledge of security vulnerabilities within the system.  Rather, the scheme is based on observing past behavior and, in effect, assuming that the future will be like the past.  In order for this approach to be effective, a rather large database of rules will be needed.  For example, a scheme described in [VACC89] contains anywhere from 10\^4 to 10\^6 rules."
 
 \bibitem{StallingsIntrusionB}
-Stallings, William. \endnote{Ibid.}  p. 355 RFCs for Intrusion Detection Exchange Format:
+Stallings, William. \endnote{Ibidem.}  p. 355 RFCs for Intrusion Detection Exchange Format:
 \begin{itemize}
 \item RFC 4766 - Intrusion Detection Message Exchange Requirements
 \item RFC 4765 - Intrusion Detection Message Exchange Format
@@ -1433,7 +1433,7 @@ Poor \gls{password} choices, from Stallings, roughly 25\% of passwords could be 
 \end{itemize}
 
 \bibitem{StallingsPasswordB}
-Stallings, William. \endnote{Ibid.}  p. 363
+Stallings, William. \endnote{Ibidem.}  p. 363
 "Test involved in the neighborhood of 3 million words ..."
 
 \bibitem{StallingsPasswordC}
@@ -4408,7 +4408,7 @@ The unused space on the drives (a blank \gls{partition} of 15\%) may look like w
 
 
 \subsubsection{What We Can Learn From Installing an \gls{os}}
-Later on, we'll install the other drives wtih \index{gpart}gpart and zfs commands.  This first pair, through, we could do with \index{bsdinstall}bsdinstall\endnote{ “bsdinstall.'' Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=bsdinstall&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}.  If we choose that, though, then we must commit the whole disk to the process.  That would be how we would normally stand up a disk drive.  In this case, we'll conduct a manual process that mimics the main steps of \index{bsdinstall}bsdinstall\endnote{Ibid.} to show that the installation can be done manually.  Part of these same kinds of steps are critical tasks when administrating and installing jails.
+Later on, we'll install the other drives wtih \index{gpart}gpart and zfs commands.  This first pair, through, we could do with \index{bsdinstall}bsdinstall\endnote{ “bsdinstall.'' Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=bsdinstall&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}.  If we choose that, though, then we must commit the whole disk to the process.  That would be how we would normally stand up a disk drive.  In this case, we'll conduct a manual process that mimics the main steps of \index{bsdinstall}bsdinstall\endnote{Ibidem.} to show that the installation can be done manually.  Part of these same kinds of steps are critical tasks when administrating and installing jails.
 
 \subsubsection{Basic \index{operating system}\Gls{operating system} Installation Goals}
 We're going to do an early phase, basic installation of the \gls{os}.  At this point, we'll really only set up a pair of users and some plain vanilla settings for the \gls{os}.  We want to be able to:
@@ -4481,7 +4481,7 @@ The listing should also show any other storage device that's plugged in to the m
 \subsubsection{Be Able to \gls{partition} the USB}
 Since our USB has not been prepared for use with anything, we have to \gls{partition} it.  We can pretty much use the default commands fro 17.2 "Adding Disks" to set up the drive.  Here, we create a simple UFS file system and mount it to a directory that we'll put in /tmp. If our USB is already partitioned, we would want to skip this part.  \\\\
 \texttt{\index{gpart!create}gpart create -s GPT da0}\endnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026}\\
-\texttt{\index{gpart!add}gpart add -t freebsd-ufs -a 1M da0}\endnote{Ibid.}\\
+\texttt{\index{gpart!add}gpart add -t freebsd-ufs -a 1M da0}\endnote{Ibidem.}\\
 \texttt{\index{newfs}newfs -U /dev/da0p1}\endnote{“newfs.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=newfs&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
 Mount the USB to the /tmp Directory:\\\\
 \texttt{\index{mkdir}mkdir /tmp/someDir}\endnote{“Mkdir.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mkdir&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
@@ -4518,34 +4518,34 @@ We're going to choose to put a swap \gls{partition} on the \GLS{ssd}s.  We can a
 
 To put the \gls{zfs} \gls{partition} on the remaining disks:\\\\
 \texttt{ \index{gpart!create}gpart create -s SCHEME DISK\_DEVICE}\endnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
-\texttt{ \index{gpart!create}gpart create -s gpt da4}\endnote{Ibid.}
+\texttt{ \index{gpart!create}gpart create -s gpt da4}\endnote{Ibidem.}
 \\
 
 To add the main \gls{zfs} \gls{partition}:\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -l \gls{zfs}\_NUMBER \textbackslash\\ -t freebsd-zfs DISK\_DEVICE}\endnote{Ibid.}\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -l \gls{zfs}-BLONDIE-4-WD123465789 \textbackslash\\-t freebsd-zfs  da4}\endnote{Ibid.}
+\texttt{ \index{gpart!add}gpart add -a 1m -l \gls{zfs}\_NUMBER \textbackslash\\ -t freebsd-zfs DISK\_DEVICE}\endnote{Ibidem.}\\\\
+\texttt{ \index{gpart!add}gpart add -a 1m -l \gls{zfs}-BLONDIE-4-WD123465789 \textbackslash\\-t freebsd-zfs  da4}\endnote{Ibidem.}
 \\
 
 To add the \gls{partition}'s swap:\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -slg -l SWAP\_NUMBER \textbackslash\\-t freebsd-swap DISK\_DEVICE}\endnote{Ibid.}\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -slg -l SWAP-BLONDIE-4-WD123465789 \textbackslash\\-t freebsd-swap da4}\endnote{Ibid.}
+\texttt{ \index{gpart!add}gpart add -a 1m -slg -l SWAP\_NUMBER \textbackslash\\-t freebsd-swap DISK\_DEVICE}\endnote{Ibidem.}\\\\
+\texttt{ \index{gpart!add}gpart add -a 1m -slg -l SWAP-BLONDIE-4-WD123465789 \textbackslash\\-t freebsd-swap da4}\endnote{Ibidem.}
 \\
 
 To add a logging \gls{partition} on the SLOG \GLS{ssd}s:\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -l ZLOG\_NUMBER  \textbackslash\\-t freebsd-zfs DISK\_DEVICE}\endnote{Ibid.}\\\\
-\texttt{ \index{gpart!add}gpart add -a 1m -l ZLOG-BLONDIE-2-WD123465789 \textbackslash\\-t freebsd-zfs  da2}\endnote{Ibid.}\\\\
+\texttt{ \index{gpart!add}gpart add -a 1m -l ZLOG\_NUMBER  \textbackslash\\-t freebsd-zfs DISK\_DEVICE}\endnote{Ibidem.}\\\\
+\texttt{ \index{gpart!add}gpart add -a 1m -l ZLOG-BLONDIE-2-WD123465789 \textbackslash\\-t freebsd-zfs  da2}\endnote{Ibidem.}\\\\
 
 With each disk partitioned, we can add them to the pool for our RAIDZ-2 kit.\\\\
 \texttt{\index{zpool!create}zpool create \gls{raid} POOL\_NAME DISK\_LABEL/\gls{zfs}\_PARTITION\_LABEL ...next disk/\gls{partition}...}\endnote{“zpool.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zpool&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
 
-\noindent\texttt{\index{zpool!create}zpool create BLONDIE-MAIN \index{RAIDZ-2}raidz2 \textbackslash }\endnote{Ibid.}\\
+\noindent\texttt{\index{zpool!create}zpool create BLONDIE-MAIN \index{RAIDZ-2}raidz2 \textbackslash }\endnote{Ibidem.}\\
 \texttt{BLONDIE-4-WD12345/ZFS-BLONDIE-4-WD12345 \textbackslash }\\
 \texttt{BLONDIE-5-WD12345/ZFS-BLONDIE-5-WD12345 \textbackslash }\\
 \texttt{BLONDIE-6-WD12345/ZFS-BLONDIE-6-WD12345 \textbackslash }\\
 \texttt{BLONDIE-7-WD12345/ZFS-BLONDIE-7-WD12345 }\\
 
 We can add on the \gls{mirror}s for logging:\\\\
-\texttt{\index{zpool!add}zpool add BLONDIE-MAIN log \gls{mirror} \textbackslash}\endnote{Ibid.}\\
+\texttt{\index{zpool!add}zpool add BLONDIE-MAIN log \gls{mirror} \textbackslash}\endnote{Ibidem.}\\
 \texttt{BLONDIE-2-WD12345/ZLOG-BLONDIE-2-WD12345 \textbackslash}\\
 \texttt{BLONDIE-3-WD12345/ZLOG-BLONDIE-3-WD12345}\\
 
@@ -4599,35 +4599,35 @@ For this run, we’ll begin by using the boot-only disk.  We won’t plan to eve
 
 \subsubsection{Create Swap Disk in Bay 0}
 \texttt{\index{gpart!create}gpart create -s GPT mfid0}\endnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\
-\texttt{\index{gpart!add}gpart add -a 5K -s 395G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-0-SWAP-WCC2ERZ56512 mfid0}\endnote{Ibid.}
+\texttt{\index{gpart!add}gpart add -a 5K -s 395G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-0-SWAP-WCC2ERZ56512 mfid0}\endnote{Ibidem.}
 
 \subsubsection{Create \gls{zfs} \gls{cache} in Bay 1}
-\texttt{\index{gpart!create}gpart create -s GPT mfid1}\endnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs \textbackslash\\-l \gls{zfs}-BLONDIE-1-\gls{cache}-WXL1E40C1352 mfid1}\endnote{Ibid.}
+\texttt{\index{gpart!create}gpart create -s GPT mfid1}\endnote{Ibidem.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs \textbackslash\\-l \gls{zfs}-BLONDIE-1-\gls{cache}-WXL1E40C1352 mfid1}\endnote{Ibidem.}
 
 \subsubsection{Create \gls{zfs} SLOG in Bays 2 and 3}
-\texttt{\index{gpart!create}gpart create -s GPT mfid2}\endnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs \textbackslash\\-l \gls{zfs}-BLONDIE-2-SLOG-WXL1E4067503 mfid2}\endnote{Ibid.}\\\\
-\texttt{\index{gpart!create}gpart create -s GPT mfid3}\endnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs \textbackslash\\ -l \gls{zfs}-BLONDIE-3-SLOG-WXC0CA9V8431 mfid3}\endnote{Ibid.}\\\\
+\texttt{\index{gpart!create}gpart create -s GPT mfid2}\endnote{Ibidem.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs \textbackslash\\-l \gls{zfs}-BLONDIE-2-SLOG-WXL1E4067503 mfid2}\endnote{Ibidem.}\\\\
+\texttt{\index{gpart!create}gpart create -s GPT mfid3}\endnote{Ibidem.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 63G -t freebsd-zfs \textbackslash\\ -l \gls{zfs}-BLONDIE-3-SLOG-WXC0CA9V8431 mfid3}\endnote{Ibidem.}\\\\
 
 \subsubsection{Create \gls{zfs} Work Disks for Jails}
 \subsubsection{Bay 4}
-\texttt{\index{gpart!create}gpart create -s GPT mfid4}\endnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\endnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l \gls{zfs}-BLONDIE-4-FILES-WCC2EE134983 mfid4}\endnote{Ibid.}
+\texttt{\index{gpart!create}gpart create -s GPT mfid4}\endnote{Ibidem.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\endnote{Ibidem.}\\\\
+\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l \gls{zfs}-BLONDIE-4-FILES-WCC2EE134983 mfid4}\endnote{Ibidem.}
 \subsubsection{Bay 5}
-\texttt{\index{gpart!create}gpart create -s GPT mfid5}\endnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-5-SWAP-WMC2E3914420 mfid5}\endnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l \gls{zfs}-BLONDIE-5-FILES-WMC2E3914420 mfid5}\endnote{Ibid.}
+\texttt{\index{gpart!create}gpart create -s GPT mfid5}\endnote{Ibidem.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-5-SWAP-WMC2E3914420 mfid5}\endnote{Ibidem.}\\\\
+\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l \gls{zfs}-BLONDIE-5-FILES-WMC2E3914420 mfid5}\endnote{Ibidem.}
 \subsubsection{Bay 6}
-\texttt{\index{gpart!create}gpart create -s GPT mfid6}\endnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\ -l \gls{zfs}-BLONDIE-6-SWAP-WCC2ETT39577 mfid6}\endnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l \gls{zfs}-BLONDIE-6-FILES-WCC2ETT39577 mfid6}\endnote{Ibid.}
+\texttt{\index{gpart!create}gpart create -s GPT mfid6}\endnote{Ibidem.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\ -l \gls{zfs}-BLONDIE-6-SWAP-WCC2ETT39577 mfid6}\endnote{Ibidem.}\\\\
+\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l \gls{zfs}-BLONDIE-6-FILES-WCC2ETT39577 mfid6}\endnote{Ibidem.}
 \subsubsection{Bay 7}
-\texttt{\index{gpart!create}gpart create -s GPT mfid7}\endnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-7-SWAP-WCAYU2878968 mfid7}\endnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l \gls{zfs}-BLONDIE-7-FILES-WCAYU2878968 mfid7}\endnote{Ibid.}\\
+\texttt{\index{gpart!create}gpart create -s GPT mfid7}\endnote{Ibidem.}\\\\
+\texttt{\index{gpart!add}gpart add -a 5K -s 50G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-7-SWAP-WCAYU2878968 mfid7}\endnote{Ibidem.}\\\\
+\texttt{\index{gpart!add}gpart add -s 345G -t freebsd-zfs \textbackslash\\-l \gls{zfs}-BLONDIE-7-FILES-WCAYU2878968 mfid7}\endnote{Ibidem.}\\
 
 We should note that “Bay 7” is an observation of the physical hardware.  The device (“mfid7”) could have whatever number assigned at the end that the machine gave it.  If the hardware  \gls{raid} had a problem with recognizing a device, the number might not correlate to what bay it is in.  When powering up, check your geometry.
 
@@ -4640,29 +4640,29 @@ When we give the subcommand to “init,” the machine will ask us to give the n
 
 \subsubsection{Commands to  \index{encrypt}\Gls{encrypt} the Partitions}
 \texttt{\index{geli!init}geli init -l 256 mfid0p1}\endnote{“Geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}\\
-\texttt{\index{geli!attach}geli attach mfid0p1}\endnote{Ibid.}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid1p1}\endnote{Ibid.}\\
-\texttt{\index{geli!attach}geli attach mfid1p1}\endnote{Ibid.}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid2p1}\endnote{Ibid.}\\
-\texttt{\index{geli!attach}geli attach mfid2p1}\endnote{Ibid.}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid3p1}\endnote{Ibid.}\\
-\texttt{\index{geli!attach}geli attach mfid3p1}\endnote{Ibid.}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid4p1}\endnote{Ibid.}\\
-\texttt{\index{geli!attach}geli attach mfid4p1}\endnote{Ibid.}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid4p2}\endnote{Ibid.}\\
-\texttt{\index{geli!attach}geli attach mfid4p2}\endnote{Ibid.}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid5p1}\endnote{Ibid.}\\
-\texttt{\index{geli!attach}geli attach mfid5p1}\endnote{Ibid.}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid5p2}\endnote{Ibid.}\\
-\texttt{\index{geli!attach}geli attach mfid5p2}\endnote{Ibid.}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid6p1}\endnote{Ibid.}\\
-\texttt{\index{geli!attach}geli attach mfid6p1}\endnote{Ibid.}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid6p2}\endnote{Ibid.}\\
-\texttt{\index{geli!attach}geli attach mfid6p2}\endnote{Ibid.}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid7p1}\endnote{Ibid.}\\
-\texttt{\index{geli!attach}geli attach mfid7p1}\endnote{Ibid.}\\\\
-\texttt{\index{geli!init}geli init -l 256 mfid7p2}\endnote{Ibid.}\\
-\texttt{\index{geli!attach}geli attach mfid7p2}\endnote{Ibid.}\\\\
+\texttt{\index{geli!attach}geli attach mfid0p1}\endnote{Ibidem.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid1p1}\endnote{Ibidem.}\\
+\texttt{\index{geli!attach}geli attach mfid1p1}\endnote{Ibidem.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid2p1}\endnote{Ibidem.}\\
+\texttt{\index{geli!attach}geli attach mfid2p1}\endnote{Ibidem.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid3p1}\endnote{Ibidem.}\\
+\texttt{\index{geli!attach}geli attach mfid3p1}\endnote{Ibidem.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid4p1}\endnote{Ibidem.}\\
+\texttt{\index{geli!attach}geli attach mfid4p1}\endnote{Ibidem.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid4p2}\endnote{Ibidem.}\\
+\texttt{\index{geli!attach}geli attach mfid4p2}\endnote{Ibidem.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid5p1}\endnote{Ibidem.}\\
+\texttt{\index{geli!attach}geli attach mfid5p1}\endnote{Ibidem.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid5p2}\endnote{Ibidem.}\\
+\texttt{\index{geli!attach}geli attach mfid5p2}\endnote{Ibidem.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid6p1}\endnote{Ibidem.}\\
+\texttt{\index{geli!attach}geli attach mfid6p1}\endnote{Ibidem.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid6p2}\endnote{Ibidem.}\\
+\texttt{\index{geli!attach}geli attach mfid6p2}\endnote{Ibidem.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid7p1}\endnote{Ibidem.}\\
+\texttt{\index{geli!attach}geli attach mfid7p1}\endnote{Ibidem.}\\\\
+\texttt{\index{geli!init}geli init -l 256 mfid7p2}\endnote{Ibidem.}\\
+\texttt{\index{geli!attach}geli attach mfid7p2}\endnote{Ibidem.}\\\\
 
 \subsubsection{To Preserve the  \Gls{metadata} \gls{backup} Files}
 Let us reiterate:  preserving these backups at the time of disk creation is essential for later recoveries.  If these files are not saved, then a powerdown of the system will cause them to be lost.  They're automatically stored in an ephemeral directory.  Conserve the ability to recover a disk later by recording these  \gls{metadata} \gls{backup} files to a safe location.
@@ -4670,32 +4670,32 @@ Let us reiterate:  preserving these backups at the time of disk creation is esse
 Each  \gls{metadata} \gls{backup} file was probably created with a name that does not look like the drive’s label.  Instead, the machine assigns a \gls{backup} file name based on geometry.  Since we can have a hardware \gls{configuration} change that could mess up that pattern, we will want to save our \gls{backup} files with names that look more like the disk labels.  That way, if the drives move, then we can better discover which  \gls{metadata} file goes with it.\\
 
 \noindent\texttt{\index{cp}cp /var/backups/mfid0p1.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-0-SWAP-WCC2ERZ56512.eli}\endnote{“cp.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=cp&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
-\texttt{\index{cp}cp /var/backups/mfid1p1.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-1-\gls{cache}-WXL1E40C1352.eli}\endnote{Ibid.}\\\\
-\texttt{\index{cp}cp /var/backups/mfid2p1.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-2-SLOG-WXL1E4067503.eli}\endnote{Ibid.}\\\\
-\texttt{\index{cp}cp /var/backups/mfid3p1.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-3-SLOG-WXC0CA9V8431.eli}\endnote{Ibid.}\\\\
-\texttt{\index{cp}cp /var/backups/mfid4p1.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-4-SWAP-WCC2EE134983.eli}\endnote{Ibid.}\\\\
-\texttt{\index{cp}cp /var/backups/mfid4p2.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-4-FILES-WCC2EE134983.eli}\endnote{Ibid.}\\\\
-\texttt{\index{cp}cp /var/backups/mfid5p1.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-5-SWAP-WMC2E3914420.eli}\endnote{Ibid.}\\\\
-\texttt{\index{cp}cp /var/backups/mfid5p2.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-5-FILES-WMC2E3914420.eli}\endnote{Ibid.}\\\\
-\texttt{\index{cp}cp /var/backups/mfid6p1.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-6-SWAP-WCC2ETT39577.eli}\endnote{Ibid.}\\\\
-\texttt{\index{cp}cp /var/backups/mfid6p2.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-6-FILES-WCC2ETT39577.eli}\endnote{Ibid.}\\\\
-\texttt{\index{cp}cp /var/backups/mfid7p1.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-7-SWAP-WCAYU2878968.eli}\endnote{Ibid.}\\\\
-\texttt{\index{cp}cp /var/backups/mfid7p2.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-7-FILES-WCAYU2878968.eli}\endnote{Ibid.}
+\texttt{\index{cp}cp /var/backups/mfid1p1.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-1-\gls{cache}-WXL1E40C1352.eli}\endnote{Ibidem.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid2p1.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-2-SLOG-WXL1E4067503.eli}\endnote{Ibidem.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid3p1.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-3-SLOG-WXC0CA9V8431.eli}\endnote{Ibidem.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid4p1.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-4-SWAP-WCC2EE134983.eli}\endnote{Ibidem.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid4p2.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-4-FILES-WCC2EE134983.eli}\endnote{Ibidem.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid5p1.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-5-SWAP-WMC2E3914420.eli}\endnote{Ibidem.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid5p2.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-5-FILES-WMC2E3914420.eli}\endnote{Ibidem.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid6p1.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-6-SWAP-WCC2ETT39577.eli}\endnote{Ibidem.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid6p2.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-6-FILES-WCC2ETT39577.eli}\endnote{Ibidem.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid7p1.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-7-SWAP-WCAYU2878968.eli}\endnote{Ibidem.}\\\\
+\texttt{\index{cp}cp /var/backups/mfid7p2.eli /tmp/usb3/backups\\\_27SEP2020/\gls{zfs}-BLONDIE-7-FILES-WCAYU2878968.eli}\endnote{Ibidem.}
 
 \subsubsection{File Name Check:  Editing Labels}
 We got through all that, and found that we had named a file incorrectly.  During experimentation, we had a typo; BAY 4 should be
 \texttt{WCC2EE134983} but that's not what we saw when we checked our work.  Not the end of the world.  We can move the .eli  \gls{metadata} file, and we can use  \index{gpart!modify}gpart\endnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.} modify to change the label.\\
 
-\noindent\texttt{ \index{gpart!modify}gpart modify -i 1 \textbackslash\\-l \gls{zfs}-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\endnote{Ibid.}\\\\
-\texttt{ \index{gpart!modify}gpart modify -i 2 \textbackslash\\-l \gls{zfs}-BLONDIE-4-FILES-WCC2EE134983 mfid4}\endnote{Ibid.}\\
+\noindent\texttt{ \index{gpart!modify}gpart modify -i 1 \textbackslash\\-l \gls{zfs}-BLONDIE-4-SWAP-WCC2EE134983 mfid4}\endnote{Ibidem.}\\\\
+\texttt{ \index{gpart!modify}gpart modify -i 2 \textbackslash\\-l \gls{zfs}-BLONDIE-4-FILES-WCC2EE134983 mfid4}\endnote{Ibidem.}\\
 
-\texttt{ \index{gpart!show}gpart show}\endnote{Ibid.} and \texttt{\index{geli!status}geli status}\endnote{“geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.} should show our drives as we expect them to be.
+\texttt{ \index{gpart!show}gpart show}\endnote{Ibidem.} and \texttt{\index{geli!status}geli status}\endnote{“geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.} should show our drives as we expect them to be.
 
 At this point, all of the drives should be partitioned and decrypted and attached.  We can build a \index{zpool}zpool for our \gls{zfs} file system. We can attach that swap drive for the benefit of our \index{operating system}\gls{operating system} right now.
 
 \subsubsection{To Use the Swap Disk}
 \noindent\texttt{\index{swapon}swapon mfid0p1.eli}\endnote{“swapon.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=swapon&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}
-\texttt{\index{swapinfo}swapinfo -k}\endnote{Ibid.}\\
+\texttt{\index{swapinfo}swapinfo -k}\endnote{Ibidem.}\\
 
 64G turned out to be the maximum capacity.  We will need to fix up the swap better.  We can fit 6 x 64G (384G) of swap partitions in our planned space.  So, let’s modify and add.\\
 
@@ -4708,34 +4708,34 @@ We also have to restore mfid0 because there’s a problem with reading the  \gls
 \texttt{ \index{gpart!status}gpart status mfid0}\endnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 \texttt{\index{geli!attach}geli attach mfid0p1}\endnote{“geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}\\\\
 \texttt{ \index{gpart!add}gpart add -s 64G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-0-SWAP-B-WCC2ERZ56512 mfid0}\endnote{“gpart(8).” Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
-\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-0-SWAP-C-WCC2ERZ56512 mfid0}\endnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-0-SWAP-D-WCC2ERZ56512 mfid0}\endnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-0-SWAP-E-WCC2ERZ56512 mfid0}\endnote{Ibid.}\\\\
-\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-0-SWAP-F-WCC2ERZ56512 mfid0}\endnote{Ibid.}\\\\
+\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-0-SWAP-C-WCC2ERZ56512 mfid0}\endnote{Ibidem.}\\\\
+\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-0-SWAP-D-WCC2ERZ56512 mfid0}\endnote{Ibidem.}\\\\
+\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-0-SWAP-E-WCC2ERZ56512 mfid0}\endnote{Ibidem.}\\\\
+\texttt{\index{gpart!add}gpart add -s 64G -t freebsd-swap \textbackslash\\-l \gls{zfs}-BLONDIE-0-SWAP-F-WCC2ERZ56512 mfid0}\endnote{Ibidem.}\\\\
 
 Then we need to establish  \index{encrypt}\gls{encrypt}ion for all of those.\\
 
 \noindent\texttt{\index{geli!init}geli init -l 256 mfid0p2}\endnote{“geli(8).” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}\\
-\texttt{\index{geli!attach}geli attach mfid0p2}\endnote{Ibid.}\\
-\texttt{\index{geli!init}geli init -l 256 mfid0p3}\endnote{Ibid.}\\
-\texttt{\index{geli!attach}geli attach mfid0p3}\endnote{Ibid.}\\
-\texttt{\index{geli!init}geli init -l 256 mfid0p4}\endnote{Ibid.}\\
-\texttt{\index{geli!attach}geli attach mfid0p4}\endnote{Ibid.}\\
-\texttt{\index{geli!init}geli init -l 256 mfid0p5}\endnote{Ibid.}\\
-\texttt{\index{geli!attach}geli attach mfid0p5}\endnote{Ibid.}\\
-\texttt{\index{geli!init}geli init -l 256 mfid0p6}\endnote{Ibid.}\\
-\texttt{\index{geli!attach}geli attach mfid0p6}\endnote{Ibid.}\\
+\texttt{\index{geli!attach}geli attach mfid0p2}\endnote{Ibidem.}\\
+\texttt{\index{geli!init}geli init -l 256 mfid0p3}\endnote{Ibidem.}\\
+\texttt{\index{geli!attach}geli attach mfid0p3}\endnote{Ibidem.}\\
+\texttt{\index{geli!init}geli init -l 256 mfid0p4}\endnote{Ibidem.}\\
+\texttt{\index{geli!attach}geli attach mfid0p4}\endnote{Ibidem.}\\
+\texttt{\index{geli!init}geli init -l 256 mfid0p5}\endnote{Ibidem.}\\
+\texttt{\index{geli!attach}geli attach mfid0p5}\endnote{Ibidem.}\\
+\texttt{\index{geli!init}geli init -l 256 mfid0p6}\endnote{Ibidem.}\\
+\texttt{\index{geli!attach}geli attach mfid0p6}\endnote{Ibidem.}\\
 
-Using \texttt{\index{swapinfo}swapinfo}\endnote{“swapon.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=swapon&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}, \texttt{\index{swapon}swapon}\endnote{Ibid.} and \texttt{\index{swapoff}swapoff}\endnote{Ibid.}, we were able to remove some of the other swap partitions and add on these.  Did see a \gls{kernel} limit on swap.  Total configured swap exceeded kern.maxswzone (98087976 pages).  We could tune the \gls{kernel}, or we could reduce swap.  For now, we reduce swap from 384GB to 324GB.
+Using \texttt{\index{swapinfo}swapinfo}\endnote{“swapon.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=swapon&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}, \texttt{\index{swapon}swapon}\endnote{Ibidem.} and \texttt{\index{swapoff}swapoff}\endnote{Ibidem.}, we were able to remove some of the other swap partitions and add on these.  Did see a \gls{kernel} limit on swap.  Total configured swap exceeded kern.maxswzone (98087976 pages).  We could tune the \gls{kernel}, or we could reduce swap.  For now, we reduce swap from 384GB to 324GB.
 
 Simliarly, we could add on the other swap partitions, although in our current use, we probably won’t need them.  They would serve us better in cases where we were doing more intensive work, or working on another machine.  We can mount them now, anyway, to see that it can be done.
 
 To add on all the other swap partitions:\\\\
 \noindent\texttt{\index{swapon}swapon /dev/mfid4p1.eli}\endnote{“swapon.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=swapon&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
-\texttt{\index{swapon}swapon /dev/mfid5p1.eli}\endnote{Ibid.}\\
-\texttt{\index{swapon}swapon /dev/mfid6p1.eli}\endnote{Ibid.}\\
-\texttt{\index{swapon}swapon /dev/mfid7p1.eli}\endnote{Ibid.}\\
-\texttt{\index{swapinfo}swapinfo -h}\endnote{Ibid.}\\
+\texttt{\index{swapon}swapon /dev/mfid5p1.eli}\endnote{Ibidem.}\\
+\texttt{\index{swapon}swapon /dev/mfid6p1.eli}\endnote{Ibidem.}\\
+\texttt{\index{swapon}swapon /dev/mfid7p1.eli}\endnote{Ibidem.}\\
+\texttt{\index{swapinfo}swapinfo -h}\endnote{Ibidem.}\\
 \subsubsection{Create the \index{zpool}zpool for BLONDIE}
 We’ll now create a mountpoint on the tmpfs, create the \index{zpool}zpool, and then add in the  \index{cache}\gls{cache} and SLOG \Gls{mirror}ed disks.
 \subsubsection{Create a mountpoint}
