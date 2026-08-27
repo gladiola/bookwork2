@@ -791,351 +791,872 @@ The script will then put the devices into monitor mode.  It was here that we wer
 \section{References}
 
 \subsection{Books}
-Lee Bortherston and Amanda Berlin. The Defensive Security Handbook. O'Reilly, 2017. ISBN: 9781491960387. This book outlines procedures for establishing and implementing security policies within an organization. Its recommendations are based on current common industry practices.
+Lee Bortherston and Amanda Berlin.  The Defensive Security Handbook.  O'Reilly, 2017.  ISBN:  9781491960387.
+This book outlines procedures for establishing and implementing security policies within an organization.  Its recommendations are based on current common industry practices.
 
-Shadish, William R. Jr., Thomas Cook, Laura C. Leviton. Foundations of Program Evaluation: Theories and Practice. pp. 36-67. Sage Publications, First printing, 1991. ISBN 0-08-039355-1. UTC Library Call H 62 .S433 1991.
+% REF IOT DDOS
+\bibitem{IOTDDOS}
+ \_\_\_\_\_.  "Internet of Things \gls{ddos} White Paper."  Electricity Information Sharing and Analysis Center, IOT\_DDOS\_Whitepaper.pdf.
 
-Anderson, Virgil and Robert McLean. Design of Experiments: A Realistic Approach. pp. 79-93. Purdue University, University of Tennessee. Marcel Dekker, Inc., New York, 1974. ISBN 0-8247-7493-0. UTC Library Call QA 279 .A53 This book shows the more rigid, traditional model of experimental design. It's presented as a reference in contrast to the main theme of quasi-experimentation that is our focus in this study.
+This report described some contemporary cyberattacks.  It included coverage of the Mirai \gls{botnet} and other large attacks.
 
-Ullman, Larry. PHP for the Web. Pearson Education, Peachpit Press, fourth edition, 2011. ISBN 978-0-321-73345-29000. A tutorial for learning on PHP is presented, with some small instruction on how code can be injected into the program processing cycle.
+% REF NIST Framework
+\bibitem{NISTFramework}
+\_\_\_\_\_.  "Framework for Improving Ciritcal Infrastructure Cybersecurity."  \gls{nist}, 2014.
 
-Tatroe, Kevin and Peter MacIntyre, Rasmus Lerfdorf. Programming PHP. O'Reilly, third edition, 2013. ISBN 978-1-449-39277-2. A general overview of the language is presented in this manual.
+This \gls{nist} document provides the summary structure of risk assessments discussed in this report.  Most of the document is a large, multi-page chart.
 
-Regalado, Daniel, et. al. Grey Hat Hacking: The Ethical Hacker's Handbook. pp.385-414. McGraw Hill Education, fourth edition, 2015. ISBN 978-0-183238-0. Regalado's book on hacking is an aggregate of his and other's works. It offers chapters on different flavors of hacking, with variance by system type, target type, and mode of \gls{attack}. The chapters feature many examples and provide a discourse on the common patterns of \gls{attack}.
+% REF Dean
+\bibitem{DeanB}
+Kampf, David, ed.; Dean, Benjamin.  "Natural and Quasi-Natural Experiments to Evaluate Cybersecurity Policies," Journal of International Affairs. pp.139-160.  Winter 2016, Volume 70, Number 1.  JIA.SIPA.COLUMBIA.EDU. Columbia University.
 
-Weidman, Georgia. Penetration Testing: A Hands-On Introduction to Hacking. No Starch Press, 2014. ISBN 978-1-59327-564-8. This book provided strong references and tutorials for common pen-testing methods. While slightly dated, aside from the technological limitations that have arisen after publication, Weidman's book provides another view of a common path in pen-testing, and therefore, hacking, web programs.
+%REF Shadish Program Evaluation
+\bibitem{ShadishProgEval}
+Shadish, William R. Jr., Thomas Cook, Laura C. Leviton.  Foundations of Program Evaluation: Theories and Practice.  pp. 36-67. Sage Publications, First printing, 1991. ISBN 0-08-039355-1.  UTC Library Call H 62 .S433 1991.
 
-Seitz, Justin. Black Hat Python: Python Programming for Hackers and Pentesters. No Starch Press, second printing, 2014. ISBN 978-1-59327-590-7. This book is a common reference that provides insight into how short Python scripts can be used to quickly generate original programs that can be used for network attacks. It suggests that skilled attackers do not need to rely on prefabricated tools. Also, the commonailty of function between the programs demonstrated and other common resources shows a unity in capability.
+%REF Anderson Design of Experiments
+\bibitem{AndersonV}
+Anderson, Virgil and Robert McLean.  Design of Experiments:  A Realistic Approach. pp. 79-93. Purdue University, University of Tennessee. Marcel Dekker, Inc., New York, 1974. ISBN 0-8247-7493-0.  UTC Library Call QA 279 .A53
 
-Shelly, Gary B. and Harry J. Rosenblatt. Systems Analysis and Design. Course Technology. PP.570-615. CENGAGE Learning, ninth edition, 2012. ISBN 978-1-133-27405-6.
+This book shows the more rigid, traditional model of experimental design.  It's presented as a reference in contrast to the main theme of quasi-experimentation that is our focus in this study.
 
-Shadish, William, et al. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Wadsworth, CENGAGE Learning, 2002. ISBN 978-0-395-61556-0. Shadish's work extensively influenced this paper. Shadish, who died in 2016, served as a professor at the University of Memphis and the University of California Merced. He studied and published on experimental design for most of his career. Shadish's work was directed primarily at the fields of psychology and education; but, his analysis of experimentation was so thorough that most of his descriptions and advice can be directed towards computer science. Since the structure of experimenting with cyber-\gls{attack} situations are similar to the structure of the study of social problems, most of his work directly translates into today's \gls{attack}-and-defense practices for information security. I first came across Shadish's work in Benjamin Dean's article. Shadish's writing served as a strong influence on my research into these topics.
+%REF Shadish Multiplist Mode
+\bibitem{ShadishMultiplist}
+Lipsey, Mark, ed.; Trochim, William, ed.;  Shadish, William R., Thomas D. Cook, Arthur C. Houts.  "Quasi-Experimentation in a Critical Multiplist Mode," Advances in Quasi-Experimental Design and Analysis, New Directions for Program Evaluation.  pp.29-46.  Cornell University, Claremont Graduate School, American Evaluation Association, 1986.
 
-Day, Paul. CyberAttack: The truth about digital crime, cyber warfare and government snooping. Carlton Books, 2014. ISBN 978-1-78097-533-7. Paul Day's book provides short, easy-to-read chapters on popular topics in the malicious use of computers.
+%REF Ullman PHP
+\bibitem{UllmanPHP}
+Ullman, Larry.  PHP for the Web.  Pearson Education, Peachpit Press, fourth edition, 2011. ISBN 978-0-321-73345-29000.
 
-Edwards, Betty. Drawing on the Right Side of the Brain: A Course in Enhancing Creativity and Artistic Confidence. Jeremey P. Tarcher, Inc., St. Martin's Press, 1989. ISBN 978-0-87477-513-2. Betty Edwards' book describes theories in left and right brain cognition in simple, popular terms for the purpose of supporting instruction in elementary illustration. Her book provides examples on the differences in left-brain, analytical and detailed thinking and in right-brain, holistic evaluations.
+A tutorial for learning on PHP is presented, with some small instruction on how code can be injected into the program processing cycle.
 
-Watson, Colin and Tin Zaw. OWASP Automated \gls{threat} Handbook: Web Applications. Version 1.1, OWASP Foundation, November 2016. ISBN 978-1-329-42709-9.
+%REF O'Reilly PHP
+\bibitem{OReillyPHP}
+Tatroe, Kevin and Peter MacIntyre, Rasmus Lerfdorf. Programming PHP.  O'Reilly, third edition, 2013. ISBN 978-1-449-39277-2.
 
-Watson, Collin and Tin Zaw, Watson, Colin and Tin Zaw. OWASP Automated \gls{threat Handbook: Web Applications. Version 1.1, OWASP Foundation, November 2016. ISBN 978-1-329-42709-9.}, p. 17: " ... the best defended applications do not rely solely upon standalone external operational protections, but also have integrated protection built into the design." "Countermeasures are controls that attempt to mitigate the identified automated threats in three ways: \begin{itemize} \item Prevent - Controls to reduce the susceptibility to automated threats \item Detect - Controls to identify whether an automated user is a human ... \item Recover - Controls ... to assist return of the application to its normal state" \end{itemize}
+A general overview of the language is presented in this manual.
 
-Watson, Collin and Tin Zaw, Watson, Colin and Tin Zaw. OWASP Automated \gls{threat Handbook: Web Applications. Version 1.1, OWASP Foundation, November 2016. ISBN 978-1-329-42709-9.}, p. 8, Figure 1: Glossary of \gls{attack} terms collected from OWASP Automated \gls{threat} Handbook PDF Online Version. \url{https://www.owasp.org/index.php/File:Automated-\gls{threat}-handbook.pdf} "Figure 1: Automated \gls{threat} Events, ordered by ascending name \begin{itemize} \item OAT-017 Spamming Malicious or questionable information addition that appears in public or private content, databases or user messages \item OAT-002 Token Cracking Mass enumeration of coupon numbers, voucher codes, discount tokens, etc \item OAT-014 Vulnerability Scanning Crawl and fuzz application to identify weaknesses and possible vulnerabilities " \end{itemize}
+%REF PHP MAN SQLI
+\bibitem{PHPMANSQLI}
+\_\_\_\_\_.  "http://php.net/manual/en/security.database.sql-injection.php" INTERNET. PHP Manua, Security, Database Security.
 
-Shadish, William, Shadish, William R. Jr., Thomas Cook, Laura C. Leviton. Foundations of Program Evaluation: Theories and Practice. pp. 36-67. Sage Publications, First printing, 1991. ISBN 0-08-039355-1. UTC Library Call H 62 .S433 1991. pp. 21-35. Intrusion detection systems,
+PHP Manual entry on SQL Injection.
 
-Stallings, William. Network Security Essentials: Applications and Standards. Fifth Edition. ISBN 978-0-13-337043-0. pp. ... -357
+%REF Grey Hat Hacking
+\bibitem{GreyHat}
+Regalado, Daniel, et. al.  Grey Hat Hacking:  The Ethical Hacker's Handbook.  pp.385-414. McGraw Hill Education, fourth edition, 2015.  ISBN 978-0-183238-0.
 
-Stallings, William. Stallings, William. Network Security Essentials: Applications and Standards. Fifth Edition. ISBN 978-0-13-337043-0. pp. ... -357 p. 348 "As with statistical anomaly detection, rule-based anomaly detection does not require knowledge of security vulnerabilities within the system. Rather, the scheme is based on observing past behavior and, in effect, assuming that the future will be like the past. In order for this approach to be effective, a rather large database of rules will be needed. For example, a scheme described in [VACC89] contains anywhere from 10\^4 to 10\^6 rules."
+Regalado's book on hacking is an aggregate of his and other's works.  It offers chapters on different flavors of hacking, with variance by system type, target type, and mode of \gls{attack}.  The chapters feature many examples and provide a discourse on the common patterns of \gls{attack}.
 
-Stallings, William. Stallings, William. Network Security Essentials: Applications and Standards. Fifth Edition. ISBN 978-0-13-337043-0. pp. ... -357 p. 363 Poor \gls{password} choices, from Stallings, roughly 25\% of passwords could be cracked using four strategies: \begin{itemize} \item "Try the user's name, initials, account name and other relevant information ... \item "Try words from various dictionaries ... \item "Try various permutations of words from step 2 ... \item "Try various capitalization permutations from words in step 2 that were not considered in step 3 ... " \end{itemize}
+%REF PenTesting
+\bibitem{PenTesting}
+Weidman, Georgia.  Penetration Testing: A Hands-On Introduction to Hacking.  No Starch Press, 2014.  ISBN 978-1-59327-564-8.
 
-Stallings, William. Stallings, William. Network Security Essentials: Applications and Standards. Fifth Edition. ISBN 978-0-13-337043-0. pp. ... -357 p. 363 "Keep in mind that such a thorough search could produce a success rate of about 25\%, whereas even a single hit may be enough to gain a wide range of privileges on a system."
+This book provided strong references and tutorials for common pen-testing methods.  While slightly dated, aside from the technological limitations that have arisen after publication, Weidman's book provides another view of a common path in pen-testing, and therefore, hacking, web programs.
 
-Robbins, Arnold. Bash Pocket Reference. O'Reilly, second edition.
+%REF Black Hat Python
+\bibitem{BHP}
+Seitz, Justin. Black Hat Python: Python Programming for Hackers and Pentesters.  No Starch Press, second printing, 2014.  ISBN 978-1-59327-590-7.
 
-Fourzan, Behrouz A. TCP/IP Protocol Suite. Fourth Edition. McGraw-Hill, 2006. ISBN 978-0-07-337604-2.
+This book is a common reference that provides insight into how short Python scripts can be used to quickly generate original programs that can be used for network attacks.  It suggests that skilled attackers do not need to rely on prefabricated tools.  Also, the commonailty of function between the programs demonstrated and other common resources shows a unity in capability.
 
-\subsection{Articles}
-Kampf, David, ed.; Dean, Benjamin. "Natural and Quasi-Natural Experiments to Evaluate Cybersecurity Policies," Journal of International Affairs. pp.139-160. Winter 2016, Volume 70, Number 1. JIA.SIPA.COLUMBIA.EDU. Columbia University.
+%REF Mini MySQLat0r Downloads
+\bibitem{minimysqlat0rDownloads}
+\_\_\_\_\_.  SCRT Information Security, "https://www.scrt.ch/en/\gls{attack}/downloads/mini-mysqlat0r" INTERNET.
 
-Lipsey, Mark, ed.; Trochim, William, ed.; Shadish, William R., Thomas D. Cook, Arthur C. Houts. "Quasi-Experimentation in a Critical Multiplist Mode," Advances in Quasi-Experimental Design and Analysis, New Directions for Program Evaluation. pp.29-46. Cornell University, Claremont Graduate School, American Evaluation Association, 1986.
+This \gls{attack} tool is published on the Internet.  I have seen real-world situations in which I believe it was used to \gls{attack} the websites of my commercial clients.  I first spotted it in a YouTube video that was recorded as an instructive example by hackers for hackers.  I decided to include it in the \gls{attack} suites for the experiment based on my belief that it was an actual \gls{attack} tool used by skiddies and hackers.  It is an automated SQL Injection \gls{attack} Tool packaged in Java with a Swing interface.
 
-Kampf, David, ed.; Lin, Herbert. "Attribution of Malicious Cyber Incidents: From Soup to Nuts," Journal of International Affairs. pp.75-138. Winter 2016, Volume 70, Number 1. JIA.SIPA.COLUMBIA.EDU. Columbia University. This article outlines the difficulties in correctly attributing a cyberattack. Lin points out that we may have weak definitions for the goals of attribution, encounter substantial legal and technical problems, and can expect little relief for victims who ask that attribution of an \gls{attack} be obtained. Lin, like Benjamin Dean, authored an article whose references led me to other references. % Shadish Text % Quotations from William Shadish's book, Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Ibidem.
+%REF Mini MySQLat0r Downloads
+\bibitem{minimysqlat0rManual}
+\_\_\_\_\_.  SCRT Information Security, "https://www.scrt.ch/outils/mms/mms\_manual.pdf" INTERNET.
 
-Shadish, William, Ibidem., pp. 2-3: "But when scientists started to use experiments in areas such as public health or education, in which extraneous influences are harder to control ... they found that the controls used in natural science in the laboratory worked poorly in these new applications. So they developed new methods of dealing with extraneous influence, such as random assignment (Fisher, 1925) or adding a nonrandomized control group (Coover \& Angell, 1907). As theoretical and observational experience accumulated across these settings and topics, more sources of bias were identified and more methods were developed to cope with them (Dehue, 2000)."
+%REF Mini MySQLat0r Demo
+\bibitem{minimysqlat0rRodolfoDemo}
+Fresnillo, Rodolfo Resendez. YouTube, "MiniMysqlator \& Pblind", "https://www.youtube.com/watch?v=uK3\_qR3Kn\_g" YouTube,10AUG2010, INTERNET.
 
-Shadish, William, Ibidem., p. 15: "The ruling out of alternative hypotheses is closely related to falsificationist logic popularized by Popper (1959). Popper noted how hard it is to be sure that a general conclusion ... is correct based on a limited set of observations ... After all, future observations may change ... So confirmation is logically difficult. By contrast, observing a disconfirming instance ... is sufficient, in Popper's view, to falsify the general conclusion ... Accordingly, Popper urged scientists to try deliberately to falsify the conclusions they wish to draw rather than only to seek information corroborating them. Conclusions that withstand falsification are retained in scientific books or journals and treated as plausible until better evidence comes along. Quasi-experimentation is falsificationist in that it requires experimenters to identify a causal claim and then to generate and examine plausible alternative explanations that might falsify their claim."
+This is the link to the video where I first saw MiniMysqlator being used.
 
-Lin, Herbert, Kampf, David, ed.; Lin, Herbert. "Attribution of Malicious Cyber Incidents: From Soup to Nuts," Journal of International Affairs. pp.75-138. Winter 2016, Volume 70, Number 1. JIA.SIPA.COLUMBIA.EDU. Columbia University. This article outlines the difficulties in correctly attributing a cyberattack. Lin points out that we may have weak definitions for the goals of attribution, encounter substantial legal and technical problems, and can expect little relief for victims who ask that attribution of an \gls{attack be obtained. Lin, like Benjamin Dean, authored an article whose references led me to other references.}, p. 96-97 "The following hierarchy ... is largely based on Jason Healey's taxonomy in 'Beyond Attibution: Seeking National Responsibility for Cyber Attacks.'\textsuperscript{32} \begin{itemize} \item A state could be incapable of detecting ... \item ... encourage ... \item ... direct ... \item ... conduct hacking activities." \end{itemize}
+%REF Sally Cashman Series Shelly Rosenblatt Systems Analysis and Design
+\bibitem{ShellySystems}
+Shelly, Gary B. and Harry J. Rosenblatt.  Systems Analysis and Design. Course Technology. PP.570-615.  CENGAGE Learning, ninth edition, 2012.  ISBN 978-1-133-27405-6.
 
-Sedlock, Alicia. "An Introduction to Frontend Testing," The Ultimate Javascript Manual 2017. Future Publishing Ltd., Future PLC, Quay House, The Ambury, Bath. pp.26-31. Single page application testing with Jasmine. Definitions of contemporary frontend testing terms.
+%REF NIST Cybersecurity Framework Video
+\bibitem{NISTcybersecvid}
+\_\_\_\_\_.  "https://www.nist.gov/news-events/events/2017/03/cybersecurity-framework-virtual-events" \gls{nist}, INTERNET.
 
-\subsection{Web Resources}
-\_\_\_\_\_. "Internet of Things \gls{ddos} White Paper." Electricity Information Sharing and Analysis Center, IOT\_DDOS\_Whitepaper.pdf. This report described some contemporary cyberattacks. It included coverage of the Mirai \gls{botnet} and other large attacks.
+%REF Shadish Text
+\bibitem{ShadishText}
+Shadish, William, et al.  Experimental and Quasi-Experimental Designs for Generalized Causal Inference.  Wadsworth, CENGAGE Learning, 2002.  ISBN 978-0-395-61556-0.
 
-\_\_\_\_\_. "http://php.net/manual/en/security.database.sql-injection.php" INTERNET. PHP Manua, Security, Database Security. PHP Manual entry on SQL Injection.
+Shadish's work extensively influenced this paper.  Shadish, who died in 2016, served as a professor at the University of Memphis and the University of California Merced.  He studied and published on experimental design for most of his career.  Shadish's work was directed primarily at the fields of psychology and education; but, his analysis of experimentation was so thorough that most of his descriptions and advice can be directed towards computer science.  Since the structure of experimenting with cyber-\gls{attack} situations are similar to the structure of the study of social problems, most of his work directly translates into today's \gls{attack}-and-defense practices for information security.  I first came across Shadish's work in Benjamin Dean's article.  Shadish's writing served as a strong influence on my research into these topics.
 
-\_\_\_\_\_. SCRT Information Security, "https://www.scrt.ch/en/\gls{attack}/downloads/mini-mysqlat0r" INTERNET. This \gls{attack} tool is published on the Internet. I have seen real-world situations in which I believe it was used to \gls{attack} the websites of my commercial clients. I first spotted it in a YouTube video that was recorded as an instructive example by hackers for hackers. I decided to include it in the \gls{attack} suites for the experiment based on my belief that it was an actual \gls{attack} tool used by skiddies and hackers. It is an automated SQL Injection \gls{attack} Tool packaged in Java with a Swing interface.
+%REF Paul Day
+\bibitem{PaulDay}
+Day, Paul.  CyberAttack: The truth about digital crime, cyber warfare and government snooping. Carlton Books, 2014. ISBN 978-1-78097-533-7.
 
-\_\_\_\_\_. SCRT Information Security, "https://www.scrt.ch/outils/mms/mms\_manual.pdf" INTERNET.
+Paul Day's book provides short, easy-to-read chapters on popular topics in the malicious use of computers.
 
-Fresnillo, Rodolfo Resendez. YouTube, "MiniMysqlator \& Pblind", "https://www.youtube.com/watch?v=uK3\_qR3Kn\_g" YouTube,10AUG2010, INTERNET. This is the link to the video where I first saw MiniMysqlator being used.
-
-\_\_\_\_\_. "https://www.nist.gov/news-events/events/2017/03/cybersecurity-framework-virtual-events" \gls{nist}, INTERNET.
-
+%REF OWASP2017
+\bibitem{OWASP2017}
 \_\_\_\_\_. "https://owasp.org/index.php/Top\_10\_2013-Top\_10" OWASP, 2017. INTERNET.
 
-Doug Rodgers, Twitter: @pandatrax, INTERNET. "Beginner \gls{exploit} Writing," B-Sides Charleston class, October 2016.
+%REF Jared Haight
+\bibitem{JaredHaight}
+Haight, Jared.  "Introduction to Powershell and How to Use It for Evil."  Information Security Lecture sponsored by B-Sides Charleston.  Charleston, SC, \gls{usa}.  April 2017.
 
-\_\_\_\_\_. PHPUnit, "https://phpunit.de/". INTERNET.
+Jared Haight is the author of "PS>\gls{attack}," a library of \gls{attack} tools for PowerShell.  He has since transitioned to employment as a security researcher for Microsoft.
 
+%REF BSidesCHS
+\bibitem{BsidesCHS}
+\_\_\_\_\_.  B-Sides Charleston, 11-12NOV2016.  Security conference, Charleston, SC.
+
+%REF JGillam
+\bibitem{JGillam}
+Gillam, Jason.  "Web Penetration and Testing," B-Sides Charleston, 11NOV2016.  Class at a security conference, Charleston, SC.
+
+%REF Pandatrax
+\bibitem{Pandatrax}
+Doug Rodgers, Twitter: @pandatrax, INTERNET.  "Beginner \gls{exploit} Writing," B-Sides Charleston class, October 2016.
+
+%REF BettyEdwards
+\bibitem{BettyEdwards}
+Edwards, Betty.  Drawing on the Right Side of the Brain: A Course in Enhancing Creativity and Artistic Confidence.  Jeremey P. Tarcher, Inc., St. Martin's Press, 1989.  ISBN 978-0-87477-513-2.
+
+Betty Edwards' book describes theories in left and right brain cognition in simple, popular terms for the purpose of supporting instruction in elementary illustration.  Her book provides examples on the differences in left-brain, analytical and detailed thinking and in right-brain, holistic evaluations.
+
+%REF PHPUnit
+\bibitem{PHPUnit}
+\_\_\_\_\_. PHPUnit, "https://phpunit.de/".  INTERNET.
+
+%REF JUnit
+\bibitem{JUnit}
 \_\_\_\_\_. JUnit, "http://junit.org/junit4/". INTERNET.
 
+%REF QUnit
+\bibitem{QUnit}
 \_\_\_\_\_. QUnit, "http://qunitjs.com/". INTERNET.
 
+%REF Selenium
+\bibitem{Selenium}
 \_\_\_\_\_. Selenium, "http://docs.seleniumhq.org/". INTERNET.
 
+%REF Kali
+\bibitem{Kali}
 \_\_\_\_\_.Kali Linux, "https://www.kali.org/". INTERNET.
 
+
+%REF WindowsVM
+\bibitem{WindowsVM}
 \_\_\_\_\_. WindowsVM, \url{https://www.microsoft.com/en-us/download/details.aspx?id=3702}. INTERNET.
 
+%REF MySQL
+\bibitem{MySQL}
 \_\_\_\_\_. MySQL, "https://www.mysql.com/" . INTERNET.
 
+%REF phpMyAdmin
+\bibitem{phpMyAdmin}
 \_\_\_\_\_. phpMyAdmin, "https://www.phpmyadmin.net/". INTERNET.
 
+%REF VirtualBox
+\bibitem{VirtualBox}
 \_\_\_\_\_. VirtualBox, "https://www.virtualbox.org/". INTERNET.
 
+%REF VMWare
+\bibitem{VMWare}
 \_\_\_\_\_. VMWare, "http://www.vmware.com/". INTERNET.
 
+
+%REF Microsoft Azure
+\bibitem{MSAzure}
 \_\_\_\_\_. Microsoft Azure, "https://azure.microsoft.com/en-us/?cdn=disable". INTERNET.
 
-Lin, Herbert, Ibidem., p. 99-100: "... first, that attribution is a largely intractable problem because of technical characteristics and geography of the Internet ... and second, that attribution is either possible or not possible in any given case of interest. \textsuperscript{43} The third assumption -- that the main challenge in attribution is finding evidence itself and not in interpreting or using it -- is relevant ... "
 
-Nather, Wendy quoted by Marcus Ranum. "Wendy Nather: 'We're on a trajectory for profound change',"Medium. http://searchsecurity.techtarget.com/opinion/Wendy-Nather-Were-on-a-trajectory-for-profound-change, INTERNET.
-
-Interview, Marcus Ranum and Wendy Nather, Nather, Wendy quoted by Marcus Ranum. "Wendy Nather: 'We're on a trajectory for profound change',"Medium. http://searchsecurity.techtarget.com/opinion/Wendy-Nather-Were-on-a-trajectory-for-profound-change, INTERNET.: "[Ranum:] I found the field fascinating because it was so irregular. Nobody really seemed to know how to think about it, except for the formal systems/Orange Book (Trusted Computer System Evaluation Criteria) crowd, and they were off in impractical la-la land. Nather: We were all making stuff up as fast as we could. This was in the mid-90s, and we did our bank's first internet presence in the form of a website. I had two or three teams of engineers all checking each other's work because we were all really nervous about what this was going to be like."
-
-Shadish, William. CV, University of California Merced. INTERNET: http://faculty.ucmerced.edu/wshadish/shadish-cv-jan-2015. Shadish, William. Biographical sketch, University of California Merced.http://faculty.ucmerced.edu/wshadish/biosketch.
-
-\_\_\_\_\_. INTERNET: http://www.ipr.northwestern.edu/workshops/annual-summer-workshops/quasi-experimental-design-and-analysis/ This workshop shows that Shadish's methods are still being studied and implemented. This workshop is one example of coaching other professionals into using quasi-experimental design techniques. It was sponsored by Northwestern University and funded by a grant from the \gls{us} Department of Education.
-
-\_\_\_\_\_, "aleph one." "Smashing the Stack for Fun and Profit," Phrack 49, republished, INTERNET: http://insecure.org/stf/smashstack.html Explanation of buffer overflow exploits.
-
-\_\_\_\_\_. "0x0 \gls{exploit} Tutorial: Buffer Overlow - Vanilla EIP Overwrite," INTERNET: http://www.primalsecurity.net/0x0-\gls{exploit}-tutorial-buffer-overflow-vanilla-eip-overwrite-2/ Explanation of common practices in \gls{malware} experimental construction.
-
-Raspberry Pi \gls{os} Download: https://www.raspberrypi.org/downloads/raspbian/
-
-Raspberry Pi Kali Download: https://docs.kali.org/kali-on-arm/install-kali-linux-arm-raspberry-pi
-
-Powershell to get the \gls{hash} of a download on Windows 10: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash?view=powershell-5.1 Get-FileHash 2017-09-07-raspbian-stretch-lite.zip -Algorithm SHA384 | Format-List
-
-\_\_\_\_\_. https://unix.stackexchange.com/questions/151547/linux-set-date-through-command-line. INTERNET.
-
-\_\_\_\_\_. INTERNET: https://\gls{motherboard}.vice.com/en\_us/article/vv7zn9/surprise-scans-suggest-hackers-put-imsi-catchers-all-over-defcon
-
-\_\_\_\_\_. INTERNET: https://www.aircrack-ng.org/
-
-\_\_\_\_\_. INTERNET: https://www.aircrack-ng.org/doku.php?id=compatibility\_drivers
-
-\_\_\_\_\_. INTERNET: https://wikidevi.com/wiki/TP-LINK\_TL-WN722N
-
-\_\_\_\_\_. INTERNET: https://wikidevi.com/wiki/TP-LINK\_TL-WN722N\_v2
-
-\_\_\_\_\_. INTERNET: https://wikidevi.com/wiki/ALFA\_Network\_AWUS036NH
-
-\_\_\_\_\_. INTERNET: https://hakshop.com/products/wifi-pineappling-book
-
-\_\_\_\_\_. INTERNET: http://goo.gl/iMVWew WiFi Pineapple Book Chapter Preview, Chapter 3.
-
-\_\_\_\_\_. INTERNET: https://www.raspberrypi.org/
-
-\_\_\_\_\_. INTERNET: https://www.raspberrypi.org/downloads/raspbian/
-
-\_\_\_\_\_. INTERNET: https://www.raspberrypi.org/documentation/\gls{configuration}/raspi-config.md
-
-\_\_\_\_\_. INTERNET: https://www.walmart.com/ip/TP-LINK-TL-WN722N-N150-High-Gain-Wireless-USB-Adapter/17133249
-
-\_\_\_\_\_. INTERNET: https://www.amazon.com/Alfa-AWUS036NH-802-11g-Wireless-Long-Range/dp/B003YIFHJY
-
-\_\_\_\_\_. INTERNET: https://www.amazon.com/Alfa-AWUSO36NH-Wireless-Long-Rang-Network/dp/B0035APGP6
-
-\_\_\_\_\_. INTERNET: https://www.csoonline.com/article/2462478/microsoft-subnet/hacker-hunts-and-pwns-wifi-pineapples-with-0-day-at-def-con.html
-
-\_\_\_\_\_. INTERNET: https://twitter.com/ihuntpineapples/media
-
-Reddit Owned : \_\_\_\_\_. INTERNET: https://www.reddit.com/r/Defcon/comments/2d16lk/your\_pineapple\_has\_been\_owned\_son/\#bottom-comments
-
-\_\_\_\_\_. INTERNET: https://capec.mitre.org/
-
-\_\_\_\_\_. INTERNET: https://capec.mitre.org/data/definitions/1000.html "Mechanisms of \gls{attack}"
-
-\_\_\_\_\_. INTERNET: https://capec.mitre.org/data/definitions/152.html "Inject Unexpected Items"
-
-\_\_\_\_\_. INTERNET: https://capec.mitre.org/data/definitions/137.html "Parameter Injection"
-
-\_\_\_\_\_. INTERNET: https://capec.mitre.org/data/definitions/513.html "CAPEC Category: Software"
-
-\_\_\_\_\_. INTERNET: https://capec.mitre.org/data/definitions/248.html "Command Injection "
-
-\_\_\_\_\_. INTERNET: https://capec.mitre.org/data/definitions/66.html "SQL Injection"
-
-\_\_\_\_\_. INTERNET: https://capec.mitre.org/data/definitions/108.html "Command Line Execution Through SQL Injection"
-
-\_\_\_\_\_. INTERNET: http://cwe.mitre.org/data/definitions/707.html "Improper Enforcement of Message or Data Structure"
-
-\_\_\_\_\_. INTERNET: http://cwe.mitre.org/data/definitions/74.html " CWE-74: Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')"
-
-\_\_\_\_\_. INTERNET: http://capec.mitre.org/data/definitions/242.html "Code Injection"
-
-\_\_\_\_\_. INTERNET: https://capec.mitre.org/data/definitions/110.html SOAP "CAPEC-110: SQL Injection through SOAP Parameter Tampering"
-
-\_\_\_\_\_. INTERNET: http://cwe.mitre.org/data/definitions/89.html "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
-
-\_\_\_\_\_. INTERNET: http://cwe.mitre.org/data/definitions/929.html "CWE-88: Argument Injection or Modification" CWE-90: Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection')
-
-\subsection{Other}
-\_\_\_\_\_. "Framework for Improving Ciritcal Infrastructure Cybersecurity." \gls{nist}, 2014. This \gls{nist} document provides the summary structure of risk assessments discussed in this report. Most of the document is a large, multi-page chart.
-
-Haight, Jared. "Introduction to Powershell and How to Use It for Evil." Information Security Lecture sponsored by B-Sides Charleston. Charleston, SC, \gls{usa}. April 2017. Jared Haight is the author of "PS>\gls{attack}," a library of \gls{attack} tools for PowerShell. He has since transitioned to employment as a security researcher for Microsoft.
-
-\_\_\_\_\_. B-Sides Charleston, 11-12NOV2016. Security conference, Charleston, SC.
-
-Gillam, Jason. "Web Penetration and Testing," B-Sides Charleston, 11NOV2016. Class at a security conference, Charleston, SC.
-
-Shadish, William, Ibidem., p. 3 : "Today, the key feature common to all experiments is still to deliberately vary something so as to discover what happens to something else later--to discover the effects of the presumed causes."
-
-Shadish, William, Ibidem., p. 3: "This chapter begins to explore these matters by (1) discussing the nature of causation that experiments test, (2) explaining the specialized terminology (e.g. randomized experiments, quasi-experiments) that describes social experiments, (3) introducing the problem of how to generalize causal connections from individual experiments, and (4) briefly situating the experiment within larger literature on the nature of science."
-
-Shadish, William, Ibidem., p. 4: "John Locke said: ... 'A cause is that which makes any other thing, either simple idea, substance, or mode, begin to be; and an effect is that, which had its beginning from some other thing' (p. 325)."
-
-Shadish, William, Ibidem., p. 4: "A lighted match is, therefore, what Mackie (1974) called an inus condition-- 'an insufficient but non-redundant part of an unnecessary but sufficient condition' (p.62) ... It is part of a sufficient condition to start a fire in combination with the full constellation of factors."
-
-Shadish, William, Ibidem., p. 5: "Endostatin was an inus condition. It was insufficient cause by itself, and its effectiveness required it to be embedded in a larger set of conditions that were not even fully understood by original investigators."
-
-Shadish, William, Ibidem., p. 5: "Most causes are more accurately called inus conditions. ... This is one reason that the causal relationships we discuss in this book are not deterministic but only increase in probability that an effect will occur (Eells, 1991; Holland, 1994)."
-
-Shadish, William, Ibidem., p. 5: "To difference degrees, all causal relationships are context dependent, so the generalization of experimental effect is always at issue."
-
-Shadish, William, Ibidem., p. 5: "A counterfactual is something that is contrary to fact."
-
-Shadish, William, Ibidem., p. 5: "An effect is the difference between what did happen and what would have happened."
-
-Shadish, William, Ibidem., p. 6: "How do we know if cause and effect are related? In a classic analysis formalized by the 19th-centure philosopher John Stuart Mill, a causal relationship exists if (1) the cause preceded the effect, (2) the cause was related to the effect, and (3) we can find no plausible alternative explanation for the effect other than the cause."
-
-Shadish, William, Ibidem., p. 7: "A well-known maxim in research is: Correlation does not prove causation. This is so because we may not know which variable came first nor whether alternative explanations for the presumed effect exist."
-
-Shadish, William, Ibidem., p. 7: "Correlations also do little to rule out alternative explanations for a relationship between two variables ... That relationship may not be causal at all but rather due to a third variable (often called a confound)."
-
-Shadish, William, Ibidem., p. 7: "Experiments explore the effects of things that can be manipulated. ... Nonmanipulable events ... or attributes ... cannot be causes in experiments because we cannot deliberately vary them to see what happens. Consequently, most scientists and philosophers agree that it is much harder to discover the effects of nonmanipulable causes."
-
-Shadish, William, Ibidem., p. 9: "The unique strength of experimentation is in describing the consequences attributable to deliberately varying a treatment. We call this causal description."
-
-Shadish, William, Ibidem., p. 9: "... the conditions under which that causal relationship holds -- what we call causal explanation."
-
-Shadish, William, Ibidem., p. 10: "The practical importance of causal explanation is brought home when ... (another easily learned manipulation) fails to solve the problem. Explanatory knowledge then offers clues about how to fix the problem ..."
-
-Shadish, William, Ibidem., p. 10: "So causal explanation is an important route to the generalization of causal descriptions because it tells us which features of the causal relationship are essential to transfer to other situations."
-
-Shadish, William, Ibidem., p. 10: "These examples also show the close parallel between descriptive and explanatory causation and molar and molecular causation.\textsuperscript{4 }... 4. By molar, we mean something taken as a whole rather than in parts. An analogy is to physics, in which molar might refer to the properties or motions of masses, as distinguished from those of molecules or atoms that make up those masses."
-
-Shadish, William, Ibidem., p. 11: "If experiments are less able to provide this highly prized explanatory causal knowledge, why are experiments so central to science ... ?"
-
-Shadish, William, Ibidem., p. 11: "First, many causal explanations consist of chains of descriptive causal links in which one event causes the next. ... Second, experiments help distinguish between the validity of competing explanatory theories ..."
-
-Shadish, William, Ibidem., p. 12: "In the end, then, causal descriptions and causal explanations are in delicate balance in experiments. What experiments do best is to improve causal descriptions; they do less well at explaining causal relationships."
-
-Shadish, William, Ibidem., p. 14: "In quasi-experiments, the cause in manipulable and occurs before the effect is measured."
-
-Shadish, William, Ibidem., p. 14: "In quasi-experiments, the researcher has to enumerate alternative explanations one by one, decide which are plausible, and then use logic, design, and measurement to assess whether each one is operating in a way that might explain any observed effect."
-
-Shadish, William, Ibidem., p. 15: "The efforts of the quasi-experimenter start to look like attempts to bandage a wound that would have been less severe if random assignment had been used initially."
-
-Shadish, William, Ibidem., p. 15: "Kuhn (1962) pointed out that falsification depends on two assumptions that can never be fully tested. The first is that the causal claim is perfectly specified. ... Second, falsification falsification requires measures that are perfectly valid reflections of the theory being tested."
-
-Shadish, William, Ibidem., p. 16: "... a fallibilist version of falsification is possible. ... Fallibilist falsification also assumes that theory-neutral observation is impossible but that observations can approach a more factlike status when they have been repeatedly made across different theoretical conceptions of a construct, across multiple kinds of measurements, and at multiple times."
-
-Shadish, William, Ibidem., p. 16: "As a result, observations that repeatedly occur despite different theories being built into them have a special factlike status even if they can never be fully justified as theory-neutral facts."
-
-Shadish, William, Ibidem., p. 16: "It is neither feasible nor desirable to rule out all possible alternative interpretations of a causal relationship. Instead, only plausible alternatives constitute the major focus. ... It also recognizes that many alternatives have no serious empirical or experimental support and so do not warrant special attention. However, lack of support can sometimes be deceiving."
-
-Shadish, William, Ibidem., p. 17: "Thus the focus on plausibility is a two-edged sword: it reduces the range of alternatives to be considered in quasi-experimental work, yet it also leaves the resulting causal influence vulnerable to the discovery that an implausible-seeming alternative may later emerge as a likely causal agent."
-
-Shadish, William, Ibidem., p.18. "Most experiments are highly localized and particularistic. They are almost always conducted in a restricted range of settings, often just one, with a particular version of one type of treatment rather than, say, a sample of all possible versions."
-
-Shadish, William, Ibidem.,p.19: "In defining generalization as a problem, we do not assume that more broadly applicable results are always more desirable."
-
-Shadish, William, Ibidem.,p.19: "Experiments that demonstrate limited generalization may be just as valuable as those that demonstrate broad generalization."
-
-Shadish, William, Ibidem., p. 20: "We call these construct validity generalizations (inferences about the constructs that research operations represent) and external validity generalizations (inferences about whether the causal relationship holds over variation in persons, settings, treatment, and measurement variables)."
-
-Shadish, William, Ibidem., p. 20: "The first causal generalization problem concerns how to go from the particular units, treatments, observations, and settings on which data are collected to the higher order constructs these instances represent."
-
-Shadish, William, Ibidem., p. 21: "How can we generalize from a sample of instances and the data patterns associated with them to the particular target constructs they represent?"
-
-Shadish, William, Ibidem., p. 21: "The second problem of generalization is to infer whether a causal relationship holds over variations in persons, settings, treatments and outcomes."
-
-Shadish, William, Ibidem., p. 22: "Whichever way the causal generalization issue is framed, experiments do not seem at first glance to be very useful."
-
-Shadish, William, Ibidem., p. 22: "So what is it that justifies any belief that an experiment can achieve a better fit between the sampling particulars of a study and more general inferences to constructs or over variations in persons, settings, treatments, and outcomes?"
-
-Shadish, William, Ibidem., p. 23: "The method more often recommended for achieving this close fit is the use of formal probability sampling of instances of units, treatments, observations, or settings (Rossi, Wright, \& Anderson, 1983)."
-
-Shadish, William, Ibidem., p. 23: "Random selection involves selecting cases by chance to represent that population, whereas random assignment involves assigning cases to multiple conditions."
-
-Shadish, William, Ibidem., p. 23: "Random selection occurs even more rarely with treatments, outcomes, and settings than with people."
-
-Shadish, William, Ibidem., p. 24: "Practicing scientists routinely make causal generalizations in their research, and they almost never use formal probability sampling when they do. In this book, we present a theory of causal generalization that is grounded in the actual practice of science (Matt, Cook, \& Shadish, 2000)."
-
-Lin, Herbert, Ibidem., p. 97: "Prior to 11 September 2001 attacks on the United States, a nation-state was responsible for the acts of private groups inside its territory over which it exercised 'effective control.' \textsuperscript{36} In the aftermath of those attacks, the United States took the position that the mere harboring of these actors, even in the absence of control over them, suffixes to make the state where the terrorists are located responsible for their actions, and many parts of the international community, including the UN Security Council, concurred with this position. \textsuperscript{37}"
-
-Lin, Herbert, Ibidem., p. 97-98: "For an action or omission to be considered wrongful, it must at least constitute a breach of international obligation. How and to what extent, if any, malicious cyber activities conducted across international borders constitute such breaches is contested and open to question."
-
-Lin, Herbert, Ibidem., p. 98: "To the best of this author's knowledge, there is no body of international law that holds a nation accountable for the actions of its citizens per se."
-
-Lin, Herbert, Ibidem., p. 98: "... three observations are pertinent. \begin{itemize} \item Technology has very little to say about proper definition for state responsibility ... \item ... the definition that a state will adopt in any given instance will almost certainly depend on the facts and circumstances of that instance ... \item Multiple parties could be responsible depending on how norms for assigning responsibility evolve ... " \end{itemize}
-
-Lin, Herbert, Ibidem., p. 99: "Under the Rome Statute (which establishes the International Criminal Court and gives it jurisdiction over individuals charged with war crimes), Fidler argues that 'those making and posting the Islamic State's videos are criminally accountable' under IHL. \textsuperscript{42}"
-
-Lin, Herbert, Ibidem., p. 100: "... the conventional wisdom holds that one cannot attribute a malicious cyber activity to its perpetrator with high confidence. \textsuperscript{44}"
-
-Lin, Herbert, Ibidem., p. 101: "The conventional wisdom has a grain of truth to it -- technical \gls{forensics} alone cannot lead to high-confidence attribution. \textsuperscript{45} Caloyannides goes so far as to assert that '\gls{forensics}' presumed usefulness against anyone with computer savvy is minimal because such persons can readily defeat \gls{forensics} techniques. Because computer \gls{forensics} can't show who put the data where \gls{forensics} found it, it can be evidence of nothing.' \textsuperscript{46}"
-
-Lin, Herbert, Ibidem., p. 101: "For example, a given intrusion may be similar or even identical to a previous intrusion -- the same code could be executed, the same IP addresses used, the same technical signatures found. Such similarity would suggest that the same party could be behind the intrusion at hand. \textsuperscript{47} ...Is such similarity conclusive or dispositive? Absolutely not. But neither should the clue it provides be thrown away."
-
-Lin, Herbert, Ibidem., p. 101: "Behavioral information can also contribute to attribution judgments. For example, Carlin notes that useful clues may be found in the kinds of \gls{malware} that intruders use and in the way they communicate with their victims. \textsuperscript{48}"
-
-Lin, Herbert, Ibidem., p. 102: "... the perpetrators behaved in ways that were similar to the behavior of criminals like serial killers who 'stage' the crime scene, arranging it to send a message or conceal involvement. Such stagings go beyond what is necessary to commit the crime, and they thus provide extra information that can be helpful in attribution."
-
-Lin, Herbert, Ibidem., p. 102: "Another indicator may be the time of day ... In neither case is such evidence conclusive, but that evidence constitutes additional data points that may point to the human intruder."
-
-Lin, Herbert, Ibidem., p. 102: "Sometimes intruders make mistakes of operational security. For example, an intruder may discuss his or her plans on insecure channels that are monitored."
-
-Lin, Herbert, Ibidem., p. 102: "Because intelligence agencies collect information from a variety of different sources in different parts of the world, sometimes such information is available ..."
-
-Lin, Herbert, Ibidem., p. 102: "The style and methodology of an intrusion may also be helpful to attribution."
-
-Lin, Herbert, Ibidem., p. 103: "According to the CIA, human intelligence (HUMINT)--information that can be gathered from human sources--is collected through 'clandestine acquisition of photography, documents, and other material, overt collection by people overseas, debriefing of foreign nationals and U.S. citizens who travel abroad, and official contacts with foreign governments.' \textsuperscript{50}"
-
-Lin, Herbert, Ibidem., p. 103: "HUMINT is not necessarily clandestine."
-
-Lin, Herbert, Ibidem., p. 104: "Geopolitical circumstances could provide clues as to who would want to launch a particular intrusion."
-
-Lin, Herbert, Ibidem., p. 104: "Finally, historical relationships help to frame the attribution process."
-
-Lin, Herbert, Ibidem., p. 104: "In short, attribution is an all-source issue--no one method or source of information can be used to point fingers, but multiple sources taken as a whole may paint a convincing picture ..."
-
-Lin, Herbert, Ibidem., p. 105-106: "Lastly, it is important to understand that the all-source intelligence process described in this section has a different focus than the discussion of the ultimate responsibility of states and non-state actors in previous sections. ... understanding who did what (the focus of the intelligence process) is different from, though relevant to, understanding who is to blame."
-
-Lin, Herbert, Ibidem., p. 106 "U.S. Government views of attribution have evolved over the past half-dozen years. ... In 2010, [William Lynn said,] ' ... the forensic work necessary to identify an attacker may take months, if identification is possible at all.' ... In 2012, [Leon Panetta said,] '... DOD has made significant investments in \gls{forensics} to address this problem of attribution and we're seeing returns on that investment.' ... In 2015, the DOD Cyber Strategy stated, ' ... On matters of intelligence, attribution and warning, DOD and the intelligence community have invested significantly in all source collection, analysis, and dissemination capabilities, all of which reduce the anonymity of the state and non-state actor activity in cyberspace. Intelligence and attribution capabilities help to unmask an actor's cyber persona, identify the \gls{attack}'s point of origin, and determine tactics, techniques and procedures."
-
-Lin, Herbert, Ibidem., p. 106-107 "Also in 2015, ... James Clapper testified, '... most can no longer assume that their activities will remain undetected. Nor can they assume that if detected, they will be able to conceal their identities.' ... He testified in 2016, '... However improvements in offensive tradecraft, the use of proxies, and the creation of cover organizations will hinder timely, high-confidence attribution of responsibility for state-sponsored cyber operations.' \textsuperscript{55}"
-
-Lin, Herbert, Ibidem., p. 107: "Regarding the value of private-sector attribution, the DOD Cyber Strategy of 2015 notes that private-sector parties ... 'can play a significant role in dissuading cyber actors from conducting attacks in the first place.'"
-
-Lin, Herbert, Ibidem., p. 107: "In addition to the Mandiant APT1 report described above some other examples of private sector involvement in attribution include:\textsuperscript{57}... \begin{itemize} \item FireEye's report, 'APT28 - A window Into Russia's Cyber Espionage Operations' ... \textsuperscript{58}... \item Novetta's report, 'Operation SNM: Axiom \gls{threat} Actor Group Report' ... \textsuperscript{59}... \item CrowdStrike's report, 'CrowdStrike Intelligence Report: Putter Panda' ... \textsuperscript{60}..." \end{itemize}
-
-Lin, Herbert, Ibidem., p. 108-109 "Private-sector involvement in attribution has advantages and disadvantages.\textsuperscript{61} ...[Advantages include:] \begin{itemize} \item Lack of independent quality control ... \item ... possible lack of true independence of the private-sector report. ... \item ... nations other than the United States often do not appreciate fully the separation between public and private sector ..." \end{itemize}
-
-Lin, Herbert, Ibidem., p. 110: "... has presumed that the attribution task is to determine as best as possible the machine, human intruder, and/or ultimately responsible parties that are behind a given malicious cyber incident. ... whereas attribution to an ultimately responsible party strongly depends on the legal, policy, and political definition of 'ultimately responsible.'"
-
-Interview, Marcus Ranum and Wendy Nather, Ibidem.: "Nather: (Laughs) I think we're on a trajectory for profound change. It used to be that everyone who worked in computing or who created anything was expected to be technical, and therefore we felt confident in making fun of them if they messed up -- we were all on the same playing field. But now, there are manufacturers that don't have any feel for the security side of things. It's not fair to look down our noses at them, and it's really becoming democratized in a way, but we do have to help them."
-
-Shadish, William, Ibidem., p. 12.
-
-Shadish, William, Ibidem., p. 14.
-
-Stallings, William. Ibidem. p. 355 RFCs for Intrusion Detection Exchange Format: \begin{itemize} \item RFC 4766 - Intrusion Detection Message Exchange Requirements \item RFC 4765 - Intrusion Detection Message Exchange Format \item RFC 4767 - Intrusion Detection Exchange Protocol \end{itemize}
-
-Stallings, William. Ibidem. p. 363 "Test involved in the neighborhood of 3 million words ..."
-
-Sedlock, Alicia. {Sedlock} p. 27, "Unit testing, ... is at the lowest level of all testing types. Its purpose is to ensure the smallest bits of your code (called units) function independently as expected."
-
+% REF Lin
+\bibitem{LinH}
+Kampf, David, ed.; Lin, Herbert.  "Attribution of Malicious Cyber Incidents: From Soup to Nuts," Journal of International Affairs. pp.75-138.  Winter 2016, Volume 70, Number 1.  JIA.SIPA.COLUMBIA.EDU. Columbia University.
+
+This article outlines the difficulties in correctly attributing a cyberattack.  Lin points out that we may have weak definitions for the goals of attribution, encounter substantial legal and technical problems, and can expect little relief for victims who ask that attribution of an \gls{attack} be obtained.  Lin, like Benjamin Dean, authored an article whose references led me to other references.
+
+
+% Shadish Text
+% Quotations from William Shadish's book, Experimental and Quasi-Experimental Designs for Generalized Causal Inference. \endnote{Ibidem.}
+
+%REF Shadish
+\bibitem{Shadish2A}
+Shadish, William, \endnote{Ibidem.}, pp. 2-3:
+"But when scientists started to use experiments in areas such as public health or education, in which extraneous influences are harder to control ... they found that the controls used in natural science in the laboratory worked poorly in these new applications.  So they developed new methods of dealing with extraneous influence, such as random assignment (Fisher, 1925) or adding a nonrandomized control group (Coover \& Angell, 1907).  As theoretical and observational experience accumulated across these settings and topics, more sources of bias were identified and more methods were developed to cope with them (Dehue, 2000)."
+
+%REF Shadish
+\bibitem{Shadish3B}
+Shadish, William, \endnote{Ibidem.}, p. 3 :
+"Today, the key feature common to all experiments is still to deliberately vary something so as to discover what happens to something else later--to discover the effects of the presumed causes."
+
+%REF Shadish
+\bibitem{Shadish3C}
+Shadish, William, \endnote{Ibidem.}, p. 3:
+"This chapter begins to explore these matters by (1) discussing the nature of causation that experiments test, (2) explaining the specialized terminology (e.g. randomized experiments, quasi-experiments) that describes social experiments, (3) introducing the problem of how to generalize causal connections from individual experiments, and (4) briefly situating the experiment within larger literature on the nature of science."
+
+%REF Shadish
+\bibitem{Shadish4A}
+Shadish, William, \endnote{Ibidem.}, p. 4:
+"John Locke said: ... 'A cause is that which makes any other thing, either simple idea, substance, or mode, begin to be; and an effect is that, which had its beginning from some other thing' (p. 325)."
+
+%REF Shadish
+\bibitem{Shadish4B}
+Shadish, William, \endnote{Ibidem.}, p. 4:
+"A lighted match is, therefore, what Mackie (1974) called an inus condition-- 'an insufficient but non-redundant part of an unnecessary but sufficient condition' (p.62) ... It is part of a sufficient condition to start a fire in combination with the full constellation of factors."
+
+%REF Shadish
+\bibitem{Shadish5A}
+Shadish, William, \endnote{Ibidem.}, p. 5:
+"Endostatin was an inus condition.  It was insufficient cause by itself, and its effectiveness required it to be embedded in a larger set of conditions that were not even fully understood by original investigators."
+
+%REF Shadish
+\bibitem{Shadish5B}
+Shadish, William, \endnote{Ibidem.}, p. 5:
+"Most causes are more accurately called inus conditions. ... This is one reason that the causal relationships we discuss in this book are not deterministic but only increase in probability that an effect will occur (Eells, 1991; Holland, 1994)."
+
+%REF Shadish
+\bibitem{Shadish5C}
+Shadish, William, \endnote{Ibidem.}, p. 5:
+"To difference degrees, all causal relationships are context dependent, so the generalization of experimental effect is always at issue."
+
+%REF Shadish
+\bibitem{Shadish5D}
+Shadish, William, \endnote{Ibidem.}, p. 5:
+"A counterfactual is something that is contrary to fact."
+
+
+%REF Shadish
+\bibitem{Shadish5E}
+Shadish, William, \endnote{Ibidem.}, p. 5:
+"An effect is the difference between what did happen and what would have happened."
+
+%REF Shadish
+\bibitem{Shadish6A}
+Shadish, William, \endnote{Ibidem.}, p. 6:
+"How do we know if cause and effect are related?  In a classic analysis formalized by the 19th-centure philosopher John Stuart Mill, a causal relationship exists if (1) the cause preceded the effect, (2) the cause was related to the effect, and (3) we can find no plausible alternative explanation for the effect other than the cause."
+
+%REF Shadish
+\bibitem{Shadish7A}
+Shadish, William, \endnote{Ibidem.}, p. 7:
+"A well-known maxim in research is:  Correlation does not prove causation.  This is so because we may not know which variable came first nor whether alternative explanations for the presumed effect exist."
+
+%REF Shadish
+\bibitem{Shadish7B}
+Shadish, William, \endnote{Ibidem.}, p. 7:
+"Correlations also do little to rule out alternative explanations for a relationship between two variables ... That relationship may not be causal at all but rather due to a third variable (often called a confound)."
+
+%REF Shadish
+\bibitem{Shadish7C}
+Shadish, William, \endnote{Ibidem.}, p. 7:
+"Experiments explore the effects of things that can be manipulated. ... Nonmanipulable events ... or attributes ... cannot be causes in experiments because we cannot deliberately vary them to see what happens.  Consequently, most scientists and philosophers agree that it is much harder to discover the effects of nonmanipulable causes."
+
+%REF Shadish
+\bibitem{Shadish9A}
+Shadish, William, \endnote{Ibidem.}, p. 9:
+"The unique strength of experimentation is in describing the consequences attributable to deliberately varying a treatment.  We call this causal description."
+
+%REF Shadish
+\bibitem{Shadish9B}
+Shadish, William, \endnote{Ibidem.}, p. 9:
+"... the conditions under which that causal relationship holds -- what we call causal explanation."
+
+%REF Shadish
+\bibitem{Shadish10A}
+Shadish, William, \endnote{Ibidem.}, p. 10:
+"The practical importance of causal explanation is brought home when ... (another easily learned manipulation) fails to solve the problem.  Explanatory knowledge then offers clues about how to fix the problem ..."
+
+%REF Shadish
+\bibitem{Shadish10B}
+Shadish, William, \endnote{Ibidem.}, p. 10:
+"So causal explanation is an important route to the generalization of causal descriptions because it tells us which features of the causal relationship are essential to transfer to other situations."
+
+%REF Shadish
+\bibitem{Shadish10C}
+Shadish, William, \endnote{Ibidem.}, p. 10:
+"These examples also show the close parallel between descriptive and explanatory causation and molar and molecular causation.\textsuperscript{4 }... 4. By molar, we mean something taken as a whole rather than in parts.  An analogy is to physics, in which molar might refer to the properties or motions of masses, as distinguished from those of molecules or atoms that make up those masses."
+
+%REF Shadish
+\bibitem{Shadish11A}
+Shadish, William, \endnote{Ibidem.}, p. 11:
+"If experiments are less able to provide this highly prized explanatory causal knowledge, why are experiments so central to science ... ?"
+
+%REF Shadish
+\bibitem{Shadish11B}
+Shadish, William, \endnote{Ibidem.}, p. 11:
+"First, many causal explanations consist of chains of descriptive causal links in which one event causes the next. ... Second, experiments help distinguish between the validity of competing explanatory theories ..."
+
+%REF Shadish
+\bibitem{Shadish12A}
+Shadish, William, \endnote{Ibidem.}, p. 12:
+"In the end, then, causal descriptions and causal explanations are in delicate balance in experiments.  What experiments do best is to improve causal descriptions; they do less well at explaining causal relationships."
+
+%REF Shadish
+\bibitem{Shadish14A}
+Shadish, William, \endnote{Ibidem.}, p. 14:
+"In quasi-experiments, the cause in manipulable and occurs before the effect is measured."
+
+%REF Shadish
+\bibitem{Shadish14B}
+Shadish, William, \endnote{Ibidem.}, p. 14:
+"In quasi-experiments, the researcher has to enumerate alternative explanations one by one, decide which are plausible, and then use logic, design, and measurement to assess whether each one is operating in a way that might explain any observed effect."
+
+%REF Shadish
+\bibitem{Shadish15A}
+Shadish, William, \endnote{Ibidem.}, p. 15:
+"The efforts of the quasi-experimenter start to look like attempts to bandage a wound that would have been less severe if random assignment had been used initially."
+
+%REF Shadish
+\bibitem{Shadish15B}
+Shadish, William, \endnote{Ibidem.}, p. 15:
+"The ruling out of alternative hypotheses is closely related to falsificationist logic popularized by Popper (1959).  Popper noted how hard it is to be sure that a general conclusion ... is correct based on a limited set of observations ... After all, future observations may change ... So confirmation is logically difficult.  By contrast, observing a disconfirming instance ... is sufficient, in Popper's view, to falsify the general conclusion ... Accordingly, Popper urged scientists to try deliberately to falsify the conclusions they wish to draw rather than only to seek information corroborating them.  Conclusions that withstand falsification are retained in scientific books or journals and treated as plausible until better evidence comes along.  Quasi-experimentation is falsificationist in that it requires experimenters to identify a causal claim and then to generate and examine plausible alternative explanations that might falsify their claim."
+
+%REF Shadish
+\bibitem{Shadish15C}
+Shadish, William, \endnote{Ibidem.}, p. 15:
+"Kuhn (1962) pointed out that falsification depends on two assumptions that can never be fully tested.  The first is that the causal claim is perfectly specified. ... Second, falsification falsification requires measures that are perfectly valid reflections of the theory being tested."
+
+%REF Shadish
+\bibitem{Shadish16A}
+Shadish, William, \endnote{Ibidem.}, p. 16:
+"... a fallibilist version of falsification is possible. ... Fallibilist falsification also assumes that theory-neutral observation is impossible but that observations can approach a more factlike status when they have been repeatedly made across different theoretical conceptions of a construct, across multiple kinds of measurements, and at multiple times."
+
+%REF Shadish
+\bibitem{Shadish16B}
+Shadish, William, \endnote{Ibidem.}, p. 16:
+"As a result, observations that repeatedly occur despite different theories being built into them have a special factlike status even if they can never be fully justified as theory-neutral facts."
+
+%REF Shadish
+\bibitem{Shadish16C}
+Shadish, William, \endnote{Ibidem.}, p. 16:
+"It is neither feasible nor desirable to rule out all possible alternative interpretations of a causal relationship.  Instead, only plausible alternatives constitute the major focus.  ... It also recognizes that many alternatives have no serious empirical or experimental support and so do not warrant special attention.  However, lack of support can sometimes be deceiving."
+
+%REF Shadish
+\bibitem{Shadish17A}
+Shadish, William, \endnote{Ibidem.}, p. 17:
+"Thus the focus on plausibility is a two-edged sword:  it reduces the range of alternatives to be considered in quasi-experimental work, yet it also leaves the resulting causal influence vulnerable to the discovery that an implausible-seeming alternative may later emerge as a likely causal agent."
+
+
+%REF Shadish p.18A
+\bibitem{Shadish18A}
+Shadish, William, \endnote{Ibidem.}, p.18.
+
+"Most experiments are highly localized and particularistic.  They are almost always conducted in a restricted range of settings, often just one, with a particular version of one type of treatment rather than, say, a sample of all possible versions."
+
+%REF Shadish
+\bibitem{Shadish19A}
+Shadish, William, \endnote{Ibidem.},p.19:
+"In defining generalization as a problem, we do not assume that more broadly applicable results are always more desirable."
+
+%REF Shadish
+\bibitem{Shadish19B}
+Shadish, William, \endnote{Ibidem.},p.19:
+"Experiments that demonstrate limited generalization may be just as valuable as those that demonstrate broad generalization."
+
+%REF Shadish
+\bibitem{Shadish20A}
+Shadish, William, \endnote{Ibidem.}, p. 20:
+"We call these construct validity generalizations (inferences about the constructs that research operations represent) and external validity generalizations (inferences about whether the causal relationship holds over variation in persons, settings, treatment, and measurement variables)."
+
+%REF Shadish
+\bibitem{Shadish20B}
+Shadish, William, \endnote{Ibidem.}, p. 20:
+
+"The first causal generalization problem concerns how to go from the particular units, treatments, observations, and settings on which data are collected to the higher order constructs these instances represent."
+
+%REF Shadish
+\bibitem{Shadish21A}
+Shadish, William, \endnote{Ibidem.}, p. 21:
+
+"How can we generalize from a sample of instances and the data patterns associated with them to the particular target constructs they represent?"
+
+%REF Shadish
+\bibitem{Shadish21B}
+Shadish, William, \endnote{Ibidem.}, p. 21:
+"The second problem of generalization is to infer whether a causal relationship holds over variations in persons, settings, treatments and outcomes."
+
+%REF Shadish
+\bibitem{Shadish22A}
+Shadish, William, \endnote{Ibidem.}, p. 22:
+"Whichever way the causal generalization issue is framed, experiments do not seem at first glance to be very useful."
+
+%REF Shadish
+\bibitem{Shadish22B}
+Shadish, William, \endnote{Ibidem.}, p. 22:
+"So what is it that justifies any belief that an experiment can achieve a better fit between the sampling particulars of a study and more general inferences to constructs or over variations in persons, settings, treatments, and outcomes?"
+
+%REF Shadish
+\bibitem{Shadish23A}
+Shadish, William, \endnote{Ibidem.}, p. 23:
+"The method more often recommended for achieving this close fit is the use of formal probability sampling of instances of units, treatments, observations, or settings (Rossi, Wright, \& Anderson, 1983)."
+
+%REF Shadish
+\bibitem{Shadish23B}
+Shadish, William, \endnote{Ibidem.}, p. 23:
+"Random selection involves selecting cases by chance to represent that population, whereas random assignment involves assigning cases to multiple conditions."
+
+%REF Shadish
+\bibitem{Shadish23C}
+Shadish, William, \endnote{Ibidem.}, p. 23:
+"Random selection occurs even more rarely with treatments, outcomes, and settings than with people."
+
+%REF Shadish
+\bibitem{Shadish24A}
+Shadish, William, \endnote{Ibidem.}, p. 24:
+"Practicing scientists routinely make causal generalizations in their research, and they almost never use formal probability sampling when they do.  In this book, we present a theory of causal generalization that is grounded in the actual practice of science (Matt, Cook, \&  Shadish, 2000)."
+
+%REF Quotations from Herbert Lin's article on attribution.
+
+%REF Lin
+\bibitem{LinH96A}
+Lin, Herbert, \endnote{Kampf, David, ed.; Lin, Herbert. "Attribution of Malicious Cyber Incidents: From Soup to Nuts," Journal of International Affairs. pp.75-138. Winter 2016, Volume 70, Number 1. JIA.SIPA.COLUMBIA.EDU. Columbia University. This article outlines the difficulties in correctly attributing a cyberattack. Lin points out that we may have weak definitions for the goals of attribution, encounter substantial legal and technical problems, and can expect little relief for victims who ask that attribution of an \gls{attack} be obtained. Lin, like Benjamin Dean, authored an article whose references led me to other references.}, p. 96-97
+"The following hierarchy ... is largely based on Jason Healey's taxonomy in 'Beyond Attibution: Seeking National Responsibility for Cyber Attacks.'\textsuperscript{32}
+\begin{itemize}
+\item A state could be incapable of detecting  ...
+\item ... encourage ...
+\item ... direct ...
+\item ... conduct hacking activities."
+\end{itemize}
+
+%REF Lin
+\bibitem{LinH97A}
+Lin, Herbert, \endnote{Ibidem.}, p.  97:
+"Prior to 11 September 2001 attacks on the United States, a nation-state was responsible for the acts of private groups inside its territory over which it exercised 'effective control.' \textsuperscript{36}  In the aftermath of those attacks, the United States took the position that the mere harboring of these actors, even in the absence of control over them, suffixes to make the state where the terrorists are located responsible for their actions, and many parts of the international community, including the UN Security Council, concurred with this position. \textsuperscript{37}"
+
+%REF Lin
+\bibitem{LinH97B}
+Lin, Herbert, \endnote{Ibidem.}, p. 97-98:
+"For an action or omission to be considered wrongful, it must at least constitute a breach of international obligation.  How and to what extent, if any, malicious cyber activities conducted across international borders constitute such breaches is contested and open to question."
+
+%REF Lin
+\bibitem{LinH98A}
+Lin, Herbert, \endnote{Ibidem.}, p. 98:
+"To the best of this author's knowledge, there is no body of international law that holds a nation accountable for the actions of its citizens per se."
+
+%REF Lin
+\bibitem{LinH98B}
+Lin, Herbert, \endnote{Ibidem.}, p. 98:
+"... three observations are pertinent.
+\begin{itemize}
+\item Technology has very little to say about proper definition for state responsibility ...
+\item ... the definition that a state will adopt in any given instance will almost certainly depend on the facts and circumstances of that instance ...
+\item Multiple parties could be responsible depending on how norms for assigning responsibility evolve ... "
+\end{itemize}
+
+%REF Lin
+\bibitem{LinH99A}
+Lin, Herbert, \endnote{Ibidem.}, p. 99:
+"Under the Rome Statute (which establishes the International Criminal Court and gives it jurisdiction over individuals charged with war crimes), Fidler argues that 'those making and posting the Islamic State's videos are criminally accountable' under IHL. \textsuperscript{42}"
+
+
+%REF Lin
+\bibitem{LinH99B}
+Lin, Herbert, \endnote{Ibidem.}, p. 99-100:
+"... first, that attribution is a largely intractable problem because of technical characteristics and geography of the Internet ... and second, that attribution is either possible or not possible in any given case of interest. \textsuperscript{43}  The third assumption -- that the main challenge in attribution is finding evidence itself and not in interpreting or using it -- is relevant ... "
+
+%REF Lin
+\bibitem{LinH100A}
+Lin, Herbert, \endnote{Ibidem.}, p. 100:
+"... the conventional wisdom holds that one cannot attribute a malicious cyber activity to its perpetrator with high confidence. \textsuperscript{44}"
+
+%REF Lin
+\bibitem{LinH101A}
+Lin, Herbert, \endnote{Ibidem.}, p. 101:
+"The conventional wisdom has a grain of truth to it -- technical \gls{forensics} alone cannot lead to high-confidence attribution. \textsuperscript{45}  Caloyannides goes so far as to assert that '\gls{forensics}' presumed usefulness against anyone with computer savvy is minimal because such persons can readily defeat \gls{forensics} techniques.  Because computer \gls{forensics} can't show who put the data where \gls{forensics} found it, it can be evidence of nothing.' \textsuperscript{46}"
+
+%REF Lin
+\bibitem{LinH101B}
+Lin, Herbert, \endnote{Ibidem.}, p.  101:
+"For example, a given intrusion may be similar or even identical to a previous intrusion -- the same code could be executed, the same IP addresses used, the same technical signatures found.  Such similarity would suggest that the same party could be behind the intrusion at hand. \textsuperscript{47}  ...Is such similarity conclusive or dispositive?  Absolutely not.  But neither should the clue it provides be thrown away."
+
+
+%REF Lin
+\bibitem{LinH101C}
+Lin, Herbert, \endnote{Ibidem.}, p. 101:
+"Behavioral information can also contribute to attribution judgments.  For example, Carlin notes that useful clues may be found in the kinds of \gls{malware} that intruders use and in the way they communicate with their victims. \textsuperscript{48}"
+
+%REF Lin
+\bibitem{LinH102A}
+Lin, Herbert, \endnote{Ibidem.}, p. 102:
+"... the perpetrators behaved in ways that were similar to the behavior of criminals like serial killers who 'stage' the crime scene, arranging it to send a message or conceal involvement.  Such stagings go beyond what is necessary to commit the crime, and they thus provide extra information that can be helpful in attribution."
+
+%REF Lin
+\bibitem{LinH102B}
+Lin, Herbert, \endnote{Ibidem.}, p.  102:
+"Another indicator may be the time of day ... In neither case is such evidence conclusive, but that evidence constitutes additional data points that may point to the human intruder."
+
+%REF Lin
+\bibitem{LinH102C}
+Lin, Herbert, \endnote{Ibidem.}, p. 102:
+"Sometimes intruders make mistakes of operational security.  For example, an intruder may discuss his or her plans on insecure channels that are monitored."
+
+%REF Lin
+\bibitem{LinH102D}
+Lin, Herbert, \endnote{Ibidem.}, p. 102:
+"Because intelligence agencies collect information from a variety of different sources in different parts of the world, sometimes such information is available ..."
+
+%REF Lin
+\bibitem{LinH102E}
+Lin, Herbert, \endnote{Ibidem.}, p. 102:
+"The style and methodology of an intrusion may also be helpful to attribution."
+
+
+%REF Lin
+\bibitem{LinH103A}
+Lin, Herbert, \endnote{Ibidem.}, p. 103:
+"According to the CIA, human intelligence (HUMINT)--information that can be gathered from human sources--is collected through 'clandestine acquisition of photography, documents, and other material, overt collection by people overseas, debriefing of foreign nationals and U.S. citizens who travel abroad, and official contacts with foreign governments.' \textsuperscript{50}"
+
+
+%REF Lin
+\bibitem{LinH103B}
+Lin, Herbert, \endnote{Ibidem.}, p. 103:
+"HUMINT is not necessarily clandestine."
+
+
+%REF Lin
+\bibitem{LinH104A}
+Lin, Herbert, \endnote{Ibidem.}, p. 104:
+"Geopolitical circumstances could provide clues as to who would want to launch a particular intrusion."
+
+
+%REF Lin
+\bibitem{LinH104B}
+Lin, Herbert, \endnote{Ibidem.}, p. 104:
+"Finally, historical relationships help to frame the attribution process."
+
+
+%REF Lin
+\bibitem{LinH104C}
+Lin, Herbert, \endnote{Ibidem.}, p. 104:
+"In short, attribution is an all-source issue--no one method or source of information can be used to point fingers, but multiple sources taken as a whole may paint a convincing picture ..."
+
+%REF Lin
+\bibitem{LinH105A}
+Lin, Herbert, \endnote{Ibidem.}, p. 105-106:
+"Lastly, it is important to understand that the all-source intelligence process described in this section has a different focus than the discussion of the ultimate responsibility of states and non-state actors in previous sections. ... understanding who did what (the focus of the intelligence process) is different from, though relevant to, understanding who is to blame."
+
+%REF Lin
+\bibitem{LinH106A}
+Lin, Herbert, \endnote{Ibidem.}, p. 106
+"U.S. Government views of attribution have evolved over the past half-dozen years. ... In 2010, [William Lynn said,] ' ... the forensic work necessary to identify an attacker may take months, if identification is possible at all.'  ... In 2012, [Leon Panetta said,] '... DOD has made significant investments in \gls{forensics} to address this problem of attribution and we're seeing returns on that investment.' ... In 2015, the DOD Cyber Strategy stated, ' ... On matters of intelligence, attribution and warning, DOD and the intelligence community have invested significantly in all source collection, analysis, and dissemination capabilities, all of which reduce the anonymity of the state and non-state actor activity in cyberspace.  Intelligence and attribution capabilities help to unmask an actor's cyber persona, identify the \gls{attack}'s point of origin, and determine tactics, techniques and procedures."
+
+
+%REF Lin
+\bibitem{LinH106B}
+Lin, Herbert, \endnote{Ibidem.}, p. 106-107
+"Also in 2015, ... James Clapper testified, '... most can no longer assume that their activities will remain undetected.  Nor can they assume that if detected, they will be able to conceal their identities.' ... He testified in 2016, '... However improvements in offensive tradecraft, the use of proxies, and the creation  of cover organizations will hinder timely, high-confidence attribution of responsibility for state-sponsored cyber operations.' \textsuperscript{55}"
+
+%REF Lin
+\bibitem{LinH107A}
+Lin, Herbert, \endnote{Ibidem.}, p. 107:
+"Regarding the value of private-sector attribution, the DOD Cyber Strategy of 2015 notes that private-sector parties ... 'can play a significant role in dissuading cyber actors from conducting attacks in the first place.'"
+
+%REF Lin
+\bibitem{LinH107B}
+Lin, Herbert, \endnote{Ibidem.}, p. 107:
+"In addition to the Mandiant APT1 report described above some other examples of private sector involvement in attribution include:\textsuperscript{57}...
+ \begin{itemize}
+\item FireEye's report, 'APT28 - A window Into Russia's Cyber Espionage Operations' ... \textsuperscript{58}...
+\item Novetta's report, 'Operation SNM: Axiom \gls{threat} Actor Group Report' ... \textsuperscript{59}...
+\item CrowdStrike's report, 'CrowdStrike Intelligence Report: Putter Panda' ... \textsuperscript{60}..."
+ \end{itemize}
+
+%REF Lin
+\bibitem{LinH108A}
+Lin, Herbert, \endnote{Ibidem.}, p. 108-109
+"Private-sector involvement in attribution has advantages and disadvantages.\textsuperscript{61}
+ ...[Advantages include:]
+\begin{itemize}
+\item Lack of independent quality control ...
+\item ... possible lack of true independence of the private-sector report.  ...
+\item ... nations other than the United States often do not appreciate fully the separation between public and private sector ..."
+\end{itemize}
+
+%REF Lin
+\bibitem{LinH110A}
+Lin, Herbert, \endnote{Ibidem.}, p. 110:
+"... has presumed that the attribution task is to determine as best as possible the machine, human intruder, and/or ultimately responsible parties that are behind a given malicious cyber incident. ... whereas attribution to an ultimately responsible party strongly depends on the legal, policy, and political definition of 'ultimately responsible.'"
+
+%REF OWASPZaw
+\bibitem{OWASPZaw}
+
+Watson, Colin and Tin Zaw.  OWASP Automated \gls{threat} Handbook:  Web Applications.  Version 1.1,  OWASP Foundation, November 2016.  ISBN 978-1-329-42709-9.
+
+
+%REF OWASPZaw
+\bibitem{OWASPZaw17A}
+Watson, Collin and Tin Zaw, \endnote{Watson, Colin and Tin Zaw. OWASP Automated \gls{threat} Handbook: Web Applications. Version 1.1, OWASP Foundation, November 2016. ISBN 978-1-329-42709-9.}, p. 17:
+" ... the best defended applications do not rely solely upon standalone external operational protections, but also have integrated protection built into the design."
+
+"Countermeasures are controls that attempt to mitigate the identified automated threats in three ways:
+\begin{itemize}
+\item Prevent - Controls to reduce the susceptibility to automated threats
+\item Detect - Controls to identify whether an automated user is a human ...
+\item Recover - Controls ... to assist return of the application to its normal state"
+\end{itemize}
+
+%REF NatherRanum
+\bibitem{NatherRanum}
+
+Nather, Wendy quoted by Marcus Ranum.  "Wendy Nather: 'We're on a trajectory for profound change',"Medium.  http://searchsecurity.techtarget.com/opinion/Wendy-Nather-Were-on-a-trajectory-for-profound-change, INTERNET.
+
+%REF NatherRanum
+\bibitem{NatherRanumA}
+Interview, Marcus Ranum and Wendy Nather, \endnote{Nather, Wendy quoted by Marcus Ranum. "Wendy Nather: 'We're on a trajectory for profound change',"Medium. http://searchsecurity.techtarget.com/opinion/Wendy-Nather-Were-on-a-trajectory-for-profound-change, INTERNET.}:
+"[Ranum:] I found the field fascinating because it was so irregular. Nobody really seemed to know how to think about it, except for the formal systems/Orange Book (Trusted Computer System Evaluation Criteria) crowd, and they were off in impractical la-la land.
+
+Nather: We were all making stuff up as fast as we could. This was in the mid-90s, and we did our bank's first internet presence in the form of a website. I had two or three teams of engineers all checking each other's work because we were all really nervous about what this was going to be like."
+
+%REF NatherRanum
+\bibitem{NatherRanumB}
+Interview, Marcus Ranum and Wendy Nather, \endnote{Ibidem.}:
+
+"Nather: (Laughs) I think we're on a trajectory for profound change. It used to be that everyone who worked in computing or who created anything was expected to be technical, and therefore we felt confident in making fun of them if they messed up -- we were all on the same playing field. But now, there are manufacturers that don't have any feel for the security side of things. It's not fair to look down our noses at them, and it's really becoming democratized in a way, but we do have to help them."
+
+\bibitem{OWASPZaw8A}
+Watson, Collin and Tin Zaw, \endnote{Watson, Colin and Tin Zaw. OWASP Automated \gls{threat} Handbook: Web Applications. Version 1.1, OWASP Foundation, November 2016. ISBN 978-1-329-42709-9.}, p. 8, Figure 1:
+Glossary of \gls{attack} terms collected from OWASP Automated \gls{threat} Handbook PDF Online Version.
+\url{https://www.owasp.org/index.php/File:Automated-\gls{threat}-handbook.pdf}
+"Figure 1: Automated \gls{threat} Events, ordered by ascending name
+\begin{itemize}
+\item OAT-017 Spamming Malicious or questionable information addition that appears in public or private content, databases or user messages
+\item OAT-002 Token Cracking Mass enumeration of coupon numbers, voucher codes, discount tokens, etc
+\item OAT-014 Vulnerability Scanning Crawl and fuzz application to identify weaknesses and possible vulnerabilities "
+\end{itemize}
+
+
+%REF Shadish
+\bibitem{ShadishBIOCV}
+Shadish, William.  CV, University of California Merced.  INTERNET:  http://faculty.ucmerced.edu/wshadish/shadish-cv-jan-2015.
+
+Shadish, William.  Biographical sketch, University of California Merced.http://faculty.ucmerced.edu/wshadish/biosketch.
+
+%REF Shadish
+\bibitem{ShadishQuasiDesignWorkshop}
+\_\_\_\_\_. INTERNET:  http://www.ipr.northwestern.edu/workshops/annual-summer-workshops/quasi-experimental-design-and-analysis/
+
+This workshop shows that Shadish's methods are still being studied and implemented.  This workshop is one example of coaching other professionals into using quasi-experimental design techniques.  It was sponsored by Northwestern University and funded by a grant from the \gls{us} Department of Education.
+
+%REF Shadish
+\bibitem{Shadish12}
+Shadish, William, \endnote{Ibidem.}, p. 12.
+
+%REF Shadish
+\bibitem{Shadish14}
+Shadish, William, \endnote{Ibidem.}, p. 14.
+
+%REF Shadish
+\bibitem{ShadishProgEval2135}
+Shadish, William, \endnote{Shadish, William R. Jr., Thomas Cook, Laura C. Leviton. Foundations of Program Evaluation: Theories and Practice. pp. 36-67. Sage Publications, First printing, 1991. ISBN 0-08-039355-1. UTC Library Call H 62 .S433 1991.} pp. 21-35.
+
+%REF Stallings, On Intrusion Detection Systems
+
+Intrusion detection systems,
+\bibitem{StallingsText}
+Stallings, William.  Network Security Essentials:  Applications and Standards.  Fifth Edition.  ISBN 978-0-13-337043-0.  pp. ... -357
+
+\bibitem{StallingsIntrusionA}
+Stallings, William. \endnote{Stallings, William. Network Security Essentials: Applications and Standards. Fifth Edition. ISBN 978-0-13-337043-0. pp. ... -357}  p. 348 "As with statistical anomaly detection, rule-based anomaly detection does not require knowledge of security vulnerabilities within the system.  Rather, the scheme is based on observing past behavior and, in effect, assuming that the future will be like the past.  In order for this approach to be effective, a rather large database of rules will be needed.  For example, a scheme described in [VACC89] contains anywhere from 10\^4 to 10\^6 rules."
+
+\bibitem{StallingsIntrusionB}
+Stallings, William. \endnote{Ibidem.}  p. 355 RFCs for Intrusion Detection Exchange Format:
+\begin{itemize}
+\item RFC 4766 - Intrusion Detection Message Exchange Requirements
+\item RFC 4765 - Intrusion Detection Message Exchange Format
+\item RFC 4767 - Intrusion Detection Exchange Protocol
+\end{itemize}
+
+%REF Stallings on Poor Password Choices
+\bibitem{StallingsPasswordA}
+Stallings, William. \endnote{Stallings, William. Network Security Essentials: Applications and Standards. Fifth Edition. ISBN 978-0-13-337043-0. pp. ... -357}  p. 363
+Poor \gls{password} choices, from Stallings, roughly 25\% of passwords could be cracked using four strategies:
+\begin{itemize}
+\item "Try the user's name, initials, account name and other relevant information ...
+\item "Try words from various dictionaries ...
+\item "Try various permutations of words from step 2 ...
+\item "Try various capitalization permutations from words in step 2 that were not considered in step 3 ... "
+\end{itemize}
+
+\bibitem{StallingsPasswordB}
+Stallings, William. \endnote{Ibidem.}  p. 363
+"Test involved in the neighborhood of 3 million words ..."
+
+\bibitem{StallingsPasswordC}
+Stallings, William. \endnote{Stallings, William. Network Security Essentials: Applications and Standards. Fifth Edition. ISBN 978-0-13-337043-0. pp. ... -357}  p. 363
+"Keep in mind that such a thorough search could produce a success rate of about 25\%, whereas even a single hit may be enough to gain a wide range of privileges on a system."
+
+%REF Basic Buffer Overflow Attacks
+\bibitem{alephone}
+\_\_\_\_\_, "aleph one."  "Smashing the Stack for Fun and Profit,"  Phrack 49, republished, INTERNET:  http://insecure.org/stf/smashstack.html
+Explanation of buffer overflow exploits.
+
+\bibitem{VanillaEIP}
+\_\_\_\_\_.  "0x0 \gls{exploit} Tutorial: Buffer Overlow - Vanilla EIP Overwrite," INTERNET:  http://www.primalsecurity.net/0x0-\gls{exploit}-tutorial-buffer-overflow-vanilla-eip-overwrite-2/
+
+Explanation of common practices in \gls{malware} experimental construction.
+
+%REF Javascript Testing
+
+\bibitem{Sedlock}
+Sedlock, Alicia.  "An Introduction to Frontend Testing," The Ultimate Javascript Manual 2017. Future Publishing Ltd., Future PLC, Quay House, The Ambury, Bath.  pp.26-31.
+
+Single page application testing with Jasmine.  Definitions of contemporary frontend testing terms.
+
+\bibitem{SedlockA}
+Sedlock, Alicia. {Sedlock} p. 27, "Unit testing, ... is at the lowest level of all testing types.  Its purpose is to ensure the smallest bits of your code (called units) function independently as expected."
+
+\bibitem{SedlockB}
 Sedlock, Alicia. {Sedlock} p. 28, "Acceptance tests go through your running application and ensure designated actions, user inputs, and user flows are completable and functioning."
 
-Sedlock, Alicia. {Sedlock} p. 29, "... visual regression testing. This doesn't test your code, but rather compares the rendered result of your code -- your interface -- with the rendered version of your application in production, staging, or a pre-changed local environment. This is typically done by comparing screenshots taken within a headless browser (a browser that runs on the server). Image comparison tools then detect any differences between the two shots."
+\bibitem{SedlockC}
+Sedlock, Alicia. {Sedlock} p. 29, "... visual regression testing.  This doesn't test your code, but rather compares the rendered result of your code -- your interface -- with the rendered version of your application in production, staging, or a pre-changed local environment.  This is typically done by comparing screenshots taken within a headless browser (a browser that runs on the server).  Image comparison tools then detect any differences between the two shots."
 
-"Br@d", "Pineapple Pi - Creating an Automated Open Wi-Fi Traffic Capturing Tool for Under \$20," 2600 The Hacker Quarterly. Vol. 34, No. 2, Summer 2017. 2600 Enterprises Inc., New York.
+%REF 30SEP2017 Lab Notes Related, Pineapple Pi
+\bibitem{RaspPiOS}
+Raspberry Pi \gls{os} Download:
+https://www.raspberrypi.org/downloads/raspbian/
 
+\bibitem{RaspPiKali}
+Raspberry Pi Kali Download:
+https://docs.kali.org/kali-on-arm/install-kali-linux-arm-raspberry-pi
+
+\bibitem{PSHash}
+Powershell to get the \gls{hash} of a download on Windows 10:
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash?view=powershell-5.1
+
+Get-FileHash 2017-09-07-raspbian-stretch-lite.zip -Algorithm SHA384 | Format-List
+
+\bibitem{PineapplePiA}
+"Br@d", "Pineapple Pi - Creating an Automated Open Wi-Fi Traffic Capturing Tool for Under \$20,"  2600 The Hacker Quarterly.  Vol. 34, No. 2, Summer 2017.  2600 Enterprises Inc., New York.
+
+\bibitem{PineapplePiB}
+Robbins, Arnold.  Bash Pocket Reference.  O'Reilly, second edition.
+
+\bibitem{PineapplePiC}
+\_\_\_\_\_. https://unix.stackexchange.com/questions/151547/linux-set-date-through-command-line.  INTERNET.
+
+\bibitem{PineapplePiD}
+\_\_\_\_\_.  INTERNET:  https://\gls{motherboard}.vice.com/en\_us/article/vv7zn9/surprise-scans-suggest-hackers-put-imsi-catchers-all-over-defcon
+
+\bibitem{PineapplePiE}
+\_\_\_\_\_.  INTERNET:  https://www.aircrack-ng.org/
+
+\bibitem{PineapplePiF}
+\_\_\_\_\_.  INTERNET:  https://www.aircrack-ng.org/doku.php?id=compatibility\_drivers
+
+\bibitem{PineapplePiG}
+\_\_\_\_\_.  INTERNET:  https://wikidevi.com/wiki/TP-LINK\_TL-WN722N
+
+\bibitem{PineapplePiH}
+\_\_\_\_\_.  INTERNET:  https://wikidevi.com/wiki/TP-LINK\_TL-WN722N\_v2
+
+\bibitem{PineapplePiI}
+\_\_\_\_\_.  INTERNET:  https://wikidevi.com/wiki/ALFA\_Network\_AWUS036NH
+
+\bibitem{PineapplePiJ}
+\_\_\_\_\_.  INTERNET: https://hakshop.com/products/wifi-pineappling-book
+
+\bibitem{PineapplePiK}
+\_\_\_\_\_.  INTERNET:  http://goo.gl/iMVWew WiFi Pineapple Book Chapter Preview, Chapter 3.
+
+\bibitem{PineapplePiL}
+\_\_\_\_\_.  INTERNET:  https://www.raspberrypi.org/
+
+\bibitem{PineapplePiM}
+\_\_\_\_\_.  INTERNET:  https://www.raspberrypi.org/downloads/raspbian/
+
+\bibitem{PineapplePiN}
+\_\_\_\_\_.  INTERNET:  https://www.raspberrypi.org/documentation/\gls{configuration}/raspi-config.md
+
+\bibitem{PineapplePiO}
+\_\_\_\_\_. INTERNET:  https://www.walmart.com/ip/TP-LINK-TL-WN722N-N150-High-Gain-Wireless-USB-Adapter/17133249
+
+\bibitem{PineapplePiP}
+\_\_\_\_\_.  INTERNET:  https://www.amazon.com/Alfa-AWUS036NH-802-11g-Wireless-Long-Range/dp/B003YIFHJY
+
+\bibitem{PineapplePiQ}
+\_\_\_\_\_.  INTERNET:  https://www.amazon.com/Alfa-AWUSO36NH-Wireless-Long-Rang-Network/dp/B0035APGP6
+
+\bibitem{PineapplePiR}
+\_\_\_\_\_.  INTERNET:  https://www.csoonline.com/article/2462478/microsoft-subnet/hacker-hunts-and-pwns-wifi-pineapples-with-0-day-at-def-con.html
+
+\bibitem{PineapplePiS}
+\_\_\_\_\_.  INTERNET:  https://twitter.com/ihuntpineapples/media
+
+\bibitem{PineapplePiT}
+Reddit Owned : \_\_\_\_\_.  INTERNET:  https://www.reddit.com/r/Defcon/comments/2d16lk/your\_pineapple\_has\_been\_owned\_son/\#bottom-comments
+
+\bibitem{PineapplePiU}
+
+
+%REF Fourzan
+\bibitem{Fourzan}
+Fourzan, Behrouz A.  TCP/IP Protocol Suite.  Fourth Edition.  McGraw-Hill, 2006.
+  ISBN 978-0-07-337604-2.
+
+%REF MITRE
+\bibitem{MITREA}
+\_\_\_\_\_.  INTERNET:  https://capec.mitre.org/
+
+\bibitem{MITREB}
+\_\_\_\_\_.  INTERNET:  https://capec.mitre.org/data/definitions/1000.html
+"Mechanisms of \gls{attack}"
+
+\bibitem{MITREC}
+\_\_\_\_\_.  INTERNET:  https://capec.mitre.org/data/definitions/152.html
+"Inject Unexpected Items"
+
+\bibitem{MITRED}
+\_\_\_\_\_.  INTERNET:  https://capec.mitre.org/data/definitions/137.html
+"Parameter Injection"
+
+\bibitem{MITREE}
+\_\_\_\_\_.  INTERNET:  https://capec.mitre.org/data/definitions/513.html
+"CAPEC Category:  Software"
+
+\bibitem{MITREF}
+\_\_\_\_\_.  INTERNET:  https://capec.mitre.org/data/definitions/248.html
+"Command Injection "
+
+\bibitem{MITREG}
+\_\_\_\_\_.  INTERNET:  https://capec.mitre.org/data/definitions/66.html
+"SQL Injection"
+
+\bibitem{MITREH}
+\_\_\_\_\_.  INTERNET:  https://capec.mitre.org/data/definitions/108.html
+"Command Line Execution Through SQL Injection"
+
+\bibitem{MITREI}
+\_\_\_\_\_.  INTERNET:  http://cwe.mitre.org/data/definitions/707.html
+"Improper Enforcement of Message or Data Structure"
+
+\bibitem{MITREJ}
+\_\_\_\_\_.  INTERNET:  http://cwe.mitre.org/data/definitions/74.html
+" CWE-74: Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')"
+
+\bibitem{MITREK}
+\_\_\_\_\_.  INTERNET:  http://capec.mitre.org/data/definitions/242.html
+"Code Injection"
+
+\bibitem{MITREL}
+\_\_\_\_\_.  INTERNET:  https://capec.mitre.org/data/definitions/110.html
+SOAP "CAPEC-110: SQL Injection through SOAP Parameter Tampering"
+
+\bibitem{MITREM}
+\_\_\_\_\_.  INTERNET:  http://cwe.mitre.org/data/definitions/89.html
+"CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+
+\bibitem{MITREN}
+\_\_\_\_\_.  INTERNET:  http://cwe.mitre.org/data/definitions/929.html
+"CWE-88: Argument Injection or Modification"
+
+CWE-90: Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection')
+
+
+%==============================================================================
+%==============================================================================
+\end{thebibliography}
 
 %==============================================================================
 %==============================================================================
