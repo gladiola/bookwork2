@@ -29,7 +29,7 @@ The LaTeX hook system uses internal commands like `\__hook`, `\label@hook`, and 
 
 ## Solution
 
-Instead of redefining the entire `\chapter` command, we now use the `xpatch` package to surgically patch the internal chapter-related commands:
+Instead of redefining the entire `\chapter` command, we now use the `xpatch` package to patch the internal chapter-related commands:
 
 1. **`\@chapter`** - the internal command for numbered chapters
 2. **`\@schapter`** - the internal command for starred (unnumbered) chapters
@@ -40,11 +40,11 @@ This approach:
 - Preserves LaTeX's internal hook system
 - Allows hyperref's patches to work correctly
 - Maintains compatibility with other packages that hook into chapter processing
-- Inserts our custom code at strategic points without breaking existing functionality
+- Inserts our custom code without breaking existing functionality
 
 ## Implementation Details
 
-The new code in `ut.tex` (lines 113-148):
+The new code in `ut.tex` (lines 113-148) uses `\xpretocmd` to prepend code at the very beginning of `\@chapter` and `\@schapter`, which is more robust than searching for specific token sequences:
 
 ```latex
 \usepackage{xpatch}
@@ -53,17 +53,15 @@ The new code in `ut.tex` (lines 113-148):
 % Storage for chapter title
 \newcommand{\currentchaptertitle}{}
 
-% Capture title in \@chapter by patching to insert our code before \if@openright
-\xpatchcmd{\@chapter}%
-  {\if@openright}%
-  {\renewcommand{\currentchaptertitle}{##1}\if@openright}%
-  {}{\PackageWarning{ut}{Failed to patch @chapter}}
+% Capture title in \@chapter by prepending code at the beginning
+\xpretocmd{\@chapter}{%
+  \renewcommand{\currentchaptertitle}{##1}%
+}{}{\PackageWarning{ut}{Failed to patch @chapter}}
 
-% Capture title in \@schapter by patching to insert our code before \@mkboth
-\xpatchcmd{\@schapter}%
-  {\@mkboth}%
-  {\renewcommand{\currentchaptertitle}{##1}\@mkboth}%
-  {}{\PackageWarning{ut}{Failed to patch @schapter}}
+% Capture title in \@schapter by prepending code at the beginning
+\xpretocmd{\@schapter}{%
+  \renewcommand{\currentchaptertitle}{##1}%
+}{}{\PackageWarning{ut}{Failed to patch @schapter}}
 
 % Write separator after formatting numbered chapters
 \xapptocmd{\@makechapterhead}{%

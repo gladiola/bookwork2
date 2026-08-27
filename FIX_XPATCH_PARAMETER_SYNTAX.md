@@ -7,72 +7,72 @@ After adjusting endnotes in `ut.tex`, a LaTeX compilation error occurred:
 ```
 ! Extra }, or forgotten \endgroup.
 \@schapter ...renewcommand {\currentchaptertitle }
-                                                  {#1}\@mkboth \@gobbletwo \...
+                                                  {##1}\@mkboth \@gobbletwo \...
 l.208 \tableofcontents
 ```
 
 This error happened when `\tableofcontents` was called, which internally uses `\@schapter` (the command for unnumbered/starred chapters).
 
-## Root Cause
-
-The error was caused by incorrect parameter reference syntax in the `\xpatchcmd` calls. In the original code (lines 123-133 of `ut.tex`), the patches used `#1` to refer to the argument of the commands being patched:
-
-```latex
-\xpatchcmd{\@chapter}%
-  {\if@openright}%
-  {\renewcommand{\currentchaptertitle}{#1}\if@openright}% ❌ Wrong: #1
-  {}{\PackageWarning{ut}{Failed to patch @chapter}}
-
-\xpatchcmd{\@schapter}%
-  {\@mkboth}%
-  {\renewcommand{\currentchaptertitle}{#1}\@mkboth}% ❌ Wrong: #1
-  {}{\PackageWarning{ut}{Failed to patch @schapter}}
+Additionally, a warning was present:
+```
+Package ut Warning: Failed to patch @chapter on input line 126.
 ```
 
-However, when using `\xpatchcmd` (and similar macro patching commands from the `xpatch` package), the replacement text is being defined within another macro context. In LaTeX, when you want to refer to parameters that will be used when the patched command is eventually called, you must use `##1` (double hash) instead of `#1` (single hash).
+## Root Cause
 
-Using `#1` causes LaTeX to think it's referring to a parameter of `\xpatchcmd` itself (which doesn't exist), resulting in malformed code that produces the "Extra }, or forgotten \endgroup" error.
+The original approach used `\xpatchcmd` to search for specific token sequences (`\if@openright` in `\@chapter` and `\@mkboth` in `\@schapter`) and replace them with patched versions. However, these specific sequences may not exist exactly as written in the internal definitions after hyperref and other packages have modified the commands. This caused the patches to fail.
+
+When patches fail, the command remains unmodified, but the failure can lead to inconsistent behavior. Even when patches partially succeed, the insertion of complex replacement code into the middle of existing command definitions can cause brace mismatches and other structural issues.
 
 ## Solution
 
-Change `#1` to `##1` in both the `\@chapter` and `\@schapter` patches:
+Instead of using `\xpatchcmd` to search for specific token sequences, we now use `\xpretocmd` to prepend code at the very beginning of the commands. This approach is more robust because:
+
+1. It doesn't depend on finding specific internal tokens that might vary between LaTeX distributions or after package modifications
+2. It cleanly adds code at the beginning without disrupting the internal structure
+3. It still preserves LaTeX's hook system and maintains compatibility with hyperref
+
+The new code:
 
 ```latex
-\xpatchcmd{\@chapter}%
-  {\if@openright}%
-  {\renewcommand{\currentchaptertitle}{##1}\if@openright}% ✓ Correct: ##1
-  {}{\PackageWarning{ut}{Failed to patch @chapter}}
+% Patch \@chapter (regular chapters) to capture title
+\xpretocmd{\@chapter}{%
+  \renewcommand{\currentchaptertitle}{##1}%
+}{}{\PackageWarning{ut}{Failed to patch @chapter}}
 
-\xpatchcmd{\@schapter}%
-  {\@mkboth}%
-  {\renewcommand{\currentchaptertitle}{##1}\@mkboth}% ✓ Correct: ##1
-  {}{\PackageWarning{ut}{Failed to patch @schapter}}
+% Patch \@schapter (starred chapters) to capture title
+\xpretocmd{\@schapter}{%
+  \renewcommand{\currentchaptertitle}{##1}%
+}{}{\PackageWarning{ut}{Failed to patch @schapter}}
 ```
 
-## Technical Explanation
+## Parameter Reference Syntax
 
-In LaTeX macro programming:
-- `#1` in a definition refers to the first parameter of *that* definition
-- When you're building replacement text that will itself become part of a definition, you need `##1` 
-- The `##` is reduced to `#` during the first expansion, so the final patched command sees `#1` correctly
+The code correctly uses `##1` (double hash) instead of `#1` (single hash) in the replacement text. This is required when using `\xpretocmd` (and similar macro patching commands from the `xpatch` package) because:
+
+- The replacement text is being defined within another macro context
+- During macro expansion, `##` is reduced to `#`
+- The final patched command sees the correct `#1` parameter reference
 
 Think of it this way:
-1. `\xpatchcmd` constructs new replacement code
+1. `\xpretocmd` constructs new replacement code
 2. During construction, `##1` becomes `#1`  
 3. When the patched command is later called, it sees the correct `#1` parameter reference
 
 ## Files Changed
 
-1. **`KandRStyle/ut.tex`** (lines 125, 132)
-   - Changed `{#1}` to `{##1}` in both `\@chapter` and `\@schapter` patches
+1. **`KandRStyle/ut.tex`** (lines 121-133)
+   - Changed from `\xpatchcmd` to `\xpretocmd` for both `\@chapter` and `\@schapter`
+   - Removed search patterns that were causing failures
+   - Maintained correct `##1` parameter reference syntax
 
 2. **`FIX_LATEX_HOOK_ERROR.md`**
-   - Updated documentation to reflect the correct syntax
-   - Added a new section explaining the parameter reference fix
+   - Updated documentation to reflect the new `\xpretocmd` approach
 
 ## Expected Result
 
 After this fix:
+- ✓ No more "Failed to patch" warnings
 - ✓ `\tableofcontents` compiles without errors
 - ✓ Unnumbered chapters (like Contents, Index, etc.) are properly handled
 - ✓ Chapter titles are correctly captured for endnote organization
