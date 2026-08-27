@@ -32,42 +32,44 @@ Instead of using `\xpatchcmd` to search for specific token sequences, we now use
 2. It cleanly adds code at the beginning without disrupting the internal structure
 3. It still preserves LaTeX's hook system and maintains compatibility with hyperref
 
-The new code:
+The corrected code:
 
 ```latex
 % Patch \@chapter (regular chapters) to capture title
 \xpretocmd{\@chapter}{%
-  \renewcommand{\currentchaptertitle}{##1}%
+  \renewcommand{\currentchaptertitle}{#1}%
 }{}{\PackageWarning{ut}{Failed to patch @chapter}}
 
 % Patch \@schapter (starred chapters) to capture title
 \xpretocmd{\@schapter}{%
-  \renewcommand{\currentchaptertitle}{##1}%
+  \renewcommand{\currentchaptertitle}{#1}%
 }{}{\PackageWarning{ut}{Failed to patch @schapter}}
 ```
 
 ## Parameter Reference Syntax
 
-The code correctly uses `##1` (double hash) instead of `#1` (single hash) in the replacement text. This is required when using `\xpretocmd` (and similar macro patching commands from the `xpatch` package) because:
+**CORRECTION**: The code now correctly uses `#1` (single hash) instead of `##1` (double hash) in the replacement text. The previous documentation incorrectly stated that `##1` was needed.
 
-- The replacement text is being defined within another macro context
-- During macro expansion, `##` is reduced to `#`
-- The final patched command sees the correct `#1` parameter reference
+The correct syntax is `#1` because:
 
-Think of it this way:
-1. `\xpretocmd` constructs new replacement code
-2. During construction, `##1` becomes `#1`  
-3. When the patched command is later called, it sees the correct `#1` parameter reference
+- When using `\xpretocmd` from the `xpatch` package, the replacement code is given as a direct argument, not wrapped in an additional `\newcommand` or similar macro definition
+- The `#1` directly refers to the parameter of the command being patched (`\@chapter` or `\@schapter`)
+- Using `##1` would create a literal `##1` in the replacement code, which causes "Illegal parameter number" errors when the .ent file is read back
+
+The error occurred because `##1` was being written literally to the `.ent` file as part of `\currentchaptertitle`, and when LaTeX tried to read and process that file, it encountered `\enotechapsep{1}{##1}` which is invalid - `##1` only makes sense inside a `\newcommand` definition, not in normal LaTeX code
 
 ## Files Changed
 
 1. **`KandRStyle/ut.tex`** (lines 121-133)
    - Changed from `\xpatchcmd` to `\xpretocmd` for both `\@chapter` and `\@schapter`
    - Removed search patterns that were causing failures
-   - Maintained correct `##1` parameter reference syntax
+   - Corrected parameter reference syntax from `##1` to `#1` to fix "Illegal parameter number" error
 
 2. **`FIX_LATEX_HOOK_ERROR.md`**
    - Updated documentation to reflect the new `\xpretocmd` approach
+
+3. **`FIX_XPATCH_PARAMETER_SYNTAX.md`**
+   - Corrected documentation to explain why `#1` (not `##1`) is the correct syntax
 
 ## Expected Result
 
