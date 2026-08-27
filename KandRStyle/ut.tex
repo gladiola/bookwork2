@@ -133,12 +133,12 @@ bindingoffset=0.12in]{geometry}
 
 % Patch \@makechapterhead to write separator for numbered chapters
 \xapptocmd{\@makechapterhead}{%
-  \immediate\write\@enotes{\string\enotechapsep{\arabic{chapter}}{\unexpanded\expandafter{\currentchaptertitle}}}%
+  \immediate\write\@enotes{\string\enotechapsep{\arabic{chapter}}{\detokenize\expandafter{\currentchaptertitle}}}%
 }{}{\PackageWarning{ut}{Failed to patch @makechapterhead}}
 
 % Patch \@makeschapterhead to write separator for starred chapters
 \xapptocmd{\@makeschapterhead}{%
-  \immediate\write\@enotes{\string\enotechapsep{0}{\unexpanded\expandafter{\currentchaptertitle}}}%
+  \immediate\write\@enotes{\string\enotechapsep{0}{\detokenize\expandafter{\currentchaptertitle}}}%
 }{}{\PackageWarning{ut}{Failed to patch @makeschapterhead}}
 
 \makeatother

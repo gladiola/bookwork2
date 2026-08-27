@@ -31,33 +31,41 @@ Previous fixes correctly changed the `\xpretocmd` patches to use `#1` instead of
 
 ## Solution
 
-The fix uses `\unexpanded\expandafter` when writing `\currentchaptertitle` to the `.ent` file:
+The fix uses `\detokenize\expandafter` when writing `\currentchaptertitle` to the `.ent` file:
 
 ```latex
 % Patch \@makechapterhead to write separator for numbered chapters
 \xapptocmd{\@makechapterhead}{%
-  \immediate\write\@enotes{\string\enotechapsep{\arabic{chapter}}{\unexpanded\expandafter{\currentchaptertitle}}}%
+  \immediate\write\@enotes{\string\enotechapsep{\arabic{chapter}}{\detokenize\expandafter{\currentchaptertitle}}}%
 }{}{\PackageWarning{ut}{Failed to patch @makechapterhead}}
 
 % Patch \@makeschapterhead to write separator for starred chapters
 \xapptocmd{\@makeschapterhead}{%
-  \immediate\write\@enotes{\string\enotechapsep{0}{\unexpanded\expandafter{\currentchaptertitle}}}%
+  \immediate\write\@enotes{\string\enotechapsep{0}{\detokenize\expandafter{\currentchaptertitle}}}%
 }{}{\PackageWarning{ut}{Failed to patch @makeschapterhead}}
 ```
 
 ### How This Fix Works
 
-1. `\expandafter` expands `\currentchaptertitle` to its value (the chapter title with any internal commands)
-2. `\unexpanded` protects that value from further expansion during the `\write` operation
-3. When `\write` processes the content, `#` characters are automatically doubled to `##`
-4. The `.ent` file now contains: `\enotechapsep{1}{...##1...}` instead of `\enotechapsep{1}{...#1...}`
-5. When LaTeX reads the `.ent` file back, `##` is converted back to `#`, making the commands valid again
+1. `\expandafter` expands `\currentchaptertitle` to its value (the chapter title text)
+2. `\detokenize` converts all tokens to character codes (catcode 12), making them safe to write
+3. This converts any LaTeX commands and special characters (including `#`, `\`, `{`, `}`) to plain text
+4. The `.ent` file now contains: `\enotechapsep{1}{Building a Baseline for...}` as plain text
+5. When LaTeX reads the `.ent` file back, it sees the chapter title as a simple string argument
 
-### Why \unexpanded\expandafter Is Needed
+### Why \detokenize\expandafter Is Needed
 
 - **Without \expandafter**: `\currentchaptertitle` would be written literally as a command name, not its value
-- **Without \unexpanded**: Any `#` characters in the expanded title would be written as single `#`, causing the error
-- **Together**: We get the chapter title text with internal commands intact, but with `#` characters properly doubled
+- **Without \detokenize**: Titlesec internal commands like `\ttl@savemark` with parameter references (`#1`) would be written to the file, causing "Illegal parameter number" errors when read back
+- **Together**: We get the chapter title as plain text, with no LaTeX commands or special characters that could cause errors
+
+### Why \unexpanded\expandafter Wasn't Sufficient
+
+The previous fix using `\unexpanded\expandafter` didn't fully protect the chapter title because:
+- Titlesec's internal formatting commands (like `\ttl@savemark`) were still being included in the expanded title
+- These commands contain parameter references (`#1`) that need special handling
+- Even with `\unexpanded`, these parameter references weren't being properly escaped
+- `\detokenize` completely converts everything to safe plain text, eliminating all LaTeX command structures
 
 ## Files Changed
 
@@ -87,11 +95,19 @@ When using `\immediate\write`:
 
 ### When to Use This Pattern
 
-Use `\unexpanded\expandafter{\commandname}` when:
+Use `\detokenize\expandafter{\commandname}` when:
 - Writing command values to auxiliary files (`.aux`, `.toc`, `.ent`, etc.)
-- The command value might contain `#` characters
-- You want the actual content, not the command name itself
-- You need to protect the content from causing "Illegal parameter number" errors
+- The command value might contain LaTeX commands or special characters
+- You want the actual text content, not the command name itself
+- You need to protect the content from causing "Illegal parameter number" or other LaTeX errors
+- The content might include titlesec or other package internal commands with parameter references
+
+Use `\unexpanded\expandafter{\commandname}` when:
+- You need to preserve LaTeX command structure in the auxiliary file
+- The commands don't contain problematic parameter references
+- You want the content to be re-executed when the auxiliary file is read back
+
+For chapter titles in endnote files, `\detokenize` is preferred because it completely eliminates any LaTeX command structure that might interfere with compilation.
 
 ## Compilation
 
