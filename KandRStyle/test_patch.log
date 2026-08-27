@@ -1,0 +1,95 @@
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.8.27)  27 AUG 2026 14:07
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**test_patch.tex
+(./test_patch.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count183
+\c@chapter=\count184
+\c@section=\count185
+\c@subsection=\count186
+\c@subsubsection=\count187
+\c@paragraph=\count188
+\c@subparagraph=\count189
+\c@figure=\count190
+\c@table=\count191
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2023/10/27 v2.16 Sectioning titles
+\ttl@box=\box51
+\beforetitleunit=\skip50
+\aftertitleunit=\skip51
+\ttl@plus=\dimen141
+\ttl@minus=\dimen142
+\ttl@toksa=\toks17
+\titlewidth=\dimen143
+\titlewidthlast=\dimen144
+\titlewidthfirst=\dimen145
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xpatch/xpatch.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-01-22 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2024-01-04 L3 backend support: XeTeX
+\g__graphics_track_int=\count192
+\l__pdf_internal_box=\box52
+\g__pdf_backend_object_int=\count193
+\g__pdf_backend_annotation_int=\count194
+\g__pdf_backend_link_int=\count195
+))
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2023-10-10 L3 Experimental document command parser
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count196
+))
+(/usr/share/texlive/texmf-dist/tex/latex/endnotes/endnotes.sty
+Invalid UTF-8 byte or sequence at line 118 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 118 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 121 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 121 replaced by U+FFFD.
+Package: endnotes 2020-01-02 endnotes package
+\c@endnote=\count197
+\endnotesep=\dimen146
+\@enotes=\write3
+)
+> \@chapter=macro:
+[#1]#2->\ifnum \c@secnumdepth >\m@ne \if@mainmatter \refstepcounter {chapter}\t
+ypeout {\@chapapp \space \thechapter .}\addcontentsline {toc}{chapter}{\protect
+ \numberline {\thechapter }#1}\else \addcontentsline {toc}{chapter}{#1}\fi \els
+e \addcontentsline {toc}{chapter}{#1}\fi \chaptermark {#1}\addtocontents {lof}{
+\protect \addvspace {10\p@ }}\addtocontents {lot}{\protect \addvspace {10\p@ }}
+\if@twocolumn \@topnewpage [\@makechapterhead {#2}]\else \@makechapterhead {#2}
+\@afterheading \fi .
+l.13 \show\@chapter
+                   
+? 
+! Emergency stop.
+l.13 
+     
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 1321 strings out of 476878
+ 21938 string characters out of 5805249
+ 1915627 words of memory out of 5000000
+ 23299 multiletter control sequences out of 15000+600000
+ 558077 words of font info for 37 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 65i,0n,79p,234b,40s stack positions out of 10000i,1000n,20000p,200000b,200000s
+No pages of output.
