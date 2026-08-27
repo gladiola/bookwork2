@@ -120,17 +120,17 @@ bindingoffset=0.12in]{geometry}
 
 % Patch \@chapter (regular chapters) to capture title
 % \@chapter takes one argument (the title)
-\xpatchcmd{\@chapter}%
-  {\if@openright}% search for this at the beginning of \@chapter
-  {\renewcommand{\currentchaptertitle}{##1}\if@openright}% prepend our code
-  {}{\PackageWarning{ut}{Failed to patch @chapter}}
+% Using \xpretocmd to prepend code at the beginning (more robust than searching for specific tokens)
+\xpretocmd{\@chapter}{%
+  \renewcommand{\currentchaptertitle}{##1}%
+}{}{\PackageWarning{ut}{Failed to patch @chapter}}
 
 % Patch \@schapter (starred chapters) to capture title
 % \@schapter takes one argument (the title)
-\xpatchcmd{\@schapter}%
-  {\@mkboth}% search for this in \@schapter
-  {\renewcommand{\currentchaptertitle}{##1}\@mkboth}% prepend our code
-  {}{\PackageWarning{ut}{Failed to patch @schapter}}
+% Using \xpretocmd to prepend code at the beginning (more robust than searching for specific tokens)
+\xpretocmd{\@schapter}{%
+  \renewcommand{\currentchaptertitle}{##1}%
+}{}{\PackageWarning{ut}{Failed to patch @schapter}}
 
 % Patch \@makechapterhead to write separator for numbered chapters
 \xapptocmd{\@makechapterhead}{%
