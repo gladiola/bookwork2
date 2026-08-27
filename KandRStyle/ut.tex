@@ -114,23 +114,37 @@ bindingoffset=0.12in]{geometry}
 
 % Hook into \chapter to capture chapter titles and write separator
 % Must be done after hyperref is loaded to work with hyperref's patches
+% Using xpatch for better argument handling
+\usepackage{xpatch}
 \makeatletter
-\let\oldchapter\chapter
-\renewcommand{\chapter}{%
-  \@ifstar{\starchapter}{\nostarchapter}%
-}
-\newcommand{\starchapter}[1]{%
-  \renewcommand{\currentchaptertitle}{#1}%
-  \oldchapter*{#1}%
-  % Write separator after starting new chapter (for starred chapters, use 0)
-  \immediate\write\@enotes{\string\enotechapsep{0}{#1}}%
-}
-\newcommand{\nostarchapter}[1]{%
-  \renewcommand{\currentchaptertitle}{#1}%
-  \oldchapter{#1}%
-  % Write separator after starting new chapter (counter is now incremented)
-  \immediate\write\@enotes{\string\enotechapsep{\arabic{chapter}}{#1}}%
-}
+
+% Storage for chapter title
+\newcommand{\currentchaptertitle}{}
+
+% Patch \@chapter (regular chapters) to capture title
+% \@chapter takes one argument (the title)
+\xpatchcmd{\@chapter}%
+  {\if@openright}% search for this at the beginning of \@chapter
+  {\renewcommand{\currentchaptertitle}{#1}\if@openright}% prepend our code
+  {}{\PackageWarning{ut}{Failed to patch @chapter}}
+
+% Patch \@schapter (starred chapters) to capture title
+% \@schapter takes one argument (the title)
+\xpatchcmd{\@schapter}%
+  {\@mkboth}% search for this in \@schapter
+  {\renewcommand{\currentchaptertitle}{#1}\@mkboth}% prepend our code
+  {}{\PackageWarning{ut}{Failed to patch @schapter}}
+
+% Patch \@makechapterhead to write separator for numbered chapters
+\xapptocmd{\@makechapterhead}{%
+  \immediate\write\@enotes{\string\enotechapsep{\arabic{chapter}}{\currentchaptertitle}}%
+}{}{\PackageWarning{ut}{Failed to patch @makechapterhead}}
+
+% Patch \@makeschapterhead to write separator for starred chapters
+\xapptocmd{\@makeschapterhead}{%
+  \immediate\write\@enotes{\string\enotechapsep{0}{\currentchaptertitle}}%
+}{}{\PackageWarning{ut}{Failed to patch @makeschapterhead}}
+
 \makeatother
 
 \usepackage{xurl}
