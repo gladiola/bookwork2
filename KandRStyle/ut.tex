@@ -122,14 +122,14 @@ bindingoffset=0.12in]{geometry}
 % \@chapter takes one argument (the title)
 % Using \xpretocmd to prepend code at the beginning (more robust than searching for specific tokens)
 \xpretocmd{\@chapter}{%
-  \renewcommand{\currentchaptertitle}{##1}%
+  \renewcommand{\currentchaptertitle}{#1}%
 }{}{\PackageWarning{ut}{Failed to patch @chapter}}
 
 % Patch \@schapter (starred chapters) to capture title
 % \@schapter takes one argument (the title)
 % Using \xpretocmd to prepend code at the beginning (more robust than searching for specific tokens)
 \xpretocmd{\@schapter}{%
-  \renewcommand{\currentchaptertitle}{##1}%
+  \renewcommand{\currentchaptertitle}{#1}%
 }{}{\PackageWarning{ut}{Failed to patch @schapter}}
 
 % Patch \@makechapterhead to write separator for numbered chapters
