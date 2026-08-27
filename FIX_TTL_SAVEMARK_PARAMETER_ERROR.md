@@ -34,15 +34,19 @@ Previous fixes correctly changed the `\xpretocmd` patches to use `#1` instead of
 The fix uses `\detokenize\expandafter` when writing `\currentchaptertitle` to the `.ent` file:
 
 ```latex
-% Patch \@makechapterhead to write separator for numbered chapters
-\xapptocmd{\@makechapterhead}{%
-  \immediate\write\@enotes{\string\enotechapsep{\arabic{chapter}}{\detokenize\expandafter{\currentchaptertitle}}}%
-}{}{\PackageWarning{ut}{Failed to patch @makechapterhead}}
-
-% Patch \@makeschapterhead to write separator for starred chapters
-\xapptocmd{\@makeschapterhead}{%
+% Handle starred chapters (\chapter*)
+\newcommand{\@starred@chapter}[1]{%
+  \renewcommand{\currentchaptertitle}{#1}%
+  \orig@chapter*{#1}%
   \immediate\write\@enotes{\string\enotechapsep{0}{\detokenize\expandafter{\currentchaptertitle}}}%
-}{}{\PackageWarning{ut}{Failed to patch @makeschapterhead}}
+}
+
+% Handle regular chapters (\chapter)
+\newcommand{\@unstarred@chapter}[1]{%
+  \renewcommand{\currentchaptertitle}{#1}%
+  \orig@chapter{#1}%
+  \immediate\write\@enotes{\string\enotechapsep{\arabic{chapter}}{\detokenize\expandafter{\currentchaptertitle}}}%
+}
 ```
 
 ### How This Fix Works
@@ -69,11 +73,11 @@ The previous fix using `\unexpanded\expandafter` didn't fully protect the chapte
 
 ## Files Changed
 
-1. **`KandRStyle/ut.tex`** (lines 136, 141)
-   - Added `\unexpanded\expandafter` to protect chapter titles when writing to `.ent` file
+1. **`KandRStyle/ut.tex`** (lines 131, 138)
+   - Changed `\unexpanded\expandafter` to `\detokenize\expandafter` to protect chapter titles when writing to `.ent` file
    
 2. **Auxiliary files cleaned**
-   - Deleted `ut.ent`, `ut.aux`, `ut.out`, `ut.toc` to force regeneration with correct protection
+   - Deleted `ut.ent`, `ut.aux`, `ut.out`, `ut.toc`, `ut.idx`, `ut.ilg`, `ut.ist`, `ut.glo`, `ut.ind` to force regeneration with correct protection
 
 ## Result
 
