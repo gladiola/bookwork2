@@ -54,28 +54,65 @@ bindingoffset=0.12in]{geometry}
 
 \usepackage{float}
 %---------- ENDNOTES -----------------
-% Endnotes: inline [n], printed later
+% Endnotes: inline [n], collected and printed at end organized by chapter
 \usepackage{endnotes}
-\renewcommand{\enoteheading}{} % suppress heading
 
 % Mark in the text: [n]
 \renewcommand{\enoteformat}{\textnormal{[\theenmark]}}
 
-% If you have an "endnotes printed later" style, this helps ensure correct marks
+% Ensure correct marks in text
 \makeatletter
 \renewcommand{\@endnotemark}{\textnormal{[\theenmark]}}
-\makeatother
 
-% Print endnotes (call once per chapter, at end)
-\newcommand{\printchapterendnotes}{%
-  \cleardoublepage
-  \begingroup
-    \chapter*{Endnotes}%
-    \addcontentsline{toc}{chapter}{Endnotes}%
-    \theendnotes
-  \endgroup
-  \setcounter{endnote}{0}%
+% Counter to track chapter sections
+\newcounter{endnotechapter}
+\setcounter{endnotechapter}{0}
+
+% Storage for chapter titles
+\newcommand{\currentchaptertitle}{}
+
+% Hook into \chapter to capture chapter titles
+\let\oldchapter\chapter
+\renewcommand{\chapter}{%
+  \@ifstar{\starchapter}{\nostarchapter}%
 }
+\newcommand{\starchapter}[1]{%
+  \renewcommand{\currentchaptertitle}{#1}%
+  \oldchapter*{#1}%
+}
+\newcommand{\nostarchapter}[1]{%
+  \renewcommand{\currentchaptertitle}{#1}%
+  \oldchapter{#1}%
+}
+
+% Mark end of chapter: store chapter info and prepare for next chapter
+\newcommand{\markchapterendnotes}{%
+  % Flush current endnotes to temp file with chapter marker
+  \immediate\write\@enotes{\string\endnotesep{\arabic{chapter}}{\currentchaptertitle}}%
+  % Reset counter for next chapter
+  \setcounter{endnote}{0}%
+  \stepcounter{endnotechapter}%
+}
+
+% Separator command (written to .ent file, processed during print)
+\newcommand{\endnotesep}[2]{%
+  \ifnum#1>0
+    \subsection*{Chapter #1: #2}%
+  \else
+    \subsection*{#2}%
+  \fi
+}
+
+% Print all endnotes organized by chapter (called once at end)
+\newcommand{\printallendnotesbychapter}{%
+  \cleardoublepage
+  \chapter*{Endnotes}%
+  \addcontentsline{toc}{chapter}{Endnotes}%
+  \renewcommand{\enoteheading}{}% Suppress default heading
+  \theendnotes
+}
+
+\makeatother
 
 %--------- Figures ----------------
 \usepackage{rotating}
@@ -190,7 +227,7 @@ We decided to set a previous book in fonts by Erik Spiekermann after seeing ``He
 
 For typesetting and formatting, we chose LaTex.  We repeatedly consulted various AI and Internet sources for \gls{coding} the document which generated the paper.  For bibliographic formatting, we frequently used MyBib. \endnote{Mybib. “MyBib Bibliography Generator.” MyBib.Com, 13 July 2018, \url{https://www.mybib.com}. Accessed 12 July 2026.}
 
-\printchapterendnotes
+\markchapterendnotes
 %----------------------------------------------------------------------------------------
 %	Introduction
 %----------------------------------------------------------------------------------------
@@ -199,7 +236,7 @@ For typesetting and formatting, we chose LaTex.  We repeatedly consulted various
 
 Your introduction text goes here...
 
-\printchapterendnotes
+\markchapterendnotes
 \mainmatter
 
 
@@ -414,7 +451,7 @@ When my contacts revealed to me the hacker name of the person who attacked the s
 
 These attacks, and those \gls{attack} tools, became the focus of my research into injection attacks.  I have become curious about evaluating the effectiveness of these automated tools.  Seeing so many attacks, it became clear that some were better than others.  The better the automated tool, I suggested, perhaps the lesser the skill an attacker needed.  While a true blackhat might not need much of anything to carry out his own custom-built attacks, many more uneducated, untrained, and inexperienced skiddies could carry out attacks with these automated tools.  Type in a website address of a target destination and click a button.  For some automated \gls{attack} tools, that's all there was to it.  I have decided to study those.
 
-\printchapterendnotes
+\markchapterendnotes
 
 
 %----------------------------------------------------------------------------------------
@@ -1616,7 +1653,7 @@ CWE-90: Improper Neutralization of Special Elements used in an LDAP Query ('LDAP
 %==============================================================================
 %----------------------------------------------------------------------------------------
 
-\printchapterendnotes
+\markchapterendnotes
 
 %	CHAPTER
 %----------------------------------------------------------------------------------------
@@ -3973,7 +4010,7 @@ attacks could also flow in other directions like credential stuffing attacks or 
 
 These hint in the numbers can suggest to us an illustration that the overall classification of an \gls{attack} may not offer direct insight on all of the tactics and techniques that concern us as defenders.  This shouldn't surprise us; we see plenty of evidence in MITRE ATT\&CK, for instance, that most \gls{apt}s use several layers of \gls{ttps}.
 
-\printchapterendnotes
+\markchapterendnotes
 
 
 
@@ -4789,7 +4826,7 @@ Online MAN pages were available at: \url{man.freebsd.org} with an interface that
 \subsection{Websites}
 When planning and exploring our use of swap, we consulted:  \url{https://www.cyberciti.biz/faq/create-a-freebsd-swap-file/}. \\
 
-\printchapterendnotes
+\markchapterendnotes
 
 
 
@@ -4988,7 +5025,7 @@ FreeBSD Handbook, Storage, \url{https://docs.freebsd.org/en/books/handbook/disks
 %----------------------------------------------------------------------------------------
 Text with\endnote{First note.} inline references.
 More text\endnote{Second note.}
-\printchapterendnotes
+\markchapterendnotes
 
 
 %----------------------------------------------------------------------------------------
@@ -5193,14 +5230,14 @@ C.  URLs – FreeBSD man pages for above.
 %----------------------------------------------------------------------------------------
 Text with\endnote{First note.} inline references.
 More text\endnote{Second note.}
-\printchapterendnotes
+\markchapterendnotes
 
 
 
 
 \backmatter
+\printallendnotesbychapter
 \printglossary[title=Glossary]
-\printchapterendnotes
 \printindex
 
 \end{document}
