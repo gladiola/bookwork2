@@ -56,13 +56,13 @@ The new code in `ut.tex` (lines 113-148):
 % Capture title in \@chapter by patching to insert our code before \if@openright
 \xpatchcmd{\@chapter}%
   {\if@openright}%
-  {\renewcommand{\currentchaptertitle}{#1}\if@openright}%
+  {\renewcommand{\currentchaptertitle}{##1}\if@openright}%
   {}{\PackageWarning{ut}{Failed to patch @chapter}}
 
 % Capture title in \@schapter by patching to insert our code before \@mkboth
 \xpatchcmd{\@schapter}%
   {\@mkboth}%
-  {\renewcommand{\currentchaptertitle}{#1}\@mkboth}%
+  {\renewcommand{\currentchaptertitle}{##1}\@mkboth}%
   {}{\PackageWarning{ut}{Failed to patch @schapter}}
 
 % Write separator after formatting numbered chapters
@@ -117,3 +117,23 @@ After this fix:
 
 - The microtype warnings about unknown slot numbers are unrelated to this fix and are harmless warnings about character encodings
 - The font shape warning is also unrelated and can be addressed separately if needed
+
+## Subsequent Fix: Parameter Reference Syntax
+
+After the initial fix, an additional error was discovered:
+```
+! Extra }, or forgotten \endgroup.
+\@schapter ...renewcommand {\currentchaptertitle }
+                                                  {#1}\@mkboth \@gobbletwo \...
+l.208 \tableofcontents
+```
+
+This occurred because in `\xpatchcmd`, when referring to parameters of the command being patched in the replacement text, you must use `##1` (double hash) instead of `#1` (single hash). This is because the replacement text is being defined within another macro context.
+
+The fix: Change `#1` to `##1` in both the `\@chapter` and `\@schapter` patch commands (lines 125 and 132 in `ut.tex`). The correct syntax is:
+```latex
+{\renewcommand{\currentchaptertitle}{##1}\if@openright}
+{\renewcommand{\currentchaptertitle}{##1}\@mkboth}
+```
+
+This is a standard requirement when using `\xpatchcmd` or similar macro patching tools in LaTeX.
