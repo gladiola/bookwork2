@@ -122,14 +122,14 @@ bindingoffset=0.12in]{geometry}
 % \@chapter takes one argument (the title)
 \xpatchcmd{\@chapter}%
   {\if@openright}% search for this at the beginning of \@chapter
-  {\renewcommand{\currentchaptertitle}{#1}\if@openright}% prepend our code
+  {\renewcommand{\currentchaptertitle}{##1}\if@openright}% prepend our code
   {}{\PackageWarning{ut}{Failed to patch @chapter}}
 
 % Patch \@schapter (starred chapters) to capture title
 % \@schapter takes one argument (the title)
 \xpatchcmd{\@schapter}%
   {\@mkboth}% search for this in \@schapter
-  {\renewcommand{\currentchaptertitle}{#1}\@mkboth}% prepend our code
+  {\renewcommand{\currentchaptertitle}{##1}\@mkboth}% prepend our code
   {}{\PackageWarning{ut}{Failed to patch @schapter}}
 
 % Patch \@makechapterhead to write separator for numbered chapters
