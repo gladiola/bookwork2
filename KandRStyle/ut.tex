@@ -71,7 +71,7 @@ bindingoffset=0.12in]{geometry}
 % Storage for chapter titles
 \newcommand{\currentchaptertitle}{}
 
-% Hook into \chapter to capture chapter titles
+% Hook into \chapter to capture chapter titles and write separator
 \let\oldchapter\chapter
 \renewcommand{\chapter}{%
   \@ifstar{\starchapter}{\nostarchapter}%
@@ -79,16 +79,18 @@ bindingoffset=0.12in]{geometry}
 \newcommand{\starchapter}[1]{%
   \renewcommand{\currentchaptertitle}{#1}%
   \oldchapter*{#1}%
+  % Write separator after starting new chapter (for starred chapters, use 0)
+  \immediate\write\@enotes{\string\endnotesep{0}{#1}}%
 }
 \newcommand{\nostarchapter}[1]{%
   \renewcommand{\currentchaptertitle}{#1}%
   \oldchapter{#1}%
+  % Write separator after starting new chapter (counter is now incremented)
+  \immediate\write\@enotes{\string\endnotesep{\arabic{chapter}}{#1}}%
 }
 
-% Mark end of chapter: store chapter info and prepare for next chapter
+% Mark end of chapter: just reset counter for next chapter
 \newcommand{\markchapterendnotes}{%
-  % Flush current endnotes to temp file with chapter marker
-  \immediate\write\@enotes{\string\endnotesep{\arabic{chapter}}{\currentchaptertitle}}%
   % Reset counter for next chapter
   \setcounter{endnote}{0}%
   \stepcounter{endnotechapter}%
