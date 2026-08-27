@@ -128,14 +128,14 @@ bindingoffset=0.12in]{geometry}
 \newcommand{\@starred@chapter}[1]{%
   \renewcommand{\currentchaptertitle}{#1}%
   \orig@chapter*{#1}%
-  \immediate\write\@enotes{\string\enotechapsep{0}{\unexpanded\expandafter{\currentchaptertitle}}}%
+  \immediate\write\@enotes{\string\enotechapsep{0}{\detokenize\expandafter{\currentchaptertitle}}}%
 }
 
 % Handle regular chapters (\chapter)
 \newcommand{\@unstarred@chapter}[1]{%
   \renewcommand{\currentchaptertitle}{#1}%
   \orig@chapter{#1}%
-  \immediate\write\@enotes{\string\enotechapsep{\arabic{chapter}}{\unexpanded\expandafter{\currentchaptertitle}}}%
+  \immediate\write\@enotes{\string\enotechapsep{\arabic{chapter}}{\detokenize\expandafter{\currentchaptertitle}}}%
 }
 
 \makeatother
