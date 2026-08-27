@@ -6,15 +6,16 @@ The endnote system in `ut.tex` has been reorganized so that all endnotes are pri
 
 ## What Changed
 
-### 1. Modified Preamble (lines 56-99, 113-134)
+### 1. Modified Preamble (lines 56-99, 113-148)
 - Replaced the `\printchapterendnotes` command with two new commands:
   - `\markchapterendnotes`: Called at the end of each chapter to reset the endnote counter
   - `\printallendnotesbychapter`: Called once at the end to print all endnotes organized by chapter
   
 - Added a hook to the `\chapter` command that automatically writes chapter separators to the endnotes file
-  - **Important:** The chapter redefinition code is placed *after* the `hyperref` package is loaded (lines 113-134)
-  - This is necessary because `hyperref` patches the `\chapter` command to add internal hooks for cross-references
-  - Redefining `\chapter` before `hyperref` is loaded would cause "Undefined control sequence" errors related to `\__hook label`
+  - **Important:** The chapter patching code is placed *after* the `hyperref` package is loaded (lines 113-148)
+  - Uses the `xpatch` package to patch internal chapter commands (`\@chapter`, `\@schapter`, `\@makechapterhead`, `\@makeschapterhead`)
+  - This approach preserves LaTeX's internal hook system and avoids breaking hyperref's patches
+  - Previous approach of redefining `\chapter` directly caused "Undefined control sequence" errors related to `\__hook label`
 
 ### 2. Document Body Changes
 Replaced all 9 instances of `\printchapterendnotes` with `\markchapterendnotes`:
