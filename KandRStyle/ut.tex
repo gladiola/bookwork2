@@ -113,33 +113,30 @@ bindingoffset=0.12in]{geometry}
 
 % Hook into \chapter to capture chapter titles and write separator
 % Must be done after hyperref is loaded to work with hyperref's patches
-% Using xpatch for better argument handling
-\usepackage{xpatch}
+% Patching \chapter directly because titlesec rewrites the internal \@chapter command
 \makeatletter
 
-% Patch \@chapter (regular chapters) to capture title
-% \@chapter takes one argument (the title)
-% Using \xpretocmd to prepend code at the beginning (more robust than searching for specific tokens)
-\xpretocmd{\@chapter}{%
+% Save the original \chapter command
+\let\orig@chapter\chapter
+
+% Redefine \chapter to capture the title before processing
+\renewcommand{\chapter}{%
+  \@ifstar{\@starred@chapter}{\@unstarred@chapter}%
+}
+
+% Handle starred chapters (\chapter*)
+\newcommand{\@starred@chapter}[1]{%
   \renewcommand{\currentchaptertitle}{#1}%
-}{}{\PackageWarning{ut}{Failed to patch @chapter}}
-
-% Patch \@schapter (starred chapters) to capture title
-% \@schapter takes one argument (the title)
-% Using \xpretocmd to prepend code at the beginning (more robust than searching for specific tokens)
-\xpretocmd{\@schapter}{%
-  \renewcommand{\currentchaptertitle}{#1}%
-}{}{\PackageWarning{ut}{Failed to patch @schapter}}
-
-% Patch \@makechapterhead to write separator for numbered chapters
-\xapptocmd{\@makechapterhead}{%
-  \immediate\write\@enotes{\string\enotechapsep{\arabic{chapter}}{\unexpanded\expandafter{\currentchaptertitle}}}%
-}{}{\PackageWarning{ut}{Failed to patch @makechapterhead}}
-
-% Patch \@makeschapterhead to write separator for starred chapters
-\xapptocmd{\@makeschapterhead}{%
+  \orig@chapter*{#1}%
   \immediate\write\@enotes{\string\enotechapsep{0}{\unexpanded\expandafter{\currentchaptertitle}}}%
-}{}{\PackageWarning{ut}{Failed to patch @makeschapterhead}}
+}
+
+% Handle regular chapters (\chapter)
+\newcommand{\@unstarred@chapter}[1]{%
+  \renewcommand{\currentchaptertitle}{#1}%
+  \orig@chapter{#1}%
+  \immediate\write\@enotes{\string\enotechapsep{\arabic{chapter}}{\unexpanded\expandafter{\currentchaptertitle}}}%
+}
 
 \makeatother
 

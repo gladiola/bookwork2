@@ -14,9 +14,9 @@ Accessed
 July
 2026.
 \@endanenote 
-\enotechapsep{0}{Acknowledgements}
 \enotechapsep{0}{Introduction}
-\enotechapsep{1}{#1}
+\enotechapsep{1}{Anecdotes on the Journey}
+\enotechapsep{2}{Towards Experimentation}
 \@doanenote {1}
 macro:->Ullman,
 Larry.
@@ -2235,7 +2235,6 @@ ISBN
 p.
 12.
 \@endanenote 
-\enotechapsep{2}{#1}
 \@doanenote {55}
 macro:->Ibidem.
 \@endanenote 
@@ -3822,6 +3821,7 @@ pp.
 ...
 -357
 \@endanenote 
+\enotechapsep{3}{Building a Baseline for Quantitiative Risk Assessments}
 \@doanenote {1}
 macro:->Monte
 Carlo
@@ -3906,7 +3906,6 @@ CISSP,
 March
 2023.
 \@endanenote 
-\enotechapsep{3}{#1}
 \@doanenote {6}
 macro:->"City
 of
@@ -7158,6 +7157,7 @@ Brink,
 March
 2023.
 \@endanenote 
+\enotechapsep{4}{\gls {amnesiac} Systems in FreeBSD}
 \@doanenote {1}
 macro:->MITRE.
 "Techniques
@@ -8352,7 +8352,6 @@ Accessed
 July
 2026.
 \@endanenote 
-\enotechapsep{4}{#1}
 \@doanenote {62}
 macro:->Vppalapati,
 Mallikarjun.
