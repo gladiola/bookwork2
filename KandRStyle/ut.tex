@@ -80,13 +80,13 @@ bindingoffset=0.12in]{geometry}
   \renewcommand{\currentchaptertitle}{#1}%
   \oldchapter*{#1}%
   % Write separator after starting new chapter (for starred chapters, use 0)
-  \immediate\write\@enotes{\string\chapterendnotesep{0}{#1}}%
+  \immediate\write\@enotes{\string\enotechapsep{0}{#1}}%
 }
 \newcommand{\nostarchapter}[1]{%
   \renewcommand{\currentchaptertitle}{#1}%
   \oldchapter{#1}%
   % Write separator after starting new chapter (counter is now incremented)
-  \immediate\write\@enotes{\string\chapterendnotesep{\arabic{chapter}}{#1}}%
+  \immediate\write\@enotes{\string\enotechapsep{\arabic{chapter}}{#1}}%
 }
 
 % Mark end of chapter: just reset counter for next chapter
@@ -97,7 +97,7 @@ bindingoffset=0.12in]{geometry}
 }
 
 % Separator command (written to .ent file, processed during print)
-\newcommand{\chapterendnotesep}[2]{%
+\newcommand{\enotechapsep}[2]{%
   \ifnum#1>0
     \subsection*{Chapter #1: #2}%
   \else

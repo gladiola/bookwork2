@@ -40,7 +40,7 @@ Replaced all 9 instances of `\printchapterendnotes` with `\markchapterendnotes`:
 2. **At the End of the Document:**
    - `\printallendnotesbychapter` creates a single "Endnotes" chapter
    - It then calls `\theendnotes` which reads the `.ent` file
-   - The `.ent` file contains both separators and endnotes
+   - The `.ent` file contains both separators (via `\enotechapsep`) and endnotes
    - Each chapter's endnotes appear under a subsection header like "Chapter 1: Anecdotes on the Journey"
 
 ## Result
@@ -81,3 +81,7 @@ When testing the compilation, verify:
 - [ ] The "Endnotes" section appears before "Glossary" in the table of contents
 - [ ] Unnumbered chapters (Introduction, etc.) have proper headings in the endnotes section
 - [ ] All endnote references in the main text still link correctly to the endnotes section
+
+## Implementation Note
+
+The internal command `\enotechapsep` (endnote chapter separator) is used to write chapter separators to the `.ent` file. This command name was chosen to avoid conflicts with the endnotes package's internal `\endnotesep` command.
