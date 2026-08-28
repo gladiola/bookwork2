@@ -17,10 +17,38 @@ This folder contains a reference tracking system for managing URL references fou
     - Line Numbers in ut.tex: Comma-separated list of line numbers where this URL appears
 
 ### Python Scripts
+
+#### Core Scripts
 - **create_reference_tracker.py** - Extracts URLs from ut.tex and creates the Reference_Tracking.xlsx workbook
   - Uses relative paths (../../ut.tex) so it works in any environment
-- **download_pdfs.py** - Downloads the first 10 URLs as PDF files with naming convention ref_XXX.pdf
-  - Uses relative paths to find the workbook and store PDFs in the same directory
+  - Identifies all unique URLs and creates tracking sheets
+
+#### Download Scripts
+- **download_pdfs.py** - Simple downloader for the first 10 URLs
+  - Basic script for quick testing
+  - Downloads PDFs as ref_XXX.pdf
+
+- **download_pdfs_range.py** - Advanced downloader with range and browser selection
+  - Supports custom ranges (e.g., references 1-50)
+  - Supports multiple browsers (chromium, firefox, webkit)
+  - Command-line arguments for flexibility
+  
+- **download_wayback_pdfs.py** - Downloads from Internet Archive Wayback Machine
+  - Uses "Accessed" dates from ut.tex to find appropriate snapshots
+  - Falls back to latest snapshot with --force-latest flag
+  - Saves as ref_XXX_wayback.pdf to distinguish from live downloads
+  - Includes snapshot date in workbook notes
+
+### PowerShell Scripts (Windows)
+- **Download-References.ps1** - Windows automation for live URL downloads
+  - Easy-to-use interface with range parameters
+  - Automatic dependency checking and installation
+  - Firefox support by default
+  
+- **Download-References-Wayback.ps1** - Windows automation for Wayback Machine downloads
+  - Retrieves archived versions of URLs
+  - Automatically extracts "Accessed" dates from ut.tex
+  - Can specify custom date or use latest snapshots
 
 ## Statistics
 - **Total unique URLs found:** 157
@@ -28,27 +56,86 @@ This folder contains a reference tracking system for managing URL references fou
 
 ## Usage
 
-### To regenerate the workbook:
+### Initial Setup - Generate the Workbook
+
 ```bash
 cd KandRStyle/research/references
 python3 create_reference_tracker.py
 ```
 
-### To download PDFs (requires internet access):
+### Python Usage (Linux/Mac/Windows with Python)
+
+#### Download live URLs (range with Firefox):
 ```bash
-cd KandRStyle/research/references
-python3 download_pdfs.py
+python3 download_pdfs_range.py --start 1 --end 10 --browser firefox
 ```
 
-**Note:** Both scripts use relative paths and must be run from the `references` directory or with the proper working directory set.
+#### Download from Wayback Machine (uses "Accessed" dates from ut.tex):
+```bash
+python3 download_wayback_pdfs.py --start 1 --end 10 --browser firefox
+```
+
+#### Download from Wayback Machine (force latest if no accessed date):
+```bash
+python3 download_wayback_pdfs.py --start 1 --end 10 --force-latest
+```
+
+#### Download from Wayback Machine (specific date):
+```bash
+python3 download_wayback_pdfs.py --start 1 --end 10 --date 2026-07-12
+```
+
+### PowerShell Usage (Windows - Recommended)
+
+#### Download live URLs:
+```powershell
+.\Download-References.ps1 -StartRef 1 -EndRef 10 -Browser firefox
+```
+
+#### Download all references (1-157):
+```powershell
+.\Download-References.ps1 -StartRef 1 -EndRef 157 -Browser firefox
+```
+
+#### Download from Wayback Machine:
+```powershell
+.\Download-References-Wayback.ps1 -StartRef 1 -EndRef 10 -Browser firefox
+```
+
+#### Download from Wayback Machine with specific date:
+```powershell
+.\Download-References-Wayback.ps1 -StartRef 1 -EndRef 10 -Date "2026-07-12"
+```
+
+#### Download from Wayback Machine, force latest if no accessed date:
+```powershell
+.\Download-References-Wayback.ps1 -StartRef 1 -EndRef 10 -ForceLatest
+```
+
+#### Skip dependency checking (faster if already installed):
+```powershell
+.\Download-References.ps1 -StartRef 1 -EndRef 10 -SkipSetup
+```
+
+**Note:** PowerShell scripts automatically check and install dependencies (Python packages, browsers)
 
 ## PDF Naming Convention
-PDFs are named using the pattern: `ref_XXX.pdf` where XXX is the three-digit ID from the Reference Tracking sheet.
+
+### Live URLs
+PDFs from live downloads are named: `ref_XXX.pdf`
 
 For example:
 - ref_001.pdf corresponds to ID 1 (https://www.mybib.com)
 - ref_002.pdf corresponds to ID 2 (http://php.net/manual/en/security.database.sql-injection.php)
-- And so on...
+
+### Wayback Machine URLs
+PDFs from Wayback Machine are named: `ref_XXX_wayback.pdf`
+
+For example:
+- ref_001_wayback.pdf corresponds to ID 1 archived version
+- ref_002_wayback.pdf corresponds to ID 2 archived version
+
+The workbook Notes column includes the snapshot date for Wayback downloads.
 
 ## First 10 URLs Identified
 1. https://www.mybib.com
@@ -62,14 +149,39 @@ For example:
 9. http://faculty.ucmerced.edu/wshadish/biosketch
 10. http://www.ipr.northwestern.edu/workshops/annual-summer-workshops/quasi-experimental-design-and-analysis/
 
-## Notes on PDF Downloads
-The download script attempted to retrieve PDFs for the first 10 URLs but encountered network restrictions in the sandboxed environment (ERR_NAME_NOT_RESOLVED). The script is fully functional and will work in an environment with unrestricted internet access.
+## When to Use Each Script
 
-To manually download these URLs as PDFs:
-1. Open each URL in a web browser
-2. Use the browser's "Print to PDF" or "Save as PDF" functionality
-3. Save with the corresponding ref_XXX.pdf filename
-4. Update the Status column in the Reference_Tracking.xlsx workbook to "Stored"
+### Use Live Downloads (Download-References.ps1) when:
+- URLs are still active and accessible
+- You want the current version of the page
+- The website hasn't changed significantly since citation
+
+### Use Wayback Machine (Download-References-Wayback.ps1) when:
+- Original URL no longer exists (404 errors)
+- Website has changed significantly since citation
+- You want the version that was accessed when writing the book
+- You need to preserve the exact content that was referenced
+
+### Wayback Machine Benefits:
+- Retrieves content from URLs that no longer exist
+- Gets the page as it appeared on the "Accessed" date
+- Creates a permanent archive reference
+- Useful for academic citation verification
+
+## Troubleshooting
+
+### URLs Fail to Download
+- Try the Wayback Machine version - many old URLs are archived
+- Check if URL is still valid by visiting in a browser
+- Some sites may block automated downloads
+
+### "No accessed date" Errors
+- Use the `--force-latest` flag to get the most recent snapshot
+- Or specify a date with `--date YYYY-MM-DD`
+
+### Browser Installation Issues
+- The PowerShell script auto-installs browsers
+- Manual install: `python -m playwright install firefox`
 
 ## Future Work
 - The remaining 147 URLs (IDs 11-157) can be processed by modifying the download_pdfs.py script
