@@ -69,12 +69,12 @@ def extract_year_from_url(url):
     Returns: year as integer or None if not found
     """
     # Look for 4-digit years in the URL path
-    # Pattern matches /YYYY/ or /YYYY- or -YYYY/ or -YYYY-
-    year_pattern = r'/(\d{4})(?:/|-|$)|(?:^|/)(\d{4})-'
+    # Pattern matches various formats: /YYYY/, /YYYY-, -YYYY/, -YYYY-
+    year_pattern = r'(?:^|/|-)(\d{4})(?:/|-|$)'
     matches = re.finditer(year_pattern, url)
     
     for match in matches:
-        year_str = match.group(1) or match.group(2)
+        year_str = match.group(1)
         year = int(year_str)
         # Only accept reasonable years (1990-2030)
         if 1990 <= year <= 2030:
