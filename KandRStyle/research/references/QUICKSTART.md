@@ -3,7 +3,7 @@
 ## What This System Does
 
 This system helps you:
-1. Track all 157 URLs referenced in your book (ut.tex)
+1. Track all 192 URLs referenced in your book (ut.tex)
 2. Download web pages as PDFs for archival purposes
 3. Use the Internet Archive's Wayback Machine for URLs that no longer exist
 4. Organize everything in an Excel workbook
@@ -12,7 +12,7 @@ This system helps you:
 
 ### Excel Workbook
 **Reference_Tracking.xlsx** - Your central tracking system with:
-- ID numbers for each URL (1-157)
+- ID numbers for each URL (1-192)
 - The actual URLs
 - **Accessed Date** - When you accessed the page (from ut.tex)
 - Status - Whether you have a PDF ("Stored" or "Not Found")
@@ -56,7 +56,7 @@ cd KandRStyle\research\references
 python create_reference_tracker.py
 ```
 
-This creates Reference_Tracking.xlsx with all 157 URLs and their accessed dates.
+This creates Reference_Tracking.xlsx with all 192 URLs and their accessed dates.
 
 ### Step 2: Download PDFs
 
@@ -90,7 +90,7 @@ This creates Reference_Tracking.xlsx with all 157 URLs and their accessed dates.
 
 ### Download ALL References (this will take a while!)
 ```powershell
-.\Download-References.ps1 -StartRef 1 -EndRef 157
+.\Download-References.ps1 -StartRef 1 -EndRef 192
 ```
 
 ### Download Using Wayback Machine (for old URLs)
@@ -164,7 +164,7 @@ This creates Reference_Tracking.xlsx with all 157 URLs and their accessed dates.
 1. **Start small**: Test with 10 URLs first
 2. **Try live first**: Modern URLs usually work
 3. **Use Wayback for older URLs**: Anything pre-2020
-4. **Run in batches**: Do 20-30 at a time, not all 157 at once
+4. **Run in batches**: Do 20-30 at a time, not all 192 at once
 5. **Check the workbook**: Review Status column after each run
 6. **Retry failures**: Some URLs timeout but work on retry
 
@@ -182,8 +182,8 @@ This creates Reference_Tracking.xlsx with all 157 URLs and their accessed dates.
 # References 51-100: Older content
 .\Download-References-Wayback.ps1 -StartRef 51 -EndRef 100
 
-# References 101-157: Oldest content
-.\Download-References-Wayback.ps1 -StartRef 101 -EndRef 157
+# References 101-192: Oldest content
+.\Download-References-Wayback.ps1 -StartRef 101 -EndRef 192
 ```
 
 ## File Naming

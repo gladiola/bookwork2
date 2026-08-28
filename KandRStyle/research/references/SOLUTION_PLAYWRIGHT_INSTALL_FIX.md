@@ -139,7 +139,7 @@ Next steps:
    ```powershell
    python create_reference_tracker.py
    ```
-   This creates `Reference_Tracking.xlsx` with all 157 URLs from ut.tex
+   This creates `Reference_Tracking.xlsx` with all 192 URLs from ut.tex
 
 2. **Download PDFs (first 10 as a test):**
    ```powershell

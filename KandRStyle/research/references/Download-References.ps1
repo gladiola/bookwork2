@@ -25,8 +25,8 @@
     .\Download-References.ps1 -StartRef 11 -EndRef 20 -Browser chromium
     Downloads references 11 through 20 using Chromium
 .EXAMPLE
-    .\Download-References.ps1 -StartRef 1 -EndRef 157
-    Downloads all 157 references
+    .\Download-References.ps1 -StartRef 1 -EndRef 192
+    Downloads all 192 references
 #>
 
 param(
