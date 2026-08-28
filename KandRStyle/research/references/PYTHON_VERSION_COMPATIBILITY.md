@@ -109,7 +109,6 @@ python verify_setup.py
 ## References
 
 - [Python Download](https://www.python.org/downloads/)
-- [Python 3.12 Release Schedule](https://peps.python.org/pep-0693/)
-- [Python 3.13 Release Schedule](https://peps.python.org/pep-0719/)
+- [Python Release Schedule](https://peps.python.org/pep-0602/)
 - [Matplotlib Documentation](https://matplotlib.org/)
 - [Playwright for Python](https://playwright.dev/python/)
