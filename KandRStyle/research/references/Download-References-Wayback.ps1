@@ -1,5 +1,6 @@
 # Download-References-Wayback.ps1
 # PowerShell script to download reference URLs from Internet Archive Wayback Machine
+# Uses archived snapshots based on "Accessed" dates from ut.tex
 # Uses headless Chromium browser via Playwright (required for PDF generation)
 
 <#
