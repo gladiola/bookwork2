@@ -4549,30 +4549,30 @@ Warning:  We want to use the \index{nsa driver}nsa driver.  There is an \index{s
 \subsection{Code Notes}
 1.  Place files in a directory that you control.  Isolating the files to be copied to tape is safer than copying them directly from where they are.
 
-2.  \texttt{mt -f /dev/nsa0 load}\\
+2.  \texttt{\index{mt}mt -f /dev/nsa0 load}\endnote{"mt." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mt&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 This will load the tape onto the machine.
 
-3.  \texttt{mt -f /dev/nas0 rewind}\\
+3.  \texttt{\index{mt}mt -f /dev/nsa0 rewind}\endnote{Ibidem.}\\
 This will spool the tape to the beginning.
 
-4.  \texttt{mt -f /dev/nsa0 status}\\
+4.  \texttt{\index{mt}mt -f /dev/nsa0 status}\endnote{Ibidem.}\\
 To check to see where we are on the tape.  Assuming this is the first use of the tape, we could start writing immediately.
 
 5.  If there are files on the tape, we need to either scan ahead and log the files, or we need to consult our notes to find where on the tape we should go.  We could easily overwrite a file and damage the sequence.  Use the write persistent notch to protect the tape when possible.
 
-6.  \texttt{mt -f /dev/nsa0 com or eod}\\
+6.  \texttt{\index{mt}mt -f /dev/nsa0 com or eod}\endnote{Ibidem.}\\
 To go to the end of the records.
 
-7. \texttt{tar cvf /dev/nsa0 [FILE\_TO\_ARCHIVE]}\\
+7. \texttt{\index{tar}tar cvf /dev/nsa0 [FILE\_TO\_ARCHIVE]}\endnote{"tar." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=tar&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 Once at the proper spot on the tape, give the command to archive the files.
 
-8.  \texttt{mt -f  /dev/nsa0 weof1}\\
+8.  \texttt{\index{mt}mt -f  /dev/nsa0 weof1}\endnote{"mt." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mt&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
 Write an end-of-file marker.
 
-9.  \texttt{tar -t}\\
+9.  \texttt{\index{tar}tar -t}\endnote{Ibidem.}\\
 To see the archive on the tape.
 
-\texttt{tar xf /dev/nsa0}\\
+\texttt{\index{tar}tar xf /dev/nsa0}\endnote{Ibidem.}\\
 To get the archive from the tape.
 
 10.  Write notes.  Log and record what was put on the tape.
@@ -4605,17 +4605,17 @@ echo "Here we go."\\
 echo\\
 echo "Loading tape into machine."\\
 echo "mt -f /dev/nsa0 load"\\
-mt -f /dev/nsa0 load\\
+mt -f /dev/nsa0 load\\\endnote{Ibidem.}
 \#\# Rewind tape\\
 echo "Rewinding tape"\\
 echo "mt -f /dev/nsa0 rewind"\\
-mt -f /dev/nsa0 rewind\\
+mt -f /dev/nsa0 rewind\\\endnote{Ibidem.}
 echo "Press ENTER to continue."\\
 read INPUT\\
 clear\\
 echo "Reading status from tape."\\
 echo "mt -f /dev/nsa0 status"\\
-mt -f /dev/nsa0 status\\
+mt -f /dev/nsa0 status\\\endnote{Ibidem.}
 echo\\
 echo "Press ENTER to continue."\\
 read INPUT\\
@@ -4624,60 +4624,60 @@ echo "Looking for file 0 on the tape."\\
 echo "We should be at the beginning."\\
 echo "So, no mt commands this time."\\
 echo "tar t -f /dev/nsa0"\\
-tar t -f /dev/nsa0\\
+tar t -f /dev/nsa0\\\endnote{Ibidem.}
 echo\\
 echo "Press ENTER to continue."\\
 read INPUT\\
 clear\\
 echo "Looking for file 1 on tape."\\
 echo "Rewind to the beginning."\\
-mt -f /dev/nsa0 rewind\\
+mt -f /dev/nsa0 rewind\\\endnote{Ibidem.}
 echo "Go forward space count 1 file."\\
 echo "mt -f /dev/nsa0 fsf 1"\\
-mt -f /dev/nsa0 fsf 1\\
+mt -f /dev/nsa0 fsf 1\\\endnote{Ibidem.}
 echo "tar t -f /dev/nsa0"\\
-tar t -f /dev/nsa0\\
+tar t -f /dev/nsa0\\\endnote{Ibidem.}
 echo "Press ENTER to continue."\\
 read INPUT\\
 clear\\
 echo "Looking for file 2 on tape."\\
 echo "Back up to 0 and go forward space count 2 files."\\
 echo "mt -f /dev/nsa0 rewind"\\
-mt -f /dev/nsa0 rewind\\
+mt -f /dev/nsa0 rewind\\\endnote{Ibidem.}
 echo "mt -f /dev/nsa0 fsf 2"\\
-mt -f /dev/nsa0 fsf 2\\
+mt -f /dev/nsa0 fsf 2\\\endnote{Ibidem.}
 echo "Show where we are with status."\\
 echo "mt -f /dev/nsa0 status"\\
-mt -f /dev/nsa0 status\\
+mt -f /dev/nsa0 status\\\endnote{Ibidem.}
 echo\\
 echo "Look in that spot with tar."\\
 echo "tar t -f /dev/nsa0"\\
-tar t -f /dev/nsa0\\
+tar t -f /dev/nsa0\\\endnote{Ibidem.}
 echo "Press ENTER to continue."\\
 read INPUT\\
 clear\\
 echo "Looking for third archive on tape."\\
 echo "Back up to 0 and go forward space count 3 files."\\
 echo "mt -f /dev/nsa0 rewind"\\
-mt -f /dev/nsa0 rewind\\
+mt -f /dev/nsa0 rewind\\\endnote{Ibidem.}
 echo "mt -f /dev/nsa0 fsf 3"\\
-mt -f /dev/nsa0 fsf 3\\
+mt -f /dev/nsa0 fsf 3\\\endnote{Ibidem.}
 echo "See where we are with status."\\
 echo "mt -f /dev/nsa0 status"\\
-mt -f /dev/nsa0 status\\
+mt -f /dev/nsa0 status\\\endnote{Ibidem.}
 echo\\
 echo "See what is here with tar."\\
 echo "tar t -f /dev/nsa0"\\
-tar t -f /dev/nsa0\\
+tar t -f /dev/nsa0\\\endnote{Ibidem.}
 echo "Press ENTER to continue."\\
 read INPUT\\
 clear\\
 echo "Take the tape offline."\\
 echo "Rewind tape."\\
 echo "mt -f /dev/nsa0 rewind"\\
-mt -f /dev/nsa0 rewind\\
+mt -f /dev/nsa0 rewind\\\endnote{Ibidem.}
 echo "mt -f /dev/nsa0 offline"\\
-mt -f /dev/nsa0 offline\\
+mt -f /dev/nsa0 offline\\\endnote{Ibidem.}
 exit 0\\}
 
 \section{Analysis}
@@ -4717,8 +4717,6 @@ C.  URLs – FreeBSD man pages for above. \\
 \url{man.freebsd.org/cgi/man.cgi?query=tar} for \texttt{tar} man page.
 
 %----------------------------------------------------------------------------------------
-Text with\endnote{First note.} inline references.
-More text\endnote{Second note.}
 \markchapterendnotes
 
 
