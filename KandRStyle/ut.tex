@@ -114,29 +114,28 @@ bindingoffset=0.12in]{geometry}
 
 % Hook into \chapter to capture chapter titles and write separator
 % Must be done after hyperref is loaded to work with hyperref's patches
-% Patching \chapter directly because titlesec rewrites the internal \@chapter command
+% Since titlesec is loaded and redefines \chapter, we patch \@chapter and \@schapter instead
 \makeatletter
 
-% Save the original \chapter command
-\let\orig@chapter\chapter
-
-% Redefine \chapter to capture the title before processing
-\renewcommand{\chapter}{%
-  \@ifstar{\@starred@chapter}{\@unstarred@chapter}%
+% Patch \@chapter (numbered chapters) to write separator BEFORE the chapter processes
+\let\orig@@chapter\@chapter
+\renewcommand{\@chapter}[2][]{%
+  % #1 is optional TOC entry, #2 is the chapter title
+  \renewcommand{\currentchaptertitle}{#2}%
+  % Write separator to endnotes file
+  \immediate\write\@enotes{\string\enotechapsep{\the\numexpr\value{chapter}+1}{\detokenize\expandafter{\currentchaptertitle}}}%
+  % Call original \@chapter
+  \orig@@chapter[#1]{#2}%
 }
 
-% Handle starred chapters (\chapter*)
-\newcommand{\@starred@chapter}[1]{%
+% Patch \@schapter (starred/unnumbered chapters) to write separator
+\let\orig@@schapter\@schapter
+\renewcommand{\@schapter}[1]{%
   \renewcommand{\currentchaptertitle}{#1}%
-  \orig@chapter*{#1}%
+  % Write separator with chapter number 0 for unnumbered chapters
   \immediate\write\@enotes{\string\enotechapsep{0}{\detokenize\expandafter{\currentchaptertitle}}}%
-}
-
-% Handle regular chapters (\chapter)
-\newcommand{\@unstarred@chapter}[1]{%
-  \renewcommand{\currentchaptertitle}{#1}%
-  \orig@chapter{#1}%
-  \immediate\write\@enotes{\string\enotechapsep{\arabic{chapter}}{\detokenize\expandafter{\currentchaptertitle}}}%
+  % Call original \@schapter
+  \orig@@schapter{#1}%
 }
 
 \makeatother
