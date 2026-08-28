@@ -9,7 +9,7 @@
 openpyxl>=3.0.0,<3.1.0  # 3.1.0+ requires Python 3.7+
 matplotlib>=3.0.0,<3.4.0  # 3.4.0+ requires Python 3.7+; 3.7.0+ requires Python 3.8+
 numpy>=1.19.0,<1.20.0  # 1.20.0+ requires Python 3.7+; 1.24.0+ requires Python 3.8+
-requests>=2.25.0  # Compatible with Python 3.6+
+requests>=2.28.0,<2.32.0  # 2.28.x is the highest Python 3.6-compatible version with security fixes
 
 # Playwright for PDF downloads (Python 3.6-compatible version)
 # Note: If playwright installation fails on Windows, you may need to:

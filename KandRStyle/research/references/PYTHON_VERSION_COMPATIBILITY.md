@@ -23,7 +23,7 @@ This error occurred because:
 | openpyxl | >=3.0.0,<3.1.0 | 3.1.0+ requires Python 3.7+ |
 | matplotlib | >=3.0.0,<3.4.0 | 3.4.0+ requires Python 3.7+; 3.7.0+ requires Python 3.8+ |
 | numpy | >=1.19.0,<1.20.0 | 1.20.0+ requires Python 3.7+; 1.24.0+ requires Python 3.8+ |
-| requests | >=2.25.0 | Compatible with Python 3.6+ |
+| requests | >=2.28.0,<2.32.0 | 2.28.x is the highest Python 3.6-compatible version with security fixes |
 | playwright | >=1.11.0,<1.20.0 | 1.20.0+ requires Python 3.7+; 1.40.0+ requires Python 3.8+ |
 
 ## Important Security Notice
@@ -41,7 +41,9 @@ For better security, performance, and access to modern features, it is strongly 
 1. **Security**: Active security patches and updates
 2. **Performance**: Significant speed improvements in Python 3.11+
 3. **Modern Dependencies**: Access to latest package versions with bug fixes and features
-4. **Long-term Support**: Python 3.11 is supported until October 2027
+4. **Long-term Support**: 
+   - Python 3.11 is supported until October 2027
+   - Python 3.12 is supported until October 2028
 
 ### If You Choose to Upgrade Python
 
