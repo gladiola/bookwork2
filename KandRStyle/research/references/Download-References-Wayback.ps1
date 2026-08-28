@@ -22,15 +22,17 @@
     Specific date to search for snapshots (format: YYYY-MM-DD)
     Overrides "Accessed" dates from ut.tex
 .PARAMETER ForceLatest
-    Use latest available snapshot even if no "Accessed" date found
+    (Deprecated: now default behavior) Use latest available snapshot even if no "Accessed" date found
 .PARAMETER SkipSetup
     Skip checking and installing dependencies
 .EXAMPLE
     .\Download-References-Wayback.ps1 -StartRef 1 -EndRef 10
-    Downloads references 1-10 using accessed dates from ut.tex
+    Downloads references 1-10, using accessed dates from ut.tex when available,
+    or latest snapshot if no accessed date is found
 .EXAMPLE
     .\Download-References-Wayback.ps1 -StartRef 1 -EndRef 10 -ForceLatest
-    Downloads references 1-10, using latest snapshot if no accessed date
+    Downloads references 1-10 (ForceLatest flag is now deprecated - 
+    latest snapshot is used automatically when no accessed date is found)
 .EXAMPLE
     .\Download-References-Wayback.ps1 -StartRef 20 -EndRef 25 -Date "2026-07-12"
     Downloads references 20-25 using snapshot from July 12, 2026
@@ -203,7 +205,7 @@ try {
         Write-Host "  Date Source:     Accessed dates from ut.tex" -ForegroundColor White
     }
     if ($ForceLatest) {
-        Write-Host "  Force Latest:    Yes (use latest snapshot if no accessed date)" -ForegroundColor White
+        Write-Host "  Force Latest:    Yes (deprecated - now default behavior)" -ForegroundColor White
     }
     Write-Host "  Working Dir:     $ScriptDir" -ForegroundColor White
     Write-Host ""
