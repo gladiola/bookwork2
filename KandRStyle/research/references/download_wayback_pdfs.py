@@ -187,9 +187,9 @@ Examples:
     
   Download using specific date (format: YYYY-MM-DD):
     python download_wayback_pdfs.py --start 1 --end 5 --date 2026-07-12
-    
-  Force use of Wayback even if accessed dates aren't found:
-    python download_wayback_pdfs.py --start 1 --end 10 --force-latest
+
+Note: If no accessed date is found, the script will automatically use the 
+      latest available snapshot from Wayback Machine.
         """
     )
     
@@ -205,7 +205,7 @@ Examples:
     parser.add_argument('--date', type=str,
                         help='Specific date to search for snapshots (YYYY-MM-DD)')
     parser.add_argument('--force-latest', action='store_true',
-                        help='Use latest snapshot if accessed date not found')
+                        help='(Deprecated: now default behavior) Use latest snapshot if accessed date not found')
     
     args = parser.parse_args()
     
@@ -272,18 +272,8 @@ Examples:
             # Fall back to date from ut.tex
             target_date = url_dates[url]
             print(f"  Using accessed date from ut.tex: {target_date.strftime('%B %d, %Y')}")
-        elif not target_date and not args.force_latest:
-            print(f"  No accessed date found and --force-latest not specified")
-            update_workbook_status(url_id, "Not Found", "No accessed date - use --force-latest")
-            results.append({
-                'id': url_id,
-                'url': url,
-                'status': 'Skipped',
-                'reason': 'No accessed date'
-            })
-            continue
         elif not target_date:
-            print(f"  Using latest available snapshot")
+            print(f"  No accessed date found - using latest available snapshot")
         
         # Query Wayback Machine
         print(f"  Querying Wayback Machine...")
