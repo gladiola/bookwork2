@@ -2,6 +2,17 @@
 
 This folder contains a reference tracking system for managing URL references found in the book manuscript (ut.tex).
 
+## Quick Start
+
+**New to this system?** See [QUICKSTART.md](QUICKSTART.md) for a beginner-friendly guide.
+
+**Need to install Python dependencies?** See [SETUP.md](SETUP.md) for detailed installation instructions including troubleshooting for common issues like playwright installation errors.
+
+**Quick verification:**
+```bash
+python verify_setup.py
+```
+
 ## Contents
 
 ### Excel Workbook
@@ -23,6 +34,11 @@ This folder contains a reference tracking system for managing URL references fou
 - **create_reference_tracker.py** - Extracts URLs from ut.tex and creates the Reference_Tracking.xlsx workbook
   - Uses relative paths (../../ut.tex) so it works in any environment
   - Identifies all unique URLs and creates tracking sheets
+
+#### Setup & Verification
+- **requirements.txt** - List of all required Python packages
+- **verify_setup.py** - Checks if all dependencies are installed correctly
+- **SETUP.md** - Detailed setup guide with troubleshooting
 
 #### Download Scripts
 - **download_pdfs.py** - Simple downloader for the first 10 URLs
@@ -50,6 +66,26 @@ This folder contains a reference tracking system for managing URL references fou
   - Retrieves archived versions of URLs
   - Automatically extracts "Accessed" dates from ut.tex
   - Can specify custom date or use latest snapshots
+
+## Installation
+
+### Option 1: Using requirements.txt (Recommended)
+```bash
+# 1. Upgrade pip first
+python -m pip install --upgrade pip setuptools wheel
+
+# 2. Install all dependencies
+python -m pip install -r requirements.txt
+
+# 3. Install browsers
+python -m playwright install firefox
+
+# 4. Verify installation
+python verify_setup.py
+```
+
+### Option 2: Manual installation
+See [SETUP.md](SETUP.md) for detailed step-by-step instructions and troubleshooting.
 
 ## Statistics
 - **Total unique URLs found:** 157
