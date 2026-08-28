@@ -90,6 +90,7 @@ bindingoffset=0.12in]{geometry}
 \newcommand{\printallendnotesbychapter}{%
   \cleardoublepage
   \chapter*{Endnotes}%
+  \markboth{ENDNOTES}{ENDNOTES}%
   \addcontentsline{toc}{chapter}{Endnotes}%
   \renewcommand{\enoteheading}{}% Suppress default heading
   \theendnotes
@@ -4723,6 +4724,8 @@ C.  URLs – FreeBSD man pages for above. \\
 \backmatter
 \printallendnotesbychapter
 \printglossary[title=Glossary]
+\markboth{GLOSSARY}{GLOSSARY}
 \printindex
+\markboth{INDEX}{INDEX}
 
 \end{document}
