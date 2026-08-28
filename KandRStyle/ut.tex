@@ -4064,7 +4064,7 @@ To add a logging \gls{partition} on the SLOG \GLS{ssd}s:\\\\
 \texttt{ \index{gpart!add}gpart add -a 1m -l ZLOG-BLONDIE-2-WD123465789 \textbackslash\\-t freebsd-zfs  da2}\endnote{Ibidem.}\\\\
 
 With each disk partitioned, we can add them to the pool for our RAIDZ-2 kit.\\\\
-\texttt{\index{zpool!create}zpool create \gls{raid} POOL\_NAME DISK\_LABEL/\gls{zfs}\_PARTITION\_LABEL ...next disk/\gls{partition}...}\endnote{“zpool.” Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zpool&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
+\texttt{\index{zpool!create}zpool create \gls{raid} \seqsplit{POOL\_NAME} \seqsplit{DISK\_LABEL}/\gls{zfs}\_\seqsplit{PARTITION\_LABEL} ...\seqsplit{next} disk/\gls{partition}...}\endnote{"zpool." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=zpool&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\\\
 
 \noindent\texttt{\index{zpool!create}zpool create BLONDIE-MAIN \index{RAIDZ-2}raidz2 \textbackslash }\endnote{Ibidem.}\\
 \texttt{BLONDIE-4-WD12345/ZFS-BLONDIE-4-WD12345 \textbackslash }\\
