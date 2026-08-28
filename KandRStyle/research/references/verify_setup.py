@@ -28,7 +28,8 @@ for package, description in packages.items():
 if all_good:
     print("\n✓ All packages installed successfully!")
     print("\nNext steps:")
-    print("  1. Install browsers: python -m playwright install firefox")
+    print("  1. Install browsers: python -m playwright install chromium")
+    print("     NOTE: PDF generation only works with Chromium, not Firefox or WebKit")
     print("  2. Generate workbook: python create_reference_tracker.py")
     sys.exit(0)
 else:

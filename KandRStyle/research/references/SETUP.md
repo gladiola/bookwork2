@@ -40,14 +40,16 @@ python3 -m pip install -r requirements.txt
 
 ### Step 3: Install Playwright browsers
 
+**IMPORTANT:** PDF generation only works with headless Chromium, not Firefox or WebKit.
+
 **Windows:**
 ```powershell
-python -m playwright install firefox
+python -m playwright install chromium
 ```
 
 **Linux/Mac:**
 ```bash
-python3 -m playwright install firefox
+python3 -m playwright install chromium
 ```
 
 ### Step 4: Verify installation
@@ -181,8 +183,8 @@ python -m pip install matplotlib numpy
 # HTTP requests
 python -m pip install requests
 
-# Install browser drivers
-python -m playwright install firefox
+# Install browser drivers (IMPORTANT: Only Chromium supports PDF generation)
+python -m playwright install chromium
 ```
 
 ## Verification Script
@@ -219,7 +221,8 @@ for package, description in packages.items():
 if all_good:
     print("\n✓ All packages installed successfully!")
     print("\nNext step: Install browsers with:")
-    print("  python -m playwright install firefox")
+    print("  python -m playwright install chromium")
+    print("\nNOTE: PDF generation only works with Chromium, not Firefox or WebKit")
 else:
     print("\n✗ Some packages are missing. Install them with:")
     print("  python -m pip install -r requirements.txt")

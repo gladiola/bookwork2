@@ -1,27 +1,29 @@
 # Download-References.ps1
 # PowerShell script to automate downloading reference URLs as PDFs on Windows
-# Uses Firefox browser via Playwright
+# Uses headless Chromium browser via Playwright (required for PDF generation)
 
 <#
 .SYNOPSIS
     Downloads reference URLs as PDFs with range support
 .DESCRIPTION
     This script automates the process of downloading reference URLs from the
-    Reference Tracking workbook as PDF files using Firefox browser.
+    Reference Tracking workbook as PDF files using headless Chromium browser.
+    NOTE: PDF generation is only supported with Chromium, not Firefox or WebKit.
 .PARAMETER StartRef
     Starting reference ID (default: 1)
 .PARAMETER EndRef
     Ending reference ID (default: 10)
 .PARAMETER Browser
-    Browser to use: chromium, firefox, or webkit (default: firefox)
+    Browser to use: chromium, firefox, or webkit (default: chromium)
+    NOTE: Only chromium supports PDF generation. Firefox and WebKit will fail.
 .PARAMETER SkipSetup
     Skip checking and installing dependencies
 .EXAMPLE
     .\Download-References.ps1 -StartRef 1 -EndRef 10
     Downloads references 1 through 10
 .EXAMPLE
-    .\Download-References.ps1 -StartRef 11 -EndRef 20 -Browser firefox
-    Downloads references 11 through 20 using Firefox
+    .\Download-References.ps1 -StartRef 11 -EndRef 20 -Browser chromium
+    Downloads references 11 through 20 using Chromium
 .EXAMPLE
     .\Download-References.ps1 -StartRef 1 -EndRef 157
     Downloads all 157 references
@@ -36,7 +38,7 @@ param(
     
     [Parameter(Mandatory=$false)]
     [ValidateSet('chromium', 'firefox', 'webkit')]
-    [string]$Browser = 'firefox',
+    [string]$Browser = 'chromium',
     
     [Parameter(Mandatory=$false)]
     [switch]$SkipSetup

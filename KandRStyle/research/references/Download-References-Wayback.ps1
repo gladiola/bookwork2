@@ -1,6 +1,7 @@
 # Download-References-Wayback.ps1
 # PowerShell script to download reference URLs from Internet Archive Wayback Machine
 # Uses archived snapshots based on "Accessed" dates from ut.tex
+# Uses headless Chromium browser via Playwright (required for PDF generation)
 
 <#
 .SYNOPSIS
@@ -9,12 +10,14 @@
     This script downloads archived versions of reference URLs from the Wayback Machine.
     It automatically uses "Accessed" dates from ut.tex to find appropriate snapshots.
     PDFs are saved with "_wayback" suffix to distinguish from live downloads.
+    NOTE: PDF generation is only supported with Chromium, not Firefox or WebKit.
 .PARAMETER StartRef
     Starting reference ID (default: 1)
 .PARAMETER EndRef
     Ending reference ID (default: 10)
 .PARAMETER Browser
-    Browser to use: chromium, firefox, or webkit (default: firefox)
+    Browser to use: chromium, firefox, or webkit (default: chromium)
+    NOTE: Only chromium supports PDF generation. Firefox and WebKit will fail.
 .PARAMETER Date
     Specific date to search for snapshots (format: YYYY-MM-DD)
     Overrides "Accessed" dates from ut.tex
@@ -32,8 +35,8 @@
     .\Download-References-Wayback.ps1 -StartRef 20 -EndRef 25 -Date "2026-07-12"
     Downloads references 20-25 using snapshot from July 12, 2026
 .EXAMPLE
-    .\Download-References-Wayback.ps1 -StartRef 1 -EndRef 157 -Browser firefox
-    Downloads ALL references using Firefox
+    .\Download-References-Wayback.ps1 -StartRef 1 -EndRef 157 -Browser chromium
+    Downloads ALL references using Chromium
 #>
 
 param(
@@ -45,7 +48,7 @@ param(
     
     [Parameter(Mandatory=$false)]
     [ValidateSet('chromium', 'firefox', 'webkit')]
-    [string]$Browser = 'firefox',
+    [string]$Browser = 'chromium',
     
     [Parameter(Mandatory=$false)]
     [string]$Date = "",

@@ -182,8 +182,8 @@ Examples:
   Download references 1-10 from Wayback Machine:
     python download_wayback_pdfs.py --start 1 --end 10
     
-  Download references 20-30 using Firefox:
-    python download_wayback_pdfs.py --start 20 --end 30 --browser firefox
+  Download references 20-30 using Chromium (explicit):
+    python download_wayback_pdfs.py --start 20 --end 30 --browser chromium
     
   Download using specific date (format: YYYY-MM-DD):
     python download_wayback_pdfs.py --start 1 --end 5 --date 2026-07-12
