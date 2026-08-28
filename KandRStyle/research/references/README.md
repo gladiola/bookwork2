@@ -18,7 +18,9 @@ This folder contains a reference tracking system for managing URL references fou
 
 ### Python Scripts
 - **create_reference_tracker.py** - Extracts URLs from ut.tex and creates the Reference_Tracking.xlsx workbook
+  - Uses relative paths (../../ut.tex) so it works in any environment
 - **download_pdfs.py** - Downloads the first 10 URLs as PDF files with naming convention ref_XXX.pdf
+  - Uses relative paths to find the workbook and store PDFs in the same directory
 
 ## Statistics
 - **Total unique URLs found:** 157
@@ -28,13 +30,17 @@ This folder contains a reference tracking system for managing URL references fou
 
 ### To regenerate the workbook:
 ```bash
+cd KandRStyle/research/references
 python3 create_reference_tracker.py
 ```
 
 ### To download PDFs (requires internet access):
 ```bash
+cd KandRStyle/research/references
 python3 download_pdfs.py
 ```
+
+**Note:** Both scripts use relative paths and must be run from the `references` directory or with the proper working directory set.
 
 ## PDF Naming Convention
 PDFs are named using the pattern: `ref_XXX.pdf` where XXX is the three-digit ID from the Reference Tracking sheet.

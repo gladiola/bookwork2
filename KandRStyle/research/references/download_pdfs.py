@@ -7,14 +7,17 @@ import openpyxl
 import os
 import sys
 import time
+from pathlib import Path
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
-WORKBOOK_PATH = "/home/runner/work/bookwork2/bookwork2/KandRStyle/research/references/Reference_Tracking.xlsx"
-PDF_DIR = "/home/runner/work/bookwork2/bookwork2/KandRStyle/research/references"
+# Get the script directory and construct relative paths
+SCRIPT_DIR = Path(__file__).parent.resolve()
+WORKBOOK_PATH = SCRIPT_DIR / "Reference_Tracking.xlsx"
+PDF_DIR = SCRIPT_DIR
 
 def load_urls_from_workbook():
     """Load URLs from the Reference Tracking workbook"""
-    wb = openpyxl.load_workbook(WORKBOOK_PATH)
+    wb = openpyxl.load_workbook(str(WORKBOOK_PATH))
     ws = wb["Reference Tracking"]
     
     urls = []
@@ -30,7 +33,7 @@ def load_urls_from_workbook():
 
 def update_workbook_status(url_id, status, notes=""):
     """Update the status of a URL in the workbook"""
-    wb = openpyxl.load_workbook(WORKBOOK_PATH)
+    wb = openpyxl.load_workbook(str(WORKBOOK_PATH))
     ws = wb["Reference Tracking"]
     
     # Find the row with the matching ID
@@ -41,7 +44,7 @@ def update_workbook_status(url_id, status, notes=""):
                 row[3].value = notes  # Update Notes column
             break
     
-    wb.save(WORKBOOK_PATH)
+    wb.save(str(WORKBOOK_PATH))
 
 def download_url_as_pdf(url, pdf_path, timeout=30000):
     """Download a URL as PDF using playwright"""
@@ -72,7 +75,7 @@ def download_url_as_pdf(url, pdf_path, timeout=30000):
         return False, f"Error: {str(e)[:100]}"
 
 def main():
-    print("Loading URLs from workbook...")
+    print(f"Loading URLs from workbook at: {WORKBOOK_PATH.resolve()}...")
     urls = load_urls_from_workbook()
     
     print(f"\nFound {len(urls)} URLs to process\n")
@@ -83,7 +86,7 @@ def main():
         url_id = url_data['id']
         url = url_data['url']
         pdf_filename = f"ref_{url_id:03d}.pdf"
-        pdf_path = os.path.join(PDF_DIR, pdf_filename)
+        pdf_path = PDF_DIR / pdf_filename
         
         print(f"Processing URL {url_id}: {url}")
         
@@ -100,7 +103,7 @@ def main():
             continue
         
         # Try to download
-        success, message = download_url_as_pdf(url, pdf_path)
+        success, message = download_url_as_pdf(url, str(pdf_path))
         
         if success:
             print(f"  ✓ Success: {pdf_filename}")

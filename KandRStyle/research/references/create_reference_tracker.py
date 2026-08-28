@@ -8,10 +8,13 @@ import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter
 import os
+from pathlib import Path
 
-# Path to ut.tex
-UT_TEX_PATH = "/home/runner/work/bookwork2/bookwork2/KandRStyle/ut.tex"
-WORKBOOK_PATH = "/home/runner/work/bookwork2/bookwork2/KandRStyle/research/references/Reference_Tracking.xlsx"
+# Get the script directory and construct relative paths
+SCRIPT_DIR = Path(__file__).parent.resolve()
+# ut.tex is at KandRStyle/ut.tex, this script is at KandRStyle/research/references/
+UT_TEX_PATH = SCRIPT_DIR / ".." / ".." / "ut.tex"
+WORKBOOK_PATH = SCRIPT_DIR / "Reference_Tracking.xlsx"
 
 def extract_urls_from_tex(file_path):
     """
@@ -105,17 +108,17 @@ def create_reference_tracking_workbook(urls_with_lines):
     ws_locations.column_dimensions['C'].width = 30
     
     # Save the workbook
-    wb.save(WORKBOOK_PATH)
+    wb.save(str(WORKBOOK_PATH))
     
-    print(f"Created workbook: {WORKBOOK_PATH}")
+    print(f"Created workbook: {WORKBOOK_PATH.resolve()}")
     print(f"Total unique URLs found: {len(unique_urls)}")
     print(f"Total URL occurrences: {len(urls_with_lines)}")
     
     return unique_urls
 
 def main():
-    print("Extracting URLs from ut.tex...")
-    urls_with_lines = extract_urls_from_tex(UT_TEX_PATH)
+    print(f"Extracting URLs from ut.tex at: {UT_TEX_PATH.resolve()}")
+    urls_with_lines = extract_urls_from_tex(str(UT_TEX_PATH))
     
     if not urls_with_lines:
         print("No URLs found in ut.tex")
