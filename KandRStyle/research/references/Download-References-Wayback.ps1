@@ -88,14 +88,14 @@ function Test-Python {
     
     if (Test-CommandExists "python") {
         $pythonVersion = python --version 2>&1
-        Write-Host "  ✓ Found: $pythonVersion" -ForegroundColor Green
+        Write-Host "  [OK] Found: $pythonVersion" -ForegroundColor Green
         return $true
     } elseif (Test-CommandExists "python3") {
         $pythonVersion = python3 --version 2>&1
-        Write-Host "  ✓ Found: $pythonVersion" -ForegroundColor Green
+        Write-Host "  [OK] Found: $pythonVersion" -ForegroundColor Green
         return $true
     } else {
-        Write-Host "  ✗ Python not found!" -ForegroundColor Red
+        Write-Host "  [X] Python not found!" -ForegroundColor Red
         Write-Host "  Please install Python from https://www.python.org/downloads/" -ForegroundColor Yellow
         Write-Host "  Make sure to check 'Add Python to PATH' during installation" -ForegroundColor Yellow
         return $false
@@ -113,7 +113,7 @@ function Install-PythonPackages {
         Write-Host "    Installing openpyxl..." -ForegroundColor Yellow
         python -m pip install openpyxl
     } else {
-        Write-Host "    ✓ openpyxl installed" -ForegroundColor Green
+        Write-Host "    [OK] openpyxl installed" -ForegroundColor Green
     }
     
     # Check requests
@@ -123,7 +123,7 @@ function Install-PythonPackages {
         Write-Host "    Installing requests..." -ForegroundColor Yellow
         python -m pip install requests
     } else {
-        Write-Host "    ✓ requests installed" -ForegroundColor Green
+        Write-Host "    [OK] requests installed" -ForegroundColor Green
     }
     
     # Check playwright
@@ -136,12 +136,12 @@ function Install-PythonPackages {
         python -m playwright install $Browser
         python -m playwright install-deps
     } else {
-        Write-Host "    ✓ playwright installed" -ForegroundColor Green
+        Write-Host "    [OK] playwright installed" -ForegroundColor Green
         # Check if browser is installed
         Write-Host "    Checking $Browser browser..." -ForegroundColor Gray
         try {
             python -m playwright install $Browser 2>&1 | Out-Null
-            Write-Host "    ✓ $Browser browser installed" -ForegroundColor Green
+            Write-Host "    [OK] $Browser browser installed" -ForegroundColor Green
         } catch {
             Write-Host "    Installing $Browser browser..." -ForegroundColor Yellow
             python -m playwright install $Browser
