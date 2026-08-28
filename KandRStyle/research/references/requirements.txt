@@ -1,0 +1,15 @@
+# Python dependencies for reference tracking and PDF download scripts
+# Install with: python -m pip install -r requirements.txt
+
+# Core dependencies
+openpyxl>=3.1.0
+matplotlib>=3.7.0
+numpy>=1.24.0
+requests>=2.31.0
+
+# Playwright for PDF downloads
+# Note: If playwright installation fails on Windows, you may need to:
+# 1. Upgrade pip first: python -m pip install --upgrade pip setuptools wheel
+# 2. Then install playwright: python -m pip install playwright
+# 3. Install browsers: python -m playwright install firefox
+playwright>=1.40.0
