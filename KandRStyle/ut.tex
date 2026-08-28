@@ -96,6 +96,11 @@ bindingoffset=0.12in]{geometry}
   \theendnotes
 }
 
+% Force opening of .ent file at document start to ensure all chapter writes succeed
+\AtBeginDocument{%
+  \immediate\openout\@enotes=\jobname.ent\relax
+}
+
 \makeatother
 
 %--------- Figures ----------------
