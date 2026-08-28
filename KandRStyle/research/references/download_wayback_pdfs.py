@@ -63,6 +63,25 @@ def extract_accessed_dates_from_tex():
     
     return url_dates
 
+def extract_year_from_url(url):
+    """
+    Extract a year from URL path (e.g., /2015/ or /2020/)
+    Returns: year as integer or None if not found
+    """
+    # Look for 4-digit years in the URL path
+    # Pattern matches various formats: /YYYY/, /YYYY-, -YYYY/, -YYYY-
+    year_pattern = r'(?:^|/|-)(\d{4})(?:/|-|$)'
+    matches = re.finditer(year_pattern, url)
+    
+    for match in matches:
+        year_str = match.group(1)
+        year = int(year_str)
+        # Only accept reasonable years (1990-2030)
+        if 1990 <= year <= 2030:
+            return year
+    
+    return None
+
 def get_wayback_snapshot(url, target_date=None):
     """
     Query Wayback Machine API to find closest snapshot to target_date
@@ -188,8 +207,12 @@ Examples:
   Download using specific date (format: YYYY-MM-DD):
     python download_wayback_pdfs.py --start 1 --end 5 --date 2026-07-12
 
-Note: If no accessed date is found, the script will automatically use the 
-      latest available snapshot from Wayback Machine.
+Note: The script uses the following priority for determining the snapshot date:
+      1. Explicit --date argument (if provided)
+      2. Accessed date from Reference_Tracking.xlsx workbook
+      3. Accessed date from ut.tex file
+      4. Year extracted from URL (e.g., /2015/ uses July 1, 2015)
+      5. Latest available snapshot (if no date information found)
         """
     )
     
@@ -273,7 +296,14 @@ Note: If no accessed date is found, the script will automatically use the
             target_date = url_dates[url]
             print(f"  Using accessed date from ut.tex: {target_date.strftime('%B %d, %Y')}")
         elif not target_date:
-            print(f"  No accessed date found - using latest available snapshot")
+            # Try to extract year from URL
+            year = extract_year_from_url(url)
+            if year:
+                # Use July 1st of that year as the target date
+                target_date = datetime(year, 7, 1)
+                print(f"  Extracted year {year} from URL - using {target_date.strftime('%B %d, %Y')}")
+            else:
+                print(f"  No accessed date found - using latest available snapshot")
         
         # Query Wayback Machine
         print(f"  Querying Wayback Machine...")
