@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  28 AUG 2026 13:39
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  28 AUG 2026 13:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1412,10 +1412,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\gls' on input line 435.
-
 [10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -3276,7 +3272,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [177
 
 ] [178]
-Overfull \hbox (1.4841pt too wide) in paragraph at lines 205--205
+Overfull \hbox (1.4841pt too wide) in paragraph at lines 203--203
 []\TU/InfoOTDisp(0)/b/n/10 The core component of an operating system that manag
 es hardware resources
  []
@@ -3297,7 +3293,7 @@ L3 programming layer <2023-08-11>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `ut.out' has not changed.
-(rerunfilecheck)             Checksum: 9CD98E1B5E1EA2826E7E518FD5EBA71D;17850.
+(rerunfilecheck)             Checksum: 1305FD12681AC6181BBF6B8F5C4DF2DF;17850.
  ) 
 Here is how much of TeX's memory you used:
  25489 strings out of 475846

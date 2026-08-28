@@ -5,7 +5,7 @@
 \contentsline {chapter}{\numberline {1}Anecdotes on the Journey}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Computers and Insects}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}First Light}{7}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Attack Topology: The String of Pearls \gls {configuration}}{10}{section.1.3}%
+\contentsline {section}{\numberline {1.3}Attack Topology: The String of Pearls Configuration}{10}{section.1.3}%
 \contentsline {section}{\numberline {1.4}The Reveal}{13}{section.1.4}%
 \contentsline {chapter}{\numberline {2}Towards Experimentation}{15}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Introduction}{15}{section.2.1}%
