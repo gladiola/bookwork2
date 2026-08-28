@@ -112,9 +112,15 @@ If you continue to see errors after pulling the fixed version:
 4. **Verify PowerShell can parse it:**
    ```powershell
    # This should show no errors
+   $errors = $null
    $null = [System.Management.Automation.PSParser]::Tokenize(
-       (Get-Content Download-References.ps1 -Raw), [ref]$null)
-   Write-Host "Script parsed successfully!"
+       (Get-Content Download-References.ps1 -Raw), [ref]$errors)
+   if ($errors.Count -eq 0) {
+       Write-Host "Script parsed successfully!" -ForegroundColor Green
+   } else {
+       Write-Host "Parse errors found:" -ForegroundColor Red
+       $errors | ForEach-Object { Write-Host "  $_" }
+   }
    ```
 
 5. **Check your PowerShell version:**
