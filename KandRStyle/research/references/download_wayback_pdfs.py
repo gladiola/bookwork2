@@ -101,10 +101,25 @@ def load_urls_from_workbook(start_id=1, end_id=10):
         if row[0] and row[1]:  # ID and URL columns
             url_id = row[0]
             if start_id <= url_id <= end_id:
+                # Try to get accessed date from column C (index 2)
+                accessed_date_str = row[2] if len(row) > 2 and row[2] else None
+                
+                # Parse accessed date if present
+                accessed_date = None
+                if accessed_date_str:
+                    try:
+                        accessed_date = datetime.strptime(accessed_date_str, "%d %B %Y")
+                    except ValueError:
+                        try:
+                            accessed_date = datetime.strptime(accessed_date_str, "%d %b %Y")
+                        except ValueError:
+                            pass  # Will fall back to ut.tex extraction
+                
                 urls.append({
                     'id': url_id,
                     'url': row[1],
-                    'status': row[2] if len(row) > 2 else "Not Found"
+                    'accessed_date': accessed_date,
+                    'status': row[3] if len(row) > 3 else "Not Found"
                 })
     
     return urls
@@ -117,9 +132,9 @@ def update_workbook_status(url_id, status, notes=""):
     # Find the row with the matching ID
     for row in ws.iter_rows(min_row=2):
         if row[0].value == url_id:
-            row[2].value = status  # Update Status column
+            row[3].value = status  # Update Status column (now column D)
             if notes:
-                row[3].value = notes  # Update Notes column
+                row[4].value = notes  # Update Notes column (now column E)
             break
     
     wb.save(str(WORKBOOK_PATH))
@@ -198,19 +213,23 @@ Examples:
     print(f"Range: {args.start} to {args.end}")
     print(f"Browser: {args.browser}")
     
-    # Extract accessed dates from ut.tex
-    print(f"\nExtracting 'Accessed' dates from ut.tex...")
-    url_dates = extract_accessed_dates_from_tex()
-    print(f"Found {len(url_dates)} URLs with accessed dates")
-    
-    # Load URLs from workbook
+    # Load URLs from workbook (includes accessed dates from column C)
     urls = load_urls_from_workbook(args.start, args.end)
     
     if not urls:
         print(f"\nNo URLs found in range {args.start}-{args.end}")
         return
     
-    print(f"\nFound {len(urls)} URLs to process\n")
+    print(f"\nFound {len(urls)} URLs to process")
+    
+    # Check how many have accessed dates from workbook
+    urls_with_dates = sum(1 for u in urls if u.get('accessed_date'))
+    print(f"{urls_with_dates} URLs have 'Accessed' dates in workbook")
+    
+    # Extract accessed dates from ut.tex as fallback
+    print(f"\nExtracting additional 'Accessed' dates from ut.tex as fallback...")
+    url_dates = extract_accessed_dates_from_tex()
+    print(f"Found {len(url_dates)} URLs with accessed dates in ut.tex\n")
     
     # Use specific date if provided
     specific_date = None
@@ -245,12 +264,17 @@ Examples:
         
         # Determine which date to use
         target_date = specific_date
-        if not target_date and url in url_dates:
+        if not target_date and url_data.get('accessed_date'):
+            # Use date from workbook
+            target_date = url_data['accessed_date']
+            print(f"  Using accessed date from workbook: {target_date.strftime('%B %d, %Y')}")
+        elif not target_date and url in url_dates:
+            # Fall back to date from ut.tex
             target_date = url_dates[url]
-            print(f"  Using accessed date: {target_date.strftime('%B %d, %Y')}")
+            print(f"  Using accessed date from ut.tex: {target_date.strftime('%B %d, %Y')}")
         elif not target_date and not args.force_latest:
             print(f"  No accessed date found and --force-latest not specified")
-            update_workbook_status(url_id, "Not Found", "No accessed date in ut.tex - use --force-latest")
+            update_workbook_status(url_id, "Not Found", "No accessed date - use --force-latest")
             results.append({
                 'id': url_id,
                 'url': url,

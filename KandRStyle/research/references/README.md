@@ -9,6 +9,7 @@ This folder contains a reference tracking system for managing URL references fou
   - **Reference Tracking** - Master list of URLs with tracking information
     - ID: Unique identifier for each URL
     - URL: The complete URL
+    - Accessed Date: The "Accessed" date extracted from ut.tex endnotes (used by Wayback Machine)
     - Status: "Stored" or "Not Found" indicating if we have a PDF copy
     - Notes: Additional information about the URL or download status
   - **URL Locations** - Shows where each URL appears in ut.tex
@@ -53,6 +54,9 @@ This folder contains a reference tracking system for managing URL references fou
 ## Statistics
 - **Total unique URLs found:** 157
 - **Total URL occurrences:** 254 (some URLs appear multiple times in the document)
+- **URLs with "Accessed" dates:** 90 (extracted from ut.tex endnotes)
+
+The "Accessed Date" column is crucial for Wayback Machine downloads - it tells the script which snapshot to retrieve.
 
 ## Usage
 
@@ -164,9 +168,16 @@ The workbook Notes column includes the snapshot date for Wayback downloads.
 
 ### Wayback Machine Benefits:
 - Retrieves content from URLs that no longer exist
-- Gets the page as it appeared on the "Accessed" date
+- Gets the page as it appeared on the "Accessed" date from the workbook
+- Falls back to ut.tex if accessed date not in workbook
 - Creates a permanent archive reference
 - Useful for academic citation verification
+
+**How Accessed Dates Work:**
+1. The script first checks the "Accessed Date" column in the workbook
+2. If not found, it searches ut.tex for "Accessed DD Month YYYY" patterns
+3. Uses that date to find the closest Wayback Machine snapshot
+4. If no date found, use `--force-latest` to get the most recent snapshot
 
 ## Troubleshooting
 

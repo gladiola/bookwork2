@@ -9,6 +9,7 @@ from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter
 import os
 from pathlib import Path
+from datetime import datetime
 
 # Get the script directory and construct relative paths
 SCRIPT_DIR = Path(__file__).parent.resolve()
@@ -38,7 +39,47 @@ def extract_urls_from_tex(file_path):
     
     return urls_with_lines
 
-def create_reference_tracking_workbook(urls_with_lines):
+def extract_accessed_dates_from_tex(file_path):
+    """
+    Extract URLs and their "Accessed" dates from ut.tex
+    Returns: dict mapping URLs to accessed date strings
+    """
+    url_dates = {}
+    
+    with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+        content = f.read()
+    
+    # Pattern to find endnotes with URLs and Accessed dates
+    # Example: \url{https://www.mybib.com}. Accessed 12 July 2026.
+    pattern = r'\\url\{([^}]+)\}[^}]*?Accessed\s+(\d+)\s+(\w+)\.?\s+(\d{4})'
+    
+    matches = re.finditer(pattern, content, re.IGNORECASE)
+    
+    for match in matches:
+        url = match.group(1)
+        day = match.group(2)
+        month_name = match.group(3)
+        year = match.group(4)
+        
+        # Store as formatted string for display
+        date_str = f"{day} {month_name} {year}"
+        
+        # Try to parse to validate
+        try:
+            date_obj = datetime.strptime(date_str, "%d %B %Y")
+            url_dates[url] = date_str
+        except ValueError:
+            try:
+                # Try abbreviated month
+                date_obj = datetime.strptime(date_str, "%d %b %Y")
+                url_dates[url] = date_str
+            except ValueError:
+                # Skip if date can't be parsed, but store the raw string anyway
+                url_dates[url] = date_str
+    
+    return url_dates
+
+def create_reference_tracking_workbook(urls_with_lines, url_dates):
     """
     Create an Excel workbook with reference tracking information
     """
@@ -52,7 +93,7 @@ def create_reference_tracking_workbook(urls_with_lines):
     ws_tracking = wb.create_sheet("Reference Tracking")
     
     # Define headers for Reference Tracking sheet
-    headers_tracking = ["ID", "URL", "Status", "Notes"]
+    headers_tracking = ["ID", "URL", "Accessed Date", "Status", "Notes"]
     ws_tracking.append(headers_tracking)
     
     # Style the header row
@@ -75,13 +116,15 @@ def create_reference_tracking_workbook(urls_with_lines):
     
     # Add URLs to Reference Tracking sheet
     for idx, url in enumerate(unique_urls, 1):
-        ws_tracking.append([idx, url, "Not Found", ""])
+        accessed_date = url_dates.get(url, "")  # Get accessed date if available
+        ws_tracking.append([idx, url, accessed_date, "Not Found", ""])
     
     # Adjust column widths
     ws_tracking.column_dimensions['A'].width = 8
     ws_tracking.column_dimensions['B'].width = 80
-    ws_tracking.column_dimensions['C'].width = 15
-    ws_tracking.column_dimensions['D'].width = 30
+    ws_tracking.column_dimensions['C'].width = 18
+    ws_tracking.column_dimensions['D'].width = 15
+    ws_tracking.column_dimensions['E'].width = 30
     
     # Create "URL Locations" sheet
     ws_locations = wb.create_sheet("URL Locations")
@@ -126,12 +169,17 @@ def main():
     
     print(f"Found {len(urls_with_lines)} URL occurrences")
     
+    print("\nExtracting 'Accessed' dates from ut.tex...")
+    url_dates = extract_accessed_dates_from_tex(str(UT_TEX_PATH))
+    print(f"Found {len(url_dates)} URLs with 'Accessed' dates")
+    
     print("\nCreating Reference Tracking workbook...")
-    unique_urls = create_reference_tracking_workbook(urls_with_lines)
+    unique_urls = create_reference_tracking_workbook(urls_with_lines, url_dates)
     
     print("\nFirst 10 URLs to process:")
     for idx, url in enumerate(unique_urls[:10], 1):
-        print(f"{idx}. {url}")
+        accessed_info = f" (Accessed: {url_dates[url]})" if url in url_dates else " (No accessed date)"
+        print(f"{idx}. {url}{accessed_info}")
 
 if __name__ == "__main__":
     main()
