@@ -92,8 +92,8 @@ Examples:
   Download references 1-10:
     python download_pdfs_range.py --start 1 --end 10
     
-  Download references 20-30 using Firefox:
-    python download_pdfs_range.py --start 20 --end 30 --browser firefox
+  Download references 20-30 using Chromium (explicit):
+    python download_pdfs_range.py --start 20 --end 30 --browser chromium
     
   Download a single reference (ID 5):
     python download_pdfs_range.py --start 5 --end 5
