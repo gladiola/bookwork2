@@ -4413,13 +4413,17 @@ If the disks are hardware encrypted, then provide the PIN according to the manuf
 \texttt{\index{gpart}gpart show}\endnote{"gpart(8)." Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.} - should provide an indicator of \gls{partition} numbers
 
 \item Attach and decrypt partitions
-\texttt{\index{geli}geli attach [DISK\_NAMEpPARTITION\_NUMBER]}\endnote{"Geli(8)." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}
+
+\texttt{\index{geli}geli attach [\seqsplit{DISK\_NAMEpPARTITION\_NUMBER}]}\endnote{"Geli(8)." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}
 
 If a \gls{passphrase} was recorded on magstripe, this is the point where the dedicated card will need to be swiped.  If the card does not work, then this is the point where the paper UV ink \gls{backup} notes may be used.
 
 \item Discover and attach zpools and zfs datasets.
-\texttt{\index{zpool}zpool import POOL\_NAME\_ON\_ATTACHED\_DISK}\endnote{"zpool(8)." Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=zpool&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}
+
+\texttt{\index{zpool}zpool import \seqsplit{POOL\_NAME\_ON\_ATTACHED\_DISK}}\endnote{"zpool(8)." Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=zpool&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}
+
 \texttt{\index{zpool}zpool import -af}\endnote{Ibidem.} to forcefully attach all available zpools
+
 \texttt{\index{zpool}zpool status}\endnote{Ibidem.}
 
 If a MAC kerenel mod like mac\_biba is used on the file system, then the system may be a UFS file system on a \gls{zfs} Volume.  These are often mounted with mount from a /dev device node or a GEOM label.  [Advanced \gls{zfs}]
