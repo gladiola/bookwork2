@@ -1,0 +1,96 @@
+\documentclass{book}
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\large}{\thechapter}{1em}{}
+
+\usepackage{endnotes}
+
+% Counter to track chapter sections
+\newcounter{endnotechapter}
+\setcounter{endnotechapter}{0}
+
+% Storage for chapter titles
+\newcommand{\currentchaptertitle}{}
+
+% Separator command (written to .ent file, processed during print)
+\newcommand{\enotechapsep}[2]{%
+  \ifnum#1>0
+    \subsection*{Chapter #1: #2}%
+  \else
+    \subsection*{#2}%
+  \fi
+}
+
+% Mark end of chapter: just reset counter for next chapter
+\newcommand{\markchapterendnotes}{%
+  % Reset counter for next chapter
+  \setcounter{endnote}{0}%
+  \stepcounter{endnotechapter}%
+}
+
+% Print all endnotes organized by chapter (called once at end)
+\newcommand{\printallendnotesbychapter}{%
+  \chapter*{Endnotes}%
+  \renewcommand{\enoteheading}{}% Suppress default heading
+  \theendnotes
+}
+
+\usepackage{hyperref}
+
+% Hook into \chapter to capture chapter titles and write separator
+% Must be done after hyperref is loaded to work with hyperref's patches
+% Since titlesec is loaded and redefines \chapter, we patch \@chapter and \@schapter instead
+\makeatletter
+
+% Patch \@chapter (numbered chapters) to write separator BEFORE the chapter processes
+\let\orig@@chapter\@chapter
+\renewcommand{\@chapter}[2][]{%
+  % #1 is optional TOC entry, #2 is the chapter title
+  \renewcommand{\currentchaptertitle}{#2}%
+  % Write separator to endnotes file
+  \immediate\write\@enotes{\string\enotechapsep{\the\numexpr\value{chapter}+1}{\detokenize\expandafter{\currentchaptertitle}}}%
+  % Call original \@chapter
+  \orig@@chapter[#1]{#2}%
+}
+
+% Patch \@schapter (starred/unnumbered chapters) to write separator
+\let\orig@@schapter\@schapter
+\renewcommand{\@schapter}[1]{%
+  \renewcommand{\currentchaptertitle}{#1}%
+  % Write separator with chapter number 0 for unnumbered chapters
+  \immediate\write\@enotes{\string\enotechapsep{0}{\detokenize\expandafter{\currentchaptertitle}}}%
+  % Call original \@schapter
+  \orig@@schapter{#1}%
+}
+
+\makeatother
+
+\begin{document}
+
+\frontmatter
+
+\chapter*{Acknowledgements}
+This is the acknowledgements section.
+We have an endnote here.\endnote{First endnote in Acknowledgements}
+\markchapterendnotes
+
+\chapter*{Introduction}
+This is the introduction.
+Another endnote.\endnote{Endnote in Introduction}
+\markchapterendnotes
+
+\mainmatter
+
+\chapter{First Chapter}
+This is chapter 1.
+An endnote.\endnote{Endnote in Chapter 1}
+\markchapterendnotes
+
+\chapter{Second Chapter}
+This is chapter 2.
+Another endnote.\endnote{Endnote in Chapter 2}
+\markchapterendnotes
+
+\backmatter
+\printallendnotesbychapter
+
+\end{document}
