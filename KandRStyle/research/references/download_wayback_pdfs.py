@@ -158,39 +158,58 @@ def update_workbook_status(url_id, status, notes=""):
     
     wb.save(str(WORKBOOK_PATH))
 
-def download_wayback_url_as_pdf(wayback_url, pdf_path, browser_type='chromium', timeout=30000):
-    """Download a Wayback Machine URL as PDF using playwright"""
-    try:
-        with sync_playwright() as p:
-            # Launch the specified browser
-            if browser_type == 'firefox':
-                browser = p.firefox.launch(headless=True)
-            elif browser_type == 'webkit':
-                browser = p.webkit.launch(headless=True)
-            else:  # default to chromium
-                browser = p.chromium.launch(headless=True)
-            
-            context = browser.new_context()
-            page = context.new_page()
-            
-            print(f"    Navigating to Wayback snapshot...")
-            # Navigate to the URL
-            page.goto(wayback_url, timeout=timeout, wait_until="networkidle")
-            
-            # Wait a bit for any JavaScript to execute
-            page.wait_for_timeout(2000)
-            
-            print(f"    Generating PDF...")
-            # Generate PDF
-            page.pdf(path=pdf_path, format='A4', print_background=True)
-            
-            browser.close()
-            return True, "Successfully downloaded from Wayback Machine"
-            
-    except PlaywrightTimeoutError:
-        return False, "Timeout - page took too long to load"
-    except Exception as e:
-        return False, f"Error: {str(e)[:100]}"
+def download_wayback_url_as_pdf(wayback_url, pdf_path, browser_type='chromium', timeout=60000, max_retries=3):
+    """Download a Wayback Machine URL as PDF using playwright with retry logic"""
+    
+    for attempt in range(max_retries):
+        try:
+            with sync_playwright() as p:
+                # Launch the specified browser
+                if browser_type == 'firefox':
+                    browser = p.firefox.launch(headless=True)
+                elif browser_type == 'webkit':
+                    browser = p.webkit.launch(headless=True)
+                else:  # default to chromium
+                    browser = p.chromium.launch(headless=True)
+                
+                context = browser.new_context()
+                page = context.new_page()
+                
+                if attempt > 0:
+                    print(f"    Retry attempt {attempt + 1}/{max_retries}...")
+                else:
+                    print(f"    Navigating to Wayback snapshot...")
+                    
+                # Navigate to the URL
+                page.goto(wayback_url, timeout=timeout, wait_until="networkidle")
+                
+                # Wait a bit for any JavaScript to execute
+                page.wait_for_timeout(2000)
+                
+                print(f"    Generating PDF...")
+                # Generate PDF
+                page.pdf(path=pdf_path, format='A4', print_background=True)
+                
+                browser.close()
+                return True, "Successfully downloaded from Wayback Machine"
+                
+        except PlaywrightTimeoutError:
+            if attempt < max_retries - 1:
+                # Exponential backoff: wait 5s, 10s, 20s, etc.
+                wait_time = 5 * (2 ** attempt)
+                print(f"    Timeout on attempt {attempt + 1}. Waiting {wait_time}s before retry...")
+                time.sleep(wait_time)
+            else:
+                return False, "Timeout - page took too long to load after all retries"
+        except Exception as e:
+            if attempt < max_retries - 1:
+                wait_time = 5 * (2 ** attempt)
+                print(f"    Error on attempt {attempt + 1}: {str(e)[:100]}. Waiting {wait_time}s before retry...")
+                time.sleep(wait_time)
+            else:
+                return False, f"Error: {str(e)[:100]}"
+    
+    return False, "Failed after all retries"
 
 def main():
     parser = argparse.ArgumentParser(
@@ -223,8 +242,10 @@ Note: The script uses the following priority for determining the snapshot date:
     parser.add_argument('--browser', choices=['chromium', 'firefox', 'webkit'],
                         default='chromium',
                         help='Browser to use for PDF generation (default: chromium)')
-    parser.add_argument('--timeout', type=int, default=30000,
-                        help='Page load timeout in milliseconds (default: 30000)')
+    parser.add_argument('--timeout', type=int, default=60000,
+                        help='Page load timeout in milliseconds (default: 60000)')
+    parser.add_argument('--max-retries', type=int, default=3,
+                        help='Maximum number of retry attempts for failed downloads (default: 3)')
     parser.add_argument('--date', type=str,
                         help='Specific date to search for snapshots (YYYY-MM-DD)')
     parser.add_argument('--force-latest', action='store_true',
@@ -235,6 +256,8 @@ Note: The script uses the following priority for determining the snapshot date:
     print(f"Loading URLs from workbook at: {WORKBOOK_PATH.resolve()}...")
     print(f"Range: {args.start} to {args.end}")
     print(f"Browser: {args.browser}")
+    print(f"Timeout: {args.timeout}ms ({args.timeout/1000:.0f}s)")
+    print(f"Max retries: {args.max_retries}")
     
     # Load URLs from workbook (includes accessed dates from column C)
     urls = load_urls_from_workbook(args.start, args.end)
@@ -325,7 +348,7 @@ Note: The script uses the following priority for determining the snapshot date:
         print(f"  Found snapshot from: {snapshot_date.strftime('%B %d, %Y')}")
         
         # Try to download
-        success, message = download_wayback_url_as_pdf(wayback_url, str(pdf_path), args.browser, args.timeout)
+        success, message = download_wayback_url_as_pdf(wayback_url, str(pdf_path), args.browser, args.timeout, args.max_retries)
         
         if success:
             print(f"  ✓ Success: {pdf_filename}")
