@@ -1,2 +1,3 @@
-# PowerShell scripts should use Windows line endings
-*.ps1 text eol=crlf
+# PowerShell scripts should use Windows line endings  
+# Store with CRLF in repository (binary mode) to avoid line ending conversion issues
+*.ps1 -text
