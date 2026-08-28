@@ -22,16 +22,32 @@ def extract_urls_from_tex(file_path):
     Extract URLs and their line numbers from the tex file
     Returns: List of tuples (line_number, url)
     """
-    url_pattern = r'https?://[^\s}\]"\\]+'
     urls_with_lines = []
     
     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
         lines = f.readlines()
-        
+    
+    # Pattern to match \url{...} commands (handles LaTeX escapes like \#, \&, \%)
+    url_cmd_pattern = r'\\url\{([^}]+)\}'
+    
+    # Pattern to match raw URLs in text (stops at backslash to avoid LaTeX commands)
+    raw_url_pattern = r'https?://[^\s}\]"\\]+'
+    
     for line_num, line in enumerate(lines, 1):
-        # Find all URLs in the line
-        matches = re.finditer(url_pattern, line)
-        for match in matches:
+        # First, extract URLs from \url{} commands
+        # These are the most reliable and handle LaTeX escapes properly
+        url_cmd_matches = re.finditer(url_cmd_pattern, line)
+        for match in url_cmd_matches:
+            url = match.group(1)
+            # Remove quotes if present (e.g., \url{"http://..."})
+            url = url.strip('"')
+            urls_with_lines.append((line_num, url))
+        
+        # Then, find raw URLs that aren't already in \url{} commands
+        # Replace the \url{} commands temporarily to avoid double-counting
+        line_without_url_cmds = re.sub(url_cmd_pattern, '', line)
+        raw_matches = re.finditer(raw_url_pattern, line_without_url_cmds)
+        for match in raw_matches:
             url = match.group(0)
             # Clean up the URL (remove trailing punctuation that's not part of the URL)
             url = url.rstrip('.,;:')

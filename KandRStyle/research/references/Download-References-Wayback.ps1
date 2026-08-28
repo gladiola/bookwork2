@@ -37,7 +37,7 @@
     .\Download-References-Wayback.ps1 -StartRef 20 -EndRef 25 -Date "2026-07-12"
     Downloads references 20-25 using snapshot from July 12, 2026
 .EXAMPLE
-    .\Download-References-Wayback.ps1 -StartRef 1 -EndRef 157 -Browser chromium
+    .\Download-References-Wayback.ps1 -StartRef 1 -EndRef 192 -Browser chromium
     Downloads ALL references using Chromium
 #>
 
@@ -168,9 +168,9 @@ function Test-ReferenceRange {
         return $false
     }
     
-    if ($End -gt 157) {
-        Write-Host "Warning: Only 157 references exist. Setting end to 157." -ForegroundColor Yellow
-        $script:EndRef = 157
+    if ($End -gt 192) {
+        Write-Host "Warning: Only 192 references exist. Setting end to 192." -ForegroundColor Yellow
+        $script:EndRef = 192
     }
     
     return $true

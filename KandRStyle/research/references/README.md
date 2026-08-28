@@ -88,9 +88,9 @@ python verify_setup.py
 See [SETUP.md](SETUP.md) for detailed step-by-step instructions and troubleshooting.
 
 ## Statistics
-- **Total unique URLs found:** 157
-- **Total URL occurrences:** 254 (some URLs appear multiple times in the document)
-- **URLs with "Accessed" dates:** 90 (extracted from ut.tex endnotes)
+- **Total unique URLs found:** 192
+- **Total URL occurrences:** 377 (some URLs appear multiple times in the document)
+- **URLs with "Accessed" dates:** 96 (extracted from ut.tex endnotes)
 
 The "Accessed Date" column is crucial for Wayback Machine downloads - it tells the script which snapshot to retrieve.
 
@@ -132,9 +132,9 @@ python3 download_wayback_pdfs.py --start 1 --end 10 --date 2026-07-12
 .\Download-References.ps1 -StartRef 1 -EndRef 10 -Browser firefox
 ```
 
-#### Download all references (1-157):
+#### Download all references (1-192):
 ```powershell
-.\Download-References.ps1 -StartRef 1 -EndRef 157 -Browser firefox
+.\Download-References.ps1 -StartRef 1 -EndRef 192 -Browser firefox
 ```
 
 #### Download from Wayback Machine:
@@ -231,7 +231,7 @@ The workbook Notes column includes the snapshot date for Wayback downloads.
 - Manual install: `python -m playwright install firefox`
 
 ## Future Work
-- The remaining 147 URLs (IDs 11-157) can be processed by modifying the download_pdfs.py script
+- The remaining 182 URLs (IDs 11-192) can be processed by modifying the download_pdfs.py script
 - Consider adding a column for the date the PDF was downloaded
 - Consider adding a checksum or hash for downloaded PDFs
 - Implement retry logic for failed downloads
