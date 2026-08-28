@@ -4403,19 +4403,19 @@ This will only have the most primitive collections of programs and will not be s
 
 If the disks are hardware encrypted, then provide the PIN according to the manufacturer's directions.  Enter the PIN carefully, as there may be administrative reset or disk-wiping functions available.  With the disk hardware decrypted and attached, a message should be visible on the console describing the detection of the device.
 
-\texttt{geom disk list} - should show the disks recognized by the system.
+\texttt{\index{geom}geom disk list}\endnote{"geom." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geom&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.} - should show the disks recognized by the system.
 
-\texttt{gpart show} - should provide an indicator of \gls{partition} numbers
+\texttt{\index{gpart}gpart show}\endnote{"gpart(8)." Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.} - should provide an indicator of \gls{partition} numbers
 
 \item Attach and decrypt partitions
-\texttt{geli attach [DISK\_NAMEpPARTITION\_NUMBER]}
+\texttt{\index{geli}geli attach [DISK\_NAMEpPARTITION\_NUMBER]}\endnote{"Geli(8)." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}
 
 If a \gls{passphrase} was recorded on magstripe, this is the point where the dedicated card will need to be swiped.  If the card does not work, then this is the point where the paper UV ink \gls{backup} notes may be used.
 
 \item Discover and attach zpools and zfs datasets.
-\texttt{zpool import POOL\_NAME\_ON\_ATTACHED\_DISK
-zpool import -af} to forcefully attach all available zpools
-\texttt{zpool status}
+\texttt{\index{zpool}zpool import POOL\_NAME\_ON\_ATTACHED\_DISK}\endnote{"zpool(8)." Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=zpool&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}
+\texttt{\index{zpool}zpool import -af}\endnote{Ibidem.} to forcefully attach all available zpools
+\texttt{\index{zpool}zpool status}\endnote{Ibidem.}
 
 If a MAC kerenel mod like mac\_biba is used on the file system, then the system may be a UFS file system on a \gls{zfs} Volume.  These are often mounted with mount from a /dev device node or a GEOM label.  [Advanced \gls{zfs}]
 
@@ -4423,7 +4423,7 @@ If a MAC kerenel mod like mac\_biba is used on the file system, then the system 
 
 \item Use the laptop to interact with files on the storage.
 
-\item Decrypt individual files with openssl.
+\item Decrypt individual files with openssl.\endnote{"Openssl(1)." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=openssl&apropos=0&sektion=1&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}
 \end{enumerate}
 
 \subsection{Code Notes for Poweroff}
@@ -4434,11 +4434,11 @@ With a LiveCD or El Torrito in FreeBSD, it is very common for the system to rebo
 1.  Dispose of decrypted copies of any files that are in the plain.  Ensure that an encrypted copy continues to live on the storage drives.  Re-\gls{encrypt} if necessary.
 
 2.  Dismount media.
-\texttt{zfs export [DATASET\_NAME]
-geli detatch [DRIVE.eli]
-geom disk list}
+\texttt{\index{zfs}zfs export [DATASET\_NAME]}\endnote{"zfs(8)." Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=zfs&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}
+\texttt{\index{geli}geli detatch [DRIVE.eli]}\endnote{Ibidem.}
+\texttt{\index{geom}geom disk list}\endnote{Ibidem.}
 
-In order to dismount the media, do not have a terminal command line open on any directories associated with that media.  To confirm a directory is empty after dismount, use ls.
+In order to dismount the media, do not have a terminal command line open on any directories associated with that media.  To confirm a directory is empty after dismount, use \texttt{\index{ls}ls}\endnote{"Ls(1)." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=ls&apropos=0&sektion=1&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}.
 
 
 
@@ -4511,8 +4511,6 @@ FreeBSD Handbook, Storage, \url{https://docs.freebsd.org/en/books/handbook/disks
 
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
-Text with\endnote{First note.} inline references.
-More text\endnote{Second note.}
 \markchapterendnotes
 
 
