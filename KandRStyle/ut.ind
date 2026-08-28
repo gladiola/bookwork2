@@ -89,12 +89,13 @@
 
   \item GDPR
     \subitem Right to be Forgotten, \hyperpage{118, 119}
-  \item geli, \hyperpage{121}, \hyperpage{135}, \hyperpage{144}
+  \item geli, \hyperpage{121}, \hyperpage{135}, \hyperpage{144--146}
     \subitem attach, \hyperpage{135, 136}, \hyperpage{138, 139}
     \subitem init, \hyperpage{135, 136}, \hyperpage{138, 139}
     \subitem status, \hyperpage{137}
+  \item geom, \hyperpage{145, 146}
   \item gpart, \hyperpage{123}, \hyperpage{125}, \hyperpage{129}, 
-		\hyperpage{133}, \hyperpage{144}
+		\hyperpage{133}, \hyperpage{144, 145}
     \subitem add, \hyperpage{128}, \hyperpage{130}, 
 		\hyperpage{133--135}, \hyperpage{138}
     \subitem create, \hyperpage{128, 129}, \hyperpage{133, 134}
@@ -137,7 +138,7 @@
   \indexspace
 
   \item live CD, \hyperpage{109}
-  \item ls, \hyperpage{129}
+  \item ls, \hyperpage{129}, \hyperpage{146}
   \item LTO III tape, \hyperpage{121}
   \item LTO tape, \hyperpage{149}
   \item LTO3, \hyperpage{149}
@@ -163,6 +164,7 @@
 		\hyperpage{101, 102}, \hyperpage{104, 105}
   \item mount, \hyperpage{128, 129}, \hyperpage{133}
   \item msfvenom, \hyperpage{29}
+  \item mt, \hyperpage{149, 150}
   \item multifactor authentication, \hyperpage{144}
 
   \indexspace
@@ -256,6 +258,7 @@
   \item tape machine, \hyperpage{149}
   \item tape operations, \hyperpage{149}
   \item tapes, \hyperpage{149}
+  \item tar, \hyperpage{150}
   \item Texas, \hyperpage{62}
   \item threat, \hyperpage{95}
   \item threat modeling, \hyperpage{16}
@@ -289,7 +292,8 @@
   \indexspace
 
   \item ZFS, \hyperpage{122}, \hyperpage{144}
-  \item zpool, \hyperpage{138, 139}
+  \item zfs, \hyperpage{146}
+  \item zpool, \hyperpage{138, 139}, \hyperpage{145}
     \subitem add, \hyperpage{130}
     \subitem comment, \hyperpage{124}
     \subitem create, \hyperpage{130}

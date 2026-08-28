@@ -546,6 +546,16 @@
 \indexentry{TOTP|hyperpage}{144}
 \indexentry{HOTP|hyperpage}{144}
 \indexentry{certificates|hyperpage}{144}
+\indexentry{geom|hyperpage}{145}
+\indexentry{gpart|hyperpage}{145}
+\indexentry{geli|hyperpage}{145}
+\indexentry{zpool|hyperpage}{145}
+\indexentry{zpool|hyperpage}{145}
+\indexentry{zpool|hyperpage}{145}
+\indexentry{zfs|hyperpage}{146}
+\indexentry{geli|hyperpage}{146}
+\indexentry{geom|hyperpage}{146}
+\indexentry{ls|hyperpage}{146}
 \indexentry{FreeBSD|hyperpage}{149}
 \indexentry{LTO tape|hyperpage}{149}
 \indexentry{tape|hyperpage}{149}
@@ -570,6 +580,14 @@
 \indexentry{tape|hyperpage}{149}
 \indexentry{file markers|hyperpage}{149}
 \indexentry{nsa driver|hyperpage}{149}
+\indexentry{mt|hyperpage}{149}
+\indexentry{mt|hyperpage}{149}
+\indexentry{mt|hyperpage}{150}
+\indexentry{mt|hyperpage}{150}
+\indexentry{tar|hyperpage}{150}
+\indexentry{mt|hyperpage}{150}
+\indexentry{tar|hyperpage}{150}
+\indexentry{tar|hyperpage}{150}
 \indexentry{encrypt|hyperpage}{153}
 \indexentry{encrypt|hyperpage}{153}
 \indexentry{encrypt|hyperpage}{153}

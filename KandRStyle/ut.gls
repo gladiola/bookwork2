@@ -2,7 +2,6 @@
 \begin{theglossary}\glossaryheader
 \glsgroupheading{A}\relax \glsresetentrylist %
 \glossentry{amnesiac}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{ii}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{109}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{116}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{123}\delimN 
@@ -245,7 +244,7 @@
 		\setentrycounter[]{page}\glsnumberformat{156}}}\glsgroupskip
 \glsgroupheading{O}\relax \glsresetentrylist %
 \glossentry{oed}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{175\delimR 178}}}%
+		\setentrycounter[]{page}\glsnumberformat{177\delimR 180}}}%
 \glossentry{operating system}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{39}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{109}\delimN 
