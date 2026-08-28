@@ -1,7 +1,6 @@
 \glossaryentry{cybercrime?\glossentry{cybercrime}|setentrycounter[]{page}"\glsnumberformat}{1}
 \glossaryentry{coding?\glossentry{coding}|setentrycounter[]{page}"\glsnumberformat}{1}
 \glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}"\glsnumberformat}{1}
-\glossaryentry{attack?\glossentry{attack}|setentrycounter[]{page}"\glsnumberformat}{i}
 \glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}"\glsnumberformat}{i}
 \glossaryentry{IPR?\glossentry{ipr}|setentrycounter[]{page}"\glsnumberformat}{ii}
 \glossaryentry{ransomware?\glossentry{ransomware}|setentrycounter[]{page}"\glsnumberformat}{ii}
@@ -16,7 +15,6 @@
 \glossaryentry{malware?\glossentry{malware}|setentrycounter[]{page}"\glsnumberformat}{8}
 \glossaryentry{attack?\glossentry{attack}|setentrycounter[]{page}"\glsnumberformat}{9}
 \glossaryentry{attack?\glossentry{attack}|setentrycounter[]{page}"\glsnumberformat}{9}
-\glossaryentry{attack?\glossentry{attack}|setentrycounter[]{page}"\glsnumberformat}{10}
 \glossaryentry{attack?\glossentry{attack}|setentrycounter[]{page}"\glsnumberformat}{10}
 \glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}"\glsnumberformat}{10}
 \glossaryentry{attack?\glossentry{attack}|setentrycounter[]{page}"\glsnumberformat}{11}
@@ -748,8 +746,8 @@
 \glossaryentry{metadata?\glossentry{metadata}|setentrycounter[]{page}"\glsnumberformat}{146}
 \glossaryentry{decryption?\glossentry{decryption}|setentrycounter[]{page}"\glsnumberformat}{146}
 \glossaryentry{metadata?\glossentry{metadata}|setentrycounter[]{page}"\glsnumberformat}{146}
-\glossaryentry{decryption?\glossentry{decryption}|setentrycounter[]{page}"\glsnumberformat}{146}
-\glossaryentry{partition?\glossentry{partition}|setentrycounter[]{page}"\glsnumberformat}{146}
+\glossaryentry{decryption?\glossentry{decryption}|setentrycounter[]{page}"\glsnumberformat}{147}
+\glossaryentry{partition?\glossentry{partition}|setentrycounter[]{page}"\glsnumberformat}{147}
 \glossaryentry{operating system?\glossentry{operating system}|setentrycounter[]{page}"\glsnumberformat}{147}
 \glossaryentry{motherboard?\glossentry{motherboard}|setentrycounter[]{page}"\glsnumberformat}{147}
 \glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{147}

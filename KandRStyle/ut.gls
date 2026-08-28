@@ -116,7 +116,7 @@
 \glossentry{decryption}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{118}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{143}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{146}}}%
+		\setentrycounter[]{page}\glsnumberformat{146\delimN 147}}}%
 \glossentry{dialog}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{129}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{131}}}%
@@ -276,7 +276,8 @@
 		\setentrycounter[]{page}\glsnumberformat{127\delimR 130}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{133}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{135}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{143\delimR 146}}}%
+		\setentrycounter[]{page}\glsnumberformat{143\delimR 145}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{147}}}%
 \glossentry{passphrase}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{129}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{145}}}%
