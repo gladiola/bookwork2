@@ -1,5 +1,8 @@
 # Python dependencies for reference tracking and PDF download scripts
 # Install with: python -m pip install -r requirements.txt
+#
+# IMPORTANT: Requires Python 3.8 or higher (Python 3.12+ recommended)
+# These are modern package versions with the latest security fixes and features.
 
 # Core dependencies
 openpyxl>=3.1.0
@@ -8,8 +11,5 @@ numpy>=1.24.0
 requests>=2.31.0
 
 # Playwright for PDF downloads
-# Note: If playwright installation fails on Windows, you may need to:
-# 1. Upgrade pip first: python -m pip install --upgrade pip setuptools wheel
-# 2. Then install playwright: python -m pip install playwright
-# 3. Install browsers: python -m playwright install firefox
+# Note: After installing, run: python -m playwright install firefox
 playwright>=1.40.0
