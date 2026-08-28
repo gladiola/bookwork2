@@ -29,6 +29,25 @@ This system helps you:
 - `download_pdfs_range.py` - Downloads live URLs
 - `download_wayback_pdfs.py` - Downloads from Wayback Machine
 
+## Prerequisites
+
+Before you begin, you need to install Python and required packages. See **[SETUP.md](SETUP.md)** for detailed installation instructions.
+
+**Quick setup:**
+```powershell
+# 1. Upgrade pip
+python -m pip install --upgrade pip setuptools wheel
+
+# 2. Install packages
+python -m pip install -r requirements.txt
+
+# 3. Install browsers
+python -m playwright install firefox
+
+# 4. Verify
+python verify_setup.py
+```
+
 ## Getting Started - Windows Users
 
 ### Step 1: Generate the Workbook (One Time)
