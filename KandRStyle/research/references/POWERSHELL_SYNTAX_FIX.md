@@ -22,8 +22,8 @@ The issue appears to be related to **line endings** and/or **smart quotes** in y
 # Save any local changes first (if needed)
 git stash
 
-# Pull the latest version
-git pull origin copilot/fix-syntax-errors-in-download-references
+# Pull the latest version from main
+git pull origin main
 
 # If you stashed changes, you can restore them
 git stash pop
@@ -45,7 +45,7 @@ If you edited the file and accidentally introduced smart quotes (curly quotes):
 Copy-Item Download-References.ps1 Download-References.ps1.backup
 
 # Fetch the clean version from the repository
-git checkout origin/copilot/fix-syntax-errors-in-download-references -- Download-References.ps1
+git checkout origin/main -- Download-References.ps1
 ```
 
 ## Verification
