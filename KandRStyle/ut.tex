@@ -3388,26 +3388,52 @@ These supporting tables summarize the adjusted per-capita count and dollar-impac
 
 \subsection{Adjusted Per-Capita Count}
 
+\noindent\textit{Note.} The count comparison tables have been split for readability. Table~\ref{tab:anova-count-means} shows the mean values, while Table~\ref{tab:anova-count-outcomes} shows the hypothesis test outcomes.
+
 \begin{table}[H]
   \centering
-  \caption{Adjusted per-capita count comparison by category.}
-  \label{tab:anova-count-comparison}
+  \caption{Adjusted per-capita count: Mean values by category.}
+  \label{tab:anova-count-means}
   \small
-  \begin{tabular}{@{}p{0.32\linewidth}rrrccc@{}}
+  \begin{tabular}{@{}p{0.45\linewidth}rrr@{}}
     \toprule
-    Category & AS mean & TN mean & CA mean & TN > AS & TN < CA & TN between?\\
+    Category & AS mean & TN mean & CA mean\\
     \midrule
-    Data Breach & 0.43 & 0.43 & 1.00 & No & Yes & No\\
-    Personal Data Breach & 5.29 & 14.71 & 25.71 & Yes & Yes & Yes\\
-    Malware & 0.86 & 0.43 & 0.57 & No & Yes & No\\
-    Phishing & 2.57 & 8.43 & 12.00 & Yes & Yes & Yes\\
-    Ransomware & 0.00 & 0.29 & 1.00 & Yes & Yes & Yes\\
-    Crimes Against Children & 1.57 & 0.29 & 0.43 & No & Yes & No\\
-    Extortion & 4.71 & 14.86 & 22.57 & Yes & Yes & Yes\\
-    Threats/\slash Stalking/\slash Harassment/\slash Terrorism & 7.29 & 5.00 & 9.17 & No & Yes & No\\
-    IPR/Counterfeit & 0.43 & 0.71 & 1.29 & Yes & Yes & Yes\\
-    Identity Theft & 1.86 & 9.86 & 11.86 & Yes & Yes & Yes\\
-    BEC & 4.00 & 6.71 & 12.86 & Yes & Yes & Yes\\
+    Data Breach & 0.43 & 0.43 & 1.00\\
+    Personal Data Breach & 5.29 & 14.71 & 25.71\\
+    Malware & 0.86 & 0.43 & 0.57\\
+    Phishing & 2.57 & 8.43 & 12.00\\
+    Ransomware & 0.00 & 0.29 & 1.00\\
+    Crimes Against Children & 1.57 & 0.29 & 0.43\\
+    Extortion & 4.71 & 14.86 & 22.57\\
+    Threats/\slash Stalking/\slash Harassment/\slash Terrorism & 7.29 & 5.00 & 9.17\\
+    IPR/Counterfeit & 0.43 & 0.71 & 1.29\\
+    Identity Theft & 1.86 & 9.86 & 11.86\\
+    BEC & 4.00 & 6.71 & 12.86\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Adjusted per-capita count: Hypothesis test outcomes at $\alpha = 0.05$.}
+  \label{tab:anova-count-outcomes}
+  \small
+  \begin{tabular}{@{}p{0.45\linewidth}ccc@{}}
+    \toprule
+    Category & TN > AS & TN < CA & TN between?\\
+    \midrule
+    Data Breach & No & Yes & No\\
+    Personal Data Breach & Yes & Yes & Yes\\
+    Malware & No & Yes & No\\
+    Phishing & Yes & Yes & Yes\\
+    Ransomware & Yes & Yes & Yes\\
+    Crimes Against Children & No & Yes & No\\
+    Extortion & Yes & Yes & Yes\\
+    Threats/\slash Stalking/\slash Harassment/\slash Terrorism & No & Yes & No\\
+    IPR/Counterfeit & Yes & Yes & Yes\\
+    Identity Theft & Yes & Yes & Yes\\
+    BEC & Yes & Yes & Yes\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -3436,26 +3462,52 @@ Across the eleven categories, Tennessee exceeded American Samoa in 7 categories,
 
 \subsection{Adjusted Per-Capita Dollar Impact}
 
+\noindent\textit{Note.} The dollar-impact comparison tables have been split for readability. Table~\ref{tab:anova-impact-means} shows the mean values, while Table~\ref{tab:anova-impact-outcomes} shows the hypothesis test outcomes.
+
 \begin{table}[H]
   \centering
-  \caption{Adjusted per-capita dollar-impact comparison by category.}
-  \label{tab:anova-impact-comparison}
+  \caption{Adjusted per-capita dollar-impact: Mean values by category.}
+  \label{tab:anova-impact-means}
   \small
-  \begin{tabular}{@{}p{0.32\linewidth}rrrccc@{}}
+  \begin{tabular}{@{}p{0.45\linewidth}rrr@{}}
     \toprule
-    Category & AS mean & TN mean & CA mean & TN > AS & TN < CA & TN between?\\
+    Category & AS mean & TN mean & CA mean\\
     \midrule
-    Data Breach & \$166{,}889.57 & \$7{,}806.88 & \$44{,}615.39 & No & Yes & No\\
-    Personal Data Breach & \$270.50 & \$68{,}479.48 & \$212{,}708.42 & Yes & Yes & Yes\\
-    Malware & \$0.00 & \$84.40 & \$1{,}012.86 & Yes & Yes & Yes\\
-    Phishing & \$0.00 & \$15{,}994.21 & \$46{,}694.72 & Yes & Yes & Yes\\
-    Ransomware & \$0.00 & \$655.60 & \$6{,}761.39 & Yes & Yes & Yes\\
-    Crimes Against Children & \$0.00 & \$7.09 & \$204.40 & Yes & Yes & Yes\\
-    Extortion & \$300.00 & \$6{,}123.76 & \$43{,}994.25 & Yes & Yes & Yes\\
-    Threats/\slash Stalking/\slash Harassment/\slash Terrorism & \$0.00 & \$2{,}556.83 & \$7{,}954.95 & Yes & Yes & Yes\\
-    IPR/Counterfeit & \$0.00 & \$2{,}705.62 & \$5{,}199.29 & Yes & Yes & Yes\\
-    Identity Theft & \$300.00 & \$35{,}149.68 & \$118{,}823.21 & Yes & Yes & Yes\\
-    BEC & \$13{,}851.43 & \$492{,}040.82 & \$784{,}560.85 & Yes & Yes & Yes\\
+    Data Breach & \$166{,}889.57 & \$7{,}806.88 & \$44{,}615.39\\
+    Personal Data Breach & \$270.50 & \$68{,}479.48 & \$212{,}708.42\\
+    Malware & \$0.00 & \$84.40 & \$1{,}012.86\\
+    Phishing & \$0.00 & \$15{,}994.21 & \$46{,}694.72\\
+    Ransomware & \$0.00 & \$655.60 & \$6{,}761.39\\
+    Crimes Against Children & \$0.00 & \$7.09 & \$204.40\\
+    Extortion & \$300.00 & \$6{,}123.76 & \$43{,}994.25\\
+    Threats/\slash Stalking/\slash Harassment/\slash Terrorism & \$0.00 & \$2{,}556.83 & \$7{,}954.95\\
+    IPR/Counterfeit & \$0.00 & \$2{,}705.62 & \$5{,}199.29\\
+    Identity Theft & \$300.00 & \$35{,}149.68 & \$118{,}823.21\\
+    BEC & \$13{,}851.43 & \$492{,}040.82 & \$784{,}560.85\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Adjusted per-capita dollar-impact: Hypothesis test outcomes at $\alpha = 0.05$.}
+  \label{tab:anova-impact-outcomes}
+  \small
+  \begin{tabular}{@{}p{0.45\linewidth}ccc@{}}
+    \toprule
+    Category & TN > AS & TN < CA & TN between?\\
+    \midrule
+    Data Breach & No & Yes & No\\
+    Personal Data Breach & Yes & Yes & Yes\\
+    Malware & Yes & Yes & Yes\\
+    Phishing & Yes & Yes & Yes\\
+    Ransomware & Yes & Yes & Yes\\
+    Crimes Against Children & Yes & Yes & Yes\\
+    Extortion & Yes & Yes & Yes\\
+    Threats/\slash Stalking/\slash Harassment/\slash Terrorism & Yes & Yes & Yes\\
+    IPR/Counterfeit & Yes & Yes & Yes\\
+    Identity Theft & Yes & Yes & Yes\\
+    BEC & Yes & Yes & Yes\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -3558,38 +3610,76 @@ BEC & CA & 12.857 & 1.889 & 169.87 & 9.129 & 16.586 \\
 \end{longtable}
 \section{Planned contrasts}
 The planned contrasts were Tennessee versus American Samoa and Tennessee versus California within each category, with no multiplicity adjustment because the comparisons were prespecified.
-\begin{longtable}{p{0.30\linewidth}lrrrrrr}
-\caption{Planned contrasts comparing Tennessee with American Samoa and California within each category.}\label{tab:contrasts}\\
+
+\noindent\textit{Note.} The planned contrasts tables have been split for readability. Table~\ref{tab:contrasts-estimates} shows the point estimates with standard errors and p-values, while Table~\ref{tab:contrasts-intervals} shows the confidence intervals.
+
+\begin{longtable}{p{0.33\linewidth}lrrr}
+\caption{Planned contrasts: Point estimates, standard errors, and p-values.}\label{tab:contrasts-estimates}\\
 \toprule
-Category & contrast & estimate & SE & df & lower.CL & upper.CL & p.value \\
+Category & contrast & estimate & SE & p.value \\
 \midrule
 \endfirsthead
 \toprule
-Category & contrast & estimate & SE & df & lower.CL & upper.CL & p.value \\
+Category & contrast & estimate & SE & p.value \\
 \midrule
 \endhead
-Data Breach & TN vs AS & -0.000 & 2.575 & 191.00 & -5.079 & 5.079 & 1.000 \\
-Data Breach & TN vs CA & -0.571 & 2.575 & 191.00 & -5.650 & 4.507 & 0.825 \\
-Personal Data Breach & TN vs AS & 9.429 & 2.575 & 191.00 & 4.350 & 14.507 & <0.001 \\
-Personal Data Breach & TN vs CA & -11.000 & 2.575 & 191.00 & -16.079 & -5.921 & <0.001 \\
-Malware & TN vs AS & -0.429 & 2.575 & 191.00 & -5.507 & 4.650 & 0.868 \\
-Malware & TN vs CA & -0.143 & 2.575 & 191.00 & -5.221 & 4.936 & 0.956 \\
-Phishing & TN vs AS & 5.857 & 2.575 & 191.00 & 0.779 & 10.936 & 0.024 \\
-Phishing & TN vs CA & -3.571 & 2.575 & 191.00 & -8.650 & 1.507 & 0.167 \\
-Ransomware & TN vs AS & 0.286 & 2.575 & 191.00 & -4.793 & 5.364 & 0.912 \\
-Ransomware & TN vs CA & -0.714 & 2.575 & 191.00 & -5.793 & 4.364 & 0.782 \\
-Crimes Against Children & TN vs AS & -1.286 & 2.575 & 191.00 & -6.364 & 3.793 & 0.618 \\
-Crimes Against Children & TN vs CA & -0.143 & 2.575 & 191.00 & -5.221 & 4.936 & 0.956 \\
-Extortion & TN vs AS & 10.143 & 2.575 & 191.00 & 5.064 & 15.221 & <0.001 \\
-Extortion & TN vs CA & -7.714 & 2.575 & 191.00 & -12.793 & -2.636 & 0.003 \\
-Threats/\slash Stalking/\slash Harassment/\slash Terrorism & TN vs AS & -2.286 & 2.575 & 191.00 & -7.364 & 2.793 & 0.376 \\
-Threats/\slash Stalking/\slash Harassment/\slash Terrorism & TN vs CA & -4.000 & 2.683 & 191.26 & -9.292 & 1.291 & 0.138 \\
-IPR/Counterfeit & TN vs AS & 0.286 & 2.575 & 191.00 & -4.793 & 5.364 & 0.912 \\
-IPR/Counterfeit & TN vs CA & -0.571 & 2.575 & 191.00 & -5.650 & 4.507 & 0.825 \\
-Identity Theft & TN vs AS & 8.000 & 2.575 & 191.00 & 2.921 & 13.079 & 0.002 \\
-Identity Theft & TN vs CA & -2.000 & 2.575 & 191.00 & -7.079 & 3.079 & 0.438 \\
-BEC & TN vs AS & 2.714 & 2.575 & 191.00 & -2.364 & 7.793 & 0.293 \\
-BEC & TN vs CA & -6.143 & 2.575 & 191.00 & -11.221 & -1.064 & 0.018 \\
+Data Breach & TN vs AS & -0.000 & 2.575 & 1.000 \\
+Data Breach & TN vs CA & -0.571 & 2.575 & 0.825 \\
+Personal Data Breach & TN vs AS & 9.429 & 2.575 & <0.001 \\
+Personal Data Breach & TN vs CA & -11.000 & 2.575 & <0.001 \\
+Malware & TN vs AS & -0.429 & 2.575 & 0.868 \\
+Malware & TN vs CA & -0.143 & 2.575 & 0.956 \\
+Phishing & TN vs AS & 5.857 & 2.575 & 0.024 \\
+Phishing & TN vs CA & -3.571 & 2.575 & 0.167 \\
+Ransomware & TN vs AS & 0.286 & 2.575 & 0.912 \\
+Ransomware & TN vs CA & -0.714 & 2.575 & 0.782 \\
+Crimes Against Children & TN vs AS & -1.286 & 2.575 & 0.618 \\
+Crimes Against Children & TN vs CA & -0.143 & 2.575 & 0.956 \\
+Extortion & TN vs AS & 10.143 & 2.575 & <0.001 \\
+Extortion & TN vs CA & -7.714 & 2.575 & 0.003 \\
+Threats/\slash Stalking/\slash Harassment/\slash Terrorism & TN vs AS & -2.286 & 2.575 & 0.376 \\
+Threats/\slash Stalking/\slash Harassment/\slash Terrorism & TN vs CA & -4.000 & 2.683 & 0.138 \\
+IPR/Counterfeit & TN vs AS & 0.286 & 2.575 & 0.912 \\
+IPR/Counterfeit & TN vs CA & -0.571 & 2.575 & 0.825 \\
+Identity Theft & TN vs AS & 8.000 & 2.575 & 0.002 \\
+Identity Theft & TN vs CA & -2.000 & 2.575 & 0.438 \\
+BEC & TN vs AS & 2.714 & 2.575 & 0.293 \\
+BEC & TN vs CA & -6.143 & 2.575 & 0.018 \\
+\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{0.33\linewidth}lrrr}
+\caption{Planned contrasts: Degrees of freedom and 95\% confidence intervals.}\label{tab:contrasts-intervals}\\
+\toprule
+Category & contrast & df & lower.CL & upper.CL \\
+\midrule
+\endfirsthead
+\toprule
+Category & contrast & df & lower.CL & upper.CL \\
+\midrule
+\endhead
+Data Breach & TN vs AS & 191.00 & -5.079 & 5.079 \\
+Data Breach & TN vs CA & 191.00 & -5.650 & 4.507 \\
+Personal Data Breach & TN vs AS & 191.00 & 4.350 & 14.507 \\
+Personal Data Breach & TN vs CA & 191.00 & -16.079 & -5.921 \\
+Malware & TN vs AS & 191.00 & -5.507 & 4.650 \\
+Malware & TN vs CA & 191.00 & -5.221 & 4.936 \\
+Phishing & TN vs AS & 191.00 & 0.779 & 10.936 \\
+Phishing & TN vs CA & 191.00 & -8.650 & 1.507 \\
+Ransomware & TN vs AS & 191.00 & -4.793 & 5.364 \\
+Ransomware & TN vs CA & 191.00 & -5.793 & 4.364 \\
+Crimes Against Children & TN vs AS & 191.00 & -6.364 & 3.793 \\
+Crimes Against Children & TN vs CA & 191.00 & -5.221 & 4.936 \\
+Extortion & TN vs AS & 191.00 & 5.064 & 15.221 \\
+Extortion & TN vs CA & 191.00 & -12.793 & -2.636 \\
+Threats/\slash Stalking/\slash Harassment/\slash Terrorism & TN vs AS & 191.00 & -7.364 & 2.793 \\
+Threats/\slash Stalking/\slash Harassment/\slash Terrorism & TN vs CA & 191.26 & -9.292 & 1.291 \\
+IPR/Counterfeit & TN vs AS & 191.00 & -4.793 & 5.364 \\
+IPR/Counterfeit & TN vs CA & 191.00 & -5.650 & 4.507 \\
+Identity Theft & TN vs AS & 191.00 & 2.921 & 13.079 \\
+Identity Theft & TN vs CA & 191.00 & -7.079 & 3.079 \\
+BEC & TN vs AS & 191.00 & -2.364 & 7.793 \\
+BEC & TN vs CA & 191.00 & -11.221 & -1.064 \\
 \bottomrule
 \end{longtable}
 \section{Confidence-interval plots}
