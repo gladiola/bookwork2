@@ -1303,11 +1303,11 @@ p_n
 \right]
 \]
 
-  \caption{Structure of the \index{sample} sample \index{population} population matrix indexed by year.}
+  \caption{Structure of the \index{sample}\gls{sample} \index{population}\gls{population}\index{matrix} \gls{matrix} indexed by year.}
   \label{fig:statcalc-popmatrix}
 \end{figure}
 
-The second matrix, $M$ as shown in Figure \ref{fig:statevent-victimcount}, organises the raw \index{cybercrime} \gls{cybercrime} counts from \gls{ic3} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted to a per-capita rate.
+The second\index{matrix} \gls{matrix}, $M$ as shown in Figure \ref{fig:statevent-victimcount}, organises the raw \index{cybercrime} \gls{cybercrime} counts from \gls{ic3} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted to a\index{per capita} \gls{percapita} rate.
 
 
 \begin{figure}[H]
@@ -1335,12 +1335,12 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 \right]
 \]
 
-  \caption{Structure of the security event matrix for victim counts by \index{cybercrime} \gls{cybercrime} categories indexed by year.}
+  \caption{Structure of the security event\index{matrix} \gls{matrix} for victim counts by \index{cybercrime} \gls{cybercrime} categories indexed by year.}
   \label{fig:statevent-victimcount}
 \end{figure}
 
 
-The third matrix, $V$ as shown in Figure \ref{fig:statevent-victimimpact}, organises the victim impact in USD from \gls{ic3} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted later to a per-capita rate.
+The third\index{matrix} \gls{matrix}, $V$ as shown in Figure \ref{fig:statevent-victimimpact}, organises the victim impact in USD from \gls{ic3} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted later to a\index{per capita} \gls{percapita} rate.
 \begin{figure}[H]
   \centering
 \[
@@ -1367,11 +1367,11 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 \]
 
 
-  \caption{Structure of the security event matrix for victim impacts, as in dollars of damage, by \index{cybercrime} \gls{cybercrime} categories indexed by year.}
+  \caption{Structure of the security event\index{matrix} \gls{matrix} for victim impacts, as in dollars of damage, by \index{cybercrime} \gls{cybercrime} categories indexed by year.}
   \label{fig:statevent-victimimpact}
 \end{figure}
 
-The fourth matrix, $S$ as shown in Figure \ref{fig:statevent-suspectcount}, organises the count of suspects from \gls{ic3} by category and year.  Each entry $a_{j,i}$ helps us to understand how many suspects are operating within an area of concern.  This is a count that will be adjusted later to a per-capita rate.
+The fourth\index{matrix} \gls{matrix}, $S$ as shown in Figure \ref{fig:statevent-suspectcount}, organises the count of suspects from \gls{ic3} by category and year.  Each entry $a_{j,i}$ helps us to understand how many suspects are operating within an area of concern.  This is a count that will be adjusted later to a\index{per capita} \gls{percapita} rate.
 
 \begin{figure}[H]
   \centering
@@ -1398,11 +1398,11 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 \right]
 \]
 
-  \caption{Structure of the security event matrix for suspect counts by \index{cybercrime} \gls{cybercrime} categories indexed by year.  These counts consider the number of actors who engage victims in a given area.}
+  \caption{Structure of the security event\index{matrix} \gls{matrix} for suspect counts by \index{cybercrime} \gls{cybercrime} categories indexed by year.  These counts consider the number of actors who engage victims in a given area.}
   \label{fig:statevent-suspectcount}
 \end{figure}
 
-The fifth matrix, $D$ as shown in Figure \ref{fig:statevent-suspectdamage}, organises the damages attributed by suspects in USD from \gls{ic3} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted later to a per-capita rate.  This helps us to understand rates of effective impact, per suspect, in a given area.
+The fifth\index{matrix} \gls{matrix}, $D$ as shown in Figure \ref{fig:statevent-suspectdamage}, organises the damages attributed by suspects in USD from \gls{ic3} by category and year, where each entry $a_{j,i}$ is a count that will be adjusted later to a\index{per capita} \gls{percapita} rate.  This helps us to understand rates of effective impact, per suspect, in a given area.
 
 \begin{figure}[H]
   \centering
@@ -1429,14 +1429,14 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 \right]
 \]
 
-  \caption{Structure of the security event matrix for suspect damage, in dollars by perpetrators, by \index{cybercrime} \gls{cybercrime} categories indexed by year.  This tally helps us understand how damaging each actor is to victims.}
+  \caption{Structure of the security event\index{matrix} \gls{matrix} for suspect damage, in dollars by perpetrators, by \index{cybercrime} \gls{cybercrime} categories indexed by year.  This tally helps us understand how damaging each actor is to victims.}
   \label{fig:statevent-suspectdamage}
 \end{figure}
 
 
-We apply these matrices to the formula shown in Figure \ref{fig:statcalc-percap}. The entries $a_{j,i}$ are the raw counts taken from the \gls{ic3} state-level reports for the chosen source state.  Dividing each entry by $P_j$ converts it to a per-capita rate; multiplying by $N_t$ then scales that rate to match the \index{population} population of the target city.  The \index{population} population values in $P$ provide the year-by-year context for $N_t$ and confirm the representativeness of the scaling.  Summing the selected column $i$ of the per-capita-adjusted $M$ across all years yields the final result $R$.
-\subsection{Methodology for\index{Monte Carlo simulation} Monte Carlo Simulations in Excel}
-We chose \gls{ic3} crime data from \index{American Samoa} American Samoa to act as our lower bound.  We chose data from California to act as our upper bound.  We set those limits by looking at seven year spans of crime data and taking the median.  This means we would be likely to have observations above and below the limits, but that the limits themselves would have a basis in observation.
+We apply these\index{matrix} matrices to the formula shown in Figure \ref{fig:statcalc-percap}. The entries $a_{j,i}$ are the raw counts taken from the \gls{ic3} state-level reports for the chosen source state.  Dividing each entry by $P_j$ converts it to a\index{per capita} \gls{percapita} rate; multiplying by $N_t$ then scales that rate to match the \index{population}\gls{population} of the target city.  The \index{population}\gls{population} values in $P$ provide the year-by-year context for $N_t$ and confirm the representativeness of the scaling.  Summing the selected column $i$ of the\index{per capita} \gls{percapita}-adjusted $M$ across all years yields the final result $R$.
+\subsection{Methodology for\index{Monte Carlo simulation} \Gls{montecarlo}s in Excel}
+We chose \gls{ic3} crime data from \index{American Samoa} American Samoa to act as our lower bound.  We chose data from California to act as our upper bound.  We set those limits by looking at seven year spans of crime data and taking the\index{median} \gls{median}.  This means we would be likely to have observations above and below the limits, but that the limits themselves would have a basis in observation.
 We input and processed the data as follows:
 \begin{itemize}
 \item We imported the data from \gls{ic3} crime tables
@@ -1446,19 +1446,19 @@ We input and processed the data as follows:
     \item \index{American Samoa} American Samoa
     \item \index{California} California.
   \end{itemize}
-\item We imported a normal distribution table from the\index{Monte Carlo simulation} Monte Carlo Toolkit.
-\item We set mean summary counts from\index{American Samoa} American Samoa as our lower bound.
-\item We set mean summary counts from\index{California} California as our upper bound.
-\item We accepted the\index{Monte Carlo simulation} Monte Carlo percentages and exceedence curves.
+\item We imported a\index{normal distribution} \gls{normaldistribution} table from the\index{Monte Carlo simulation} \gls{montecarlo} Toolkit.
+\item We set\index{mean} \gls{mean} summary counts from\index{American Samoa} American Samoa as our lower bound.
+\item We set\index{mean} \gls{mean} summary counts from\index{California} California as our upper bound.
+\item We accepted the\index{Monte Carlo simulation} \gls{montecarlo} percentages and exceedence curves.
 \end{itemize}
 
-There were times when it was obvious that a normal distribution would not fit.  When there was a choice between a count of 0 and 1 events, we ran a supplementary \gls{binary} distribution.  When there was a choice of less than 8 events, we ran a supplementary discrete distribution.  We needed to change the distribution type when modeling the count or likelihood of an event; we did not need to change from a normal distribution when modeling impact because the range of currency was not overly narrow.
+There were times when it was obvious that a\index{normal distribution} \gls{normaldistribution} would not fit.  When there was a choice between a count of 0 and 1 events, we ran a supplementary \gls{binary}\index{distribution} \gls{distribution}.  When there was a choice of less than 8 events, we ran a supplementary\index{discrete} discrete\index{distribution} \gls{distribution}.  We needed to change the\index{distribution} \gls{distribution} type when modeling the count or likelihood of an event; we did not need to change from a\index{normal distribution} \gls{normaldistribution} when modeling impact because the range of currency was not overly narrow.
 
 %%%%%%%%%%%%%%%%%%%%%%% POPULATION %%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Population Changes During Sampled Years}
+\subsection{\Gls{population} Changes During\index{sample} Sampled Years}
 \begin{table}[H]
   \centering
-  \caption{Changes to \index{population} Population in Key Areas}
+  \caption{Changes to \index{population}\Gls{population} in Key Areas}
   \label{tab:chattanoogacrime1}
   \begin{tabular}{@{}>{\centering\arraybackslash}
   p{0.10\linewidth} >{\centering\arraybackslash}
@@ -1492,7 +1492,7 @@ There were times when it was obvious that a normal distribution would not fit.  
 2022&48,342&\endnote{\url{https://fred.stlouisfed.org/series/POPTOTASA647NWDB}}&184,086&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&7,051,339&\endnote{\url{https://www2.census.gov/programs-surveys/popest/datasets/2020-2022/state/totals/NST-EST2022-POPCHG2020_2022.csv}}&39,125,347&\endnote{\url{https://fred.stlouisfed.org/series/CAPOP}}\\
 
     \bottomrule \end{tabular}
-\raggedright{City \index{population} population based on the\index{US Census} \gls{us} Census reported \index{population} population for the City of\index{Chattanooga} Chattanooga itself.  Surrounding satellite cities and unincorporated areas within the Hamilton County, Tennessee, were not included. \index{population} Population for the State of Tennessee provided perspective on calculated rates in later tables. \index{population} Population for \index{American Samoa} American Samoa and the State of\index{California} California were included for perspective on maximum and minimum counts in later tables.}
+\raggedright{City \index{population}\gls{population} based on the\index{US Census} \gls{us} Census reported \index{population}\gls{population} for the City of\index{Chattanooga} Chattanooga itself.  Surrounding satellite cities and unincorporated areas within the Hamilton County, Tennessee, were not included. \index{population}\Gls{population} for the State of Tennessee provided perspective on calculated rates in later tables. \index{population}\Gls{population} for \index{American Samoa} American Samoa and the State of\index{California} California were included for perspective on maximum and minimum counts in later tables.}
 \end{table}
 
 
