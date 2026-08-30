@@ -75,6 +75,8 @@
 		\setentrycounter[]{page}\glsnumberformat{119}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{126}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{133}}}%
+\glossentry{confidenceinterval}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{55\delimN 56}}}%
 \glossentry{configuration}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{1}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{20}\delimN 
@@ -117,6 +119,10 @@
 \glossentry{dialog}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{139}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{141}}}%
+\glossentry{distribution}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{56}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{63}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{66}}}%
 \glossentry{dvd}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{131}}}\glsgroupskip
 \glsgroupheading{E}\relax \glsresetentrylist %
@@ -166,7 +172,9 @@
 		\setentrycounter[]{page}\glsnumberformat{128\delimN 129}}}%
 \glossentry{hash}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{26}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{46}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{46}}}%
+\glossentry{hypothesis}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{58}}}\glsgroupskip
 \glsgroupheading{I}\relax \glsresetentrylist %
 \glossentry{ic3}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{55}\delimN 
@@ -216,6 +224,13 @@
 		\setentrycounter[]{page}\glsnumberformat{118}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{128}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{172}}}%
+\glossentry{matrix}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{62\delimR 65}}}%
+\glossentry{mean}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{55\delimN 56}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{66}}}%
+\glossentry{median}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{66}}}%
 \glossentry{metadata}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{141}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{143}\delimN 
@@ -226,6 +241,9 @@
 		\setentrycounter[]{page}\glsnumberformat{139\delimN 140}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{142\delimN 143}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{149}}}%
+\glossentry{montecarlo}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{55\delimR 58}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{66}}}%
 \glossentry{motherboard}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{46}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{131}\delimN 
@@ -238,7 +256,10 @@
 		\setentrycounter[]{page}\glsnumberformat{45}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{48}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{130}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{166}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{166}}}%
+\glossentry{normaldistribution}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{55}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{66}}}\glsgroupskip
 \glsgroupheading{O}\relax \glsresetentrylist %
 \glossentry{oed}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{187\delimR 190}}}%
@@ -285,6 +306,9 @@
 		\setentrycounter[]{page}\glsnumberformat{136\delimN 137}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{145}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{154\delimR 156}}}%
+\glossentry{percapita}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{55}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{63\delimR 65}}}%
 \glossentry{phishing}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{29}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{80}}}%
@@ -293,6 +317,13 @@
 \glossentry{pipe}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{30}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{138}}}%
+\glossentry{population}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{55}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{58}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{60}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{62\delimN 63}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{65}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{67}}}%
 \glossentry{port}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{29}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{31}\delimN 
@@ -334,6 +365,11 @@
 \glossentry{rw}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{131}}}\glsgroupskip
 \glsgroupheading{S}\relax \glsresetentrylist %
+\glossentry{sample}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{55}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{58}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{60}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{63}}}%
 \glossentry{sas}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{131}}}%
 \glossentry{sata}{\glossaryentrynumbers{\relax 
@@ -354,7 +390,11 @@
 		\setentrycounter[]{page}\glsnumberformat{142\delimN 143}}}%
 \glossentry{ssh}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{136\delimN 137}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{139}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{139}}}%
+\glossentry{statistics}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{55}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{58}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{60\delimN 61}}}\glsgroupskip
 \glsgroupheading{T}\relax \glsresetentrylist %
 \glossentry{threat}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{7}\delimN 

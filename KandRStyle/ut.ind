@@ -17,7 +17,7 @@
 
   \indexspace
 
-  \item B-Sides, \hyperpage{ix}
+  \item B-Sides, \hyperpage{vii}
   \item backups, \hyperpage{159}
   \item bluetooth tracking device, \hyperpage{154}
   \item bsdinstall, \hyperpage{135, 136}
@@ -35,17 +35,18 @@
   \item Camellia, \hyperpage{154}
   \item cd, \hyperpage{138}
   \item certificates, \hyperpage{153, 154}
-  \item Chattanooga, \hyperpage{v}, \hyperpage{55}, \hyperpage{59}, 
+  \item Chattanooga, \hyperpage{iii}, \hyperpage{55}, \hyperpage{59}, 
 		\hyperpage{61, 62}, \hyperpage{66--68}, \hyperpage{75}, 
 		\hyperpage{85}, \hyperpage{96}, \hyperpage{171--176}
     \subitem Police Department, \hyperpage{59}
-  \item Chattanooga State Community College, \hyperpage{v}, 
-		\hyperpage{ix}, \hyperpage{55}
+  \item Chattanooga State Community College, \hyperpage{iii}, 
+		\hyperpage{vii}, \hyperpage{55}
   \item coding, \hyperpage{1}, \hyperpage{119}, \hyperpage{133}
   \item command history logging, \hyperpage{124}
   \item confidence interval, \hyperpage{55, 56}, \hyperpage{171--175}
   \item configuration, \hyperpage{119}
   \item continuous monitoring, \hyperpage{18}
+  \item convenience sample, \hyperpage{60}
   \item cp, \hyperpage{146, 147}
   \item crimes against children, \hyperpage{87, 88}
   \item cybercrime, \hyperpage{55}, \hyperpage{57--60}, 
@@ -61,7 +62,8 @@
   \item dd, \hyperpage{130}
   \item defensive techniques, \hyperpage{17}
   \item dialog, \hyperpage{139}, \hyperpage{141}
-  \item distribution, \hyperpage{63}
+  \item discrete, \hyperpage{56}, \hyperpage{66}
+  \item distribution, \hyperpage{56}, \hyperpage{63}, \hyperpage{66}
   \item dynamic content, \hyperpage{15}
 
   \indexspace
@@ -108,10 +110,12 @@
   \indexspace
 
   \item hardware RAID, \hyperpage{132}
-  \item Harvard University Extension School, \hyperpage{v}, 
-		\hyperpage{ix}, \hyperpage{56}
+  \item Harvard University Extension School, \hyperpage{iii}, 
+		\hyperpage{vii}, \hyperpage{56}
   \item hierarchical jails, \hyperpage{132}
   \item HOTP, \hyperpage{154}
+  \item hypothesis, \hyperpage{58}
+  \item hypothesis testing, \hyperpage{58}
 
   \indexspace
 
@@ -151,12 +155,14 @@
   \item magstripe, \hyperpage{153}
   \item magstripe cards, \hyperpage{154}
   \item malware, \hyperpage{77, 78}, \hyperpage{172}
-  \item matrix, \hyperpage{63}
+  \item matrix, \hyperpage{62--65}
+  \item mean, \hyperpage{55, 56}, \hyperpage{66}
+  \item median, \hyperpage{66}
   \item Metasploit, \hyperpage{29}
   \item mitigation, \hyperpage{17, 18}
   \item MITRE ATT\&CK, \hyperpage{119}
   \item mkdir, \hyperpage{138, 139}, \hyperpage{143}
-  \item Monte Carlo simulation, \hyperpage{55, 56}, \hyperpage{66}, 
+  \item Monte Carlo simulation, \hyperpage{55--58}, \hyperpage{66}, 
 		\hyperpage{70, 71}, \hyperpage{73--75}, 
 		\hyperpage{77, 78}, \hyperpage{80--84}, 
 		\hyperpage{87, 88}, \hyperpage{90--92}, 
@@ -174,6 +180,7 @@
   \item NIST, \hyperpage{17, 18}
   \item NIST 800-88
     \subitem Purge, \hyperpage{130}
+  \item normal distribution, \hyperpage{55, 56}, \hyperpage{66}
   \item nsa driver, \hyperpage{159}
 
   \indexspace
@@ -191,7 +198,7 @@
   \item payloads, \hyperpage{29}
   \item penetration testing, \hyperpage{119}
   \item pentester, \hyperpage{29}
-  \item per capita, \hyperpage{63}
+  \item per capita, \hyperpage{55}, \hyperpage{63--65}
   \item persistence, \hyperpage{119}
   \item personal data breach, \hyperpage{55}, \hyperpage{62}, 
 		\hyperpage{73}, \hyperpage{75}
@@ -231,8 +238,8 @@
   \indexspace
 
   \item sa driver, \hyperpage{159}
-  \item sample, \hyperpage{55}, \hyperpage{63}, \hyperpage{83}, 
-		\hyperpage{171--176}
+  \item sample, \hyperpage{55}, \hyperpage{58}, \hyperpage{63}, 
+		\hyperpage{67}, \hyperpage{83}, \hyperpage{171--176}
     \subitem convenience, \hyperpage{60}
   \item sanitize, \hyperpage{16}
   \item scale, \hyperpage{63}
@@ -244,7 +251,8 @@
   \item SQL Injection, \hyperpage{15--18}, \hyperpage{29}
   \item ssh-keygen, \hyperpage{137}, \hyperpage{139}
   \item static content, \hyperpage{15}
-  \item statistics, \hyperpage{55}, \hyperpage{60, 61}
+  \item statistical, \hyperpage{56}, \hyperpage{63}
+  \item statistics, \hyperpage{55}, \hyperpage{58}, \hyperpage{60, 61}
   \item su, \hyperpage{137}
   \item sudo, \hyperpage{137}
   \item swapinfo, \hyperpage{148, 149}
@@ -267,8 +275,8 @@
   \indexspace
 
   \item umount, \hyperpage{138}
-  \item University of Tennessee at Chatttanooga, \hyperpage{v}, 
-		\hyperpage{ix}
+  \item University of Tennessee at Chatttanooga, \hyperpage{iii}, 
+		\hyperpage{vii}
   \item URL encoding, \hyperpage{15}
   \item US Census, \hyperpage{55}, \hyperpage{63}, \hyperpage{67}
   \item USB, \hyperpage{154}

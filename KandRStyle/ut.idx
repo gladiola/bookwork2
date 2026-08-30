@@ -1,13 +1,13 @@
 \indexentry{coding|hyperpage}{1}
-\indexentry{Harvard University Extension School|hyperpage}{v}
-\indexentry{Chattanooga|hyperpage}{v}
-\indexentry{Chattanooga State Community College|hyperpage}{v}
-\indexentry{University of Tennessee at Chatttanooga|hyperpage}{v}
-\indexentry{Chattanooga|hyperpage}{v}
-\indexentry{B-Sides|hyperpage}{ix}
-\indexentry{Chattanooga State Community College|hyperpage}{ix}
-\indexentry{University of Tennessee at Chatttanooga|hyperpage}{ix}
-\indexentry{Harvard University Extension School|hyperpage}{ix}
+\indexentry{Harvard University Extension School|hyperpage}{iii}
+\indexentry{Chattanooga|hyperpage}{iii}
+\indexentry{Chattanooga State Community College|hyperpage}{iii}
+\indexentry{University of Tennessee at Chatttanooga|hyperpage}{iii}
+\indexentry{Chattanooga|hyperpage}{iii}
+\indexentry{B-Sides|hyperpage}{vii}
+\indexentry{Chattanooga State Community College|hyperpage}{vii}
+\indexentry{University of Tennessee at Chatttanooga|hyperpage}{vii}
+\indexentry{Harvard University Extension School|hyperpage}{vii}
 \indexentry{vulnerabilities|hyperpage}{15}
 \indexentry{exploit|hyperpage}{15}
 \indexentry{SQL Injection|hyperpage}{15}
@@ -83,6 +83,7 @@
 \indexentry{msfvenom|hyperpage}{29}
 \indexentry{risk assessment|hyperpage}{55}
 \indexentry{cybercrime|hyperpage}{55}
+\indexentry{per capita|hyperpage}{55}
 \indexentry{Chattanooga|hyperpage}{55}
 \indexentry{open data|hyperpage}{55}
 \indexentry{population|hyperpage}{55}
@@ -90,15 +91,23 @@
 \indexentry{US Census|hyperpage}{55}
 \indexentry{Monte Carlo simulation|hyperpage}{55}
 \indexentry{personal data breach|hyperpage}{55}
+\indexentry{mean|hyperpage}{55}
 \indexentry{confidence interval|hyperpage}{55}
 \indexentry{statistics|hyperpage}{55}
 \indexentry{Chattanooga|hyperpage}{55}
 \indexentry{Chattanooga State Community College|hyperpage}{55}
+\indexentry{normal distribution|hyperpage}{55}
+\indexentry{statistical|hyperpage}{56}
 \indexentry{Harvard University Extension School|hyperpage}{56}
 \indexentry{Monte Carlo simulation|hyperpage}{56}
 \indexentry{Monte Carlo simulation|hyperpage}{56}
+\indexentry{mean|hyperpage}{56}
+\indexentry{normal distribution|hyperpage}{56}
+\indexentry{discrete|hyperpage}{56}
 \indexentry{confidence interval|hyperpage}{56}
 \indexentry{Monte Carlo simulation|hyperpage}{56}
+\indexentry{distribution|hyperpage}{56}
+\indexentry{statistical|hyperpage}{56}
 \indexentry{cybercrime|hyperpage}{57}
 \indexentry{cybercrime|hyperpage}{57}
 \indexentry{open data|hyperpage}{57}
@@ -106,7 +115,14 @@
 \indexentry{open data|hyperpage}{57}
 \indexentry{risk assessment!quantitative|hyperpage}{57}
 \indexentry{risk assessment|hyperpage}{57}
+\indexentry{Monte Carlo simulation|hyperpage}{57}
 \indexentry{risk assessment|hyperpage}{58}
+\indexentry{hypothesis testing|hyperpage}{58}
+\indexentry{Monte Carlo simulation|hyperpage}{58}
+\indexentry{statistics|hyperpage}{58}
+\indexentry{hypothesis|hyperpage}{58}
+\indexentry{statistics|hyperpage}{58}
+\indexentry{sample|hyperpage}{58}
 \indexentry{risk assessment|hyperpage}{58}
 \indexentry{population|hyperpage}{58}
 \indexentry{cybercrime|hyperpage}{58}
@@ -126,6 +142,7 @@
 \indexentry{cybercrime|hyperpage}{60}
 \indexentry{population|hyperpage}{60}
 \indexentry{sample!convenience|hyperpage}{60}
+\indexentry{convenience sample|hyperpage}{60}
 \indexentry{statistics|hyperpage}{60}
 \indexentry{risk assessment|hyperpage}{60}
 \indexentry{statistics|hyperpage}{61}
@@ -137,6 +154,8 @@
 \indexentry{personal data breach|hyperpage}{62}
 \indexentry{cybercrime|hyperpage}{62}
 \indexentry{cybercrime|hyperpage}{62}
+\indexentry{matrix|hyperpage}{62}
+\indexentry{matrix|hyperpage}{62}
 \indexentry{California|hyperpage}{62}
 \indexentry{Texas|hyperpage}{62}
 \indexentry{Florida|hyperpage}{62}
@@ -152,6 +171,7 @@
 \indexentry{per capita|hyperpage}{63}
 \indexentry{US Census|hyperpage}{63}
 \indexentry{population|hyperpage}{63}
+\indexentry{per capita|hyperpage}{63}
 \indexentry{cybercrime|hyperpage}{63}
 \indexentry{distribution|hyperpage}{63}
 \indexentry{sample|hyperpage}{63}
@@ -164,26 +184,57 @@
 \indexentry{sample|hyperpage}{63}
 \indexentry{population|hyperpage}{63}
 \indexentry{matrix|hyperpage}{63}
+\indexentry{statistical|hyperpage}{63}
+\indexentry{matrix|hyperpage}{63}
+\indexentry{per capita|hyperpage}{63}
+\indexentry{matrix|hyperpage}{63}
 \indexentry{population|hyperpage}{63}
 \indexentry{sample|hyperpage}{63}
 \indexentry{sample|hyperpage}{63}
 \indexentry{population|hyperpage}{63}
+\indexentry{matrix|hyperpage}{63}
+\indexentry{matrix|hyperpage}{63}
 \indexentry{cybercrime|hyperpage}{63}
+\indexentry{per capita|hyperpage}{63}
+\indexentry{matrix|hyperpage}{64}
 \indexentry{cybercrime|hyperpage}{64}
+\indexentry{matrix|hyperpage}{64}
+\indexentry{per capita|hyperpage}{64}
+\indexentry{matrix|hyperpage}{64}
 \indexentry{cybercrime|hyperpage}{64}
+\indexentry{matrix|hyperpage}{64}
+\indexentry{per capita|hyperpage}{64}
+\indexentry{matrix|hyperpage}{65}
 \indexentry{cybercrime|hyperpage}{65}
+\indexentry{matrix|hyperpage}{65}
+\indexentry{per capita|hyperpage}{65}
+\indexentry{matrix|hyperpage}{65}
 \indexentry{cybercrime|hyperpage}{65}
+\indexentry{matrix|hyperpage}{65}
+\indexentry{per capita|hyperpage}{65}
 \indexentry{population|hyperpage}{65}
 \indexentry{population|hyperpage}{65}
+\indexentry{per capita|hyperpage}{65}
 \indexentry{Monte Carlo simulation|hyperpage}{66}
 \indexentry{American Samoa|hyperpage}{66}
+\indexentry{median|hyperpage}{66}
 \indexentry{Chattanooga|hyperpage}{66}
 \indexentry{American Samoa|hyperpage}{66}
 \indexentry{California|hyperpage}{66}
+\indexentry{normal distribution|hyperpage}{66}
 \indexentry{Monte Carlo simulation|hyperpage}{66}
+\indexentry{mean|hyperpage}{66}
 \indexentry{American Samoa|hyperpage}{66}
+\indexentry{mean|hyperpage}{66}
 \indexentry{California|hyperpage}{66}
 \indexentry{Monte Carlo simulation|hyperpage}{66}
+\indexentry{normal distribution|hyperpage}{66}
+\indexentry{distribution|hyperpage}{66}
+\indexentry{discrete|hyperpage}{66}
+\indexentry{distribution|hyperpage}{66}
+\indexentry{distribution|hyperpage}{66}
+\indexentry{normal distribution|hyperpage}{66}
+\indexentry{sample|hyperpage}{67}
 \indexentry{population|hyperpage}{67}
 \indexentry{American Samoa|hyperpage}{67}
 \indexentry{Chattanooga|hyperpage}{67}

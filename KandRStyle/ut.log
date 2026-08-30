@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  30 AUG 2026 18:31
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  30 AUG 2026 19:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1347,29 +1347,24 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 ) [1]
 [2
 
-] (./ut.toc
-
-LaTeX Font Warning: Font shape `TU/InfoOTDisp(0)/b/n' undefined
-(Font)              using `TU/InfoOTDisp(0)/m/n' instead on input line 1.
-
-[1
-
-] [2] [3])
+] (./ut.toc)
 \tf@toc=\write8
 \openout8 = `ut.toc'.
 
- [4] [5
+ [1
 
-] [6
+] [2
 
-] [7] [8
+] [3] [4
+
+] [5] [6
 
 ]
 \openout4 = `ut.ent'.
 
- [9] [10
+ [7] [8
 
-] [11] [12
+] [9] [10
 
 ]
 Chapter 1.
@@ -1397,8 +1392,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
 Overfull \hbox (1.29799pt too wide) in paragraph at lines 393--394
-[]\TU/InfoOTDisp(0)/b/n/10 Later on in those war campaigns, during Desert Storm
-, some people that I worked
+[]\TU/InfoOTDisp(0)/m/it/10 Later on in those war campaigns, during Desert Stor
+m, some people that I worked
  []
 
 
@@ -1444,8 +1439,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [21]
 Overfull \hbox (3.25774pt too wide) in paragraph at lines 551--552
-\TU/InfoOTDisp(0)/b/n/10 terms for describing experiments. Also I would like to
- suggest why quasi-experiments
+\TU/InfoOTDisp(0)/m/it/10 terms for describing experiments. Also I would like t
+o suggest why quasi-experiments
  []
 
 
@@ -1472,6 +1467,10 @@ File: images/WeidmanCH4PresentationB2.jpg Graphic file (type bmp)
 <images/WeidmanCH4PresentationB2.jpg>
 
 
+LaTeX Font Warning: Font shape `TU/InfoOTDisp(0)/b/n' undefined
+(Font)              using `TU/InfoOTDisp(0)/m/n' instead on input line 645.
+
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: images/WeidmanCH4PresentationB1.jpg Graphic file (type bmp)
@@ -1496,8 +1495,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Overfull \hbox (19.33075pt too wide) in paragraph at lines 685--686
-[]\TU/InfoOTDisp(0)/b/n/10 msfvenom <target computer specific payload><listenin
-g computer address><listening
+[]\TU/InfoOTDisp(0)/m/it/10 msfvenom <target computer specific payload><listeni
+ng computer address><listening
  []
 
 File: images/WeidmanCH4PresentationB6.jpg Graphic file (type bmp)
@@ -1510,8 +1509,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [29]
 Overfull \hbox (0.23076pt too wide) in paragraph at lines 695--696
-[]\TU/InfoOTDisp(0)/b/n/10 msfvenom windows/meterpreter/reverse_tcp LHOST=192.1
-68.56.101 LPORT=12345
+[]\TU/InfoOTDisp(0)/m/it/10 msfvenom windows/meterpreter/reverse_tcp LHOST=192.
+168.56.101 LPORT=12345
  []
 
 File: images/WeidmanCH4PresentationB7.jpg Graphic file (type bmp)
@@ -1537,8 +1536,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Overfull \hbox (5.4352pt too wide) in paragraph at lines 743--744
-\TU/InfoOTDisp(0)/b/n/10 tory that holds the file with the []exploit in it. htt
-p://192.168.56.101/chapter4example.exe.
+\TU/InfoOTDisp(0)/m/it/10 tory that holds the file with the []exploit in it. ht
+tp://192.168.56.101/chapter4example.exe.
  []
 
 File: images/WeidmanCH4PresentationB11.jpg Graphic file (type bmp)
@@ -1570,8 +1569,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [42]
 Overfull \hbox (2.70807pt too wide) in paragraph at lines 827--827
-[]\TU/InfoOTDisp(0)/b/n/10 OAT-002 Token Cracking Mass enumeration of coupon nu
-mbers, voucher codes,
+[]\TU/InfoOTDisp(0)/m/it/10 OAT-002 Token Cracking Mass enumeration of coupon n
+umbers, voucher codes,
  []
 
 Missing character: There is no ̂ (U+0302) in font InfoOTDisp-Book/OT:script=lat
@@ -1583,98 +1582,99 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [44]
 Overfull \hbox (5.54852pt too wide) in paragraph at lines 861--862
-[]\TU/InfoOTDisp(0)/b/n/10 _____. ”http://php.net/manual/en/security.database.s
-ql-injection.php” INTERNET.
+[]\TU/InfoOTDisp(0)/m/it/10 _____. ”http://php.net/manual/en/security.database.
+sql-injection.php” INTERNET.
  []
 
 
 Overfull \hbox (7.56175pt too wide) in paragraph at lines 863--864
-[]\TU/InfoOTDisp(0)/b/n/10 _____. SCRT Information Security, ”https://www.scrt.
-ch/en/[]attack/downloads/mini-
+[]\TU/InfoOTDisp(0)/m/it/10 _____. SCRT Information Security, ”https://www.scrt
+.ch/en/[]attack/downloads/mini-
  []
 
 
 Overfull \hbox (19.49174pt too wide) in paragraph at lines 865--866
-[]\TU/InfoOTDisp(0)/b/n/10 _____. SCRT Information Security, ”https://www.scrt.
-ch/outils/mms/mms_manual.pdf”
+[]\TU/InfoOTDisp(0)/m/it/10 _____. SCRT Information Security, ”https://www.scrt
+.ch/outils/mms/mms_manual.pdf”
  []
 
 
 Overfull \hbox (140.02719pt too wide) in paragraph at lines 867--868
-[]\TU/InfoOTDisp(0)/b/n/10 Fresnillo, Rodolfo Resendez. YouTube, ”MiniMysqlator
- & Pblind”, ”https://www.youtube.com/watch?v=uK3_qR3Kn_g”
+[]\TU/InfoOTDisp(0)/m/it/10 Fresnillo, Rodolfo Resendez. YouTube, ”MiniMysqlato
+r & Pblind”, ”https://www.youtube.com/watch?v=uK3_qR3Kn_g”
  []
 
 
 Overfull \hbox (16.05519pt too wide) in paragraph at lines 869--870
-[]\TU/InfoOTDisp(0)/b/n/10 _____. ”https://www.nist.gov/news-events/events/2017
-/03/cybersecurity-framework-
+[]\TU/InfoOTDisp(0)/m/it/10 _____. ”https://www.nist.gov/news-events/events/201
+7/03/cybersecurity-framework-
  []
 
 [45]
 Overfull \hbox (5.59187pt too wide) in paragraph at lines 899--900
-\TU/InfoOTDisp(0)/b/n/10 for profound change’,”Medium. http://searchsecurity.te
-chtarget.com/opinion/Wendy-
+\TU/InfoOTDisp(0)/m/it/10 for profound change’,”Medium. http://searchsecurity.t
+echtarget.com/opinion/Wendy-
  []
 
 
 Overfull \hbox (12.18074pt too wide) in paragraph at lines 901--902
-\TU/InfoOTDisp(0)/b/n/10 http://searchsecurity.techtarget.com/opinion/Wendy-Nat
-her-Were-on-a-trajectory-for-
+\TU/InfoOTDisp(0)/m/it/10 http://searchsecurity.techtarget.com/opinion/Wendy-Na
+ther-Were-on-a-trajectory-for-
  []
 
 
 Overfull \hbox (118.93698pt too wide) in paragraph at lines 903--904
-[]\TU/InfoOTDisp(0)/b/n/10 Shadish, William. CV, University of California Merce
-d. INTERNET: http://faculty.ucmerced.edu/wshadish/shadish-
+[]\TU/InfoOTDisp(0)/m/it/10 Shadish, William. CV, University of California Merc
+ed. INTERNET: http://faculty.ucmerced.edu/wshadish/shadish-
  []
 
 
 Overfull \hbox (177.4143pt too wide) in paragraph at lines 903--904
-\TU/InfoOTDisp(0)/b/n/10 cv-jan-2015. Shadish, William. Biographical sketch, Un
-iversity of California Merced.http://faculty.ucmerced.edu/wshadish/biosketch. 
+\TU/InfoOTDisp(0)/m/it/10 cv-jan-2015. Shadish, William. Biographical sketch, U
+niversity of California Merced.http://faculty.ucmerced.edu/wshadish/biosketch. 
+
  []
 
 
 Overfull \hbox (0.40852pt too wide) in paragraph at lines 905--906
-[]\TU/InfoOTDisp(0)/b/n/10 _____. INTERNET: http://www.ipr.northwestern.edu/wor
-kshops/annual-summer-
+[]\TU/InfoOTDisp(0)/m/it/10 _____. INTERNET: http://www.ipr.northwestern.edu/wo
+rkshops/annual-summer-
  []
 
 
 Overfull \hbox (23.18741pt too wide) in paragraph at lines 905--906
-\TU/InfoOTDisp(0)/b/n/10 workshops/quasi-experimental-design-and-analysis/ This
- workshop shows that Shadish’s
+\TU/InfoOTDisp(0)/m/it/10 workshops/quasi-experimental-design-and-analysis/ Thi
+s workshop shows that Shadish’s
  []
 
 
 Overfull \hbox (25.81075pt too wide) in paragraph at lines 909--910
-\TU/InfoOTDisp(0)/b/n/10 http://www.primalsecurity.net/0x0-[]exploit-tutorial-b
-uffer-overflow-vanilla-eip-overwrite-
+\TU/InfoOTDisp(0)/m/it/10 http://www.primalsecurity.net/0x0-[]exploit-tutorial-
+buffer-overflow-vanilla-eip-overwrite-
  []
 
 
 Overfull \hbox (1.50409pt too wide) in paragraph at lines 913--914
-[]\TU/InfoOTDisp(0)/b/n/10 Raspberry Pi Kali Download: https://docs.kali.org/ka
-li-on-arm/install-kali-linux-
+[]\TU/InfoOTDisp(0)/m/it/10 Raspberry Pi Kali Download: https://docs.kali.org/k
+ali-on-arm/install-kali-linux-
  []
 
 
 Overfull \hbox (29.55742pt too wide) in paragraph at lines 915--916
-[]\TU/InfoOTDisp(0)/b/n/10 Powershell to get the []hash of a download on Window
-s 10: https://docs.microsoft.com/en-
+[]\TU/InfoOTDisp(0)/m/it/10 Powershell to get the []hash of a download on Windo
+ws 10: https://docs.microsoft.com/en-
  []
 
 
 Overfull \hbox (7.98074pt too wide) in paragraph at lines 915--916
-\TU/InfoOTDisp(0)/b/n/10 us/powershell/module/microsoft.powershell.utility/get-
-filehash?view=powershell-5.1
+\TU/InfoOTDisp(0)/m/it/10 us/powershell/module/microsoft.powershell.utility/get
+-filehash?view=powershell-5.1
  []
 
 
 Overfull \hbox (1.4752pt too wide) in paragraph at lines 917--918
-[]\TU/InfoOTDisp(0)/b/n/10 _____. https://unix.stackexchange.com/questions/1515
-47/linux-set-date-through-
+[]\TU/InfoOTDisp(0)/m/it/10 _____. https://unix.stackexchange.com/questions/151
+547/linux-set-date-through-
  []
 
 
@@ -1682,44 +1682,44 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [46]
 Overfull \hbox (5.18852pt too wide) in paragraph at lines 923--924
-[]\TU/InfoOTDisp(0)/b/n/10 _____. INTERNET: https://www.aircrack-ng.org/doku.ph
-p?id=compatibility_drivers 
+[]\TU/InfoOTDisp(0)/m/it/10 _____. INTERNET: https://www.aircrack-ng.org/doku.p
+hp?id=compatibility_drivers 
  []
 
 
 Overfull \hbox (9.93852pt too wide) in paragraph at lines 939--940
-[]\TU/InfoOTDisp(0)/b/n/10 _____. INTERNET: https://www.raspberrypi.org/documen
-tation/[]configuration/raspi-
+[]\TU/InfoOTDisp(0)/m/it/10 _____. INTERNET: https://www.raspberrypi.org/docume
+ntation/[]configuration/raspi-
  []
 
 
 Overfull \hbox (0.21852pt too wide) in paragraph at lines 941--942
-[]\TU/InfoOTDisp(0)/b/n/10 _____. INTERNET: https://www.walmart.com/ip/TP-LINK-
-TL-WN722N-N150-High-
+[]\TU/InfoOTDisp(0)/m/it/10 _____. INTERNET: https://www.walmart.com/ip/TP-LINK
+-TL-WN722N-N150-High-
  []
 
 
 Overfull \hbox (2.17853pt too wide) in paragraph at lines 943--944
-[]\TU/InfoOTDisp(0)/b/n/10 _____. INTERNET: https://www.amazon.com/Alfa-AWUS036
-NH-802-11g-Wireless-
+[]\TU/InfoOTDisp(0)/m/it/10 _____. INTERNET: https://www.amazon.com/Alfa-AWUS03
+6NH-802-11g-Wireless-
  []
 
 
 Overfull \hbox (27.11853pt too wide) in paragraph at lines 947--948
-[]\TU/InfoOTDisp(0)/b/n/10 _____. INTERNET: https://www.csoonline.com/article/2
-462478/microsoft-subnet/hacker-
+[]\TU/InfoOTDisp(0)/m/it/10 _____. INTERNET: https://www.csoonline.com/article/
+2462478/microsoft-subnet/hacker-
  []
 
 
 Overfull \hbox (201.91855pt too wide) in paragraph at lines 951--952
-[]\TU/InfoOTDisp(0)/b/n/10 Reddit Owned : _____. INTERNET: https://www.reddit.c
-om/r/Defcon/comments/2d16lk/your_pineapple_has_been_owned_son/#bottom-
+[]\TU/InfoOTDisp(0)/m/it/10 Reddit Owned : _____. INTERNET: https://www.reddit.
+com/r/Defcon/comments/2d16lk/your_pineapple_has_been_owned_son/#bottom-
  []
 
 
 Overfull \hbox (7.32187pt too wide) in paragraph at lines 955--956
-[]\TU/InfoOTDisp(0)/b/n/10 _____. INTERNET: https://capec.mitre.org/data/defini
-tions/1000.html ”Mechanisms
+[]\TU/InfoOTDisp(0)/m/it/10 _____. INTERNET: https://capec.mitre.org/data/defin
+itions/1000.html ”Mechanisms
  []
 
 
@@ -1727,14 +1727,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [47]
 Overfull \hbox (2.0644pt too wide) in paragraph at lines 975--976
-[]\TU/InfoOTDisp(0)/b/n/10 _____. INTERNET: https://capec.mitre.org/data/defini
-tions/110.html SOAP ”CAPEC-
+[]\TU/InfoOTDisp(0)/m/it/10 _____. INTERNET: https://capec.mitre.org/data/defin
+itions/110.html SOAP ”CAPEC-
  []
 
 [48]
 Overfull \hbox (7.09776pt too wide) in paragraph at lines 1024--1025
-\TU/InfoOTDisp(0)/b/n/10 between descriptive and explanatory causation and mola
-r and molecular causation.$[]$...
+\TU/InfoOTDisp(0)/m/it/10 between descriptive and explanatory causation and mol
+ar and molecular causation.$[]$...
  []
 
 
@@ -1748,8 +1748,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [51]
 Overfull \hbox (6.82054pt too wide) in paragraph at lines 1102--1103
-[]\TU/InfoOTDisp(0)/b/n/10 Lin, Herbert, Ibidem., p. 103: ”According to the CIA
-, human intelligence (HUMINT)–
+[]\TU/InfoOTDisp(0)/m/it/10 Lin, Herbert, Ibidem., p. 103: ”According to the CI
+A, human intelligence (HUMINT)–
  []
 
 
@@ -1770,8 +1770,8 @@ File: figures/Screenshot 2026-07-28 145609.png Graphic file (type bmp)
 <figures/Screenshot 2026-07-28 145609.png>
 
 Overfull \hbox (9.25072pt too wide) in paragraph at lines 1177--1178
-[]\TU/InfoOTDisp(0)/b/n/10 The spreadsheet conducts 10,000 simulations of data 
-points between user-supplied
+[]\TU/InfoOTDisp(0)/m/it/10 The spreadsheet conducts 10,000 simulations of data
+ points between user-supplied
  []
 
 [56] [57] [58] [59] [60]
@@ -1785,9 +1785,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [64]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Gls' on input line 1438.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [65]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Gls' on input line 1458.
+
+
 Overfull \hbox (3.85068pt too wide) in paragraph at lines 1475--1475
  []|[]| 
  []
@@ -2515,6 +2525,15 @@ Overfull \hbox (8.63313pt too wide) in alignment at lines 3583--3618
  []
 
 [110]
+
+LaTeX Warning: Reference `tab:contrasts-estimates' on page 111 undefined on inp
+ut line 3622.
+
+
+LaTeX Warning: Reference `tab:contrasts-intervals' on page 111 undefined on inp
+ut line 3622.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 3636--3636
 []|\TU/InfoOTDisp(0)/b/n/10 Personal Data
  []
@@ -2545,6 +2564,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 3649--3649
  []
 
 [111]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 3.24 on input line 3657.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 3671--3671
 []|\TU/InfoOTDisp(0)/b/n/10 Personal Data
  []
@@ -2575,6 +2599,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 3684--3684
  []
 
 [112]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 3.25 on input line 3692.
+
 File: figures/cybercrime_emmeans_ci.png Graphic file (type bmp)
 <figures/cybercrime_emmeans_ci.png>
 File: figures/cybercrime_contrasts_ci.png Graphic file (type bmp)
@@ -2627,6 +2655,30 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 [118]
 Chapter 4.
+
+LaTeX Warning: Reference `tab:mitrewrite1' on page 119 undefined on input line 
+3876.
+
+
+LaTeX Warning: Reference `tab:mitrewrite2' on page 119 undefined on input line 
+3876.
+
+
+LaTeX Warning: Reference `tab:mitrewrite3' on page 119 undefined on input line 
+3876.
+
+
+LaTeX Warning: Reference `tab:mitrewrite4' on page 119 undefined on input line 
+3876.
+
+
+LaTeX Warning: Reference `tab:mitrewrite5' on page 119 undefined on input line 
+3876.
+
+
+LaTeX Warning: Reference `tab:mitrewrite6' on page 119 undefined on input line 
+3876.
+
 
 Overfull \hbox (17.99998pt too wide) in paragraph at lines 3885--3900
  [][] 
@@ -2791,6 +2843,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 4233--4234
 Overfull \hbox (23.99998pt too wide) in paragraph at lines 4216--4236
  [][] 
  []
+
+
+LaTeX Warning: Reference `tab:zfsconcepts' on page 133 undefined on input line 
+4238.
+
+
+LaTeX Warning: Reference `tab:zfsmainuseosharddisk' on page 133 undefined on in
+put line 4241.
+
+
+LaTeX Warning: Reference `tab:zfsjailuseosharddisk' on page 133 undefined on in
+put line 4241.
+
+
+LaTeX Warning: Reference `tab:zfsslogusedisk' on page 133 undefined on input li
+ne 4241.
 
 [133] [134]
 Underfull \hbox (badness 10000) in paragraph at lines 4264--4265
@@ -3447,19 +3515,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [187
 
-] [188]
-Overfull \hbox (1.4841pt too wide) in paragraph at lines 202--202
+] [188] [189]
+Overfull \hbox (1.4841pt too wide) in paragraph at lines 210--210
 []\TU/InfoOTDisp(0)/b/n/10 The core component of an operating system that manag
 es hardware resources
  []
 
-[189] [190] [191]) [192]
+[190] [191] [192]) [193] [194
+
+]
 runsystem(makeindex ut.idx)...executed safely (allowed).
 
- (./ut.ind [193
+ (./ut.ind [195
 
+] [196])
 
-] [194]) [195] (./ut.aux)
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
+[197] (./ut.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
@@ -3468,14 +3541,26 @@ L3 programming layer <2023-08-11>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `ut.out' has not changed.
-(rerunfilecheck)             Checksum: 2E751D7A305CECC89E1AEDE0A8F745FA;19981.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `ut.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ut.out':
+(rerunfilecheck)             Before: 935E180151485030C86D95D6CC8A3590;10050
+(rerunfilecheck)             After:  264922A952AF68E2C01D6BC6117141B3;19915.
  ) 
 Here is how much of TeX's memory you used:
- 25535 strings out of 475846
- 477405 string characters out of 5781395
- 1973879 words of memory out of 5000000
- 46181 multiletter control sequences out of 15000+600000
+ 26089 strings out of 475846
+ 488213 string characters out of 5781395
+ 1972879 words of memory out of 5000000
+ 46735 multiletter control sequences out of 15000+600000
  563774 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  91i,22n,117p,5814b,725s stack positions out of 10000i,1000n,20000p,200000b,200000s

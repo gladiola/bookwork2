@@ -1,7 +1,7 @@
-\contentsline {chapter}{Author}{v}{chapter*.2}%
-\contentsline {chapter}{Preface}{vii}{chapter*.3}%
-\contentsline {chapter}{Acknowledgements}{ix}{chapter*.4}%
-\contentsline {chapter}{Introduction}{xi}{chapter*.5}%
+\contentsline {chapter}{Author}{iii}{chapter*.2}%
+\contentsline {chapter}{Preface}{v}{chapter*.3}%
+\contentsline {chapter}{Acknowledgements}{vii}{chapter*.4}%
+\contentsline {chapter}{Introduction}{ix}{chapter*.5}%
 \contentsline {chapter}{\numberline {1}Anecdotes on the Journey}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Computers and Insects}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}First Light}{7}{section.1.2}%
@@ -25,7 +25,7 @@
 \contentsline {subsection}{\numberline {3.1.1}Background and Content}{55}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Problem Statement}{57}{subsection.3.1.2}%
 \contentsline {subsection}{\numberline {3.1.3}Project Objectives}{57}{subsection.3.1.3}%
-\contentsline {subsubsection}{Limits on Hypothesis Testing}{58}{subsubsection*.19}%
+\contentsline {subsubsection}{Limits on \Gls {hypothesis} Testing}{58}{subsubsection*.19}%
 \contentsline {subsection}{\numberline {3.1.4}Scope of Work}{58}{subsection.3.1.4}%
 \contentsline {subsection}{\numberline {3.1.5}Variables}{58}{subsection.3.1.5}%
 \contentsline {subsection}{\numberline {3.1.6}Assumptions, Risks, and Limitations}{59}{subsection.3.1.6}%
@@ -38,8 +38,8 @@
 \contentsline {subsection}{\numberline {3.2.3}Gaps in the Literature}{61}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}Methodology}{62}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Using State Data to Forecast a Company's Data}{62}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Methodology for Monte Carlo Simulations in Excel}{66}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Population Changes During Sampled Years}{67}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.2}Methodology for \Gls {montecarlo}s in Excel}{66}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}\Gls {population} Changes During Sampled Years}{67}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Corporate and Personal Data Breaches}{68}{subsection.3.3.4}%
 \contentsline {subsection}{\numberline {3.3.5}Data Breach}{69}{subsection.3.3.5}%
 \contentsline {subsubsection}{Lower Bound Computation}{69}{subsubsection*.31}%
@@ -213,4 +213,4 @@
 \contentsline {section}{\numberline {6.6}References}{164}{section.6.6}%
 \contentsline {chapter}{Endnotes}{165}{chapter*.193}%
 \contentsline {chapter}{Glossary}{187}{section*.194}%
-\contentsline {chapter}{Index}{193}{section*.196}%
+\contentsline {chapter}{Index}{195}{section*.196}%
