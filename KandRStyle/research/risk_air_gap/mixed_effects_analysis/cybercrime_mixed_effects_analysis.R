@@ -81,21 +81,21 @@ parse_numeric_value <- function(x) {
 
 escape_latex <- function(x) {
   replacements <- c(
-    "\\" = "\\\\textbackslash{}",
-    "&" = "\\\\&",
-    "%" = "\\\\%",
-    "$" = "\\\\$",
-    "#" = "\\\\#",
-    "_" = "\\\\_",
-    "{" = "\\\\{",
-    "}" = "\\\\}",
-    "~" = "\\\\textasciitilde{}",
-    "^" = "\\\\textasciicircum{}"
+    "\\" = "\\textbackslash{}",
+    "&" = "\\&",
+    "%" = "\\%",
+    "$" = "\\$",
+    "#" = "\\#",
+    "_" = "\\_",
+    "{" = "\\{",
+    "}" = "\\}",
+    "~" = "\\textasciitilde{}",
+    "^" = "\\textasciicircum{}"
   )
 
   out <- as.character(x)
   for (pattern in names(replacements)) {
-    out <- gsub(pattern, replacements[[pattern]], out, perl = TRUE)
+    out <- gsub(pattern, replacements[[pattern]], out, fixed = TRUE)
   }
   out
 }
@@ -109,12 +109,14 @@ format_p_value <- function(x) {
 }
 
 read_adjusted_rate_sheet <- function(path, sheet_name, state_code) {
-  raw <- read_excel(
-    path = path,
-    sheet = sheet_name,
-    range = "B5:P11",
-    col_names = FALSE,
-    col_types = rep("text", 15)
+  raw <- suppressMessages(
+    read_excel(
+      path = path,
+      sheet = sheet_name,
+      range = "B5:P11",
+      col_names = FALSE,
+      col_types = rep("text", 15)
+    )
   )
 
   names(raw) <- c(
@@ -158,7 +160,7 @@ to_clean_dataframe <- function(x, row_name_column = NULL) {
     rownames(df) <- NULL
     df <- df[, c(row_name_column, setdiff(names(df), row_name_column))]
   }
-  tibble::as_tibble(df)
+  dplyr::as_tibble(df)
 }
 
 make_emm_plot <- function(emm_table, output_file) {
@@ -234,9 +236,13 @@ latex_table <- function(df, align, caption, label, digits_map = list(), pvalue_c
     escape_latex(value)
   }
 
-  body <- apply(df, 1, function(row) {
-    pieces <- vapply(seq_along(row), function(i) format_cell(row[[i]], column_names[[i]]), character(1))
-    paste0(pieces, collapse = " & ")
+  body <- lapply(seq_len(nrow(df)), function(row_index) {
+    pieces <- vapply(
+      seq_along(column_names),
+      function(i) format_cell(df[[column_names[[i]]]][[row_index]], column_names[[i]]),
+      character(1)
+    )
+    paste0(pieces, collapse = " & ", " \\\\")
   })
 
   c(
@@ -250,7 +256,7 @@ latex_table <- function(df, align, caption, label, digits_map = list(), pvalue_c
     paste0(header, " \\\\"),
     "\\midrule",
     "\\endhead",
-    body,
+    unlist(body, use.names = FALSE),
     "\\bottomrule",
     "\\end{longtable}"
   )
@@ -271,7 +277,7 @@ build_latex_report <- function(
 ) {
   type3_latex <- latex_table(
     type3_table,
-    align = "lrrrrr",
+    align = "lrrrrrr",
     caption = "Type III tests of fixed effects from the mixed-effects model.",
     label = "tab:type3",
     digits_map = list(NumDF = 0, DenDF = 2, `F value` = 3),
@@ -336,7 +342,7 @@ build_latex_report <- function(
     "\\[",
     sprintf(
       "\\mathrm{AdjustedRate}_{ijk} = %s + b_{\\mathrm{Year}_k} + \\varepsilon_{ijk}",
-      escape_latex(model_formula)
+    model_formula
     ),
     "\\]",
     "\\section{Type III tests of fixed effects}",
@@ -349,12 +355,12 @@ build_latex_report <- function(
     "\\section{Confidence-interval plots}",
     "\\begin{figure}[H]",
     "\\centering",
-    sprintf("\\includegraphics[width=\\textwidth]{%s}", escape_latex(basename(emm_plot_file))),
+    sprintf("\\includegraphics[width=\\textwidth]{%s}", basename(emm_plot_file)),
     "\\caption{Estimated marginal means and 95\\% confidence intervals.}",
     "\\end{figure}",
     "\\begin{figure}[H]",
     "\\centering",
-    sprintf("\\includegraphics[width=\\textwidth]{%s}", escape_latex(basename(contrast_plot_file))),
+    sprintf("\\includegraphics[width=\\textwidth]{%s}", basename(contrast_plot_file)),
     "\\caption{Planned contrast estimates and 95\\% confidence intervals.}",
     "\\end{figure}",
     "\\end{document}"
