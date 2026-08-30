@@ -270,230 +270,185 @@
 \indexentry{Monte Carlo simulation|hyperpage}{105}
 \indexentry{Monte Carlo simulation|hyperpage}{105}
 \indexentry{business email compromise|hyperpage}{105}
-\indexentry{configuration|hyperpage}{117}
-\indexentry{FreeBSD|hyperpage}{117}
-\indexentry{operating system|hyperpage}{117}
-\indexentry{amnesiac|hyperpage}{117}
-\indexentry{operating system|hyperpage}{117}
-\indexentry{configuration|hyperpage}{117}
-\indexentry{configuration|hyperpage}{117}
-\indexentry{coding|hyperpage}{117}
-\indexentry{operating system|hyperpage}{117}
-\indexentry{live CD|hyperpage}{117}
-\indexentry{operating system|hyperpage}{117}
-\indexentry{amensiac|hyperpage}{117}
-\indexentry{operating system|hyperpage}{117}
-\indexentry{immutable state|hyperpage}{117}
-\indexentry{operating system|hyperpage}{117}
-\indexentry{persistence|hyperpage}{117}
-\indexentry{penetration testing|hyperpage}{117}
-\indexentry{MITRE ATT\&CK|hyperpage}{117}
-\indexentry{reconnaissance|hyperpage}{117}
-\indexentry{operating system|hyperpage}{117}
-\indexentry{immutable|hyperpage}{117}
-\indexentry{MITRE ATT\&CK|hyperpage}{117}
-\indexentry{immutability|hyperpage}{117}
-\indexentry{immutability|hyperpage}{117}
-\indexentry{immutability|hyperpage}{117}
-\indexentry{physical security|hyperpage}{117}
-\indexentry{ransomware|hyperpage}{117}
-\indexentry{account takeover|hyperpage}{117}
-\indexentry{Pre-OS Boot|hyperpage}{122}
-\indexentry{command history logging|hyperpage}{122}
-\indexentry{protocol tunneling|hyperpage}{122}
-\indexentry{proxy|hyperpage}{122}
-\indexentry{remote access tools|hyperpage}{122}
-\indexentry{rogue domain controller|hyperpage}{122}
-\indexentry{rootkit|hyperpage}{122}
-\indexentry{scheduled task|hyperpage}{122}
-\indexentry{GDPR!Right to be Forgotten|hyperpage}{126}
-\indexentry{immutability!hard|hyperpage}{126}
-\indexentry{immutability!soft|hyperpage}{126}
-\indexentry{immutability!operational|hyperpage}{126}
-\indexentry{GDPR!Right to be Forgotten|hyperpage}{127}
-\indexentry{mac!biba|hyperpage}{127}
-\indexentry{NIST 800-88!Purge|hyperpage}{128}
-\indexentry{dd|hyperpage}{128}
-\indexentry{FreeBSD|hyperpage}{128}
-\indexentry{LTO III tape|hyperpage}{129}
-\indexentry{RAIDZ-2|hyperpage}{129}
-\indexentry{geli|hyperpage}{129}
-\indexentry{RAIDZ-2|hyperpage}{130}
-\indexentry{ZFS|hyperpage}{130}
-\indexentry{jails|hyperpage}{130}
-\indexentry{hierarchical jails|hyperpage}{130}
-\indexentry{jails|hyperpage}{130}
-\indexentry{jails|hyperpage}{130}
-\indexentry{ZFS|hyperpage}{130}
-\indexentry{ZFS|hyperpage}{130}
-\indexentry{hardware RAID|hyperpage}{130}
-\indexentry{software RAID|hyperpage}{130}
-\indexentry{ZFS|hyperpage}{130}
-\indexentry{VDEV|hyperpage}{130}
-\indexentry{RAID-0|hyperpage}{130}
-\indexentry{VDEVs|hyperpage}{130}
-\indexentry{serial number|hyperpage}{130}
-\indexentry{VDEVs|hyperpage}{130}
-\indexentry{ZFS|hyperpage}{130}
+\indexentry{configuration|hyperpage}{119}
+\indexentry{FreeBSD|hyperpage}{119}
+\indexentry{operating system|hyperpage}{119}
+\indexentry{amnesiac|hyperpage}{119}
+\indexentry{operating system|hyperpage}{119}
+\indexentry{configuration|hyperpage}{119}
+\indexentry{configuration|hyperpage}{119}
+\indexentry{coding|hyperpage}{119}
+\indexentry{operating system|hyperpage}{119}
+\indexentry{live CD|hyperpage}{119}
+\indexentry{operating system|hyperpage}{119}
+\indexentry{amensiac|hyperpage}{119}
+\indexentry{operating system|hyperpage}{119}
+\indexentry{immutable state|hyperpage}{119}
+\indexentry{operating system|hyperpage}{119}
+\indexentry{persistence|hyperpage}{119}
+\indexentry{penetration testing|hyperpage}{119}
+\indexentry{MITRE ATT\&CK|hyperpage}{119}
+\indexentry{reconnaissance|hyperpage}{119}
+\indexentry{operating system|hyperpage}{119}
+\indexentry{immutable|hyperpage}{119}
+\indexentry{MITRE ATT\&CK|hyperpage}{119}
+\indexentry{immutability|hyperpage}{119}
+\indexentry{immutability|hyperpage}{119}
+\indexentry{immutability|hyperpage}{119}
+\indexentry{physical security|hyperpage}{119}
+\indexentry{ransomware|hyperpage}{119}
+\indexentry{account takeover|hyperpage}{119}
+\indexentry{Pre-OS Boot|hyperpage}{124}
+\indexentry{command history logging|hyperpage}{124}
+\indexentry{protocol tunneling|hyperpage}{124}
+\indexentry{proxy|hyperpage}{124}
+\indexentry{remote access tools|hyperpage}{124}
+\indexentry{rogue domain controller|hyperpage}{124}
+\indexentry{rootkit|hyperpage}{124}
+\indexentry{scheduled task|hyperpage}{124}
+\indexentry{GDPR!Right to be Forgotten|hyperpage}{128}
+\indexentry{immutability!hard|hyperpage}{128}
+\indexentry{immutability!soft|hyperpage}{128}
+\indexentry{immutability!operational|hyperpage}{128}
+\indexentry{GDPR!Right to be Forgotten|hyperpage}{129}
+\indexentry{mac!biba|hyperpage}{129}
+\indexentry{NIST 800-88!Purge|hyperpage}{130}
+\indexentry{dd|hyperpage}{130}
 \indexentry{FreeBSD|hyperpage}{130}
-\indexentry{coding|hyperpage}{131}
-\indexentry{operating system|hyperpage}{131}
-\indexentry{gpart|hyperpage}{131}
-\indexentry{FreeBSD Mastery:  ZFS|hyperpage}{131}
+\indexentry{LTO III tape|hyperpage}{131}
 \indexentry{RAIDZ-2|hyperpage}{131}
-\indexentry{amensiac|hyperpage}{131}
-\indexentry{amensiac|hyperpage}{131}
-\indexentry{RAIDZ-2|hyperpage}{131}
-\indexentry{zpool!comment|hyperpage}{132}
+\indexentry{geli|hyperpage}{131}
+\indexentry{RAIDZ-2|hyperpage}{132}
+\indexentry{ZFS|hyperpage}{132}
+\indexentry{jails|hyperpage}{132}
+\indexentry{hierarchical jails|hyperpage}{132}
+\indexentry{jails|hyperpage}{132}
+\indexentry{jails|hyperpage}{132}
+\indexentry{ZFS|hyperpage}{132}
+\indexentry{ZFS|hyperpage}{132}
+\indexentry{hardware RAID|hyperpage}{132}
+\indexentry{software RAID|hyperpage}{132}
+\indexentry{ZFS|hyperpage}{132}
+\indexentry{VDEV|hyperpage}{132}
+\indexentry{RAID-0|hyperpage}{132}
+\indexentry{VDEVs|hyperpage}{132}
+\indexentry{serial number|hyperpage}{132}
+\indexentry{VDEVs|hyperpage}{132}
+\indexentry{ZFS|hyperpage}{132}
+\indexentry{FreeBSD|hyperpage}{132}
+\indexentry{coding|hyperpage}{133}
+\indexentry{operating system|hyperpage}{133}
 \indexentry{gpart|hyperpage}{133}
-\indexentry{bsdinstall|hyperpage}{133}
-\indexentry{bsdinstall|hyperpage}{133}
-\indexentry{operating system|hyperpage}{134}
-\indexentry{operating system|hyperpage}{134}
-\indexentry{bsdinstall|hyperpage}{134}
-\indexentry{bsdinstall|hyperpage}{134}
-\indexentry{USB!drive|hyperpage}{135}
-\indexentry{2FA|hyperpage}{135}
-\indexentry{TOTP|hyperpage}{135}
-\indexentry{jails|hyperpage}{135}
-\indexentry{jails|hyperpage}{135}
-\indexentry{su|hyperpage}{135}
-\indexentry{sudo|hyperpage}{135}
-\indexentry{ssh-keygen|hyperpage}{135}
-\indexentry{FreeBSD Handbook|hyperpage}{136}
-\indexentry{camcontrol!devlist|hyperpage}{136}
-\indexentry{gpart!create|hyperpage}{136}
-\indexentry{gpart!add|hyperpage}{136}
-\indexentry{newfs|hyperpage}{136}
-\indexentry{mkdir|hyperpage}{136}
-\indexentry{mount|hyperpage}{136}
-\indexentry{cd|hyperpage}{136}
-\indexentry{umount|hyperpage}{136}
-\indexentry{rm|hyperpage}{136}
-\indexentry{mkdir|hyperpage}{137}
-\indexentry{mount|hyperpage}{137}
-\indexentry{ls|hyperpage}{137}
-\indexentry{mkdir|hyperpage}{137}
+\indexentry{FreeBSD Mastery:  ZFS|hyperpage}{133}
+\indexentry{RAIDZ-2|hyperpage}{133}
+\indexentry{amensiac|hyperpage}{133}
+\indexentry{amensiac|hyperpage}{133}
+\indexentry{RAIDZ-2|hyperpage}{133}
+\indexentry{zpool!comment|hyperpage}{134}
+\indexentry{gpart|hyperpage}{135}
+\indexentry{bsdinstall|hyperpage}{135}
+\indexentry{bsdinstall|hyperpage}{135}
+\indexentry{operating system|hyperpage}{136}
+\indexentry{operating system|hyperpage}{136}
+\indexentry{bsdinstall|hyperpage}{136}
+\indexentry{bsdinstall|hyperpage}{136}
+\indexentry{USB!drive|hyperpage}{137}
+\indexentry{2FA|hyperpage}{137}
+\indexentry{TOTP|hyperpage}{137}
+\indexentry{jails|hyperpage}{137}
+\indexentry{jails|hyperpage}{137}
+\indexentry{su|hyperpage}{137}
+\indexentry{sudo|hyperpage}{137}
 \indexentry{ssh-keygen|hyperpage}{137}
-\indexentry{dialog|hyperpage}{137}
-\indexentry{gpart|hyperpage}{137}
-\indexentry{RAIDZ-2|hyperpage}{137}
-\indexentry{FreeBSD Handbook|hyperpage}{137}
-\indexentry{swapon|hyperpage}{137}
-\indexentry{gpart!create|hyperpage}{137}
-\indexentry{gpart!create|hyperpage}{137}
+\indexentry{FreeBSD Handbook|hyperpage}{138}
+\indexentry{camcontrol!devlist|hyperpage}{138}
+\indexentry{gpart!create|hyperpage}{138}
 \indexentry{gpart!add|hyperpage}{138}
-\indexentry{gpart!add|hyperpage}{138}
-\indexentry{gpart!add|hyperpage}{138}
-\indexentry{gpart!add|hyperpage}{138}
-\indexentry{gpart!add|hyperpage}{138}
-\indexentry{gpart!add|hyperpage}{138}
-\indexentry{zpool!create|hyperpage}{138}
-\indexentry{zpool!create|hyperpage}{138}
-\indexentry{RAIDZ-2|hyperpage}{138}
-\indexentry{zpool!add|hyperpage}{138}
-\indexentry{operating system|hyperpage}{138}
-\indexentry{encrypt|hyperpage}{139}
-\indexentry{operating system|hyperpage}{139}
-\indexentry{FreeBSD|hyperpage}{139}
-\indexentry{operating system|hyperpage}{139}
-\indexentry{encrypt|hyperpage}{139}
+\indexentry{newfs|hyperpage}{138}
+\indexentry{mkdir|hyperpage}{138}
+\indexentry{mount|hyperpage}{138}
+\indexentry{cd|hyperpage}{138}
+\indexentry{umount|hyperpage}{138}
+\indexentry{rm|hyperpage}{138}
+\indexentry{mkdir|hyperpage}{139}
+\indexentry{mount|hyperpage}{139}
+\indexentry{ls|hyperpage}{139}
+\indexentry{mkdir|hyperpage}{139}
+\indexentry{ssh-keygen|hyperpage}{139}
 \indexentry{dialog|hyperpage}{139}
-\indexentry{encrypt|hyperpage}{139}
-\indexentry{cache|hyperpage}{140}
-\indexentry{cache|hyperpage}{140}
-\indexentry{cache|hyperpage}{140}
-\indexentry{cache|hyperpage}{141}
-\indexentry{cache|hyperpage}{141}
-\indexentry{gpart|hyperpage}{141}
-\indexentry{gpart|hyperpage}{141}
-\indexentry{gpart|hyperpage}{141}
+\indexentry{gpart|hyperpage}{139}
+\indexentry{RAIDZ-2|hyperpage}{139}
+\indexentry{FreeBSD Handbook|hyperpage}{139}
+\indexentry{swapon|hyperpage}{139}
+\indexentry{gpart!create|hyperpage}{139}
+\indexentry{gpart!create|hyperpage}{139}
+\indexentry{gpart!add|hyperpage}{140}
+\indexentry{gpart!add|hyperpage}{140}
+\indexentry{gpart!add|hyperpage}{140}
+\indexentry{gpart!add|hyperpage}{140}
+\indexentry{gpart!add|hyperpage}{140}
+\indexentry{gpart!add|hyperpage}{140}
+\indexentry{zpool!create|hyperpage}{140}
+\indexentry{zpool!create|hyperpage}{140}
+\indexentry{RAIDZ-2|hyperpage}{140}
+\indexentry{zpool!add|hyperpage}{140}
+\indexentry{operating system|hyperpage}{140}
 \indexentry{encrypt|hyperpage}{141}
-\indexentry{mkdir|hyperpage}{141}
-\indexentry{mount|hyperpage}{141}
-\indexentry{gpart!create|hyperpage}{141}
-\indexentry{gpart!add|hyperpage}{141}
-\indexentry{gpart!create|hyperpage}{141}
-\indexentry{gpart!add|hyperpage}{141}
-\indexentry{gpart!create|hyperpage}{141}
-\indexentry{gpart!add|hyperpage}{141}
-\indexentry{gpart!create|hyperpage}{142}
-\indexentry{gpart!add|hyperpage}{142}
-\indexentry{gpart!create|hyperpage}{142}
-\indexentry{gpart!add|hyperpage}{142}
-\indexentry{gpart!add|hyperpage}{142}
-\indexentry{gpart!create|hyperpage}{142}
-\indexentry{gpart!add|hyperpage}{142}
-\indexentry{gpart!add|hyperpage}{142}
-\indexentry{gpart!create|hyperpage}{142}
-\indexentry{gpart!add|hyperpage}{142}
-\indexentry{gpart!add|hyperpage}{142}
-\indexentry{gpart!create|hyperpage}{142}
-\indexentry{gpart!add|hyperpage}{142}
+\indexentry{operating system|hyperpage}{141}
+\indexentry{FreeBSD|hyperpage}{141}
+\indexentry{operating system|hyperpage}{141}
+\indexentry{encrypt|hyperpage}{141}
+\indexentry{dialog|hyperpage}{141}
+\indexentry{encrypt|hyperpage}{141}
+\indexentry{cache|hyperpage}{142}
+\indexentry{cache|hyperpage}{142}
+\indexentry{cache|hyperpage}{142}
+\indexentry{cache|hyperpage}{143}
+\indexentry{cache|hyperpage}{143}
+\indexentry{gpart|hyperpage}{143}
+\indexentry{gpart|hyperpage}{143}
+\indexentry{gpart|hyperpage}{143}
+\indexentry{encrypt|hyperpage}{143}
+\indexentry{mkdir|hyperpage}{143}
+\indexentry{mount|hyperpage}{143}
+\indexentry{gpart!create|hyperpage}{143}
 \indexentry{gpart!add|hyperpage}{143}
-\indexentry{encrypt|hyperpage}{143}
-\indexentry{encrypt|hyperpage}{143}
-\indexentry{encrypt|hyperpage}{143}
-\indexentry{encrypt|hyperpage}{143}
-\indexentry{geli|hyperpage}{143}
-\indexentry{encrypt|hyperpage}{143}
-\indexentry{geli|hyperpage}{143}
-\indexentry{encrypt|hyperpage}{143}
-\indexentry{geli!init|hyperpage}{143}
-\indexentry{geli!attach|hyperpage}{143}
-\indexentry{geli!init|hyperpage}{143}
-\indexentry{geli!attach|hyperpage}{143}
-\indexentry{geli!init|hyperpage}{143}
-\indexentry{geli!attach|hyperpage}{143}
-\indexentry{geli!init|hyperpage}{143}
-\indexentry{geli!attach|hyperpage}{143}
-\indexentry{geli!init|hyperpage}{143}
-\indexentry{geli!attach|hyperpage}{143}
-\indexentry{geli!init|hyperpage}{144}
-\indexentry{geli!attach|hyperpage}{144}
-\indexentry{geli!init|hyperpage}{144}
-\indexentry{geli!attach|hyperpage}{144}
-\indexentry{geli!init|hyperpage}{144}
-\indexentry{geli!attach|hyperpage}{144}
-\indexentry{geli!init|hyperpage}{144}
-\indexentry{geli!attach|hyperpage}{144}
-\indexentry{geli!init|hyperpage}{144}
-\indexentry{geli!attach|hyperpage}{144}
-\indexentry{geli!init|hyperpage}{144}
-\indexentry{geli!attach|hyperpage}{144}
-\indexentry{geli!init|hyperpage}{144}
-\indexentry{geli!attach|hyperpage}{144}
-\indexentry{cp|hyperpage}{144}
-\indexentry{cp|hyperpage}{144}
-\indexentry{cp|hyperpage}{144}
-\indexentry{cp|hyperpage}{145}
-\indexentry{cp|hyperpage}{145}
-\indexentry{cp|hyperpage}{145}
-\indexentry{cp|hyperpage}{145}
-\indexentry{cp|hyperpage}{145}
-\indexentry{cp|hyperpage}{145}
-\indexentry{cp|hyperpage}{145}
-\indexentry{cp|hyperpage}{145}
-\indexentry{cp|hyperpage}{145}
-\indexentry{gpart!modify|hyperpage}{145}
-\indexentry{gpart!modify|hyperpage}{145}
-\indexentry{gpart!modify|hyperpage}{145}
-\indexentry{gpart!show|hyperpage}{145}
-\indexentry{geli!status|hyperpage}{145}
-\indexentry{zpool|hyperpage}{146}
-\indexentry{operating system|hyperpage}{146}
-\indexentry{swapon|hyperpage}{146}
-\indexentry{swapinfo|hyperpage}{146}
-\indexentry{gpart!resize|hyperpage}{146}
-\indexentry{gpart!recover|hyperpage}{146}
-\indexentry{gpart!status|hyperpage}{146}
-\indexentry{geli!attach|hyperpage}{146}
-\indexentry{gpart!add|hyperpage}{146}
-\indexentry{gpart!add|hyperpage}{146}
-\indexentry{gpart!add|hyperpage}{146}
-\indexentry{gpart!add|hyperpage}{146}
-\indexentry{gpart!add|hyperpage}{146}
-\indexentry{encrypt|hyperpage}{146}
+\indexentry{gpart!create|hyperpage}{143}
+\indexentry{gpart!add|hyperpage}{143}
+\indexentry{gpart!create|hyperpage}{143}
+\indexentry{gpart!add|hyperpage}{143}
+\indexentry{gpart!create|hyperpage}{144}
+\indexentry{gpart!add|hyperpage}{144}
+\indexentry{gpart!create|hyperpage}{144}
+\indexentry{gpart!add|hyperpage}{144}
+\indexentry{gpart!add|hyperpage}{144}
+\indexentry{gpart!create|hyperpage}{144}
+\indexentry{gpart!add|hyperpage}{144}
+\indexentry{gpart!add|hyperpage}{144}
+\indexentry{gpart!create|hyperpage}{144}
+\indexentry{gpart!add|hyperpage}{144}
+\indexentry{gpart!add|hyperpage}{144}
+\indexentry{gpart!create|hyperpage}{144}
+\indexentry{gpart!add|hyperpage}{144}
+\indexentry{gpart!add|hyperpage}{145}
+\indexentry{encrypt|hyperpage}{145}
+\indexentry{encrypt|hyperpage}{145}
+\indexentry{encrypt|hyperpage}{145}
+\indexentry{encrypt|hyperpage}{145}
+\indexentry{geli|hyperpage}{145}
+\indexentry{encrypt|hyperpage}{145}
+\indexentry{geli|hyperpage}{145}
+\indexentry{encrypt|hyperpage}{145}
+\indexentry{geli!init|hyperpage}{145}
+\indexentry{geli!attach|hyperpage}{145}
+\indexentry{geli!init|hyperpage}{145}
+\indexentry{geli!attach|hyperpage}{145}
+\indexentry{geli!init|hyperpage}{145}
+\indexentry{geli!attach|hyperpage}{145}
+\indexentry{geli!init|hyperpage}{145}
+\indexentry{geli!attach|hyperpage}{145}
+\indexentry{geli!init|hyperpage}{145}
+\indexentry{geli!attach|hyperpage}{145}
 \indexentry{geli!init|hyperpage}{146}
 \indexentry{geli!attach|hyperpage}{146}
 \indexentry{geli!init|hyperpage}{146}
@@ -501,193 +456,143 @@
 \indexentry{geli!init|hyperpage}{146}
 \indexentry{geli!attach|hyperpage}{146}
 \indexentry{geli!init|hyperpage}{146}
-\indexentry{geli!attach|hyperpage}{147}
-\indexentry{geli!init|hyperpage}{147}
-\indexentry{geli!attach|hyperpage}{147}
-\indexentry{swapinfo|hyperpage}{147}
-\indexentry{swapon|hyperpage}{147}
-\indexentry{swapoff|hyperpage}{147}
-\indexentry{swapon|hyperpage}{147}
-\indexentry{swapon|hyperpage}{147}
-\indexentry{swapon|hyperpage}{147}
-\indexentry{swapon|hyperpage}{147}
-\indexentry{swapinfo|hyperpage}{147}
-\indexentry{zpool|hyperpage}{147}
-\indexentry{zpool|hyperpage}{147}
-\indexentry{cache|hyperpage}{147}
-\indexentry{zpool|hyperpage}{147}
-\indexentry{air-gapped|hyperpage}{151}
-\indexentry{immutable|hyperpage}{151}
-\indexentry{operating system|hyperpage}{151}
-\indexentry{encrypted storage|hyperpage}{151}
-\indexentry{encrypted storage|hyperpage}{151}
-\indexentry{air-gapped|hyperpage}{151}
-\indexentry{keys|hyperpage}{151}
-\indexentry{certificates|hyperpage}{151}
-\indexentry{secrets|hyperpage}{151}
-\indexentry{authentication|hyperpage}{151}
-\indexentry{magstripe|hyperpage}{151}
-\indexentry{air-gapped|hyperpage}{152}
-\indexentry{WiFi|hyperpage}{152}
-\indexentry{privacy screen|hyperpage}{152}
-\indexentry{USB|hyperpage}{152}
-\indexentry{bluetooth tracking device|hyperpage}{152}
-\indexentry{encrypted USB drives|hyperpage}{152}
-\indexentry{Camellia|hyperpage}{152}
-\indexentry{geli|hyperpage}{152}
-\indexentry{ZFS|hyperpage}{152}
-\indexentry{gpart|hyperpage}{152}
-\indexentry{magstripe cards|hyperpage}{152}
-\indexentry{passphrases|hyperpage}{152}
-\indexentry{UV-readable ink|hyperpage}{152}
-\indexentry{multifactor authentication|hyperpage}{152}
-\indexentry{TOTP|hyperpage}{152}
-\indexentry{HOTP|hyperpage}{152}
-\indexentry{certificates|hyperpage}{152}
-\indexentry{geom|hyperpage}{153}
-\indexentry{gpart|hyperpage}{153}
-\indexentry{geli|hyperpage}{153}
-\indexentry{zpool|hyperpage}{153}
-\indexentry{zpool|hyperpage}{153}
-\indexentry{zpool|hyperpage}{153}
-\indexentry{zfs|hyperpage}{154}
+\indexentry{geli!attach|hyperpage}{146}
+\indexentry{geli!init|hyperpage}{146}
+\indexentry{geli!attach|hyperpage}{146}
+\indexentry{geli!init|hyperpage}{146}
+\indexentry{geli!attach|hyperpage}{146}
+\indexentry{geli!init|hyperpage}{146}
+\indexentry{geli!attach|hyperpage}{146}
+\indexentry{cp|hyperpage}{146}
+\indexentry{cp|hyperpage}{146}
+\indexentry{cp|hyperpage}{146}
+\indexentry{cp|hyperpage}{147}
+\indexentry{cp|hyperpage}{147}
+\indexentry{cp|hyperpage}{147}
+\indexentry{cp|hyperpage}{147}
+\indexentry{cp|hyperpage}{147}
+\indexentry{cp|hyperpage}{147}
+\indexentry{cp|hyperpage}{147}
+\indexentry{cp|hyperpage}{147}
+\indexentry{cp|hyperpage}{147}
+\indexentry{gpart!modify|hyperpage}{147}
+\indexentry{gpart!modify|hyperpage}{147}
+\indexentry{gpart!modify|hyperpage}{147}
+\indexentry{gpart!show|hyperpage}{147}
+\indexentry{geli!status|hyperpage}{147}
+\indexentry{zpool|hyperpage}{148}
+\indexentry{operating system|hyperpage}{148}
+\indexentry{swapon|hyperpage}{148}
+\indexentry{swapinfo|hyperpage}{148}
+\indexentry{gpart!resize|hyperpage}{148}
+\indexentry{gpart!recover|hyperpage}{148}
+\indexentry{gpart!status|hyperpage}{148}
+\indexentry{geli!attach|hyperpage}{148}
+\indexentry{gpart!add|hyperpage}{148}
+\indexentry{gpart!add|hyperpage}{148}
+\indexentry{gpart!add|hyperpage}{148}
+\indexentry{gpart!add|hyperpage}{148}
+\indexentry{gpart!add|hyperpage}{148}
+\indexentry{encrypt|hyperpage}{148}
+\indexentry{geli!init|hyperpage}{148}
+\indexentry{geli!attach|hyperpage}{148}
+\indexentry{geli!init|hyperpage}{148}
+\indexentry{geli!attach|hyperpage}{148}
+\indexentry{geli!init|hyperpage}{148}
+\indexentry{geli!attach|hyperpage}{148}
+\indexentry{geli!init|hyperpage}{148}
+\indexentry{geli!attach|hyperpage}{149}
+\indexentry{geli!init|hyperpage}{149}
+\indexentry{geli!attach|hyperpage}{149}
+\indexentry{swapinfo|hyperpage}{149}
+\indexentry{swapon|hyperpage}{149}
+\indexentry{swapoff|hyperpage}{149}
+\indexentry{swapon|hyperpage}{149}
+\indexentry{swapon|hyperpage}{149}
+\indexentry{swapon|hyperpage}{149}
+\indexentry{swapon|hyperpage}{149}
+\indexentry{swapinfo|hyperpage}{149}
+\indexentry{zpool|hyperpage}{149}
+\indexentry{zpool|hyperpage}{149}
+\indexentry{cache|hyperpage}{149}
+\indexentry{zpool|hyperpage}{149}
+\indexentry{air-gapped|hyperpage}{153}
+\indexentry{immutable|hyperpage}{153}
+\indexentry{operating system|hyperpage}{153}
+\indexentry{encrypted storage|hyperpage}{153}
+\indexentry{encrypted storage|hyperpage}{153}
+\indexentry{air-gapped|hyperpage}{153}
+\indexentry{keys|hyperpage}{153}
+\indexentry{certificates|hyperpage}{153}
+\indexentry{secrets|hyperpage}{153}
+\indexentry{authentication|hyperpage}{153}
+\indexentry{magstripe|hyperpage}{153}
+\indexentry{air-gapped|hyperpage}{154}
+\indexentry{WiFi|hyperpage}{154}
+\indexentry{privacy screen|hyperpage}{154}
+\indexentry{USB|hyperpage}{154}
+\indexentry{bluetooth tracking device|hyperpage}{154}
+\indexentry{encrypted USB drives|hyperpage}{154}
+\indexentry{Camellia|hyperpage}{154}
 \indexentry{geli|hyperpage}{154}
-\indexentry{geom|hyperpage}{154}
-\indexentry{ls|hyperpage}{154}
-\indexentry{FreeBSD|hyperpage}{157}
-\indexentry{LTO tape|hyperpage}{157}
-\indexentry{tape|hyperpage}{157}
-\indexentry{backups|hyperpage}{157}
-\indexentry{tape operations|hyperpage}{157}
-\indexentry{tapes|hyperpage}{157}
-\indexentry{tapes|hyperpage}{157}
-\indexentry{data center|hyperpage}{157}
-\indexentry{tape operations|hyperpage}{157}
-\indexentry{LTO tape|hyperpage}{157}
-\indexentry{tape|hyperpage}{157}
-\indexentry{tape|hyperpage}{157}
-\indexentry{tape|hyperpage}{157}
-\indexentry{tape|hyperpage}{157}
-\indexentry{LTO3|hyperpage}{157}
-\indexentry{tape machine|hyperpage}{157}
-\indexentry{LTO3 tapes|hyperpage}{157}
-\indexentry{tape drivers|hyperpage}{157}
-\indexentry{FreeBSD|hyperpage}{157}
-\indexentry{nsa driver|hyperpage}{157}
-\indexentry{sa driver|hyperpage}{157}
-\indexentry{tape|hyperpage}{157}
-\indexentry{file markers|hyperpage}{157}
-\indexentry{nsa driver|hyperpage}{157}
-\indexentry{mt|hyperpage}{157}
-\indexentry{mt|hyperpage}{157}
-\indexentry{mt|hyperpage}{158}
-\indexentry{mt|hyperpage}{158}
-\indexentry{tar|hyperpage}{158}
-\indexentry{mt|hyperpage}{158}
-\indexentry{tar|hyperpage}{158}
-\indexentry{tar|hyperpage}{158}
-\indexentry{encrypt|hyperpage}{161}
-\indexentry{encrypt|hyperpage}{161}
-\indexentry{encrypt|hyperpage}{161}
-\indexentry{encrypt|hyperpage}{161}
-\indexentry{encrypt|hyperpage}{161}
-\indexentry{encrypt|hyperpage}{161}
-\indexentry{FreeBSD Handbook|hyperpage}{162}
-\indexentry{sample|hyperpage}{169}
-\indexentry{Chattanooga|hyperpage}{169}
-\indexentry{American Samoa|hyperpage}{169}
-\indexentry{California|hyperpage}{169}
-\indexentry{American Samoa|hyperpage}{169}
-\indexentry{California|hyperpage}{169}
-\indexentry{cybercrime|hyperpage}{169}
-\indexentry{sample|hyperpage}{169}
-\indexentry{Chattanooga|hyperpage}{169}
-\indexentry{American Samoa|hyperpage}{169}
-\indexentry{California|hyperpage}{169}
-\indexentry{American Samoa|hyperpage}{169}
-\indexentry{California|hyperpage}{169}
-\indexentry{cybercrime|hyperpage}{169}
-\indexentry{sample|hyperpage}{169}
-\indexentry{Chattanooga|hyperpage}{169}
-\indexentry{American Samoa|hyperpage}{169}
-\indexentry{California|hyperpage}{169}
-\indexentry{confidence interval|hyperpage}{169}
-\indexentry{American Samoa|hyperpage}{169}
-\indexentry{California|hyperpage}{169}
-\indexentry{cybercrime|hyperpage}{169}
-\indexentry{sample|hyperpage}{169}
-\indexentry{Chattanooga|hyperpage}{169}
-\indexentry{American Samoa|hyperpage}{169}
-\indexentry{California|hyperpage}{169}
-\indexentry{American Samoa|hyperpage}{169}
-\indexentry{California|hyperpage}{169}
-\indexentry{cybercrime|hyperpage}{169}
-\indexentry{sample|hyperpage}{170}
-\indexentry{Chattanooga|hyperpage}{170}
-\indexentry{American Samoa|hyperpage}{170}
-\indexentry{California|hyperpage}{170}
-\indexentry{American Samoa|hyperpage}{170}
-\indexentry{California|hyperpage}{170}
-\indexentry{cybercrime|hyperpage}{170}
-\indexentry{sample|hyperpage}{170}
-\indexentry{Chattanooga|hyperpage}{170}
-\indexentry{American Samoa|hyperpage}{170}
-\indexentry{California|hyperpage}{170}
-\indexentry{confidence interval|hyperpage}{170}
-\indexentry{American Samoa|hyperpage}{170}
-\indexentry{California|hyperpage}{170}
-\indexentry{cybercrime|hyperpage}{170}
-\indexentry{sample|hyperpage}{170}
-\indexentry{Chattanooga|hyperpage}{170}
-\indexentry{American Samoa|hyperpage}{170}
-\indexentry{California|hyperpage}{170}
-\indexentry{American Samoa|hyperpage}{170}
-\indexentry{California|hyperpage}{170}
-\indexentry{malware|hyperpage}{170}
-\indexentry{sample|hyperpage}{170}
-\indexentry{Chattanooga|hyperpage}{170}
-\indexentry{American Samoa|hyperpage}{170}
-\indexentry{California|hyperpage}{170}
-\indexentry{American Samoa|hyperpage}{170}
-\indexentry{California|hyperpage}{170}
-\indexentry{malware|hyperpage}{170}
-\indexentry{sample|hyperpage}{170}
-\indexentry{Chattanooga|hyperpage}{170}
-\indexentry{American Samoa|hyperpage}{170}
-\indexentry{California|hyperpage}{170}
-\indexentry{American Samoa|hyperpage}{170}
-\indexentry{California|hyperpage}{170}
-\indexentry{malware|hyperpage}{170}
-\indexentry{sample|hyperpage}{170}
-\indexentry{Chattanooga|hyperpage}{170}
-\indexentry{American Samoa|hyperpage}{170}
-\indexentry{California|hyperpage}{170}
-\indexentry{confidence interval|hyperpage}{170}
-\indexentry{American Samoa|hyperpage}{170}
-\indexentry{California|hyperpage}{170}
-\indexentry{cybercrime|hyperpage}{170}
-\indexentry{sample|hyperpage}{171}
-\indexentry{Chattanooga|hyperpage}{171}
-\indexentry{American Samoa|hyperpage}{171}
-\indexentry{California|hyperpage}{171}
-\indexentry{American Samoa|hyperpage}{171}
-\indexentry{California|hyperpage}{171}
-\indexentry{cybercrime|hyperpage}{171}
-\indexentry{sample|hyperpage}{171}
-\indexentry{Chattanooga|hyperpage}{171}
-\indexentry{American Samoa|hyperpage}{171}
-\indexentry{California|hyperpage}{171}
-\indexentry{confidence interval|hyperpage}{171}
-\indexentry{American Samoa|hyperpage}{171}
-\indexentry{California|hyperpage}{171}
-\indexentry{cybercrime|hyperpage}{171}
-\indexentry{sample|hyperpage}{171}
-\indexentry{Chattanooga|hyperpage}{171}
-\indexentry{American Samoa|hyperpage}{171}
-\indexentry{California|hyperpage}{171}
-\indexentry{American Samoa|hyperpage}{171}
-\indexentry{California|hyperpage}{171}
-\indexentry{cybercrime|hyperpage}{171}
+\indexentry{ZFS|hyperpage}{154}
+\indexentry{gpart|hyperpage}{154}
+\indexentry{magstripe cards|hyperpage}{154}
+\indexentry{passphrases|hyperpage}{154}
+\indexentry{UV-readable ink|hyperpage}{154}
+\indexentry{multifactor authentication|hyperpage}{154}
+\indexentry{TOTP|hyperpage}{154}
+\indexentry{HOTP|hyperpage}{154}
+\indexentry{certificates|hyperpage}{154}
+\indexentry{geom|hyperpage}{155}
+\indexentry{gpart|hyperpage}{155}
+\indexentry{geli|hyperpage}{155}
+\indexentry{zpool|hyperpage}{155}
+\indexentry{zpool|hyperpage}{155}
+\indexentry{zpool|hyperpage}{155}
+\indexentry{zfs|hyperpage}{156}
+\indexentry{geli|hyperpage}{156}
+\indexentry{geom|hyperpage}{156}
+\indexentry{ls|hyperpage}{156}
+\indexentry{FreeBSD|hyperpage}{159}
+\indexentry{LTO tape|hyperpage}{159}
+\indexentry{tape|hyperpage}{159}
+\indexentry{backups|hyperpage}{159}
+\indexentry{tape operations|hyperpage}{159}
+\indexentry{tapes|hyperpage}{159}
+\indexentry{tapes|hyperpage}{159}
+\indexentry{data center|hyperpage}{159}
+\indexentry{tape operations|hyperpage}{159}
+\indexentry{LTO tape|hyperpage}{159}
+\indexentry{tape|hyperpage}{159}
+\indexentry{tape|hyperpage}{159}
+\indexentry{tape|hyperpage}{159}
+\indexentry{tape|hyperpage}{159}
+\indexentry{LTO3|hyperpage}{159}
+\indexentry{tape machine|hyperpage}{159}
+\indexentry{LTO3 tapes|hyperpage}{159}
+\indexentry{tape drivers|hyperpage}{159}
+\indexentry{FreeBSD|hyperpage}{159}
+\indexentry{nsa driver|hyperpage}{159}
+\indexentry{sa driver|hyperpage}{159}
+\indexentry{tape|hyperpage}{159}
+\indexentry{file markers|hyperpage}{159}
+\indexentry{nsa driver|hyperpage}{159}
+\indexentry{mt|hyperpage}{159}
+\indexentry{mt|hyperpage}{159}
+\indexentry{mt|hyperpage}{160}
+\indexentry{mt|hyperpage}{160}
+\indexentry{tar|hyperpage}{160}
+\indexentry{mt|hyperpage}{160}
+\indexentry{tar|hyperpage}{160}
+\indexentry{tar|hyperpage}{160}
+\indexentry{encrypt|hyperpage}{163}
+\indexentry{encrypt|hyperpage}{163}
+\indexentry{encrypt|hyperpage}{163}
+\indexentry{encrypt|hyperpage}{163}
+\indexentry{encrypt|hyperpage}{163}
+\indexentry{encrypt|hyperpage}{163}
+\indexentry{FreeBSD Handbook|hyperpage}{164}
 \indexentry{sample|hyperpage}{171}
 \indexentry{Chattanooga|hyperpage}{171}
 \indexentry{American Samoa|hyperpage}{171}
@@ -710,57 +615,13 @@
 \indexentry{American Samoa|hyperpage}{171}
 \indexentry{California|hyperpage}{171}
 \indexentry{cybercrime|hyperpage}{171}
-\indexentry{sample|hyperpage}{172}
-\indexentry{Chattanooga|hyperpage}{172}
-\indexentry{American Samoa|hyperpage}{172}
-\indexentry{California|hyperpage}{172}
-\indexentry{American Samoa|hyperpage}{172}
-\indexentry{California|hyperpage}{172}
-\indexentry{cybercrime|hyperpage}{172}
-\indexentry{sample|hyperpage}{172}
-\indexentry{Chattanooga|hyperpage}{172}
-\indexentry{American Samoa|hyperpage}{172}
-\indexentry{California|hyperpage}{172}
-\indexentry{American Samoa|hyperpage}{172}
-\indexentry{California|hyperpage}{172}
-\indexentry{cybercrime|hyperpage}{172}
-\indexentry{sample|hyperpage}{172}
-\indexentry{Chattanooga|hyperpage}{172}
-\indexentry{American Samoa|hyperpage}{172}
-\indexentry{California|hyperpage}{172}
-\indexentry{confidence interval|hyperpage}{172}
-\indexentry{American Samoa|hyperpage}{172}
-\indexentry{California|hyperpage}{172}
-\indexentry{cybercrime|hyperpage}{172}
-\indexentry{sample|hyperpage}{172}
-\indexentry{Chattanooga|hyperpage}{172}
-\indexentry{American Samoa|hyperpage}{172}
-\indexentry{California|hyperpage}{172}
-\indexentry{American Samoa|hyperpage}{172}
-\indexentry{California|hyperpage}{172}
-\indexentry{cybercrime|hyperpage}{172}
-\indexentry{sample|hyperpage}{172}
-\indexentry{Chattanooga|hyperpage}{172}
-\indexentry{American Samoa|hyperpage}{172}
-\indexentry{California|hyperpage}{172}
-\indexentry{American Samoa|hyperpage}{172}
-\indexentry{California|hyperpage}{172}
-\indexentry{extortion|hyperpage}{172}
-\indexentry{sample|hyperpage}{172}
-\indexentry{Chattanooga|hyperpage}{172}
-\indexentry{American Samoa|hyperpage}{172}
-\indexentry{California|hyperpage}{172}
-\indexentry{American Samoa|hyperpage}{172}
-\indexentry{California|hyperpage}{172}
-\indexentry{extortion|hyperpage}{172}
-\indexentry{sample|hyperpage}{172}
-\indexentry{Chattanooga|hyperpage}{172}
-\indexentry{American Samoa|hyperpage}{172}
-\indexentry{California|hyperpage}{172}
-\indexentry{confidence interval|hyperpage}{172}
-\indexentry{American Samoa|hyperpage}{172}
-\indexentry{California|hyperpage}{172}
-\indexentry{cybercrime|hyperpage}{172}
+\indexentry{sample|hyperpage}{171}
+\indexentry{Chattanooga|hyperpage}{171}
+\indexentry{American Samoa|hyperpage}{171}
+\indexentry{California|hyperpage}{171}
+\indexentry{American Samoa|hyperpage}{171}
+\indexentry{California|hyperpage}{171}
+\indexentry{cybercrime|hyperpage}{171}
 \indexentry{sample|hyperpage}{172}
 \indexentry{Chattanooga|hyperpage}{172}
 \indexentry{American Samoa|hyperpage}{172}
@@ -776,25 +637,39 @@
 \indexentry{American Samoa|hyperpage}{172}
 \indexentry{California|hyperpage}{172}
 \indexentry{cybercrime|hyperpage}{172}
+\indexentry{sample|hyperpage}{172}
+\indexentry{Chattanooga|hyperpage}{172}
+\indexentry{American Samoa|hyperpage}{172}
+\indexentry{California|hyperpage}{172}
+\indexentry{American Samoa|hyperpage}{172}
+\indexentry{California|hyperpage}{172}
+\indexentry{malware|hyperpage}{172}
+\indexentry{sample|hyperpage}{172}
+\indexentry{Chattanooga|hyperpage}{172}
+\indexentry{American Samoa|hyperpage}{172}
+\indexentry{California|hyperpage}{172}
+\indexentry{American Samoa|hyperpage}{172}
+\indexentry{California|hyperpage}{172}
+\indexentry{malware|hyperpage}{172}
+\indexentry{sample|hyperpage}{172}
+\indexentry{Chattanooga|hyperpage}{172}
+\indexentry{American Samoa|hyperpage}{172}
+\indexentry{California|hyperpage}{172}
+\indexentry{American Samoa|hyperpage}{172}
+\indexentry{California|hyperpage}{172}
+\indexentry{malware|hyperpage}{172}
+\indexentry{sample|hyperpage}{172}
+\indexentry{Chattanooga|hyperpage}{172}
+\indexentry{American Samoa|hyperpage}{172}
+\indexentry{California|hyperpage}{172}
+\indexentry{confidence interval|hyperpage}{172}
+\indexentry{American Samoa|hyperpage}{172}
+\indexentry{California|hyperpage}{172}
+\indexentry{cybercrime|hyperpage}{172}
 \indexentry{sample|hyperpage}{173}
 \indexentry{Chattanooga|hyperpage}{173}
 \indexentry{American Samoa|hyperpage}{173}
 \indexentry{California|hyperpage}{173}
-\indexentry{American Samoa|hyperpage}{173}
-\indexentry{California|hyperpage}{173}
-\indexentry{cybercrime|hyperpage}{173}
-\indexentry{sample|hyperpage}{173}
-\indexentry{Chattanooga|hyperpage}{173}
-\indexentry{American Samoa|hyperpage}{173}
-\indexentry{California|hyperpage}{173}
-\indexentry{American Samoa|hyperpage}{173}
-\indexentry{California|hyperpage}{173}
-\indexentry{cybercrime|hyperpage}{173}
-\indexentry{sample|hyperpage}{173}
-\indexentry{Chattanooga|hyperpage}{173}
-\indexentry{American Samoa|hyperpage}{173}
-\indexentry{California|hyperpage}{173}
-\indexentry{confidence interval|hyperpage}{173}
 \indexentry{American Samoa|hyperpage}{173}
 \indexentry{California|hyperpage}{173}
 \indexentry{cybercrime|hyperpage}{173}
@@ -817,7 +692,6 @@
 \indexentry{Chattanooga|hyperpage}{173}
 \indexentry{American Samoa|hyperpage}{173}
 \indexentry{California|hyperpage}{173}
-\indexentry{confidence interval|hyperpage}{173}
 \indexentry{American Samoa|hyperpage}{173}
 \indexentry{California|hyperpage}{173}
 \indexentry{cybercrime|hyperpage}{173}
@@ -825,6 +699,36 @@
 \indexentry{Chattanooga|hyperpage}{173}
 \indexentry{American Samoa|hyperpage}{173}
 \indexentry{California|hyperpage}{173}
+\indexentry{American Samoa|hyperpage}{173}
+\indexentry{California|hyperpage}{173}
+\indexentry{cybercrime|hyperpage}{173}
+\indexentry{sample|hyperpage}{173}
+\indexentry{Chattanooga|hyperpage}{173}
+\indexentry{American Samoa|hyperpage}{173}
+\indexentry{California|hyperpage}{173}
+\indexentry{confidence interval|hyperpage}{173}
+\indexentry{American Samoa|hyperpage}{173}
+\indexentry{California|hyperpage}{173}
+\indexentry{cybercrime|hyperpage}{173}
+\indexentry{sample|hyperpage}{174}
+\indexentry{Chattanooga|hyperpage}{174}
+\indexentry{American Samoa|hyperpage}{174}
+\indexentry{California|hyperpage}{174}
+\indexentry{American Samoa|hyperpage}{174}
+\indexentry{California|hyperpage}{174}
+\indexentry{cybercrime|hyperpage}{174}
+\indexentry{sample|hyperpage}{174}
+\indexentry{Chattanooga|hyperpage}{174}
+\indexentry{American Samoa|hyperpage}{174}
+\indexentry{California|hyperpage}{174}
+\indexentry{American Samoa|hyperpage}{174}
+\indexentry{California|hyperpage}{174}
+\indexentry{cybercrime|hyperpage}{174}
+\indexentry{sample|hyperpage}{174}
+\indexentry{Chattanooga|hyperpage}{174}
+\indexentry{American Samoa|hyperpage}{174}
+\indexentry{California|hyperpage}{174}
+\indexentry{confidence interval|hyperpage}{174}
 \indexentry{American Samoa|hyperpage}{174}
 \indexentry{California|hyperpage}{174}
 \indexentry{cybercrime|hyperpage}{174}
@@ -841,5 +745,101 @@
 \indexentry{California|hyperpage}{174}
 \indexentry{American Samoa|hyperpage}{174}
 \indexentry{California|hyperpage}{174}
+\indexentry{extortion|hyperpage}{174}
+\indexentry{sample|hyperpage}{174}
+\indexentry{Chattanooga|hyperpage}{174}
+\indexentry{American Samoa|hyperpage}{174}
+\indexentry{California|hyperpage}{174}
+\indexentry{American Samoa|hyperpage}{174}
+\indexentry{California|hyperpage}{174}
+\indexentry{extortion|hyperpage}{174}
+\indexentry{sample|hyperpage}{174}
+\indexentry{Chattanooga|hyperpage}{174}
+\indexentry{American Samoa|hyperpage}{174}
+\indexentry{California|hyperpage}{174}
+\indexentry{confidence interval|hyperpage}{174}
+\indexentry{American Samoa|hyperpage}{174}
+\indexentry{California|hyperpage}{174}
 \indexentry{cybercrime|hyperpage}{174}
-\indexentry{FreeBSD|hyperpage}{182}
+\indexentry{sample|hyperpage}{174}
+\indexentry{Chattanooga|hyperpage}{174}
+\indexentry{American Samoa|hyperpage}{174}
+\indexentry{California|hyperpage}{174}
+\indexentry{American Samoa|hyperpage}{174}
+\indexentry{California|hyperpage}{174}
+\indexentry{cybercrime|hyperpage}{174}
+\indexentry{sample|hyperpage}{174}
+\indexentry{Chattanooga|hyperpage}{174}
+\indexentry{American Samoa|hyperpage}{174}
+\indexentry{California|hyperpage}{174}
+\indexentry{confidence interval|hyperpage}{174}
+\indexentry{American Samoa|hyperpage}{174}
+\indexentry{California|hyperpage}{174}
+\indexentry{cybercrime|hyperpage}{174}
+\indexentry{sample|hyperpage}{175}
+\indexentry{Chattanooga|hyperpage}{175}
+\indexentry{American Samoa|hyperpage}{175}
+\indexentry{California|hyperpage}{175}
+\indexentry{American Samoa|hyperpage}{175}
+\indexentry{California|hyperpage}{175}
+\indexentry{cybercrime|hyperpage}{175}
+\indexentry{sample|hyperpage}{175}
+\indexentry{Chattanooga|hyperpage}{175}
+\indexentry{American Samoa|hyperpage}{175}
+\indexentry{California|hyperpage}{175}
+\indexentry{American Samoa|hyperpage}{175}
+\indexentry{California|hyperpage}{175}
+\indexentry{cybercrime|hyperpage}{175}
+\indexentry{sample|hyperpage}{175}
+\indexentry{Chattanooga|hyperpage}{175}
+\indexentry{American Samoa|hyperpage}{175}
+\indexentry{California|hyperpage}{175}
+\indexentry{confidence interval|hyperpage}{175}
+\indexentry{American Samoa|hyperpage}{175}
+\indexentry{California|hyperpage}{175}
+\indexentry{cybercrime|hyperpage}{175}
+\indexentry{sample|hyperpage}{175}
+\indexentry{Chattanooga|hyperpage}{175}
+\indexentry{American Samoa|hyperpage}{175}
+\indexentry{California|hyperpage}{175}
+\indexentry{confidence interval|hyperpage}{175}
+\indexentry{American Samoa|hyperpage}{175}
+\indexentry{California|hyperpage}{175}
+\indexentry{cybercrime|hyperpage}{175}
+\indexentry{sample|hyperpage}{175}
+\indexentry{Chattanooga|hyperpage}{175}
+\indexentry{American Samoa|hyperpage}{175}
+\indexentry{California|hyperpage}{175}
+\indexentry{American Samoa|hyperpage}{175}
+\indexentry{California|hyperpage}{175}
+\indexentry{cybercrime|hyperpage}{175}
+\indexentry{sample|hyperpage}{175}
+\indexentry{Chattanooga|hyperpage}{175}
+\indexentry{American Samoa|hyperpage}{175}
+\indexentry{California|hyperpage}{175}
+\indexentry{confidence interval|hyperpage}{175}
+\indexentry{American Samoa|hyperpage}{175}
+\indexentry{California|hyperpage}{175}
+\indexentry{cybercrime|hyperpage}{175}
+\indexentry{sample|hyperpage}{175}
+\indexentry{Chattanooga|hyperpage}{175}
+\indexentry{American Samoa|hyperpage}{175}
+\indexentry{California|hyperpage}{175}
+\indexentry{American Samoa|hyperpage}{176}
+\indexentry{California|hyperpage}{176}
+\indexentry{cybercrime|hyperpage}{176}
+\indexentry{sample|hyperpage}{176}
+\indexentry{Chattanooga|hyperpage}{176}
+\indexentry{American Samoa|hyperpage}{176}
+\indexentry{California|hyperpage}{176}
+\indexentry{American Samoa|hyperpage}{176}
+\indexentry{California|hyperpage}{176}
+\indexentry{cybercrime|hyperpage}{176}
+\indexentry{sample|hyperpage}{176}
+\indexentry{Chattanooga|hyperpage}{176}
+\indexentry{American Samoa|hyperpage}{176}
+\indexentry{California|hyperpage}{176}
+\indexentry{American Samoa|hyperpage}{176}
+\indexentry{California|hyperpage}{176}
+\indexentry{cybercrime|hyperpage}{176}
+\indexentry{FreeBSD|hyperpage}{184}

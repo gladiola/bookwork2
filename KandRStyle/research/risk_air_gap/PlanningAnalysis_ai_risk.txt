@@ -888,3 +888,335 @@ In fact, for your thesis, I suspect the strongest chapter would be:
 Descriptives → ANOVA → Planned Contrasts → Position Index (TN−AS)/(CA−AS)(TN-AS)/(CA-AS) → Discussion.
 
 That would give both statistical rigor and an intuitive measure of where Tennessee falls between your lower and upper bounds.
+
+
+
+
+
+
+
+
+Looking at the means alone, your results are actually quite encouraging.
+
+Category	TN Between AS and CA?Data Breach	No (equal to AS)
+Personal Data Breach	Yes
+Malware	No (below AS)
+Phishing	Yes
+Ransomware	Yes
+Crimes Against Children	No (below AS)
+Extortion	Yes
+Threats/Stalking/Harassment/Terrorism	No (below AS)
+IPR/Counterfeit	Yes
+Identity Theft	Yes
+BEC	Yes
+
+So Tennessee is intermediate in:
+
+7/11=63.6%7/11 = 63.6\%
+
+of the categories based on the means.
+
+What jumps out?
+
+First, Tennessee is never above California.
+
+That's important.
+
+In every category:
+
+TN≤CATN \le CA
+
+That suggests California remains a fairly consistent upper bound.
+
+The departures occur because Tennessee falls at or below American Samoa in four categories:
+
+Data Breach (equal)
+Malware
+Crimes Against Children
+Threats/Stalking/Harassment/Terrorism
+
+That pattern is actually rather interesting.
+
+What would I write as a finding?
+
+Not:
+
+Tennessee was intermediate across all cybercrime categories.
+
+because that is unsupported.
+
+Instead:
+
+Tennessee generally occupied an intermediate position between American Samoa and California. Tennessee fell within the proposed lower and upper bounds for seven of eleven cybercrime categories and remained below California in all categories examined. However, Tennessee exhibited lower incidence rates than American Samoa in several categories, indicating that the hypothesized intermediate position was not uniformly observed.
+
+That's a perfectly respectable result.
+
+What becomes your research question?
+
+Your thesis may actually become stronger if you ask:
+
+Why are Malware, Crimes Against Children, and Threats/Stalking categories different?
+
+Those categories become the discussion section.
+
+A committee member is much more likely to be interested in:
+
+"Tennessee was intermediate except for four categories"
+
+than
+
+"Everything fell neatly between the bounds."
+
+The exceptions are where the science lives.
+
+Where ANOVA helps
+
+The ANOVA would tell you whether these apparent differences are statistically meaningful or merely sampling noise from only seven years of data.
+
+For example:
+
+Is Malware truly lower in Tennessee than American Samoa?
+Or is the difference between 0.86 and 0.43 just random yearly variation?
+
+Right now, looking only at means, we cannot tell.
+
+That's why the next step is not to conclude failure. The next step is:
+
+Run the ANOVA.
+Run the planned contrasts.
+Determine which differences are statistically significant.
+
+You may find that some of the apparent exceptions disappear once variability is considered.
+
+In fact, with means this close (e.g., 0.86 vs. 0.43), I would not be surprised if some of the "failures" are not statistically distinguishable at all. That is where your seven years of annual observations become crucial.
+
+
+Given what you've shown, I think there's an important methodological issue.
+
+The ANOVA that was run used 11 category means per jurisdiction as the observations:
+
+AS: 11 means
+TN: 11 means
+CA: 11 means
+
+and then compared those 33 values.
+
+Statistically, that is not really testing your research question.
+
+Why?
+
+Because the categories are different phenomena. "Phishing" and "Ransomware" are not repeated measurements of the same variable in the way that ANOVA expects. In effect, that ANOVA is asking:
+
+Is the average of the category means different among jurisdictions?
+
+It is not asking:
+
+Across the 2016-2022 observations, are Tennessee rates significantly between American Samoa and California?
+
+What you really have
+
+For each category, you likely have:
+
+State	YearsAS	7 observations
+TN	7 observations
+CA	7 observations
+
+Thus for Data Breach you have 21 observations:
+
+7 AS years
+7 TN years
+7 CA years
+
+For Phishing you have another 21 observations.
+
+And so on.
+
+Those annual observations are where the statistical power lives.
+
+What I would do now
+Option A (Most Defensible)
+
+For each category:
+
+Run a one-way ANOVA:
+
+Yij=μ+αi+ϵijY_{ij} = \mu + \alpha_i + \epsilon_{ij}
+
+where
+
+ii = jurisdiction
+jj = year
+
+Then perform the planned contrasts:
+
+Contrast 1
+H0:μTN≤μASH_0:\mu_{TN}\le\mu_{AS}
+
+vs
+
+HA:μTN>μASH_A:\mu_{TN}>\mu_{AS}
+Contrast 2
+H0:μTN≥μCAH_0:\mu_{TN}\ge\mu_{CA}
+
+vs
+
+HA:μTN<μCAH_A:\mu_{TN}<\mu_{CA}
+
+For each category you then produce:
+
+Category	ANOVA p	TN>AS	TN<CA	Intermediate?Data Breach	?	No	Yes	No
+Personal Data Breach	?	Yes	Yes	Yes
+...	...	...	...	...
+
+This directly answers the research question.
+
+Option B (Even Stronger)
+
+Build a mixed model:
+
+Crime=State+Category+State×Category+YearCrime = State + Category + State\times Category + Year
+
+This uses all 231 observations:
+
+3×11×7=2313 \times 11 \times 7 = 231
+
+instead of only 33 means.
+
+This is probably what a journal reviewer would prefer.
+
+How I would interpret your current result
+
+Your current result:
+
+F(2,30)=2.81,p=0.0759F(2,30)=2.81,\quad p=0.0759
+
+is not a failure.
+
+I would write:
+
+The overall jurisdiction means exhibited the expected ordering (American Samoa = 2.64, Tennessee = 5.61, California = 9.07), indicating a directional pattern consistent with the intermediate-jurisdiction hypothesis. However, the omnibus ANOVA based on category means was not statistically significant at α = 0.05, F(2,30) = 2.81, p = .076. Accordingly, the observed ordering should be interpreted as suggestive rather than conclusive.
+
+That's a reasonable result.
+
+The bigger issue
+
+Looking at your table, the really interesting finding is:
+
+Criterion	ResultTN > AS	7 / 11 categories
+TN < CA	11 / 11 categories
+
+Tennessee never exceeds California.
+
+That is actually stronger evidence for California acting as an upper-bound jurisdiction than for Tennessee being strictly intermediate.
+
+If I were on your committee, I would immediately ask:
+
+Are the four categories where Tennessee is below American Samoa statistically distinguishable from American Samoa, or are those differences simply due to annual variation?
+
+To answer that, you need the yearly values, not merely the category means.
+
+So my recommendation would be: go back to the 2016-2022 annual per-capita observations and run the category-specific ANOVAs with planned contrasts. Those results will be much more persuasive than the omnibus ANOVA on the 11 means.
+
+
+I have cybercrime data containing Year, State (AS, TN, CA), Category (11 levels), and adjusted per-capita Rate. 
+It is ComputerCrime_AUG2026_Impact_Final_With_C5C7_IFERROR_CHARTS_FIXED_UPDATED.xlsx.
+Create an R script that:
+
+Reads the Excel file.
+Converts the data to long format.
+Fits a mixed-effects model with State and Category as fixed effects and Year as a random effect.
+Produces Type III tests of fixed effects.
+Calculates estimated marginal means.
+Performs planned contrasts TN vs AS and TN vs CA within each category.
+Produces confidence-interval plots.
+
+Also create a LaTeX document that shows all of these calculations and an Excel spreadsheet that holds copies of the data.
+
+
+
+You started a task
+
+Read over our ut.pdf and see if the ANOVA shows if it is okay for us to use the per capita American Samoa/California bounds as a framework for doing a Monte Carlo analysis. Explain why or why not.
+
+Short answer: not as a strict statistical conclusion from the one-way ANOVA alone.
+
+In ut.pdf (same values shown in ut.tex), the one-way ANOVA results are:
+
+    Count means: (F(2,30)=2.71,\ p=0.08)
+    Dollar-impact means: (F(2,30)=1.06,\ p=0.36)
+
+Both p-values are (>0.05), so those ANOVAs do not show statistically significant differences among AS/TN/CA means at conventional levels. That means they don’t formally prove the AS/CA bounds are statistically distinct enough to be the sole inferential basis.
+
+That said, descriptively Tennessee is below California in all categories and above American Samoa in most categories, so using AS/CA as practical scenario bounds for Monte Carlo is reasonable as a framework—but it should be described as a bounding/assumption approach, not as something “validated” by those one-way ANOVAs alone.
+
+
+
+Great question. In simple terms, it’s not good enough for forecasting by itself for 4 main reasons:
+
+    The ANOVA result is “not strong enough” evidence
+    Your p-values (0.08 for counts, 0.36 for impact) are above 0.05, which means the test cannot confidently say the 3 state averages are truly different vs. random noise.
+
+    ANOVA answers a different question than forecasting
+    ANOVA asks: “Are group means different?”
+    Forecasting asks: “What will happen next, how much uncertainty, and with what error?”
+    So even a significant ANOVA would not automatically validate a forecast model.
+
+    The data are noisy and uneven
+    You have few observations, large variability across crime types, and at least one outlier/error-handling issue noted in the document. That weakens confidence in using just AS/CA bounds as a predictive engine.
+
+    Bounds are assumptions, not predictions
+    Using American Samoa as low and California as high can be useful for scenario bracketing (“best/worst plausible range”), but that is not the same as proving Tennessee future values will reliably behave inside that band.
+
+So: AS/CA bounds are okay as a practical Monte Carlo scenario framework, but not as a statistically validated forecasting framework on the basis of those one-way ANOVAs alone.
+
+
+
+
+
+I think you've arrived at a much stronger research position than you may realize.
+
+The tempting hypothesis is:
+
+Tennessee will always fall between the lower bound (American Samoa) and upper bound (California).
+
+But that's actually a very strict claim, and your data suggest it is not universally true.
+
+A more defensible and perhaps more interesting conclusion is:
+
+The boundary method is category-dependent. For a category to support forecasting via lower and upper bounds, the boundary jurisdictions must exhibit meaningful separation in adjusted per-capita incidence rates.
+
+Looking at your results:
+
+Category Type	InterpretationPersonal Data Breach, Phishing, Extortion, Identity Theft, BEC	Strong support for boundary model
+Data Breach	Boundary separation weak
+Malware	Boundary assumption violated
+Crimes Against Children	Boundary assumption violated
+Threats/Stalking/Harassment/Terrorism	Boundary assumption violated
+
+That doesn't represent failure. It represents a validation study.
+
+In fact, the finding you seem to be approaching is:
+
+The lower-bound/upper-bound forecasting methodology cannot be assumed valid merely because lower and upper jurisdictions have been selected. The methodology must first be evaluated at the adjusted per-capita category level to determine whether the proposed bounds actually constrain the target jurisdiction.
+
+That's a useful result.
+
+A forecasting method is generally more credible when it identifies the conditions under which it does not work as well as the conditions under which it does work.
+
+You could even frame a necessary condition:
+
+μAS<μTN<μCA\mu_{AS} < \mu_{TN} < \mu_{CA}
+
+or perhaps, more realistically,
+
+μAS<μCA\mu_{AS} < \mu_{CA}
+
+with some minimum separation between AS and CA.
+
+When the AS and CA means are nearly identical, there may be no practical interval within which to constrain Tennessee. The "forecasting corridor" becomes too narrow or unstable to be informative.
+
+I can easily imagine a Discussion section stating something like:
+
+Results indicate that the proposed lower- and upper-bound jurisdictions provide meaningful forecasting constraints for several cybercrime categories, particularly Personal Data Breach, Phishing, Extortion, Identity Theft, and Business Email Compromise. However, other categories exhibited weak separation or boundary violations, suggesting that category-specific validation is required before the bounds can be used for forecasting purposes. Accordingly, the existence of lower and upper jurisdictions alone is insufficient; the adjusted per-capita rates must demonstrate a stable ordering relationship before the interval can be interpreted as a forecasting range.
+
+That's not a negative result. That's a methodological contribution. It tells future users of the model when the approach can be trusted and when it cannot.
