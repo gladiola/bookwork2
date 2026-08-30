@@ -3395,6 +3395,7 @@ These supporting tables summarize the adjusted per-capita count and dollar-impac
   \caption{Adjusted per-capita count: Mean values by category.}
   \label{tab:anova-count-means}
   \small
+  \resizebox{0.85\textwidth}{!}{%
   \begin{tabular}{@{}p{0.45\linewidth}rrr@{}}
     \toprule
     Category & AS mean & TN mean & CA mean\\
@@ -3406,12 +3407,13 @@ These supporting tables summarize the adjusted per-capita count and dollar-impac
     Ransomware & 0.00 & 0.29 & 1.00\\
     Crimes Against Children & 1.57 & 0.29 & 0.43\\
     Extortion & 4.71 & 14.86 & 22.57\\
-    Threats/\slash Stalking/\slash Harassment/\slash Terrorism & 7.29 & 5.00 & 9.17\\
+    Threats\slash Stalking\slash Harassment\slash Terrorism & 7.29 & 5.00 & 9.17\\
     IPR/Counterfeit & 0.43 & 0.71 & 1.29\\
     Identity Theft & 1.86 & 9.86 & 11.86\\
     BEC & 4.00 & 6.71 & 12.86\\
     \bottomrule
-  \end{tabular}
+  \end{tabular}%
+  }
 \end{table}
 
 \begin{table}[H]
@@ -3419,6 +3421,7 @@ These supporting tables summarize the adjusted per-capita count and dollar-impac
   \caption{Adjusted per-capita count: Hypothesis test outcomes at $\alpha = 0.05$.}
   \label{tab:anova-count-outcomes}
   \small
+  \resizebox{0.85\textwidth}{!}{%
   \begin{tabular}{@{}p{0.45\linewidth}ccc@{}}
     \toprule
     Category & TN > AS & TN < CA & TN between?\\
@@ -3430,12 +3433,13 @@ These supporting tables summarize the adjusted per-capita count and dollar-impac
     Ransomware & Yes & Yes & Yes\\
     Crimes Against Children & No & Yes & No\\
     Extortion & Yes & Yes & Yes\\
-    Threats/\slash Stalking/\slash Harassment/\slash Terrorism & No & Yes & No\\
+    Threats\slash Stalking\slash Harassment\slash Terrorism & No & Yes & No\\
     IPR/Counterfeit & Yes & Yes & Yes\\
     Identity Theft & Yes & Yes & Yes\\
     BEC & Yes & Yes & Yes\\
     \bottomrule
-  \end{tabular}
+  \end{tabular}%
+  }
 \end{table}
 
 \begin{table}[H]
@@ -3469,6 +3473,7 @@ Across the eleven categories, Tennessee exceeded American Samoa in 7 categories,
   \caption{Adjusted per-capita dollar-impact: Mean values by category.}
   \label{tab:anova-impact-means}
   \small
+  \resizebox{0.85\textwidth}{!}{%
   \begin{tabular}{@{}p{0.45\linewidth}rrr@{}}
     \toprule
     Category & AS mean & TN mean & CA mean\\
@@ -3480,12 +3485,13 @@ Across the eleven categories, Tennessee exceeded American Samoa in 7 categories,
     Ransomware & \$0.00 & \$655.60 & \$6{,}761.39\\
     Crimes Against Children & \$0.00 & \$7.09 & \$204.40\\
     Extortion & \$300.00 & \$6{,}123.76 & \$43{,}994.25\\
-    Threats/\slash Stalking/\slash Harassment/\slash Terrorism & \$0.00 & \$2{,}556.83 & \$7{,}954.95\\
+    Threats\slash Stalking\slash Harassment\slash Terrorism & \$0.00 & \$2{,}556.83 & \$7{,}954.95\\
     IPR/Counterfeit & \$0.00 & \$2{,}705.62 & \$5{,}199.29\\
     Identity Theft & \$300.00 & \$35{,}149.68 & \$118{,}823.21\\
     BEC & \$13{,}851.43 & \$492{,}040.82 & \$784{,}560.85\\
     \bottomrule
-  \end{tabular}
+  \end{tabular}%
+  }
 \end{table}
 
 \begin{table}[H]
@@ -3493,6 +3499,7 @@ Across the eleven categories, Tennessee exceeded American Samoa in 7 categories,
   \caption{Adjusted per-capita dollar-impact: Hypothesis test outcomes at $\alpha = 0.05$.}
   \label{tab:anova-impact-outcomes}
   \small
+  \resizebox{0.85\textwidth}{!}{%
   \begin{tabular}{@{}p{0.45\linewidth}ccc@{}}
     \toprule
     Category & TN > AS & TN < CA & TN between?\\
@@ -3504,12 +3511,13 @@ Across the eleven categories, Tennessee exceeded American Samoa in 7 categories,
     Ransomware & Yes & Yes & Yes\\
     Crimes Against Children & Yes & Yes & Yes\\
     Extortion & Yes & Yes & Yes\\
-    Threats/\slash Stalking/\slash Harassment/\slash Terrorism & Yes & Yes & Yes\\
+    Threats\slash Stalking\slash Harassment\slash Terrorism & Yes & Yes & Yes\\
     IPR/Counterfeit & Yes & Yes & Yes\\
     Identity Theft & Yes & Yes & Yes\\
     BEC & Yes & Yes & Yes\\
     \bottomrule
-  \end{tabular}
+  \end{tabular}%
+  }
 \end{table}
 
 \begin{table}[H]
@@ -3540,7 +3548,7 @@ Across the eleven categories, Tennessee exceeded American Samoa in 10 categories
 \section{Source data and reshaping}
 The source workbook was \texttt{ComputerCrime\_AUG2026\_Impact\_Final\_With\_C5C7\_IFERROR\_CHARTS\_FIXED\_UPDATED.xlsx}. The script extracted the seven annual observations (2016--2022) from the Chattanooga-adjusted summary sheets for American Samoa, Tennessee, and California, then reshaped the eleven cybercrime categories into long format.
 The long-format dataset contains 231 state-year-category rows. 1 workbook error cell was read as missing, so 230 complete observations were used in the mixed-effects model.
-The excluded row was State CA, Year 2016, Category Threats/\slash Stalking/\slash Harassment/\slash Terrorism.
+The excluded row was State CA, Year 2016, Category Threats\slash Stalking\slash Harassment\slash Terrorism.
 \section{Model specification}
 The fitted model used State and Category as fixed effects, included their interaction so that within-category contrasts could be estimated directly, and modeled Year as a random intercept:
 \[
@@ -3594,9 +3602,9 @@ Crimes Against Children & CA & 0.429 & 1.889 & 169.87 & -3.300 & 4.157 \\
 Extortion & AS & 4.714 & 1.889 & 169.87 & 0.986 & 8.443 \\
 Extortion & TN & 14.857 & 1.889 & 169.87 & 11.129 & 18.586 \\
 Extortion & CA & 22.571 & 1.889 & 169.87 & 18.843 & 26.300 \\
-Threats/\slash Stalking/\slash Harassment/\slash Terrorism & AS & 7.286 & 1.889 & 169.87 & 3.557 & 11.014 \\
-Threats/\slash Stalking/\slash Harassment/\slash Terrorism & TN & 5.000 & 1.889 & 169.87 & 1.272 & 8.728 \\
-Threats/\slash Stalking/\slash Harassment/\slash Terrorism & CA & 9.000 & 2.034 & 177.88 & 4.987 & 13.013 \\
+Threats\slash Stalking\slash Harassment\slash Terrorism & AS & 7.286 & 1.889 & 169.87 & 3.557 & 11.014 \\
+Threats\slash Stalking\slash Harassment\slash Terrorism & TN & 5.000 & 1.889 & 169.87 & 1.272 & 8.728 \\
+Threats\slash Stalking\slash Harassment\slash Terrorism & CA & 9.000 & 2.034 & 177.88 & 4.987 & 13.013 \\
 IPR/Counterfeit & AS & 0.429 & 1.889 & 169.87 & -3.300 & 4.157 \\
 IPR/Counterfeit & TN & 0.714 & 1.889 & 169.87 & -3.014 & 4.443 \\
 IPR/Counterfeit & CA & 1.286 & 1.889 & 169.87 & -2.443 & 5.014 \\
@@ -3637,8 +3645,8 @@ Crimes Against Children & TN vs AS & -1.286 & 2.575 & 0.618 \\
 Crimes Against Children & TN vs CA & -0.143 & 2.575 & 0.956 \\
 Extortion & TN vs AS & 10.143 & 2.575 & <0.001 \\
 Extortion & TN vs CA & -7.714 & 2.575 & 0.003 \\
-Threats/\slash Stalking/\slash Harassment/\slash Terrorism & TN vs AS & -2.286 & 2.575 & 0.376 \\
-Threats/\slash Stalking/\slash Harassment/\slash Terrorism & TN vs CA & -4.000 & 2.683 & 0.138 \\
+Threats\slash Stalking\slash Harassment\slash Terrorism & TN vs AS & -2.286 & 2.575 & 0.376 \\
+Threats\slash Stalking\slash Harassment\slash Terrorism & TN vs CA & -4.000 & 2.683 & 0.138 \\
 IPR/Counterfeit & TN vs AS & 0.286 & 2.575 & 0.912 \\
 IPR/Counterfeit & TN vs CA & -0.571 & 2.575 & 0.825 \\
 Identity Theft & TN vs AS & 8.000 & 2.575 & 0.002 \\
@@ -3672,8 +3680,8 @@ Crimes Against Children & TN vs AS & 191.00 & -6.364 & 3.793 \\
 Crimes Against Children & TN vs CA & 191.00 & -5.221 & 4.936 \\
 Extortion & TN vs AS & 191.00 & 5.064 & 15.221 \\
 Extortion & TN vs CA & 191.00 & -12.793 & -2.636 \\
-Threats/\slash Stalking/\slash Harassment/\slash Terrorism & TN vs AS & 191.00 & -7.364 & 2.793 \\
-Threats/\slash Stalking/\slash Harassment/\slash Terrorism & TN vs CA & 191.26 & -9.292 & 1.291 \\
+Threats\slash Stalking\slash Harassment\slash Terrorism & TN vs AS & 191.00 & -7.364 & 2.793 \\
+Threats\slash Stalking\slash Harassment\slash Terrorism & TN vs CA & 191.26 & -9.292 & 1.291 \\
 IPR/Counterfeit & TN vs AS & 191.00 & -4.793 & 5.364 \\
 IPR/Counterfeit & TN vs CA & 191.00 & -5.650 & 4.507 \\
 Identity Theft & TN vs AS & 191.00 & 2.921 & 13.079 \\
