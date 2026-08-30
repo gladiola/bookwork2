@@ -16,6 +16,7 @@ This section summarizes the conditional workflow:
   \caption{Categories passing conditional screen ($AS<TN$).}
   \label{tab:conditional-screen-included}
   \small
+  \resizebox{0.85\textwidth}{!}{%
   \begin{tabular}{@{}lrrrcc@{}}
     \toprule
     Category & AS mean & TN mean & CA mean & $AS<TN$ & $TN<CA$\\
@@ -28,7 +29,8 @@ This section summarizes the conditional workflow:
     Identity Theft & 1.86 & 9.86 & 11.86 & Yes & Yes\\
     BEC & 4.00 & 6.71 & 12.86 & Yes & Yes\\
     \bottomrule
-  \end{tabular}
+  \end{tabular}%
+  }
 \end{table}
 
 \noindent\textit{Note.} These 7 categories pass the $AS<TN$ screen and are included in the conditional analysis.
@@ -38,6 +40,7 @@ This section summarizes the conditional workflow:
   \caption{Categories failing conditional screen ($AS \geq TN$).}
   \label{tab:conditional-screen-excluded}
   \small
+  \resizebox{0.85\textwidth}{!}{%
   \begin{tabular}{@{}lrrrcc@{}}
     \toprule
     Category & AS mean & TN mean & CA mean & $AS<TN$ & $TN<CA$\\
@@ -47,7 +50,8 @@ This section summarizes the conditional workflow:
     Crimes Against Children & 1.57 & 0.29 & 0.43 & No & Yes\\
     Threats/Stalking/Harassment/Terrorism & 7.29 & 5.00 & 9.17 & No & Yes\\
     \bottomrule
-  \end{tabular}
+  \end{tabular}%
+  }
 \end{table}
 
 \noindent\textit{Note.} These 4 categories fail the $AS<TN$ screen and are excluded from the conditional analysis. The $TN<CA$ column is shown as a diagnostic and is not used as the inclusion criterion.
