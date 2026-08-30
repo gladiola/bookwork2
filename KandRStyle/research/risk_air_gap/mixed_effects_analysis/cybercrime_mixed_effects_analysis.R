@@ -80,8 +80,10 @@ parse_numeric_value <- function(x) {
 }
 
 escape_latex <- function(x) {
+  out <- as.character(x)
+  out <- gsub("\\", "\\textbackslash{}", out, fixed = TRUE)
+
   replacements <- c(
-    "\\" = "\\textbackslash{}",
     "&" = "\\&",
     "%" = "\\%",
     "$" = "\\$",
@@ -93,7 +95,6 @@ escape_latex <- function(x) {
     "^" = "\\textasciicircum{}"
   )
 
-  out <- as.character(x)
   for (pattern in names(replacements)) {
     out <- gsub(pattern, replacements[[pattern]], out, fixed = TRUE)
   }
@@ -242,7 +243,7 @@ latex_table <- function(df, align, caption, label, digits_map = list(), pvalue_c
       function(i) format_cell(df[[column_names[[i]]]][[row_index]], column_names[[i]]),
       character(1)
     )
-    paste0(pieces, collapse = " & ", " \\\\")
+    paste0(paste(pieces, collapse = " & "), " \\\\")
   })
 
   c(
@@ -323,16 +324,26 @@ build_latex_report <- function(
       escape_latex(basename(workbook_path))
     ),
     sprintf(
-      "The long-format dataset contains %d state-year-category rows. One workbook error cell was read as missing, so %d complete observations were used in the mixed-effects model.",
+      "The long-format dataset contains %d state-year-category rows. %d workbook error cell%s %s read as missing, so %d complete observations were used in the mixed-effects model.",
       total_rows,
+      nrow(missing_rows),
+      ifelse(nrow(missing_rows) == 1, "", "s"),
+      ifelse(nrow(missing_rows) == 1, "was", "were"),
       analysis_rows
     ),
     if (nrow(missing_rows) > 0) {
+      missing_descriptions <- apply(missing_rows, 1, function(row) {
+        sprintf(
+          "State %s, Year %s, Category %s",
+          row[["State"]],
+          row[["Year"]],
+          escape_latex(as.character(row[["Category"]]))
+        )
+      })
       sprintf(
-        "The excluded row was State %s, Year %s, Category %s.",
-        missing_rows$State[[1]],
-        missing_rows$Year[[1]],
-        escape_latex(as.character(missing_rows$Category[[1]]))
+        "The excluded row%s %s.",
+        ifelse(length(missing_descriptions) == 1, " was", "s were"),
+        paste(missing_descriptions, collapse = "; ")
       )
     } else {
       "No observations were excluded from the model."
