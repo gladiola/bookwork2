@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  28 AUG 2026 13:42
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  30 AUG 2026 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2442,85 +2442,107 @@ Underfull \vbox (badness 1043) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [106]
-Underfull \vbox (badness 6396) has occurred while \output is active []
+[107]
+Overfull \hbox (32.25935pt too wide) in paragraph at lines 3506--3506
+[]|\TU/InfoOTDisp(0)/b/n/9 Threats/Stalking/Harassment/Terrorism| 
+ []
 
- [107]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\gls' on input line 3498.
-
-[108]
-Chapter 4.
-
-Overfull \hbox (17.99998pt too wide) in paragraph at lines 3544--3559
+Overfull \hbox (47.38239pt too wide) in paragraph at lines 3495--3512
  [][] 
  []
 
 
-Underfull \hbox (badness 3375) in paragraph at lines 3576--3576
+Overfull \hbox (32.25935pt too wide) in paragraph at lines 3554--3554
+[]|\TU/InfoOTDisp(0)/b/n/9 Threats/Stalking/Harassment/Terrorism| 
+ []
+
+
+Overfull \hbox (79.52142pt too wide) in paragraph at lines 3543--3560
+ [][] 
+ []
+
+
+Underfull \vbox (badness 1320) has occurred while \output is active []
+
+ [108]
+[109]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 3598.
+
+[110]
+Chapter 4.
+
+Overfull \hbox (17.99998pt too wide) in paragraph at lines 3644--3659
+ [][] 
+ []
+
+
+Underfull \hbox (badness 3375) in paragraph at lines 3676--3676
 []|\TU/InfoOTDisp(0)/b/n/10 File and Directory Permissions
  []
 
 
-Overfull \hbox (17.99998pt too wide) in paragraph at lines 3564--3579
+Overfull \hbox (17.99998pt too wide) in paragraph at lines 3664--3679
  [][] 
  []
 
 
-Underfull \hbox (badness 2088) in paragraph at lines 3595--3596
+Underfull \hbox (badness 2088) in paragraph at lines 3695--3696
 []|\TU/InfoOTDisp(0)/b/n/10 ”Adversaries may transfer tools or other files
  []
 
 
-Underfull \hbox (badness 4872) in paragraph at lines 3595--3596
+Underfull \hbox (badness 4872) in paragraph at lines 3695--3696
 \TU/InfoOTDisp(0)/b/n/10 between systems in a compromised environ-
  []
 
 
-Overfull \hbox (17.99998pt too wide) in paragraph at lines 3584--3598
+Overfull \hbox (17.99998pt too wide) in paragraph at lines 3684--3698
  [][] 
  []
 
 
-Overfull \hbox (17.99998pt too wide) in paragraph at lines 3603--3618
+Overfull \hbox (17.99998pt too wide) in paragraph at lines 3703--3718
  [][] 
  []
 
 
-Underfull \hbox (badness 2790) in paragraph at lines 3629--3629
+Underfull \hbox (badness 2790) in paragraph at lines 3729--3729
 []|\TU/InfoOTDisp(0)/b/n/10 Prevent Command History Log-
  []
 
 
-Overfull \hbox (17.99998pt too wide) in paragraph at lines 3624--3639
+Overfull \hbox (17.99998pt too wide) in paragraph at lines 3724--3739
  [][] 
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 3649--3650
+Underfull \hbox (badness 1132) in paragraph at lines 3749--3750
 \TU/InfoOTDisp(0)/b/n/10 of the desktop to gather information over the
  []
 
 
-Underfull \hbox (badness 1253) in paragraph at lines 3654--3655
+Underfull \hbox (badness 1253) in paragraph at lines 3754--3755
 \TU/InfoOTDisp(0)/b/n/10 user document templates to conceal malicious
  []
 
 
-Overfull \hbox (17.99998pt too wide) in paragraph at lines 3645--3660
+Overfull \hbox (17.99998pt too wide) in paragraph at lines 3745--3760
  [][] 
  []
 
-[109
+[111
 
-] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119]
+] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121]
 File: figures/public to private.png Graphic file (type bmp)
 <figures/public to private.png>
 
 Underfull \vbox (badness 2495) has occurred while \output is active []
 
- [120]
-Overfull \hbox (7.4107pt too wide) in paragraph at lines 3813--3814
+ [122]
+Overfull \hbox (7.4107pt too wide) in paragraph at lines 3913--3914
 []\TU/InfoOTDisp(0)/b/n/10 There’s a web interface that let’s us know about []m
 otherboard-related
  []
@@ -2528,651 +2550,651 @@ otherboard-related
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [121]
+ [123]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [122]
-Overfull \hbox (6.5517pt too wide) in paragraph at lines 3880--3881
+ [124]
+Overfull \hbox (6.5517pt too wide) in paragraph at lines 3980--3981
 []|\TU/CourierNew(0)/m/n/10 [Host]-[PositionNumber
  []
 
 
-Overfull \hbox (8.06975pt too wide) in paragraph at lines 3880--3881
+Overfull \hbox (8.06975pt too wide) in paragraph at lines 3980--3981
 \TU/CourierNew(0)/m/n/10 0-7]-[Serial_Number]\TU/InfoOTDisp(0)/b/n/10 [81]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3882--3883
+Underfull \hbox (badness 10000) in paragraph at lines 3982--3983
 []|\TU/CourierNew(0)/m/n/10 zfs set
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3882--3883
+Underfull \hbox (badness 10000) in paragraph at lines 3982--3983
 \TU/CourierNew(0)/m/n/10 compress=gzip-6
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3883--3883
+Underfull \hbox (badness 10000) in paragraph at lines 3983--3983
 []|\TU/InfoOTDisp(0)/b/n/10 Make a note on the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3884--3885
+Underfull \hbox (badness 10000) in paragraph at lines 3984--3985
 []|\TU/CourierNew(0)/m/n/10 zfs set
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3887--3887
+Underfull \hbox (badness 10000) in paragraph at lines 3987--3987
 \TU/InfoOTDisp(0)/b/n/10 count snapshots and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3888--3889
+Underfull \hbox (badness 10000) in paragraph at lines 3988--3989
 []|\TU/CourierNew(0)/m/n/10 zfs set canmount=off
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3889--3889
+Underfull \hbox (badness 10000) in paragraph at lines 3989--3989
 []|\TU/InfoOTDisp(0)/b/n/10 Specify where to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3889--3890
+Underfull \hbox (badness 10000) in paragraph at lines 3989--3990
 []|\TU/CourierNew(0)/m/n/10 zfs set
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3889--3890
+Underfull \hbox (badness 10000) in paragraph at lines 3989--3990
 \TU/CourierNew(0)/m/n/10 mountpoint=/SOME
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3890--3891
+Underfull \hbox (badness 10000) in paragraph at lines 3990--3991
 []|\TU/CourierNew(0)/m/n/10 zfs set readonly=off
  []
 
 
-Underfull \hbox (badness 7238) in paragraph at lines 3891--3891
+Underfull \hbox (badness 7238) in paragraph at lines 3991--3991
 []|\TU/InfoOTDisp(0)/b/n/10 Control if it can exe-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3891--3892
+Underfull \hbox (badness 10000) in paragraph at lines 3991--3992
 []|\TU/CourierNew(0)/m/n/10 zfs set exec=off
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3892--3892
+Underfull \hbox (badness 10000) in paragraph at lines 3992--3992
 []|\TU/InfoOTDisp(0)/b/n/10 Make more than one
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3892--3893
+Underfull \hbox (badness 10000) in paragraph at lines 3992--3993
 []|\TU/CourierNew(0)/m/n/10 zfs set copies=2
  []
 
 
-Overfull \hbox (23.99998pt too wide) in paragraph at lines 3875--3895
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 3975--3995
  [][] 
  []
 
-[123] [124]
-Underfull \hbox (badness 10000) in paragraph at lines 3923--3924
+[125] [126]
+Underfull \hbox (badness 10000) in paragraph at lines 4023--4024
 []|\TU/InfoOTDisp(0)/b/n/10 Estimate for 80[]GigaBytes
  []
 
 
 Underfull \vbox (badness 6332) has occurred while \output is active []
 
- [125]
-[126]
-Underfull \hbox (badness 10000) in paragraph at lines 3991--3993
+ [127]
+[128]
+Underfull \hbox (badness 10000) in paragraph at lines 4091--4093
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3991--3993
+Underfull \hbox (badness 10000) in paragraph at lines 4091--4093
 
  []
 
 
 Underfull \vbox (badness 4556) has occurred while \output is active []
 
- [127]
-Underfull \hbox (badness 10000) in paragraph at lines 4003--4004
+ [129]
+Underfull \hbox (badness 10000) in paragraph at lines 4103--4104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4010--4017
+Underfull \hbox (badness 10000) in paragraph at lines 4110--4117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4010--4017
+Underfull \hbox (badness 10000) in paragraph at lines 4110--4117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4010--4017
+Underfull \hbox (badness 10000) in paragraph at lines 4110--4117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4010--4017
+Underfull \hbox (badness 10000) in paragraph at lines 4110--4117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4019--4027
+Underfull \hbox (badness 10000) in paragraph at lines 4119--4127
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4019--4027
+Underfull \hbox (badness 10000) in paragraph at lines 4119--4127
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4019--4027
+Underfull \hbox (badness 10000) in paragraph at lines 4119--4127
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4019--4027
+Underfull \hbox (badness 10000) in paragraph at lines 4119--4127
 
  []
 
-[128]
-Underfull \hbox (badness 10000) in paragraph at lines 4029--4032
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4029--4032
+[130]
+Underfull \hbox (badness 10000) in paragraph at lines 4129--4132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4038--4042
+Underfull \hbox (badness 10000) in paragraph at lines 4129--4132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4038--4042
+Underfull \hbox (badness 10000) in paragraph at lines 4138--4142
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4045--4046
+Underfull \hbox (badness 10000) in paragraph at lines 4138--4142
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4047--4051
+Underfull \hbox (badness 10000) in paragraph at lines 4145--4146
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4047--4051
+Underfull \hbox (badness 10000) in paragraph at lines 4147--4151
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4047--4051
+Underfull \hbox (badness 10000) in paragraph at lines 4147--4151
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4052--4056
+Underfull \hbox (badness 10000) in paragraph at lines 4147--4151
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4052--4056
+Underfull \hbox (badness 10000) in paragraph at lines 4152--4156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4052--4056
-
- []
-
-[129]
-Underfull \hbox (badness 10000) in paragraph at lines 4057--4061
+Underfull \hbox (badness 10000) in paragraph at lines 4152--4156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4057--4061
+Underfull \hbox (badness 10000) in paragraph at lines 4152--4156
+
+ []
+
+[131]
+Underfull \hbox (badness 10000) in paragraph at lines 4157--4161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4057--4061
+Underfull \hbox (badness 10000) in paragraph at lines 4157--4161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4062--4065
+Underfull \hbox (badness 10000) in paragraph at lines 4157--4161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4062--4065
+Underfull \hbox (badness 10000) in paragraph at lines 4162--4165
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4062--4065
+Underfull \hbox (badness 10000) in paragraph at lines 4162--4165
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4062--4065
+Underfull \hbox (badness 10000) in paragraph at lines 4162--4165
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4066--4068
+Underfull \hbox (badness 10000) in paragraph at lines 4162--4165
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4066--4068
+Underfull \hbox (badness 10000) in paragraph at lines 4166--4168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4066--4068
+Underfull \hbox (badness 10000) in paragraph at lines 4166--4168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4069--4074
+Underfull \hbox (badness 10000) in paragraph at lines 4166--4168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4075--4079
+Underfull \hbox (badness 10000) in paragraph at lines 4169--4174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4075--4079
+Underfull \hbox (badness 10000) in paragraph at lines 4175--4179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4175--4179
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [130]
+ [132]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [131]
-[132]
-LaTeX Font Info:    Font shape `TU/CourierNew(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 4121.
-
-Underfull \hbox (badness 10000) in paragraph at lines 4133--4135
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4137--4141
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4137--4141
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4137--4141
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4137--4141
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4137--4141
-
- []
-
-[133]
-Underfull \hbox (badness 10000) in paragraph at lines 4144--4147
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4144--4147
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4148--4151
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4148--4151
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4152--4155
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4152--4155
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4156--4159
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4156--4159
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4156--4159
-
- []
-
+ [133]
 [134]
-Underfull \hbox (badness 10000) in paragraph at lines 4170--4194
+LaTeX Font Info:    Font shape `TU/CourierNew(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 4221.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4233--4235
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4170--4194
+Underfull \hbox (badness 10000) in paragraph at lines 4237--4241
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4170--4194
+Underfull \hbox (badness 10000) in paragraph at lines 4237--4241
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4170--4194
+Underfull \hbox (badness 10000) in paragraph at lines 4237--4241
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4170--4194
+Underfull \hbox (badness 10000) in paragraph at lines 4237--4241
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4170--4194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4170--4194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4170--4194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4170--4194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4170--4194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4170--4194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4170--4194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4170--4194
+Underfull \hbox (badness 10000) in paragraph at lines 4237--4241
 
  []
 
 [135]
-Underfull \hbox (badness 10000) in paragraph at lines 4198--4199
+Underfull \hbox (badness 10000) in paragraph at lines 4244--4247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4200--4212
+Underfull \hbox (badness 10000) in paragraph at lines 4244--4247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4200--4212
+Underfull \hbox (badness 10000) in paragraph at lines 4248--4251
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4200--4212
+Underfull \hbox (badness 10000) in paragraph at lines 4248--4251
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4200--4212
+Underfull \hbox (badness 10000) in paragraph at lines 4252--4255
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4200--4212
+Underfull \hbox (badness 10000) in paragraph at lines 4252--4255
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4200--4212
+Underfull \hbox (badness 10000) in paragraph at lines 4256--4259
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4200--4212
+Underfull \hbox (badness 10000) in paragraph at lines 4256--4259
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4200--4212
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4200--4212
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4200--4212
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4200--4212
+Underfull \hbox (badness 10000) in paragraph at lines 4256--4259
 
  []
 
 [136]
-Underfull \hbox (badness 10000) in paragraph at lines 4214--4216
+Underfull \hbox (badness 10000) in paragraph at lines 4270--4294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4217--4219
+Underfull \hbox (badness 10000) in paragraph at lines 4270--4294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4217--4219
+Underfull \hbox (badness 10000) in paragraph at lines 4270--4294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4270--4294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4270--4294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4270--4294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4270--4294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4270--4294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4270--4294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4270--4294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4270--4294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4270--4294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4270--4294
 
  []
 
 [137]
-Underfull \hbox (badness 10000) in paragraph at lines 4225--4227
+Underfull \hbox (badness 10000) in paragraph at lines 4298--4299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4228--4229
+Underfull \hbox (badness 10000) in paragraph at lines 4300--4312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4230--4231
+Underfull \hbox (badness 10000) in paragraph at lines 4300--4312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4232--4234
+Underfull \hbox (badness 10000) in paragraph at lines 4300--4312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4235--4243
+Underfull \hbox (badness 10000) in paragraph at lines 4300--4312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4235--4243
+Underfull \hbox (badness 10000) in paragraph at lines 4300--4312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4235--4243
+Underfull \hbox (badness 10000) in paragraph at lines 4300--4312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4235--4243
+Underfull \hbox (badness 10000) in paragraph at lines 4300--4312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4235--4243
+Underfull \hbox (badness 10000) in paragraph at lines 4300--4312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4235--4243
+Underfull \hbox (badness 10000) in paragraph at lines 4300--4312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4235--4243
+Underfull \hbox (badness 10000) in paragraph at lines 4300--4312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4244--4245
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4246--4256
+Underfull \hbox (badness 10000) in paragraph at lines 4300--4312
 
  []
 
 [138]
-Underfull \hbox (badness 10000) in paragraph at lines 4261--4267
+Underfull \hbox (badness 10000) in paragraph at lines 4314--4316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4261--4267
+Underfull \hbox (badness 10000) in paragraph at lines 4317--4319
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4270--4272
+Underfull \hbox (badness 10000) in paragraph at lines 4317--4319
+
+ []
+
+[139]
+Underfull \hbox (badness 10000) in paragraph at lines 4325--4327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4328--4329
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4330--4331
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4332--4334
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4335--4343
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4335--4343
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4335--4343
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4335--4343
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4335--4343
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4335--4343
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4335--4343
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4344--4345
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4346--4356
+
+ []
+
+[140]
+Underfull \hbox (badness 10000) in paragraph at lines 4361--4367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4361--4367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4370--4372
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [139]
-[140]
-Underfull \hbox (badness 10000) in paragraph at lines 4320--4321
+ [141]
+[142]
+Underfull \hbox (badness 10000) in paragraph at lines 4420--4421
 
  []
 
-[141] [142
+[143] [144
 
 ]
 Chapter 5.
-[143] [144] [145]
-Overfull \hbox (11.89243pt too wide) in paragraph at lines 4445--4449
+[145] [146] [147]
+Overfull \hbox (11.89243pt too wide) in paragraph at lines 4545--4549
 []\TU/InfoOTDisp(0)/b/n/10 2. Dismount media. []\TU/CourierNew(0)/m/n/10 zfs ex
 port [DATASET_NAME]\TU/InfoOTDisp(0)/b/n/10 [8] []\TU/CourierNew(0)/m/n/10 geli
  detatch
  []
 
-[146] [147] [148]
+[148] [149] [150]
 Chapter 6.
-[149
+[151
 
 ]
-Overfull \hbox (17.12445pt too wide) in paragraph at lines 4688--4689
+Overfull \hbox (17.12445pt too wide) in paragraph at lines 4788--4789
 \TU/CourierNew(0)/m/n/10 echo "Back up to 0 and go forward space count 2 files.
 " 
  []
 
 
-Overfull \hbox (17.12445pt too wide) in paragraph at lines 4688--4689
+Overfull \hbox (17.12445pt too wide) in paragraph at lines 4788--4789
 \TU/CourierNew(0)/m/n/10 echo "Back up to 0 and go forward space count 3 files.
 " 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4688--4689
+Underfull \hbox (badness 10000) in paragraph at lines 4788--4789
 
  []
 
-[150]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [151]
-Underfull \hbox (badness 10000) in paragraph at lines 4692--4693
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [152]
-Underfull \hbox (badness 10000) in paragraph at lines 4694--4695
-
- []
-
-
+[152]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [153]
-[154] (./ut.ent
+Underfull \hbox (badness 10000) in paragraph at lines 4792--4793
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [154]
+Underfull \hbox (badness 10000) in paragraph at lines 4794--4795
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [155]
+[156] (./ut.ent
 LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 8.0pt on input line 11.
- [155
+ [157
 
 
 
@@ -3185,23 +3207,17 @@ Overfull \hbox (9.33829pt too wide) in paragraph at lines 754--759
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [156]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [157]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [158]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [159]
-[160]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [160]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [161]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [162]
+[162]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [163]
@@ -3211,6 +3227,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [165]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [166]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [167]
 Overfull \hbox (1.62468pt too wide) in paragraph at lines 6720--6742
 []\TU/InfoOTDisp(0)/b/n/8 [2]MITRE ATT&CK. “Create Account, Technique T1136 - E
 nterprise | MITRE ATT&CK®.” []attack.Mitre.Org,
@@ -3228,7 +3250,7 @@ Overfull \hbox (4.97731pt too wide) in paragraph at lines 6982--7001
 T1484 - Enterprise | MITRE ATT&CK®.” Mitre.Org,
  []
 
-[166]
+[168]
 Overfull \hbox (22.68132pt too wide) in paragraph at lines 7097--7116
 []\TU/InfoOTDisp(0)/b/n/8 [21]“File and Directory Permissions Modification, Tec
 hnique T1222 - Enterprise | MITRE ATT&CK®.” Mitre.Org,
@@ -3243,12 +3265,6 @@ Overfull \hbox (3.28131pt too wide) in paragraph at lines 7306--7325
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [167]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [168]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [169]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -3259,31 +3275,37 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [172]
-[173]) (./ut.gls
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [173]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [174]
-[175] [176
+[175]) (./ut.gls
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [176]
+[177] [178
 
 ]
 \enotechapsep{0}{\glossarytitle }
 \openout4 = `ut.ent'.
 
-[177
+[179
 
-] [178]
-Overfull \hbox (1.4841pt too wide) in paragraph at lines 203--203
+] [180]
+Overfull \hbox (1.4841pt too wide) in paragraph at lines 202--202
 []\TU/InfoOTDisp(0)/b/n/10 The core component of an operating system that manag
 es hardware resources
  []
 
-[179] [180] [181]) [182]
+[181] [182] [183]) [184]
 runsystem(makeindex ut.idx)...executed safely (allowed).
 
- (./ut.ind [183
+ (./ut.ind [185
 
 
-] [184]) [185] (./ut.aux)
+] [186]) [187] (./ut.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
@@ -3293,15 +3315,15 @@ L3 programming layer <2023-08-11>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `ut.out' has not changed.
-(rerunfilecheck)             Checksum: 1305FD12681AC6181BBF6B8F5C4DF2DF;17850.
+(rerunfilecheck)             Checksum: 2FA11FF63BBF0F594EA71573F3928FC5;18248.
  ) 
 Here is how much of TeX's memory you used:
- 25489 strings out of 475846
- 476269 string characters out of 5781395
+ 25506 strings out of 475846
+ 476555 string characters out of 5781395
  1973879 words of memory out of 5000000
- 46141 multiletter control sequences out of 15000+600000
- 562637 words of font info for 94 fonts, out of 8000000 for 9000
+ 46154 multiletter control sequences out of 15000+600000
+ 563774 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  91i,22n,117p,5814b,725s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on ut.pdf (201 pages).
+Output written on ut.pdf (203 pages).

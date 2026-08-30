@@ -1,0 +1,890 @@
+What you're trying to show is a little different from a traditional hypothesis test. Statistically, you cannot really prove that Tennessee "should" fall between the American Samoa and California bounds. Instead, you can test whether the Tennessee values are consistent with being inside the interval defined by those jurisdictions.
+
+The best test depends on exactly what data you have.
+
+Scenario 1: You have 7 annual observations for each jurisdiction
+
+For each cybercrime category:
+
+American Samoa: 7 yearly values
+Tennessee: 7 yearly values
+California: 7 yearly values
+
+You could:
+
+A. Confidence Interval Approach (Recommended)
+Estimate the mean and confidence interval for Tennessee.
+Estimate the mean and confidence intervals for American Samoa and California.
+Check whether the Tennessee mean and its confidence interval lie between the estimated lower and upper bounds.
+
+This is simple and easy to explain.
+
+B. Equivalence / Interval Testing
+
+Define hypotheses:
+
+H₀: μTN ≤ μAS or μTN ≥ μCA
+H₁: μAS < μTN < μCA
+
+This is essentially an intersection-union test.
+
+Conduct two one-sided tests:
+
+Test whether Tennessee mean is greater than American Samoa mean.
+Test whether Tennessee mean is less than California mean.
+
+If both are significant, you have evidence that Tennessee lies between the two.
+
+Scenario 2: You have category means only
+
+If the 7-year means are all you possess (no annual observations), then formal hypothesis testing is difficult because you cannot estimate variability.
+
+You would need:
+
+yearly observations,
+standard deviations, or
+standard errors
+
+for each jurisdiction.
+
+Without variability measures, you can only show descriptively that:
+
+xˉAS<xˉTN<xˉCA\bar{x}_{AS} < \bar{x}_{TN} < \bar{x}_{CA}
+
+but not determine whether the differences are statistically meaningful.
+
+Scenario 3: Multiple Cybercrime Categories
+
+If there are many cybercrime categories, a stronger analysis is:
+
+Rank Correlation
+
+Check whether Tennessee consistently falls between American Samoa and California across categories.
+
+Mixed-Effects or Repeated-Measures Model
+
+Treat:
+
+Year as a repeated factor,
+Crime type as a factor,
+State as a factor.
+
+Then test whether Tennessee's expected value is significantly bounded by the other two states.
+
+With only seven years, however, the sample size is small, so simpler methods are often preferred.
+
+What I would do
+
+For a publication or thesis, I would perform:
+
+Compute annual means for each state and crime category.
+Conduct two one-sided t-tests:
+Tennessee > American Samoa
+Tennessee < California
+Report 95% confidence intervals for all means.
+Show graphically that Tennessee lies within the interval formed by American Samoa and California.
+
+This directly addresses the claim that Tennessee's cybercrime rate lies between the established lower and upper bounds while providing inferential evidence rather than relying solely on descriptive statistics.
+
+
+
+
+
+
+For a thesis, I would actually frame the problem a little differently than "Tennessee should fall between the bounds."
+
+A committee will likely ask: Why should American Samoa and California define the true lower and upper bounds? Instead, you can formulate a statistically defensible hypothesis:
+
+Tennessee exhibits cybercrime levels that are intermediate between those observed in a low-incidence jurisdiction (American Samoa) and a high-incidence jurisdiction (California).
+
+That is much easier to test.
+
+Your Data Structure
+
+It sounds like you have:
+
+State	Years	CategoriesAmerican Samoa	7	11
+Tennessee	7	11
+California	7	11
+
+For each category you therefore have seven annual observations.
+
+This gives:
+
+3 jurisdictions
+11 crime categories
+7 repeated annual measurements
+
+for a total of 231 observations.
+
+Approach 1: Category-by-Category Analysis
+
+For each of the 11 categories:
+
+Hypothesis Set
+
+Test 1
+
+H0:μTN≤μASH_0:\mu_{TN} \le \mu_{AS} HA:μTN>μASH_A:\mu_{TN} > \mu_{AS}
+
+Test 2
+
+H0:μTN≥μCAH_0:\mu_{TN} \ge \mu_{CA} HA:μTN<μCAH_A:\mu_{TN} < \mu_{CA}
+
+If both tests are significant, Tennessee is statistically between the two.
+
+Advantages
+Easy to explain.
+Works well in a master's thesis.
+Produces one result for each cybercrime category.
+Drawback
+
+You must adjust for multiple comparisons because:
+
+11 categories×2 tests=22 tests11 \text{ categories} \times 2 \text{ tests} = 22 \text{ tests}
+
+Use:
+
+Holm-Bonferroni (preferred)
+Bonferroni (conservative)
+Approach 2: Repeated-Measures ANOVA (Better Thesis Method)
+
+This is my preferred approach.
+
+Treat:
+
+State = factor with 3 levels
+Category = factor with 11 levels
+Year = repeated measure
+
+Model:
+
+Crime=State+Category+State×Category+YearCrime = State + Category + State \times Category + Year
+
+Questions answered:
+
+Does state matter overall?
+Does category matter?
+Does the Tennessee position relative to the other states vary by crime type?
+
+After finding a significant state effect, perform planned contrasts:
+
+American Samoa vs Tennessee
+Tennessee vs California
+
+This is more sophisticated and looks stronger in a thesis defense.
+
+Approach 3: Mixed Effects Model (Best Statistical Method)
+
+If your thesis is quantitatively focused:
+
+Crimeijk=β0+β1(State)+β2(Category)+uYear+ϵCrime_{ijk} = \beta_0 + \beta_1(State) + \beta_2(Category) + u_{Year} + \epsilon
+
+where:
+
+State is fixed
+Category is fixed
+Year is random
+
+Advantages:
+
+Handles correlation among years.
+Handles unequal variances.
+Gives a single model for all 11 categories.
+
+A committee usually views mixed models favorably because they use all available information.
+
+The Strongest Argument
+
+Rather than testing every category separately, create an "intermediate-position index."
+
+For category jj:
+
+Pj=TNj−ASjCAj−ASjP_j = \frac{TN_j-AS_j} {CA_j-AS_j}
+
+Interpretation:
+
+0 = identical to American Samoa
+1 = identical to California
+0.5 = exactly midway
+
+Then test whether:
+
+0<Pj<10 < P_j < 1
+
+for each category.
+
+This directly measures whether Tennessee lies within the interval.
+
+You can then report:
+
+Tennessee fell within the American Samoa-California interval for 10 of 11 categories, with an average normalized position of 0.43.
+
+That's a very intuitive thesis result.
+
+What I Would Recommend for a Graduate Thesis
+Descriptive statistics for all 11 categories.
+Confidence intervals for each state/category mean.
+Mixed-effects model or repeated-measures ANOVA.
+Planned contrasts:
+Tennessee > American Samoa
+Tennessee < California
+A figure showing the Tennessee mean within the AS-CA interval for each category.
+
+That combination is rigorous, publishable, and straightforward to defend before a thesis committee.
+
+
+
+
+
+The ANOVA becomes useful because you're no longer asking about a single cybercrime category. You're asking whether there is a systematic Tennessee-between-the-bounds effect across all 11 categories.
+
+Conceptually
+
+Right now, your data probably looks something like:
+
+Year	State	Category	Count2018	American Samoa	Phishing	12
+2018	Tennessee	Phishing	45
+2018	California	Phishing	210
+2018	American Samoa	Identity Theft	30
+...	...	...	...
+
+An ANOVA partitions variation into sources:
+
+Total Variation=State Effect+Category Effect+Interaction+Residual Error\text{Total Variation} = \text{State Effect} + \text{Category Effect} + \text{Interaction} + \text{Residual Error}
+
+where:
+
+State Effect: Do the three jurisdictions differ overall?
+Category Effect: Are some cybercrime types more common than others?
+State × Category Interaction: Does the difference between states depend on the category?
+The Model
+
+For your thesis, I would likely use a two-factor ANOVA:
+
+Yijk=μ+αi+βj+(αβ)ij+ϵijkY_{ijk} = \mu + \alpha_i + \beta_j + (\alpha\beta)_{ij} + \epsilon_{ijk}
+
+where:
+
+YY = crime count
+ii = state
+jj = category
+kk = year
+
+Factors:
+
+State (3 levels)
+
+American Samoa
+Tennessee
+California
+
+Category (11 levels)
+
+Response:
+
+Crime incidence
+What the ANOVA Table Looks Like
+
+You'll get something similar to:
+
+Source	df	SS	MS	F	pState	2	15420	7710	12.85	.001
+Category	10	88200	8820	38.14	<.001
+State × Category	20	12600	630	2.71	.014
+Error	198	45800	231		
+
+Then you interpret:
+
+State
+
+Suppose:
+
+F(2,198)=12.85, p=.001F(2,198)=12.85,\ p=.001
+
+You would write:
+
+There was a significant effect of jurisdiction on cybercrime incidence, indicating that the mean levels differed among American Samoa, Tennessee, and California.
+
+Category
+
+Suppose:
+
+F(10,198)=38.14, p<.001F(10,198)=38.14,\ p<.001
+
+You would write:
+
+Cybercrime incidence differed significantly across the eleven categories.
+
+Not surprising, but worth reporting.
+
+Interaction
+
+This is often the most interesting result.
+
+Suppose:
+
+F(20,198)=2.71, p=.014F(20,198)=2.71,\ p=.014
+
+Then:
+
+The relationship between jurisdiction and incidence varied by category.
+
+Meaning:
+
+Tennessee may be close to California for one crime type.
+Tennessee may be close to American Samoa for another.
+Planned Contrasts
+
+Once ANOVA establishes a state effect, you conduct the tests you actually care about.
+
+Contrast 1
+μTN−μAS\mu_{TN} - \mu_{AS}
+
+Test:
+
+H0:μTN=μASH_0 : \mu_{TN} = \mu_{AS}
+Contrast 2
+μCA−μTN\mu_{CA} - \mu_{TN}
+
+Test:
+
+H0:μCA=μTNH_0 : \mu_{CA} = \mu_{TN}
+
+If:
+
+TN > AS (significant)
+CA > TN (significant)
+
+then Tennessee statistically falls between them.
+
+The Graph Your Committee Will Love
+
+Don't lead with tables.
+
+Use a figure like this:
+
+California      ●
+                |
+                |
+Tennessee       ●
+                |
+                |
+American Samoa  ●
+
+
+for each category.
+
+Or even better:
+
+Category 1  AS ----- TN ------------ CA
+Category 2  AS -------- TN --------- CA
+Category 3  AS --- TN -------------- CA
+
+
+with confidence intervals.
+
+That visual immediately communicates your argument.
+
+One Concern
+
+ANOVA assumes approximately normal residuals and equal variances.
+
+Cybercrime counts are often:
+
+skewed,
+highly variable,
+sometimes contain zeros.
+
+If these are raw incident counts, a thesis committee may prefer:
+
+log-transformed counts, or
+a generalized linear model (Poisson or negative binomial).
+
+If your observations are annual rates or already averaged over populations, traditional ANOVA is usually easier to justify.
+
+My suspicion is that with only 7 years × 11 categories, a repeated-measures ANOVA with planned contrasts would be understandable to readers and sufficient for a master's thesis, while a mixed-effects model would be the stronger choice if you intend to publish the results.
+
+
+Let's strip away the equations and think like a thesis committee member.
+
+What you're trying to determine is:
+
+Across 11 cybercrime categories, does Tennessee consistently occupy a position between American Samoa (low) and California (high)?
+
+ANOVA is useful because it lets you answer that question using all the data at once, rather than performing 11 separate analyses.
+
+Start with one category
+
+Suppose you have "Identity Theft."
+
+Year	AS	TN	CA2018	10	40	200
+2019	12	38	210
+2020	9	42	220
+...	...	...	...
+
+One question is:
+
+Are the means different among the three states?
+
+ANOVA compares:
+
+variation between states
+variation within states
+
+If Tennessee, California, and American Samoa have clearly different averages compared to the year-to-year fluctuations, the ANOVA finds a significant state effect.
+
+Now add all 11 categories
+
+Suppose you have:
+
+Identity Theft
+Phishing
+Ransomware
+Social Media Fraud
+etc.
+
+Now your data become:
+
+State	Category	Year	ValueAS	Identity Theft	2018	10
+TN	Identity Theft	2018	40
+CA	Identity Theft	2018	200
+AS	Phishing	2018	8
+TN	Phishing	2018	25
+CA	Phishing	2018	150
+...	...	...	...
+
+The ANOVA asks three separate questions.
+
+Question 1: Does state matter?
+
+This is the State Effect.
+
+The software asks:
+
+If I ignore category differences, are the three states generally different?
+
+For example:
+
+State	Overall MeanAS	15
+TN	65
+CA	250
+
+The answer would be "yes."
+
+Graphically:
+
+AS   ●
+
+TN             ●
+
+CA                              ●
+
+Question 2: Does category matter?
+
+This is the Category Effect.
+
+The software asks:
+
+Are some crimes naturally more common than others?
+
+For example:
+
+Category	AveragePhishing	400
+Ransomware	40
+Malware	120
+
+Again, probably yes.
+
+Question 3: Does Tennessee's position change by category?
+
+This is the Interaction Effect, and it's probably the most interesting result.
+
+Imagine:
+
+Category A
+AS 10
+TN 50
+CA 100
+
+
+Tennessee is exactly halfway.
+
+Category B
+AS 10
+TN 15
+CA 100
+
+
+Tennessee is very close to American Samoa.
+
+Category C
+AS 10
+TN 90
+CA 100
+
+
+Tennessee is very close to California.
+
+The interaction asks:
+
+Does the TN-AS-CA relationship look different depending on which crime category we're examining?
+
+If the answer is yes, the interaction is significant.
+
+How this would appear in your thesis
+
+The ANOVA table itself is usually brief:
+
+Source	F	pState	18.4	< .001
+Category	22.1	< .001
+State × Category	3.7	.002
+
+Then in the text:
+
+A two-factor ANOVA revealed significant main effects for jurisdiction and cybercrime category. The jurisdiction-by-category interaction was also significant, indicating that the relative positions of American Samoa, Tennessee, and California varied across crime types.
+
+That's maybe one paragraph.
+
+Why this helps your argument
+
+Without ANOVA:
+
+You have 11 separate stories.
+
+Category 1: Tennessee was between.
+Category 2: Tennessee was between.
+Category 3: Tennessee was between.
+
+A committee member may ask:
+
+Is there an overall pattern here, or are you just describing categories?
+
+ANOVA provides evidence that there is a real overall state effect across the entire dataset.
+
+Then your pairwise tests or confidence intervals demonstrate:
+
+AS<TN<CAAS < TN < CA
+
+for individual categories.
+
+Together they tell a much stronger story.
+
+What I suspect is even better for your thesis
+
+Based on how you're describing your research, I almost wonder whether a repeated-measures ANOVA isn't the ideal centerpiece.
+
+Instead, consider creating for each category:
+
+Position=TN−ASCA−ASPosition=\frac{TN-AS}{CA-AS}
+
+For example:
+
+Category	PositionIdentity Theft	0.42
+Ransomware	0.58
+Phishing	0.37
+
+Then Tennessee's location is expressed on a 0-to-1 scale:
+
+0 = same as American Samoa
+1 = same as California
+0.5 = midway
+
+A committee often finds this easier to interpret than an ANOVA table because it directly measures the thing you're actually claiming: Tennessee's placement between the lower and upper bounds.
+
+Absolutely. That equation is simply ANOVA's way of saying:
+
+"Every observation is made up of several contributing pieces."
+
+Let's rewrite it:
+
+Yijk=μ+αi+βj+(αβ)ij+ϵijkY_{ijk} = \mu + \alpha_i + \beta_j + (\alpha\beta)_{ij} + \epsilon_{ijk}
+
+For your study:
+
+ii = State (American Samoa, Tennessee, California)
+jj = Cybercrime category (11 categories)
+kk = Year (7 years)
+YijkY_{ijk}
+
+This is the actual observed value.
+
+For example:
+
+State	Category	Year	CountTennessee	Phishing	2022	87
+
+Then:
+
+Yijk=87Y_{ijk}=87
+
+The model tries to explain why that observation equals 87.
+
+μ\mu
+
+This is the grand mean.
+
+Imagine pooling every observation from every state, category, and year.
+
+Suppose the average is:
+
+μ=60\mu = 60
+
+ANOVA begins by assuming every observation should be 60.
+
+Then it adds corrections.
+
+αi\alpha_i
+
+This is the state effect.
+
+It asks:
+
+How much does a state's average differ from the grand mean?
+
+Example:
+
+State	MeanAmerican Samoa	20
+Tennessee	55
+California	105
+
+Grand mean = 60
+
+Then:
+
+State	EffectAS	-40
+TN	-5
+CA	+45
+
+For Tennessee:
+
+αTN=−5\alpha_{TN} = -5
+
+Thus:
+
+60+(−5)=5560 + (-5)=55
+
+which is Tennessee's overall average.
+
+βj\beta_j
+
+This is the category effect.
+
+Maybe some crimes are naturally more common.
+
+Category	MeanPhishing	120
+Malware	50
+Ransomware	10
+
+If grand mean = 60:
+
+Category	EffectPhishing	+60
+Malware	-10
+Ransomware	-50
+
+Thus phishing observations receive a positive adjustment.
+
+(αβ)ij(\alpha\beta)_{ij}
+
+This is the interaction.
+
+This is the part everyone struggles with at first.
+
+The interaction asks:
+
+Does the effect of state depend on which cybercrime category we're examining?
+
+Suppose:
+
+Category	AS	TN	CAPhishing	10	60	100
+Malware	10	15	100
+
+For Phishing, Tennessee sits near the middle.
+
+For Malware, Tennessee sits much closer to American Samoa.
+
+The Tennessee effect changes depending on category.
+
+That changing relationship is the interaction.
+
+If the interaction is significant, it means:
+
+Tennessee is not equally "between" AS and CA across all crime categories.
+
+Some categories may be much closer to one bound than the other.
+
+ϵijk\epsilon_{ijk}
+
+This is the residual error.
+
+Even after accounting for:
+
+state,
+category,
+interaction,
+
+there is still unexplained variation.
+
+For example:
+
+Predicted value = 80
+
+Observed value = 87
+
+Residual:
+
+ϵ=87−80=7\epsilon = 87 - 80 = 7
+
+ANOVA assumes these residuals are mostly random noise.
+
+Putting It Together
+
+Suppose:
+
+Grand mean = 60
+Tennessee effect = -5
+Phishing effect = +30
+Tennessee×Phishing interaction = +10
+
+Prediction:
+
+Y=60+(−5)+30+10=95Y = 60 + (-5) + 30 + 10 = 95
+
+If the observed count was 100, then:
+
+ϵ=5\epsilon=5
+
+and the model becomes:
+
+100=60−5+30+10+5100=60-5+30+10+5
+
+Everything adds up.
+
+What ANOVA Actually Tests
+
+The ANOVA table essentially asks:
+
+Is the state effect large enough that the states truly differ?
+Is the category effect large enough that crime types truly differ?
+Is the interaction effect large enough that the state differences change across categories?
+
+For your thesis, the interaction may be the most interesting result because it tells you whether Tennessee's position between the lower and upper jurisdictions is consistent across all 11 cybercrime categories or varies by crime type.
+
+At that point, the ANOVA is no longer the destination. It's the bridge between your descriptive statistics and your substantive conclusion.
+
+A thesis chapter might flow like this:
+
+1. Research Question
+
+Does Tennessee exhibit cybercrime incidence rates that are intermediate between the lower-bound jurisdiction (American Samoa) and upper-bound jurisdiction (California) across eleven cybercrime categories?
+
+2. Descriptive Statistics
+
+You have already done this.
+
+Table example:
+
+Category	AS Mean	TN Mean	CA MeanPhishing	12	48	210
+Malware	20	35	140
+...	...	...	...
+
+Then confidence intervals.
+
+This establishes the basic pattern.
+
+3. ANOVA
+
+The purpose here is not to prove Tennessee is between the other two states.
+
+Instead it establishes that:
+
+states differ significantly,
+categories differ significantly,
+the degree of difference may vary by category.
+
+Example write-up:
+
+A two-factor ANOVA was conducted with jurisdiction and cybercrime category as factors. Results indicated a statistically significant main effect of jurisdiction, suggesting that cybercrime incidence differed among American Samoa, Tennessee, and California. A significant category effect was also observed, indicating differing incidence rates across cybercrime types. The jurisdiction-by-category interaction was significant, suggesting that the magnitude of jurisdictional differences varied by category.
+
+Notice that nowhere yet have we discussed Tennessee being "between."
+
+The ANOVA simply shows there is a real structure in the data.
+
+4. Planned Contrasts
+
+Now you test your actual hypothesis.
+
+For each category:
+
+Contrast A
+μTN>μAS\mu_{TN} > \mu_{AS}
+Contrast B
+μTN<μCA\mu_{TN} < \mu_{CA}
+
+Result table:
+
+Category	TN > AS	TN < CAPhishing	Yes	Yes
+Malware	Yes	Yes
+Identity Theft	Yes	Yes
+Category 10	Yes	No
+
+Now the reader sees exactly where Tennessee falls.
+
+5. Visual Presentation
+
+This is often the strongest evidence.
+
+For each category:
+
+AS ------- TN ------------ CA
+
+
+or
+
+Mean Incidence
+|
+|                    CA
+|               ●
+|
+|          TN
+|      ●
+|
+| AS
+|●
++----------------------
+
+
+with confidence intervals.
+
+A committee can understand that in seconds.
+
+6. Discussion
+
+This is where the actual argument appears.
+
+You might write something like:
+
+Across the eleven cybercrime categories examined, Tennessee exhibited incidence rates that were generally intermediate between those of American Samoa and California. Significant jurisdictional effects identified through ANOVA indicated that meaningful differences existed among the three jurisdictions. Subsequent planned contrasts demonstrated that Tennessee was significantly higher than American Samoa and significantly lower than California in nine of the eleven categories examined. These findings support the proposition that Tennessee occupies a middle position within the range established by the selected lower- and upper-bound jurisdictions.
+
+Notice how the ANOVA becomes supporting evidence rather than the main result.
+
+What a committee member will ask
+
+They are very likely to ask:
+
+Why American Samoa and California?
+
+That is actually the most important methodological question in your study.
+
+You will need a justification such as:
+
+lowest and highest observed incidences,
+smallest and largest populations,
+theoretically selected boundary cases,
+representative low- and high-incidence jurisdictions.
+
+If you can justify the endpoints, then the rest of the analysis becomes much stronger.
+
+In fact, for your thesis, I suspect the strongest chapter would be:
+
+Descriptives → ANOVA → Planned Contrasts → Position Index (TN−AS)/(CA−AS)(TN-AS)/(CA-AS) → Discussion.
+
+That would give both statistical rigor and an intuitive measure of where Tennessee falls between your lower and upper bounds.
