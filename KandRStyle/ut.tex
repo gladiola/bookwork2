@@ -3388,26 +3388,52 @@ These supporting tables summarize the adjusted per-capita count and dollar-impac
 
 \subsection{Adjusted Per-Capita Count}
 
+\noindent\textit{Note.} The count comparison tables have been split for readability. Table~\ref{tab:anova-count-means} shows the mean values, while Table~\ref{tab:anova-count-outcomes} shows the hypothesis test outcomes.
+
 \begin{table}[H]
   \centering
-  \caption{Adjusted per-capita count comparison by category.}
-  \label{tab:anova-count-comparison}
+  \caption{Adjusted per-capita count: Mean values by category.}
+  \label{tab:anova-count-means}
   \small
-  \begin{tabular}{@{}p{0.32\linewidth}rrrccc@{}}
+  \begin{tabular}{@{}p{0.45\linewidth}rrr@{}}
     \toprule
-    Category & AS mean & TN mean & CA mean & TN > AS & TN < CA & TN between?\\
+    Category & AS mean & TN mean & CA mean\\
     \midrule
-    Data Breach & 0.43 & 0.43 & 1.00 & No & Yes & No\\
-    Personal Data Breach & 5.29 & 14.71 & 25.71 & Yes & Yes & Yes\\
-    Malware & 0.86 & 0.43 & 0.57 & No & Yes & No\\
-    Phishing & 2.57 & 8.43 & 12.00 & Yes & Yes & Yes\\
-    Ransomware & 0.00 & 0.29 & 1.00 & Yes & Yes & Yes\\
-    Crimes Against Children & 1.57 & 0.29 & 0.43 & No & Yes & No\\
-    Extortion & 4.71 & 14.86 & 22.57 & Yes & Yes & Yes\\
-    Threats/\slash Stalking/\slash Harassment/\slash Terrorism & 7.29 & 5.00 & 9.17 & No & Yes & No\\
-    IPR/Counterfeit & 0.43 & 0.71 & 1.29 & Yes & Yes & Yes\\
-    Identity Theft & 1.86 & 9.86 & 11.86 & Yes & Yes & Yes\\
-    BEC & 4.00 & 6.71 & 12.86 & Yes & Yes & Yes\\
+    Data Breach & 0.43 & 0.43 & 1.00\\
+    Personal Data Breach & 5.29 & 14.71 & 25.71\\
+    Malware & 0.86 & 0.43 & 0.57\\
+    Phishing & 2.57 & 8.43 & 12.00\\
+    Ransomware & 0.00 & 0.29 & 1.00\\
+    Crimes Against Children & 1.57 & 0.29 & 0.43\\
+    Extortion & 4.71 & 14.86 & 22.57\\
+    Threats/\slash Stalking/\slash Harassment/\slash Terrorism & 7.29 & 5.00 & 9.17\\
+    IPR/Counterfeit & 0.43 & 0.71 & 1.29\\
+    Identity Theft & 1.86 & 9.86 & 11.86\\
+    BEC & 4.00 & 6.71 & 12.86\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Adjusted per-capita count: Hypothesis test outcomes at $\alpha = 0.05$.}
+  \label{tab:anova-count-outcomes}
+  \small
+  \begin{tabular}{@{}p{0.45\linewidth}ccc@{}}
+    \toprule
+    Category & TN > AS & TN < CA & TN between?\\
+    \midrule
+    Data Breach & No & Yes & No\\
+    Personal Data Breach & Yes & Yes & Yes\\
+    Malware & No & Yes & No\\
+    Phishing & Yes & Yes & Yes\\
+    Ransomware & Yes & Yes & Yes\\
+    Crimes Against Children & No & Yes & No\\
+    Extortion & Yes & Yes & Yes\\
+    Threats/\slash Stalking/\slash Harassment/\slash Terrorism & No & Yes & No\\
+    IPR/Counterfeit & Yes & Yes & Yes\\
+    Identity Theft & Yes & Yes & Yes\\
+    BEC & Yes & Yes & Yes\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -3436,26 +3462,52 @@ Across the eleven categories, Tennessee exceeded American Samoa in 7 categories,
 
 \subsection{Adjusted Per-Capita Dollar Impact}
 
+\noindent\textit{Note.} The dollar-impact comparison tables have been split for readability. Table~\ref{tab:anova-impact-means} shows the mean values, while Table~\ref{tab:anova-impact-outcomes} shows the hypothesis test outcomes.
+
 \begin{table}[H]
   \centering
-  \caption{Adjusted per-capita dollar-impact comparison by category.}
-  \label{tab:anova-impact-comparison}
+  \caption{Adjusted per-capita dollar-impact: Mean values by category.}
+  \label{tab:anova-impact-means}
   \small
-  \begin{tabular}{@{}p{0.32\linewidth}rrrccc@{}}
+  \begin{tabular}{@{}p{0.45\linewidth}rrr@{}}
     \toprule
-    Category & AS mean & TN mean & CA mean & TN > AS & TN < CA & TN between?\\
+    Category & AS mean & TN mean & CA mean\\
     \midrule
-    Data Breach & \$166{,}889.57 & \$7{,}806.88 & \$44{,}615.39 & No & Yes & No\\
-    Personal Data Breach & \$270.50 & \$68{,}479.48 & \$212{,}708.42 & Yes & Yes & Yes\\
-    Malware & \$0.00 & \$84.40 & \$1{,}012.86 & Yes & Yes & Yes\\
-    Phishing & \$0.00 & \$15{,}994.21 & \$46{,}694.72 & Yes & Yes & Yes\\
-    Ransomware & \$0.00 & \$655.60 & \$6{,}761.39 & Yes & Yes & Yes\\
-    Crimes Against Children & \$0.00 & \$7.09 & \$204.40 & Yes & Yes & Yes\\
-    Extortion & \$300.00 & \$6{,}123.76 & \$43{,}994.25 & Yes & Yes & Yes\\
-    Threats/\slash Stalking/\slash Harassment/\slash Terrorism & \$0.00 & \$2{,}556.83 & \$7{,}954.95 & Yes & Yes & Yes\\
-    IPR/Counterfeit & \$0.00 & \$2{,}705.62 & \$5{,}199.29 & Yes & Yes & Yes\\
-    Identity Theft & \$300.00 & \$35{,}149.68 & \$118{,}823.21 & Yes & Yes & Yes\\
-    BEC & \$13{,}851.43 & \$492{,}040.82 & \$784{,}560.85 & Yes & Yes & Yes\\
+    Data Breach & \$166{,}889.57 & \$7{,}806.88 & \$44{,}615.39\\
+    Personal Data Breach & \$270.50 & \$68{,}479.48 & \$212{,}708.42\\
+    Malware & \$0.00 & \$84.40 & \$1{,}012.86\\
+    Phishing & \$0.00 & \$15{,}994.21 & \$46{,}694.72\\
+    Ransomware & \$0.00 & \$655.60 & \$6{,}761.39\\
+    Crimes Against Children & \$0.00 & \$7.09 & \$204.40\\
+    Extortion & \$300.00 & \$6{,}123.76 & \$43{,}994.25\\
+    Threats/\slash Stalking/\slash Harassment/\slash Terrorism & \$0.00 & \$2{,}556.83 & \$7{,}954.95\\
+    IPR/Counterfeit & \$0.00 & \$2{,}705.62 & \$5{,}199.29\\
+    Identity Theft & \$300.00 & \$35{,}149.68 & \$118{,}823.21\\
+    BEC & \$13{,}851.43 & \$492{,}040.82 & \$784{,}560.85\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Adjusted per-capita dollar-impact: Hypothesis test outcomes at $\alpha = 0.05$.}
+  \label{tab:anova-impact-outcomes}
+  \small
+  \begin{tabular}{@{}p{0.45\linewidth}ccc@{}}
+    \toprule
+    Category & TN > AS & TN < CA & TN between?\\
+    \midrule
+    Data Breach & No & Yes & No\\
+    Personal Data Breach & Yes & Yes & Yes\\
+    Malware & Yes & Yes & Yes\\
+    Phishing & Yes & Yes & Yes\\
+    Ransomware & Yes & Yes & Yes\\
+    Crimes Against Children & Yes & Yes & Yes\\
+    Extortion & Yes & Yes & Yes\\
+    Threats/\slash Stalking/\slash Harassment/\slash Terrorism & Yes & Yes & Yes\\
+    IPR/Counterfeit & Yes & Yes & Yes\\
+    Identity Theft & Yes & Yes & Yes\\
+    BEC & Yes & Yes & Yes\\
     \bottomrule
   \end{tabular}
 \end{table}
