@@ -13,29 +13,44 @@ This section summarizes the conditional workflow:
 
 \begin{table}[H]
   \centering
-  \caption{Conditional screen on adjusted per-capita count means ($AS<TN$).}
-  \label{tab:conditional-screen-count}
+  \caption{Categories passing conditional screen ($AS<TN$).}
+  \label{tab:conditional-screen-included}
   \small
-  \begin{tabular}{@{}p{0.33\linewidth}rrrccc@{}}
+  \begin{tabular}{@{}lrrrcc@{}}
     \toprule
-    Category & AS mean & TN mean & CA mean & $AS<TN$ & $TN<CA$ & Included?\\
+    Category & AS mean & TN mean & CA mean & $AS<TN$ & $TN<CA$\\
     \midrule
-    Personal Data Breach & 5.29 & 14.71 & 25.71 & Yes & Yes & Yes\\
-    Phishing & 2.57 & 8.43 & 12.00 & Yes & Yes & Yes\\
-    Ransomware & 0.00 & 0.29 & 1.00 & Yes & Yes & Yes\\
-    Extortion & 4.71 & 14.86 & 22.57 & Yes & Yes & Yes\\
-    IPR/Counterfeit & 0.43 & 0.71 & 1.29 & Yes & Yes & Yes\\
-    Identity Theft & 1.86 & 9.86 & 11.86 & Yes & Yes & Yes\\
-    BEC & 4.00 & 6.71 & 12.86 & Yes & Yes & Yes\\
-    Data Breach & 0.43 & 0.43 & 1.00 & No & Yes & No\\
-    Malware & 0.86 & 0.43 & 0.57 & No & Yes & No\\
-    Crimes Against Children & 1.57 & 0.29 & 0.43 & No & Yes & No\\
-    Threats/Stalking/Harassment/Terrorism & 7.29 & 5.00 & 9.17 & No & Yes & No\\
+    Personal Data Breach & 5.29 & 14.71 & 25.71 & Yes & Yes\\
+    Phishing & 2.57 & 8.43 & 12.00 & Yes & Yes\\
+    Ransomware & 0.00 & 0.29 & 1.00 & Yes & Yes\\
+    Extortion & 4.71 & 14.86 & 22.57 & Yes & Yes\\
+    IPR/Counterfeit & 0.43 & 0.71 & 1.29 & Yes & Yes\\
+    Identity Theft & 1.86 & 9.86 & 11.86 & Yes & Yes\\
+    BEC & 4.00 & 6.71 & 12.86 & Yes & Yes\\
     \bottomrule
   \end{tabular}
 \end{table}
 
-\noindent\textit{Note.} Inclusion in the conditional set is based on $AS<TN$ only. The $TN<CA$ column is shown as a diagnostic and is not used as the inclusion criterion.
+\noindent\textit{Note.} These 7 categories pass the $AS<TN$ screen and are included in the conditional analysis.
+
+\begin{table}[H]
+  \centering
+  \caption{Categories failing conditional screen ($AS \geq TN$).}
+  \label{tab:conditional-screen-excluded}
+  \small
+  \begin{tabular}{@{}lrrrcc@{}}
+    \toprule
+    Category & AS mean & TN mean & CA mean & $AS<TN$ & $TN<CA$\\
+    \midrule
+    Data Breach & 0.43 & 0.43 & 1.00 & No & Yes\\
+    Malware & 0.86 & 0.43 & 0.57 & No & Yes\\
+    Crimes Against Children & 1.57 & 0.29 & 0.43 & No & Yes\\
+    Threats/Stalking/Harassment/Terrorism & 7.29 & 5.00 & 9.17 & No & Yes\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\noindent\textit{Note.} These 4 categories fail the $AS<TN$ screen and are excluded from the conditional analysis. The $TN<CA$ column is shown as a diagnostic and is not used as the inclusion criterion.
 
 \subsection{Conditional ANOVA summaries}
 
