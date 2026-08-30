@@ -1,0 +1,109 @@
+% Generated from ComputerCrime_AUG2026_Impact_Final_With_C5C7_IFERROR_CHARTS_FIXED_UPDATED.xlsx
+
+\section{ANOVA Support Tables}
+
+These supporting tables summarize the adjusted per-capita count and dollar-impact comparisons across the eleven cybercrime categories studied. American Samoa is the lower-bound jurisdiction, Tennessee is the study jurisdiction, and California is the upper-bound jurisdiction.
+
+
+
+\subsection{Adjusted Per-Capita Count}
+
+\begin{table}[H]
+  \centering
+  \caption{Adjusted per-capita count comparison by category.}
+  \label{tab:anova-count-comparison}
+  \small
+  \begin{tabular}{@{}p{0.26\linewidth}rrrrcc@{}}
+    \toprule
+    Category & AS mean & TN mean & CA mean & Lower & Upper & TN between?\\
+    \midrule
+    Data Breach & 0.43 & 0.43 & 1.00 & 0.00 & 1.00 & No\\
+    Personal Data Breach & 5.29 & 14.71 & 25.71 & 6.00 & 29.00 & Yes\\
+    Malware & 0.86 & 0.43 & 0.57 & 0.00 & 1.00 & No\\
+    Phishing & 2.57 & 8.43 & 12.00 & 3.00 & 12.00 & Yes\\
+    Ransomware & 0.00 & 0.29 & 1.00 & 0.00 & 1.00 & Yes\\
+    Crimes Against Children & 1.57 & 0.29 & 0.43 & 0.00 & 0.00 & No\\
+    Extortion & 4.71 & 14.86 & 22.57 & 6.00 & 22.00 & Yes\\
+    Threats/Stalking/Harassment/Terrorism & 7.29 & 5.00 & 9.17 & 7.00 & 10.50 & No\\
+    IPR/Counterfeit & 0.43 & 0.71 & 1.29 & 0.00 & 1.00 & Yes\\
+    Identify Theft & 1.86 & 9.86 & 11.86 & 0.00 & 11.00 & Yes\\
+    BEC & 4.00 & 6.71 & 12.86 & 0.00 & 13.00 & Yes\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{One-way ANOVA summary for adjusted per-capita count means.}
+  \label{tab:anova-count-summary}
+  \begin{tabular}{@{}lr@{}}
+    \toprule
+    Statistic & Value\\
+    \midrule
+    Mean(AS) & 2.64\\
+    Mean(TN) & 5.61\\
+    Mean(CA) & 8.95\\
+    Grand mean & 5.73\\
+    SSB & 219.50\\
+    SSW & 1{,}214.37\\
+    F(2,30) & 2.71\\
+    p-value & 0.08\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Across the eleven categories, Tennessee exceeded American Samoa in 7 categories and remained below California in 11 categories. The count ANOVA yielded $F(2,30)=2.71$ with $p=0.08$. Count lower and upper columns reproduce the workbook's Uniform(\#) simulation bounds.
+
+
+
+\subsection{Adjusted Per-Capita Dollar Impact}
+
+\begin{table}[H]
+  \centering
+  \caption{Adjusted per-capita dollar-impact comparison by category.}
+  \label{tab:anova-impact-comparison}
+  \small
+  \begin{tabular}{@{}p{0.26\linewidth}rrrrcc@{}}
+    \toprule
+    Category & AS mean & TN mean & CA mean & Lower & Upper & TN between?\\
+    \midrule
+    Data Breach & \$166{,}889.57 & \$7{,}806.88 & \$44{,}615.39 & \$0.00 & \$33{,}527.27 & No\\
+    Personal Data Breach & \$270.50 & \$68{,}479.48 & \$212{,}708.42 & \$270.50 & \$212{,}708.42 & Yes\\
+    Malware & \$0.00 & \$84.40 & \$1{,}012.86 & \$0.00 & \$649.99 & Yes\\
+    Phishing & \$0.00 & \$15{,}994.21 & \$46{,}694.72 & \$0.00 & \$48{,}402.63 & Yes\\
+    Ransomware & \$0.00 & \$655.60 & \$6{,}761.39 & \$0.00 & \$3{,}479.36 & Yes\\
+    Crimes Against Children & \$0.00 & \$7.09 & \$204.40 & \$0.00 & \$0.00 & Yes\\
+    Extortion & \$300.00 & \$6{,}123.76 & \$43{,}994.25 & \$0.00 & \$51{,}288.72 & Yes\\
+    Threats/Stalking/Harassment/Terrorism & \$0.00 & \$2{,}556.83 & \$7{,}954.95 & \$0.00 & \$7{,}112.85 & Yes\\
+    IPR/Counterfeit & \$0.00 & \$2{,}705.62 & \$5{,}199.29 & \$0.00 & \$5{,}082.02 & Yes\\
+    Identify Theft & \$300.00 & \$35{,}149.68 & \$118{,}823.21 & \$0.00 & \$110{,}534.07 & Yes\\
+    BEC & \$13{,}851.43 & \$492{,}040.82 & \$784{,}560.85 & \$0.00 & \$481{,}055.46 & Yes\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{One-way ANOVA summary for adjusted per-capita dollar-impact means.}
+  \label{tab:anova-impact-summary}
+  \begin{tabular}{@{}lr@{}}
+    \toprule
+    Statistic & Value\\
+    \midrule
+    Mean(AS) & \$16{,}510.14\\
+    Mean(TN) & \$57{,}418.58\\
+    Mean(CA) & \$115{,}684.52\\
+    Grand mean & \$63{,}204.41\\
+    SSB & 54{,}647{,}924{,}994.67\\
+    SSW & 771{,}108{,}736{,}128.26\\
+    F(2,30) & 1.06\\
+    p-value & 0.36\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Across the eleven categories, Tennessee exceeded American Samoa in 10 categories and remained below California in 11 categories. The impact ANOVA yielded $F(2,30)=1.06$ with $p=0.36$. Impact lower and upper columns reproduce the workbook's Uniform(\$) simulation bounds; spreadsheet error cells on the impact summary sheets were treated as zero-valued annual observations for averaging.
+
+
+
+\noindent\textit{Note.} The American Samoa data-breach impact row contains a non-zero outlier (\$1{,}168{,}227 in 2020) in the workbook, so Tennessee is not intermediate for that impact category.
