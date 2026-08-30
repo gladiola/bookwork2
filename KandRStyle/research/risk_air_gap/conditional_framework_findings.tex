@@ -1,0 +1,100 @@
+% Conditional framework summary based on AS<TN screening in count data
+
+\section{Conditional Framework Findings (AS<TN Screen)}
+
+This section summarizes the conditional workflow:
+\begin{enumerate}
+  \item Screen categories using adjusted per-capita count means with the condition $AS<TN$.
+  \item Keep only categories that pass that count screen.
+  \item Re-evaluate count and impact ANOVA using the retained categories.
+\end{enumerate}
+
+\subsection{Category-level conditional screen results}
+
+\begin{table}[H]
+  \centering
+  \caption{Conditional screen on adjusted per-capita count means ($AS<TN$).}
+  \label{tab:conditional-screen-count}
+  \small
+  \begin{tabular}{@{}p{0.33\linewidth}rrrccc@{}}
+    \toprule
+    Category & AS mean & TN mean & CA mean & $AS<TN$ & $TN<CA$ & Included?\\
+    \midrule
+    Personal Data Breach & 5.29 & 14.71 & 25.71 & Yes & Yes & Yes\\
+    Phishing & 2.57 & 8.43 & 12.00 & Yes & Yes & Yes\\
+    Ransomware & 0.00 & 0.29 & 1.00 & Yes & Yes & Yes\\
+    Extortion & 4.71 & 14.86 & 22.57 & Yes & Yes & Yes\\
+    IPR/Counterfeit & 0.43 & 0.71 & 1.29 & Yes & Yes & Yes\\
+    Identity Theft & 1.86 & 9.86 & 11.86 & Yes & Yes & Yes\\
+    BEC & 4.00 & 6.71 & 12.86 & Yes & Yes & Yes\\
+    Data Breach & 0.43 & 0.43 & 1.00 & No & Yes & No\\
+    Malware & 0.86 & 0.43 & 0.57 & No & Yes & No\\
+    Crimes Against Children & 1.57 & 0.29 & 0.43 & No & Yes & No\\
+    Threats/Stalking/Harassment/Terrorism & 7.29 & 5.00 & 9.17 & No & Yes & No\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Conditional ANOVA summaries}
+
+\begin{table}[H]
+  \centering
+  \caption{One-way ANOVA summary for adjusted per-capita count means (retained categories only, $n=7$ per state).}
+  \label{tab:conditional-count-summary}
+  \begin{tabular}{@{}lr@{}}
+    \toprule
+    Statistic & Value\\
+    \midrule
+    Mean(AS) & 2.69\\
+    Mean(TN) & 7.94\\
+    Mean(CA) & 12.47\\
+    Grand mean & 7.70\\
+    SSB & 335.07\\
+    SSW & 770.16\\
+    F(2,18) & 3.92\\
+    p-value & 0.0387\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{One-way ANOVA summary for adjusted per-capita dollar-impact means using the same retained count categories ($n=7$ per state).}
+  \label{tab:conditional-impact-summary}
+  \begin{tabular}{@{}lr@{}}
+    \toprule
+    Statistic & Value\\
+    \midrule
+    Mean(AS) & \$2{,}103.13\\
+    Mean(TN) & \$88{,}735.60\\
+    Mean(CA) & \$174{,}106.02\\
+    Grand mean & \$88{,}314.92\\
+    SSB & 103{,}549{,}332{,}631.60\\
+    SSW & 660{,}271{,}139{,}120.60\\
+    F(2,18) & 1.41\\
+    p-value & 0.2695\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Pass/fail table by p-value threshold}
+
+\begin{table}[H]
+  \centering
+  \caption{Hypothesis test outcomes at $\alpha=0.05$.}
+  \label{tab:conditional-pass-fail}
+  \small
+  \begin{tabular}{@{}p{0.43\linewidth}lccp{0.23\linewidth}@{}}
+    \toprule
+    Analysis & Data scope & p-value & Pass/fail & Interpretation\\
+    \midrule
+    Count ANOVA & Full set (11 categories) & 0.08 & Fail & Not strong enough for full-framework inference\\
+    Impact ANOVA & Full set (11 categories) & 0.36 & Fail & Not strong enough for full-framework inference\\
+    Count ANOVA & Conditional retained set (7 categories) & 0.0387 & Pass & Supports conditional count framework in retained categories\\
+    Impact ANOVA & Conditional retained set (same 7 categories) & 0.2695 & Fail & Does not support conditional impact framework\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\noindent\textbf{Conditional conclusion.}
+Under the rule ``if a category fails the count screen, exclude it from impact,'' count shows statistical support in the retained subset, but impact still fails to reach significance.
