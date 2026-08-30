@@ -168,25 +168,37 @@ make_emm_plot <- function(emm_table, output_file) {
   plot_data <- emm_table %>%
     mutate(Category = factor(Category, levels = rev(category_levels)))
 
-  ggplot(plot_data, aes(x = emmean, y = Category, color = State)) +
-    geom_vline(xintercept = 0, linewidth = 0.3, color = "gray70") +
+  ggplot(plot_data, aes(x = emmean, y = Category, shape = State, linetype = State)) +
+    geom_vline(xintercept = 0, linewidth = 0.5, color = "gray40") +
     geom_errorbarh(
       aes(xmin = lower.CL, xmax = upper.CL),
-      height = 0.2,
-      position = position_dodge(width = 0.65)
+      height = 0.25,
+      position = position_dodge(width = 0.65),
+      linewidth = 0.8
     ) +
-    geom_point(position = position_dodge(width = 0.65), size = 2.2) +
-    scale_color_manual(values = c(AS = "#1b9e77", TN = "#d95f02", CA = "#7570b3")) +
+    geom_point(position = position_dodge(width = 0.65), size = 3.5, fill = "white", stroke = 1.2) +
+    scale_shape_manual(values = c(AS = 21, TN = 22, CA = 24)) +
+    scale_linetype_manual(values = c(AS = "solid", TN = "dashed", CA = "dotted")) +
     labs(
       title = "Estimated marginal means with 95% confidence intervals",
       x = "Adjusted per-capita rate",
       y = NULL,
-      color = "State"
+      shape = "State",
+      linetype = "State"
     ) +
-    theme_minimal(base_size = 11) +
-    theme(legend.position = "top")
+    theme_minimal(base_size = 16) +
+    theme(
+      legend.position = "top",
+      panel.grid.major = element_line(color = "gray80", linewidth = 0.3),
+      panel.grid.minor = element_blank(),
+      axis.text = element_text(color = "black"),
+      axis.title = element_text(color = "black"),
+      plot.title = element_text(color = "black", hjust = 0.5),
+      legend.text = element_text(size = 15),
+      legend.title = element_text(size = 16)
+    )
 
-  ggsave(output_file, width = 11, height = 8.5, dpi = 300)
+  ggsave(output_file, width = 10, height = 12, dpi = 300)
 }
 
 make_contrast_plot <- function(contrast_table, output_file) {
@@ -196,25 +208,37 @@ make_contrast_plot <- function(contrast_table, output_file) {
       contrast = factor(contrast, levels = c("TN vs AS", "TN vs CA"))
     )
 
-  ggplot(plot_data, aes(x = estimate, y = Category, color = contrast)) +
-    geom_vline(xintercept = 0, linewidth = 0.3, color = "gray70") +
+  ggplot(plot_data, aes(x = estimate, y = Category, shape = contrast, linetype = contrast)) +
+    geom_vline(xintercept = 0, linewidth = 0.5, color = "gray40") +
     geom_errorbarh(
       aes(xmin = lower.CL, xmax = upper.CL),
-      height = 0.2,
-      position = position_dodge(width = 0.65)
+      height = 0.25,
+      position = position_dodge(width = 0.65),
+      linewidth = 0.8
     ) +
-    geom_point(position = position_dodge(width = 0.65), size = 2.2) +
-    scale_color_manual(values = c("TN vs AS" = "#d95f02", "TN vs CA" = "#1b9e77")) +
+    geom_point(position = position_dodge(width = 0.65), size = 3.5, fill = "white", stroke = 1.2) +
+    scale_shape_manual(values = c("TN vs AS" = 22, "TN vs CA" = 24)) +
+    scale_linetype_manual(values = c("TN vs AS" = "dashed", "TN vs CA" = "dotted")) +
     labs(
       title = "Planned contrasts with 95% confidence intervals",
       x = "Contrast estimate",
       y = NULL,
-      color = "Contrast"
+      shape = "Contrast",
+      linetype = "Contrast"
     ) +
-    theme_minimal(base_size = 11) +
-    theme(legend.position = "top")
+    theme_minimal(base_size = 16) +
+    theme(
+      legend.position = "top",
+      panel.grid.major = element_line(color = "gray80", linewidth = 0.3),
+      panel.grid.minor = element_blank(),
+      axis.text = element_text(color = "black"),
+      axis.title = element_text(color = "black"),
+      plot.title = element_text(color = "black", hjust = 0.5),
+      legend.text = element_text(size = 15),
+      legend.title = element_text(size = 16)
+    )
 
-  ggsave(output_file, width = 11, height = 8.5, dpi = 300)
+  ggsave(output_file, width = 10, height = 12, dpi = 300)
 }
 
 latex_table <- function(df, align, caption, label, digits_map = list(), pvalue_columns = character()) {
