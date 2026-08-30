@@ -83,20 +83,37 @@ This section summarizes the conditional workflow:
 
 \begin{table}[H]
   \centering
-  \caption{Hypothesis test outcomes at $\alpha=0.05$.}
-  \label{tab:conditional-pass-fail}
+  \caption{Hypothesis test outcomes for full set at $\alpha=0.05$.}
+  \label{tab:conditional-pass-fail-full}
   \small
-  \begin{tabular}{@{}p{0.43\linewidth}lccp{0.23\linewidth}@{}}
+  \begin{tabular}{@{}lccl@{}}
     \toprule
-    Analysis & Data scope & p-value & Pass/fail & Interpretation\\
+    Analysis & p-value & Pass/fail & Interpretation\\
     \midrule
-    Count ANOVA & Full set (11 categories) & 0.08 & Fail & Not strong enough for full-framework inference\\
-    Impact ANOVA & Full set (11 categories) & 0.36 & Fail & Not strong enough for full-framework inference\\
-    Count ANOVA & Conditional retained set (7 categories) & 0.0387 & Pass & Supports conditional count framework in retained categories\\
-    Impact ANOVA & Conditional retained set (same 7 categories) & 0.2695 & Fail & Does not support conditional impact framework\\
+    Count ANOVA & 0.08 & Fail & Not strong enough for full-framework inference\\
+    Impact ANOVA & 0.36 & Fail & Not strong enough for full-framework inference\\
     \bottomrule
   \end{tabular}
 \end{table}
+
+\noindent\textit{Note.} Full set includes all 11 categories.
+
+\begin{table}[H]
+  \centering
+  \caption{Hypothesis test outcomes for conditional retained set at $\alpha=0.05$.}
+  \label{tab:conditional-pass-fail-retained}
+  \small
+  \begin{tabular}{@{}lccl@{}}
+    \toprule
+    Analysis & p-value & Pass/fail & Interpretation\\
+    \midrule
+    Count ANOVA & 0.0387 & Pass & Supports conditional count framework\\
+    Impact ANOVA & 0.2695 & Fail & Does not support conditional impact framework\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\noindent\textit{Note.} Conditional retained set includes only the 7 categories that passed the count screen ($AS<TN$).
 
 \noindent\textbf{Conditional conclusion.}
 Under the rule ``if a category fails the count screen, exclude it from impact,'' count shows statistical support in the retained subset, but impact still fails to reach significance.
