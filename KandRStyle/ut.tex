@@ -3789,16 +3789,32 @@ This section summarizes the conditional workflow:
 \begin{table}[H]
   \centering
   \caption{Hypothesis test outcomes at $\alpha=0.05$.}
-  \label{tab:conditional-pass-fail}
+  \label{tab:conditional-pass-fail1}
   \small
-  \begin{tabular}{@{}p{0.35\linewidth}lccp{0.23\linewidth}@{}}
+  \begin{tabular}{@{}llp{0.15\linewidth}lp{0.15\linewidth}@{}}
     \toprule
-    Analysis & Data scope & p-value & Pass/fail & Interpretation\\
+    Analysis & Data scope & p-value\\
     \midrule
-    Count ANOVA & Full set (11 categories) & 0.08 & Fail & Not strong enough for full-framework inference\\
-    Impact ANOVA & Full set (11 categories) & 0.36 & Fail & Not strong enough for full-framework inference\\
-    Count ANOVA & Conditional retained set (7 categories) & 0.0387 & Pass & Supports conditional count framework in retained categories\\
-    Impact ANOVA & Conditional retained set (same 7 categories) & 0.2695 & Fail & Does not support conditional impact framework\\
+    Count ANOVA & Full set (11 categories) & 0.08 \\
+    Impact ANOVA & Full set (11 categories) & 0.36 \\
+    Count ANOVA & Conditional retained set (7 categories) & 0.0387 \\
+    Impact ANOVA & Conditional retained set (same 7 categories) & 0.2695\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\begin{table}[H]
+  \centering
+  \caption{Hypothesis test outcomes at $\alpha=0.05$.}
+  \label{tab:conditional-pass-fail2}
+  \small
+  \begin{tabular}{@{}lp{0.10\linewidth}cp{0.10\linewidth}cp{0.65\linewidth}@{}}
+    \toprule
+    Analysis &  Pass/fail & Interpretation\\
+    \midrule
+    Count ANOVA & Fail & Not strong enough for full-framework inference\\
+    Impact ANOVA & Fail & Not strong enough for full-framework inference\\
+    Count ANOVA & Pass & Supports conditional count framework in retained categories\\
+    Impact ANOVA & Fail & Does not support conditional impact framework\\
     \bottomrule
   \end{tabular}
 \end{table}
