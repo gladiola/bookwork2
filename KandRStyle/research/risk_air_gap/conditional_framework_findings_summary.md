@@ -2,7 +2,7 @@
 
 This summary matches the LaTeX file:
 
-- `/home/runner/work/bookwork2/bookwork2/KandRStyle/research/risk_air_gap/conditional_framework_findings.tex`
+- `KandRStyle/research/risk_air_gap/conditional_framework_findings.tex`
 
 ## Rule applied
 
