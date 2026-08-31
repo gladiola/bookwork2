@@ -99,7 +99,7 @@ HAProxy offers load balancing.  In our case, we were only going to one destinati
 
 
 Remember our login situation?  We chose to use SSH public keys on the server, which was a good idea; but, we wanted to do a little more.  We added on Google Authenticator's time-based one time passwords (TOTP) to the ssh login accounts.  
-FreeBSD ports have a package for this.  It's pam_google_authenticator.  Thanks to scant and incomplete documentation, setting up Google Authenticator on FreeBSD was a real bear.  When editing the sshd_config, we have to choose carefully which password options we want to keep and which we want to comment out.  On one hand, we're using ssh public key.  On the other, if we turn off all of the password functions, TOTP won't work.  
+FreeBSD ports have a package for this.  It's pam\_google\_authenticator.  Thanks to scant and incomplete documentation, setting up Google Authenticator on FreeBSD was a real bear.  When editing the sshd\_config, we have to choose carefully which password options we want to keep and which we want to comment out.  On one hand, we're using ssh public key.  On the other, if we turn off all of the password functions, TOTP won't work.  
 
 When misconfigured, we can end up in a few different situations:
  - We never get a prompt for a verification code
@@ -158,10 +158,10 @@ You will need to uncomment an entry in one file to get the mail:
 
 Which holds the XML element that corresponds to the old rule for:
 <global>
-    <email_notification>yes</email_notification>
-    <email_to>sammy@example.com</email_to>
-    <smtp_server>mail.example.com.</smtp_server>
-    <email_from>sammy@example.com</email_from>
+    <email\_notification>yes</email\_notification>
+    <email\_to>sammy@example.com</email\_to>
+    <smtp\_server>mail.example.com.</smtp\_server>
+    <email\_from>sammy@example.com</email\_from>
 </global>
 
 \section{Adjusting pfSense for Incoming HAProxy Traffic}
@@ -182,6 +182,6 @@ In upcoming drafts, we may discuss:
 \subsection{Annotated Bibliography}
 
 
-\endnote{[1]} _____.  INTERNET:   \texttt{https://blog.andreev.it/?p=4096}\endnote{\url{https://blog.andreev.it/?p=4096}}
+\endnote{[1]} \_\_\_\_\_.  INTERNET:   \texttt{https://blog.andreev.it/?p=4096}\endnote{\url{https://blog.andreev.it/?p=4096}}
 
 \markchapterendnotes
