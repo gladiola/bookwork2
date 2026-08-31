@@ -2218,6 +2218,93 @@ Likelihood
 %%%%%%%%%%%%%%%%%%%%  RANSOMWARE %%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \subsection{Ransomware}\label{sec:ransomware}
+\subsubsection{Lower Bound Computation}
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 0 & \cdots & 0\\
+\$0 &\$0 & \cdots &\$0 
+\end{bmatrix}.
+\]
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & \cdots & 0\\
+\$0 & \cdots &\$0
+\end{bmatrix}.
+\]
+  \[
+\bar{X}_{\text{American Samoa}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{American Samoa},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{American Samoa}}^{(\text{scaled count})}\\
+\bar{X}_{\text{American Samoa}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+\$0
+\end{bmatrix}.
+\]
+\subsubsection{Upper Bound Computation}
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+336 & 222 & \cdots & 296\\
+\$260{,}331 &\$600{,}727  & \cdots &\$1{,}945{,}212 
+\end{bmatrix}.
+\]
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 1 & \cdots & 1\\
+\$775 &\$2{,}706 & \cdots &\$6{,}572 
+\end{bmatrix}.
+\]
+\[
+\bar{X}_{\text{California}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{California},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{California}}^{(\text{scaled count})}\\
+\bar{X}_{\text{California}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+1.06\\
+\$6{,}761
+\end{bmatrix}.
+\]
+\subsubsection{Monte Carlo Simulations for Likelihood and Impact}
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_ransomware.png}}}
