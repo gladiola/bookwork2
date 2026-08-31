@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  31 AUG 2026 18:07
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  31 AUG 2026 18:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1819,10 +1819,306 @@ Overfull \hbox (33.51079pt too wide) in paragraph at lines 102--111
  [][] 
  []
 
-! You can't use `macro parameter character #' in restricted horizontal mode.
-<recently read> ##
-                  
-l.128 Notebook Notation &  & #
-                               &  &  & _ &  & # &  & _ & # & _ &  &  & _ & #...
 
+Overfull \hbox (349.80096pt too wide) in paragraph at lines 124--137
+ [][] 
+ []
+
+
+Underfull \vbox (badness 4328) has occurred while \output is active []
+
+ [66]
+[67]
+Overfull \hbox (27.32544pt too wide) in paragraph at lines 179--180
+\TU/InfoOTDisp(0)/m/it/10 what was in the system, where we could go, and began 
+to provide trickles of implementation-
+ []
+
+
+Overfull \hbox (66.68567pt too wide) in paragraph at lines 192--200
+ [][] 
+ []
+
+
+Overfull \hbox (7.52078pt too wide) in paragraph at lines 205--212
+ [][] 
+ []
+
+[68]
+Overfull \hbox (6.52084pt too wide) in paragraph at lines 217--218
+\TU/InfoOTDisp(0)/m/it/10 scripts. While hunting around in the Apache access lo
+g near \TU/CourierNew(0)/m/n/10 /var/log/apache2\TU/InfoOTDisp(0)/m/it/10 ,
+ []
+
+[69] [70]
+Overfull \hbox (9.07077pt too wide) in paragraph at lines 272--282
+ [][] 
+ []
+
+
+Overfull \hbox (287.4708pt too wide) in paragraph at lines 287--295
+ [][] 
+ []
+
+
+Overfull \hbox (27.60097pt too wide) in paragraph at lines 308--309
+[]\TU/InfoOTDisp(0)/m/it/10 To accomplish all this, we used \TU/CourierNew(0)/m
+/n/10 vi \TU/InfoOTDisp(0)/m/it/10 and the \TU/CourierNew(0)/m/n/10 os-shell \T
+U/InfoOTDisp(0)/m/it/10 provided by the \TU/CourierNew(0)/m/n/10 msfconsole
+ []
+
+[71]
+Overfull \hbox (209.45079pt too wide) in paragraph at lines 323--333
+ [][] 
+ []
+
+
+Overfull \hbox (258.4308pt too wide) in paragraph at lines 338--349
+ [][] 
+ []
+
+[72]
+Overfull \hbox (9.65384pt too wide) in paragraph at lines 362--362
+\TU/InfoOTDisp(0)/m/it/10 One of the websites that mentioned it mentioned to al
+so comment out a \TU/CourierNew(0)/m/n/10 mod_copy.c
+ []
+
+
+Overfull \hbox (188.54077pt too wide) in paragraph at lines 391--400
+ [][] 
+ []
+
+[73] [74]
+Overfull \hbox (226.74261pt too wide) in paragraph at lines 431--433
+[]\TU/InfoOTDisp(0)/m/it/10 [2] INTERNET: \TU/CourierNew(0)/m/n/10 https://nvlp
+ubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf\TU/InfoOTDisp
+(0)/m/it/10 [3]
+ []
+
+
+Overfull \hbox (97.08095pt too wide) in paragraph at lines 434--436
+[]\TU/InfoOTDisp(0)/m/it/10 [4] Pierce, Josiah. \TU/CourierNew(0)/m/n/10 https:
+//www.vulnhub.com/entry/basic-pentesting-1,216/\TU/InfoOTDisp(0)/m/it/10 [5]
+ []
+
+
+Overfull \hbox (170.40439pt too wide) in paragraph at lines 437--439
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://www.rapid7
+.com/db/modules/exploit/unix/ftp/proftpd_133c_backdoor\TU/InfoOTDisp(0)/m/it/10
+ [6]
+ []
+
+
+Overfull \hbox (440.08833pt too wide) in paragraph at lines 440--442
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://unix.stack
+exchange.com/questions/8229/what-methods-are-used-to-encrypt-passwords-in-etc-p
+asswd-and-etc-shadow\TU/InfoOTDisp(0)/m/it/10 [7]
+ []
+
+
+Overfull \hbox (254.53806pt too wide) in paragraph at lines 443--445
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://unix.stack
+exchange.com/questions/252016/difference-between-vs-vs-in-etc-shadow\TU/InfoOTD
+isp(0)/m/it/10 [8]
+ []
+
+
+Overfull \hbox (92.4117pt too wide) in paragraph at lines 446--448
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://www.unix-n
+inja.com/p/Hashcat_Line_Length_Exceptions\TU/InfoOTDisp(0)/m/it/10 [9]
+ []
+
+[75]
+Overfull \hbox (15.82843pt too wide) in paragraph at lines 449--451
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://hashcat.ne
+t/forum/thread-3399.html\TU/InfoOTDisp(0)/m/it/10 [10] Hash-
+ []
+
+
+Overfull \hbox (45.71388pt too wide) in paragraph at lines 452--454
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://hashcat.ne
+t/wiki/doku.php?id=example_hashes\TU/InfoOTDisp(0)/m/it/10 [11]
+ []
+
+
+Overfull \hbox (131.23755pt too wide) in paragraph at lines 455--457
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 http://www.informi
+t.com/articles/article.aspx?p=1161217&seqNum=11\TU/InfoOTDisp(0)/m/it/10 [12]
+ []
+
+
+Overfull \hbox (299.1149pt too wide) in paragraph at lines 458--460
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://www.garron
+.me/en/linux/set-time-date-timezone-ntp-linux-shell-gnome-command-line.html\TU/
+InfoOTDisp(0)/m/it/10 [13]
+ []
+
+
+Overfull \hbox (215.10123pt too wide) in paragraph at lines 461--463
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://www.thegee
+kstuff.com/2012/11/linux-touch-command/?utm_source=feedburner\TU/InfoOTDisp(0)/
+m/it/10 [14]
+ []
+
+
+Overfull \hbox (262.80267pt too wide) in paragraph at lines 464--466
+\TU/InfoOTDisp(0)/m/it/10 Hudson, Andrew and Paul Hudson. INTERNET: \TU/Courier
+New(0)/m/n/10 http://www.informit.com/articles/article.aspx?p=1161217&seqNum=11
+\TU/InfoOTDisp(0)/m/it/10 [15]
+ []
+
+
+Overfull \hbox (2.07213pt too wide) in paragraph at lines 467--469
+\TU/InfoOTDisp(0)/m/it/10 | Use ntp” INTERNET: \TU/CourierNew(0)/m/n/10 https:/
+/www.garron.me/en/linux/\TU/InfoOTDisp(0)/m/it/10 [16] 2012. Set-
+ []
+
+
+Overfull \hbox (266.72456pt too wide) in paragraph at lines 473--475
+\TU/InfoOTDisp(0)/m/it/10 Timestamp).” INTERNET: \TU/CourierNew(0)/m/n/10 https
+://www.thegeekstuff.com/2012/11/linux-touch-command/?utm_source=feedburner\TU/I
+nfoOTDisp(0)/m/it/10 [17]
+ []
+
+[76]
+Overfull \hbox (287.53294pt too wide) in paragraph at lines 476--478
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://askubuntu.
+com/questions/920598/disable-network-time-synchronization-in-ubuntu-16-04\TU/In
+foOTDisp(0)/m/it/10 [18]
+ []
+
+
+Overfull \hbox (239.32513pt too wide) in paragraph at lines 479--481
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://askubuntu.
+com/questions/24006/how-do-i-reset-a-lost-administrative-password\TU/InfoOTDisp
+(0)/m/it/10 [19]
+ []
+
+
+Overfull \hbox (19.049pt too wide) in paragraph at lines 482--484
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 http://www.proftpd
+.org/docs/howto/Upgrade.html\TU/InfoOTDisp(0)/m/it/10 [20]
+ []
+
+
+Overfull \hbox (6.33688pt too wide) in paragraph at lines 485--487
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://www.virtua
+lmin.com/node/43086\TU/InfoOTDisp(0)/m/it/10 [21] Forum post
+ []
+
+
+Overfull \hbox (36.63193pt too wide) in paragraph at lines 488--490
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 http://www.proftpd
+.org/docs/contrib/mod_copy.html\TU/InfoOTDisp(0)/m/it/10 [22]
+ []
+
+
+Overfull \hbox (168.50342pt too wide) in paragraph at lines 491--493
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://www.rapid7
+.com/db/modules/exploit/unix/ftp/proftpd_modcopy_exec\TU/InfoOTDisp(0)/m/it/10 
+[23]
+ []
+
+
+Overfull \hbox (156.60146pt too wide) in paragraph at lines 494--496
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://gist.githu
+b.com/stefansundin/0fd6e9de172041817d0b8a75f1ede677\TU/InfoOTDisp(0)/m/it/10 [2
+4]
+ []
+
+
+Overfull \hbox (132.73755pt too wide) in paragraph at lines 497--499
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://gist.githu
+b.com/techgaun/df66d37379df37838482c4c3470bc48e\TU/InfoOTDisp(0)/m/it/10 [25]
+ []
+
+[77]
+Overfull \hbox (322.73662pt too wide) in paragraph at lines 500--502
+\TU/InfoOTDisp(0)/m/it/10 ”Ubuntu Linux: Start / Stop / Restart / Reload OpenSS
+H Server” INTERNET: \TU/CourierNew(0)/m/n/10 https://www.cyberciti.biz/faq/howt
+o-start-stop-ssh-server/\TU/InfoOTDisp(0)/m/it/10 [26]
+ []
+
+
+Overfull \hbox (318.36783pt too wide) in paragraph at lines 503--505
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://esc.sh/blo
+g/proftp-vulnerability-could-allow-an-attacker-to-gain-a-shell-in-your-server/\
+TU/InfoOTDisp(0)/m/it/10 [27]
+ []
+
+
+Overfull \hbox (267.09187pt too wide) in paragraph at lines 506--508
+\TU/InfoOTDisp(0)/m/it/10 ”Linux: List / Display All Cron Jobs” INTERNET: \TU/C
+ourierNew(0)/m/n/10 https://www.cyberciti.biz/faq/linux-show-what-cron-jobs-are
+-setup/\TU/InfoOTDisp(0)/m/it/10 [28]
+ []
+
+
+Overfull \hbox (570.98885pt too wide) in paragraph at lines 509--511
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://null-byte.
+wonderhowto.com/how-to/create-reverse-shell-remotely-execute-root-commands-over
+-any-open-port-using-netcat-bash-0132658/\TU/InfoOTDisp(0)/m/it/10 [29]
+ []
+
+
+Overfull \hbox (9.75313pt too wide) in paragraph at lines 512--514
+\TU/CourierNew(0)/m/n/10 https://zhaoyu.li/post/auto-reverse-ssh/\TU/InfoOTDisp
+(0)/m/it/10 [30] Example of a brief
+ []
+
+
+Overfull \hbox (338.44148pt too wide) in paragraph at lines 515--517
+\TU/InfoOTDisp(0)/m/it/10 Gargiullo, Michael. ”Fun With SSH Reverse Shells” INT
+ERNET: \TU/CourierNew(0)/m/n/10 https://www.pivotpointsecurity.com/blog/fun-wit
+h-ssh-reverse-shells/\TU/InfoOTDisp(0)/m/it/10 [31]
+ []
+
+
+Overfull \hbox (345.04189pt too wide) in paragraph at lines 518--520
+\TU/InfoOTDisp(0)/m/it/10 ”Linux Start Restart and Stop The Cron or Crond Servi
+ce” INTERNET: \TU/CourierNew(0)/m/n/10 https://www.cyberciti.biz/faq/howto-linu
+x-unix-start-restart-cron/\TU/InfoOTDisp(0)/m/it/10 [32]
+ []
+
+
+Overfull \hbox (120.4456pt too wide) in paragraph at lines 521--523
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://askubuntu.
+com/questions/2368/how-do-i-set-up-a-cron-job\TU/InfoOTDisp(0)/m/it/10 [33]
+ []
+
+
+Overfull \hbox (36.73193pt too wide) in paragraph at lines 524--526
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://ubuntuforu
+ms.org/showthread.php?t=2380028\TU/InfoOTDisp(0)/m/it/10 [34]
+ []
+
+[78]
+Overfull \hbox (228.65318pt too wide) in paragraph at lines 527--529
+\TU/InfoOTDisp(0)/m/it/10 INTERNET: \TU/CourierNew(0)/m/n/10 https://stackoverf
+low.com/questions/36453976/upgrade-openssh-7-2p-in-ubuntu-14-04\TU/InfoOTDisp(0
+)/m/it/10 [35]
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.537 ....com/db/modules/exploit/unix/ftp/proftpd_
+                                                  133c_backdoor
 ? 
+! Emergency stop.
+<inserted text> 
+                $
+l.537 ....com/db/modules/exploit/unix/ftp/proftpd_
+                                                  133c_backdoor
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 25566 strings out of 475846
+ 468884 string characters out of 5781395
+ 1965879 words of memory out of 5000000
+ 46264 multiletter control sequences out of 15000+600000
+ 562613 words of font info for 91 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 91i,13n,117p,5814b,988s stack positions out of 10000i,1000n,20000p,200000b,200000s
+Output written on ut.pdf (92 pages).
