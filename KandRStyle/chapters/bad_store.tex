@@ -359,7 +359,7 @@ An example of attempting to write a file from the attacker box's current directo
 \begin{lstlisting}
 sqlmap -r badStore_postEmail.txt -p email --threads=10 --dbms=mysql -D badstoredb -v 5
 \end{lstlisting}
-An example of using \texttt{sqlmap} to read a POST message and apply its contents to a parameter, using \texttt{-p <PARAMETER_NAME>}.  The POST message was previously intercepted with Burp Suite and then copied to a text file.  That text file was edited to adjust some parameters.  Using these techniques, a POST message can be edited and applied with \texttt{sqlmap} to try to gain access specific to certain user accounts, cookies, etc., based on the design of the site's input validation checks in the receiving program.  In this way, if we wanted to use common anonymous access to use information we had or suspected about an admin account, we might try to forge our way into an admin login.  
+An example of using \texttt{sqlmap} to read a POST message and apply its contents to a parameter, using \texttt{-p <PARAMETER\_NAME>}.  The POST message was previously intercepted with Burp Suite and then copied to a text file.  That text file was edited to adjust some parameters.  Using these techniques, a POST message can be edited and applied with \texttt{sqlmap} to try to gain access specific to certain user accounts, cookies, etc., based on the design of the site's input validation checks in the receiving program.  In this way, if we wanted to use common anonymous access to use information we had or suspected about an admin account, we might try to forge our way into an admin login.  
 
 This kind of POST file read technique can be combine with the other \texttt{--file-dest} and \texttt{--file-write} arguments in \texttt{sqlmap} to try to upload a file as a given user.
 
@@ -412,7 +412,7 @@ exploit
 set SQL "show columns"
 exploit
 \end{lstlisting}
-\texttt{msfconsole} commands like these came in handy to reveal most of what we wanted to know about the database supporting the dynamic website. \[[27]\]  Given these simple utilities, we were able to get any table we wanted and to see the entire schema.  Some of the prefabricated scripts for attacking this older version of MySQL database didn't work well because of the lack of an \texttt{INFORMATION_SCHEMA} database and standardized tables to cover the meta-structure of the databaases; but, that didn't stop our ability to glean the information we needed using the techniques above and some simple manual processes.  
+\texttt{msfconsole} commands like these came in handy to reveal most of what we wanted to know about the database supporting the dynamic website. \[[27]\]  Given these simple utilities, we were able to get any table we wanted and to see the entire schema.  Some of the prefabricated scripts for attacking this older version of MySQL database didn't work well because of the lack of an \texttt{INFORMATION\_SCHEMA} database and standardized tables to cover the meta-structure of the databaases; but, that didn't stop our ability to glean the information we needed using the techniques above and some simple manual processes.  
 
 Aroung this time we realized there was nothing to lose from just calling \texttt{mysql} with common remote commands.  Given an IP address, known port, and working username and password combination, it was no different than calling a remote instance of \texttt{mysql} normally.  This got us the usual command prompt and we could proceed without the fuss of even bothering with \texttt{msfconsole auxiliary}.
 
@@ -523,12 +523,10 @@ Website listing details of the VM on Vulnhub.  Includes screenshots and links to
 
 A description of Lockheed-Martin's Intusion Kill Chain.  Brotherston and Berlin applied their use case of an overview of a ransomware attack to the phases of Lockheed's kill chain.  Their definitions and example serves as guidance for the contstruction of our own, here.
 
-\endnote{[6]} \_\_\_\_\_.  "What is a potfile?" Hashcat Wiki.  INTERNET:  \texttt{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}\endnote{\url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}}
+\endnote{[6]} \_\_\_\_\_. ``What is a potfile?'' Hashcat Wiki. INTERNET: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword} \endnote{Hashcat Wiki, ``What is a potfile?'', available at \texttt{https://hashcat.net/wiki/doku.php?id=frequently\_asked\_questions\#how\_can\_i\_show\_previously\_cracked\_passwords\_and\_output\_them\_in\_a\_specific\_format\_eg\_emailpassword}.}
+\endnote{[7]} \_\_\_\_\_. ``How can I show previously cracked passwords, and output them in a specific format (e.g. email:password)?'' Hashcat Wiki. INTERNET: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword} \endnote{\nolinkurl{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions\#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}}
 
-\endnote{[7]} \_\_\_\_\_.  "How can I show previously cracked passwords, and output them in a specific format (e.g. email:password)?" Hashcat Wiki.  INTERNET:  \texttt{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}\endnote{\url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}}
-
-\endnote{[8]}  \_\_\_\_\_.  "Hashcat reports "Status: Cracked", but did not print the hash value, and the outfile is empty. What happened?" Hashcat Wiki.  INTERNET: \texttt{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#hashcat_reports_statuscracked_but_did_not_print_the_hash_value_and_the_outfile_is_empty_what_happened}\endnote{\url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#hashcat_reports_statuscracked_but_did_not_print_the_hash_value_and_the_outfile_is_empty_what_happened}}
-
+\endnote{[8]} \_\_\_\_\_. ``Hashcat reports "Status: Cracked", but did not print the hash value, and the outfile is empty. What happened?'' Hashcat Wiki. INTERNET: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#hashcat_reports_statuscracked_but_did_not_print_the_hash_value_and_the_outfile_is_empty_what_happened} \endnote{Hashcat Wiki FAQ, accessed online.}
 \endnote{[9]} Abouzeid, Halim.  "From SQL Injection to WebShell"  RSA.  INTERNET:  \texttt{https://community.rsa.com/community/products/netwitness/blog/2017/04/10/from-sql-injection-to-webshell}\endnote{\url{https://community.rsa.com/community/products/netwitness/blog/2017/04/10/from-sql-injection-to-webshell}}
 
 Step by step tutorial on using \texttt{sqlmap} to pop a shell on a target box.  Shows both the use of automated exploits for JSP, ASP, and PHP, and also the use of uploading custom scripts.  
@@ -558,7 +556,7 @@ Suggestion that bypassing the skip grant tables arguments can be used in a risky
 Got turned on to \texttt{spool} for Metasploit commands.
 
 \endnote{[18]}  INTERNET: \texttt{http://www.guninski.com/modproxy1.html}\endnote{\url{http://www.guninski.com/modproxy1.html}}
-Post on \texttt{mod_proxy}
+Post on \texttt{mod\_proxy}
 
 \endnote{[19]}  INTERNET: \texttt{https://hack2rule.wordpress.com/2017/02/25/sql-injection-to-meterpreter/}\endnote{\url{https://hack2rule.wordpress.com/2017/02/25/sql-injection-to-meterpreter/}}
 Blog post on using \texttt{sqlmap}, \texttt{Meterpreter}, \texttt{Burp} and others.

@@ -3513,3 +3513,168 @@ macro:->\url
 \@doanenote {36}
 macro:->[35]
 \@endanenote 
+\enotechapsep{5}{h4cking VulnHub\textquotesingle s Bad Store}
+\@doanenote {1}
+macro:->[1]
+\@endanenote 
+\@doanenote {2}
+macro:->[2]
+\@endanenote 
+\@doanenote {3}
+macro:->[3]
+\@endanenote 
+\@doanenote {4}
+macro:->[5]
+\@endanenote 
+\@doanenote {5}
+macro:->[2]
+\@endanenote 
+\@doanenote {6}
+macro:->\url
+{https://github.com/gladiola/blackmagic/blob/Demo/agkistrodon/contortix/Penelope/BadStore/Nessus/salvage13_BasicNetwork_BadStore_ya6pkz.pdf}
+\@endanenote 
+\@doanenote {7}
+macro:->\url
+{https://github.com/gladiola/blackmagic/blob/Demo/agkistrodon/contortix/Penelope/BadStore/Nessus/salvage13_BadStore_Web_e1yrt4.pdf}
+\@endanenote 
+\@doanenote {8}
+macro:->[2]
+\@endanenote 
+\@doanenote {9}
+macro:->[1]
+\@endanenote 
+\@doanenote {10}
+macro:->[2]
+\@endanenote 
+\@doanenote {11}
+macro:->[3]
+\@endanenote 
+\@doanenote {12}
+macro:->[4]
+\@endanenote 
+\@doanenote {13}
+macro:->\url
+{https://www.vulnhub.com/entry/badstore-123,41/}
+\@endanenote 
+\@doanenote {14}
+macro:->[5]
+\@endanenote 
+\@doanenote {15}
+macro:->[6]
+\@endanenote 
+\@doanenote {16}
+macro:->Hashcat
+Wiki,
+``What
+is
+a
+potfile?'',
+available
+at
+\texttt
+{https://hashcat.net/wiki/doku.php?id=frequently\_asked\_questions\#how\_can\_i\_show\_previously\_cracked\_passwords\_and\_output\_them\_in\_a\_specific\_format\_eg\_emailpassword}.
+\@endanenote 
+\@doanenote {17}
+macro:->[7]
+\@endanenote 
+\@doanenote {18}
+macro:->\nolinkurl
+{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions\#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}
+\@endanenote 
+\@doanenote {19}
+macro:->[8]
+\@endanenote 
+\@doanenote {20}
+macro:->Hashcat
+Wiki
+FAQ,
+accessed
+online.
+\@endanenote 
+\@doanenote {21}
+macro:->[9]
+\@endanenote 
+\@doanenote {22}
+macro:->\url
+{https://community.rsa.com/community/products/netwitness/blog/2017/04/10/from-sql-injection-to-webshell}
+\@endanenote 
+\@doanenote {23}
+macro:->[10]
+\@endanenote 
+\@doanenote {24}
+macro:->\url
+{https://w00troot.blogspot.com/2017/05/getting-reverse-shell-from-web-shell.html}
+\@endanenote 
+\@doanenote {25}
+macro:->[11]
+\@endanenote 
+\@doanenote {26}
+macro:->\url
+{https://www.darkmoreops.com/2014/08/28/use-sqlmap-sql-injection-hack-website-database/}
+\@endanenote 
+\@doanenote {27}
+macro:->[12]
+\@endanenote 
+\@doanenote {28}
+macro:->\url
+{https://sneakerhax.com/tool-tips-sqlmap-with-post-requests/}
+\@endanenote 
+\@doanenote {29}
+macro:->[13]
+\@endanenote 
+\@doanenote {30}
+macro:->\url
+{https://dev.mysql.com/doc/refman/5.5/en/create-user.html}
+\@endanenote 
+\@doanenote {31}
+macro:->[14]
+\@endanenote 
+\@doanenote {32}
+macro:->\url
+{https://dev.mysql.com/doc/refman/5.5/en/grant.html}
+\@endanenote 
+\@doanenote {33}
+macro:->[15]
+\@endanenote 
+\@doanenote {34}
+macro:->\url
+{https://stackoverflow.com/questions/1708409/how-to-start-mysql-with-skip-grant-tables}
+\@endanenote 
+\@doanenote {35}
+macro:->[16]
+\@endanenote 
+\@doanenote {36}
+macro:->\url
+{https://superuser.com/questions/1127299/how-to-restart-mysql-with-skip-grant-tables-if-you-cant-use-the-root-password}
+\@endanenote 
+\@doanenote {37}
+macro:->[17]
+\@endanenote 
+\@doanenote {38}
+macro:->\url
+{http://seclists.org/metasploit/2012/q3/40}
+\@endanenote 
+\@doanenote {39}
+macro:->[18]
+\@endanenote 
+\@doanenote {40}
+macro:->\url
+{http://www.guninski.com/modproxy1.html}
+\@endanenote 
+\@doanenote {41}
+macro:->[19]
+\@endanenote 
+\@doanenote {42}
+macro:->\url
+{https://hack2rule.wordpress.com/2017/02/25/sql-injection-to-meterpreter/}
+\@endanenote 
+\@doanenote {43}
+macro:->[20]
+\@endanenote 
+\@doanenote {44}
+macro:->\url
+{https://github.com/sqlmapproject/sqlmap/wiki/Usage}
+\@endanenote 
+\@doanenote {45}
+macro:->[21]
+\@endanenote 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  31 AUG 2026 18:30
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.26)  31 AUG 2026 18:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2099,26 +2099,242 @@ low.com/questions/36453976/upgrade-openssh-7-2p-in-ubuntu-14-04\TU/InfoOTDisp(0
 )/m/it/10 [35]
  []
 
+[79]) (./chapters/bad_store.tex [80]
+Chapter 5.
+
+Overfull \hbox (76.97743pt too wide) in paragraph at lines 21--33
+ [][] 
+ []
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 36.
+
+[81
+
+]
+Overfull \hbox (9.6308pt too wide) in paragraph at lines 56--62
+ [][] 
+ []
+
+[82] [83] [84]
+Overfull \hbox (0.14854pt too wide) in paragraph at lines 167--168
+[]\TU/InfoOTDisp(0)/m/it/10 The supplier directory was referred to in robots.tx
+t. Looking up robots.txt showed
+ []
+
+
+Overfull \hbox (12.44481pt too wide) in paragraph at lines 169--170
+[]\TU/InfoOTDisp(0)/m/it/10 The \TU/CourierNew(0)/m/n/10 cgi-bin/ \TU/InfoOTDis
+p(0)/m/it/10 showed a couple of things. First, laying around was a \TU/CourierN
+ew(0)/m/n/10 test.cgi
+ []
+
+[85]
+Overfull \hbox (37.66492pt too wide) in paragraph at lines 177--180
+[]\TU/InfoOTDisp(0)/m/it/10 The output showed a pattern like: \TU/CourierNew(0)
+/m/n/10 <100X>:<USER>/<PASSWORD>/<?OPTIONAL
+ []
+
+
+Overfull \hbox (29.4908pt too wide) in paragraph at lines 206--217
+ [][] 
+ []
+
+[86]
+Overfull \hbox (91.05077pt too wide) in paragraph at lines 222--233
+ [][] 
+ []
+
+
+Underfull \vbox (badness 1231) has occurred while \output is active []
+
+ [87]
+[88]
+Overfull \hbox (43.67078pt too wide) in paragraph at lines 287--297
+ [][] 
+ []
+
+
+Overfull \hbox (285.07082pt too wide) in paragraph at lines 302--312
+ [][] 
+ []
+
+[89]
+Overfull \hbox (59.31998pt too wide) in paragraph at lines 327--327
+\TU/InfoOTDisp(0)/m/it/10 when we try to give similar commands, we can see this
+ warning about \TU/CourierNew(0)/m/n/10 --skip-grant-tables\TU/InfoOTDisp(0)/m/
+it/10 .
+ []
+
+[90] [91]
+Overfull \hbox (1.29662pt too wide) in paragraph at lines 352--353
+\TU/InfoOTDisp(0)/m/it/10 An example of reading a file from the target box usin
+g \TU/CourierNew(0)/m/n/10 sqlmap \TU/InfoOTDisp(0)/m/it/10 and a direct databa
+se
+ []
+
+
+Overfull \hbox (15.45404pt too wide) in paragraph at lines 364--365
+[]\TU/InfoOTDisp(0)/m/it/10 This kind of POST file read technique can be combin
+e with the other \TU/CourierNew(0)/m/n/10 --file-dest
+ []
+
+
+Overfull \hbox (369.62077pt too wide) in paragraph at lines 370--381
+ [][] 
+ []
+
+
+Overfull \hbox (47.63077pt too wide) in paragraph at lines 386--395
+ [][] 
+ []
+
+[92]
+Overfull \hbox (10.27422pt too wide) in paragraph at lines 415--416
+\TU/InfoOTDisp(0)/m/it/10 MySQL database didn’t work well because of the lack o
+f an \TU/CourierNew(0)/m/n/10 INFORMATION_SCHEMA
+ []
+
+
+Overfull \hbox (530.6108pt too wide) in paragraph at lines 423--432
+ [][] 
+ []
+
+
+Underfull \vbox (badness 2521) has occurred while \output is active []
+
+ [93]
+Overfull \hbox (30.83078pt too wide) in paragraph at lines 437--446
+ [][] 
+ []
+
+[94]
+Overfull \hbox (235.09082pt too wide) in paragraph at lines 470--480
+ [][] 
+ []
+
+
+Overfull \hbox (149.34077pt too wide) in paragraph at lines 485--493
+ [][] 
+ []
+
+
+Overfull \hbox (0.85693pt too wide) in paragraph at lines 499--500
+\TU/InfoOTDisp(0)/m/it/10 Downloading the \TU/CourierNew(0)/m/n/10 badstore.cgi
+ \TU/InfoOTDisp(0)/m/it/10 file itself yielded a wealth of information. Pretty
+ []
+
+[95]
+Overfull \hbox (173.46124pt too wide) in paragraph at lines 518--519
+[]\TU/InfoOTDisp(0)/m/it/10 [12] _____. ”Bad Store 1.2.3,” Vulnhub. INTERNET: \
+TU/CourierNew(0)/m/n/10 https://www.vulnhub.com/entry/badstore-123,41/\TU/InfoO
+TDisp(0)/m/it/10 [13] 
+ []
+
+[96]
+Overfull \hbox (313.53035pt too wide) in paragraph at lines 529--531
+\TU/CourierNew(0)/m/n/10 https://community.rsa.com/community/products/netwitnes
+s/blog/2017/04/10/from-sql-injection-to-webshell\TU/InfoOTDisp(0)/m/it/10 [22] 
+
+ []
+
+
+Overfull \hbox (270.76901pt too wide) in paragraph at lines 534--536
+[]\TU/InfoOTDisp(0)/m/it/10 [23] _____. INTERNET: \TU/CourierNew(0)/m/n/10 http
+s://w00troot.blogspot.com/2017/05/getting-reverse-shell-from-web-shell.html\TU/
+InfoOTDisp(0)/m/it/10 [24]
+ []
+
+
+Overfull \hbox (313.31584pt too wide) in paragraph at lines 537--539
+[]\TU/InfoOTDisp(0)/m/it/10 [25] _____. INTERNET: \TU/CourierNew(0)/m/n/10 http
+s://www.darkmoreops.com/2014/08/28/use-sqlmap-sql-injection-hack-website-databa
+se/\TU/InfoOTDisp(0)/m/it/10 [26]
+ []
+
+
+Overfull \hbox (150.90948pt too wide) in paragraph at lines 540--542
+[]\TU/InfoOTDisp(0)/m/it/10 [27] _____. INTERNET: \TU/CourierNew(0)/m/n/10 http
+s://sneakerhax.com/tool-tips-sqlmap-with-post-requests/\TU/InfoOTDisp(0)/m/it/1
+0 [28]
+ []
+
+
+Overfull \hbox (110.2121pt too wide) in paragraph at lines 543--545
+[]\TU/InfoOTDisp(0)/m/it/10 [29] INTERNET: \TU/CourierNew(0)/m/n/10 https://dev
+.mysql.com/doc/refman/5.5/en/create-user.html\TU/InfoOTDisp(0)/m/it/10 [30]
+ []
+
+
+Overfull \hbox (71.85623pt too wide) in paragraph at lines 546--548
+[]\TU/InfoOTDisp(0)/m/it/10 [31] INTERNET: \TU/CourierNew(0)/m/n/10 https://dev
+.mysql.com/doc/refman/5.5/en/grant.html\TU/InfoOTDisp(0)/m/it/10 [32]
+ []
+
+
+Overfull \hbox (283.50043pt too wide) in paragraph at lines 549--551
+[]\TU/InfoOTDisp(0)/m/it/10 [33] INTERNET: \TU/CourierNew(0)/m/n/10 https://sta
+ckoverflow.com/questions/1708409/how-to-start-mysql-with-skip-grant-tables\TU/I
+nfoOTDisp(0)/m/it/10 [34]
+ []
+
+
+Overfull \hbox (475.82167pt too wide) in paragraph at lines 552--554
+[]\TU/InfoOTDisp(0)/m/it/10 [35] INTERNET: \TU/CourierNew(0)/m/n/10 https://sup
+eruser.com/questions/1127299/how-to-restart-mysql-with-skip-grant-tables-if-you
+-cant-use-the-root-password\TU/InfoOTDisp(0)/m/it/10 [36]
+ []
+
+
+Overfull \hbox (19.41745pt too wide) in paragraph at lines 555--557
+[]\TU/InfoOTDisp(0)/m/it/10 [37] INTERNET: \TU/CourierNew(0)/m/n/10 http://secl
+ists.org/metasploit/2012/q3/40\TU/InfoOTDisp(0)/m/it/10 [38]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [97]
+Overfull \hbox (2.04453pt too wide) in paragraph at lines 558--560
+[]\TU/InfoOTDisp(0)/m/it/10 [39] INTERNET: \TU/CourierNew(0)/m/n/10 http://www.
+guninski.com/modproxy1.html\TU/InfoOTDisp(0)/m/it/10 [40]
+ []
+
+
+Overfull \hbox (203.97772pt too wide) in paragraph at lines 561--563
+[]\TU/InfoOTDisp(0)/m/it/10 [41] INTERNET: \TU/CourierNew(0)/m/n/10 https://hac
+k2rule.wordpress.com/2017/02/25/sql-injection-to-meterpreter/\TU/InfoOTDisp(0)/
+m/it/10 [42]
+ []
+
+
+Overfull \hbox (73.46623pt too wide) in paragraph at lines 564--566
+[]\TU/InfoOTDisp(0)/m/it/10 [43] INTERNET: \TU/CourierNew(0)/m/n/10 https://git
+hub.com/sqlmapproject/sqlmap/wiki/Usage\TU/InfoOTDisp(0)/m/it/10 [44]
+ []
+
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.537 ....com/db/modules/exploit/unix/ftp/proftpd_
-                                                  133c_backdoor
+l.567 ...www.tutorialspoint.com/perl/perl_cgi.htm}
+                                                  \endnote{\url{https://www....
+
 ? 
 ! Emergency stop.
 <inserted text> 
                 $
-l.537 ....com/db/modules/exploit/unix/ftp/proftpd_
-                                                  133c_backdoor
+l.567 ...www.tutorialspoint.com/perl/perl_cgi.htm}
+                                                  \endnote{\url{https://www....
 End of file on the terminal!
 
  
 Here is how much of TeX's memory you used:
- 25566 strings out of 475846
- 468884 string characters out of 5781395
- 1965879 words of memory out of 5000000
- 46264 multiletter control sequences out of 15000+600000
+ 25574 strings out of 475846
+ 469059 string characters out of 5781395
+ 2075879 words of memory out of 5000000
+ 46269 multiletter control sequences out of 15000+600000
  562613 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 91i,13n,117p,5814b,988s stack positions out of 10000i,1000n,20000p,200000b,200000s
-Output written on ut.pdf (92 pages).
+ 91i,13n,117p,5814b,1729s stack positions out of 10000i,1000n,20000p,200000b,200000s
+Output written on ut.pdf (111 pages).
