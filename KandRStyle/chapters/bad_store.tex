@@ -303,7 +303,7 @@ SQLi ' '1'='1' OR -- & Injectable controls all over &  \\
 \hline
 Action & Observation \\
 \hline
-msfconsole mysql schema dump & Missing INFORMATION_SCHEMA was influential; nonstandard table names \\
+msfconsole mysql schema dump & Missing INFORMATION\_SCHEMA was influential; nonstandard table names \\
 msf mysql sql & Simple calls yielded necessary information to impersonate any account \\
 hashcat & Password cracking with wordlists in a reasonable time allowed use of accounts uncovered in previous steps. \\
 SQLi & Injectable controls in almost all inputs and file upload dialogs; other inputs showed CGI filtering of URL-encoded values \\
@@ -498,7 +498,7 @@ sqlmap, msfconsole uploads & Could not install a file or detect a running servic
 
  Downloading the \texttt{badstore.cgi} file itself yielded a wealth of information.  Pretty much the heart of the entire exercise, this program showed us some other directories to check up on.  It also showed us some hardcoded password values and some program aspects that we didn't hit on by ourselves.  There were other features in there available for exploit.  However, since most of them were encompassed by the program, we chose not to follow those leads at the time.  
 
-I continued looking for a mechanism to pop a shell with.  With no JSP, ASP, or PHP server-side programs enabled, there were slim pickings.  The MySQL was in a version below 5.0; so, there was no "INFORMATION_SCHEMA" to play with.  Metasploit modules for Heartbleed and Shellshock weren't working. \[[28]\] \[[29]\] \[[30]\] \[[33]\]  After some time, I had to recognize that it was fruitless to continue further exploitation attempts.  As far as I can tell, I wasn't going to get any further in on this one.  
+I continued looking for a mechanism to pop a shell with.  With no JSP, ASP, or PHP server-side programs enabled, there were slim pickings.  The MySQL was in a version below 5.0; so, there was no "INFORMATION\_SCHEMA" to play with.  Metasploit modules for Heartbleed and Shellshock weren't working. \[[28]\] \[[29]\] \[[30]\] \[[33]\]  After some time, I had to recognize that it was fruitless to continue further exploitation attempts.  As far as I can tell, I wasn't going to get any further in on this one.  
 
   
 
@@ -515,7 +515,7 @@ Review of techniques to implement Nessus scans, <code>nmap</code> scans, and <co
 
 Review of techniques to implement substitution of values sent with Burp Suite, using <code>sqlmap</code> for SQLi, and understanding local and remote file inclusion attacks.
 
-\endnote{[4]}  _____.  "Bad Store 1.2.3," Vulnhub.  INTERNET:  \texttt{https://www.vulnhub.com/entry/badstore-123,41/}\endnote{\url{https://www.vulnhub.com/entry/badstore-123,41/}} 
+\endnote{[4]}  \_\_\_\_\_.  "Bad Store 1.2.3," Vulnhub.  INTERNET:  \texttt{https://www.vulnhub.com/entry/badstore-123,41/}\endnote{\url{https://www.vulnhub.com/entry/badstore-123,41/}} 
 
 Website listing details of the VM on Vulnhub.  Includes screenshots and links to download URLs.
 
@@ -523,23 +523,23 @@ Website listing details of the VM on Vulnhub.  Includes screenshots and links to
 
 A description of Lockheed-Martin's Intusion Kill Chain.  Brotherston and Berlin applied their use case of an overview of a ransomware attack to the phases of Lockheed's kill chain.  Their definitions and example serves as guidance for the contstruction of our own, here.
 
-\endnote{[6]} _____.  "What is a potfile?" Hashcat Wiki.  INTERNET:  \texttt{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}\endnote{\url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}}
+\endnote{[6]} \_\_\_\_\_.  "What is a potfile?" Hashcat Wiki.  INTERNET:  \texttt{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}\endnote{\url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}}
 
-\endnote{[7]} _____.  "How can I show previously cracked passwords, and output them in a specific format (e.g. email:password)?" Hashcat Wiki.  INTERNET:  \texttt{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}\endnote{\url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}}
+\endnote{[7]} \_\_\_\_\_.  "How can I show previously cracked passwords, and output them in a specific format (e.g. email:password)?" Hashcat Wiki.  INTERNET:  \texttt{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}\endnote{\url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}}
 
-\endnote{[8]}  _____.  "Hashcat reports "Status: Cracked", but did not print the hash value, and the outfile is empty. What happened?" Hashcat Wiki.  INTERNET: \texttt{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#hashcat_reports_statuscracked_but_did_not_print_the_hash_value_and_the_outfile_is_empty_what_happened}\endnote{\url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#hashcat_reports_statuscracked_but_did_not_print_the_hash_value_and_the_outfile_is_empty_what_happened}}
+\endnote{[8]}  \_\_\_\_\_.  "Hashcat reports "Status: Cracked", but did not print the hash value, and the outfile is empty. What happened?" Hashcat Wiki.  INTERNET: \texttt{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#hashcat_reports_statuscracked_but_did_not_print_the_hash_value_and_the_outfile_is_empty_what_happened}\endnote{\url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#hashcat_reports_statuscracked_but_did_not_print_the_hash_value_and_the_outfile_is_empty_what_happened}}
 
 \endnote{[9]} Abouzeid, Halim.  "From SQL Injection to WebShell"  RSA.  INTERNET:  \texttt{https://community.rsa.com/community/products/netwitness/blog/2017/04/10/from-sql-injection-to-webshell}\endnote{\url{https://community.rsa.com/community/products/netwitness/blog/2017/04/10/from-sql-injection-to-webshell}}
 
 Step by step tutorial on using \texttt{sqlmap} to pop a shell on a target box.  Shows both the use of automated exploits for JSP, ASP, and PHP, and also the use of uploading custom scripts.  
 
-\endnote{[10]} _____.  INTERNET:  \texttt{https://w00troot.blogspot.com/2017/05/getting-reverse-shell-from-web-shell.html}\endnote{\url{https://w00troot.blogspot.com/2017/05/getting-reverse-shell-from-web-shell.html}}
+\endnote{[10]} \_\_\_\_\_.  INTERNET:  \texttt{https://w00troot.blogspot.com/2017/05/getting-reverse-shell-from-web-shell.html}\endnote{\url{https://w00troot.blogspot.com/2017/05/getting-reverse-shell-from-web-shell.html}}
 Some reverse shell script suggestions for various systems.  
 
-\endnote{[11]} _____.  INTERNET:  \texttt{https://www.darkmoreops.com/2014/08/28/use-sqlmap-sql-injection-hack-website-database/}\endnote{\url{https://www.darkmoreops.com/2014/08/28/use-sqlmap-sql-injection-hack-website-database/}}
+\endnote{[11]} \_\_\_\_\_.  INTERNET:  \texttt{https://www.darkmoreops.com/2014/08/28/use-sqlmap-sql-injection-hack-website-database/}\endnote{\url{https://www.darkmoreops.com/2014/08/28/use-sqlmap-sql-injection-hack-website-database/}}
 A tutorial showing some \texttt{sqlmap} hacks by injection.  Includes another example of get a hashed password and crack it using a modified form of \texttt{hashcat}.
 
-\endnote{[12]} _____.  INTERNET:  \texttt{https://sneakerhax.com/tool-tips-sqlmap-with-post-requests/}\endnote{\url{https://sneakerhax.com/tool-tips-sqlmap-with-post-requests/}}
+\endnote{[12]} \_\_\_\_\_.  INTERNET:  \texttt{https://sneakerhax.com/tool-tips-sqlmap-with-post-requests/}\endnote{\url{https://sneakerhax.com/tool-tips-sqlmap-with-post-requests/}}
 Tutorial showing some steps for using Burp Suite to pick up POST messages to injectable programs and modify them for use with \texttt{sqlmap}.
 
 \endnote{[13]}  INTERNET:  \texttt{https://dev.mysql.com/doc/refman/5.5/en/create-user.html}\endnote{\url{https://dev.mysql.com/doc/refman/5.5/en/create-user.html}}
@@ -588,7 +588,7 @@ Description of the five phases of pentesting.
 Offensive Security's documentation on Metasploit's auxiliary modules.  Shows the modules in use, commonly adjusted settings, and a brief description of each.
 
 \endnote{[28]}  INTERNET: \texttt{https://www.rapid7.com/db/modules/auxiliary/scanner/ssl/openssl_heartbleed}\endnote{\url{https://www.rapid7.com/db/modules/auxiliary/scanner/ssl/openssl_heartbleed}}
-Rapid7's description of an openssl_hearbleed scanner in Metasploit.
+Rapid7's description of an openssl\_heartbleed scanner in Metasploit.
 
 \endnote{[29]}  INTERNET: \texttt{https://www.trojanhorsesecurity.com/shellshock}\endnote{\url{https://www.trojanhorsesecurity.com/shellshock}}
 Trojan Horse Security's description of a Shellshock scanner and exploit in Metasploit.
