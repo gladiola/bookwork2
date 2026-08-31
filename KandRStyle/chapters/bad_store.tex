@@ -3,7 +3,7 @@
 In this post, we'll cover adapting some of the recon techniques outlined in Georgia Weidman's book, *Pentration Testing* \endnote{[1]}\endnote{[2]}\endnote{[3]} to an unknown set of problems found in VulnHub's "Bad Store" ISO. \[[4]\]  Our goal will be to use the VulnHub VM as a target.  We'll find what's possible by doing some scanning and enumeration. From there, we'll look at some exploits.  
 
 \subsubsection{Spoilers}
-Throughout this post, we'll reveal some aspects of the "Bad Store" target.  Please note that by looking at some of these details, the VM's instructional quality as a target of unknown composition might be diminished to hackers who will want use the target for technical growth and professional development.  Experience recommends thorough use of the target VM before referring to resources such as these.
+    Throughout this post, we'll reveal some aspects of the "Bad Store" target.  Please note that by looking at some of these details, the VM's instructional quality as a target of unknown composition might be diminished to hackers who will want use the target for technical growth and professional development.  Experience recommends thorough use of the target VM before referring to resources such as these.
 
 
 
@@ -20,23 +20,8 @@ One box is holding the VulnHub VM; it's running VirtualBox; we conducted some si
 \centering
 \begin{tabular}{|l|l|l|}
 \hline
-Property \\
+Property & Value & Logical Impact \\
 \hline
-Value \\
-\hline
-Logical Impact \\
-\hline
-Target Machine:  VirtualBox VM & VulnHub Bad Store iso in VM & Target of unknown composition \\
-\hline
-Target Machine:  Host OS & WIN 10 & Target platform host OS \\
-\hline
-Attacker Machine:  VirtualBox VM & Kali & Attack platform inside VM \\
-\hline
-Attacker Machine:  Host OS & FreeBSD 10.3 RELEASE & Attack platform host OS \\
-\hline
-Target & 192.168.1.9 & \texttt{ifconfig} OK \\
-\hline
-Attacker & 192.168.1.10 & \texttt{ifconfig} OK \\
 \hline
 \end{tabular}
 \end{table}
@@ -59,41 +44,30 @@ When working with the "Bad Store" VM, it was noted in some of the early directio
 \subsection{Kill Chains and Attacking Actions}
 Throughout our discussion, we'll try to relate the use of commands in Kali to analysis actions that use the Lockheed-Martin Intrusion Kill Chain.  Brotherston and Berlin, writing in the Defensive Security Handbook, presented an example use case in this format that allowed us to see all sides of the attack. \endnote{[5]} They included defensive actions and monitoring in correlations with phases of the kill chain.  Their chart headers looked similar to the one below.
 
-\begin{table}[H]
-\caption{Brotherston-Berlin Use Case Format [5]}
-\centering
-\begin{tabular}{|l|l|l|}
-\hline
-Kill Chain Step & Malicious Action & Defensive Mitigation & Potential Monitoring \\
-\hline
-\end{tabular}
-\end{table}
+<table>
+    <caption>Brotherston-Berlin Use Case Format [5]</caption>
+    <thead>
+       <tr><th>Kill Chain Step</th><th>Malicious Action</th><th>Defensive Mitigation</th><th>Potential Monitoring</th></tr> 
+    </thead>
+</table>
 
 Our needs here are a little different, so we'll modify our chart while following along from their example.  Since this is not a real attack; and since our view is mainly from the penetrator's perspective, we'll abbreviate a summary of some of the steps by relating an attacking action to a step in the kill chain and an observation, using tables like the one below.  As we can see, this format is similar to descriptions we might find about the phases of pentesting \[[26]\]
 
-\begin{table}[H]
-\caption{Command to Kill Chain Step Summary}
-\centering
-\begin{tabular}{|l|l|l|}
-\hline
-Kill Chain Step & Attacking Action & Observation \\
-\hline
-Reconnaissance &  &  \\
-\hline
-Weaponization &  &  \\
-\hline
-Delivery &  &  \\
-\hline
-Exploitation &  &  \\
-\hline
-Installation &  &  \\
-\hline
-Command and Control &  &  \\
-\hline
-Actions and Objectives &  &  \\
-\hline
-\end{tabular}
-\end{table}
+<table>
+    <caption>Command to Kill Chain Step Summary</caption>
+    <thead>
+       <tr><th>Kill Chain Step</th><th>Attacking Action</th><th>Observation</th></tr> 
+    </thead>
+    <tbody>
+    <tr><th>Reconnaissance</th><td></td><td></td></tr>
+    <tr><th>Weaponization</th><td></td><td></td></tr>
+    <tr><th>Delivery</th><td></td><td></td></tr>
+    <tr><th>Exploitation</th><td></td><td></td></tr>
+    <tr><th>Installation</th><td></td><td></td></tr>
+    <tr><th>Command and Control</th><td></td><td></td></tr>
+    <tr><th>Actions and Objectives</th><td></td><td></td></tr>
+    </tbody>
+</table>
 
 
 Adapting a vernacular of different phases is a common practice.  As we can see from NIST publications like 800-115, similar analysis mechansims might divide up an operation into four phases; \[[36]\] some other evaluators might use five or more. \[[26]\]  So long as we can be clear with our recipients, the breaking up of the anaylsis into phases may not matter.
@@ -214,41 +188,33 @@ A look at the source code of each page revealed that a lot of form processing wa
 Meanwhile, it also turned up another script, \texttt{frmvrfy.js} that compares two password values.  Apparently part of the reset routine.  This was a program I felt we should exploit with our Javascript skills, but we set it aside for the time being.  
 
 \subsubsection{Analysis Check}
-\begin{table}[H]
-\caption{Command to Kill Chain Step Summary}
-\centering
-\begin{tabular}{|l|l|l|}
-\hline
-Kill Chain Step & Attacking Action & Observation \\
-\hline
-Nessus Basic Network & Apache 1.3 and OpenSSL < 0.9 \\
-Nessus Web & Apache 1.3 and OpenSSL < 0.9 \\
-nmap & Open ports, server versions \\
-nikto & Diretories and open ports \\
-Manual probing & Exposed files and injectable inputs \\
-\hline
-\end{tabular}
-\end{table}
+<table>
+    <caption>Command to Kill Chain Step Summary</caption>
+    <thead>
+       <tr><th>Kill Chain Step</th><th>Attacking Action</th><th>Observation</th></tr> 
+    </thead>
+    <tbody>
+    <tr><th rowspan="5">Reconnaissance</th>
+        <td>Nessus Basic Network</td><td>Apache 1.3 and OpenSSL < 0.9</td></tr>
+    <tr><td>Nessus Web</td><td>Apache 1.3 and OpenSSL < 0.9</td></tr>
+    <tr><td>nmap</td><td>Open ports, server versions</td></tr>
+    <tr><td>nikto</td><td>Diretories and open ports</td></tr>
+    <tr><td>Manual probing</td><td>Exposed files and injectable inputs</td></tr>
+    </tbody>
+</table>
 
 \begin{table}[H]
 \caption{Discovery and Attack Cycle 1}
 \centering
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l|l|}
 \hline
-Action \\
+Action & Observation \\
 \hline
-Observation \\
-\hline
-Nessus Basic Network scan \\
-Historic vulnerabilities uncovered \\
-Nessus Web scan \\
-Historic vulnerabilities uncovered \\
-nmap \\
-Age of server versions will affect later exploits \\
-nikto \\
-Stubbed-out directories and loose files with clues \\
-Manual probing \\
-Relationship of inputs to CGI program and initial input validation guesses \\
+Nessus Basic Network scan & Historic vulnerabilities uncovered \\
+Nessus Web scan & Historic vulnerabilities uncovered \\
+nmap & Age of server versions will affect later exploits \\
+nikto & Stubbed-out directories and loose files with clues \\
+Manual probing & Relationship of inputs to CGI program and initial input validation guesses \\
 \hline
 \end{tabular}
 \end{table}
@@ -302,38 +268,31 @@ As mentioned earlier, the entries in the \texttt{hashcat} potfile didn't seem to
 As a noob, this might seem counterintuitive.  Why would \texttt{hashcat} not simply answer with the cracked hash in the order that it received one to crack?  Keep in mind, that this is kind of a tiny "toy" use case.  \texttt{hashcat} is meant for bigger work.  If you wanted to crack many, many hashes using some GPUs, then \texttt{hashcat} was built for you.  This simple set of block extractions was almost an edge case.
 
 \subsubsection{Analysis Check}
-\begin{table}[H]
-\caption{Command to Kill Chain Step Summary}
-\centering
-\begin{tabular}{|l|l|l|}
-\hline
-Kill Chain Step & Attacking Action & Observation \\
-\hline
-msfconsole mysql schema dump & Get database schema \\
-msf mysql sql & Obtain users table with passwords \\
-hashcat & Offline password cracking in bulk \\
-SQLi ' '1'='1' OR --  & Injectable controls all over \\
-\hline
-\end{tabular}
-\end{table}
+<table>
+    <caption>Command to Kill Chain Step Summary</caption>
+    <thead>
+       <tr><th>Kill Chain Step</th><th>Attacking Action</th><th>Observation</th></tr> 
+    </thead>
+    <tbody>
+    <tr><th rowspan="2">Reconnaissance</th>
+        <td>msfconsole mysql schema dump</td><td>Get database schema</td></tr>
+    <tr><td>msf mysql sql</td><td>Obtain users table with passwords</td></tr>
+    <tr><th rowspan="2">Weaponization</th><td>hashcat</td><td>Offline password cracking in bulk</td></tr>
+    <tr><td>SQLi ' '1'='1' OR -- </td><td>Injectable controls all over</td></tr>
+    </tbody>
+</table>
 
 \begin{table}[H]
 \caption{Discovery and Attack Cycle 2}
 \centering
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l|l|}
 \hline
-Action \\
+Action & Observation \\
 \hline
-Observation \\
-\hline
-msfconsole mysql schema dump \\
-Missing INFORMATION_SCHEMA was influential; nonstandard table names \\
-msf mysql sql \\
-Simple calls yielded necessary information to impersonate any account \\
-hashcat \\
-Password cracking with wordlists in a reasonable time allowed use of accounts uncovered in previous steps. \\
-SQLi \\
-Injectable controls in almost all inputs and file upload dialogs; other inputs showed CGI filtering of URL-encoded values \\
+msfconsole mysql schema dump & Missing INFORMATION_SCHEMA was influential; nonstandard table names \\
+msf mysql sql & Simple calls yielded necessary information to impersonate any account \\
+hashcat & Password cracking with wordlists in a reasonable time allowed use of accounts uncovered in previous steps. \\
+SQLi & Injectable controls in almost all inputs and file upload dialogs; other inputs showed CGI filtering of URL-encoded values \\
 \hline
 \end{tabular}
 \end{table}
@@ -391,38 +350,32 @@ An example of using \texttt{sqlmap} to read a POST message and apply its content
 This kind of POST file read technique can be combine with the other \texttt{--file-dest} and \texttt{--file-write} arguments in \texttt{sqlmap} to try to upload a file as a given user.
 
 \subsubsection{Analysis Check}
-\begin{table}[H]
-\caption{Command to Kill Chain Step Summary}
-\centering
-\begin{tabular}{|l|l|l|}
-\hline
-Kill Chain Step & Attacking Action & Observation \\
-\hline
-sqlmap & Automated discovery of effective SQLi \\
-POST forms intercepted with Burp & Changing expected information \\
-POST forms edited and staged & Efficient reloading of altered data for repetitive attack attempts \\
-sqlmap & Command line uploads of files \\
-sqlmap & Command line downloads of files \\
-Reconnaissance & sqlmap storage & Simple observation of file transfers began to reveal write-permission problems  \\
-\hline
-\end{tabular}
-\end{table}
+<table>
+    <caption>Command to Kill Chain Step Summary</caption>
+    <thead>
+       <tr><th>Kill Chain Step</th><th>Attacking Action</th><th>Observation</th></tr> 
+    </thead>
+    <tbody>
+    <tr><th rowspan="3">Weaponization</th>
+        <td>sqlmap</td><td>Automated discovery of effective SQLi</td></tr>
+        <td>POST forms intercepted with Burp</td><td>Changing expected information</td></tr>
+    <tr><td>POST forms edited and staged</td><td>Efficient reloading of altered data for repetitive attack attempts</td></tr>
+    <tr><th rowspan="2">Delivery and Exploitation</th><td>sqlmap</td><td>Command line uploads of files</td></tr>
+    <tr><td>sqlmap</td><td>Command line downloads of files</td></tr>
+    <tr><th>Reconnaissance</th><td>sqlmap storage</td><td>Simple observation of file transfers began to reveal write-permission problems </td></tr>
+    </tbody>
+</table>
 
 \begin{table}[H]
 \caption{Discovery and Attack Cycle 3}
 \centering
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l|l|}
 \hline
-Action \\
+Action & Observation \\
 \hline
-Observation \\
-\hline
-Burp and sqlmap \\
-Bypass POST requirement to mimic expected form actions \\
-File uploads and downloads \\
-Understanding what was where \\
-sqlmap scans to determine SQLi \\
-Much more complex attack than if derived manually \\
+Burp and sqlmap & Bypass POST requirement to mimic expected form actions \\
+File uploads and downloads & Understanding what was where \\
+sqlmap scans to determine SQLi & Much more complex attack than if derived manually \\
 \hline
 \end{tabular}
 \end{table}
@@ -450,35 +403,29 @@ exploit
 Aroung this time we realized there was nothing to lose from just calling \texttt{mysql} with common remote commands.  Given an IP address, known port, and working username and password combination, it was no different than calling a remote instance of \texttt{mysql} normally.  This got us the usual command prompt and we could proceed without the fuss of even bothering with \texttt{msfconsole auxiliary}.
 
 \subsubsection{Analysis Check}
-\begin{table}[H]
-\caption{Command to Kill Chain Step Summary}
-\centering
-\begin{tabular}{|l|l|l|}
-\hline
-Kill Chain Step & Attacking Action & Observation \\
-\hline
-sqlmap uploads & Attempted uploads foiled; shell installation unlikely \\
-User Accounts & Decrypted passwords and known user accounts permit impersonation of any user on the site \\
-sqlmap & Gain more knowledge of MySQL engine setup with console-style commands to the database engine \\
-\hline
-\end{tabular}
-\end{table}
+<table>
+    <caption>Command to Kill Chain Step Summary</caption>
+    <thead>
+       <tr><th>Kill Chain Step</th><th>Attacking Action</th><th>Observation</th></tr> 
+    </thead>
+    <tbody>
+    <tr><th rowspan="1">Command and Control</th>
+        <td>sqlmap uploads</td><td>Attempted uploads foiled; shell installation unlikely</td></tr>
+    <tr><th rowspan="2">Actions on Objective</th><td>User Accounts</td><td>Decrypted passwords and known user accounts permit impersonation of any user on the site</td></tr>
+    <tr><td>sqlmap</td><td>Gain more knowledge of MySQL engine setup with console-style commands to the database engine</td></tr>
+    </tbody>
+</table>
 
 \begin{table}[H]
 \caption{Discovery and Attack Cycle 4}
 \centering
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l|l|}
 \hline
-Action \\
+Action & Observation \\
 \hline
-Observation \\
-\hline
-Manual input \\
-Impersonate users and observe account differences \\
-MySQL console \\
-Questions arose about skip-grant-tables and db account permissions \\
-sqlmap uploads \\
-Began seeking alternatives to file installation \\
+Manual input & Impersonate users and observe account differences \\
+MySQL console & Questions arose about skip-grant-tables and db account permissions \\
+sqlmap uploads & Began seeking alternatives to file installation \\
 \hline
 \end{tabular}
 \end{table}
@@ -502,34 +449,31 @@ I began downloading selected files and programs in an attempt to gain more infor
 \texttt{sqlmap} automatically catalogs downloaded files in its own hidden directory.  We navigated there and took a look.  It automatically converted directory slashes to underscores in the filenames.  To find out if there was anything in the file, all we had to do was to see if the file size was more than 4 bytes.  The four byte files simply held a null character.  In those cases, we had attempted to download a file that was either not there or not available. 
 
 \subsubsection{Analysis Check}
-\begin{table}[H]
-\caption{Command to Kill Chain Step Summary}
-\centering
-\begin{tabular}{|l|l|l|}
-\hline
-Kill Chain Step & Attacking Action & Observation \\
-\hline
-Analyze downloaded files & Observe critical values; notice missing or empty files \\
-sqlmap & Fetch system files to learn about system accounts and file structure \\
-sqlmap, msfconsole & All attempts to upload shellcode failed \\
-Linux File System & Multiple attempts to discern possible foothold on the target box by downloading key files. \\
-\hline
-\end{tabular}
-\end{table}
+<table>
+    <caption>Command to Kill Chain Step Summary</caption>
+    <thead>
+       <tr><th>Kill Chain Step</th><th>Attacking Action</th><th>Observation</th></tr> 
+    </thead>
+    <tbody>
+    <tr><th rowspan="1">Reconnaissance</th>
+        <td>Analyze downloaded files</td><td>Observe critical values; notice missing or empty files</td></tr>
+        <tr><th rowspan="1">Exploitation</th>
+        <td>sqlmap</td><td>Fetch system files to learn about system accounts and file structure</td></tr>
+        <tr><th rowspan="1">Installation</th>
+        <td>sqlmap, msfconsole</td><td>All attempts to upload shellcode failed</td></tr>
+    <tr><th rowspan="1">Actions on Objective</th><td>Linux File System</td><td>Multiple attempts to discern possible foothold on the target box by downloading key files.</td></tr>
+    </tbody>
+</table>
 
 \begin{table}[H]
 \caption{Discovery and Attack Cycle 5}
 \centering
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l|l|}
 \hline
-Action \\
+Action & Observation \\
 \hline
-Observation \\
-\hline
-sqlmap downloads \\
-Determined the two user accounts through /etc/passwd; generally observed system files \\
-sqlmap, msfconsole uploads \\
-Could not install a file or detect a running service besides the Perl CGI already there \\
+sqlmap downloads & Determined the two user accounts through /etc/passwd; generally observed system files \\
+sqlmap, msfconsole uploads & Could not install a file or detect a running service besides the Perl CGI already there \\
 \hline
 \end{tabular}
 \end{table}
@@ -547,15 +491,15 @@ I continued looking for a mechanism to pop a shell with.  With no JSP, ASP, or P
 \subsection{Annotated Bibliography}
 \endnote{[1]}  Weidman, Georgia.  "Chapter 4:  Using the Metasploit Framework," Penetration Testing:  A Hands-On Introduction to Hacking.  No Starch Press.  pp.87-109.  ISBN 978-1-89327-564-8.
 
-Review of techniques to implement a simple attack with default settings with a metasploit module using the \texttt{msfconsole}. 
+Review of techniques to implement a simple attack with default settings with a metasploit module using the <code>msfconsole</code>. 
 
 \endnote{[2]}  Weidman, Georgia.  "Chapter 6:  Finding Vulnerabilities," Penetration Testing:  A Hands-On Introduction to Hacking.  No Starch Press.  pp.133-153.  ISBN 978-1-89327-564-8.
 
-Review of techniques to implement Nessus scans, \texttt{nmap} scans, and \texttt{nikto} scans. 
+Review of techniques to implement Nessus scans, <code>nmap</code> scans, and <code>nikto</code> scans. 
 
 \endnote{[3]} Weidman, Georgia.  "Chapter 14:  Web Application Testing," Penetration Testing:  A Hands-On Introduction to Hacking.  No Starch Press.  pp.313-338.  ISBN 978-1-89327-564-8.
 
-Review of techniques to implement substitution of values sent with Burp Suite, using \texttt{sqlmap} for SQLi, and understanding local and remote file inclusion attacks.
+Review of techniques to implement substitution of values sent with Burp Suite, using <code>sqlmap</code> for SQLi, and understanding local and remote file inclusion attacks.
 
 \endnote{[4]}  _____.  "Bad Store 1.2.3," Vulnhub.  INTERNET:  \texttt{https://www.vulnhub.com/entry/badstore-123,41/}\endnote{\url{https://www.vulnhub.com/entry/badstore-123,41/}} 
 
@@ -693,6 +637,7 @@ NIST documents includes descriptions of vulnerability scanning, penetration test
 [34]: https://www.digitalocean.com/community/tutorials/how-to-use-passwd-and-adduser-to-manage-passwords-on-a-linux-vps
 [35]: https://www.tldp.org/LDP/sag/html/adduser.html
 [36]: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf
+
 
 
 \markchapterendnotes

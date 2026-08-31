@@ -157,12 +157,12 @@ You will need to uncomment an entry in one file to get the mail:
 /usr/local/ossec-hids/etc/ossec.conf.d/900.local.conf
 
 Which holds the XML element that corresponds to the old rule for:
-
+<global>
     <email_notification>yes</email_notification>
     <email_to>sammy@example.com</email_to>
     <smtp_server>mail.example.com.</smtp_server>
     <email_from>sammy@example.com</email_from>
-
+</global>
 
 \section{Adjusting pfSense for Incoming HAProxy Traffic}
 Earlier, we set up haproxy.  With the zone files populated to direct traffic to the proxy, we adjusted firewall rules on the demarc to accept calls only from those proxies.  As we were bringing up the system, we needed to accept traffic that was sent directly to the demarc.  Once we were confident that DNS records had propogated to point to the bastion hosts, then we could restrict access through the demarc through those hosts with rules.  
@@ -183,4 +183,5 @@ In upcoming drafts, we may discuss:
 
 
 \endnote{[1]} _____.  INTERNET:   \texttt{https://blog.andreev.it/?p=4096}\endnote{\url{https://blog.andreev.it/?p=4096}}
+
 \markchapterendnotes
