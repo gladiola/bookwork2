@@ -1220,3 +1220,150 @@ I can easily imagine a Discussion section stating something like:
 Results indicate that the proposed lower- and upper-bound jurisdictions provide meaningful forecasting constraints for several cybercrime categories, particularly Personal Data Breach, Phishing, Extortion, Identity Theft, and Business Email Compromise. However, other categories exhibited weak separation or boundary violations, suggesting that category-specific validation is required before the bounds can be used for forecasting purposes. Accordingly, the existence of lower and upper jurisdictions alone is insufficient; the adjusted per-capita rates must demonstrate a stable ordering relationship before the interval can be interpreted as a forecasting range.
 
 That's not a negative result. That's a methodological contribution. It tells future users of the model when the approach can be trusted and when it cannot.
+
+
+
+Yes, and this is actually where your statistical work can connect to threat intelligence.
+
+One caution: your categories (Personal Data Breach, Phishing, BEC, etc.) are outcomes or crime types, whereas MITRE ATT&CK catalogs adversary behaviors and techniques. There is not always a 1:1 mapping. However, several ATT&CK groups are strongly associated with combinations of the categories you've identified.
+
+Categories with Strong Support in Your Model
+
+Your usable categories were:
+
+Personal Data Breach
+Phishing
+Ransomware
+Extortion
+IPR/Counterfeit
+Identity Theft
+BEC
+
+These are commonly observed together in modern intrusion campaigns.
+
+Criminal and APT-Style Groups Associated with These Categories
+Akira (G1024)
+
+MITRE identifies Akira as a ransomware deployment entity. Akira has been reported engaging in double-extortion operations, including data exfiltration followed by encryption and ransom demands.
+
+Mapping to your categories:
+
+Category	RelevanceRansomware	Direct
+Extortion	Direct
+Personal Data Breach	Direct
+Identity Theft	Possible secondary effect
+TA505 / Cl0p Ecosystem
+
+MITRE's ATT&CK evaluation materials identify CL0P as a major ransomware family associated with TA505 and the "steal, encrypt, leak" model.
+
+Mapping:
+
+Category	RelevancePhishing	Common initial access
+Personal Data Breach	Direct
+Ransomware	Direct
+Extortion	Direct
+BEC	Sometimes adjacent financially motivated activity
+DPRK Financial Operators (AppleJeus-related)
+
+MITRE identifies AppleJeus as conducting operations targeting digital assets and monetary theft.
+
+Mapping:
+
+Category	RelevanceIdentity Theft	Possible
+BEC	Similar financial objective
+Personal Data Breach	Often prerequisite
+Extortion	Sometimes observed financially motivated behavior
+Iranian Agrius
+
+MITRE describes Agrius as an Iranian threat actor known for ransomware and destructive operations.
+
+Mapping:
+
+Category	RelevanceRansomware	Direct
+Extortion	Direct
+Personal Data Breach	Often associated with intrusion stage
+ATT&CK Technique Chains Relevant to Your Categories
+
+A very common attack progression today is:
+
+Phishing
+Credential theft
+Initial access
+Data collection
+Data exfiltration
+Personal data breach
+Extortion
+Ransomware deployment
+
+MITRE specifically notes that financial theft campaigns often involve business email compromise, impersonation, data exfiltration, ransomware, and extortion.
+
+This sequence aligns remarkably well with the categories that remained valid under your boundary model:
+
+Phishing
+    ↓
+Identity Theft / Credential Theft
+    ↓
+Personal Data Breach
+    ↓
+BEC or Financial Fraud
+    ↓
+Extortion
+    ↓
+Ransomware
+
+Interesting Thesis Implication
+
+Your statistically supported categories are not random. They roughly correspond to the modern financially motivated intrusion lifecycle documented in ATT&CK:
+
+Phishing
+Identity compromise
+Data breach
+Financial theft/BEC
+Extortion
+Ransomware
+
+That observation may be stronger than simply saying Tennessee falls between two jurisdictions. It suggests that the categories where the boundary model works are the same categories that occur together in contemporary ransomware and financially motivated campaigns.
+
+In a thesis discussion, that linkage between your forecasting categories and ATT&CK-modeled attack chains could be a very compelling way to justify why those categories remained statistically useful while others did not.
+
+If you're writing a thesis, I would avoid citing ATT&CK groups as the primary justification. Groups come and go, attribution changes, and many groups perform multiple mission sets.
+
+Instead, use ATT&CK's techniques and tactics as the justification.
+
+For example, the strongest support for my earlier assertion comes from ATT&CK's description of Financial Theft (T1657). ATT&CK explicitly states that financial theft campaigns include:
+
+business email compromise (BEC),
+extortion by ransomware,
+account compromise,
+impersonation,
+unauthorized transfers of funds,
+exfiltration of data followed by threats to leak the data unless payment is made.
+
+That ATT&CK description directly supports the linkage among several of your surviving categories:
+
+Your Category	ATT&CK ConnectionBEC	Explicitly mentioned in T1657 Financial Theft
+Extortion	Explicitly mentioned in T1657
+Ransomware	Explicitly mentioned in T1657
+Personal Data Breach	Data exfiltration is explicitly discussed in T1657
+Identity Theft	Account compromise is explicitly discussed in T1657
+
+ATT&CK also notes that ransomware operations commonly begin through phishing-based initial access. The MITRE Ransomware Resource Center specifically identifies phishing via malicious email attachments or links as a common entry point for ransomware.
+
+That gives you a defensible attack chain:
+
+Phishing → Account Compromise / Identity Theft → Personal Data Breach (data exfiltration) → BEC or Financial Theft → Extortion → Ransomware.
+
+For ATT&CK groups, examples that support portions of this chain include:
+
+Group	ATT&CK-documented behaviorAkira (G1024)	ATT&CK states Akira engages in double-extortion ransomware by exfiltrating files and then encrypting them.
+CL0P (used in ATT&CK Evaluations)	MITRE describes CL0P as using a "steal, encrypt, and leak" strategy.
+Agrius (G1030)	MITRE describes Agrius as notable for ransomware operations.
+
+For your thesis, a stronger statement would be:
+
+The categories that remained valid under the boundary model (Phishing, Personal Data Breach, Ransomware, Extortion, Identity Theft, and BEC) correspond closely to behaviors and objectives identified by MITRE ATT&CK as characteristic of financially motivated cyber intrusion campaigns, including phishing-based initial access, account compromise, data exfiltration, business email compromise, ransomware deployment, and extortion.
+
+Notice that this claim is directly supported by ATT&CK's published technique descriptions and does not require speculative attribution to any particular APT. That's usually much easier to defend before a thesis committee.
+
+
+
