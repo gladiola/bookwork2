@@ -3848,6 +3848,1029 @@ This section summarizes the conditional workflow:
 Under the rule ``if a category fails the count screen, exclude it from impact,'' count shows statistical support in the retained subset, but impact still fails to reach significance.
 
 %----------------------------------------------------------------------------------------
+\section{Results:  Restatement of Graphs}
+%%%%%%%%%%%%%%%%%%%% PERSONAL DATA BREACH %%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection{Personal Data Breach}\label{sec:persdatabreach}
+\subsubsection{Lower Bound Computation}
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+2 & \cdots & 1 & \cdots & 3\\
+\$0 & \cdots & \$0 & \cdots & \$11
+\end{bmatrix}.
+\]
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+6 & \cdots & 3 & \cdots & 11.42\\
+\$0 & \cdots & \$0 & \cdots & \$0
+\end{bmatrix}.
+\]
+  \[
+\bar{X}_{\text{American Samoa}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{American Samoa},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{American Samoa}}^{(\text{scaled count})}\\
+\bar{X}_{\text{American Samoa}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+5.35\\
+\$270.50
+\end{bmatrix}.
+\]
+\subsubsection{Upper Bound Computation}
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+4{,}031 & \cdots & 4{,}764 & \cdots & 8{,}196\\
+\$8{,}808{,}240 & \cdots & \$9{,}355{,}626 & \cdots & \$153{,}022{,}651
+\end{bmatrix}.
+\]
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+18 & \cdots & 21 & \cdots & 38.56\\
+\$39{,}332.26 & \cdots & \$41{,}240.16 & \cdots & \$709{,}475.44
+\end{bmatrix}.
+\]
+\[
+\bar{X}_{\text{California}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{California},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{California}}^{(\text{scaled count})}\\
+\bar{X}_{\text{California}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+28.51\\
+\$212{,}708.42
+\end{bmatrix}.
+\]
+\subsubsection{Monte Carlo Simulations for Likelihood and Impact}
+\begin{figure}[H]
+  \centering
+  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/discrete_persDataBreach_count.png}}}
+  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10{,}000 iterations with a discrete distribution to spread random instances between upper and lower bounds taken from the means of seven year samples. We bounded between 6 and 29 possible \index{personal data breach}personal \gls{databreach} events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The means of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} \gls{cybercrime} counts respectively.}
+  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
+  }
+  \label{fig:screenshot-montecarlo-persdatabreach-count-discrete}
+\end{figure}
+When we computed the upper and lower bounds, we recognized that a normal distribution would not fit well for forecasting likelihood.  We took the mean of the sample from American Samoa for the lower bound (5.35, rounded to 6); we took the mean from the sample from California for the upper bound (28.51, rounded to 29); we had a separation of 23 units.  Therefore, we switched to a discrete model with all 24 options sharing an equal likelihood.
+\begin{table}[H]
+  \centering
+  \caption{Monte Carlo Discrete Simulation Values for Personal \gls{databreach}}
+  \label{tab:discrete_persdatabreach_montecarlo}
+  \begin{center}
+\begin{tabular}{@{}>{\centering\arraybackslash}p{0.20\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth}}
+    \toprule
+Events
+  &6
+  &7
+  &8
+  &9
+  &10
+  &11\\
+    \midrule
+Likelihood
+  &4.0\%
+  &4.0\%
+  &4.1\%
+  &4.5\%
+  &4.3\%
+  &4.4\%\\
+    \bottomrule \end{tabular}
+\begin{tabular}{@{}>{\centering\arraybackslash}p{0.20\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth}}
+    \toprule
+Events
+  &12
+  &13
+  &14
+  &15
+  &16
+  &17\\
+    \midrule
+Likelihood
+  &4.0\%
+  &4.0\%
+  &4.3\%
+  &4.2\%
+  &3.9\%
+  &4.0\%\\
+    \bottomrule \end{tabular}
+\begin{tabular}{@{}>{\centering\arraybackslash}p{0.20\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth}}
+    \toprule
+Events
+  &18
+  &19
+  &20
+  &21
+  &22
+  &23\\
+    \midrule
+Likelihood
+  &4.1\%
+  &3.8\%
+  &4.3\%
+  &4.6\%
+  &4.3\%
+  &3.7\%\\
+    \bottomrule \end{tabular}
+\begin{tabular}{@{}>{\centering\arraybackslash}p{0.20\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.10\linewidth}}
+    \toprule
+Events
+  &24
+  &25
+  &26
+  &27
+  &28
+  &29\\
+    \midrule
+Likelihood
+  &4.2\%
+  &4.1\%
+  &4.3\%
+  &4.1\%
+  &4.3\%
+  &4.1\%\\
+    \bottomrule \end{tabular}
+    \end{center}
+  \raggedright{A\index{Monte Carlo simulation} Monte Carlo simulation was run using a discrete distribution.  We bounded the simulation between 6 and 29 events.  We assigned an approximately 4.2\% likelihood to each bin.  A representative 10{,}000-iteration simulation produced the percentages shown above, with no unused event bins.}
+\end{table}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%  PHISHING %%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection{Phishing}\label{sec:phishing}
+\subsubsection{Lower Bound Computation}
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 1 & 0 & 1 & 1 & 1 & 1\\
+\$0 &\$0 &\$0 &\$0 &\$0 &\$0 &\$0 
+\end{bmatrix}.
+\]
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+3 & \cdots & 3\\
+\$0 & \cdots &\$0
+\end{bmatrix}.
+\]
+  \[
+\bar{X}_{\text{American Samoa}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{American Samoa},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{American Samoa}}^{(\text{scaled count})}\\
+\bar{X}_{\text{American Samoa}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+3\\
+\$0
+\end{bmatrix}.
+\]
+\subsubsection{Upper Bound Computation}
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+2,059 & 3,302 & \cdots & 2,041\\
+\$11,073,447 &\$8,864,419  & \cdots &\$14,628,440 
+\end{bmatrix}.
+\]
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+9 & 15 & \cdots & 15\\
+\$48,402 &\$40,268 & \cdots &\$64,505 
+\end{bmatrix}.
+\]
+\[
+\bar{X}_{\text{California}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{California},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{California}}^{(\text{scaled count})}\\
+\bar{X}_{\text{California}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+12\\
+\$46,695
+\end{bmatrix}.
+\]
+\subsubsection{Monte Carlo Simulations for Likelihood and Impact}
+\begin{figure}[H]
+  \centering
+  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/discrete_phishing_count.png}}}
+  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a discrete distribution to spread random instances between confidence intervals taken from the means of seven year samples. We bounded between 3 and 12 possible \gls{phishing} events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
+  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
+  }
+  \label{fig:screenshot-montecarlo-phishing-count-discrete}
+\end{figure}
+When we computed the upper and lower bounds, we recognized that a normal distribution would not fit well for forecasting likelihood.  We took the mean of the sample from American Samoa for the lower bound (3); we took the mean from the sample from California for the upper bound (12); we had a separation of 9 units.  Therefore, we switched to a discrete model with all 10 options sharing an equal likelihood.
+\begin{table}[H]
+  \centering
+  \caption{Monte Carlo Discrete Simulation Values for \gls{phishing}}
+  \label{tab:discrete_phishing_montecarlo}
+  \begin{center}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}}
+    \toprule
+Events
+&3
+&4
+&5
+&6
+&7\\
+    \midrule
+Likelihood    
+&10.4\%
+&9.9\%
+&9.7\%
+&10.0\%
+&10.1\%\\
+    \bottomrule \end{tabular}
+\begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}}
+    \toprule
+Events    
+    &8
+    &9
+    &10
+    &11
+    &12\\
+    \midrule
+Likelihood
+&10.2\%
+&10.1\%
+&9.9\%
+&9.9\%
+&9.9\%\\
+    \bottomrule \end{tabular}
+    \end{center}
+  \raggedright{A\index{Monte Carlo simulation} Monte Carlo simulation was run using a discrete distribution.  We bounded the simulation between 3 and 12 events.  We assigned a 10\% likelihood to each bin.  The resulting distribution showed the effect of randomness on each possible outcome.}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%  RANSOMWARE %%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection{Ransomware}\label{sec:ransomware}
+\begin{figure}[H]
+  \centering
+  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_ransomware.png}}}
+  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations to spread random instances between confidence intervals taken from means of a seven year sample. We bounded between 0 and 1 possible \gls{ransomware} events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} \gls{cybercrime} counts respectively.}
+  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
+  }
+  \label{fig:screenshot-montecarlo-ransomware-count-histo}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/count_ransomware_percentile.png}}}
+  \caption{A\index{Monte Carlo simulation} Monte Carlo simulation suggests that there is a 50\% probability that 0.5 or more\index{ransomware} ransomware events will occur within the \index{sample} sample.  This unusual result is because the confidence bounds are between 0 and 1.  We interpret this as a 50\% probability that one malware event will occur. \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
+  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
+  }
+  \label{fig:screenshot-montecarlo-ransomware-count-percent}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%  EXTORTION %%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection{Extortion}\label{sec:extortion}
+\subsubsection{Lower Bound Computation}
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+2 & 1 & \cdots & 2\\
+\$0 & \$0 & \cdots & \$7
+\end{bmatrix}.
+\]
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+6 & \cdots & 7.62\\
+\$0 & \cdots & \$300
+\end{bmatrix}.
+\]
+  \[
+\bar{X}_{\text{American Samoa}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{American Samoa},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{American Samoa}}^{(\text{scaled count})}\\
+\bar{X}_{\text{American Samoa}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+5.60\\
+\$300
+\end{bmatrix}.
+\]
+\subsubsection{Upper Bound Computation}
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+2{,}257 & 2{,}054 & \cdots & 4{,}746\\
+\$2{,}413{,}243 & \$1{,}725{,}544 & \cdots & \$22
+\end{bmatrix}.
+\]
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+10 & 9 & \cdots & 22.33\\
+\$10{,}692.26 & \$7{,}560.81 & \cdots & \$2{,}331.31
+\end{bmatrix}.
+\]
+\[
+\bar{X}_{\text{California}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{California},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{California}}^{(\text{scaled count})}\\
+\bar{X}_{\text{California}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+26.48\\
+\$43{,}167.06
+\end{bmatrix}.
+\]
+\subsubsection{Monte Carlo Simulations for Likelihood and Impact}
+\begin{figure}[H]
+  \centering
+  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/discrete_extortion_count.png}}}
+  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a discrete distribution to spread random instances between upper and lower bounds taken from the means of seven year samples. We bounded between 6 and 26 possible \index{extortion}extortion events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The means of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
+  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, CISSP, \url{www.linkedin.com/in/derekbrink}. March 2023.}
+  }
+  \label{fig:screenshot-montecarlo-extortion-count-discrete}
+\end{figure}
+When we computed the upper and lower bounds, we recognized that a normal distribution would not fit well for forecasting likelihood.  We took the mean of the sample from American Samoa for the lower bound (5.60, rounded to 6); we took the mean from the sample from California for the upper bound (26.48, rounded to 26); we had a separation of 20 units.  Therefore, we switched to a discrete model with all 21 options sharing an equal likelihood.
+\begin{table}[H]
+  \centering
+  \caption{Monte Carlo Discrete Simulation Values for Extortion}
+  \label{tab:discrete_extortion_montecarlo}
+  \begin{center}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}}
+    \toprule
+Events
+    &6
+    &7
+    &8
+    &9
+    &10\\
+    \midrule
+Likelihood
+    &4.8\%
+    &4.8\%
+    &4.8\%
+    &4.8\%
+    &4.8\%\\
+    \bottomrule \end{tabular}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}}
+    \toprule
+Events
+    &11
+    &12
+    &13
+    &14
+    &15\\
+    \midrule
+Likelihood
+    &4.8\%
+    &4.8\%
+    &4.8\%
+    &4.8\%
+    &4.8\%\\
+    \bottomrule \end{tabular}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}}
+    \toprule
+Events
+    &16
+    &17
+    &18
+    &19
+    &20\\
+    \midrule
+Likelihood
+    &4.8\%
+    &4.8\%
+    &4.8\%
+    &4.8\%
+    &4.8\%\\
+    \bottomrule \end{tabular}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}}
+    \toprule
+Events
+    &21
+    &22
+    &23
+    &24
+    &25\\
+    \midrule
+Likelihood
+    &4.8\%
+    &4.8\%
+    &4.8\%
+    &4.8\%
+    &4.8\%\\
+    \bottomrule \end{tabular}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}}
+    \toprule
+Events
+    &26\\
+    \midrule
+Likelihood
+    &4.8\%\\
+    \bottomrule \end{tabular}
+    \end{center}
+  \raggedright{A\index{Monte Carlo simulation} Monte Carlo simulation was run using a discrete distribution.  We bounded the simulation between 6 and 26 events.  We assigned an approximately 4.8\% likelihood to each bin.  The resulting distribution showed the effect of randomness on each possible outcome.}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%  IPR %%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection{Intellectual Property Rights (\gls{ipr})}\label{sec:ipr}
+\subsubsection{Lower Bound Computation}
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & \cdots & 0 & \cdots & 0\\
+\$0 & \cdots & \$0 & \cdots & \$0
+\end{bmatrix}.
+\]
+% Columns represent years 2016, \cdots, 2017, \cdots, 2022 for American Samoa IPR/Counterfeit.
+% Raw counts: 2016=0, 2017=0, 2022=0.  Raw dollars: 2016=\$0, 2017=\$0, 2022=\$0.
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & \cdots & 0 & \cdots & 0\\
+\$0 & \cdots & \$0 & \cdots & \$0
+\end{bmatrix}.
+\]
+% Per-capita scaled to Chattanooga population: 2016=0, 2017=0, 2022=0 victims; dollars: all \$0.
+\[
+\bar{X}_{\text{American Samoa}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{American Samoa},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{American Samoa}}^{(\text{scaled count})}\\
+\bar{X}_{\text{American Samoa}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0.43\\
+\$0
+\end{bmatrix}.
+\]
+% Mean of 7-year scaled counts (0,0,0,0,0,3,0) = 3/7 = 0.43.  All dollar values = \$0.
+\subsubsection{Upper Bound Computation}
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+383 & \cdots & 399 & \cdots & 318\\
+\$1{,}946{,}413 & \cdots & \$1{,}750{,}437 & \cdots & \$1
+\end{bmatrix}.
+\]
+% Columns represent years 2016, \cdots, 2017, \cdots, 2022 for California IPR/Counterfeit.
+% Raw counts: 2016=383, 2017=399, 2022=318.
+% Raw state losses: 2016=\$1,946,413; 2017=\$1,750,437; 2022=\$1 (data anomaly in source report).
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & \cdots & 1 & \cdots & 1\\
+\$5{,}082 & \cdots & \$4{,}387 & \cdots & \$734
+\end{bmatrix}.
+\]
+% Per-capita scaled to Chattanooga population:
+% 2016=1 victim, \$5,082; 2017=1 victim, \$4,387; 2022=1 victim, \$734.
+\[
+\bar{X}_{\text{California}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{California},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{California}}^{(\text{scaled count})}\\
+\bar{X}_{\text{California}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+1.29\\
+\$5{,}199
+\end{bmatrix}.
+\]
+% Mean of 7-year scaled counts (1,1,1,1,2,2,1) = 9/7 = 1.29.
+% Mean of 7-year scaled losses (\$5082+\$4387+\$4879+\$9228+\$6663+\$5422+\$734)/7 = \$5,199.
+\subsubsection{Monte Carlo Simulations for Likelihood and Impact}
+\begin{figure}[H]
+  \centering
+  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/binary_ipr_count.png}}}
+  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a \gls{binary} distribution to
+  spread random instances between upper and lower bounds taken from the means of seven year samples.
+  We bounded between 0 and 1 possible \index{intellectual property rights} intellectual property rights
+  (\gls{ipr}) events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the
+  City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data
+  from \index{American Samoa} American Samoa and\index{California} California.  The means of those
+  rates were used to set upper and lower bounds with \index{American Samoa} American Samoa
+  and\index{California} California representing low and high \index{cybercrime} \gls{cybercrime} counts
+  respectively.}
+  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E.\ Brink, \gls{cissp},
+  \url{www.linkedin.com/in/derekbrink}. March 2023.}
+  }
+  \label{fig:screenshot-montecarlo-ipr-count-binary}
+\end{figure}
+
+When we computed the upper and lower bounds, we recognized that a normal distribution would not fit
+well for forecasting likelihood.  We took the mean of the sample from American Samoa for the lower
+bound (0.43); we took the mean from the sample from California for the upper bound (1.29); we had a
+separation of 0.86 units.  Because the confidence bounds are between 0 and 1, we used a \gls{binary} model.
+A \gls{binary} distribution assigns a probability to 0 or 1 events occurring.  We set the probability of
+one \gls{ipr}/Counterfeit event at approximately 71.4\%---the midpoint between the lower bound probability
+(0.43) and the upper bound probability (capped at 1.0).
+
+\begin{table}[H]
+  \centering
+  \caption{Monte Carlo \gls{binary} Simulation Values for Intellectual Property Rights (\gls{ipr})}
+  \label{tab:binary_ipr_montecarlo}
+  \begin{center}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.30\linewidth} >{\centering\arraybackslash}
+  p{0.15\linewidth} >{\centering\arraybackslash}
+  p{0.15\linewidth}}
+    \toprule
+Events  & 0 & 1\\
+    \midrule
+Likelihood  & 27.6\% & 72.5\%\\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+  \raggedright{A\index{Monte Carlo simulation} Monte Carlo simulation was run using a \gls{binary}
+  distribution.  We bounded the simulation between 0 and 1 events.  We assigned approximately a
+  71.4\% probability to one event occurring.  The resulting distribution showed the effect of
+  randomness; the simulation produced 0 events 27.6\% of the time and 1 event 72.5\% of the time.}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%  IDENTITY THEFT %%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection{Identity Theft}\label{sec:identitytheft}
+\subsubsection{Lower Bound Computation}
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & \cdots & 0 & \cdots & 2\\
+\$0 & \cdots & \$0 & \cdots & \$600
+\end{bmatrix}.
+\]
+% Columns represent years 2016, \cdots, 2017, \cdots, 2022 for American Samoa Identity Theft.
+% Raw counts: 2016=0, 2017=0, 2022=2.  Raw dollars: 2016=$0, 2017=$0, 2022=$600.
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & \cdots & 0 & \cdots & 8\\
+\$0 & \cdots & \$0 & \cdots & \$2{,}100
+\end{bmatrix}.
+\]
+% Per-capita scaled to Chattanooga population: 2016=0, 2017=0, 2022=8 victims; dollars: 2016=$0, 2017=$0, 2022=$2,100.
+  \[
+\bar{X}_{\text{American Samoa}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{American Samoa},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{American Samoa}}^{(\text{scaled count})}\\
+\bar{X}_{\text{American Samoa}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+2\\
+\$300
+\end{bmatrix}.
+\]
+\subsubsection{Upper Bound Computation}
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+2{,}368 & \cdots & 2{,}609 & \cdots & 2{,}854\\
+\$17{,}862{,}807 & \cdots & \$10{,}216{,}795 & \cdots & \$27{,}903{,}539
+\end{bmatrix}.
+\]
+% Columns represent years 2016, \cdots, 2017, \cdots, 2022 for California Identity Theft.
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+10 & \cdots & 11 & \cdots & 13\\
+\$75{,}434 & \cdots & \$43{,}076 & \cdots & \$127{,}101
+\end{bmatrix}.
+\]
+\[
+\bar{X}_{\text{California}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{California},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{California}}^{(\text{scaled count})}\\
+\bar{X}_{\text{California}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+12\\
+\$118{,}823
+\end{bmatrix}.
+\]
+\subsubsection{Monte Carlo Simulations for Likelihood and Impact}
+\begin{figure}[H]
+  \centering
+  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/discrete_idtheft_count.png}}}
+  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a discrete distribution to spread random instances between confidence intervals taken from the means of seven year samples. We bounded between 2 and 12 possible \index{identity theft}identity theft events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The means of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
+  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
+  }
+  \label{fig:screenshot-montecarlo-idtheft-count-discrete}
+\end{figure}
+When we computed the upper and lower bounds, we recognized that a normal distribution would not fit well for forecasting likelihood.  We took the mean of the sample from American Samoa for the lower bound (2); we took the mean from the sample from California for the upper bound (12); we had a separation of 10 units.  Therefore, we switched to a discrete model with all 11 options sharing an equal likelihood.
+\begin{table}[H]
+  \centering
+  \caption{Monte Carlo Discrete Simulation Values for Identity Theft}
+  \label{tab:discrete_idtheft_montecarlo}
+  \begin{center}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}}
+    \toprule
+Events
+&2
+&3
+&4
+&5
+&6
+&7\\
+    \midrule
+Likelihood    
+&8.9\%
+&9.5\%
+&9.1\%
+&8.8\%
+&9.4\%
+&9.7\%\\
+    \bottomrule \end{tabular}
+\begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}}
+    \toprule
+Events    
+    &8
+    &9
+    &10
+    &11
+    &12\\
+    \midrule
+Likelihood
+&9.1\%
+&9.4\%
+&8.6\%
+&8.3\%
+&9.2\%\\
+    \bottomrule \end{tabular}
+    \end{center}
+  \raggedright{A\index{Monte Carlo simulation} Monte Carlo simulation was run using a discrete distribution.  We bounded the simulation between 2 and 12 events.  We assigned a $\approx$9.1\% likelihood to each bin.  The resulting distribution showed the effect of randomness on each possible outcome.}
+\end{table}
+
+%%%%%%%%%%%%%%  BUSINESS EMAIL COMPROMISE %%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection{Business Email Compromise}\label{sec:bec}
+\subsubsection{Lower Bound Computation}
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 0 & \cdots & 2\\
+\$0 &\$0 & \cdots &\$960 
+\end{bmatrix}.
+\]
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{American Samoa}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{American Samoa}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 0 & \cdots & 8\\
+\$0 & \$0 & \cdots &\$3{,}360
+\end{bmatrix}.
+\]
+  \[
+\bar{X}_{\text{American Samoa}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{American Samoa},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{American Samoa}}^{(\text{scaled count})}\\
+\bar{X}_{\text{American Samoa}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+4\\
+\$13{,}851
+\end{bmatrix}.
+\]
+\subsubsection{Upper Bound Computation}
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+2{,}155 & 2{,}429 & \cdots & 3{,}269\\
+\$69{,}208{,}381 &\$106{,}225{,}791  & \cdots &\$439{,}425{,}357 
+\end{bmatrix}.
+\]
+\[
+\begin{bmatrix}
+\mathbf{x}_{\text{California}}^{(\text{count scaled to sample population})}\\
+\mathbf{x}_{\text{California}}^{(\text{dollars scaled to sample population})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+9 & 11 & \cdots & 15\\
+\$289{,}037 &\$481{,}055 & \cdots &\$2{,}016{,}329 
+\end{bmatrix}.
+\]
+\[
+\bar{X}_{\text{California}}^{(m)}
+= \frac{1}{N}\sum_{i=1}^{N} X_{\text{California},i}^{(m)},
+\]
+\\
+\[
+\qquad
+m \in \{\text{scaled count},\text{scaled dollars}\}
+\]
+\[
+\begin{bmatrix}
+\bar{X}_{\text{California}}^{(\text{scaled count})}\\
+\bar{X}_{\text{California}}^{(\text{scaled dollars})}
+\end{bmatrix}
+=
+\begin{bmatrix}
+13\\
+\$784{,}561
+\end{bmatrix}.
+\]
+\subsubsection{Monte Carlo Simulations for Likelihood and Impact}
+\begin{figure}[H]
+  \centering
+  \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/discrete_bec_count.png}}}
+  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a discrete distribution to spread random instances between confidence intervals taken from the means of seven year samples. We bounded between 4 and 13 possible \index{business email compromise}business email compromise events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The means of those rates were used to set lower and upper bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} \gls{cybercrime} counts respectively.}
+  \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
+  }
+  \label{fig:screenshot-montecarlo-bec-count-discrete}
+\end{figure}
+When we computed the upper and lower bounds, we recognized that a normal distribution would not fit well for forecasting likelihood.  We took the mean of the sample from American Samoa for the lower bound (4); we took the mean from the sample from California for the upper bound (13); we had a separation of 9 units.  Therefore, we switched to a discrete model with all 10 options sharing an equal likelihood.
+\begin{table}[H]
+  \centering
+  \caption{Monte Carlo Discrete Simulation Values for Business Email Compromise}
+  \label{tab:discrete_bec_montecarlo}
+  \begin{center}
+  \begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}}
+    \toprule
+Events
+&4
+&5
+&6
+&7
+&8\\
+    \midrule
+Likelihood    
+&9.4\%
+&10.3\%
+&10.2\%
+&9.7\%
+&9.8\%\\
+    \bottomrule \end{tabular}
+\begin{tabular}{@{}>{\centering\arraybackslash}
+  p{0.20\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth} >{\centering\arraybackslash}
+  p{0.10\linewidth}}
+    \toprule
+Events    
+    &9
+    &10
+    &11
+    &12
+    &13\\
+    \midrule
+Likelihood
+&9.9\%
+&10.1\%
+&10.6\%
+&9.9\%
+&10.1\%\\
+    \bottomrule \end{tabular}
+    \end{center}
+  \raggedright{A\index{Monte Carlo simulation} Monte Carlo simulation was run using a discrete distribution.  We bounded the simulation between 4 and 13 events.  We assigned a 10\% likelihood to each bin.  The resulting distribution showed the effect of randomness on each possible outcome.}
+\end{table}
 
 \section{Discussion}
 
@@ -5155,8 +6178,6 @@ C.  URLs – FreeBSD man pages for above. \\
 
 %----------------------------------------------------------------------------------------
 \markchapterendnotes
-
-
 
 
 \backmatter
