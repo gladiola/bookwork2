@@ -1673,7 +1673,7 @@ Likelihood
 \end{figure}
 %%%%%%%%%%%%%%%%%%%% PERSONAL DATA BREACH %%%%%%%%%%%%%%%%%%%%
 \newpage
-\subsection{Personal Data Breach}
+\subsection{Personal Data Breach}\label{sec:persdatabreach}
 \subsubsection{Lower Bound Computation}
 \[
 \begin{bmatrix}
@@ -2045,7 +2045,7 @@ Likelihood
 
 %%%%%%%%%%%%%%%%%%%%  PHISHING %%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\subsection{Phishing}
+\subsection{Phishing}\label{sec:phishing}
 \subsubsection{Lower Bound Computation}
 \[
 \begin{bmatrix}
@@ -2217,7 +2217,7 @@ Likelihood
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%  RANSOMWARE %%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\subsection{Ransomware}
+\subsection{Ransomware}\label{sec:ransomware}
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/histogram_ransomware.png}}}
@@ -2436,7 +2436,7 @@ Likelihood
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%  EXTORTION %%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\subsection{Extortion}
+\subsection{Extortion}\label{sec:extortion}
 \subsubsection{Lower Bound Computation}
 \[
 \begin{bmatrix}
@@ -2841,7 +2841,7 @@ Likelihood
 %%%%%%%%%%%%%%%%%%%%  IPR %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%  INTELLECTUAL PROPERTY RIGHTS (IPR) %%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\subsection{Intellectual Property Rights (\gls{ipr})}
+\subsection{Intellectual Property Rights (\gls{ipr})}\label{sec:ipr}
 \subsubsection{Lower Bound Computation}
 \[
 \begin{bmatrix}
@@ -3030,7 +3030,7 @@ Likelihood  & 27.6\% & 72.5\%\\
 
 %%%%%%%%%%%%%%%%%%%%  IDENTITY THEFT %%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\subsection{Identity Theft}
+\subsection{Identity Theft}\label{sec:identitytheft}
 \subsubsection{Lower Bound Computation}
 \[
 \begin{bmatrix}
@@ -3208,7 +3208,7 @@ Likelihood
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%  BUSINESS EMAIL COMPROMISE %%%%%%%%%%%%%%%%%%%%
 \newpage
-\subsection{Business Email Compromise}
+\subsection{Business Email Compromise}\label{sec:bec}
 \subsubsection{Lower Bound Computation}
 \[
 \begin{bmatrix}
@@ -3868,6 +3868,58 @@ One of the reasons could be the ramifications of the attacks and their flow into
 attacks could also flow in other directions like credential stuffing attacks or passive surveillance. In credential stuffing, the known business email address might be reused in later follow-on attacks to other systems.  If an attacker chooses a victim that's a key individual in the company, then passive surveillance of the email account might yield valuable information.  Several 10K reports cite top executives getting their accounts monitored through what looks like a combination of passive surviellance and \gls{bec}.
 
 These hint in the numbers can suggest to us an illustration that the overall classification of an \gls{attack} may not offer direct insight on all of the tactics and techniques that concern us as defenders.  This shouldn't surprise us; we see plenty of evidence in MITRE ATT\&CK, for instance, that most \gls{apt}s use several layers of \gls{ttps}.
+
+\section{Summary of Cybercrime Analysis References}
+
+Table~\ref{tab:cybercrime-anova-summary} provides a comprehensive reference guide for the quantitative analysis conducted on each cybercrime category in this chapter. This table summarizes the locations of lower bound computations, upper bound computations, Monte Carlo simulation figures, and simulation value tables that can be used for risk assessment after ANOVA validation.
+
+\begin{table}[H]
+  \centering
+  \caption{Summary of Cybercrime Category Analysis References}
+  \label{tab:cybercrime-anova-summary}
+  \small
+  \begin{tabular}{@{}p{0.18\linewidth}p{0.18\linewidth}p{0.18\linewidth}p{0.14\linewidth}p{0.22\linewidth}@{}}
+    \toprule
+    \textbf{Cybercrime Category} & \textbf{Object Type} & \textbf{Section Reference} & \textbf{Page Reference} & \textbf{Figure/Table Reference} \\
+    \midrule
+    Personal Data Breach & Lower Bound Computations & Section~\ref{sec:persdatabreach} & page~\pageref{sec:persdatabreach} & (subsection) \\
+    & Upper Bound Computations & Section~\ref{sec:persdatabreach} & page~\pageref{sec:persdatabreach} & (subsection) \\
+    & Figure for Monte Carlo simulation & Section~\ref{sec:persdatabreach} & page~\pageref{fig:screenshot-montecarlo-persdatabreach-count-discrete} & Figure~\ref{fig:screenshot-montecarlo-persdatabreach-count-discrete} \\
+    & Table of simulation values & Section~\ref{sec:persdatabreach} & page~\pageref{tab:discrete_persdatabreach_montecarlo} & Table~\ref{tab:discrete_persdatabreach_montecarlo} \\
+    \midrule
+    Phishing & Lower Bound Computations & Section~\ref{sec:phishing} & page~\pageref{sec:phishing} & (subsection) \\
+    & Upper Bound Computations & Section~\ref{sec:phishing} & page~\pageref{sec:phishing} & (subsection) \\
+    & Figure for Monte Carlo simulation & Section~\ref{sec:phishing} & page~\pageref{fig:screenshot-montecarlo-phishing-count-discrete} & Figure~\ref{fig:screenshot-montecarlo-phishing-count-discrete} \\
+    & Table of simulation values & Section~\ref{sec:phishing} & page~\pageref{tab:discrete_phishing_montecarlo} & Table~\ref{tab:discrete_phishing_montecarlo} \\
+    \midrule
+    Ransomware & Lower Bound Computations & Section~\ref{sec:ransomware} & page~\pageref{sec:ransomware} & (subsection) \\
+    & Upper Bound Computations & Section~\ref{sec:ransomware} & page~\pageref{sec:ransomware} & (subsection) \\
+    & Figure for Monte Carlo simulation & Section~\ref{sec:ransomware} & page~\pageref{fig:screenshot-montecarlo-ransomware-count-histo} & Figure~\ref{fig:screenshot-montecarlo-ransomware-count-histo} \\
+    & Table of simulation values & Section~\ref{sec:ransomware} & page~\pageref{sec:ransomware} & (see subsection) \\
+    \midrule
+    Extortion & Lower Bound Computations & Section~\ref{sec:extortion} & page~\pageref{sec:extortion} & (subsection) \\
+    & Upper Bound Computations & Section~\ref{sec:extortion} & page~\pageref{sec:extortion} & (subsection) \\
+    & Figure for Monte Carlo simulation & Section~\ref{sec:extortion} & page~\pageref{fig:screenshot-montecarlo-extortion-count-discrete} & Figure~\ref{fig:screenshot-montecarlo-extortion-count-discrete} \\
+    & Table of simulation values & Section~\ref{sec:extortion} & page~\pageref{tab:discrete_extortion_montecarlo} & Table~\ref{tab:discrete_extortion_montecarlo} \\
+    \midrule
+    IPR/Counterfeit & Lower Bound Computations & Section~\ref{sec:ipr} & page~\pageref{sec:ipr} & (subsection) \\
+    & Upper Bound Computations & Section~\ref{sec:ipr} & page~\pageref{sec:ipr} & (subsection) \\
+    & Figure for Monte Carlo simulation & Section~\ref{sec:ipr} & page~\pageref{fig:screenshot-montecarlo-ipr-count-binary} & Figure~\ref{fig:screenshot-montecarlo-ipr-count-binary} \\
+    & Table of simulation values & Section~\ref{sec:ipr} & page~\pageref{tab:binary_ipr_montecarlo} & Table~\ref{tab:binary_ipr_montecarlo} \\
+    \midrule
+    Identity Theft & Lower Bound Computations & Section~\ref{sec:identitytheft} & page~\pageref{sec:identitytheft} & (subsection) \\
+    & Upper Bound Computations & Section~\ref{sec:identitytheft} & page~\pageref{sec:identitytheft} & (subsection) \\
+    & Figure for Monte Carlo simulation & Section~\ref{sec:identitytheft} & page~\pageref{fig:screenshot-montecarlo-idtheft-count-discrete} & Figure~\ref{fig:screenshot-montecarlo-idtheft-count-discrete} \\
+    & Table of simulation values & Section~\ref{sec:identitytheft} & page~\pageref{tab:discrete_idtheft_montecarlo} & Table~\ref{tab:discrete_idtheft_montecarlo} \\
+    \midrule
+    BEC & Lower Bound Computations & Section~\ref{sec:bec} & page~\pageref{sec:bec} & (subsection) \\
+    & Upper Bound Computations & Section~\ref{sec:bec} & page~\pageref{sec:bec} & (subsection) \\
+    & Figure for Monte Carlo simulation & Section~\ref{sec:bec} & page~\pageref{fig:screenshot-montecarlo-bec-count-discrete} & Figure~\ref{fig:screenshot-montecarlo-bec-count-discrete} \\
+    & Table of simulation values & Section~\ref{sec:bec} & page~\pageref{tab:discrete_bec_montecarlo} & Table~\ref{tab:discrete_bec_montecarlo} \\
+    \bottomrule
+  \end{tabular}
+  \raggedright{\small Note: Each cybercrime category includes subsections for Lower Bound Computations and Upper Bound Computations derived from American Samoa (lower) and California (upper) data, scaled to the target population. Monte Carlo simulations were conducted with 10,000 iterations using appropriate distributions (discrete, binary, or normal) based on the data characteristics. The resulting figures and tables provide quantitative assessments of likelihood and impact for each category.}
+\end{table}
 
 \markchapterendnotes
 
