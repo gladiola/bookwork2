@@ -1,0 +1,43 @@
+# Fdb version 4
+["makeindex ut.idx"] 1788217277.13634 "ut.idx" "ut.ind" "ut" 1788217281.40806 0
+  "ut.idx" 1788217277.73631 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  (generated)
+  "ut.ilg"
+  "ut.ind"
+  (rewritten before read)
+["xelatex"] 1788217277.1537 "ut.tex" "ut.pdf" "ut" 1788217281.40823 2
+  "/etc/texmf/web2c/texmf.cnf" 1787519342.70849 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
+  "/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty" 1644112042 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
+  "/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty" 1572645307 1057 525c2192b5febbd8c1f662c9468335bb ""
+  "/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty" 1572645307 488 4565444a3e75e59cb2702dc42e18f482 ""
+  "/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex" 1655411236 19231 27205ee17aaa2902aea3e0c07a3cfc65 ""
+  "/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex" 1655411236 7677 9cb1a74d945bc9331f2181c0a59ff34a ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo" 1705352648 8288 82eb4750175f9093ea089563156e1d65 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/book.cls" 1705352648 23268 80674e17dbdc75804bd4d067e837600a ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty" 1705352648 5119 a04a8b68ab4f6ce800a41f7f8012a10e ""
+  "/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty" 1642282977 162076 2f6d31c4632f2730c57b9c0fda038e15 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg" 1532898934 549 c4adac819276241fea8eb79c5ab7b99e ""
+  "/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty" 1642282977 1656 7e824878bad4df5a3e8bba4e463d9126 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty" 1578002852 41601 9cf6c5257b1bc7af01a58859749dd37a ""
+  "/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty" 1654720880 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/imakeidx/imakeidx.sty" 1476653784 13125 125eef0f7c172b11b3241e78413dc5e1 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def" 1704491087 31815 935a376385ab1feff82e3d2187c4f47a ""
+  "/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty" 1705955748 6565 cfd9fd0a1d5f5ad985151778771ff7a9 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty" 1696969620 9327 c30c00c0072edba199ede5889311aaa9 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty" 1698436711 48766 0b93839be28e9744a24c45075c75b2e2 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty" 1686341992 32515 51caec75eda9c8890135f12f1a4eddc3 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1655411236 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
+  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1788217244 9050236 21d600d607944b2737a27d985ab6db87 ""
+  "ut.aux" 1788216800.6768 21483 d1b00c6e4340de62803cc29fefc88c64 "xelatex"
+  "ut.ind" 1788217277.14929 2381 6dae84e2cb48ac30d97371fb9b4f2c18 "makeindex ut.idx"
+  "ut.tex" 1788216800.6978 526727 15950e2b4dc2a81b18a32fffc0659863 ""
+  (generated)
+  "ut.aux"
+  "ut.idx"
+  "ut.log"
+  "ut.pdf"
+  (rewritten before read)

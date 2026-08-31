@@ -103,8 +103,8 @@ To support a Reconnaissance phase, we conducted four kinds of vulnerability scan
 Given some basic directions for running a Nessus scan,  \endnote{[2]} we ran a couple of them against the "Bad Store" VM.  A quick skimming of those results showed several OpenSSL-related vulnerabilities; that's when we began to see how many of the vulns might be historic.  Also listed was a vuln related to an old Apache version.   
 
 Copies of the Nessus scan results that we ran against the VM are available through these links:
-- PDF of Nessus scan using the Basic Network scan type\endnote{\url{https://github.com/gladiola/blackmagic/blob/Demo/agkistrodon/contortix/Penelope/BadStore/Nessus/salvage13_BasicNetwork_BadStore_ya6pkz.pdf}}
-- PDF of Nessus scan using the Web Application scan type\endnote{\url{https://github.com/gladiola/blackmagic/blob/Demo/agkistrodon/contortix/Penelope/BadStore/Nessus/salvage13_BadStore_Web_e1yrt4.pdf}}
+- PDF of Nessus scan using the Basic Network scan type\endnote{\protect\url{https://github.com/gladiola/blackmagic/blob/Demo/agkistrodon/contortix/Penelope/BadStore/Nessus/salvage13_BasicNetwork_BadStore_ya6pkz.pdf}}
+- PDF of Nessus scan using the Web Application scan type\endnote{\protect\url{https://github.com/gladiola/blackmagic/blob/Demo/agkistrodon/contortix/Penelope/BadStore/Nessus/salvage13_BadStore_Web_e1yrt4.pdf}}
 
 We clicked around some to look up those vulnerabilities on hyperlinks related to the Tenable website; while well supported with CVE documentation and the like, there were easier to exploit possibilties likely.  We continued with some of the other vuln scans like \texttt{nmap}.
 
@@ -515,7 +515,7 @@ Review of techniques to implement Nessus scans, <code>nmap</code> scans, and <co
 
 Review of techniques to implement substitution of values sent with Burp Suite, using <code>sqlmap</code> for SQLi, and understanding local and remote file inclusion attacks.
 
-\endnote{[4]}  \_\_\_\_\_.  "Bad Store 1.2.3," Vulnhub.  INTERNET:  \url{https://www.vulnhub.com/entry/badstore-123,41/}\endnote{\url{https://www.vulnhub.com/entry/badstore-123,41/}} 
+\endnote{[4]}  \_\_\_\_\_.  "Bad Store 1.2.3," Vulnhub.  INTERNET:  \url{https://www.vulnhub.com/entry/badstore-123,41/}\endnote{\protect\url{https://www.vulnhub.com/entry/badstore-123,41/}} 
 
 Website listing details of the VM on Vulnhub.  Includes screenshots and links to download URLs.
 
@@ -523,104 +523,104 @@ Website listing details of the VM on Vulnhub.  Includes screenshots and links to
 
 A description of Lockheed-Martin's Intusion Kill Chain.  Brotherston and Berlin applied their use case of an overview of a ransomware attack to the phases of Lockheed's kill chain.  Their definitions and example serves as guidance for the contstruction of our own, here.
 
-\endnote{[6]} \_\_\_\_\_. ``What is a potfile?'' Hashcat Wiki. INTERNET: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword} \endnote{Hashcat Wiki, ``What is a potfile?'', available at \url{https://hashcat.net/wiki/doku.php?id=frequently\_asked\_questions\#how\_can\_i\_show\_previously\_cracked\_passwords\_and\_output\_them\_in\_a\_specific\_format\_eg\_emailpassword}.}
-\endnote{[7]} \_\_\_\_\_. ``How can I show previously cracked passwords, and output them in a specific format (e.g. email:password)?'' Hashcat Wiki. INTERNET: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword} \endnote{\nolinkurl{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions\#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}}
+\endnote{[6]} \_\_\_\_\_. ``What is a potfile?'' Hashcat Wiki. INTERNET: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions\#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword} \endnote{Hashcat Wiki, ``What is a potfile?'', available at \url{https://hashcat.net/wiki/doku.php?id=frequently\_asked\_questions\#how\_can\_i\_show\_previously\_cracked\_passwords\_and\_output\_them\_in\_a\_specific\_format\_eg\_emailpassword}.}
+\endnote{[7]} \_\_\_\_\_. ``How can I show previously cracked passwords, and output them in a specific format (e.g. email:password)?'' Hashcat Wiki. INTERNET: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions\#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword} \endnote{\nolinkurl{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions\#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}}
 
-\endnote{[8]} \_\_\_\_\_. ``Hashcat reports "Status: Cracked", but did not print the hash value, and the outfile is empty. What happened?'' Hashcat Wiki. INTERNET: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#hashcat_reports_statuscracked_but_did_not_print_the_hash_value_and_the_outfile_is_empty_what_happened} \endnote{Hashcat Wiki FAQ, accessed online.}
-\endnote{[9]} Abouzeid, Halim.  "From SQL Injection to WebShell"  RSA.  INTERNET:  \url{https://community.rsa.com/community/products/netwitness/blog/2017/04/10/from-sql-injection-to-webshell}\endnote{\url{https://community.rsa.com/community/products/netwitness/blog/2017/04/10/from-sql-injection-to-webshell}}
+\endnote{[8]} \_\_\_\_\_. ``Hashcat reports "Status: Cracked", but did not print the hash value, and the outfile is empty. What happened?'' Hashcat Wiki. INTERNET: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions\#hashcat_reports_statuscracked_but_did_not_print_the_hash_value_and_the_outfile_is_empty_what_happened} \endnote{Hashcat Wiki FAQ, accessed online.}
+\endnote{[9]} Abouzeid, Halim.  "From SQL Injection to WebShell"  RSA.  INTERNET:  \url{https://community.rsa.com/community/products/netwitness/blog/2017/04/10/from-sql-injection-to-webshell}\endnote{\protect\url{https://community.rsa.com/community/products/netwitness/blog/2017/04/10/from-sql-injection-to-webshell}}
 
 Step by step tutorial on using \texttt{sqlmap} to pop a shell on a target box.  Shows both the use of automated exploits for JSP, ASP, and PHP, and also the use of uploading custom scripts.  
 
-\endnote{[10]} \_\_\_\_\_.  INTERNET:  \url{https://w00troot.blogspot.com/2017/05/getting-reverse-shell-from-web-shell.html}\endnote{\url{https://w00troot.blogspot.com/2017/05/getting-reverse-shell-from-web-shell.html}}
+\endnote{[10]} \_\_\_\_\_.  INTERNET:  \url{https://w00troot.blogspot.com/2017/05/getting-reverse-shell-from-web-shell.html}\endnote{\protect\url{https://w00troot.blogspot.com/2017/05/getting-reverse-shell-from-web-shell.html}}
 Some reverse shell script suggestions for various systems.  
 
-\endnote{[11]} \_\_\_\_\_.  INTERNET:  \url{https://www.darkmoreops.com/2014/08/28/use-sqlmap-sql-injection-hack-website-database/}\endnote{\url{https://www.darkmoreops.com/2014/08/28/use-sqlmap-sql-injection-hack-website-database/}}
+\endnote{[11]} \_\_\_\_\_.  INTERNET:  \url{https://www.darkmoreops.com/2014/08/28/use-sqlmap-sql-injection-hack-website-database/}\endnote{\protect\url{https://www.darkmoreops.com/2014/08/28/use-sqlmap-sql-injection-hack-website-database/}}
 A tutorial showing some \texttt{sqlmap} hacks by injection.  Includes another example of get a hashed password and crack it using a modified form of \texttt{hashcat}.
 
-\endnote{[12]} \_\_\_\_\_.  INTERNET:  \url{https://sneakerhax.com/tool-tips-sqlmap-with-post-requests/}\endnote{\url{https://sneakerhax.com/tool-tips-sqlmap-with-post-requests/}}
+\endnote{[12]} \_\_\_\_\_.  INTERNET:  \url{https://sneakerhax.com/tool-tips-sqlmap-with-post-requests/}\endnote{\protect\url{https://sneakerhax.com/tool-tips-sqlmap-with-post-requests/}}
 Tutorial showing some steps for using Burp Suite to pick up POST messages to injectable programs and modify them for use with \texttt{sqlmap}.
 
-\endnote{[13]}  INTERNET:  \url{https://dev.mysql.com/doc/refman/5.5/en/create-user.html}\endnote{\url{https://dev.mysql.com/doc/refman/5.5/en/create-user.html}}
+\endnote{[13]}  INTERNET:  \url{https://dev.mysql.com/doc/refman/5.5/en/create-user.html}\endnote{\protect\url{https://dev.mysql.com/doc/refman/5.5/en/create-user.html}}
 MySQL Handbook for a later version; commands similar to what's installed on the target box.  Commands for creating a new user with MySQL.
 
-\endnote{[14]}  INTERNET:  \url{https://dev.mysql.com/doc/refman/5.5/en/grant.html}\endnote{\url{https://dev.mysql.com/doc/refman/5.5/en/grant.html}}
+\endnote{[14]}  INTERNET:  \url{https://dev.mysql.com/doc/refman/5.5/en/grant.html}\endnote{\protect\url{https://dev.mysql.com/doc/refman/5.5/en/grant.html}}
 Commands for GRANT with MySQL.  Critical basic commands for setting privileges on an account with MySQL.
 
-\endnote{[15]}  INTERNET:  \url{https://stackoverflow.com/questions/1708409/how-to-start-mysql-with-skip-grant-tables}\endnote{\url{https://stackoverflow.com/questions/1708409/how-to-start-mysql-with-skip-grant-tables}}
+\endnote{[15]}  INTERNET:  \url{https://stackoverflow.com/questions/1708409/how-to-start-mysql-with-skip-grant-tables}\endnote{\protect\url{https://stackoverflow.com/questions/1708409/how-to-start-mysql-with-skip-grant-tables}}
 Stack Overflow post suggesting that skip grant tables might be overridden with reconfiguring some ini files.
 
-\endnote{[16]}  INTERNET:  \url{https://superuser.com/questions/1127299/how-to-restart-mysql-with-skip-grant-tables-if-you-cant-use-the-root-password}\endnote{\url{https://superuser.com/questions/1127299/how-to-restart-mysql-with-skip-grant-tables-if-you-cant-use-the-root-password}}
+\endnote{[16]}  INTERNET:  \url{https://superuser.com/questions/1127299/how-to-restart-mysql-with-skip-grant-tables-if-you-cant-use-the-root-password}\endnote{\protect\url{https://superuser.com/questions/1127299/how-to-restart-mysql-with-skip-grant-tables-if-you-cant-use-the-root-password}}
 Suggestion that bypassing the skip grant tables arguments can be used in a risky operation to reset the ROOT account password with MySQL.
 
-\endnote{[17]}  INTERNET:  \url{http://seclists.org/metasploit/2012/q3/40}\endnote{\url{http://seclists.org/metasploit/2012/q3/40}}
+\endnote{[17]}  INTERNET:  \url{http://seclists.org/metasploit/2012/q3/40}\endnote{\protect\url{http://seclists.org/metasploit/2012/q3/40}}
 Got turned on to \texttt{spool} for Metasploit commands.
 
-\endnote{[18]}  INTERNET: \url{http://www.guninski.com/modproxy1.html}\endnote{\url{http://www.guninski.com/modproxy1.html}}
+\endnote{[18]}  INTERNET: \url{http://www.guninski.com/modproxy1.html}\endnote{\protect\url{http://www.guninski.com/modproxy1.html}}
 Post on \texttt{mod\_proxy}
 
-\endnote{[19]}  INTERNET: \url{https://hack2rule.wordpress.com/2017/02/25/sql-injection-to-meterpreter/}\endnote{\url{https://hack2rule.wordpress.com/2017/02/25/sql-injection-to-meterpreter/}}
+\endnote{[19]}  INTERNET: \url{https://hack2rule.wordpress.com/2017/02/25/sql-injection-to-meterpreter/}\endnote{\protect\url{https://hack2rule.wordpress.com/2017/02/25/sql-injection-to-meterpreter/}}
 Blog post on using \texttt{sqlmap}, \texttt{Meterpreter}, \texttt{Burp} and others.
 
-\endnote{[20]}  INTERNET: \url{https://github.com/sqlmapproject/sqlmap/wiki/Usage}\endnote{\url{https://github.com/sqlmapproject/sqlmap/wiki/Usage}}
+\endnote{[20]}  INTERNET: \url{https://github.com/sqlmapproject/sqlmap/wiki/Usage}\endnote{\protect\url{https://github.com/sqlmapproject/sqlmap/wiki/Usage}}
 \texttt{sqlmap} github site explaining the usage of the arguments; man pages.
 
-\endnote{[21]}  INTERNET: \url{https://www.tutorialspoint.com/perl/perl_cgi.htm}\endnote{\url{https://www.tutorialspoint.com/perl/perl_cgi.htm}}
+\endnote{[21]}  INTERNET: \url{https://www.tutorialspoint.com/perl/perl_cgi.htm}\endnote{\protect\url{https://www.tutorialspoint.com/perl/perl_cgi.htm}}
 Tutorial on simple Perl CGI scripts.  These would have been the basis for some of our initial attempts to write scripts to the box.  
 
-\endnote{[22]}  Kamthan, Pankaj.  INTERNET: \url{https://www.irt.org/articles/js184/#origins_consequences}\endnote{\url{https://www.irt.org/articles/js184/#origins_consequences}}
+\endnote{[22]}  Kamthan, Pankaj.  INTERNET: \url{https://www.irt.org/articles/js184/\#origins_consequences}\endnote{\protect\url{https://www.irt.org/articles/js184/\#origins_consequences}}
 Article explaining some of the details of CGI security.  This looked like it would offer some good advice on setting up CGI scripts.
 
-\endnote{[23]}  INTERNET: \url{https://httpd.apache.org/docs/2.4/howto/cgi.html}\endnote{\url{https://httpd.apache.org/docs/2.4/howto/cgi.html}}
+\endnote{[23]}  INTERNET: \url{https://httpd.apache.org/docs/2.4/howto/cgi.html}\endnote{\protect\url{https://httpd.apache.org/docs/2.4/howto/cgi.html}}
 Apache documentation on setting up CGI with Apache 2.4.
 
-\endnote{[24]}  INTERNET: \url{https://www.techrepublic.com/article/get-it-done-installing-apache-web-server-on-linux/}\endnote{\url{https://www.techrepublic.com/article/get-it-done-installing-apache-web-server-on-linux/}}
+\endnote{[24]}  INTERNET: \url{https://www.techrepublic.com/article/get-it-done-installing-apache-web-server-on-linux/}\endnote{\protect\url{https://www.techrepublic.com/article/get-it-done-installing-apache-web-server-on-linux/}}
 An overview of instructions on how to install Apache 1.3.  This provided a quick reference on what might have been pertinent to the author of the VM when installing the web server we were attacking.
 
-\endnote{[25]}  INTERNET: \url{https://www.cybrary.it/forums/topic/how-to-bypass-error-403-forbidden/}\endnote{\url{https://www.cybrary.it/forums/topic/how-to-bypass-error-403-forbidden/}}
+\endnote{[25]}  INTERNET: \url{https://www.cybrary.it/forums/topic/how-to-bypass-error-403-forbidden/}\endnote{\protect\url{https://www.cybrary.it/forums/topic/how-to-bypass-error-403-forbidden/}}
 Forum posts on other people getting 403s.  No big surprises here; but some sound advice on a statement of the conditions.
 
-\endnote{[26]}  INTERNET: \url{https://www.cybrary.it/2015/05/summarizing-the-five-phases-of-penetration-testing/}\endnote{\url{https://www.cybrary.it/2015/05/summarizing-the-five-phases-of-penetration-testing/}}
+\endnote{[26]}  INTERNET: \url{https://www.cybrary.it/2015/05/summarizing-the-five-phases-of-penetration-testing/}\endnote{\protect\url{https://www.cybrary.it/2015/05/summarizing-the-five-phases-of-penetration-testing/}}
 Description of the five phases of pentesting.
 
-\endnote{[27]}  INTERNET: \url{https://www.offensive-security.com/metasploit-unleashed/scanner-http-auxiliary-modules/}\endnote{\url{https://www.offensive-security.com/metasploit-unleashed/scanner-http-auxiliary-modules/}}
+\endnote{[27]}  INTERNET: \url{https://www.offensive-security.com/metasploit-unleashed/scanner-http-auxiliary-modules/}\endnote{\protect\url{https://www.offensive-security.com/metasploit-unleashed/scanner-http-auxiliary-modules/}}
 Offensive Security's documentation on Metasploit's auxiliary modules.  Shows the modules in use, commonly adjusted settings, and a brief description of each.
 
-\endnote{[28]}  INTERNET: \url{https://www.rapid7.com/db/modules/auxiliary/scanner/ssl/openssl_heartbleed}\endnote{\url{https://www.rapid7.com/db/modules/auxiliary/scanner/ssl/openssl_heartbleed}}
+\endnote{[28]}  INTERNET: \url{https://www.rapid7.com/db/modules/auxiliary/scanner/ssl/openssl_heartbleed}\endnote{\protect\url{https://www.rapid7.com/db/modules/auxiliary/scanner/ssl/openssl_heartbleed}}
 Rapid7's description of an openssl\_heartbleed scanner in Metasploit.
 
-\endnote{[29]}  INTERNET: \url{https://www.trojanhorsesecurity.com/shellshock}\endnote{\url{https://www.trojanhorsesecurity.com/shellshock}}
+\endnote{[29]}  INTERNET: \url{https://www.trojanhorsesecurity.com/shellshock}\endnote{\protect\url{https://www.trojanhorsesecurity.com/shellshock}}
 Trojan Horse Security's description of a Shellshock scanner and exploit in Metasploit.
 
-\endnote{[30]}  INTERNET: \url{https://www.rapid7.com/db/modules/exploit/multi/http/apache_mod_cgi_bash_env_exec}\endnote{\url{https://www.rapid7.com/db/modules/exploit/multi/http/apache_mod_cgi_bash_env_exec}}
+\endnote{[30]}  INTERNET: \url{https://www.rapid7.com/db/modules/exploit/multi/http/apache_mod_cgi_bash_env_exec}\endnote{\protect\url{https://www.rapid7.com/db/modules/exploit/multi/http/apache_mod_cgi_bash_env_exec}}
 Rapid7's description of a Shellshock exploit in Metasploit.
 
-\endnote{[31]}  INTERNET: \url{https://bytebin.wordpress.com/2011/04/25/how-to-check-debian-boot-log-messages/}\endnote{\url{https://bytebin.wordpress.com/2011/04/25/how-to-check-debian-boot-log-messages/}}
+\endnote{[31]}  INTERNET: \url{https://bytebin.wordpress.com/2011/04/25/how-to-check-debian-boot-log-messages/}\endnote{\protect\url{https://bytebin.wordpress.com/2011/04/25/how-to-check-debian-boot-log-messages/}}
 Blog post on where to find Debian boot logs.  Useful notes when we were trying to locate BadStore VM's boot-up information.
 
-\endnote{[32]}  INTERNET: \url{https://www.cvedetails.com/vulnerability-list/vendor_id-185/product_id-316/version_id-31799/Mysql-Mysql-4.0.25.html}\endnote{\url{https://www.cvedetails.com/vulnerability-list/vendor_id-185/product_id-316/version_id-31799/Mysql-Mysql-4.0.25.html}}
+\endnote{[32]}  INTERNET: \url{https://www.cvedetails.com/vulnerability-list/vendor_id-185/product_id-316/version_id-31799/Mysql-Mysql-4.0.25.html}\endnote{\protect\url{https://www.cvedetails.com/vulnerability-list/vendor_id-185/product_id-316/version_id-31799/Mysql-Mysql-4.0.25.html}}
 Web page on some CVEs related to early versions of MySQL.
 
-\endnote{[33]}  INTERNET: \url{https://packetstormsecurity.com/files/128447/Apache-mod_cgi-Bash-Environment-Variable-Code-Injection.html}\endnote{\url{https://packetstormsecurity.com/files/128447/Apache-mod_cgi-Bash-Environment-Variable-Code-Injection.html}}
-Blog post outlining the source code for a custom Metasploit module to work against Apache mod_cgi Bash.
+\endnote{[33]}  INTERNET: \url{https://packetstormsecurity.com/files/128447/Apache-mod_cgi-Bash-Environment-Variable-Code-Injection.html}\endnote{\protect\url{https://packetstormsecurity.com/files/128447/Apache-mod_cgi-Bash-Environment-Variable-Code-Injection.html}}
+Blog post outlining the source code for a custom Metasploit module to work against Apache mod\_cgi Bash.
 
-\endnote{[34]}  INTERNET: \url{https://www.digitalocean.com/community/tutorials/how-to-use-passwd-and-adduser-to-manage-passwords-on-a-linux-vps}\endnote{\url{https://www.digitalocean.com/community/tutorials/how-to-use-passwd-and-adduser-to-manage-passwords-on-a-linux-vps}}
+\endnote{[34]}  INTERNET: \url{https://www.digitalocean.com/community/tutorials/how-to-use-passwd-and-adduser-to-manage-passwords-on-a-linux-vps}\endnote{\protect\url{https://www.digitalocean.com/community/tutorials/how-to-use-passwd-and-adduser-to-manage-passwords-on-a-linux-vps}}
 Tutorial on \texttt{/etc/passwd} that helped us understand what we saw when we downloaded a copy from BadStore.
 
-\endnote{[35]}  INTERNET: \url{https://www.tldp.org/LDP/sag/html/adduser.html}\endnote{\url{https://www.tldp.org/LDP/sag/html/adduser.html}}
+\endnote{[35]}  INTERNET: \url{https://www.tldp.org/LDP/sag/html/adduser.html}\endnote{\protect\url{https://www.tldp.org/LDP/sag/html/adduser.html}}
 Linux Documentation Project's page on how to add a user.
 
-\endnote{[36]}  INTERNET: \url{https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf}\endnote{\url{https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf}}
+\endnote{[36]}  INTERNET: \url{https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf}\endnote{\protect\url{https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf}}
 NIST documents includes descriptions of vulnerability scanning, penetration testing, password cracking, and other critical terms of applicable techniques.
 
-[//]: # (Hyperlinks)
+% Hyperlinks
 [1]:  ``
 [2]: ``
 [3]: ``
 [4]: \url{https://www.vulnhub.com/entry/badstore-123,41/}
 [5]: ``
-[6]: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#what_is_a_potfile}
-[7]: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}
-[8]: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions#hashcat_reports_statuscracked_but_did_not_print_the_hash_value_and_the_outfile_is_empty_what_happened}
+[6]: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions\#what_is_a_potfile}
+[7]: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions\#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}
+[8]: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions\#hashcat_reports_statuscracked_but_did_not_print_the_hash_value_and_the_outfile_is_empty_what_happened}
 [9]: \url{https://community.rsa.com/community/products/netwitness/blog/2017/04/10/from-sql-injection-to-webshell}
 [10]: \url{https://w00troot.blogspot.com/2017/05/getting-reverse-shell-from-web-shell.html}
 [11]: \url{https://www.darkmoreops.com/2014/08/28/use-sqlmap-sql-injection-hack-website-database/}
@@ -634,7 +634,7 @@ NIST documents includes descriptions of vulnerability scanning, penetration test
 [19]: \url{https://hack2rule.wordpress.com/2017/02/25/sql-injection-to-meterpreter/}
 [20]: \url{https://github.com/sqlmapproject/sqlmap/wiki/Usage}
 [21]: \url{https://www.tutorialspoint.com/perl/perl_cgi.htm}
-[22]: \url{https://www.irt.org/articles/js184/#origins_consequences}
+[22]: \url{https://www.irt.org/articles/js184/\#origins_consequences}
 [23]: \url{https://httpd.apache.org/docs/2.4/howto/cgi.html}
 [24]: \url{https://www.techrepublic.com/article/get-it-done-installing-apache-web-server-on-linux/}
 [25]: \url{https://www.cybrary.it/forums/topic/how-to-bypass-error-403-forbidden/}
