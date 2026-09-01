@@ -4,18 +4,18 @@
 
 \section{The Main Ideas}
 
-Many modern printed textbooks have adopted a layout with prominent 
-margins where small figures, tables, remarks and just about everything 
-else can be displayed. Arguably, this layout helps to organise the 
+Many modern printed \index{textbooks}textbooks have adopted a \index{layout}layout with prominent 
+\index{margins}margins where small \index{figures}figures, \index{tables}tables, remarks and just about everything 
+else can be displayed. Arguably, this \index{layout}layout helps to organise the 
 	discussion by separating the main text from the ancillary material, 
 	which at the same time is very close to the point in the text where 
 	it is referenced.
 
-This document does not aim to be an apology of wide margins, for there 
+This document does not aim to be an apology of wide \index{margins}margins, for there 
 are many better suited authors for this task; the purpose of all these 
 words is just to fill the space so that the reader can see how a book 
-written with the kaobook class looks like. Meanwhile, I shall also try 
-to illustrate the features of the class.
+written with the \index{kaobook class}kaobook class looks like. Meanwhile, I shall also try 
+to illustrate the features of the \index{class}class.
 
 The main ideas behind kaobook come from this 
 \href{https://3d.bk.tudelft.nl/ken/en/2016/04/17/a-1.5-column-layout-in-latex.html}{blog 
@@ -29,14 +29,14 @@ Another source of inspiration, as you may have noticed, is the
 \href{https://github.com/Tufte-LaTeX/tufte-latex}{Tufte-Latex Class}. 
 The fact that the design is similar is due to the fact that it is very 
 difficult to improve something which is already so good. However, I like 
-to think that this class is more flexible than Tufte-Latex. For 
-instance, I have tried to use only standard packages and to implement as 
+to think that this \index{class}class is more flexible than \index{Tufte-Latex}Tufte-Latex. For 
+instance, I have tried to use only \index{standard packages}standard packages and to implement as 
 little as possible from scratch;\sidenote{This also means that 
-understanding and contributing to the class development is made easier. 
+understanding and contributing to the \index{class development}class development is made easier. 
 Indeed, many things still need to be improved, so if you are interested, 
 check out the repository on github!} therefore, it should be pretty easy 
-to customise anything, provided that you read the documentation of the 
-package that provides that feature.
+to \index{customisation}customise anything, provided that you read the \index{documentation}documentation of the 
+\index{package}package that provides that feature.
 
 In this book I shall illustrate the main features of the class and 
 provide information about how to use and change things. Let us get 
@@ -45,22 +45,22 @@ started.
 \section{What This Class Does}
 \labsec{does}
 
-The \Class{kaobook} class focuses more about the document structure than 
-about the style. Indeed, it is a well-known \LaTeX\xspace principle that 
+The \Class{kaobook} class focuses more about the \index{document structure}document structure than 
+about the \index{style}style. Indeed, it is a well-known \LaTeX\xspace principle that 
 structure and style should be separated as much as possible (see also 
 \vrefsec{doesnot}). This means that this class will only provide 
-commands, environments and in general, the opportunity to do things, 
+\index{commands}commands, \index{environments}environments and in general, the opportunity to do things, 
 which the user may or may not use. Actually, some stylistic matters are 
-embedded in the class, but the user is able to customise them with ease.
+embedded in the class, but the user is able to \index{customisation}customise them with ease.
 
 The main features are the following:
 
 \begin{description}
-	\item[Page Layout] The text width is reduced to improve readability 
+	\item[Page Layout] The \index{text width}text width is reduced to improve \index{readability}readability 
 	and make space for the margins, where any sort of elements can be 
 	displayed.
 	\item[Chapter Headings] As opposed to Tufte-Latex, we provide a 
-	variety of chapter headings among which to choose; examples will be 
+	variety of \index{chapter headings}chapter headings among which to choose; examples will be 
 	seen in later chapters.
 	\item[Page Headers] They span the whole page, margins included, and, 
 	in twoside mode, display alternatively the chapter and the section 
@@ -69,29 +69,29 @@ The main features are the following:
 	\item[Matters] The commands \Command{frontmatter}, 
 	\Command{mainmatter} and \Command{backmatter} have been redefined in 
 	order to have automatically wide margins in the main matter, and 
-	narrow margins in the front and back matters. However, the page 
+	narrow margins in the front and back matters. However, the \index{page style}page 
 	style can be changed at any moment, even in the middle of the 
 	document.
 	\item[Margin text] We provide commands \Command{sidenote} and 
 	\Command{marginnote} to put text in the 
-	margins.\sidenote[][-2mm]{Sidenotes (like this!) are numbered while 
-	marginnotes are not}
-	\item[Margin figs/tabs] A couple of useful environments is 
+	margins.\sidenote[][-2mm]{\index{Sidenotes}Sidenotes (like this!) are numbered while 
+	\index{marginnotes}marginnotes are not}
+	\item[Margin figs/tabs] A couple of useful \index{environments}environments is 
 	\Environment{marginfigure} and \Environment{margintable}, which, not 
-	surprisingly, allow you to put figures and tables in the margins 
+	surprisingly, allow you to put \index{figures}figures and \index{tables}tables in the margins 
 	(\cfr \reffig{marginmonalisa}).
 	\item[Margin toc] Finally, since we have wide margins, why don't add 
-	a little table of contents in them? See \Command{margintoc} for 
+	a little \acrfull{tocLabel} in them? See \Command{margintoc} for 
 	that.
 	\item[Hyperref] \Package{hyperref} is loaded and by default we try 
-	to add bookmarks in a sensible way; in particular, the bookmarks 
+	to add \index{bookmarks}bookmarks in a sensible way; in particular, the bookmarks 
 	levels are automatically reset at \Command{appendix} and 
-	\Command{backmatter}. Moreover, we also provide a small package to 
-	ease the hyperreferencing of other parts of the text.
+	\Command{backmatter}. Moreover, we also provide a small \index{package}package to 
+	ease the \index{hyperreferencing}hyperreferencing of other parts of the text.
 	\item[Bibliography] We want the reader to be able to know what has 
 	been cited without having to go to the end of the document every 
-	time, so citations go in the margins as well as at the end, as in 
-	Tufte-Latex. Unlike that class, however, you are free to customise 
+	time, so \index{citations}citations go in the margins as well as at the end, as in 
+	Tufte-Latex. Unlike that class, however, you are free to \index{customisation}customise 
 	the citations as you wish.
 \end{description}
 
@@ -102,9 +102,9 @@ The main features are the following:
 	\labfig{marginmonalisa}
 \end{marginfigure}
 
-The order of the title pages, table of contents and preface can be 
+The order of the title pages, \acrshort{tocLabel} and preface can be 
 easily changed, as in any \LaTeX\ document. In addition, the class is 
-based on \KOMAScript's \Class{scrbook}, therefore it inherits all the 
+based on \index{KOMAScript}KOMAScript's \Class{scrbook}, therefore it inherits all the 
 goodies of that.
 
 \section{What This Class Does Not Do}
@@ -119,30 +119,30 @@ left out. These special packages are located in the \Path{style}
 directory, which is organised as follows:
 
 \begin{description}
-	\item[kao.sty] This package contains the most important definitions 
-	of macros and specifications of page layout. It is the heart of the 
+	\item[kao.sty] This \index{package}package contains the most important definitions 
+	of \index{macros}macros and specifications of \index{page layout}page layout. It is the heart of the 
 	\Class{kaobook}.
-	\item[kaobiblio.sty] Contains commands to add citations and 
-	customise the bibliography.
-	\item[packages.sty] Loads additional packages to decorate the 
+	\item[kaobiblio.sty] Contains \index{commands}commands to add \index{citations}citations and 
+	\index{customisation}customise the \index{bibliography}bibliography.
+	\item[packages.sty] Loads additional \index{packages}packages to decorate the 
 	writing with special contents (for instance, the \Package{listing} 
-	package is loaded here as it is not required in every book). There 
-	are also defined some useful commands to print the same words always 
-	in the same way, \eg latin words in italics or \Package{packages} in 
+	\index{package}package is loaded here as it is not required in every book). There 
+	are also defined some useful \index{commands}commands to print the same words always 
+	in the same way, \eg \index{latin words}latin words in italics or \Package{packages} in 
 	verbatim.
-	\item[kaorefs.sty] Some useful commands to manage labeling and 
-	referencing, again to ensure that the same elements are referenced 
+	\item[kaorefs.sty] Some useful \index{commands}commands to manage \index{labeling}labeling and 
+	\index{referencing}referencing, again to ensure that the same elements are referenced 
 	always in a consistent way.
-	\item[environments.sty] Provides special environments, like boxes. 
-	Both simple and complex environments are available; by complex we 
+	\item[environments.sty] Provides special \index{environments}environments, like \index{boxes}boxes. 
+	Both simple and complex \index{environments}environments are available; by complex we 
 	mean that they are endowed with a counter, floating and can be put 
 	in a special table of contents.\sidenote[][-2mm]{See 
 	\vrefch{mathematics} for some examples.}
-	\item[theorems.sty] The style of mathematical environments. 
-	Actually, there are two such packages: one is for plain theorems,
+	\item[theorems.sty] The \index{style}style of mathematical \index{environments}environments. 
+	Actually, there are two such \index{packages}packages: one is for plain \index{theorems}theorems,
 	\ie the theorems are printed in plain text; the other uses 
 	\Package{mdframed} to draw a box around theorems. You can plug the 
-	most appropriate style into its document.
+	most appropriate \index{style}style into its document.
 \end{description}
 
 \marginnote[2mm]{The audacious users might feel tempted to edit some of 
@@ -150,17 +150,17 @@ these packages. I'd be immensely happy if they sent me examples of what
 they have been able to do!}
 
 In the rest of the book, I shall assume that the reader is not a novice 
-in the use of \LaTeX, and refer to the documentation of the packages 
+in the use of \LaTeX, and refer to the \index{documentation}documentation of the \index{packages}packages 
 used in this class for things that are already explained there. 
 Moreover, I assume that the reader is willing to make minor edits to the 
-provided packages for styles, environments and commands, if he or she 
+provided \index{packages}packages for \index{styles}styles, \index{environments}environments and \index{commands}commands, if he or she 
 does not like the default settings.
 
 \section{How to Use This Class}
 
-Either if you are using the template from 
+Either if you are using the \index{template}template from 
 \href{http://latextemplates.org/template/kaobook}{latextemplates}, or if 
-you cloned the GitHub 
+you cloned the \index{GitHub repository}GitHub 
 \href{https://www.github.com/fmarotta/kaobook}{repository}, there are 
 infinite ways to use the \Class{kaobook} class in practice, but we will 
 discuss only two of them. The first is to find the \Path{main.tex} file 
@@ -171,7 +171,7 @@ file, which is a cleaned-up version of the \Path{main.tex}; even if you
 choose the second way, you may find it useful to draw inspiration from 
 the \Path{main.tex} file.
 
-To compile the document, assuming that its name is \Path{main.tex}, you 
+To \index{compilation}compile the document, assuming that its name is \Path{main.tex}, you 
 will have to run the following sequence of commands:
 
 \begin{lstlisting}[style=kaolstplain,linewidth=1.5\textwidth]
@@ -184,7 +184,7 @@ pdflatex main # Compile template again
 pdflatex main # Compile template again
 \end{lstlisting}
 
-You may need to compile the template some more times in order for some 
-errors to disappear. For any support requests, please ask a question on 
+You may need to \index{compilation}compile the \index{template}template some more times in order for some 
+\index{errors}errors to disappear. For any support requests, please ask a question on 
 \url{tex.stackexchange.org} with the tag \enquote{kaobook}, open an 
 issue on GitHub, or contact the author via e-mail.
