@@ -1,0 +1,344 @@
+\documentclass[10pt,twoside]{book}
+%\usepackage[cam,center,width=6.5in,height=9.5in]{crop}
+\usepackage[paperwidth=6in,paperheight=9in,
+inner=0.95in,outer=0.6in,top=0.75in,bottom=0.85in,
+bindingoffset=0.12in]{geometry}
+\pdfpagewidth=6in
+\pdfpageheight=9in
+
+% Use system fonts (XeLaTeX/LuaLaTeX)
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{imakeidx}
+\makeindex[intoc,columns=2]
+\setmainfont{Liberation Serif}
+\setmonofont[
+    Scale=1.0
+]{Liberation Mono}
+\newfontfamily\headingfont{Liberation Sans}
+\newfontfamily\chapterfont{Liberation Sans}
+
+
+\titleformat{\section}
+  {\headingfont\Large\bfseries}
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\headingfont\large\bfseries}
+  {\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+  {\headingfont\normalsize\bfseries}
+  {\thesubsubsection}{1em}{}
+
+% Microtypography for tighter, book-like setting
+\usepackage{microtype}
+\linespread{0.98}
+
+\usepackage{seqsplit}
+%----------------------------------------------------------------------------------------
+%	Titles and Headings Code
+%----------------------------------------------------------------------------------------
+\titleformat{\chapter}[hang]{\chapterfont\large}{\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{-10pt}{10pt}
+
+% Simple headers/footers
+\usepackage{fancyhdr}
+\setlength{\headheight}{21pt} % at least 20.68404pt; 21pt is safe
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE,LO]{\small\itshape \leftmark}
+
+\usepackage{float}
+%---------- ENDNOTES -----------------
+% Endnotes: inline [n], collected and printed at end organized by chapter
+\usepackage{endnotes}
+
+% Mark in the text: [n]
+\renewcommand{\enoteformat}{\textnormal{[\theenmark]}}
+
+% Ensure correct marks in text
+\makeatletter
+\renewcommand{\@endnotemark}{\textnormal{[\theenmark]}}
+
+% Counter to track chapter sections
+\newcounter{endnotechapter}
+\setcounter{endnotechapter}{0}
+
+% Storage for chapter titles
+\newcommand{\currentchaptertitle}{}
+
+% Separator command (written to .ent file, processed during print)
+\newcommand{\enotechapsep}[2]{%
+  \ifnum#1>0
+    \subsection*{Chapter #1: #2}%
+  \else
+    \subsection*{#2}%
+  \fi
+}
+
+% Mark end of chapter: just reset counter for next chapter
+\newcommand{\markchapterendnotes}{%
+  % Reset counter for next chapter
+  \setcounter{endnote}{0}%
+  \stepcounter{endnotechapter}%
+}
+
+% Print all endnotes organized by chapter (called once at end)
+\newcommand{\printallendnotesbychapter}{%
+  \cleardoublepage
+  \chapter*{Endnotes}%
+  \markboth{ENDNOTES}{ENDNOTES}%
+  \addcontentsline{toc}{chapter}{Endnotes}%
+  \renewcommand{\enoteheading}{}% Suppress default heading
+  \theendnotes
+}
+
+% Force opening of .ent file at document start to ensure all chapter writes succeed
+\AtBeginDocument{%
+  \immediate\openout\@enotes=\jobname.ent\relax
+}
+
+\makeatother
+
+%--------- Figures ----------------
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage[section]{placeins}
+%--------- Math ----------------
+\usepackage{amsmath}
+
+
+\usepackage[toc,nonumberlist,nopostdot]{glossaries}
+\makeglossaries
+\input{glossary.tex}
+
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black]{hyperref}
+
+% Hook into \chapter to capture chapter titles and write separator
+% Must be done after hyperref is loaded to work with hyperref's patches
+% Since titlesec is loaded and redefines \chapter, we patch \@chapter and \@schapter instead
+\makeatletter
+
+% Patch \@chapter (numbered chapters) to write separator BEFORE the chapter processes
+\let\orig@@chapter\@chapter
+\renewcommand{\@chapter}[2][]{%
+  % #1 is optional TOC entry, #2 is the chapter title
+  \renewcommand{\currentchaptertitle}{#2}%
+  % Write separator to endnotes file
+  \immediate\write\@enotes{\string\enotechapsep{\the\numexpr\value{chapter}+1}{\detokenize\expandafter{\currentchaptertitle}}}%
+  % Call original \@chapter
+  \orig@@chapter[#1]{#2}%
+}
+
+% Patch \@schapter (starred/unnumbered chapters) to write separator
+\let\orig@@schapter\@schapter
+\renewcommand{\@schapter}[1]{%
+  \renewcommand{\currentchaptertitle}{#1}%
+  % Write separator with chapter number 0 for unnumbered chapters
+  \immediate\write\@enotes{\string\enotechapsep{0}{\detokenize\expandafter{\currentchaptertitle}}}%
+  % Call original \@schapter
+  \orig@@schapter{#1}%
+}
+
+\makeatother
+
+\usepackage{xurl}
+% Paragraph and list compactness
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+\usepackage{enumitem}
+\setlist{nosep}
+
+% Figure captions compact
+\usepackage[font=small,labelfont=bf]{caption}
+\renewcommand{\figurename}{Fig.}
+
+% Code style approximating K&R (monospaced, compact)
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{array} % optional for >{\raggedright\arraybackslash}
+\lstset{
+  basicstyle=\ttfamily\small,
+  keywordstyle=\bfseries,
+  commentstyle=\itshape\color{gray},
+  numbers=left, numberstyle=\tiny\color{gray}, numbersep=6pt,
+  stepnumber=5,
+  frame=none, xleftmargin=2em,
+  tabsize=4,  showstringspaces=false,
+  columns=fullflexible,
+    breaklines=true,
+  breakatwhitespace=false,
+  keepspaces=true
+}
+\lstdefinelanguage{KRC}{language=C}
+
+
+% makecell for table header adjustments
+\usepackage{makecell}
+\setcellgapes{2pt}
+\makegapedcells
+%\renewcommand{\arraystretch}{1.15}
+
+
+
+
+% Title page simple
+\title{{\chapterfont Coding and Configuration \\for Secure Systems in BSDs}}
+\author{John O\string'Keefe-Odom}
+\date{}
+
+\begin{document}
+
+
+\cleardoublepage \thispagestyle{empty} \vspace*{\fill} \begin{center} {\Huge\bfseries Coding and Configuration \\for Secure Systems in BSDs} \end{center} \vspace*{\fill} \cleardoublepage
+\maketitle
+\frontmatter
+\input{chapters/dedication.tex}
+\tableofcontents
+
+%----------------------------------------------------------------------------------------
+%	Author
+%----------------------------------------------------------------------------------------
+
+\input{chapters/author.tex}
+
+%----------------------------------------------------------------------------------------
+%	Foreword
+%----------------------------------------------------------------------------------------
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+Your preface text goes here...
+
+%----------------------------------------------------------------------------------------
+%	Acknowledgements
+%----------------------------------------------------------------------------------------
+
+\input{chapters/acknowledgements.tex}
+
+%----------------------------------------------------------------------------------------
+%	Introduction
+%----------------------------------------------------------------------------------------
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+Your introduction text goes here...
+
+\markchapterendnotes
+\mainmatter
+
+
+%Chapter 1: Introduction
+%Background and Content
+%Problem Statement
+%Project Objectives
+%Scope of Work
+%Variables
+%Assumptions, Risks, and Limitations
+%Significance of the Project
+
+%Chapter 2: Literature Review
+%Overview of Existing Solutions or Approaches
+%Comparisons of Technologies or Frameworks
+%Gaps in the Literature
+
+%Chapter 3: Methodology
+%Technical Research Questions
+%System Architecture / Design
+%Implementation Plan
+%Testing and Evaluation Strategy
+%Data Procurement and Logging
+%Ethical and Legal Considerations
+%Limitations
+%Changes To Initial Project Goals
+
+%Chapter 4: Analysis
+%Data Sources
+%Risk Registry
+%Protocols and Standard in the Field
+%Mobile Geotagging
+%RED Application
+%Accessing RED
+%Data Governance
+%Data Visualization
+
+%Chapter 5: Findings
+%Impact on Industry
+%Use of Sequential Numbers
+%Changes in Governance
+%Legislative Impact
+%Reduce Legacy Impact
+%Use Cases for Adoption of RED
+%Future of the RED Project
+%Enhance RED Data
+
+%\begin{figure}[H]
+%  \centering
+%  \caption{}
+%  \label{fig:}
+%\end{figure}
+%----------------------------------------------------------------------------------------
+% CHAPTER
+%----------------------------------------------------------------------------------------
+
+\input{chapters/anecdotes_journey.tex}
+
+%----------------------------------------------------------------------------------------
+% CHAPTER
+%----------------------------------------------------------------------------------------
+
+\input{chapters/towards_experimentation.tex}
+
+%----------------------------------------------------------------------------------------
+% CHAPTER
+%----------------------------------------------------------------------------------------
+
+\input{chapters/basic_pentesting.tex}
+
+%----------------------------------------------------------------------------------------
+% CHAPTER
+%----------------------------------------------------------------------------------------
+
+\input{chapters/bad_store.tex}
+
+%----------------------------------------------------------------------------------------
+% CHAPTER
+%----------------------------------------------------------------------------------------
+\input{chapters/baseline_quantitative.tex}
+
+%----------------------------------------------------------------------------------------
+% CHAPTER
+%----------------------------------------------------------------------------------------
+
+\input{chapters/bastion_host.tex}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER
+%----------------------------------------------------------------------------------------
+
+\input{chapters/amnesiac_systems.tex}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER
+%----------------------------------------------------------------------------------------
+
+\input{chapters/disconnected_login.tex}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER
+%----------------------------------------------------------------------------------------
+
+\input{chapters/tape_operations.tex}
+
+\backmatter
+\printallendnotesbychapter
+\printglossary[title=Glossary]
+\markboth{GLOSSARY}{GLOSSARY}
+\printindex
+\markboth{INDEX}{INDEX}
+
+\end{document}
