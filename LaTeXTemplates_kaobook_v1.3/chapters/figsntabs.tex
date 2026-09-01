@@ -8,20 +8,20 @@
 
 \section{Normal Figures and Tables}
 
-Figures and tables can be inserted just like in any standard 
-\LaTeX\xspace document. The \Package{graphicx} package is already loaded 
-and configured in such a way that the figure width is equal to the 
-textwidth and the height is adjusted in order to maintain the original 
-aspect ratio. As you may have imagined, the captions will be 
-positioned\ldots well, in the margins. This is achieved with the help of 
-the \Package{floatrow} package.
+\index{Figures}Figures and \index{tables}tables can be inserted just like in any standard 
+\LaTeX\xspace document. The \Package{graphicx} \index{package}package is already loaded 
+and configured in such a way that the \index{figure width}figure width is equal to the 
+textwidth and the \index{height}height is adjusted in order to maintain the original 
+\index{aspect ratio}aspect ratio. As you may have imagined, the \index{captions}captions will be 
+positioned\ldots well, in the \index{margins}margins. This is achieved with the help of 
+the \Package{floatrow} \index{package}package.
 
 Here is a picture of Mona Lisa (\reffig{normalmonalisa}), as an example. 
-The captions are formatted as the margin- and the side-notes; If you 
-want to change something about captions you can use the command 
-\Command{captsetup} from the \Package{caption} package. Remember that if 
-you want to reference a figure, the label must come \emph{after} the 
-caption!
+The \index{captions}captions are formatted as the \index{margin-notes}margin- and the \index{side-notes}side-notes; If you 
+want to change something about \index{captions}captions you can use the \index{command}command 
+\Command{captsetup} from the \Package{caption} \index{package}package. Remember that if 
+you want to \index{reference}reference a \index{figure}figure, the \index{label}label must come \emph{after} the 
+\index{caption}caption!
 
 \begin{figure}[hb]
 	\includegraphics[width=0.45\textwidth]{monalisa}
@@ -29,12 +29,12 @@ caption!
 	\labfig{normalmonalisa}
 \end{figure}
 
-While the format of the caption is managed by \Package{caption}, its 
-position is handled by the \Package{floatrow} package. Achieving this 
+While the format of the \index{caption}caption is managed by \Package{caption}, its 
+\index{position}position is handled by the \Package{floatrow} \index{package}package. Achieving this 
 result has been quite hard, but now I am pretty satisfied. In two-side 
-mode, the captions are printed in the correct margin.
+mode, the \index{captions}captions are printed in the correct \index{margin}margin.
 
-Tables can be inserted just as easily as figures, as exemplified by the 
+\index{Tables}Tables can be inserted just as easily as \index{figures}figures, as exemplified by the 
 following code:
 
 \begin{lstlisting}[caption={Caption of a listing.}]
@@ -78,9 +78,9 @@ I don't have much else to say, so I will just insert some blind text.
 
 \section{Margin Figures and Tables}
 
-Marginfigures can be inserted with the environment 
+\index{Marginfigures}Marginfigures can be inserted with the \index{environment}environment 
 \Environment{marginfigure}. In this case, the whole picture is confined 
-to the margin and the caption is below it. \reffig{marginmonalisa} is 
+to the \index{margin}margin and the \index{caption}caption is below it. \reffig{marginmonalisa} is 
 obtained with something like this:
 
 \begin{lstlisting}[caption={Another caption.}]
@@ -91,13 +91,13 @@ obtained with something like this:
 \end{marginfigure}
 \end{lstlisting}
 
-There is also the \Environment{margintable} environment, of which 
+There is also the \Environment{margintable} \index{environment}environment, of which 
 \reftab{anotheruseless} is an example. Notice how you can place the 
-caption above the table by just placing the \Command{caption} command 
-before beginning the \Environment{tabular} environment. Usually, figure 
-captions are below, while table captions are above. This rule is also 
-respected for normal figures and tables: the captions are always on the 
-side, but for figure they are aligned to the bottom, while for tables to 
+\index{caption}caption above the \index{table}table by just placing the \Command{caption} \index{command}command 
+before beginning the \Environment{tabular} \index{environment}environment. Usually, \index{figure captions}figure 
+captions are below, while \index{table captions}table captions are above. This rule is also 
+respected for normal \index{figures}figures and \index{tables}tables: the \index{captions}captions are always on the 
+side, but for \index{figure}figure they are aligned to the bottom, while for \index{tables}tables to 
 the top.
 
 \begin{margintable}
