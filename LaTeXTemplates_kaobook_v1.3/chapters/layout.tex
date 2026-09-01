@@ -5,31 +5,31 @@
 
 \section{Headings}
 
-So far, in this document I used two different styles for the chapter 
-headings: one has the chapter name, a rule and, in the margin, the 
-chapter number; the other has an image at the top of the page, and the 
+So far, in this document I used two different \index{styles}styles for the \index{chapter headings}chapter 
+headings: one has the chapter name, a \index{rule}rule and, in the \index{margin}margin, the 
+chapter number; the other has an \index{image}image at the top of the page, and the 
 chapter title is printed in a box (like for this chapter). There is one 
-additional style, which I used only in the \nrefch{appendix}; there, the chapter title is enclosed in two 
-horizontal rules, and the chapter number (or letter, in the case of the 
+additional \index{style}style, which I used only in the \nrefch{appendix}; there, the chapter title is enclosed in two 
+horizontal \index{rules}rules, and the chapter number (or letter, in the case of the 
 appendix) is above it.\sidenote{To be honest, I do not think that mixing 
-heading styles like this is a wise choice, but in this document I did it 
+\index{heading styles}heading styles like this is a wise choice, but in this document I did it 
 only to show you how they look.}
 
-Every book is unique, so it makes sense to have different styles from 
+Every book is unique, so it makes sense to have different \index{styles}styles from 
 which to choose. Actually, it would be awesome if whenever a 
-\Class{kao}-user designs a new heading style, he or she added it to the 
-three styles already present, so that it will be available for new users 
+\Class{kao}-user designs a new \index{heading style}heading style, he or she added it to the 
+three \index{styles}styles already present, so that it will be available for new users 
 and new books.
 
-The choice of the style is made simple by the \Command{setchapterstyle} 
-command. It accepts one option, the name of the style, which can be: 
+The choice of the \index{style}style is made simple by the \Command{setchapterstyle} 
+\index{command}command. It accepts one \index{option}option, the name of the \index{style}style, which can be: 
 \enquote{plain}, \enquote{kao}, \enquote{bar}, or 
 \enquote{lines}.\sidenote{Plain is the default \LaTeX\xspace title 
-style; the other ones are self explanatory.} If instead you want the 
-image style, you have to use the command \Command{setchapterimage}, 
-which accepts the path to the image as argument; you can also provide an 
-optional parameter in square brackets to specify the height of the 
-image. \Command{setchapterimage} automatically sets the chapter style to 
+\index{style}style; the other ones are self explanatory.} If instead you want the 
+\index{image style}image style, you have to use the \index{command}command \Command{setchapterimage}, 
+which accepts the path to the \index{image}image as argument; you can also provide an 
+optional \index{parameter}parameter in square brackets to specify the \index{height}height of the 
+\index{image}image. \Command{setchapterimage} automatically sets the \index{chapter style}chapter style to 
 \enquote{bar} for that chapter (and also for subsequent chapters).
 
 Let us make some examples. In this book, I begin a normal chapter with 
@@ -41,16 +41,16 @@ the lines:
 \labch{title}
 \end{lstlisting}
 
-In Line 1 I choose the style for the title to be \enquote{kao}. Then, I 
-specify that I want the margin toc. The rest is ordinary administration 
-in \LaTeX, except that I use my own \Command{labch} to label the 
+In Line 1 I choose the \index{style}style for the title to be \enquote{kao}. Then, I 
+specify that I want the \index{margin toc}margin toc. The rest is ordinary administration 
+in \LaTeX, except that I use my own \Command{labch} to \index{label}label the 
 chapter. Actually, the \Command{setchapterpreamble} is a standard 
 \KOMAScript\xspace one, so I invite you to read about it in the KOMA
-documentation. Once the chapter style is set, it holds until you change 
+\index{documentation}documentation. Once the \index{chapter style}chapter style is set, it holds until you change 
 it.\sidenote{The \Command{margintoc} has to be specified at every 
 chapter. Perhaps in the future this may change; it all depends on how 
 this feature will be welcomed by the users, so keep in touch with me if 
-you have preferences!} Whenever I want to start a chapter with an image, 
+you have preferences!} Whenever I want to start a chapter with an \index{image}image, 
 I simply write:
 
 \begin{lstlisting}
@@ -60,24 +60,24 @@ I simply write:
 \labch{catchy}
 \end{lstlisting}
 
-If you prefer, you can also specify the style at the beginning of the 
-main document, and that style will hold until you change it again.
+If you prefer, you can also specify the \index{style}style at the beginning of the 
+main \index{document}document, and that \index{style}style will hold until you change it again.
 
 \section{Headers \& Footers}
 
-Headers and footers in \KOMAScript\xspace are handled by the 
-\Package{scrlayer-scrpage} package. There are two basic style: 
+\index{Headers}Headers and \index{footers}footers in \KOMAScript\xspace are handled by the 
+\Package{scrlayer-scrpage} \index{package}package. There are two basic \index{style}style: 
 \enquote{scrheadings} and \enquote{plain.scrheadings}. The former is 
-used for normal pages, whereas the latter is used in title pages (those 
+used for normal pages, whereas the latter is used in \index{title pages}title pages (those 
 where a new chapter starts, for instance) and, at least in this book, in 
-the front matter. At any rate, the style can be changed with the 
-\Command{pagestyle} command, \eg 
+the \index{front matter}front matter. At any rate, the \index{style}style can be changed with the 
+\Command{pagestyle} \index{command}command, \eg 
 \lstinline|\pagestyle{plain.scrheadings}|.
 
-In both styles, the footer is completely empty. In plain.scrheadings,
-also the header is absent (otherwise it wouldn't be so plain\ldots), but 
-in the normal style the design is reminiscent of the \enquote{kao} style
-for chapter titles.
+In both \index{styles}styles, the \index{footer}footer is completely empty. In plain.scrheadings,
+also the \index{header}header is absent (otherwise it wouldn't be so plain\ldots), but 
+in the normal \index{style}style the \index{design}design is reminiscent of the \enquote{kao} \index{style}style
+for \index{chapter titles}chapter titles.
 
 \begin{kaobox}[frametitle=To Do]
 The \Option{twoside} class option is still unstable and may lead to 
@@ -87,24 +87,24 @@ unexpected behaviours. As always, any help will be greatly appreciated.
 \section{Table of Contents}
 
 Another important part of a book is the table of contents. By default, 
-in \Class{kaobook} there is an entry for everything: list of figures, 
-list of tables, bibliographies, and even the table of contents itself. 
+in \Class{kaobook} there is an \index{entry}entry for everything: \index{list of figures}list of figures, 
+\index{list of tables}list of tables, \index{bibliographies}bibliographies, and even the table of contents itself. 
 Not everybody might like this, so we will provide a description of the 
 changes you need to do in order to enable or disable each of these 
-entries. In the following \reftab{tocentries}, each item corresponds to 
-a possible entry in the \acrshort{tocLabel}, and its description is the 
-command you need to provide to have such entry. These commands are 
+\index{entries}entries. In the following \reftab{tocentries}, each item corresponds to 
+a possible \index{entry}entry in the \acrshort{tocLabel}, and its description is the 
+\index{command}command you need to provide to have such \index{entry}entry. These \index{commands}commands are 
 specified in the attached \href{style/style.sty}{style 
 package},\sidenote{In the same file, you can also choose the titles of 
-these entries.} so if you don't want the entries, just comment the 
+these \index{entries}entries.} so if you don't want the \index{entries}entries, just comment the 
 corresponding lines.
 
-Of course, some packages, like those for glossaries and indices, will 
-try to add their own entries.\marginnote{In a later section, we will see 
-how you can define your own floating environment, and endow it with an 
-entry in the \acrshort{tocLabel}.} In such cases, you have to follow the 
-instructions specific to that package. Here, since we have talked about 
-glossaries and notations in \refch{references}, we will briefly see how
+Of course, some \index{packages}packages, like those for \index{glossaries}glossaries and \index{indices}indices, will 
+try to add their own \index{entries}entries.\marginnote{In a later section, we will see 
+how you can define your own \index{floating environment}floating environment, and endow it with an 
+\index{entry}entry in the \acrshort{tocLabel}.} In such cases, you have to follow the 
+\index{instructions}instructions specific to that \index{package}package. Here, since we have talked about 
+\index{glossaries}glossaries and notations in \refch{references}, we will briefly see how
 to configure them.
 
 \begin{table}
@@ -122,26 +122,26 @@ to configure them.
 \end{tabular}
 \end{table}
 
-For the \Package{glossaries} package, use the \enquote{toc} option when 
+For the \Package{glossaries} \index{package}package, use the \enquote{toc} \index{option}option when 
 you load it: \lstinline|\usepackage[toc]{glossaries}|. For 
-\Package{nomencl}, pass the \enquote{intoc} option at the moment of 
-loading the package. Both \Package{glossaries} and \Package{nomencl} are 
+\Package{nomencl}, pass the \enquote{intoc} \index{option}option at the moment of 
+loading the \index{package}package. Both \Package{glossaries} and \Package{nomencl} are 
 loaded in the attached \href{style/packages.sty}{\enquote{packages} 
 package}.
 
-Additional configuration of the table of contents can be performed 
-through the packages \Package{etoc}, which is loaded because it is 
-needed for the margintocs, or the more traditional \Package{tocbase}. 
-Read the respective documentations if you want to be able to change the 
-default \acrshort{tocLabel} style.\sidenote[][*-1]{(And please, send me 
+Additional \index{configuration}configuration of the table of contents can be performed 
+through the \index{packages}packages \Package{etoc}, which is loaded because it is 
+needed for the \index{margintocs}margintocs, or the more traditional \Package{tocbase}. 
+Read the respective \index{documentations}documentations if you want to be able to change the 
+default \acrshort{tocLabel} \index{style}style.\sidenote[][*-1]{(And please, send me 
 a copy of what you have done, I'm so curious!)}
 
 \section{Paper Size}
 
-Recent versions of Kaobook support paper sizes different from the
-default A4. It is possible to pass the name of the paper as an option
-to the class, as we are accustomed for any other \LaTeX\ class. For
-example, the class option \Option{b5paper} would set the paper size
+Recent versions of Kaobook support \index{paper sizes}paper sizes different from the
+default A4. It is possible to pass the name of the \index{paper}paper as an \index{option}option
+to the \index{class}class, as we are accustomed for any other \LaTeX\ \index{class}class. For
+example, the \index{class option}class option \Option{b5paper} would set the \index{paper size}paper size
 to the B5 format.
 
 We also support the paper sizes specified in
@@ -185,24 +185,24 @@ description at the beginning of the documentclass instruction:
 
 \section{Page Layout}
 
-Besides the page style, you can also change the width of the content of 
-a page. This is particularly useful for pages dedicated to part titles, 
-where having the 1.5-column layout might be a little awkward, or for 
-pages where you only put figures, where it is important to exploit all 
+Besides the \index{page style}page style, you can also change the \index{width}width of the content of 
+a page. This is particularly useful for pages dedicated to \index{part titles}part titles, 
+where having the 1.5-column \index{layout}layout might be a little awkward, or for 
+pages where you only put \index{figures}figures, where it is important to exploit all 
 the available space.
 
-In practice, there are two layouts: \enquote{wide} and \enquote{margin}. 
-The former suppresses the margins and allocates the full page for 
-contents, while the latter is the layout used in most of the pages of 
-this book, including this one. The wide layout is also used 
-automatically in the front and back matters.
+In practice, there are two \index{layouts}layouts: \enquote{wide} and \enquote{margin}. 
+The former suppresses the \index{margins}margins and allocates the full page for 
+contents, while the latter is the \index{layout}layout used in most of the pages of 
+this book, including this one. The wide \index{layout}layout is also used 
+automatically in the \index{front matter}front and \index{back matters}back matters.
 
 \marginnote{Sometimes it is desirable to increase the width for just one 
 or a few paragraphs; the \Environment{widepar} environment does that: 
 wrap your paragraphs in this environment, and they will occupy the full 
 width of the page.}
 
-To change page layout, use the \Command{pagelayout} command. For 
+To change \index{page layout}page layout, use the \Command{pagelayout} \index{command}command. For 
 example, when I start a new part, I write:
 
 \begin{lstlisting}
@@ -252,25 +252,25 @@ been decreased by 10mm.
 
 \section{Numbers \& Counters}
 
-In this short section we shall see how dispositions, sidenotes and 
-figures are numbered in the \Class{kaobook} class.
+In this short section we shall see how \index{dispositions}dispositions, \index{sidenotes}sidenotes and 
+\index{figures}figures are \index{numbered}numbered in the \Class{kaobook} \index{class}class.
 
-By default, dispositions are numbered up to the section in \Class{kaobook}
+By default, \index{dispositions}dispositions are \index{numbered}numbered up to the section in \Class{kaobook}
 and up to the subsection in \Class{kaohandt}. This can be changed by
-passing the option \Option{secnumdepth} to\Class{kaobook} or
+passing the \index{option}option \Option{secnumdepth} to\Class{kaobook} or
 \Class{kaohandt} (e.g. 1 corresponds to section and 2 corresponds to
 subsections).
 
-The sidenotes counter is the same across all the document, but if you 
+The \index{sidenotes counter}sidenotes counter is the same across all the document, but if you 
 want it to reset at each chapter, just uncomment the line
 
 \begin{lstlisting}[style=kaolstplain]
 \counterwithin*{sidenote}{chapter}
 \end{lstlisting}
 
-in the \Package{styles/style.sty} package provided by this class.
+in the \Package{styles/style.sty} \index{package}package provided by this class.
 
-Figure and Table numbering is also per-chapter; to change that, use 
+\index{Figure numbering}Figure and \index{Table numbering}Table numbering is also per-chapter; to change that, use 
 something like:
 
 \begin{lstlisting}[style=kaolstplain]
@@ -280,7 +280,7 @@ something like:
 \section{White Space}
 
 One of the things that I find most hard in \LaTeX\xspace is to finely 
-tune the white space around objects. There are not fixed rules, each 
+tune the \index{white space}white space around objects. There are not fixed rules, each 
 object needs its own adjustment. Here we shall see how some spaces are 
 defined at the moment in this class.\marginnote{Attention! This section 
 may be incomplete.}
