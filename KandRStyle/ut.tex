@@ -128,7 +128,7 @@ bindingoffset=0.12in]{geometry}
   % #1 is optional TOC entry, #2 is the chapter title
   \renewcommand{\currentchaptertitle}{#2}%
   % Write separator to endnotes file
-  \immediate\write\@enotes{\string\enotechapsep{\the\numexpr\value{chapter}+1}{\expandafter\detokenize\expandafter{\currentchaptertitle}}}%
+  \immediate\write\@enotes{\string\enotechapsep{\the\numexpr\value{chapter}+1}{\detokenize\expandafter{\currentchaptertitle}}}%
   % Call original \@chapter
   \orig@@chapter[#1]{#2}%
 }
@@ -138,7 +138,7 @@ bindingoffset=0.12in]{geometry}
 \renewcommand{\@schapter}[1]{%
   \renewcommand{\currentchaptertitle}{#1}%
   % Write separator with chapter number 0 for unnumbered chapters
-  \immediate\write\@enotes{\string\enotechapsep{0}{\expandafter\detokenize\expandafter{\currentchaptertitle}}}%
+  \immediate\write\@enotes{\string\enotechapsep{0}{\detokenize\expandafter{\currentchaptertitle}}}%
   % Call original \@schapter
   \orig@@schapter{#1}%
 }
