@@ -1,20 +1,20 @@
 \setchapterpreamble[u]{\margintoc}
 \chapter{Margin Stuff}
 
-Sidenotes are a distinctive feature of all 1.5-column-layout books. 
-Indeed, having wide margins means that some material can be displayed 
-there. We use margins for all kind of stuff: sidenotes, marginnotes, 
-small tables of contents, citations, and, why not?, special boxes and 
-environments.
+\index{Sidenotes}Sidenotes are a distinctive feature of all 1.5-column-\index{layout}layout books. 
+Indeed, having wide \index{margins}margins means that some material can be displayed 
+there. We use \index{margins}margins for all kind of stuff: \index{sidenotes}sidenotes, \index{marginnotes}marginnotes, 
+small tables of contents, \index{citations}citations, and, why not?, special \index{boxes}boxes and 
+\index{environments}environments.
 
 \section{Sidenotes}
 
-Sidenotes are like footnotes, except that they go in the margin, where 
-they are more readable. To insert a sidenote, just use the command 
+\index{Sidenotes}Sidenotes are like \index{footnotes}footnotes, except that they go in the \index{margin}margin, where 
+they are more readable. To insert a \index{sidenote}sidenote, just use the \index{command}command 
 \Command{sidenote\{Text of the note\}}. You can specify a 
 mark\sidenote[O]{This sidenote has a special mark, a big O!} with \\ 
-\Command{sidenote[mark]\{Text\}}, but you can also specify an offset, 
-which moves the sidenote upwards or downwards, so that the full syntax is:
+\Command{sidenote[mark]\{Text\}}, but you can also specify an \index{offset}offset, 
+which moves the \index{sidenote}sidenote upwards or downwards, so that the full syntax is:
 
 \begin{lstlisting}[style=kaolstplain]
 \sidenote[mark][offset]{Text}
@@ -34,20 +34,20 @@ normal mark and move it upwards one line, type:
 \sidenote[][*-1]{Text of the sidenote.}
 \end{lstlisting}
 
-As we said, sidenotes are handled through the \Package{sidenotes} 
-package, which in turn relies on the \Package{marginnote} package.
+As we said, \index{sidenotes}sidenotes are handled through the \Package{sidenotes} 
+\index{package}package, which in turn relies on the \Package{marginnote} \index{package}package.
 
 \section{Marginnotes}
 
-This command is very similar to the previous one. You can create a 
-marginnote with \Command{marginnote[offset]\{Text\}}, where the offset 
+This \index{command}command is very similar to the previous one. You can create a 
+\index{marginnote}marginnote with \Command{marginnote[offset]\{Text\}}, where the \index{offset}offset 
 argument can be left out, or it can be a multiple of 
-\Command{baselineskip},\marginnote[-1cm]{While the command for margin 
-notes comes from the \Package{marginnote} package, it has been redefined 
-in order to change the position of the optional offset argument, which 
+\Command{baselineskip},\marginnote[-1cm]{While the \index{command}command for \index{margin notes}margin 
+notes comes from the \Package{marginnote} \index{package}package, it has been redefined 
+in order to change the position of the optional \index{offset}offset argument, which 
 now precedes the text of the note, whereas in the original version it 
 was at the end. We have also added the possibility to use a multiple of 
-\Command{baselineskip} as offset. These things were made only to make 
+\Command{baselineskip} as \index{offset}offset. These things were made only to make 
 everything more consistent, so that you have to remember less things!} 
 \eg
 
