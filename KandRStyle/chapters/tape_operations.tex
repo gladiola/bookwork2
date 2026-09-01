@@ -3,9 +3,9 @@
 We explored the planning and use of \gls{lto} tape as a resource for storing backups.  We describe common commands, patterns of MT and TAR commands.  We recommend some techniques for testing, rehearsing, and using tape archives.\par}\end{center}
 \section{Introduction}
 
-We wanted to see if it would be possible for us to make use of an \index{LTO tape}\gls{lto} tape machine that was on one of our salvaged computers.  We'd often heard of the performance of using \index{tape}tape for \index{backups}backups.  We'd seen some hints about the bravery needed for working with tape in modifying old mainframe programs.  We rarely saw any strong tutorials or comprehensive directions for \index{tape operations}tape operations.
+We wanted to see if it would be possible for us to make use of an \index{LTO tape} \gls{lto} tape machine that was on one of our salvaged computers.  We'd often heard of the performance of using \index{tape}tape for \index{backups}backups.  We'd seen some hints about the bravery needed for working with tape in modifying old mainframe programs.  We rarely saw any strong tutorials or comprehensive directions for \index{tape operations}tape operations.
 
-The average person has almost never used \index{tapes}tapes as a part of personal computing these days.  Businesses which do use \index{tapes}tapes often do so as part of larger, commercial \index{data center}data center operations.  For many of us, the closest we've come to \index{tape operations}tape operations was with using cassette tapes for storage on personal machines in the 1980s.  \index{LTO tape}\gls{lto} tapes are often praised but infrequently used.  We wanted to break through this mystery.
+The average person has almost never used \index{tapes}tapes as a part of personal computing these days.  Businesses which do use \index{tapes}tapes often do so as part of larger, commercial \index{data center}data center operations.  For many of us, the closest we've come to \index{tape operations}tape operations was with using cassette tapes for storage on personal machines in the 1980s.  \index{LTO tape} \gls{lto} tapes are often praised but infrequently used.  We wanted to break through this mystery.
 
 
 %------------------------------------------------
@@ -165,12 +165,12 @@ exit 0\\}
 
 2.  Logging.  Since there may be many files on these long tapes, logging support and file navigation are essential.  The usual lapses in notation can make frequent use of the tapes more hazardous with each use.\\
 
-3.  Security.  Unlike geli-\index{encrypt}\gls{encrypt}ed hard drives, the main file protection scheme is through whatever  \index{encrypt}\gls{encrypt}ion we apply to the files themselves.  Tar has some compression algorithms, but  \index{encrypt}\gls{encrypt}ing files is another step altogether.  Since the files may be in storage for a long time, having the backups  \index{encrypt}\gls{encrypt}ed on tape can be a critical step.  This  \index{encrypt}\gls{encrypt}ion would need to be applied before IV.B.7. tar or archiving the files to tape.
+3.  Security.  Unlike geli-\index{encrypt} \gls{encrypt}ed hard drives, the main file protection scheme is through whatever  \index{encrypt} \gls{encrypt}ion we apply to the files themselves.  Tar has some compression algorithms, but  \index{encrypt} \gls{encrypt}ing files is another step altogether.  Since the files may be in storage for a long time, having the backups  \index{encrypt} \gls{encrypt}ed on tape can be a critical step.  This  \index{encrypt} \gls{encrypt}ion would need to be applied before IV.B.7. tar or archiving the files to tape.
 
 \subsection{Tests}
 Writing to tape should be rehearsed.  Checking status and reading files to confirm our location on the tape is a good idea.
 
-Any write operation should be couched on a good, rehearsed read script.  Isolate the files to be written to their own directory.  Add an  \index{encrypt}\gls{encrypt}ion step if necessary.  Rehearse the tar tape archive commands.  Compartmentalize the steps of the tape operations plan to reduce catastrophic failures and a loss of data.
+Any write operation should be couched on a good, rehearsed read script.  Isolate the files to be written to their own directory.  Add an  \index{encrypt} \gls{encrypt}ion step if necessary.  Rehearse the tar tape archive commands.  Compartmentalize the steps of the tape operations plan to reduce catastrophic failures and a loss of data.
 
 
 %------------------------------------------------

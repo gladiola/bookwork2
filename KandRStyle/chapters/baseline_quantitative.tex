@@ -2,7 +2,7 @@
 
 
 \begin{center}\vspace{-0.5\baselineskip}\parbox{0.85\textwidth}{\small\itshape
-We conducted a\index{risk assessment} \gls{riskassessment} to better understand the \gls{threat}\index{threat} of criminal action against an in-house system.  We examined both \index{cybercrime}\gls{cybercrime} and physical crimes using data that was normalized to a\index{per capita} \gls{percapita} rates of crimes.  We drew from \gls{fbi} \gls{ic3} annual reports and\index{Chattanooga} Chattanooga Police\index{open data} Open Data records.  The \index{population}\gls{population}\index{sample} \gls{sample}s were taken from the\index{US Census} \gls{us} Census Bureau reports.  We were able to build a baseline simulation that can be used to better understand the context of the likelihood and severity of observed events in the lab.\par}\end{center}
+We conducted a\index{risk assessment} \gls{riskassessment} to better understand the \gls{threat}\index{threat} of criminal action against an in-house system.  We examined both \index{cybercrime} \gls{cybercrime} and physical crimes using data that was normalized to a\index{per capita} \gls{percapita} rates of crimes.  We drew from \gls{fbi} \gls{ic3} annual reports and\index{Chattanooga} Chattanooga Police\index{open data} Open Data records.  The \index{population} \gls{population}\index{sample} \gls{sample}s were taken from the\index{US Census} \gls{us} Census Bureau reports.  We were able to build a baseline simulation that can be used to better understand the context of the likelihood and severity of observed events in the lab.\par}\end{center}
 \section{Introduction}
 \begin{figure}[H]
   \centering
@@ -63,7 +63,7 @@ By themselves, the\index{Monte Carlo simulation} \gls{montecarlo}s will allow us
 \subsection{Scope of Work}
 We chose to limit our risk analysis to the algebraic scaling of \gls{ic3} data on Excel spreadsheets to limit the calculations by hand.  The data has four main trends (victim count, victim impact, suspect count, suspect impact), but to keep the analysis productive we would proceed all the way through with victim count.  This would support an assessment of likelihood.  Then we would go through the mathematics again to determine severity by scaling the values of victim impact.  With those two categories available, we would have the minimum amount of data needed to conduct a quantitative assessment of likelihood and severity.  This would meet the minimum expectations of most\index{risk assessment} risk assessments' data analysis needs.
 
-We would need to scope the data to understand it in a verifiable context.  Since our goal is to analyze a project-sized scaling, we would need to couch that target between verifiable guideposts.  So, we chose to scale state-level data to our city's \index{population}\gls{population}.  Alongside this, we could scale state-level data to a small organization's size (e.g. 150 people as stakeholders).  Since that scaled data would be calculated, we would want to present it in context with states and territories that represented high and low levels of \index{cybercrime} \gls{cybercrime} (California and \index{American Samoa} American Samoa).  This way we would set a scope that would allow a reader to see the effect of scaling from known states down to the small business organization level.
+We would need to scope the data to understand it in a verifiable context.  Since our goal is to analyze a project-sized scaling, we would need to couch that target between verifiable guideposts.  So, we chose to scale state-level data to our city's \index{population} \gls{population}.  Alongside this, we could scale state-level data to a small organization's size (e.g. 150 people as stakeholders).  Since that scaled data would be calculated, we would want to present it in context with states and territories that represented high and low levels of \index{cybercrime} \gls{cybercrime} (California and \index{American Samoa} American Samoa).  This way we would set a scope that would allow a reader to see the effect of scaling from known states down to the small business organization level.
 \subsection{Variables}
 Not all of the collected \gls{ic3} data categories were stable over time.  As the reports were produced year to year, new threats emerged and the \index{cybercrime} \gls{cybercrime} field changed.  This meant that some categories that were present at the older end of our analysis (2016) were not present at the end of our sampling (2022) or later.  Because of this, we had to ignore some categories or combine others.  Variability in criminal activity affected reporting.
 
@@ -72,13 +72,13 @@ This had indirect effects on our analysis.  Check Fraud and Credit Card Fraud, a
 \subsection{Assumptions, Risks, and Limitations}
 We set out to better understand the rates of computer-related crimes in our area using public data sources.  We drew from \gls{fbi} \gls{ic3} annual reports and\index{Chattanooga} Chattanooga Police\index{open data} open data records.  The \gls{ic3} reports provided categorical breakdowns of different types of internet-related crimes.  In the past, we were able to find per-state breakdowns of those crimes.  The \gls{fbi} would provide four views of computer crime:  overall count, overall financial impact, victim count, and per-victim financial impact.  This was available both nationally and per state.  When following up in 2026, we noticed we were only able to immediately discover the national-level summaries of crime.
 
-Anecdotally, we know that we have witnessed several of these crimes at rates higher than shown in these tables (Tables \ref{tab:chattanoogacrime2}, \ref{tab:chattanoogacrime3}, \ref{tab:chattanoogacrime4}).  We suspect that we're seeing numbers this low because few victims are taking the steps necessary to report computer crimes to federal authorities.  For example, when companies or individuals encounter \gls{ransomware}\index{ransomware}, their reactions may involve repairing the afffected endpoint but not informing law enforcement.  Nonetheless, those authorities have been the public's observable source of crime reporting.  While we continue to use this data, we may need to accept that true counts of \index{cybercrime}\gls{cybercrime} in the city must be scaled by an unknown factor.
+Anecdotally, we know that we have witnessed several of these crimes at rates higher than shown in these tables (Tables \ref{tab:chattanoogacrime2}, \ref{tab:chattanoogacrime3}, \ref{tab:chattanoogacrime4}).  We suspect that we're seeing numbers this low because few victims are taking the steps necessary to report computer crimes to federal authorities.  For example, when companies or individuals encounter \gls{ransomware}\index{ransomware}, their reactions may involve repairing the afffected endpoint but not informing law enforcement.  Nonetheless, those authorities have been the public's observable source of crime reporting.  While we continue to use this data, we may need to accept that true counts of \index{cybercrime} \gls{cybercrime} in the city must be scaled by an unknown factor.
 
 The\index{Chattanooga}\index{Chattanooga!Police Department} Chattanooga Police Department, like other departments of the City of\index{Chattanooga} Chattanooga, participate in an\index{open data} open data project.  Anonymonized crime reports are provided to the public in a manner that lets us track by approximate region of the city and by category of crime.  We chose to do this because we recognized some crimes would be reported to local police that were not reported to federal authorities.  Some crimes, such as physical break-ins, were more likely to be handled by local police.  Since the systems involved are in-scope for physical damage, we felt the\index{Chattanooga}\index{Chattanooga!Police Department} Chattanooga Police Department's\index{open data} open data would be the best public source for supporting criminal \gls{threat} forecasts for events like burglary from a vehicle.  Some of the crime categories, such as extortion or threats against a person, could be reported to either federal \gls{ic3} or local police; the nature of the threats might be different; but, there may be more direct physical threats reported to local police; there is no formal mimetic analysis that would shuttle a threatening complaint to one law enforcement agency or another.  Meanwhile, some locally policed crimes may focus upon:  employees, facility safeguards, loss of computer equipment in public, loss of computer equipment by theft from facilities or vehicles, and so on.
 
 As we examine the data from the public data sources and we feel that the reported rates are less than our experience would justify, we have to recognize that there may be shortcomings in the reported data.  Perhaps we would do well to scale the rates up to meet our experience.  However, those arbitrary inflations would damage the validity of our academic risk calculations.  So, for the time being, we leave the inflation or deflation of the end results for the reader as a localized adjustment.  Since our main goal is to show a method for determining the risks through the reported data, it could be argued that the exact numbers are less relevant than the demonstrated methods.
 \subsubsection{Limitations Imposed by Federal Law Enforcement in Tennessee}
-During our research, one shocking fact came to light.  At the Cybersecurity Summit conference in Nashville, TN in 2023, Derek Rousseau, a Special Agent from the \gls{fbi} Nashville Cyber Squad, presented and answered a Q\&A.  To our surprise, the special agent answered a direct question, How much money needs to be at stake for the \gls{fbi} to get involved in a \index{cybercrime} \gls{cybercrime}?  His answer was that the \gls{us} Attorney in Nashville wanted to see at least \$100,000 in damage for domestic crimes or \$400,000 in damage for international crimes.  For damage amounts below that, it was not effective to devote an \gls{fbi} special agent to investigate the crime.  As a result, the special agent encouraged the reporting of smaller crimes so that cases could be aggregated against a suspect to levels that merited federal investigation and prosecution.  Later, as we compare \gls{ic3} crime data, we'll see that many of the annual totals are below these limits.  This suggests that the \gls{us} is prosecuting only a fraction of those reported crimes that affect the \index{population}\gls{population}.
+During our research, one shocking fact came to light.  At the Cybersecurity Summit conference in Nashville, TN in 2023, Derek Rousseau, a Special Agent from the \gls{fbi} Nashville Cyber Squad, presented and answered a Q\&A.  To our surprise, the special agent answered a direct question, How much money needs to be at stake for the \gls{fbi} to get involved in a \index{cybercrime} \gls{cybercrime}?  His answer was that the \gls{us} Attorney in Nashville wanted to see at least \$100,000 in damage for domestic crimes or \$400,000 in damage for international crimes.  For damage amounts below that, it was not effective to devote an \gls{fbi} special agent to investigate the crime.  As a result, the special agent encouraged the reporting of smaller crimes so that cases could be aggregated against a suspect to levels that merited federal investigation and prosecution.  Later, as we compare \gls{ic3} crime data, we'll see that many of the annual totals are below these limits.  This suggests that the \gls{us} is prosecuting only a fraction of those reported crimes that affect the \index{population} \gls{population}.
 \subsubsection{Limitations Derived from Reporting}
 Another limitation on our projections arises from the voluntary nature of the reporting.  Since victims or defenders need to advise the \gls{ic3} of a security event, only those who follow through with the voluntary reporting actions will get counted.  Commercial defenders will see that in their experience only a small number of daily cybersecurity events will seem worthy to report to federal law enforcement; the scope of true attacks would seem through those anecdotes to be much greater than the reported numbers.  Since all of the reports are likely to be initiated by those who speak up, we cannot escape the experimental design problems associated with a\index{sample!convenience}\index{convenience sample} convenience \gls{sample} when using \gls{ic3} data for our\index{statistics} \gls{statistics}.
 
@@ -101,15 +101,15 @@ In our hometown of\index{Chattanooga} Chattanooga, there have been public non-pr
 \end{figure}
 We took \index{cybercrime} \gls{cybercrime} data from a seven year span of \gls{ic3} publications.  The annual reports for the nation and for each state showed a count of victims per category of \index{cybercrime} \gls{cybercrime}.  The \gls{us} \gls{fbi} defined each category for their report.  We put that data into a\index{matrix} \gls{matrix}, organized by year and category of crime.
 
-Each state we chose got its own\index{matrix} \gls{matrix}. We noticed that three states typically had high counts of crime; they were: \index{California} California,\index{Texas} Texas, and\index{Florida} Florida.  We noticed that \gls{us} territories, like \index{American Samoa} American Samoa, \gls{us} Virgin Islands, and\index{Puerto Rico} Puerto Rico, were reported also as if they were a state.  These smaller areas with lower \index{population}\gls{population}s also showed lowed low counts of \index{cybercrime} \gls{cybercrime}.  We chose these high crime areas (e.g.\index{California} California) and low crime areas (e.g. \index{American Samoa} American Samoa) as our guides for choosing maximum and minimum limits.  Our desired target areas were chosen by the target's home state; our intial runs included \index{Chattanooga} Chattanooga, Tennessee.
+Each state we chose got its own\index{matrix} \gls{matrix}. We noticed that three states typically had high counts of crime; they were: \index{California} California,\index{Texas} Texas, and\index{Florida} Florida.  We noticed that \gls{us} territories, like \index{American Samoa} American Samoa, \gls{us} Virgin Islands, and\index{Puerto Rico} Puerto Rico, were reported also as if they were a state.  These smaller areas with lower \index{population} \gls{population}s also showed lowed low counts of \index{cybercrime} \gls{cybercrime}.  We chose these high crime areas (e.g.\index{California} California) and low crime areas (e.g. \index{American Samoa} American Samoa) as our guides for choosing maximum and minimum limits.  Our desired target areas were chosen by the target's home state; our intial runs included \index{Chattanooga} Chattanooga, Tennessee.
 
 \subsection{Using State Data to Forecast a Company's Data}
 
 Our main data sets are provided in the public interest; they're based on large units of people like states and nations.  As system operators, we have a much smaller interest; we're interested in company sized elements.  Instead of being concerned with the \index{cybercrime} \gls{cybercrime} fate of over 300 million Americans or 9 million Tennesseans, we are probably more interested in what might happen to 100 stakeholders.
 
-To smooth out the counts of \index{cybercrime} \gls{cybercrime} into rates, we adjusted these state victim counts \index{per capita}\gls{percapita}.  We chose the\index{US Census} \gls{us} Census reports for those years to be the \index{population}\gls{population} values of the states.  This would provide us with a\index{per capita} \gls{percapita} rate of \index{cybercrime} \gls{cybercrime} based on the chosen state which represented the chosen limit or target in the \index{distribution}\gls{distribution}.
+To smooth out the counts of \index{cybercrime} \gls{cybercrime} into rates, we adjusted these state victim counts \index{per capita} \gls{percapita}.  We chose the\index{US Census} \gls{us} Census reports for those years to be the \index{population} \gls{population} values of the states.  This would provide us with a\index{per capita} \gls{percapita} rate of \index{cybercrime} \gls{cybercrime} based on the chosen state which represented the chosen limit or target in the \index{distribution} \gls{distribution}.
 
-Formally, we note this process below as shown in Figure \ref{fig:statcalc-percap}.  $R$ represents our result.  $N_t$ represents our constant for target \index{sample}\gls{sample} \index{population}\gls{population} and is used for multiplying the rate to \index{scale}scale it to match the \index{population}\gls{population} of the target. $t$ represents our starting year for the \index{sample}\gls{sample} from \gls{ic3} and coordinates the rows until it progresses to the final year chosen which is denoted by $n$. $i$ represents our chosen category \index{index}index of \index{cybercrime} \gls{cybercrime}. $j$ represents our year index and is built with $t$ until it progresses to the final year of the \index{sample}\gls{sample} denoted by $n$. $P_j$ represents the \index{population}\gls{population} of the target city at year $j$, drawn from \index{matrix}\gls{matrix} $P$.
+Formally, we note this process below as shown in Figure \ref{fig:statcalc-percap}.  $R$ represents our result.  $N_t$ represents our constant for target \index{sample} \gls{sample} \index{population} \gls{population} and is used for multiplying the rate to \index{scale}scale it to match the \index{population} \gls{population} of the target. $t$ represents our starting year for the \index{sample} \gls{sample} from \gls{ic3} and coordinates the rows until it progresses to the final year chosen which is denoted by $n$. $i$ represents our chosen category \index{index}index of \index{cybercrime} \gls{cybercrime}. $j$ represents our year index and is built with $t$ until it progresses to the final year of the \index{sample} \gls{sample} denoted by $n$. $P_j$ represents the \index{population} \gls{population} of the target city at year $j$, drawn from \index{matrix} \gls{matrix} $P$.
 
 \begin{figure}[H]
   \centering
@@ -125,7 +125,7 @@ R_j = N_t \sum_{j=t}^{t+6} \frac{X_{j,i}}{P_j}, \quad \text{where } X_{j,i} = \b
   \label{fig:statcalc-percap}
 \end{figure}
 
-Five\index{matrix} matrices inform this calculation.  The first, $P$ as shown in Figure \ref{fig:statcalc-popmatrix}, records the target city \index{population}\gls{population} for each year of the \index{sample}\gls{sample} as a single column.
+Five\index{matrix} matrices inform this calculation.  The first, $P$ as shown in Figure \ref{fig:statcalc-popmatrix}, records the target city \index{population} \gls{population} for each year of the \index{sample} \gls{sample} as a single column.
 
 \begin{figure}[H]
   \centering
@@ -151,7 +151,7 @@ p_n
 \right]
 \]
 
-  \caption{Structure of the \index{sample}\gls{sample} \index{population}\gls{population}\index{matrix} \gls{matrix} indexed by year.}
+  \caption{Structure of the \index{sample} \gls{sample} \index{population} \gls{population}\index{matrix} \gls{matrix} indexed by year.}
   \label{fig:statcalc-popmatrix}
 \end{figure}
 
@@ -282,7 +282,7 @@ a_{n,1} & \cdots & a_{n,2} & \cdots & a_{n,i} & \cdots & a_{n,m}
 \end{figure}
 
 
-We apply these\index{matrix} matrices to the formula shown in Figure \ref{fig:statcalc-percap}. The entries $a_{j,i}$ are the raw counts taken from the \gls{ic3} state-level reports for the chosen source state.  Dividing each entry by $P_j$ converts it to a\index{per capita} \gls{percapita} rate; multiplying by $N_t$ then scales that rate to match the \index{population}\gls{population} of the target city.  The \index{population}\gls{population} values in $P$ provide the year-by-year context for $N_t$ and confirm the representativeness of the scaling.  Summing the selected column $i$ of the\index{per capita} \gls{percapita}-adjusted $M$ across all years yields the final result $R$.
+We apply these\index{matrix} matrices to the formula shown in Figure \ref{fig:statcalc-percap}. The entries $a_{j,i}$ are the raw counts taken from the \gls{ic3} state-level reports for the chosen source state.  Dividing each entry by $P_j$ converts it to a\index{per capita} \gls{percapita} rate; multiplying by $N_t$ then scales that rate to match the \index{population} \gls{population} of the target city.  The \index{population} \gls{population} values in $P$ provide the year-by-year context for $N_t$ and confirm the representativeness of the scaling.  Summing the selected column $i$ of the\index{per capita} \gls{percapita}-adjusted $M$ across all years yields the final result $R$.
 \subsection{Methodology for\index{Monte Carlo simulation} \Gls{montecarlo}s in Excel}
 We chose \gls{ic3} crime data from \index{American Samoa} American Samoa to act as our lower bound.  We chose data from California to act as our upper bound.  We set those limits by looking at seven year spans of crime data and taking the\index{median} \gls{median}.  This means we would be likely to have observations above and below the limits, but that the limits themselves would have a basis in observation.
 We input and processed the data as follows:
@@ -306,7 +306,7 @@ There were times when it was obvious that a\index{normal distribution} \gls{norm
 \subsection{\Gls{population} Changes During\index{sample} Sampled Years}
 \begin{table}[H]
   \centering
-  \caption{Changes to \index{population}\Gls{population} in Key Areas}
+  \caption{Changes to \index{population} \Gls{population} in Key Areas}
   \label{tab:chattanoogacrime1}
   \begin{tabular}{@{}>{\centering\arraybackslash}
   p{0.10\linewidth} >{\centering\arraybackslash}
@@ -340,7 +340,7 @@ There were times when it was obvious that a\index{normal distribution} \gls{norm
 2022&48,342&\endnote{\url{https://fred.stlouisfed.org/series/POPTOTASA647NWDB}}&184,086&\endnote{\url{https://www.census.gov/quickfacts/chattanoogacitytennessee}}&7,051,339&\endnote{\url{https://www2.census.gov/programs-surveys/popest/datasets/2020-2022/state/totals/NST-EST2022-POPCHG2020_2022.csv}}&39,125,347&\endnote{\url{https://fred.stlouisfed.org/series/CAPOP}}\\
 
     \bottomrule \end{tabular}
-\raggedright{City \index{population}\gls{population} based on the\index{US Census} \gls{us} Census reported \index{population}\gls{population} for the City of\index{Chattanooga} Chattanooga itself.  Surrounding satellite cities and unincorporated areas within the Hamilton County, Tennessee, were not included. \index{population}\Gls{population} for the State of Tennessee provided perspective on calculated rates in later tables. \index{population}\Gls{population} for \index{American Samoa} American Samoa and the State of\index{California} California were included for perspective on maximum and minimum counts in later tables.}
+\raggedright{City \index{population} \gls{population} based on the\index{US Census} \gls{us} Census reported \index{population} \gls{population} for the City of\index{Chattanooga} Chattanooga itself.  Surrounding satellite cities and unincorporated areas within the Hamilton County, Tennessee, were not included. \index{population} \Gls{population} for the State of Tennessee provided perspective on calculated rates in later tables. \index{population} \Gls{population} for \index{American Samoa} American Samoa and the State of\index{California} California were included for perspective on maximum and minimum counts in later tables.}
 \end{table}
 
 
@@ -472,10 +472,10 @@ m \in \{\text{scaled count},\text{scaled dollars}\}
 \begin{figure}[H]
   \centering
   \rotatebox{0}{\scalebox{1}{\includegraphics[width=\linewidth]{figures/binary_dataBreach_count.png}}}
-  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a \gls{binary} distribution to spread random instances between upper and lower bounds taken from the means of seven year samples. We bounded between 0 and 1 possible \index{data breach}\gls{databreach} events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The means of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} \gls{cybercrime} counts respectively.}
+  \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a \gls{binary} distribution to spread random instances between upper and lower bounds taken from the means of seven year samples. We bounded between 0 and 1 possible \index{data breach} \gls{databreach} events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The means of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} \gls{cybercrime} counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
-  \label{fig:screenshot-montecarlo-\gls{databreach}-count-binary}
+  \label{fig:screenshot-montecarlo-databreach-count-binary}
 \end{figure}
 When we computed the upper and lower bounds, we recognized that a normal distribution would not fit well for forecasting likelihood.  We took the mean of the sample from American Samoa for the lower bound (0); we took the mean from the sample from California for the upper bound (1); we had a separation of 1 unit.  Therefore, we switched to a \gls{binary} model with 2 possible outcomes.
 \begin{table}[H]
@@ -497,7 +497,7 @@ Likelihood
 &71.0\%\\
     \bottomrule \end{tabular}
     \end{center}
-  \raggedright{A\index{Monte Carlo simulation} Monte Carlo simulation was run using a \gls{binary} distribution.  We bounded the simulation between 0 and 1 events.  The probability of a \index{data breach}\gls{databreach} occurring was set to 71\% based on the midpoint of the American Samoa lower bound (0.43) and the California upper bound (1.0).  The resulting distribution showed the effect of randomness on each possible outcome.}
+  \raggedright{A\index{Monte Carlo simulation} Monte Carlo simulation was run using a \gls{binary} distribution.  We bounded the simulation between 0 and 1 events.  The probability of a \index{data breach} \gls{databreach} occurring was set to 71\% based on the midpoint of the American Samoa lower bound (0.43) and the California upper bound (1.0).  The resulting distribution showed the effect of randomness on each possible outcome.}
 \end{table}
 
 \begin{figure}[H]
@@ -506,7 +506,7 @@ Likelihood
   \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a normal distribution to spread random instances between bounds taken from means of seven year samples. We set a lower bound that the events would cost at \$0.  We set an upper bound that the events would cost \$33{,}527.27.  \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The means of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} \gls{cybercrime} impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
-  \label{fig:screenshot-montecarlo-databreach\index{databreach}-impact-histo}
+  \label{fig:screenshot-montecarlo-databreach-impact-histo}
 \end{figure}
 \begin{figure}[H]
   \centering
@@ -517,7 +517,7 @@ Likelihood
   \caption{A\index{Monte Carlo simulation} Monte Carlo simulation with a normal distribution suggests that there is a 90\% probability that\index{data breach} data breach events will cost \$3{,}824 or more in a year.  There is a 50\% likelihood that they will cost \$17{,}120 or more in a year.  There is a 10\% chance that they will cost \$30{,}365 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The means of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
-  \label{fig:screenshot-montecarlo-\gls{databreach}-impact-percent}
+  \label{fig:screenshot-montecarlo-databreach-impact-percent}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%% PERSONAL DATA BREACH %%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -846,7 +846,7 @@ m \in \{\text{scaled count},\text{scaled dollars}\}
   \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a \gls{binary} distribution to spread random instances between upper and lower bounds taken from the means of seven year samples. We bounded between 0 and 1 possible\index{malware} \gls{malware} events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The means of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing the range of likely \index{malware} \gls{malware} counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
-  \label{fig:screenshot-montecarlo-\gls{malware}-count-binary}
+  \label{fig:screenshot-montecarlo-malware-count-binary}
 \end{figure}
 When we computed the upper and lower bounds, we recognized that a normal distribution would not fit well for forecasting likelihood.  We took the mean of the sample from American Samoa for the lower bound (0.86); we took the mean from the sample from California for the upper bound (0.63); we had a separation of approximately 1 unit.  Because both means fall between 0 and 1, we used a \gls{binary} model with two options (0 and 1 events) sharing a combined likelihood of 100\%.
 \begin{table}[H]
@@ -877,7 +877,7 @@ Likelihood
   \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a normal distribution to spread random instances between bounds taken from means of seven year samples.  We set a lower bound that the events would cost at \$0.  We set an upper bound that the events would cost \$649.99.  \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The means of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{malware} \gls{malware} impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
-  \label{fig:screenshot-montecarlo-malware\index{malware}-impact-histo}
+  \label{fig:screenshot-montecarlo-malware-impact-histo}
 \end{figure}
 \begin{figure}[H]
   \centering
@@ -888,7 +888,7 @@ Likelihood
   \caption{A\index{Monte Carlo simulation} Monte Carlo simulation with a normal distribution suggests that there is a 90\% probability that\index{malware} malware events will cost \$75.28 or more in a year.  There is a 50\% likelihood that they will cost \$328.32 or more in a year.  There is a 10\% chance that they will cost \$581.59 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The means of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{malware} malware impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
-  \label{fig:screenshot-montecarlo-malware\index{malware}-impact-percent}
+  \label{fig:screenshot-montecarlo-malware-impact-percent}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%  PHISHING\index{phishing} %%%%%%%%%%%%%%%%%%%%%%%%
@@ -1049,7 +1049,7 @@ Likelihood
   \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a normal distribution to spread random instances between bounds taken from means of seven year samples. We set a lower bound that the events would cost at \$0.  We set an upper bound that the events would cost \$46,695.  \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} \gls{cybercrime} counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
-  \label{fig:screenshot-montecarlo-\gls{phishing}-impact-histo}
+  \label{fig:screenshot-montecarlo-phishing-impact-histo}
 \end{figure}
 \begin{figure}[H]
   \centering
@@ -1168,7 +1168,7 @@ m \in \{\text{scaled count},\text{scaled dollars}\}
   \caption{A\index{Monte Carlo simulation} Monte Carlo simulation suggests that there is a 50\% probability that 0.5 or more\index{ransomware} ransomware events will occur within the \index{sample} sample.  This unusual result is because the confidence bounds are between 0 and 1.  We interpret this as a 50\% probability that one malware event will occur. \protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
-  \label{fig:screenshot-montecarlo-\gls{ransomware}-count-percent}
+  \label{fig:screenshot-montecarlo-ransomware-count-percent}
 \end{figure}
 
 \begin{figure}[H]
@@ -1177,7 +1177,7 @@ m \in \{\text{scaled count},\text{scaled dollars}\}
   \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations to spread random instances between confidence intervals taken from means of a seven year sample. We set a lower bound that the event would cost at \$0.  We set an upper bound that the event would cost \$3,479.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} \gls{cybercrime} counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
-  \label{fig:screenshot-montecarlo-\gls{ransomware}-impact-histo}
+  \label{fig:screenshot-montecarlo-ransomware-impact-histo}
 \end{figure}
 
 \begin{figure}[H]
@@ -1690,7 +1690,7 @@ m \in \{\text{scaled count},\text{scaled dollars}\}
   \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a discrete distribution to spread random instances between confidence intervals taken from the means of seven year samples. We bounded between 0 and 7 possible \gls{threat} (threats, stalking, harrassment, and terrorism) events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
-  \label{fig:screenshot-montecarlo-\gls{threat}-count-histo}
+  \label{fig:screenshot-montecarlo-threat-count-histo}
 \end{figure}
 
 \begin{table}[H]
@@ -1732,7 +1732,7 @@ Likelihood
   \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations to spread random instances between confidence intervals taken from means of a seven year sample. We set a lower bound that the event would cost at \$0.  We set an upper bound that the event would cost \$7,954.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set upper and lower bounds with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} \gls{cybercrime} counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
-  \label{fig:screenshot-montecarlo-threat\index{threat}-impact-histo}
+  \label{fig:screenshot-montecarlo-threat-impact-histo}
 \end{figure}
 
 \begin{figure}[H]
@@ -1745,7 +1745,7 @@ Likelihood
   \caption{A\index{Monte Carlo simulation} Monte Carlo simulation suggests that there is a 90\% probability that\index{threat} threat events will cost \$777.14 or more in a year.  There is a 50\% likelihood that they will cost \$3,544.91 or more in a year.  There is a 10\% chance that they will cost \$6,335.28 or more in a year. \protect\endnote{\index{sample} sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime impact values respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
-  \label{fig:screenshot-montecarlo-\gls{threat}-impact-percent}
+  \label{fig:screenshot-montecarlo-threat-impact-percent}
 \end{figure}
 \subsection{Threats to Theft of Data Via Network}
 \begin{table}[H]
@@ -2786,7 +2786,7 @@ Under the rule ``if a category fails the count screen, exclude it from impact,''
 \begin{table}[H]
   \centering
   \caption{Summary of Cybercrime Category Analysis References (Part 1 of 2)}
-  \label{tab:cybercrime\index{cybercrime}-anova-summary-1}
+  \label{tab:cybercrime-anova-summary-1}
   \small
   \begin{tabular}{@{}p{0.18\linewidth}p{0.18\linewidth}p{0.18\linewidth}p{0.14\linewidth}p{0.22\linewidth}@{}}
     \toprule
@@ -2797,15 +2797,15 @@ Under the rule ``if a category fails the count screen, exclude it from impact,''
     & Figure for Monte Carlo simulation & Section~\ref{sec:persdatabreach} & page~\pageref{fig:screenshot-montecarlo-persdatabreach-count-discrete} & Figure~\ref{fig:screenshot-montecarlo-persdatabreach-count-discrete} \\
     & Table of simulation values & Section~\ref{sec:persdatabreach} & page~\pageref{tab:discrete_persdatabreach_montecarlo} & Table~\ref{tab:discrete_persdatabreach_montecarlo} \\
     \midrule
-    Phishing\index{phishing} & Lower Bound Computations & Section~\ref{sec:phishing\index{phishing}} & page~\pageref{sec:phishing} & (subsection) \\
-    & Upper Bound Computations & Section~\ref{sec:\gls{phishing}} & page~\pageref{sec:phishing} & (subsection) \\
-    & Figure for Monte Carlo simulation & Section~\ref{sec:\gls{phishing}} & page~\pageref{fig:screenshot-montecarlo-phishing\index{phishing}-count-discrete} & Figure~\ref{fig:screenshot-montecarlo-phishing-count-discrete} \\
+    Phishing\index{phishing} & Lower Bound Computations & Section~\ref{sec:phishing} & page~\pageref{sec:phishing} & (subsection) \\
+    & Upper Bound Computations & Section~\ref{sec:phishing} & page~\pageref{sec:phishing} & (subsection) \\
+    & Figure for Monte Carlo simulation & Section~\ref{sec:phishing} & page~\pageref{fig:screenshot-montecarlo-phishing-count-discrete} & Figure~\ref{fig:screenshot-montecarlo-phishing-count-discrete} \\
     & Table of simulation values & Section~\ref{sec:phishing} & page~\pageref{tab:discrete_phishing_montecarlo} & Table~\ref{tab:discrete_phishing_montecarlo} \\
     \midrule
-    Ransomware\index{ransomware} & Lower Bound Computations & Section~\ref{sec:ransomware} & page~\pageref{sec:\gls{ransomware}} & (subsection) \\
-    & Upper Bound Computations & Section~\ref{sec:\gls{ransomware}} & page~\pageref{sec:ransomware} & (subsection) \\
-    & Figure for Monte Carlo simulation & Section~\ref{sec:ransomware\index{ransomware}} & page~\pageref{fig:screenshot-montecarlo-ransomware-count-histo} & Figure~\ref{fig:screenshot-montecarlo-ransomware-count-histo} \\
-    & Table of simulation values & Section~\ref{sec:\gls{ransomware}} & page~\pageref{sec:ransomware} & (see subsection) \\
+    Ransomware\index{ransomware} & Lower Bound Computations & Section~\ref{sec:ransomware} & page~\pageref{sec:ransomware} & (subsection) \\
+    & Upper Bound Computations & Section~\ref{sec:ransomware} & page~\pageref{sec:ransomware} & (subsection) \\
+    & Figure for Monte Carlo simulation & Section~\ref{sec:ransomware} & page~\pageref{fig:screenshot-montecarlo-ransomware-count-histo} & Figure~\ref{fig:screenshot-montecarlo-ransomware-count-histo} \\
+    & Table of simulation values & Section~\ref{sec:ransomware} & page~\pageref{sec:ransomware} & (see subsection) \\
     \midrule
     Extortion & Lower Bound Computations & Section~\ref{sec:extortion} & page~\pageref{sec:extortion} & (subsection) \\
     & Upper Bound Computations & Section~\ref{sec:extortion} & page~\pageref{sec:extortion} & (subsection) \\
@@ -2818,7 +2818,7 @@ Under the rule ``if a category fails the count screen, exclude it from impact,''
 \begin{table}[H]
   \centering
   \caption{Summary of Cybercrime Category Analysis References (Part 2 of 2)}
-  \label{tab:cybercrime\index{cybercrime}-anova-summary-2}
+  \label{tab:cybercrime-anova-summary-2}
   \small
   \begin{tabular}{@{}p{0.18\linewidth}p{0.18\linewidth}p{0.18\linewidth}p{0.14\linewidth}p{0.22\linewidth}@{}}
     \toprule
@@ -3122,7 +3122,7 @@ m \in \{\text{scaled count},\text{scaled dollars}\}
   \caption{We ran a\index{Monte Carlo simulation} Monte Carlo simulation of 10,000 iterations with a discrete distribution to spread random instances between confidence intervals taken from the means of seven year samples. We bounded between 3 and 12 possible \gls{phishing} events over a year.\protect\endnote{\index{sample} Sample size was set equivalent to the City of\index{Chattanooga} Chattanooga to determine the per capita rates for each year over data from \index{American Samoa} American Samoa and\index{California} California.  The medians of those rates were used to set 10\% and 90\%\index{confidence interval} confidence intervals with \index{American Samoa} American Samoa and\index{California} California representing low and high \index{cybercrime} cybercrime counts respectively.}
   \protect\endnote{Monte Carlo Modeling Toolkit authored by Derek E. Brink, \gls{cissp}, \url{www.linkedin.com/in/derekbrink}. March 2023.}
   }
-  \label{fig:screenshot-montecarlo-phishing\index{phishing}-count-discrete}
+  \label{fig:screenshot-montecarlo-phishing-count-discrete}
 \end{figure}
 When we computed the upper and lower bounds, we recognized that a normal distribution would not fit well for forecasting likelihood.  We took the mean of the sample from American Samoa for the lower bound (3); we took the mean from the sample from California for the upper bound (12); we had a separation of 9 units.  Therefore, we switched to a discrete model with all 10 options sharing an equal likelihood.
 \begin{table}[H]
@@ -3974,7 +3974,7 @@ These hint in the numbers can suggest to us an illustration that the overall cla
 
 \section{Summary of Cybercrime Analysis References}
 
-Tables~\ref{tab:\gls{cybercrime}-anova-summary-1} and~\ref{tab:cybercrime\index{cybercrime}-anova-summary-2} provide a comprehensive reference guide for the quantitative analysis conducted on each \gls{cybercrime} category in this chapter. These tables summarize the locations of lower bound computations, upper bound computations, Monte Carlo simulation figures, and simulation value tables that can be used for risk assessment after ANOVA validation.
+Tables~\ref{tab:cybercrime-anova-summary-1} and~\ref{tab:cybercrime-anova-summary-2} provide a comprehensive reference guide for the quantitative analysis conducted on each \gls{cybercrime} category in this chapter. These tables summarize the locations of lower bound computations, upper bound computations, Monte Carlo simulation figures, and simulation value tables that can be used for risk assessment after ANOVA validation.
 
 
 \begin{table}[htbp]
