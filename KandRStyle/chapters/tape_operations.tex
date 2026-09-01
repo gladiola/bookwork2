@@ -1,0 +1,199 @@
+\chapter{Basic Tape Operations with \index{FreeBSD}FreeBSD }
+\begin{center}\vspace{-0.5\baselineskip}\parbox{0.85\textwidth}{\small\itshape
+We explored the planning and use of \gls{lto} tape as a resource for storing backups.  We describe common commands, patterns of MT and TAR commands.  We recommend some techniques for testing, rehearsing, and using tape archives.\par}\end{center}
+\section{Introduction}
+
+We wanted to see if it would be possible for us to make use of an \index{LTO tape}\gls{lto} tape machine that was on one of our salvaged computers.  We'd often heard of the performance of using \index{tape}tape for \index{backups}backups.  We'd seen some hints about the bravery needed for working with tape in modifying old mainframe programs.  We rarely saw any strong tutorials or comprehensive directions for \index{tape operations}tape operations.
+
+The average person has almost never used \index{tapes}tapes as a part of personal computing these days.  Businesses which do use \index{tapes}tapes often do so as part of larger, commercial \index{data center}data center operations.  For many of us, the closest we've come to \index{tape operations}tape operations was with using cassette tapes for storage on personal machines in the 1980s.  \index{LTO tape}\gls{lto} tapes are often praised but infrequently used.  We wanted to break through this mystery.
+
+
+%------------------------------------------------
+
+\section{Methodology}
+
+Our plan is to write a file to \index{tape}tape, eject the \index{tape}tape, and be able to read the file back from the \index{tape}tape again.  Once there, we will want to do a simple sequence of file writes and reads without damaging the files on \index{tape}tape.
+
+
+
+%------------------------------------------------
+
+\section{Results}
+
+We used a Dell T610 tower computer with an \index{LTO3}LTO3 single deck \index{tape machine}tape machine on board.  We have some \index{LTO3 tapes}LTO3 tapes that can be used with it.  Our \index{tape drivers}tape drivers and common commands are built into \index{FreeBSD}FreeBSD.
+
+Warning:  We want to use the \index{nsa driver}nsa driver.  There is an \index{sa driver}sa driver, but it has some limitations.  When we tried using sa, we were not able to properly advance down the \index{tape}tape through multiple \index{file markers}file markers.  Use \index{nsa driver}nsa for the the driver.
+
+
+\subsection{Code Notes}
+1.  Place files in a directory that you control.  Isolating the files to be copied to tape is safer than copying them directly from where they are.
+
+2.  \texttt{\index{mt}mt -f /dev/nsa0 load}\endnote{"mt." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mt&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
+This will load the tape onto the machine.
+
+3.  \texttt{\index{mt}mt -f /dev/nsa0 rewind}\endnote{Ibidem.}\\
+This will spool the tape to the beginning.
+
+4.  \texttt{\index{mt}mt -f /dev/nsa0 status}\endnote{Ibidem.}\\
+To check to see where we are on the tape.  Assuming this is the first use of the tape, we could start writing immediately.
+
+5.  If there are files on the tape, we need to either scan ahead and log the files, or we need to consult our notes to find where on the tape we should go.  We could easily overwrite a file and damage the sequence.  Use the write persistent notch to protect the tape when possible.
+
+6.  \texttt{\index{mt}mt -f /dev/nsa0 com or eod}\endnote{Ibidem.}\\
+To go to the end of the records.
+
+7. \texttt{\index{tar}tar cvf /dev/nsa0 [FILE\_TO\_ARCHIVE]}\endnote{"tar." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=tar&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
+Once at the proper spot on the tape, give the command to archive the files.
+
+8.  \texttt{\index{mt}mt -f  /dev/nsa0 weof1}\endnote{"mt." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=mt&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}\\
+Write an end-of-file marker.
+
+9.  \texttt{\index{tar}tar -t}\endnote{Ibidem.}\\
+To see the archive on the tape.
+
+\texttt{\index{tar}tar xf /dev/nsa0}\endnote{Ibidem.}\\
+To get the archive from the tape.
+
+10.  Write notes.  Log and record what was put on the tape.
+
+11.  For the next record, just rewind and advance through the markers to get to the next blank space for writing a record.
+
+\subsubsection{Sample Files: test.txt }
+\texttt{The quick brown fox jumped over the lazy dogs.}
+\subsubsection{Sample Files:  test2.txt}
+\texttt{The other dog is still lazy, too.}
+\subsubsection{Sample Files:  test3.txt}
+\texttt{The fox is just really fast.}
+\subsubsection{Sample Files:  test4.txt}
+\texttt{Yet some more records.}
+\subsubsection{Sample Files:  test5.txt}
+\texttt{And another record.}
+\subsubsection{Sample Script:  scriptedDemo.sh}
+\texttt{\#!/usr/bin/env sh\\
+clear \\
+echo "scriptedDemo"\\
+echo "Press ENTER to continue."\\
+read INPUT\\
+\#\# Check tape\\
+echo "Check if tape is staged in machine."\\
+echo "Press ENTER to continue."\\
+read INPUT\\
+clear\\
+\#\# Load the tape into the machine\\
+echo "Here we go."\\
+echo\\
+echo "Loading tape into machine."\\
+echo "mt -f /dev/nsa0 load"\\
+mt -f /dev/nsa0 load\\\endnote{Ibidem.}
+\#\# Rewind tape\\
+echo "Rewinding tape"\\
+echo "mt -f /dev/nsa0 rewind"\\
+mt -f /dev/nsa0 rewind\\\endnote{Ibidem.}
+echo "Press ENTER to continue."\\
+read INPUT\\
+clear\\
+echo "Reading status from tape."\\
+echo "mt -f /dev/nsa0 status"\\
+mt -f /dev/nsa0 status\\\endnote{Ibidem.}
+echo\\
+echo "Press ENTER to continue."\\
+read INPUT\\
+clear\\
+echo "Looking for file 0 on the tape."\\
+echo "We should be at the beginning."\\
+echo "So, no mt commands this time."\\
+echo "tar t -f /dev/nsa0"\\
+tar t -f /dev/nsa0\\\endnote{Ibidem.}
+echo\\
+echo "Press ENTER to continue."\\
+read INPUT\\
+clear\\
+echo "Looking for file 1 on tape."\\
+echo "Rewind to the beginning."\\
+mt -f /dev/nsa0 rewind\\\endnote{Ibidem.}
+echo "Go forward space count 1 file."\\
+echo "mt -f /dev/nsa0 fsf 1"\\
+mt -f /dev/nsa0 fsf 1\\\endnote{Ibidem.}
+echo "tar t -f /dev/nsa0"\\
+tar t -f /dev/nsa0\\\endnote{Ibidem.}
+echo "Press ENTER to continue."\\
+read INPUT\\
+clear\\
+echo "Looking for file 2 on tape."\\
+echo "Back up to 0 and go forward space count 2 files."\\
+echo "mt -f /dev/nsa0 rewind"\\
+mt -f /dev/nsa0 rewind\\\endnote{Ibidem.}
+echo "mt -f /dev/nsa0 fsf 2"\\
+mt -f /dev/nsa0 fsf 2\\\endnote{Ibidem.}
+echo "Show where we are with status."\\
+echo "mt -f /dev/nsa0 status"\\
+mt -f /dev/nsa0 status\\\endnote{Ibidem.}
+echo\\
+echo "Look in that spot with tar."\\
+echo "tar t -f /dev/nsa0"\\
+tar t -f /dev/nsa0\\\endnote{Ibidem.}
+echo "Press ENTER to continue."\\
+read INPUT\\
+clear\\
+echo "Looking for third archive on tape."\\
+echo "Back up to 0 and go forward space count 3 files."\\
+echo "mt -f /dev/nsa0 rewind"\\
+mt -f /dev/nsa0 rewind\\\endnote{Ibidem.}
+echo "mt -f /dev/nsa0 fsf 3"\\
+mt -f /dev/nsa0 fsf 3\\\endnote{Ibidem.}
+echo "See where we are with status."\\
+echo "mt -f /dev/nsa0 status"\\
+mt -f /dev/nsa0 status\\\endnote{Ibidem.}
+echo\\
+echo "See what is here with tar."\\
+echo "tar t -f /dev/nsa0"\\
+tar t -f /dev/nsa0\\\endnote{Ibidem.}
+echo "Press ENTER to continue."\\
+read INPUT\\
+clear\\
+echo "Take the tape offline."\\
+echo "Rewind tape."\\
+echo "mt -f /dev/nsa0 rewind"\\
+mt -f /dev/nsa0 rewind\\\endnote{Ibidem.}
+echo "mt -f /dev/nsa0 offline"\\
+mt -f /dev/nsa0 offline\\\endnote{Ibidem.}
+exit 0\\}
+
+\section{Analysis}
+\subsection{Quality}
+1.  We found there were significant weaknesses in tape sequencing.  Unlike random access memory, overwriting can damage end of file markers which are only navigational delimiters readily usable with the tape.  Simple practice showed it was very easy to accidentally overwrite a tape marker.  All subsequent files on the tape might be inaccessible as a result.\\
+
+2.  Logging.  Since there may be many files on these long tapes, logging support and file navigation are essential.  The usual lapses in notation can make frequent use of the tapes more hazardous with each use.\\
+
+3.  Security.  Unlike geli-\index{encrypt}\gls{encrypt}ed hard drives, the main file protection scheme is through whatever  \index{encrypt}\gls{encrypt}ion we apply to the files themselves.  Tar has some compression algorithms, but  \index{encrypt}\gls{encrypt}ing files is another step altogether.  Since the files may be in storage for a long time, having the backups  \index{encrypt}\gls{encrypt}ed on tape can be a critical step.  This  \index{encrypt}\gls{encrypt}ion would need to be applied before IV.B.7. tar or archiving the files to tape.
+
+\subsection{Tests}
+Writing to tape should be rehearsed.  Checking status and reading files to confirm our location on the tape is a good idea.
+
+Any write operation should be couched on a good, rehearsed read script.  Isolate the files to be written to their own directory.  Add an  \index{encrypt}\gls{encrypt}ion step if necessary.  Rehearse the tar tape archive commands.  Compartmentalize the steps of the tape operations plan to reduce catastrophic failures and a loss of data.
+
+
+%------------------------------------------------
+
+\section{Discussion}
+Tape operations have been long recommended as the preferred form of \gls{backup}.  Off-site \gls{backup} offers strong advantages to an on-premesis system operator.  We can’t count the number of times we’ve seen backups recommended; yet we find very few practical tutorials or directions.
+
+Tape backups and hard drive backups might be easily and securely routed to an off site location through the \gls{us} mail.  They could be mailed to yourself at a personal mailbox, remote office, P.O. Box, or to a trusted person.  Notice that any person or entity entrusted to possess the data may also be at risk or some sort of liability.
+
+
+%----------------------------------------------------------------------------------------
+%	 REFERENCES
+%----------------------------------------------------------------------------------------
+
+%\printbibliography % Output the bibliography
+\section{References}
+A.  Books – none.  2023 versions of the \index{FreeBSD Handbook}FreeBSD handbook don’t cover tape operations.
+
+B.  man pages – \texttt{mt}, \texttt{tar} man pages.
+
+C.  URLs – FreeBSD man pages for above. \\
+\url{man.freebsd.org/cgi/man.cgi?query=mt} for \texttt{mt} man page.\\
+\url{man.freebsd.org/cgi/man.cgi?query=tar} for \texttt{tar} man page.
+
+%----------------------------------------------------------------------------------------
+\markchapterendnotes

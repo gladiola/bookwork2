@@ -1,0 +1,195 @@
+\chapter{Login Procedures for Disconnected Systems}
+\begin{center}\vspace{-0.5\baselineskip}\parbox{0.85\textwidth}{\small\itshape
+This outline will help us to log into a laptop that is set up to be a disconnected, air-grapped machine.  We cover what items are needed, and how to attach and to decrypt the disks.  The \gls{operating system} is provided through immutable, read-only, optical media.  Some key values were encoded onto magstripe cards.  Others were recorded in a paper notebook.  The machine now has a refined set of startup procedures that are incompatible with normal laptop use.  A general outline of the machine's login procedures are listed here.\par}\end{center}
+
+\section{Introduction}
+
+We wanted to establish an \index{air-gapped}air-gapped machine for off-network use.  To protect critical data and programs, we wanted to have a recoverable \index{immutable}immutable \index{operating system}\gls{operating system} with \index{encrypted storage}encrypted storage.  To inhibit networking, we permanently disabled the wired and wireless systems.  We prepared on-machine and peripherial \index{encrypted storage}encrypted storage.
+
+Our intention is to use the laptop as a general-purpose \index{air-gapped}air-grapped machine.  We want to be able to generate \index{keys}keys and \index{certificates}certificates, to access and to edit \index{secrets}secrets, and to develop small scripts offline.
+
+The login procedure for this disconnected laptop is similar to a procedure used for disconnected rack servers.  Due to the portability of the laptop, and the frequent use of some of the \index{authentication}\gls{authentication} challenges, the laptop has some \index{magstripe}magstripe additions.
+
+
+%------------------------------------------------
+
+\section{Methodology}
+
+
+Booting this machine requires a few phases:
+\begin{enumerate}
+\item Physical access.
+\item POST and BIOS.
+\item Disk discovery and attachment.
+\item Disk \gls{decryption}.
+\item \gls{dataset} attachment.
+\end{enumerate}
+
+Powering off the machine requires a similar reversed sequence:
+\begin{enumerate}
+\item \gls{dataset} detachment.
+\item Encrypted \gls{partition} detachment.
+\item Disk detachment.
+\item Poweroff.
+\item Physical security of related parts.
+\end{enumerate}
+
+Of these, discovering and attaching the disks for use may be the biggest stumbling block for the uninitiated.  Manually decrypting the disks is a close second.  Attaching a \gls{dataset} is very similar to normal \gls{zfs} use.  Most of these tasks are done automatically by operating systems.  In this system, the steps have been disconnected.  This allows us to swap out storage and provide a measure of procedural security to the system.
+
+%------------------------------------------------
+
+\section{Results}
+
+\subsection{Required Or Specific Equipment}
+We used a Dell XFR laptop that was purchased from a police auction.  We replaced the main hard drive.  We disassembled the machine and prepared it for \index{air-gapped}air-grapped use.  The Ethernet connection jack was jammed with epoxy putty.  The camera and microphone assemblies were removed.  The \index{WiFi}wifi card and antennas were removed.  A \index{privacy screen}privacy screen of polarized vinyl was installed over the display.  \index{USB}USB ports were temporarily blocked with plugs that can be removed with a specialized tool.  The laptop has been fitted with a \index{bluetooth tracking device}bluetooth tracking device and a tinted luggage tag.
+
+Some key values are stored on \index{encrypted USB drives}encrypted USB drives that are equipped with a read-only physical switch.  If this switch is not moved into the "write" position, then the disk will not successfully decrypt.  The drives were encrypted with \index{Camellia}Camelia using \index{geli}geli in a \index{ZFS}\gls{zfs} \gls{partition} set up with \index{gpart}gpart.  The USB drives are labelled with color-coded tags and inventory stickers to identify the classification of data held on them and the drives' individuality.
+
+For convenience, some key values have been written to \index{magstripe cards}magstripe cards.  This is nearly equivalent to writing the passwords down in plain text.  If the card reader is connected, when the card is swiped, it will reveal its values wherever the cursor is available.  Inputting text from a magstripe card is not much different from using a keyboard.  To get the magstripe to read properly, character sets and deliminating characters have to be used to construct the \gls{password} values.  The specific magstripe cards and a magstripe reader are needed if the \index{passphrases}passphrases are not input manually.
+
+For paper backups, some key values have been written in \index{UV-readable ink}UV-readable "invisible" ink in a notebook.  To use this notebook, a UV penlight is kept on hand.  To update that notebook, UV ink is loaded into refillable cartridges of a fountian pen.
+
+\subsection{Code Notes for Power Up}
+\begin{enumerate}
+\item Assemble the needed components:
+\begin{itemize}
+\item The laptop
+\item Power for the laptop
+\item USB software-encrypted storage with read-only disk
+\item USB hardware encrypted disk (if needed) with software encrypted storage \gls{dataset}
+\item Codebook with UV lights and inks (if needed)
+\item Magstripe reader
+\item Any other \index{multifactor authentication}mutlifactor devices needed for specific systems (biometric readers, \index{TOTP}TOTP/\index{HOTP}HOTP \gls{authentication} devices, \index{certificates}certificates, etc.).
+\end{itemize}
+
+\item Attach peripherals and power up the laptop.
+
+USB temporary plugs may need to be removed.  Connect the magstripe reader, if needed.  Be prepared to connect any USB drives that get used.
+
+\item BIOS \gls{password}.
+
+BIOS settings are usually tuned to have the boot order boot the system from optical disk.  If needed, use the function key to select which disk is needed for a one-time boot.  There will only be a few seconds in the startup to to press the correct key.
+
+\item Use a recent FreeBSD bootonly.iso disk on optical media.
+
+This will only have the most primitive collections of programs and will not be sufficient for \gls{certificate} generation due to the libraries that are provided.  The operator should be able to hear the disk spin up.
+
+\item At the menu, select LiveCD to get a root prompt in terminal.
+
+\item Attach and discover disks.
+
+If the disks are hardware encrypted, then provide the PIN according to the manufacturer's directions.  Enter the PIN carefully, as there may be administrative reset or disk-wiping functions available.  With the disk hardware decrypted and attached, a message should be visible on the console describing the detection of the device.
+
+\texttt{\index{geom}geom disk list}\endnote{"geom." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geom&apropos=0&sektion=0&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.} - should show the disks recognized by the system.
+
+\texttt{\index{gpart}gpart show}\endnote{"gpart(8)." Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=gpart&apropos=0&sektion=8&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.} - should provide an indicator of \gls{partition} numbers
+
+\item Attach and decrypt partitions
+
+\texttt{\index{geli}geli attach [\seqsplit{DISK\_NAMEpPARTITION\_NUMBER}]}\endnote{"Geli(8)." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}
+
+If a \gls{passphrase} was recorded on magstripe, this is the point where the dedicated card will need to be swiped.  If the card does not work, then this is the point where the paper UV ink \gls{backup} notes may be used.
+
+\item Discover and attach zpools and zfs datasets.
+
+\texttt{\index{zpool}zpool import \seqsplit{POOL\_NAME\_ON\_ATTACHED\_DISK}}\endnote{"zpool(8)." Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=zpool&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}
+
+\texttt{\index{zpool}zpool import -af}\endnote{Ibidem.} to forcefully attach all available zpools
+
+\texttt{\index{zpool}zpool status}\endnote{Ibidem.}
+
+If a MAC kerenel mod like mac\_biba is used on the file system, then the system may be a UFS file system on a \gls{zfs} Volume.  These are often mounted with mount from a /dev device node or a GEOM label.  [Advanced \gls{zfs}]
+
+\item Observe datasets.  Notes should tell us where to go to see where the datasets have automatically mounted.    Or, we can use zfs commands to set a mountpoint to a desired location.  In the read-only LiveCD media, our most likely attachment point may be /tmp.
+
+\item Use the laptop to interact with files on the storage.
+
+\item Decrypt individual files with openssl.\endnote{"Openssl(1)." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=openssl&apropos=0&sektion=1&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}
+\end{enumerate}
+
+\subsection{Code Notes for Poweroff}
+The poweroff procedure is similar to a reverse of the poweron, but there are fewer steps.  If the \gls{zfs} elements are not properly exported, then future imports may require a \texttt{-f} force attribute on the commands.  Notice also if there are automount directories associated with a \gls{zfs} \gls{dataset}, then these will not be destroyed upon dismount.  Instead, they will appear empty.  Hardware drives will generally re-\gls{encrypt} once disconnected from the machine.
+
+With a LiveCD or El Torrito in FreeBSD, it is very common for the system to reboot after a shutdown command.  Watch your system carefully to avoid spending laptop battery power after giving a poweroff command.  Notice also that the laptop will not go into a suspend or hibernate mode if the laptop display is closed.  Those are advanced gui and system functions which will not be covered in El Torrito.
+
+1.  Dispose of decrypted copies of any files that are in the plain.  Ensure that an encrypted copy continues to live on the storage drives.  Re-\gls{encrypt} if necessary.
+
+2.  Dismount media.
+\texttt{\index{zfs}zfs export [DATASET\_NAME]}\endnote{"zfs(8)." Freebsd.org, 2026, \url{man.freebsd.org/cgi/man.cgi?query=zfs&sektion=8&manpath=FreeBSD+10.3-RELEASE}. Accessed 10 June 2026.}
+\texttt{\index{geli}geli detatch [DRIVE.eli]}\endnote{Ibidem.}
+\texttt{\index{geom}geom disk list}\endnote{Ibidem.}
+
+In order to dismount the media, do not have a terminal command line open on any directories associated with that media.  To confirm a directory is empty after dismount, use \texttt{\index{ls}ls}\endnote{"Ls(1)." Freebsd.org, 2025, \url{man.freebsd.org/cgi/man.cgi?query=ls&apropos=0&sektion=1&manpath=FreeBSD+10.3-RELEASE&arch=default&format=html}. Accessed 10 June 2026.}.
+
+
+
+\section{Analysis}
+\subsection{Quality}
+We have some fragile areas of the system.
+
+We can swipe a card with the \gls{password} in an environment where reading a \gls{password} from a book might be uncomfortable.  The speed of the magstripe's use can be a blessing during development and testing or other times when the challenges may be frequently encountered.  However, the \gls{password} will need to be stored in plain text on the magnetic stripe.  This means that magstripe cards used for passwords will need physical access control safeguards.
+
+BIOS is used instead of UEFI to keep the boot process simple and uniform with other machines.
+
+USB detachable storage has been a well-known security weak point for over a decade.  We have chosen USB \gls{port} blockers; but, those frequently come with proprietary plastic keys to insert or extract them.  It's obvious that those \gls{port} blockers are an inconveniece device; they don't provide full access controls; they're usefulness is limited to slowing down the surrepetitious attachment of USB devices.
+
+\subsection{Tests}
+Disk \gls{metadata} backups.  geli is frequently used in automatic installations of FreeBSD systems using bsdinstall.  However, those automatic installs don't prompt an admin for saving a copy of the disk \gls{metadata}.  If that \gls{metadata} file is not saved someplace where its contents can be carefully preserved, then any difficulty with decrypting the disk may be scuttled.  The recovery commands for geli will often require or prompt for a path to the \gls{metadata} file.
+
+Not only should the \gls{metadata} be saved, but use of it should be periodically rehearsed.  Since it is needed for disk recovery, and period since the last recovery rehearsal should be considered a time of unconfirmed disk storage.  That data is in jeopardy of being lost to a disk \gls{decryption} problem.  Rehearse the recovery of disks with the \gls{metadata} files.  Without them, the only option in the event of a disk \gls{decryption} problem will be to start over with a geli init to basically reformat the encrypted drive \gls{partition}.
+
+%------------------------------------------------
+
+\section{Discussion}
+\subsection{Summary of Usefulness}
+We believe that this disposition of resources will position us well to intervene on attempts at root-level persistence.  So many machines these days are configured to boot into an \gls{operating system} on power-up that a disconnected system might not be anticipated by an attacker.
+
+The disconnected system has also been useful for swapping out storage drives on a machine.  Many machines are being built and sold with on-\gls{motherboard} \gls{ram} and immovable SSDs.  While this supports thinner designes for single-board laptops, it doesn't suit our experimentation methods on salvaged equipment.
+
+\subsection{Lessons Learned}
+This type of system requires some practice for routine use.  When using disconnected systems or live-disc systems, the configurations may not persist between boots.  A lack of rehearsals or familiarity with the boot and power-up procedure may cause delays as the operator teaches themselves the pattern or troubleshoot omitted steps.
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	 REFERENCES
+%----------------------------------------------------------------------------------------
+
+%\printbibliography % Output the bibliography
+\section{References}
+\subsection{Books}
+Lucas, Michael W. and Jude, Allan.  FreeBSD Mastery:  \gls{zfs}.  2015.  ISBN-13:  978-1-64235-000-5.
+
+We found this book to be an excellent guide to \gls{zfs}, overall.  We also adopted naming suggestions that aligned exterior drive serial numbers with disk labelling.  Chapter 2 featured a helpful guide on planning RAIDZ configurations with notes on efficiency.  Advice on snapshots, cloning, and block devices for non-\gls{zfs} file systesms were all helpful.
+
+\subsection{MAN pages}
+\texttt{openssl enc} FreeBSD MAN pages,
+\url{https://man.freebsd.org/cgi/man.cgi?query=enc\&apropos=0\&sektion=1\&manpath=freebsd-ports\&format=html}
+
+\texttt{zfs} Freebsd MAN pages,
+\url{https://man.freebsd.org/cgi/man.cgi?query=zfs\&apropos=0\&sektion=0\&manpath=FreeBSD+14.1-RELEASE+and+Ports\&arch=default\&format=html}
+
+\texttt{zpool} FreeBSD MAN pages,
+\url{https://man.freebsd.org/cgi/man.cgi?query=zpool\&apropos=0\&sektion=0\&manpath=FreeBSD+14.1-RELEASE+and+Ports\&arch=default\&format=html}
+
+\texttt{geom} FreeBSD MAN pages,
+\url{https://man.freebsd.org/cgi/man.cgi?query=geom\&apropos=0\&sektion=0\&manpath=FreeBSD+14.1-RELEASE+and+Ports\&arch=default\&format=html}
+
+\texttt{geli} FreeBSD MAN pages,
+\url{https://man.freebsd.org/cgi/man.cgi?query=geli\&apropos=0\&sektion=0\&manpath=FreeBSD+14.1-RELEASE+and+Ports\&arch=default\&format=html}
+
+\texttt{gpart} FreeBSD MAN pages,
+\url{https://man.freebsd.org/cgi/man.cgi?query=gpart\&apropos=0\&sektion=0\&manpath=FreeBSD+14.1-RELEASE+and+Ports\&arch=default\&format=html}
+
+\texttt{dd} FreeBSD MAN pages,
+\url{https://man.freebsd.org/cgi/man.cgi?query=dd\&apropos=0\&sektion=0\&manpath=FreeBSD+14.1-RELEASE+and+Ports\&arch=default\&format=html}
+
+\subsection{URLs}
+FreeBSD Handbook, \gls{zfs}, \url{https://docs.freebsd.org/en/books/handbook/zfs/}
+
+FreeBSD Handbook, Storage, \url{https://docs.freebsd.org/en/books/handbook/disks/}
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+\markchapterendnotes
