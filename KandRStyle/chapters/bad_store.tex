@@ -1,13 +1,13 @@
 \chapter{h4cking VulnHub\textquotesingle s Bad Store}
 
-In this post, we'll cover adapting some of the recon techniques outlined in Georgia Weidman's book, *Pentration Testing* \endnote{[1]}\endnote{[2]}\endnote{[3]} to an unknown set of problems found in VulnHub's "Bad Store" ISO. \[[4]\]  Our goal will be to use the VulnHub VM as a target.  We'll find what's possible by doing some scanning and enumeration. From there, we'll look at some exploits.  
+In this post, we'll cover adapting some of the recon techniques outlined in Georgia Weidman's book, *Pentration Testing* \endnote{[1]}\endnote{[2]}\endnote{[3]} to an unknown set of problems found in VulnHub's "Bad Store" ISO. \[[4]\]  Our goal will be to use the VulnHub VM as a target.  We'll find what's possible by doing some scanning and enumeration. From there, we'll look at some \gls{exploit}\index{exploit}s.  
 
 \subsubsection{Spoilers}
     Throughout this post, we'll reveal some aspects of the "Bad Store" target.  Please note that by looking at some of these details, the VM's instructional quality as a target of unknown composition might be diminished to hackers who will want use the target for technical growth and professional development.  Experience recommends thorough use of the target VM before referring to resources such as these.
 
 
 
-Published in 2004, "Bad Store" \[[4]\] is one of the oldest VMs on Vulnhub available for these kinds of penetrations.  The VM target contains a poorly secured storefront website running on a Linux system with a MySQL database and some CGI programming.  The age of the target is significant in that, commercially, we see much less CGI programming than we used to; also, we will see that the passing of time has revealed new vulnerabilities in the technologies used in the VM that may not have been a part of the initial exercises.
+Published in 2004, "Bad Store" \[[4]\] is one of the oldest VMs on Vulnhub available for these kinds of penetrations.  The VM target contains a poorly secured storefront website running on a Linux system with a \index{MySQL}\gls{database} and some CGI programming.  The age of the target is significant in that, commercially, we see much less CGI programming than we used to; also, we will see that the passing of time has revealed new vulnerabilities in the technologies used in the VM that may not have been a part of the initial exercises.
 
 \subsubsection{Setup}
 
@@ -24,8 +24,8 @@ Property & Value & Logical Impact \\
 \hline
 Target Machine:  VirtualBox VM & VulnHub Bad Store iso in VM & Target of unknown composition \\
 Target Machine:  Host OS & WIN 10 & Target platform host OS \\
-Attacker Machine:  VirtualBox VM & Kali & Attack platform inside VM \\
-Attacker Machine:  Host OS & FreeBSD 10.3 RELEASE & Attack platform host OS \\
+Attacker Machine:  VirtualBox VM & Kali & \gls{attack} platform inside VM \\
+Attacker Machine:  Host OS & FreeBSD 10.3 RELEASE & Attack\index{attack} platform host OS \\
 Target & 192.168.1.9 & \texttt{ifconfig} OK \\
 Attacker & 192.168.1.10 & \texttt{ifconfig} OK \\
 \hline
@@ -42,13 +42,13 @@ and \texttt{ifconfig} on both VMs, we could reasonably see that the boxes were c
 
 If communication among the boxes cannot be established, then a common point to check is the VM network adapter.  Another similar troubleshooting check will be to see if a command line or terminal on the host system can communicate with the VM, and vice versa.  
 
-These commo checks may seem elementary; but, knowing IP addresses and having smooth commo among the boxes can be of help when exporting data. To get files into and out of the attack box, I used FTP uploads through an intermediary website, \texttt{PuTTY}, \texttt{ssh}, and \texttt{scp}.  In most situations where I have had to use VMs on a variety of systems, being proficient with those kinds of file transfers was a handy skill to have.
+These commo checks may seem elementary; but, knowing IP addresses and having smooth commo among the boxes can be of help when exporting data. To get files into and out of the attack\index{attack} box, I used FTP uploads through an intermediary website, \texttt{PuTTY}, \texttt{ssh}, and \texttt{scp}.  In most situations where I have had to use VMs on a variety of systems, being proficient with those kinds of file transfers was a handy skill to have.
 
 \subsection{ISO Reset}
 When working with the "Bad Store" VM, it was noted in some of the early directions that the VM would reset itself if restarted.  This became more of a consideration, later, when thinking up what type of exploits could be used inside the target.  Meanwhile, we decided not to turn the VM completely off; instead, when it was time to end a study session the VMs for both the attacker and the target would have their states saved before the computers were shut down.  This, in conjunction with giving no real commands on the target box, was one of the few rules of this exercise.
 
 \subsection{Kill Chains and Attacking Actions}
-Throughout our discussion, we'll try to relate the use of commands in Kali to analysis actions that use the Lockheed-Martin Intrusion Kill Chain.  Brotherston and Berlin, writing in the Defensive Security Handbook, presented an example use case in this format that allowed us to see all sides of the attack. \endnote{[5]} They included defensive actions and monitoring in correlations with phases of the kill chain.  Their chart headers looked similar to the one below.
+Throughout our discussion, we'll try to relate the use of commands in Kali to analysis actions that use the Lockheed-Martin Intrusion Kill Chain.  Brotherston and Berlin, writing in the Defensive Security Handbook, presented an example use case in this format that allowed us to see all sides of the \gls{attack}. \endnote{[5]} They included defensive actions and monitoring in correlations with phases of the kill chain.  Their chart headers looked similar to the one below.
 
 \begin{table}[H]
 \caption{Brotherston-Berlin Use Case Format [5]}
@@ -61,7 +61,7 @@ Kill Chain Step & Malicious Action & Defensive Mitigation & Potential Monitoring
 \end{tabular}
 \end{table}
 
-Our needs here are a little different, so we'll modify our chart while following along from their example.  Since this is not a real attack; and since our view is mainly from the penetrator's perspective, we'll abbreviate a summary of some of the steps by relating an attacking action to a step in the kill chain and an observation, using tables like the one below.  As we can see, this format is similar to descriptions we might find about the phases of pentesting \[[26]\]
+Our needs here are a little different, so we'll modify our chart while following along from their example.  Since this is not a real attack\index{attack}; and since our view is mainly from the penetrator's perspective, we'll abbreviate a summary of some of the steps by relating an attacking action to a step in the kill chain and an observation, using tables like the one below.  As we can see, this format is similar to descriptions we might find about the phases of pentesting \[[26]\]
 
 \begin{table}[H]
 \caption{Command to Kill Chain Step Summary}
@@ -84,16 +84,16 @@ Actions and Objectives &  &  \\
 
 Adapting a vernacular of different phases is a common practice.  As we can see from NIST publications like 800-115, similar analysis mechansims might divide up an operation into four phases; \[[36]\] some other evaluators might use five or more. \[[26]\]  So long as we can be clear with our recipients, the breaking up of the anaylsis into phases may not matter.
 
-As we go through some of the phases of the hack, we'll cover some of the NIST-style Discovery and Attack cycles.  In retrospect, this fit a chronology of our actual actions better than the Kill Chain style of analysis.  So, as some of the Discovery and Attack cycles build up information, we'll see them grouped together in some subsections of the Kill Chains.  
+As we go through some of the phases of the hack, we'll cover some of the NIST-style Discovery and Attack\index{attack} cycles.  In retrospect, this fit a chronology of our actual actions better than the Kill Chain style of analysis.  So, as some of the Discovery and Attack\index{attack} cycles build up information, we'll see them grouped together in some subsections of the Kill Chains.  
 
 The Planning phase of the penetration testing methodology was almost nonexistent.  We decided not to consult any in-depth directions because in the past those seemed to spoil the discovery.  The plans were boiled down to three simple rules:
 - Do not read the directions.
 - Always read the references.
 - Wait two days before deciding to give in and read the answer.
 
-Those rules held.  Likewise, our reporting phase is just this blog entry.  By the time we got through the exercise, we had about five distinct Discovery and Attack cycles that were naturally following the suggested pattern of discovery, attack, and additional discovery.
+Those rules held.  Likewise, our reporting phase is just this blog entry.  By the time we got through the exercise, we had about five distinct Discovery and \gls{attack} cycles that were naturally following the suggested pattern of discovery, attack\index{attack}, and additional discovery.
 
-Early on, we wanted to see if we could actually make modifications to repair, modify, or defend that VM, after our penetrations.  In the beginning, that goal had to remain part of our ambitions, as we worked through getting in to the box and learning about the website that's covered in the VM.  This first step of vulnerability scanning began our first Discovery and Attack cycle.
+Early on, we wanted to see if we could actually make modifications to repair, modify, or defend that VM, after our penetrations.  In the beginning, that goal had to remain part of our ambitions, as we worked through getting in to the box and learning about the website that's covered in the VM.  This first step of vulnerability scanning began our first Discovery and Attack\index{attack} cycle.
 
 
 \subsection{Vulnerability Scanning "Bad Store"}
@@ -106,7 +106,7 @@ Copies of the Nessus scan results that we ran against the VM are available throu
 - PDF of Nessus scan using the Basic Network scan type\endnote{\protect\url{https://github.com/gladiola/blackmagic/blob/Demo/agkistrodon/contortix/Penelope/BadStore/Nessus/salvage13_BasicNetwork_BadStore_ya6pkz.pdf}}
 - PDF of Nessus scan using the Web Application scan type\endnote{\protect\url{https://github.com/gladiola/blackmagic/blob/Demo/agkistrodon/contortix/Penelope/BadStore/Nessus/salvage13_BadStore_Web_e1yrt4.pdf}}
 
-We clicked around some to look up those vulnerabilities on hyperlinks related to the Tenable website; while well supported with CVE documentation and the like, there were easier to exploit possibilties likely.  We continued with some of the other vuln scans like \texttt{nmap}.
+We clicked around some to look up those vulnerabilities on hyperlinks related to the Tenable website; while well supported with CVE documentation and the like, there were easier to \gls{exploit} possibilties likely.  We continued with some of the other vuln scans like \texttt{nmap}.
 
 \subsubsection{`nmap` scan for TCP, UDP, and versions}
 Our collection of \texttt{nmap} scans were done to find TCP and UDP ports that might be open.  The scans were run with code like:
@@ -123,11 +123,11 @@ And provided code output files like the blocks below.  The small difference amon
 Nmap 7.25BETA1 scan initiated Thu Jun 28 21:58:25 2018 as: nmap -sS -oA badStore_nmap 192.168.1.9
 Nmap scan report for 192.168.1.9
 Host is up (0.0097s latency).
-Not shown: 997 closed ports
-PORT     STATE SERVICE
-80/tcp   open  http
-443/tcp  open  https
-3306/tcp open  mysql
+Not shown: 997 closed \index{port}s
+\gls{port}     STATE SERVICE
+\index{port} 80/tcp   open  http
+\index{port} 443/tcp  open  https
+\index{port} 3306/tcp open  mysql
 MAC Address: 00:26:C6:CC:BE:3A (Intel Corporate)
 
 Nmap done at Thu Jun 28 21:58:26 2018 -- 1 IP address (1 host up) scanned in 0.91 seconds
@@ -158,7 +158,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done at Thu Jun 28 22:00:04 2018 -- 1 IP address (1 host up) scanned in 16.55 seconds
 \end{lstlisting}
 
-So, what does this tell us?  We can see that those three ports are open.  This will let us see that we will need to focus on programs that serve HTTP(S) and MySQL.  Trying to attack other applications will probably be fruitless.  
+So, what does this tell us?  We can see that those three ports are open.  This will let us see that we will need to focus on programs that serve HTTP(S) and MySQL.  Trying to attack\index{attack} other applications will probably be fruitless.  
 
 \subsection{`nikto` scanning}
 
@@ -175,7 +175,7 @@ echo <TARGET STRING> | base64 --decode
 \end{lstlisting}
 
 The output showed a pattern like:
-\texttt{<100X>:<USER>/<PASSWORD>/<?OPTIONAL METAL WORD>/<IP ADDRESS>}
+\texttt{<100X>:<USER>/<\gls{password}>/<?OPTIONAL METAL WORD>/<IP ADDRESS>}
 These later proved to be an association between item numbers, a supplier, their password, and IP.  However, the site used email addresses to run the logins, so these account rows did not get us into anyone's account.
 
 \subsection{Manual directory checks and source code reading}
@@ -197,7 +197,7 @@ Almost every single text input I tried showed some kind of vulnerability to \tex
 A look at the source code of each page revealed that a lot of form processing was being donw in CGI.  Much luck for me; I never got into CGI.  So, that lead would require more research to use.  
 
 
-Meanwhile, it also turned up another script, \texttt{frmvrfy.js} that compares two password values.  Apparently part of the reset routine.  This was a program I felt we should exploit with our Javascript skills, but we set it aside for the time being.  
+Meanwhile, it also turned up another script, \texttt{frmvrfy.js} that compares two password values.  Apparently part of the reset routine.  This was a program I felt we should exploit\index{exploit} with our Javascript skills, but we set it aside for the time being.  
 
 \subsubsection{Analysis Check}
 \begin{table}[H]
@@ -239,25 +239,25 @@ I tried a couple of Metasploit modules; but, really, a moment of success came by
 
 \subsection{We got the gold}
 
-By running some MySQL auxilliaries with \texttt{msfconsole}, we were able to send SQL directly to the MySQL engine, dump schema, and \texttt{SELECT} a bunch of useful content.  One of the results was that we were able to get database records for usernames as email addresses (this particular website logs users in by email addy), passwords, bank account numbers, and detailed transaction information. 
+By running some \index{MySQL}MySQL auxilliaries with \texttt{msfconsole}, we were able to send SQL directly to the MySQL engine, dump schema, and \texttt{SELECT} a bunch of useful content.  One of the results was that we were able to get \gls{database} records for usernames as email addresses (this particular website logs users in by email addy), \gls{password}s, bank account numbers, and detailed transaction information. 
 
-By \texttt{SELECT}ing those email addresses and passwords from the userdb table, \texttt{msfconsole} was able to output a simple text file that could be trimmed and used as input for \texttt{hashcat}. 
+By \texttt{SELECT}ing those email addresses and \gls{password}s from the userdb table, \texttt{msfconsole} was able to output a simple text file that could be trimmed and used as input for \texttt{hashcat}. 
 
 
 \subsection{Cracking hashed passwords with hashcat}
-When the passwords were downloaded, by outputting the SQL to a text file, the passwords were hashed with MD5.  That simply wouldn't do.  In order to get a readily usable copy of those passwords, we'd need to crack the hash.  Hello, \texttt{hashcat}.
+When the \gls{password}s were downloaded, by outputting the SQL to a text file, the \gls{password}s were hashed with MD5.  That simply wouldn't do.  In order to get a readily usable copy of those \gls{password}s, we'd need to crack the \gls{hash}.  Hello, \texttt{hashcat}.
 
 To crack one, commands go like:
 \begin{lstlisting}
-hashcat -m0 <TARGET HASH TO CRACK> /usr/share/wordlists/rockyou.txt --force
+hashcat -m0 <TARGET \gls{hash} TO CRACK> /usr/share/wordlists/rockyou.txt --force
 \end{lstlisting}
 
 A couple things happened here.  I had to use the \texttt{--force} to get past an error; I had to do some file transfers because my version of Kali wasn't up to date; and I had to turn on \texttt{rockyou.txt} for the first time on that machine.  
 
-One more thing happened:  when feeding hashes in to \texttt{hashcat}, they would disappear from console output after the first crack.  The answers would turn up in the potfile, below.  It became clear that when feeding a big block of hashes to crack to \texttt{hashcat}, it was important to plan for an out-of-order extraction of answers.  For example, the fifth hash input would not necessarily be the fifth-from-last hash in the potfile.  So, in the future, we would need to prepare more to prevent fumbling when getting the cracked password back out.  This time, the result set was so small that simple comparison was still practical.
+One more thing happened:  when feeding hashes in to \texttt{hashcat}, they would disappear from console output after the first crack.  The answers would turn up in the potfile, below.  It became clear that when feeding a big block of hashes to crack to \texttt{hashcat}, it was important to plan for an out-of-order extraction of answers.  For example, the fifth \gls{hash} input would not necessarily be the fifth-from-last hash in the potfile.  So, in the future, we would need to prepare more to prevent fumbling when getting the cracked password\index{password} back out.  This time, the result set was so small that simple comparison was still practical.
 
 \subsubsection{Where is the potfile?}
-After the first console display of the hashes, it was hard to see the cracked passwords for a moment.  When \texttt{hashcat} cracks a hash, by design, it will probably not attempt to crack that hash again.  In this way, \texttt{hashcat} can run faster and faster; with only unresolved hashes remaining, it will have less and less search area to cover.  
+After the first console display of the hashes, it was hard to see the cracked passwords for a moment.  When \texttt{hashcat} cracks a hash\index{hash}, by design, it will probably not attempt to crack that hash\index{hash} again.  In this way, \texttt{hashcat} can run faster and faster; with only unresolved hashes remaining, it will have less and less search area to cover.  
 
 Meanwhile, as noobs running \texttt{hashcat} for the first few times, we were wondering, "Where the hell are my cracked hashes?" \[[6]\]\[[7]\]\[[8]\] The documentation told us that it would be in the potfile.  That potfile would be in the directory where \texttt{hashcat} was run.  By looking at the directory, it didn't seem to be there.  
 
@@ -276,9 +276,9 @@ The potfile we had for this run had entries that looked like this:
 ...
 \end{lstlisting}
 
-As mentioned earlier, the entries in the \texttt{hashcat} potfile didn't seem to be in the expected order.  A careful comparison of the hashes put in and the hashes in the potfile showed that they were not printed in the expected order.  The sequence of the input file was not the same as the sequence of hashes in the potfile.  Since the hashes were there beside their cracked values, a common search or \texttt{grep} would yield the correct answer; just be careful about skimming down the file or jumping to the last hash plaintext value; the last value in the potfile does not necessarily represent the last hash provided to \texttt{hashcat} to crack.
+As mentioned earlier, the entries in the \texttt{hashcat} potfile didn't seem to be in the expected order.  A careful comparison of the hashes put in and the hashes in the potfile showed that they were not printed in the expected order.  The sequence of the input file was not the same as the sequence of hashes in the potfile.  Since the hashes were there beside their cracked values, a common search or \texttt{grep} would yield the correct answer; just be careful about skimming down the file or jumping to the last hash plaintext value; the last value in the potfile does not necessarily represent the last \gls{hash} provided to \texttt{hashcat} to crack.
 
-As a noob, this might seem counterintuitive.  Why would \texttt{hashcat} not simply answer with the cracked hash in the order that it received one to crack?  Keep in mind, that this is kind of a tiny "toy" use case.  \texttt{hashcat} is meant for bigger work.  If you wanted to crack many, many hashes using some GPUs, then \texttt{hashcat} was built for you.  This simple set of block extractions was almost an edge case.
+As a noob, this might seem counterintuitive.  Why would \texttt{hashcat} not simply answer with the cracked \gls{hash} in the order that it received one to crack?  Keep in mind, that this is kind of a tiny "toy" use case.  \texttt{hashcat} is meant for bigger work.  If you wanted to crack many, many hashes using some GPUs, then \texttt{hashcat} was built for you.  This simple set of block extractions was almost an edge case.
 
 \subsubsection{Analysis Check}
 \begin{table}[H]
@@ -305,7 +305,7 @@ Action & Observation \\
 \hline
 msfconsole mysql schema dump & Missing INFORMATION\_SCHEMA was influential; nonstandard table names \\
 msf mysql sql & Simple calls yielded necessary information to impersonate any account \\
-hashcat & Password cracking with wordlists in a reasonable time allowed use of accounts uncovered in previous steps. \\
+hashcat & \gls{password} cracking with wordlists in a reasonable time allowed use of accounts uncovered in previous steps. \\
 SQLi & Injectable controls in almost all inputs and file upload dialogs; other inputs showed CGI filtering of URL-encoded values \\
 \hline
 \end{tabular}
@@ -324,7 +324,7 @@ Even if we had only manually attempted to probe the website, we could still lear
 For the first try, we can call up an instance of MySQL on the target machine using commands just as if we were normally administering one of our own.  
 
 
-While on the machine, we will want to be able to do things like install another user \[[12]\], grant permissions \[[13]\], and maybe even change the password to our discovered "sysadmin" account on the target box.  Most of these user-installation activities will involve a \texttt{GRANT} command; when we try to give similar commands, we can see this warning about \texttt{--skip-grant-tables}.  For now, this basically foils our ability to tamper with the database engine accounts.  Meanwhile, if we were ambitious, we might find a way to modify the initialization files for the MySQL engine to hack our way past this constraint and reset root. \[[15]\] \[[16]\]  But, this brings us back around to what we still need to do:  exploit the box.  Perhaps we can try this in post-exploitation.
+While on the machine, we will want to be able to do things like install another user \[[12]\], grant permissions \[[13]\], and maybe even change the password to our discovered "sysadmin" account on the target box.  Most of these user-installation activities will involve a \texttt{GRANT} command; when we try to give similar commands, we can see this warning about \texttt{--skip-grant-tables}.  For now, this basically foils our ability to tamper with the database engine accounts.  Meanwhile, if we were ambitious, we might find a way to modify the initialization files for the MySQL engine to hack our way past this constraint and reset root. \[[15]\] \[[16]\]  But, this brings us back around to what we still need to do:  exploit\index{exploit} the box.  Perhaps we can try this in post-exploitation.
 
 \subsection{Preparing to use sqlmap}
 Perhaps a return to automated hacking tools will help us.  Earlier, default runs of \texttt{sqlmap} didn't have enough information to do anything effectuve.  However, now, we have learned some facts about the website so that we can use \texttt{sqlmap} in an effective way.  Namely, we have discovered on our own some injectable controls so that \texttt{sqlmap} can have a chance at exploiting them.  The pictures below show some of the details we were able to discover through simple observation of the forms with an ordinary browser.
@@ -332,7 +332,7 @@ Perhaps a return to automated hacking tools will help us.  Earlier, default runs
 In the picture above, we see finding the URL that the form uses for submission.  In the picture below, we see the discovery of the button name that sets off that form submission.  Since our form is submitted with a POST action, our steps are a little different from a common GET submission.  \[[9]\]\[[12]\]
 
 
-To make our life easier, we can use Burp Suite's proxy readouts to show us what the submitted POST will look like. [12]  From there, we'll save a copy of that POST message to a file, alter it slightly, and use it alongside our \texttt{sqlmap} to give the script a way to get an exploit installed.  \[[9]\]\[[10]\]\[[11]\]\[[12]\]
+To make our life easier, we can use Burp Suite's proxy readouts to show us what the submitted POST will look like. [12]  From there, we'll save a copy of that POST message to a file, alter it slightly, and use it alongside our \texttt{sqlmap} to give the script a way to get an \gls{exploit} installed.  \[[9]\]\[[10]\]\[[11]\]\[[12]\]
 
 In the picture above, we see that \texttt{sqlmap} has been able to identify the injectable control.  
 
@@ -372,7 +372,7 @@ This kind of POST file read technique can be combine with the other \texttt{--fi
 Kill Chain Step & Attacking Action & Observation \\
 \hline
 Weaponization & sqlmap & Automated discovery of effective SQLi \\
-POST forms edited and staged & Efficient reloading of altered data for repetitive attack attempts &  \\
+POST forms edited and staged & Efficient reloading of altered data for repetitive \gls{attack} attempts &  \\
 Delivery and Exploitation & sqlmap & Command line uploads of files \\
 sqlmap & Command line downloads of files &  \\
 Reconnaissance & sqlmap storage & Simple observation of file transfers began to reveal write-permission problems \\
@@ -401,16 +401,16 @@ In addition to being able to use \texttt{sqlmap}, at one point I noticed that wh
 \begin{lstlisting}
 use auxiliary/scanner/mysql/mysql_schemadump
 show options
-exploit
+exploit\index{exploit}
 
 use auxiliary/admin/mysql/mysql_sql
 show options
 set RHOST 192.168.1.9
 set SQL "SELECT * FROM badstoredb.acctdb"
-exploit
+exploit\index{exploit}
 
 set SQL "show columns"
-exploit
+\gls{exploit}
 \end{lstlisting}
 \texttt{msfconsole} commands like these came in handy to reveal most of what we wanted to know about the database supporting the dynamic website. \[[27]\]  Given these simple utilities, we were able to get any table we wanted and to see the entire schema.  Some of the prefabricated scripts for attacking this older version of MySQL database didn't work well because of the lack of an \texttt{INFORMATION\_SCHEMA} database and standardized tables to cover the meta-structure of the databaases; but, that didn't stop our ability to glean the information we needed using the techniques above and some simple manual processes.  
 
@@ -496,7 +496,7 @@ sqlmap, msfconsole uploads & Could not install a file or detect a running servic
  
  
 
- Downloading the \texttt{badstore.cgi} file itself yielded a wealth of information.  Pretty much the heart of the entire exercise, this program showed us some other directories to check up on.  It also showed us some hardcoded password values and some program aspects that we didn't hit on by ourselves.  There were other features in there available for exploit.  However, since most of them were encompassed by the program, we chose not to follow those leads at the time.  
+ Downloading the \texttt{badstore.cgi} file itself yielded a wealth of information.  Pretty much the heart of the entire exercise, this program showed us some other directories to check up on.  It also showed us some hardcoded password\index{password} values and some program aspects that we didn't hit on by ourselves.  There were other features in thereexploit\index{exploit}ble for exploit.  However, since most of them were encompassed by the program, we chose not to follow those leads at the time.  
 
 I continued looking for a mechanism to pop a shell with.  With no JSP, ASP, or PHP server-side programs enabled, there were slim pickings.  The MySQL was in a version below 5.0; so, there was no "INFORMATION\_SCHEMA" to play with.  Metasploit modules for Heartbleed and Shellshock weren't working. \[[28]\] \[[29]\] \[[30]\] \[[33]\]  After some time, I had to recognize that it was fruitless to continue further exploitation attempts.  As far as I can tell, I wasn't going to get any further in on this one.  
 
@@ -524,7 +524,7 @@ Website listing details of the VM on Vulnhub.  Includes screenshots and links to
 A description of Lockheed-Martin's Intusion Kill Chain.  Brotherston and Berlin applied their use case of an overview of a ransomware attack to the phases of Lockheed's kill chain.  Their definitions and example serves as guidance for the contstruction of our own, here.
 
 \endnote{[6]} \_\_\_\_\_. ``What is a potfile?'' Hashcat Wiki. INTERNET: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions\#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword} \endnote{Hashcat Wiki, ``What is a potfile?'', available at \url{https://hashcat.net/wiki/doku.php?id=frequently\_asked\_questions\#how\_can\_i\_show\_previously\_cracked\_passwords\_and\_output\_them\_in\_a\_specific\_format\_eg\_emailpassword}.}
-\endnote{[7]} \_\_\_\_\_. ``How can I show previously cracked passwords, and output them in a specific format (e.g. email:password)?'' Hashcat Wiki. INTERNET: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions\#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword} \endnote{\nolinkurl{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions\#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}}
+\endnote{[7]} \_\_\_\_\_. ``How can I show previously cracked passwords, and output them in a specific format (e.g. email:\gls{password})?'' Hashcat Wiki. INTERNET: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions\#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword} \endnote{\nolinkurl{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions\#how_can_i_show_previously_cracked_passwords_and_output_them_in_a_specific_format_eg_emailpassword}}
 
 \endnote{[8]} \_\_\_\_\_. ``Hashcat reports "Status: Cracked", but did not print the hash value, and the outfile is empty. What happened?'' Hashcat Wiki. INTERNET: \url{https://hashcat.net/wiki/doku.php?id=frequently_asked_questions\#hashcat_reports_statuscracked_but_did_not_print_the_hash_value_and_the_outfile_is_empty_what_happened} \endnote{Hashcat Wiki FAQ, accessed online.}
 \endnote{[9]} Abouzeid, Halim.  "From SQL Injection to WebShell"  RSA.  INTERNET:  \url{https://community.rsa.com/community/products/netwitness/blog/2017/04/10/from-sql-injection-to-webshell}\endnote{\protect\url{https://community.rsa.com/community/products/netwitness/blog/2017/04/10/from-sql-injection-to-webshell}}
@@ -535,7 +535,7 @@ Step by step tutorial on using \texttt{sqlmap} to pop a shell on a target box.  
 Some reverse shell script suggestions for various systems.  
 
 \endnote{[11]} \_\_\_\_\_.  INTERNET:  \url{https://www.darkmoreops.com/2014/08/28/use-sqlmap-sql-injection-hack-website-database/}\endnote{\protect\url{https://www.darkmoreops.com/2014/08/28/use-sqlmap-sql-injection-hack-website-database/}}
-A tutorial showing some \texttt{sqlmap} hacks by injection.  Includes another example of get a hashed password and crack it using a modified form of \texttt{hashcat}.
+A tutorial showing some \texttt{sqlmap} hacks by injection.  Includes another example of get a hashed password\index{password} and crack it using a modified form of \texttt{hashcat}.
 
 \endnote{[12]} \_\_\_\_\_.  INTERNET:  \url{https://sneakerhax.com/tool-tips-sqlmap-with-post-requests/}\endnote{\protect\url{https://sneakerhax.com/tool-tips-sqlmap-with-post-requests/}}
 Tutorial showing some steps for using Burp Suite to pick up POST messages to injectable programs and modify them for use with \texttt{sqlmap}.
@@ -550,7 +550,7 @@ Commands for GRANT with MySQL.  Critical basic commands for setting privileges o
 Stack Overflow post suggesting that skip grant tables might be overridden with reconfiguring some ini files.
 
 \endnote{[16]}  INTERNET:  \url{https://superuser.com/questions/1127299/how-to-restart-mysql-with-skip-grant-tables-if-you-cant-use-the-root-password}\endnote{\protect\url{https://superuser.com/questions/1127299/how-to-restart-mysql-with-skip-grant-tables-if-you-cant-use-the-root-password}}
-Suggestion that bypassing the skip grant tables arguments can be used in a risky operation to reset the ROOT account password with MySQL.
+Suggestion that bypassing the skip grant tables arguments can be used in a risky operation to reset the ROOT account \gls{password} with MySQL.
 
 \endnote{[17]}  INTERNET:  \url{http://seclists.org/metasploit/2012/q3/40}\endnote{\protect\url{http://seclists.org/metasploit/2012/q3/40}}
 Got turned on to \texttt{spool} for Metasploit commands.
@@ -589,10 +589,10 @@ Offensive Security's documentation on Metasploit's auxiliary modules.  Shows the
 Rapid7's description of an openssl\_heartbleed scanner in Metasploit.
 
 \endnote{[29]}  INTERNET: \url{https://www.trojanhorsesecurity.com/shellshock}\endnote{\protect\url{https://www.trojanhorsesecurity.com/shellshock}}
-Trojan Horse Security's description of a Shellshock scanner and exploit in Metasploit.
+Trojan Horse Security's description of a Shellshock scanner and exploit\index{exploit} in Metasploit.
 
-\endnote{[30]}  INTERNET: \url{https://www.rapid7.com/db/modules/exploit/multi/http/apache_mod_cgi_bash_env_exec}\endnote{\protect\url{https://www.rapid7.com/db/modules/exploit/multi/http/apache_mod_cgi_bash_env_exec}}
-Rapid7's description of a Shellshock exploit in Metasploit.
+\endnote{[30]}  INTERNET: \url{https://www.rapid7.com/db/modules/\gls{exploit}/multi/http/apache_mod_cgi_bash_env_exec}\endnote{\protect\url{https://www.rapid7.com/db/modules/exploit\index{exploit}/multi/http/apache_mod_cgi_bash_env_exec}}
+Rapid7's description of a Shellshock \gls{exploit} in Metasploit.
 
 \endnote{[31]}  INTERNET: \url{https://bytebin.wordpress.com/2011/04/25/how-to-check-debian-boot-log-messages/}\endnote{\protect\url{https://bytebin.wordpress.com/2011/04/25/how-to-check-debian-boot-log-messages/}}
 Blog post on where to find Debian boot logs.  Useful notes when we were trying to locate BadStore VM's boot-up information.
