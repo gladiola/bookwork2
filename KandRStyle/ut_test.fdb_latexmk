@@ -1,16 +1,21 @@
 # Fdb version 4
-["makeindex ut_test.idx"] 0 "ut_test.idx" "ut_test.ind" "ut_test" 0 -1
-  "ut_test.idx" 1788275797.29569 22335 6224773a78d9dab2b4d18dbe612e5998 "xelatex"
+["cusdep glo gls ut_test"] 1788275925.52102 "ut_test.glo" "ut_test.gls" "ut_test" 1788275936.27507 0
+  "ut_test.glo" 1788275929.53338 102549 7feb7ab84c07749a97dbcb7fb8f63c6c "xelatex"
+  (generated)
+  "ut_test.gls"
+  (rewritten before read)
+["makeindex ut_test.idx"] 1788275925.50478 "ut_test.idx" "ut_test.ind" "ut_test" 1788275936.27496 0
+  "ut_test.idx" 1788275929.48338 42737 1b9c4fea17233599ba9d91cec7afae3c "xelatex"
   (generated)
   "ut_test.ilg"
   "ut_test.ind"
   (rewritten before read)
-["xdvipdfmx"] 0 "ut_test.xdv" "ut_test.pdf" "ut_test" 0 -1
-  "ut_test.xdv" 1788275797.29569 4278076 511575011b49522040f87fd7b600281d "xelatex"
+["xdvipdfmx"] 1788275929.77131 "ut_test.xdv" "ut_test.pdf" "ut_test" 1788275936.27771 0
+  "ut_test.xdv" 1788275929.53338 6323676 143a97b0fab0e218afb24d58dc3e93ef "xelatex"
   (generated)
   "ut_test.pdf"
   (rewritten before read)
-["xelatex"] 1788275793.80521 "ut_test.tex" "ut_test.xdv" "ut_test" 1788275797.55584 2
+["xelatex"] 1788275925.55239 "ut_test.tex" "ut_test.xdv" "ut_test" 1788275936.27511 0
   "/etc/texmf/web2c/texmf.cnf" 1787519342.70849 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -145,7 +150,7 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1788275676 9050243 855072f526d41c70f5c0565f576b0b8f ""
   "chapters/acknowledgements.tex" 1788275582.41912 4605 bc9597de1953c435d3fde8b0eea99b29 ""
-  "chapters/amnesiac_systems.tex" 1788275582.41934 100481 91a86b1affc77f8bfd496fc405675a03 ""
+  "chapters/amnesiac_systems.tex" 1788275877.80932 100481 0e7c8ae79e80323de08f08fcd22baa2f ""
   "chapters/anecdotes_journey.tex" 1788275582.41934 46941 d9505d3df714ded1454a48879d139c64 ""
   "chapters/author.tex" 1788275582.41934 886 e6c86fe0211fdd1ee0f24bfde1c032a1 ""
   "chapters/bad_store.tex" 1788275582.41934 53635 0271c3198767900f4ff42638e62ee31e ""
@@ -153,6 +158,8 @@
   "chapters/basic_pentesting.tex" 1788275582.42019 42932 0bc244b34e215db020a02e2f5562f1a8 ""
   "chapters/bastion_host.tex" 1788275582.42019 21720 b53b32002e1d43ecb439181df0fb3bc3 ""
   "chapters/dedication.tex" 1788275582.42019 401 58ad0882186ecc15e9cd10b2424e1bdb ""
+  "chapters/disconnected_login.tex" 1788275582.42019 16387 6c0798a4aaaa1a09e07b4c7f5ddad57c ""
+  "chapters/tape_operations.tex" 1788275582.42119 10580 f41e428d3449aa780b499b705ab4a158 ""
   "chapters/towards_experimentation.tex" 1788275582.42119 139268 1ee3fe2a8031b88d02951ed6dc240d64 ""
   "figures/Screenshot 2026-07-28 145609.png" 1788275582.43611 32593 ea92fc9e30f8c4aa5ddf7b1a3bfe3650 ""
   "figures/Screenshot 2026-07-28 145652.png" 1788275582.43619 65764 66484037d8905c94f2927f7a16bd6d5e ""
@@ -206,10 +213,13 @@
   "images/WeidmanCH4PresentationB7.jpg" 1788275582.58019 340914 d74ea9a45715a6eab95356f7a9cc8df5 ""
   "images/WeidmanCH4PresentationB8.jpg" 1788275582.58219 296915 7e7f5c78d836522f9141b5c5893471a3 ""
   "images/WeidmanCH4PresentationB9.jpg" 1788275582.58319 321219 dd9d150e933bd6df317766f6de110358 ""
-  "ut_test.aux" 1788275797.29569 148625 7b3e67e5585c18af23b7e6994bf49c59 "xelatex"
-  "ut_test.ind" 0 -1 0 "makeindex ut_test.idx"
-  "ut_test.tex" 1788275793.71987 10019 d1e4b93ab40e23a193516b396cff4764 ""
-  "ut_test.toc" 1788275794.62864 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "ut_test.aux" 1788275929.52538 157903 64ca254e72dcc7afd9cc9bbffcceccf3 "xelatex"
+  "ut_test.ent" 1788275929.53338 8963 46f5df96281d7e1c65192c42cdfe9ad8 "xelatex"
+  "ut_test.gls" 1788275925.5463 29115 ea7b8968d4b7a226b6886f2fe53a7453 "cusdep glo gls ut_test"
+  "ut_test.ind" 1788275929.49738 12064 e3afbeafab2ac743edb615220292541a "makeindex ut_test.idx"
+  "ut_test.out" 1788275929.53238 32366 9f1caf77fc3f4aefba971c362aeb4c92 "xelatex"
+  "ut_test.tex" 1788275917.03012 10019 d1e4b93ab40e23a193516b396cff4764 ""
+  "ut_test.toc" 1788275929.53338 28382 2f6c84f8f8754fab8e3b06293edbddc3 "xelatex"
   (generated)
   "ut_test.aux"
   "ut_test.ent"
@@ -221,3 +231,4 @@
   "ut_test.toc"
   "ut_test.xdv"
   (rewritten before read)
+  "ut_test.ent"

@@ -10,11 +10,11 @@
 \@glsorder{word}
 \HyPL@Entry{2<</S/D>>}
 \HyPL@Entry{4<</S/r>>}
-\@writefile{toc}{\contentsline {chapter}{Author}{v}{chapter*.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Preface}{vii}{chapter*.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Acknowledgements}{ix}{chapter*.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Introduction}{xi}{chapter*.5}\protected@file@percent }
-\HyPL@Entry{16<</S/D>>}
+\@writefile{toc}{\contentsline {chapter}{Author}{ix}{chapter*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Preface}{xi}{chapter*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Acknowledgements}{xiii}{chapter*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Introduction}{xv}{chapter*.5}\protected@file@percent }
+\HyPL@Entry{20<</S/D>>}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Anecdotes on the Journey}{1}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -585,3 +585,79 @@
 \@writefile{toc}{\contentsline {subsubsection}{Be Able to Write to the USB}{217}{subsubsection*.250}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Be Able to Put Some Key Pairs on the USB}{218}{subsubsection*.251}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Be Able to Use Commands to Build Out the Drives}{218}{subsubsection*.252}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Goals for \Gls {amnesiac} Systems}{220}{subsubsection*.253}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Configure for SWAP Disk, \gls {zfs}  \Gls {cache}, \gls {zfs} SLOG \Gls {mirror}, and \gls {zfs} RAIDz2}{220}{subsubsection*.254}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7.11}{\ignorespaces FreeBSD Swap Disk — Estimate of 500\,\gls {gb} HDD}}{221}{table.caption.255}\protected@file@percent }
+\newlabel{tab:freebsdswapdisc}{{7.11}{221}{FreeBSD Swap Disk — Estimate of 500\,\gls {gb} HDD}{table.caption.255}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.12}{\ignorespaces \gls {zfs}  \Gls {cache} (Read  \Gls {cache}) Disk — Estimate of 80\,\gls {gb} HDD}}{221}{table.caption.256}\protected@file@percent }
+\newlabel{tab:zfscachedisc}{{7.12}{221}{\gls {zfs} \index {cache} \Gls {cache} (Read \index {cache} \Gls {cache}) Disk — Estimate of 80\,\gls {gb} HDD}{table.caption.256}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.13}{\ignorespaces \gls {zfs} SLOG Log \gls {mirror} (Write  \Gls {cache}) Disk — Initial Estimates}}{221}{table.caption.257}\protected@file@percent }
+\newlabel{tab:zfsslogmirror}{{7.13}{221}{\gls {zfs} SLOG Log \gls {mirror} (Write \index {cache} \Gls {cache}) Disk — Initial Estimates}{table.caption.257}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.14}{\ignorespaces \gls {zfs} \gls {jail} Use Hard Disk — Estimate of 500\,\gls {gb} HDD}}{221}{table.caption.258}\protected@file@percent }
+\newlabel{tab:zfsjailusehdd}{{7.14}{221}{\gls {zfs} \gls {jail} Use Hard Disk — Estimate of 500\,\gls {gb} HDD}{table.caption.258}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Startup with \texttt  {bootonly.iso}}{222}{subsubsection*.259}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mount the USB to Save the \Gls {metadata} \gls {backup} File}{222}{subsubsection*.260}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Create Swap Disk in Bay 0}{222}{subsubsection*.261}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Create \gls {zfs} \gls {cache} in Bay 1}{222}{subsubsection*.262}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Create \gls {zfs} SLOG in Bays 2 and 3}{222}{subsubsection*.263}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Create \gls {zfs} Work Disks for Jails}{223}{subsubsection*.264}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Bay 4}{223}{subsubsection*.265}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Bay 5}{223}{subsubsection*.266}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Bay 6}{223}{subsubsection*.267}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Bay 7}{223}{subsubsection*.268}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{  \Gls {encrypt} those partitions}{224}{subsubsection*.269}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Commands to  \Gls {encrypt} the Partitions}{224}{subsubsection*.270}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{To Preserve the \Gls {metadata} \gls {backup} Files}{225}{subsubsection*.271}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{File Name Check: Editing Labels}{226}{subsubsection*.272}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{To Use the Swap Disk}{226}{subsubsection*.273}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Create the zpool for BLONDIE}{228}{subsubsection*.274}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Create a mountpoint}{228}{subsubsection*.275}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}Analysis}{228}{section.7.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.1}Quality}{228}{subsection.7.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.2}Tests}{228}{subsection.7.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.5}Discussion}{228}{section.7.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.6}Chapter References}{228}{section.7.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.6.1}Books}{228}{subsection.7.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.6.2}MAN Pages}{228}{subsection.7.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.6.3}Websites}{230}{subsection.7.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Login Procedures for Disconnected Systems}{231}{chapter.8}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}Introduction}{231}{section.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}Methodology}{231}{section.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.3}Results}{232}{section.8.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3.1}Required Or Specific Equipment}{232}{subsection.8.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3.2}Code Notes for Power Up}{232}{subsection.8.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3.3}Code Notes for Poweroff}{234}{subsection.8.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.4}Analysis}{234}{section.8.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4.1}Quality}{234}{subsection.8.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4.2}Tests}{235}{subsection.8.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.5}Discussion}{235}{section.8.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5.1}Summary of Usefulness}{235}{subsection.8.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5.2}Lessons Learned}{235}{subsection.8.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.6}References}{235}{section.8.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6.1}Books}{235}{subsection.8.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6.2}MAN pages}{236}{subsection.8.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6.3}URLs}{236}{subsection.8.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Basic Tape Operations with FreeBSD }{237}{chapter.9}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {9.1}Introduction}{237}{section.9.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.2}Methodology}{237}{section.9.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.3}Results}{237}{section.9.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.1}Code Notes}{237}{subsection.9.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Sample Files: test.txt }{238}{subsubsection*.276}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Sample Files: test2.txt}{238}{subsubsection*.277}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Sample Files: test3.txt}{238}{subsubsection*.278}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Sample Files: test4.txt}{238}{subsubsection*.279}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Sample Files: test5.txt}{238}{subsubsection*.280}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Sample Script: scriptedDemo.sh}{238}{subsubsection*.281}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.4}Analysis}{241}{section.9.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.4.1}Quality}{241}{subsection.9.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.4.2}Tests}{241}{subsection.9.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.5}Discussion}{241}{section.9.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.6}References}{242}{section.9.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Endnotes}{243}{chapter*.282}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Glossary}{269}{section*.283}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Index}{277}{section*.285}\protected@file@percent }
+\gdef \@abspage@last{300}

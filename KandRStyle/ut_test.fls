@@ -246,6 +246,12 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+INPUT ./ut_test.out
+INPUT ./ut_test.out
+INPUT ut_test.out
+INPUT ut_test.out
+INPUT ./ut_test.out
+INPUT ./ut_test.out
 OUTPUT ut_test.out
 OUTPUT ut_test.ent
 OUTPUT ut_test.xdv
@@ -268,6 +274,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT ./chapters/dedication.tex
 INPUT ./chapters/dedication.tex
 INPUT chapters/dedication.tex
+INPUT ./ut_test.toc
+INPUT ./ut_test.toc
+INPUT ut_test.toc
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 OUTPUT ut_test.toc
 INPUT ./chapters/author.tex
 INPUT ./chapters/author.tex
@@ -315,8 +326,6 @@ INPUT ./images/WeidmanCH4PresentationB10.jpg
 INPUT ./images/WeidmanCH4PresentationB11.jpg
 INPUT ./images/WeidmanCH4PresentationB11.jpg
 INPUT ./images/WeidmanCH4PresentationB11.jpg
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT ./chapters/basic_pentesting.tex
 INPUT ./chapters/basic_pentesting.tex
 INPUT chapters/basic_pentesting.tex
@@ -479,3 +488,22 @@ INPUT ./chapters/amnesiac_systems.tex
 INPUT chapters/amnesiac_systems.tex
 INPUT ./figures/public to private.png
 INPUT ./figures/public to private.png
+INPUT ./chapters/disconnected_login.tex
+INPUT ./chapters/disconnected_login.tex
+INPUT chapters/disconnected_login.tex
+INPUT ./chapters/tape_operations.tex
+INPUT ./chapters/tape_operations.tex
+INPUT chapters/tape_operations.tex
+INPUT ./ut_test.ent
+INPUT ./ut_test.ent
+INPUT ut_test.ent
+INPUT ./ut_test.gls
+INPUT ./ut_test.gls
+INPUT ut_test.gls
+OUTPUT ut_test.ent
+INPUT ./ut_test.ind
+INPUT ./ut_test.ind
+INPUT ut_test.ind
+INPUT ut_test.aux
+INPUT ./ut_test.out
+INPUT ./ut_test.out

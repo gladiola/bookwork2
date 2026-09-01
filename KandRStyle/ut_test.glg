@@ -1,0 +1,7 @@
+This is makeindex, version 2.17 [TeX Live 2023] (kpathsea + Thai support).
+Scanning style file ./ut_test.ist...........................done (27 attributes redefined, 0 ignored).
+Scanning input file ut_test.glo.....done (1135 entries accepted, 0 rejected).
+Sorting entries............done (12466 comparisons).
+Generating output file ut_test.gls....done (521 lines written, 0 warnings).
+Output written in ut_test.gls.
+Transcript written in ut_test.glg.

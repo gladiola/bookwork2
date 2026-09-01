@@ -1,16 +1,16 @@
 # Fdb version 4
-["makeindex ut.idx"] 1788275742.9952 "ut.idx" "ut.ind" "ut" 1788275759.34293 0
-  "ut.idx" 1788275751.62374 4030 a9806b7dcdefbbf7e4ff5542267da424 "xelatex"
+["makeindex ut.idx"] 0 "ut.idx" "ut.ind" "ut" 0 -1
+  "ut.idx" 1788275899.85977 4030 a9806b7dcdefbbf7e4ff5542267da424 "xelatex"
   (generated)
   "ut.ilg"
   "ut.ind"
   (rewritten before read)
 ["xdvipdfmx"] 0 "ut.xdv" "ut.pdf" "ut" 0 -1
-  "ut.xdv" 1788275751.62374 43816 a3035027360df5e442a661bbd47eb0bb "xelatex"
+  "ut.xdv" 1788275899.85977 36556 3c8f45b2355c061d578c010685432978 "xelatex"
   (generated)
   "ut.pdf"
   (rewritten before read)
-["xelatex"] 1788275743.01268 "ut.tex" "ut.xdv" "ut" 1788275759.34988 2
+["xelatex"] 1788275891.22501 "ut.tex" "ut.xdv" "ut" 1788275907.60582 2
   "/etc/texmf/web2c/texmf.cnf" 1787519342.70849 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -158,11 +158,10 @@
   "images/WeidmanCH4PresentationB7.jpg" 1788275582.58019 340914 d74ea9a45715a6eab95356f7a9cc8df5 ""
   "images/WeidmanCH4PresentationB8.jpg" 1788275582.58219 296915 7e7f5c78d836522f9141b5c5893471a3 ""
   "images/WeidmanCH4PresentationB9.jpg" 1788275582.58319 321219 dd9d150e933bd6df317766f6de110358 ""
-  "ut.aux" 1788275751.62374 12289 c197aa74f93ad40d7dbedafa3ba6d727 "xelatex"
+  "ut.aux" 1788275899.85977 12289 c197aa74f93ad40d7dbedafa3ba6d727 "xelatex"
   "ut.ind" 1788275743.00903 2466 b813d570961290153a49244ba9ec270f "makeindex ut.idx"
-  "ut.out" 1788275751.62374 5105 2a4f20f38c210d66f2c2575e21388282 "xelatex"
   "ut.tex" 1788275583.42621 10006 1c6c95b301e9df5eb4a53c1f3d7f3246 ""
-  "ut.toc" 1788275750.20171 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "ut.toc" 1788275898.16673 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
   (generated)
   "ut.aux"
   "ut.ent"
