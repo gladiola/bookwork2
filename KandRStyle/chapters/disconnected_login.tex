@@ -4,11 +4,11 @@ This outline will help us to log into a laptop that is set up to be a disconnect
 
 \section{Introduction}
 
-We wanted to establish an \index{air-gapped}air-gapped machine for off-network use.  To protect critical data and programs, we wanted to have a recoverable \index{immutable}immutable \index{operating system}\gls{operating system} with \index{encrypted storage}encrypted storage.  To inhibit networking, we permanently disabled the wired and wireless systems.  We prepared on-machine and peripherial \index{encrypted storage}encrypted storage.
+We wanted to establish an \index{air-gapped}air-gapped machine for off-network use.  To protect critical data and programs, we wanted to have a recoverable \index{immutable}immutable \index{operating system} \gls{operating system} with \index{encrypted storage}encrypted storage.  To inhibit networking, we permanently disabled the wired and wireless systems.  We prepared on-machine and peripherial \index{encrypted storage}encrypted storage.
 
 Our intention is to use the laptop as a general-purpose \index{air-gapped}air-grapped machine.  We want to be able to generate \index{keys}keys and \index{certificates}certificates, to access and to edit \index{secrets}secrets, and to develop small scripts offline.
 
-The login procedure for this disconnected laptop is similar to a procedure used for disconnected rack servers.  Due to the portability of the laptop, and the frequent use of some of the \index{authentication}\gls{authentication} challenges, the laptop has some \index{magstripe}magstripe additions.
+The login procedure for this disconnected laptop is similar to a procedure used for disconnected rack servers.  Due to the portability of the laptop, and the frequent use of some of the \index{authentication} \gls{authentication} challenges, the laptop has some \index{magstripe}magstripe additions.
 
 
 %------------------------------------------------
@@ -43,7 +43,7 @@ Of these, discovering and attaching the disks for use may be the biggest stumbli
 \subsection{Required Or Specific Equipment}
 We used a Dell XFR laptop that was purchased from a police auction.  We replaced the main hard drive.  We disassembled the machine and prepared it for \index{air-gapped}air-grapped use.  The Ethernet connection jack was jammed with epoxy putty.  The camera and microphone assemblies were removed.  The \index{WiFi}wifi card and antennas were removed.  A \index{privacy screen}privacy screen of polarized vinyl was installed over the display.  \index{USB}USB ports were temporarily blocked with plugs that can be removed with a specialized tool.  The laptop has been fitted with a \index{bluetooth tracking device}bluetooth tracking device and a tinted luggage tag.
 
-Some key values are stored on \index{encrypted USB drives}encrypted USB drives that are equipped with a read-only physical switch.  If this switch is not moved into the "write" position, then the disk will not successfully decrypt.  The drives were encrypted with \index{Camellia}Camelia using \index{geli}geli in a \index{ZFS}\gls{zfs} \gls{partition} set up with \index{gpart}gpart.  The USB drives are labelled with color-coded tags and inventory stickers to identify the classification of data held on them and the drives' individuality.
+Some key values are stored on \index{encrypted USB drives}encrypted USB drives that are equipped with a read-only physical switch.  If this switch is not moved into the "write" position, then the disk will not successfully decrypt.  The drives were encrypted with \index{Camellia}Camelia using \index{geli}geli in a \index{ZFS} \gls{zfs} \gls{partition} set up with \index{gpart}gpart.  The USB drives are labelled with color-coded tags and inventory stickers to identify the classification of data held on them and the drives' individuality.
 
 For convenience, some key values have been written to \index{magstripe cards}magstripe cards.  This is nearly equivalent to writing the passwords down in plain text.  If the card reader is connected, when the card is swiped, it will reveal its values wherever the cursor is available.  Inputting text from a magstripe card is not much different from using a keyboard.  To get the magstripe to read properly, character sets and deliminating characters have to be used to construct the \gls{password} values.  The specific magstripe cards and a magstripe reader are needed if the \index{passphrases}passphrases are not input manually.
 
