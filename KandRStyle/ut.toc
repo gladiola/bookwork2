@@ -1,7 +1,7 @@
-\contentsline {chapter}{Author}{vii}{chapter*.2}%
-\contentsline {chapter}{Preface}{ix}{chapter*.3}%
-\contentsline {chapter}{Acknowledgements}{xi}{chapter*.4}%
-\contentsline {chapter}{Introduction}{xiii}{chapter*.5}%
+\contentsline {chapter}{Author}{ix}{chapter*.2}%
+\contentsline {chapter}{Preface}{xi}{chapter*.3}%
+\contentsline {chapter}{Acknowledgements}{xiii}{chapter*.4}%
+\contentsline {chapter}{Introduction}{xv}{chapter*.5}%
 \contentsline {chapter}{\numberline {1}Anecdotes on the Journey}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Computers and Insects}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}First Light}{7}{section.1.2}%
