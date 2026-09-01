@@ -2,38 +2,38 @@
 \chapter{Class Options}
 \labch{options}
 
-In this chapter I will describe the most common options used, both the 
+In this chapter I will describe the most common \index{options}options used, both the 
 ones inherited from \Class{scrbook} and the \Class{kao}-specific ones. 
-Options passed to the class modifies its default behaviour; beware 
-though that some options may lead to unexpected results\ldots
+\index{Options}Options passed to the \index{class}class modifies its default behaviour; beware 
+though that some \index{options}options may lead to unexpected results\ldots
 
 \section{\Class{KOMA} Options}
 
-The \Class{kaobook} class is based on \Class{scrbook}, therefore it 
-understands all of the options you would normally pass to that class. If 
+The \Class{kaobook} \index{class}class is based on \Class{scrbook}, therefore it 
+understands all of the \index{options}options you would normally pass to that \index{class}class. If 
 you have a lot of patience, you can read the \KOMAScript\xspace 
-guide.\sidenote{The guide can be downloaded from 
+\index{guide}guide.\sidenote{The \index{guide}guide can be downloaded from 
 \url{https://ctan.org/pkg/koma-script?lang=en}.} Actually, the reading 
-of such guide is suggested as it is very instructive.
+of such \index{guide}guide is suggested as it is very instructive.
 
-Every \KOMAScript\xspace option you pass to the class when you load it 
-is automatically activated. In addition, in \Class{kaobook} some options 
-have modified default values. For instance, the font size is 9.5pt and 
-the paragraphs are separated by space,\sidenote[][-7mm]{To be precise, 
+Every \KOMAScript\xspace \index{option}option you pass to the \index{class}class when you load it 
+is automatically activated. In addition, in \Class{kaobook} some \index{options}options 
+have modified default values. For instance, the \index{font size}font size is 9.5pt and 
+the \index{paragraphs}paragraphs are separated by space,\sidenote[][-7mm]{To be precise, 
 they are separated by half a line worth of space: the \Option{parskip} 
-value is \enquote{half}.} not marked by indentation.
+value is \enquote{half}.} not marked by \index{indentation}indentation.
 
 \section{\Class{kao} Options}
 
-In the future I plan to add more options to set the paragraph formatting 
-(justified or ragged) and the position of the margins (inner or outer in 
+In the future I plan to add more \index{options}options to set the \index{paragraph formatting}paragraph formatting 
+(justified or ragged) and the position of the \index{margins}margins (inner or outer in 
 twoside mode, left or right in oneside mode).\sidenote{As of now, 
-paragraphs are justified, formatted with \Command{singlespacing} (from 
-the \Package{setspace} package) and \Command{frenchspacing}.}
+\index{paragraphs}paragraphs are justified, formatted with \Command{singlespacing} (from 
+the \Package{setspace} \index{package}package) and \Command{frenchspacing}.}
 
 I take this opportunity to renew the call for help: everyone is 
-encouraged to add features or reimplement existing ones, and to send me 
-the results. You can find the GitHub repository at 
+encouraged to add \index{features}features or reimplement existing ones, and to send me 
+the results. You can find the GitHub \index{repository}repository at 
 \url{https://github.com/fmarotta/kaobook}.
 
 \begin{kaobox}[frametitle=To Do]
@@ -51,8 +51,8 @@ shall use these boxes to remarks what still needs to be done.
 
 \section{Other Things Worth Knowing}
 
-A bunch of packages are already loaded in the class because they are 
-needed for the implementation. These include:
+A bunch of \index{packages}packages are already loaded in the \index{class}class because they are 
+needed for the \index{implementation}implementation. These include:
 
 \begin{itemize}
 	\item etoolbox
@@ -63,10 +63,10 @@ needed for the implementation. These include:
 	\item xstring
 \end{itemize}
 
-Many more packages are loaded, but they will be discussed in due time. 
-Here, we will mention only one more set of packages, needed to change 
-the paragraph formatting (recall that in the future there will be 
-options to change this). In particular, the packages we load are:
+Many more \index{packages}packages are loaded, but they will be discussed in due time. 
+Here, we will mention only one more set of \index{packages}packages, needed to change 
+the \index{paragraph formatting}paragraph formatting (recall that in the future there will be 
+\index{options}options to change this). In particular, the \index{packages}packages we load are:
 
 \begin{itemize}
 	\item ragged2e
@@ -78,28 +78,28 @@ options to change this). In particular, the packages we load are:
 	\item xcolor (with options \Option{usenames,dvipsnames})
 \end{itemize}
 
-Some of the above packages do not concern paragraph formatting, but we 
+Some of the above \index{packages}packages do not concern \index{paragraph formatting}paragraph formatting, but we 
 nevertheless grouped them with the others. By default, the main text is 
-justified and formatted with singlespacing and frenchspacing; the margin 
-text is the same, except that the font is a bit smaller.
+justified and formatted with singlespacing and frenchspacing; the \index{margin text}margin 
+text is the same, except that the \index{font}font is a bit smaller.
 
-As a last warning, please be aware that the \Package{cleveref} package 
-is not compatible with \Class{kaobook}. You should use the commands 
+As a last warning, please be aware that the \Package{cleveref} \index{package}package 
+is not compatible with \Class{kaobook}. You should use the \index{commands}commands 
 discussed in \refsec{hyprefs} instead.
 
 \section{Document Structure}
 
 We provide optional arguments to the \Command{title} and 
-\Command{author} commands so that you can insert short, plain text 
-versions of this fields, which can be used, typically in the half-title 
-or somewhere else in the front matter, through the commands 
+\Command{author} \index{commands}commands so that you can insert short, plain text 
+versions of this fields, which can be used, typically in the \index{half-title}half-title 
+or somewhere else in the \index{front matter}front matter, through the \index{commands}commands 
 \Command{@plaintitle} and \Command{@plainauthor}, respectively. The PDF 
 properties \Option{pdftitle} and \Option{pdfauthor} are automatically 
 set by hyperref to the plain values if present, otherwise to the normal 
 values.\sidenote[][*-1]{We think that this is an important point so 
 we remark it here. If you compile the document with pdflatex, the PDF 
-metadata will be altered so that they match the plain title and author 
-you have specified; if you did not specify them, the metadata will be 
+\index{metadata}metadata will be altered so that they match the plain title and author 
+you have specified; if you did not specify them, the \index{metadata}metadata will be 
 set to the normal title and author.}
 
 There are defined two page layouts, \Option{margin} and \Option{wide}, 
