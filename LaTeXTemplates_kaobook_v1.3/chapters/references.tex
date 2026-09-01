@@ -7,23 +7,23 @@
 
 \index{citations}
 To cite someone \sidecite{Visscher2008,James2013} is very simple: just 
-use the \Command{sidecite}\index{\Command{sidecite}} command. It does 
-not have an offset argument yet, but it probably will in the future. 
-This command supports multiple entries, as you can see, and by default 
-it prints the reference on the margin as well as adding it to the 
-bibliography at the end of the document. Note that the citations have 
+use the \Command{sidecite}\index{\Command{sidecite}} \index{command}command. It does 
+not have an \index{offset}offset argument yet, but it probably will in the future. 
+This \index{command}command supports multiple entries, as you can see, and by default 
+it prints the \index{reference}reference on the \index{margin}margin as well as adding it to the 
+\index{bibliography}bibliography at the end of the document. Note that the \index{citations}citations have 
 nothing to do with the text,\sidecite{James2013} but they are completely 
 random as they only serve the purpose to illustrate the feature.
 
-For this setup I wrote a separate package, \Package{kaobiblio}, which 
+For this setup I wrote a separate \index{package}package, \Package{kaobiblio}, which 
 you can find in the \Package{styles} directory and include in your main 
-tex file. This package accepts all the options that you can pass to 
+tex file. This \index{package}package accepts all the \index{options}options that you can pass to 
 \Package{biblatex}, and actually it passes them to \Package{biblatex} 
-under the hood. Moreover, it also defines some commands, like 
-\Command{sidecite}, and environments that can be used within a 
+under the hood. Moreover, it also defines some \index{commands}commands, like 
+\Command{sidecite}, and \index{environments}environments that can be used within a 
 \Class{kao} book.\sidenote[][-.9cm]{For this reason you should always 
 use \Package{kaobiblio} instead of \Package{biblatex}, but the syntax 
-and the options are exactly the same.}
+and the \index{options}options are exactly the same.}
 
 If you want to use \Package{bibtex} instead of \Package{biblatex},
 pass the option \Option{backend=bibtex} to \Package{kaobiblio}.
@@ -93,12 +93,12 @@ your bibliography, you might have something like this in the preamble:
 
 The commands like \Command{citeyear}, \Command{parencite}
 and \Command{sdcite} are just examples. A full
-reference of the available commands can be found in this
+\index{reference}reference of the available \index{commands}commands can be found in this
 \href{http://tug.ctan.org/info/biblatex-cheatsheet/biblatex-cheatsheet.pdf}{cheatsheet},
 under the \enquote{Citations} section.
 
-Finally, to compile a document containing citations, you need to use an 
-external tool, which for this class is biber. You need to run the 
+Finally, to \index{compilation}compile a document containing \index{citations}citations, you need to use an 
+external tool, which for this class is \index{biber}biber. You need to run the 
 following (assuming that your tex file is called main.tex):
 
 \begin{lstlisting}[style=kaolstplain]
@@ -110,14 +110,14 @@ $ pdflatex main
 \section{Glossaries and Indices}
 
 \index{glossary}
-The \Class{kaobook} class loads the packages \Package{glossaries} and 
-\Package{imakeidx}, with which you can add glossaries and indices to 
-your book. For instance, I previously defined some glossary entries and 
+The \Class{kaobook} \index{class}class loads the \index{packages}packages \Package{glossaries} and 
+\Package{imakeidx}, with which you can add \index{glossaries}glossaries and \index{indices}indices to 
+your book. For instance, I previously defined some \index{glossary entries}glossary entries and 
 now I am going to use them, like this: \gls{computer}. 
-\Package{glossaries} also allows you to use acronyms, like the 
+\Package{glossaries} also allows you to use \index{acronyms}acronyms, like the 
 following: this is the full version, \acrfull{fpsLabel}, and this is the 
-short one \acrshort{fpsLabel}. These entries will appear in the glossary 
-in the backmatter.
+short one \acrshort{fpsLabel}. These \index{entries}entries will appear in the \index{glossary}glossary 
+in the \index{backmatter}backmatter.
 
 Unless you use \href{https://www.overleaf.com}{Overleaf} or some other 
 fancy IDE for \LaTeX, you need to run an external command from your 
@@ -136,20 +136,20 @@ Note that you need not run \texttt{makeglossaries} every time you
 compile your document, but only when you change the glossary entries.
 
 \index{index}
-To create an index, you need to insert the command 
+To create an \index{index}index, you need to insert the \index{command}command 
 \lstinline|\index{subject}| whenever you are talking about 
 \enquote{subject} in the text. For instance, at the start of this 
-paragraph I would write \lstinline|index{index}|, and an entry would be 
-added to the Index in the backmatter. Check it out!
+paragraph I would write \lstinline|index{index}|, and an \index{entry}entry would be 
+added to the Index in the \index{backmatter}backmatter. Check it out!
 
-\marginnote[2mm]{In theory, you would need to run an external command 
-for the index as well, but luckily the package we suggested, 
-	\Package{imakeidx}, can compile the index automatically.}
+\marginnote[2mm]{In theory, you would need to run an external \index{command}command 
+for the \index{index}index as well, but luckily the \index{package}package we suggested, 
+	\Package{imakeidx}, can \index{compilation}compile the \index{index}index automatically.}
 
 \index{nomenclature}
-A nomenclature is just a special kind of index; you can find one at the end of
-this book. To insert a nomenclature, we use the package \Package{nomencl} and
-add the terms with the command \Command{nomenclature}. We put then a
+A \index{nomenclature}nomenclature is just a special kind of \index{index}index; you can find one at the end of
+this book. To insert a \index{nomenclature}nomenclature, we use the \index{package}package \Package{nomencl} and
+add the terms with the \index{command}command \Command{nomenclature}. We put then a
 \Command{printnomenclature} where we want it to appear.
 
 Also with this package we need to run an external command to compile the 
